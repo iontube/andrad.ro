@@ -46,11 +46,6 @@
       "categorySlug": "foto-video"
     },
     {
-      "keyword": "sistem irigații controlat prin app",
-      "category": "Smart Home",
-      "categorySlug": "smart-home"
-    },
-    {
       "keyword": "senzor temperatură și umiditate smart",
       "category": "Smart Home",
       "categorySlug": "smart-home"
@@ -624,6 +619,11 @@
       "keyword": "kit accesorii foto pentru începători",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "sistem irigații controlat prin app",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
     }
   ]
 }
