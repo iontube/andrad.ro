@@ -1,0 +1,318 @@
+---
+export const frontmatter = {
+  title: "Cel mai bun sistem home cinema 7.1",
+  slug: "cel-mai-bun-sistem-home-cinema-7-1",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Suntem cu toții în căutarea acelei senzații unice, acele momente când filmul sau concertul te prinde cu adevărat, te transportă dincolo de ecran. Iar secretu...",
+  image: "/images/articles/cel-mai-bun-sistem-home-cinema-7-1.webp",
+  publishDate: "2025-12-10T17:39:57.000Z",
+  modifiedDate: "2026-01-20T17:39:57.714Z",
+  author: "Elena Marinescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ce este un sistem 7.1 și cum se diferențiază de 5.1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un sistem 7.1 are șapte difuzoare separate și un subwoofer, adică două canale suplimentare față de un sistem 5.1. Aceste două canale, numite \"surround back\", sunt plasate în spatele poziției de ascultare, completând cele două surround-uri laterale. Această configurație creează o zonă sonoră mai detaliată și mai imersivă în partea din spate, îmbunătățind localizarea efectelor sonore și adâncimea spațială a sunetului."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Am nevoie de un receiver AV special pentru 7.1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, ai nevoie de un receiver AV care să aibă minimum 7 canale de amplificare și capacitatea de a decoda semnale audio 7.1. Majoritatea receiverelor moderne de la branduri precum Denon, Yamaha sau Marantz oferă această capacitate, adesea suportând chiar și configurații 7.1.2 sau 7.1.4 pentru Dolby Atmos/DTS:X cu difuzoare de înălțime."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot folosi difuzoare de la branduri diferite într-un sistem 7.1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ideal este să folosești difuzoare de la același brand și, pe cât posibil, din aceeași serie, mai ales pentru cele trei difuzoare frontale (stânga, centru, dreapta). Acest lucru asigură o potrivire tonală (timbral matching) și o tranziție sonoră uniformă pe măsură ce sunetul se mișcă pe ecran. Pentru difuzoarele surround și subwoofer, poți fi puțin mai flexibil, dar totuși, o consistență ajută la coerența generală a sunetului."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce este Dolby Atmos și cum se integrează într-un sistem 7.1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dolby Atmos este o tehnologie audio bazată pe obiecte care adaugă o dimensiune verticală sunetului, permițând plasarea și mișcarea sunetelor în spațiul tridimensional, inclusiv deasupra ascultătorului. Într-un sistem 7.1, Dolby Atmos se integrează prin adăugarea de difuzoare de înălțime (overhead) sau difuzoare \"atmos-enabled\" (care reflectă sunetul de pe tavan). O configurație comună este 7.1.2 sau 7.1.4, unde ultimul număr reprezintă numărul de difuzoare de înălțime."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de importantă este acustica camerei pentru un sistem 7.1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Acustica camerei este extrem de importantă și poate influența semnificativ performanța unui sistem 7.1. Pereții goi, suprafețele dure și mobilierul minim pot crea ecouri și reverberații nedorite, distorsionând sunetul. Covoarele, draperiile groase, mobilierul moale și chiar panourile acustice pot ajuta la absorbția sunetului și la reducerea reflexiilor, contribuind la un sunet mai curat și mai precis. Sistemele automate de calibrare ale receiverelor AV compensează parțial acustica camerei, dar îmbunătățirile fizice sunt adesea necesare pentru rezultate optime."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <!-- Hero -->
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <!-- Sidebar - Cuprins -->
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <!-- Mobile TOC - Collapsible -->
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Introducere</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce înseamnă un sistem Home Cinema 7.1 și de ce este special?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Componentele esențiale ale unui sistem 7.1 de top</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tehnologii audio moderne pentru imersiune totală</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Alegerea difuzoarelor potrivite pentru spațiul tău</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Instalarea și configurarea corectă pentru performanță maximă</a>
+                <a href="#sectiune-7" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandări de sisteme și componente apreciate</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+
+            <!-- Desktop TOC - Collapsible -->
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Introducere</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce înseamnă un sistem Home Cinema 7.1 și de ce este special?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Componentele esențiale ale unui sistem 7.1 de top</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tehnologii audio moderne pentru imersiune totală</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Alegerea difuzoarelor potrivite pentru spațiul tău</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Instalarea și configurarea corectă pentru performanță maximă</a>
+                <a href="#sectiune-7" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandări de sisteme și componente apreciate</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/cel-mai-bun-sistem-home-cinema-7-1.webp" alt="Descoperă cel mai bun sistem Home Cinema 7.1: Ghidul suprem pentru o experiență audio imersivă" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Introducere</h2>
+    <p class="mb-4">Suntem cu toții în căutarea acelei senzații unice, acele momente când filmul sau concertul te prinde cu adevărat, te transportă dincolo de ecran. Iar secretul, pe lângă o imagine impecabilă, stă într-un sunet care te învăluie, care te face să simți fiecare explozie, fiecare șoaptă, fiecare notă muzicală. Pentru mulți pasionați, un sistem home cinema 7.1 reprezintă vârful acestei aspirații, un pas decisiv spre o experiență auditivă cu adevărat cinematografică, chiar la tine acasă.</p>
+    <p class="mb-4">Nu vorbim doar de volum mai mare, ci de o precizie spațială uimitoare. Un setup 7.1 adaugă două canale discrete față de un sistem 5.1, extinzând câmpul sonor și oferind o localizare mult mai fină a sunetelor în spate. Imaginează-ți elicopterul trecând deasupra ta sau pașii dușmanului venind din direcția potrivită. Aceasta este magia unui sistem bine calibrat, capabil să redea cele mai complexe coloane sonore moderne. Hai să vedem exact ce înseamnă asta și cum poți alege componentele care îți vor aduce acea imersiune totală.</p>
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce înseamnă un sistem Home Cinema 7.1 și de ce este special?</h2>
+    <p class="mb-4">Un sistem home cinema 7.1 se referă la configurația difuzoarelor: șapte canale de sunet discrete și un canal pentru frecvențele joase (subwooferul). Spre deosebire de un sistem 5.1, care are două difuzoare surround laterale, sistemul 7.1 adaugă două difuzoare surround back, plasate în spatele poziției de ascultare. Această adiție creează o zonă sonoră mult mai densă și mai credibilă în spatele tău, esențială pentru efectele de ambianță și pentru urmărirea obiectelor sonore pe ecran.</p>
+    <p class="mb-4">Importanța acestor două canale suplimentare devine evidentă mai ales cu coloanele sonore moderne, care sunt mixate pentru a profita de această extindere a spațiului. Fie că urmărești un blockbuster cu scene de acțiune intense sau un concert live cu o acustică complexă, sistemul 7.1 îți permite să percepi adâncimea și direcția sunetelor cu o acuratețe remarcabilă. Sunetul nu vine doar din față sau din lateral, ci te învăluie complet, creând o bulă sonoră unde ești spectatorul principal.</p>
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Componentele esențiale ale unui sistem 7.1 de top</h2>
+    <p class="mb-4">Pentru a construi un sistem 7.1 performant, ai nevoie de o serie de componente cheie care lucrează împreună. Fiecare element are un rol crucial în livrarea acelei experiențe sonore de excepție.</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Receiverul AV: Creierul sistemului</h3>
+    <p class="mb-4">Receiverul AV este inima oricărui sistem home cinema. Acesta preia semnalul audio și video de la surse (Blu-ray player, consolă de jocuri, media streamer), îl procesează, amplifică semnalul audio și îl trimite către difuzoare. Pentru un sistem 7.1, ai nevoie de un receiver capabil să proceseze minimum 7.1 canale audio discrete și să le amplifice. Modele precum Denon AVR-X3800H sau Yamaha RX-A2A oferă suport complet pentru 7.1, decodare Dolby Atmos și DTS:X, multiple intrări HDMI 2.1 cu suport 4K/120Hz sau 8K/60Hz, și sisteme avansate de calibrare acustică precum Audyssey MultEQ XT32 sau YPAO.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Difuzoarele: Vocea acțiunii</h3>
+    <p class="mb-4">Un sistem 7.1 necesită șapte difuzoare separate: două frontale (stânga, dreapta), un difuzor central, două difuzoare surround laterale și două difuzoare surround back. Calitatea acestora este fundamentală. Difuzoarele frontale și centrale sunt cele mai importante pentru dialog și efectele principale. Poți opta pentru boxe de podea (floorstanding) pentru frontale, care oferă o prezență sonoră robustă, sau boxe de raft (bookshelf) de calitate, în combinație cu un subwoofer puternic. Branduri ca Klipsch, KEF, Polk Audio sau JBL oferă serii excelente, cum ar fi Klipsch Reference Premier sau KEF Q Series, recunoscute pentru claritatea și dinamica lor. Este important să alegi difuzoare cu o impedanță (de obicei 4-8 ohmi) și o sensibilitate (ex. 88-92 dB) compatibile cu receiverul tău.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Subwooferul: Inima basului</h3>
+    <p class="mb-4">Subwooferul este responsabil pentru frecvențele joase, adăugând profunzime și impact. Un subwoofer bun nu doar bubuie, ci integrează basul perfect cu restul sunetului, oferind o senzație de forță și realism. Caută un model activ, cu un driver de minim 10-12 inci și o putere consistentă (ex. 200W RMS sau mai mult). Branduri precum SVS (ex. SVS PB-1000 Pro) sau Klipsch (ex. Klipsch SPL-120) sunt alegeri excelente, cunoscute pentru performanța lor în redarea basului profund și controlat. Acesta este 'punctul 1' din 7.1.</p>
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Tehnologii audio moderne pentru imersiune totală</h2>
+    <p class="mb-4">Lumea audio evoluează constant, iar cele mai bune sisteme 7.1 profită de inovațiile de ultimă oră pentru a livra o experiență de neegalat. Aceste tehnologii transformă modul în care percepem sunetul.</p>
+    <p class="mb-4"><strong>Dolby Atmos și DTS:X:</strong> Acestea sunt formate audio bazate pe obiecte, nu doar pe canale. Ele permit sunetelor să fie plasate și mișcate tridimensional în spațiu, inclusiv deasupra ascultătorului. Un receiver 7.1 capabil de Dolby Atmos sau DTS:X poate extinde configurația la 7.1.2 sau chiar 7.1.4 prin adăugarea de difuzoare de înălțime (fie dedicate, fie integrate în difuzoarele frontale). Această dimensiune verticală adaugă un nivel uimitor de realism, simulând ploaia care cade de sus sau un avion care trece deasupra capului. Este o diferență pe care o auzi imediat.</p>
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Alegerea difuzoarelor potrivite pentru spațiul tău</h2>
+    <p class="mb-4">Dimensiunea și acustica camerei tale joacă un rol major în alegerea difuzoarelor. Nu există o soluție universală, iar potrivirea este esențială pentru a obține cel mai bun sunet. Într-o cameră mică, difuzoarele de podea masive pot fi copleșitoare, în timp ce într-o cameră mare, boxele de raft ar putea părea subdimensionate.</p>
+    <p class="mb-4"><strong>Amplasare și tipuri de difuzoare:</strong> Pentru frontale, boxele de podea oferă o prezență mai impunătoare și un bas natural superior, dar necesită spațiu. Boxele de raft, montate pe stative sau rafturi, sunt o alternativă excelentă pentru spații mai mici, mai ales dacă sunt completate de un subwoofer robust. Difuzorul central ar trebui să fie de aceeași serie cu cele frontale pentru o coerență tonală. Pentru surround-uri, ai opțiunea de difuzoare de raft, difuzoare de perete (wall-mounted) sau chiar difuzoare dipolare/bipolare care dispersează sunetul pe o zonă mai largă, contribuind la o ambianță mai difuză și mai imersivă. Asigură-te că difuzoarele au o sensibilitate suficient de mare pentru a fi conduse eficient de receiverul tău și o impedanță compatibilă pentru a evita suprasolicitarea amplificatorului. Un kit complet de la un brand reputat, cum ar fi un pachet 7.1 de la Monitor Audio sau o combinație de componente din seria RP de la Klipsch, poate simplifica procesul de selecție și asigura o potrivire excelentă.</p>
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Instalarea și configurarea corectă pentru performanță maximă</h2>
+    <p class="mb-4">Chiar și cel mai scump sistem 7.1 nu va suna la adevărata sa valoare fără o instalare și configurare meticuloasă. Detaliile fac diferența.</p>
+    <p class="mb-4"><strong>Amplasarea difuzoarelor:</strong> Plasează difuzorul central direct sub sau deasupra televizorului/ecranului, îndreptat spre poziția de ascultare. Difuzoarele frontale ar trebui să formeze un triunghi echilateral cu poziția de ascultare. Surround-urile laterale se plasează la aproximativ 90-110 grade față de poziția de ascultare, la nivelul urechilor sau ușor mai sus. Difuzoarele surround back se plasează direct în spatele poziției de ascultare, la aproximativ 135-150 de grade. Subwooferul este cel mai flexibil, dar de obicei, un colț al camerei sau o poziție frontală este un bun punct de plecare pentru a găsi cel mai bun răspuns în bas. Experimentează cu poziția subwooferului pentru a evita "zonele moarte" sau basul "bubuitor" necontrolat.</p>
+    <p class="mb-4"><strong>Calibrarea acustică:</strong> Aceasta este o etapă crucială. Majoritatea receiverelor AV moderne vin cu sisteme automate de calibrare (ex. Audyssey, YPAO, Dirac Live). Folosește microfonul inclus și urmează instrucțiunile. Aceste sisteme măsoară răspunsul camerei și ajustează nivelurile, întârzierile și egalizarea pentru fiecare difuzor, optimizând sunetul pentru spațiul tău specific. Fă mai multe măsurători din diferite poziții în jurul zonei de ascultare pentru rezultate mai precise. Nu uita să verifici și setările manuale după calibrarea automată, ajustând nivelurile dacă simți că un canal este prea puternic sau prea slab.</p>
+    
+  </section>
+  <section id="sectiune-7" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Recomandări de sisteme și componente apreciate</h2>
+    <p class="mb-4">Când ești gata să investești într-un sistem 7.1, e bine să știi ce opțiuni există pe piață, de la branduri cu renume. Nu există un "cel mai bun" absolut, ci mai degrabă o potrivire perfectă pentru nevoile și bugetul tău.</p>
+    <p class="mb-4"><strong>Receivers AV:</strong> Pentru performanță și funcționalitate, modele ca <strong>Denon AVR-X3800H</strong> sau <strong>Yamaha RX-A4A</strong> sunt alegeri excelente, oferind 9 canale de amplificare (ideal pentru 7.1.2 Dolby Atmos), HDMI 2.1 complet și sisteme de calibrare avansate. Dacă vrei un sunet cu o tentă mai caldă, un <strong>Marantz SR6015</strong> sau <strong>SR7015</strong> ar putea fi o opțiune interesantă. Toate oferă o putere de aproximativ 100W-120W per canal (la 8 ohmi, 2 canale conduse) și o multitudine de opțiuni de conectivitate.</p>
+    <p class="mb-4"><strong>Pachete de difuzoare 7.1:</strong> Unele branduri oferă pachete complete, cum ar fi seriile <strong>JBL Studio Series</strong> sau <strong>Polk Audio Reserve</strong>, care asigură o potrivire tonală excelentă între difuzoare. Pentru un sunet mai detaliat și dinamic, poți construi un sistem cu difuzoare din seria <strong>Klipsch Reference Premier</strong> (ex. RP-8000F frontale, RP-504C central, RP-600M pentru surround și RP-500SA pentru Atmos) și un subwoofer <strong>SVS PB-2000 Pro</strong> sau <strong>Klipsch SPL-150</strong>. Dacă preferi un sunet mai rafinat, cu o scenă sonoră largă, seriile <strong>KEF Q Series</strong> sau <strong>Monitor Audio Bronze</strong> sunt alternative excelente. Combină-le cu un subwoofer de la SVS sau REL pentru un bas profund și articulat. Fiecare dintre aceste opțiuni oferă o gamă variată de puteri și răspunsuri în frecvență, de la 30Hz la 25kHz pentru difuzoarele full-range, asigurând o acoperire sonoră completă.</p>
+    
+  </section>
+
+          <!-- FAQ Section -->
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce este un sistem 7.1 și cum se diferențiază de 5.1?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Un sistem 7.1 are șapte difuzoare separate și un subwoofer, adică două canale suplimentare față de un sistem 5.1. Aceste două canale, numite "surround back", sunt plasate în spatele poziției de ascultare, completând cele două surround-uri laterale. Această configurație creează o zonă sonoră mai detaliată și mai imersivă în partea din spate, îmbunătățind localizarea efectelor sonore și adâncimea spațială a sunetului.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Am nevoie de un receiver AV special pentru 7.1?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, ai nevoie de un receiver AV care să aibă minimum 7 canale de amplificare și capacitatea de a decoda semnale audio 7.1. Majoritatea receiverelor moderne de la branduri precum Denon, Yamaha sau Marantz oferă această capacitate, adesea suportând chiar și configurații 7.1.2 sau 7.1.4 pentru Dolby Atmos/DTS:X cu difuzoare de înălțime.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi difuzoare de la branduri diferite într-un sistem 7.1?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Ideal este să folosești difuzoare de la același brand și, pe cât posibil, din aceeași serie, mai ales pentru cele trei difuzoare frontale (stânga, centru, dreapta). Acest lucru asigură o potrivire tonală (timbral matching) și o tranziție sonoră uniformă pe măsură ce sunetul se mișcă pe ecran. Pentru difuzoarele surround și subwoofer, poți fi puțin mai flexibil, dar totuși, o consistență ajută la coerența generală a sunetului.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce este Dolby Atmos și cum se integrează într-un sistem 7.1?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Dolby Atmos este o tehnologie audio bazată pe obiecte care adaugă o dimensiune verticală sunetului, permițând plasarea și mișcarea sunetelor în spațiul tridimensional, inclusiv deasupra ascultătorului. Într-un sistem 7.1, Dolby Atmos se integrează prin adăugarea de difuzoare de înălțime (overhead) sau difuzoare "atmos-enabled" (care reflectă sunetul de pe tavan). O configurație comună este 7.1.2 sau 7.1.4, unde ultimul număr reprezintă numărul de difuzoare de înălțime.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de importantă este acustica camerei pentru un sistem 7.1?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Acustica camerei este extrem de importantă și poate influența semnificativ performanța unui sistem 7.1. Pereții goi, suprafețele dure și mobilierul minim pot crea ecouri și reverberații nedorite, distorsionând sunetul. Covoarele, draperiile groase, mobilierul moale și chiar panourile acustice pot ajuta la absorbția sunetului și la reducerea reflexiilor, contribuind la un sunet mai curat și mai precis. Sistemele automate de calibrare ale receiverelor AV compensează parțial acustica camerei, dar îmbunătățirile fizice sunt adesea necesare pentru rezultate optime.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cel-mai-bun-televizor-qled-de-mari-dimensiuni/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-televizor-qled-de-mari-dimensiuni.webp" alt="Cel mai bun televizor QLED de mari dimensiuni" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun televizor QLED de mari dimensiuni</h3>
+              </div>
+            </a>
+
+            <a href="/sistem-audio-multiroom-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/sistem-audio-multiroom-wireless.webp" alt="Sistem Audio Multiroom Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Sistem Audio Multiroom Wireless</h3>
+              </div>
+            </a>
+
+            <a href="/televizor-led-cu-refresh-mare/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/televizor-led-cu-refresh-mare.webp" alt="Televizor Led Cu Refresh Mare" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Televizor Led Cu Refresh Mare</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

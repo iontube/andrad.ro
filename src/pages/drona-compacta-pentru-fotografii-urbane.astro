@@ -1,0 +1,291 @@
+---
+export const frontmatter = {
+  title: "Dronă Compactă Pentru Fotografii Urbane",
+  slug: "drona-compacta-pentru-fotografii-urbane",
+  category: "Foto & Video",
+  categorySlug: "foto-video",
+  excerpt: "Am testat drone compacte pentru fotografii urbane. Iata ce merita sa cumperi pentru cadre spectaculoase in oras.",
+  image: "/images/articles/drona-compacta-pentru-fotografii-urbane.webp",
+  publishDate: "2025-12-19T11:03:09.000Z",
+  modifiedDate: "2026-01-23T11:03:09.142Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ce autonomie reala au dronele compacte in mediul urban?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Autonomia reala variaza intre 25 si 35 de minute in conditii urbane, din cauza vantului si a manevrelor frecvente. Modelele premium pot ajunge chiar si la 40-45 de minute in conditii ideale."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot zbura cu drona in centru vechi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In general, nu. Majoritatea centrelor istorice au restrictii stricte de zbor din motive de securitate si conservare. Verifica intotdeauna regulamentul local specific."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce format de fisier e cel mai bun pentru editare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fotografiile in format RAW si video-ul in format D-Log sau D-Cinelike ofera cea mai mare flexibilitate in editare. Pentru utilizare rapida, JPEG si H.264/H.265 sunt suficiente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cat de greu este sa inveti sa pilotezi o drona?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pilotarea de baza este relativ usor de invatat, in special cu dronele moderne care au functii de asistenta. Pentru manevre complexe si filmari profesionale, este necesara multa practica."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Drona compacta: Partenerul tau urban pentru imagini aeriene</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">DJI Mini 4 Pro: Ofera imagine si portabilitate</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Autel Robotics EVO Lite+: O alternativa cu performanta foto-video serioasa</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">DJI Air 3: Echilibrul perfect intre portabilitate si performanta</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice pentru fotografierea urbana cu drona</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Considerații importante înainte de achiziție</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Drona compacta: Partenerul tau urban pentru imagini aeriene</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">DJI Mini 4 Pro: Ofera imagine si portabilitate</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Autel Robotics EVO Lite+: O alternativa cu performanta foto-video serioasa</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">DJI Air 3: Echilibrul perfect intre portabilitate si performanta</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice pentru fotografierea urbana cu drona</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Considerații importante înainte de achiziție</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/drona-compacta-pentru-fotografii-urbane.webp" alt="Dronă Compactă Pentru Fotografii Urbane" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Drona compacta: Partenerul tau urban pentru imagini aeriene</h2>
+    <p class="mb-4">Am petrecut ultimele saptamani testand cateva modele de drone compacte, special gandite pentru fotografia si videografia urbana. In experienta mea, a gasi o drona care sa fie usor de transportat, rapida la decolare si, cel mai important, capabila sa livreze imagini de calitate in mediul aglomerat al orasului, nu e deloc o sarcina usoara.  Am cautat modele care sa se integreze discret in peisaj, dar sa ofere control si flexibilitate.</p>
+    <p class="mb-4">Am observat ca multe drone "compacte" promit multe, dar ajung sa fie incomode la purtat in rucsac sau sa aiba probleme cu semnalul in zone cu interferente. Am pus accent pe cele care au demonstrat fiabilitate si performanta constanta, chiar si atunci cand am filmat langa cladiri inalte sau in parcuri cu multa lume.</p>
+    <p class="mb-4">Pentru cei care vor sa fotografieze arhitectura unica a Bucurestiului, sa surprinda apusuri peste acoperisuri sau sa filmeze evenimente din unghiuri inedite, o drona compacta este esentiala. Am ales sa ma concentrez pe modele care exceleaza in acest domeniu, fara compromisuri majore la capitolul calitate.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">DJI Mini 4 Pro: Ofera imagine si portabilitate</h2>
+    <p class="mb-4">DJI Mini 4 Pro ramane, in opinia mea, un etalon in clasa dronelor compacte. Greutatea sa sub 249 de grame il face sa fie extrem de usor de transportat si, in multe tari, scutit de anumite reglementari stricte. Am apreciat in mod special sistemul sau avansat de detectare a obstacolelor pe toate directiile, un atu crucial in mediul urban, unde manevrele sunt adesea dificile.</p>
+    <p class="mb-4">Calitatea imaginilor este de top. Senzorul de 1/1.3 inch capteaza fotografii de 48MP si video 4K/100fps, iar culorile sunt vii si detaliile clare, chiar si in conditii de lumina mai slaba. Am obtinut cadre incredibile cu cladirile istorice din centrul vechi, surprinzand texturi si detalii pe care nu le-ai vedea de la sol. Autonomia bateriei, undeva in jur de 34 de minute in conditii ideale, mi-a permis sa acopar mai multe locatie intr-o singura sesiune.</p>
+    <p class="mb-4">Pretul pentru DJI Mini 4 Pro (Fly More Combo) se invarte in jur de 5.500 - 6.000 RON pe site-uri precum eMAG sau Altex. Merita investitia daca fotografia urbana este prioritatea ta si vrei sa ai mereu la indemana un "ochi" aerian performant.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Autel Robotics EVO Lite+: O alternativa cu performanta foto-video serioasa</h2>
+    <p class="mb-4">Daca cauti o alternativa la DJI, Autel Robotics EVO Lite+ merita toata atentia ta. Am testat acest model si am fost impresionat de calitatea imaginii, in special de capabilitatile sale in conditii de lumina scazuta, datorita senzorului sau de 1 inch. Acesta capteaza fotografii de 50MP si video 4K/60fps, oferind o flexibilitate sporita in post-productie.</p>
+    <p class="mb-4">Manuale de zbor sunt intuitive, iar functiile de filmare automata, cum ar fi "Dynamic Track", sunt utile pentru a urmari subiecte in miscare in peisajul urban. Am observat ca semnalul este robust, chiar si la distante considerabile, un aspect important cand filmezi de la inaltime, departe de punctul de decolare. Autonomia bateriei este, de asemenea, impresionanta, ajungand pana la 40 de minute.</p>
+    <p class="mb-4">Acest model il gasesti pe piata din Romania la un pret ce variaza intre 6.000 si 6.800 RON, in functie de pachet. Este o optiune excelenta pentru cei care prioritizeaza calitatea video si au nevoie de performanta in conditii dificile de iluminare.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">DJI Air 3: Echilibrul perfect intre portabilitate si performanta</h2>
+    <p class="mb-4">DJI Air 3 este o optiune excelenta pentru cei care doresc un echilibru mai bun intre dimensiunea compacta si capabilitatile avansate. Am testat acest model si am apreciat in mod deosebit sistemul sau dual de camere: una wide-angle si una telephoto 3x. Aceasta configuratie ofera o versatilitate incredibila pentru a surprinde atat peisaje urbane largi, cat si detalii specifice ale cladirilor sau ale strazilor.</p>
+    <p class="mb-4">Calitatea imaginilor este la standarde inalte, cu fotografii de 48MP si video 4K/100fps. Am observat ca trecerea intre cele doua camere este fluida, iar rezultatele sunt consistente. Detectarea obstacolelor pe toate directiile este, de asemenea, prezenta si functioneaza la fel de bine ca la Mini 4 Pro. Autonomia este de aproximativ 46 de minute, ceea ce inseamna sesiuni de filmare extinse fara grija bateriei.</p>
+    <p class="mb-4">Pretul pentru DJI Air 3 (Fly More Combo) se situeaza undeva intre 7.500 si 8.300 RON. Este o investitie considerabila, dar care se justifica prin performanta si versatilitatea pe care o ofera pentru fotografia si videografia urbana.</p>
+    <p class="mb-4">Am remarcat ca acest model este ideal pentru cei care calatoresc frecvent si vor sa isi completeze colectia de fotografii urbane cu cadre unice, fara a fi nevoiti sa care echipament greu.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice pentru fotografierea urbana cu drona</h2>
+    <p class="mb-4">Cand vine vorba de fotografierea urbana cu drona, regulile de bază se aplică, dar există și câteva trucuri specifice. În primul rând, verifică întotdeauna legislația locală privind zborul dronelor. Multe orașe au restricții stricte în apropierea aeroporturilor, clădirilor guvernamentale sau zonelor rezidențiale. Am învățat pe pielea mea că ignorarea acestora poate duce la amenzi usturătoare.</p>
+    <p class="mb-4">Folosește orele de aur – răsăritul și apusul – pentru a obține cea mai bună lumină. Umbrele lungi și lumina caldă pot transforma complet o clădire banală într-o operă de artă. Am experimentat mult cu unghiurile de filmare, încercând să surprind perspective noi asupra monumentelor sau a străzilor aglomerate, creând un efect dramatic.</p>
+    <p class="mb-4">Nu te teme să experimentezi cu setările camerei dronei. Fotografiile RAW oferă cea mai mare flexibilitate în post-procesare, permițându-ți să ajustezi expunerea, balansul de alb și culorile pentru a obține rezultatul dorit. Am observat că uneori, o ușoară ajustare a expunerii poate scoate în evidență detalii ascunse în zonele umbrite sau suprasaturate.</p>
+    <p class="mb-4">Folosește funcțiile inteligente ale dronei, cum ar fi Hyperlapse sau Panorama, pentru a crea conținut dinamic și captivant. Pentru a obține cele mai bune rezultate, planifică-ți zborul dinainte. O schiță mentală a unghiurilor pe care vrei să le obții te va ajuta să economisești timp și baterie.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Considerații importante înainte de achiziție</h2>
+    <p class="mb-4">Alegerea dronei potrivite depinde mult de bugetul și nevoile tale specifice. Dacă ești la început de drum și vrei să experimentezi cu fotografia urbană, un model precum DJI Mini 3 Pro (care se găsește uneori la prețuri în jur de 3.000 RON) poate fi o opțiune excelentă. Este ușor de utilizat și oferă imagini de calitate decentă pentru majoritatea scenariilor.</p>
+    <p class="mb-4">Pentru cei care caută performanță superioară și sunt dispuși să investească mai mult, modelele menționate anterior, DJI Mini 4 Pro, EVO Lite+ sau DJI Air 3, oferă capabilități mult îmbunătățite în ceea ce privește calitatea imaginii, autonomia și funcțiile inteligente. Am observat că pe termen lung, o investiție într-o dronă mai performantă se reflectă în calitatea materialelor pe care le produci.</p>
+    <p class="mb-4">Verifică întotdeauna specificațiile tehnice, cum ar fi rezoluția video, dimensiunea senzorului, autonomia bateriei și sistemele de detectare a obstacolelor. Aceste detalii te vor ajuta să faci o alegere informată. De asemenea, citește review-uri și uită-te la exemple de imagini și video-uri filmate cu dronele pe care le ai în vizor. Am constatat că experiența altor utilizatori este extrem de valoroasă.</p>
+    <p class="mb-4">Nu uita să iei în calcul și costurile suplimentare: baterii de rezervă, carduri de memorie rapide, o geantă de transport de calitate și, eventual, o asigurare. Acestea pot adăuga o sumă considerabilă la costul total, dar sunt esențiale pentru o experiență de utilizare sigură și completă.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce autonomie reala au dronele compacte in mediul urban?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Autonomia reala variaza intre 25 si 35 de minute in conditii urbane, din cauza vantului si a manevrelor frecvente. Modelele premium pot ajunge chiar si la 40-45 de minute in conditii ideale.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot zbura cu drona in centru vechi?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  In general, nu. Majoritatea centrelor istorice au restrictii stricte de zbor din motive de securitate si conservare. Verifica intotdeauna regulamentul local specific.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce format de fisier e cel mai bun pentru editare?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Fotografiile in format RAW si video-ul in format D-Log sau D-Cinelike ofera cea mai mare flexibilitate in editare. Pentru utilizare rapida, JPEG si H.264/H.265 sunt suficiente.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat de greu este sa inveti sa pilotezi o drona?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pilotarea de baza este relativ usor de invatat, in special cu dronele moderne care au functii de asistenta. Pentru manevre complexe si filmari profesionale, este necesara multa practica.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cel-mai-bun-obiectiv-foto-profesional/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-obiectiv-foto-profesional.webp" alt="Cel mai bun obiectiv foto profesional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun obiectiv foto profesional</h3>
+              </div>
+            </a>
+
+            <a href="/aparat-foto-compact-pentru-vacanta/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aparat-foto-compact-pentru-vacanta.webp" alt="Aparat Foto Compact Pentru Vacanță" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aparat Foto Compact Pentru Vacanță</h3>
+              </div>
+            </a>
+
+            <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/obiectiv-prime-pentru-portrete-profesionale.webp" alt="Obiectiv Prime Pentru Portrete Profesionale" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Obiectiv Prime Pentru Portrete Profesionale</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

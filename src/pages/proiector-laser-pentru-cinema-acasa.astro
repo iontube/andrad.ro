@@ -1,0 +1,294 @@
+---
+export const frontmatter = {
+  title: "Proiector Laser Pentru Cinema Acasă",
+  slug: "proiector-laser-pentru-cinema-acasa",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Proiectoare laser pentru acasă: transformă sufrageria în cinema. Analiză practică, recomandări și prețuri din România.",
+  image: "/images/articles/proiector-laser-pentru-cinema-acasa.webp",
+  publishDate: "2026-01-08T08:42:06.000Z",
+  modifiedDate: "2026-01-29T08:42:06.857Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi un proiector laser în timpul zilei?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, dar vei avea nevoie de un proiector cu luminozitate foarte mare (peste 4000 ANSI Lumens) și de control total asupra luminii ambientale. Pentru cele mai bune rezultate, vizionarea pe timp de zi este recomandată în camere cu draperii groase sau jaluzele."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de zgomotoase sunt proiectoarele laser?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sunt mult mai silențioase decât modelele vechi cu becuri. Ventilatoarele sunt necesare pentru răcire, dar majoritatea modelelor noi sunt proiectate să fie discrete, cu niveluri de zgomot sub 30 dB. Modelele premium sunt aproape silențioase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Am nevoie de un ecran special pentru proiectorul laser?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu este obligatoriu, dar este puternic recomandat. Un ecran de proiecție de calitate va îmbunătăți semnificativ calitatea imaginii, contrastul și culorile, comparativ cu un perete obișnuit. Un perete perfect alb și neted este o alternativă, dar nu la fel de eficientă."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot juca jocuri video pe un proiector laser?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolut. Multe proiectoare laser moderne au un input lag scăzut, esențial pentru gaming. Verifică specificațiile pentru 'input lag' sau 'response time'. Modelele 4K cu rată de refresh mare sunt excelente pentru jocuri."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Proiectoare laser pentru cinema acasă: Am primit un upgrade major</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Diferența dintre proiectoarele laser și cele cu becuri tradiționale</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce să cauți la un proiector laser pentru acasă: Luminozitate, Rezoluție și Contrast</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prețuri în România: Cât te costă un proiector laser de top?</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Experiența de utilizare: Sunet, Conectivitate și Smart Features</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la cineva care le-a testat</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Proiectoare laser pentru cinema acasă: Am primit un upgrade major</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Diferența dintre proiectoarele laser și cele cu becuri tradiționale</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce să cauți la un proiector laser pentru acasă: Luminozitate, Rezoluție și Contrast</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prețuri în România: Cât te costă un proiector laser de top?</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Experiența de utilizare: Sunet, Conectivitate și Smart Features</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la cineva care le-a testat</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/proiector-laser-pentru-cinema-acasa.webp" alt="Proiector Laser Pentru Cinema Acasă" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Proiectoare laser pentru cinema acasă: Am primit un upgrade major</h2>
+    <p class="mb-4">Am testat destule proiectoare în ultimii ani ca să-mi dau seama când ceva chiar merită atenția. Iar proiectoarele laser pentru cinema acasă au schimbat jocul. Am trecut de la becuri scumpe și cu viață scurtă la o sursă de lumină care practic nu te mai stresează, iar calitatea imaginii a sărit și ea un nivel. Nu mai vorbim de acele proiectoare DLP care făceau un zgomot infernal; acum liniștea e la ea acasă.</p>
+    <p class="mb-4">Am instalat în sufragerie un model de la XGIMI, un brand care a prins mult teren pe nișa asta. E vorba de un proiector laser 4K, și să fiu sincer, diferența față de un TV mare, chiar și OLED, începe să se estompeze. Suprafața de proiecție e uriașă, culorile sunt vibrante, iar contrastul e mult mai bun decât mă așteptam. Am uitat complet de TV-ul meu de 65 de inci pentru serile de film. Mă simt ca în multiplex, dar cu propriul meu popcorn și fără bilet.</p>
+    <p class="mb-4">Când vine vorba de instalare, am avut și experiențe mai puțin plăcute cu proiectoare mai vechi, care necesitau reglaje complicate. Acum, multe modele vin cu autofocus și corecție keystone automată. Pur și simplu pui proiectorul pe o mobilă, îl pornești, și el își face treaba. Am testat și pe un perete nu perfect drept, și rezultatul a fost surprinzător de bun. E mult mai user-friendly decât îți imaginezi.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Diferența dintre proiectoarele laser și cele cu becuri tradiționale</h2>
+    <p class="mb-4">Principala diferență, pe care o simți imediat, e la sursa de lumină. Proiectoarele cu becuri (lampă) au nevoie de înlocuirea periodică a acestora, costisitoare și incomode. Un bec de proiector bun te poate costa de la câteva sute de lei la peste o mie, și are o durată de viață limitată, cam 1500-5000 de ore. Proiectoarele laser, pe de altă parte, folosesc o sursă solid-state care poate dura 20.000-30.000 de ore. Asta înseamnă zeci de ani de utilizare normală fără griji.</p>
+    <p class="mb-4">Am observat și la consumul de energie. Deși modelele laser pot fi un pic mai pretențioase la pornire, în general, sunt mai eficiente pe termen lung. Luminozitatea la proiectoarele laser se menține mult mai constantă de-a lungul timpului, spre deosebire de cele cu becuri, unde imaginea începe să se degradeze vizibil după primele sute de ore. Nu mai trebuie să te chinui să compensezi pierderea de luminozitate din setări.</p>
+    <p class="mb-4">Fiindcă am testat ambele tipuri, pot spune că investiția inițială mai mare într-un proiector laser se amortizează prin lipsa costurilor de întreținere și prin calitatea constantă a imaginii. E genul de produs pe care îl cumperi și uiți de el, focusându-te doar pe ce vezi pe ecran.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce să cauți la un proiector laser pentru acasă: Luminozitate, Rezoluție și Contrast</h2>
+    <p class="mb-4">Când te uiți la specificații, luminozitatea e crucială. Se măsoară în ANSI Lumens. Pentru o cameră care poate fi controlată, unde poți trage draperiile, 2000-3000 ANSI Lumens e un punct bun de plecare. Dacă vrei să poți viziona și ziua, cu lumina ambientală prezentă, vei avea nevoie de 4000+ Lumens, dar asta crește și prețul și consumul. Am testat un model de 2500 Lumens într-o cameră întunecată și a fost perfect, dar în lumina amiezii era mult mai greu de vizionat.</p>
+    <p class="mb-4">Rezoluția e celălalt factor cheie. 4K (3840 x 2160 pixeli) e standardul pentru cinema acasă acum. Nu te uita la proiectoare Full HD (1920 x 1080) dacă vrei o experiență cu adevărat imersivă pe ecrane mari, de peste 100 de inci. Am văzut diferența uriașă pe un ecran de 150 de inci între un proiector 4K și unul Full HD; detaliile fine dispar complet la rezoluția mai mică. Unele proiectoare 4K folosesc tehnologia pixel-shifting pentru a simula rezoluția 4K, și sunt destul de bune, dar dacă bugetul permite, alege un model nativ 4K.</p>
+    <p class="mb-4">Contrastul e important pentru profunzimea imaginii, în special pentru scenele întunecate. Caută un raport de contrast cât mai mare. Un contrast bun face ca negrul să pară cu adevărat negru, nu gri închis, ceea ce e vital pentru filme. Am observat că proiectoarele laser, în general, oferă un contrast nativ mai bun decât cele cu becuri, și un negru mai profund. Un proiector bun ar trebui să scoată în evidență detaliile din umbre fără a le îneca.</p>
+    
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Luminozitate (ANSI Lumens)</h3>
+    <p class="mb-4">Pentru vizionare în condiții de întuneric complet: 2000-3000 ANSI Lumens. Pentru condiții cu lumină ambientală controlată: 3000-4000+ ANSI Lumens. Nu uita că luminozitatea scade odată cu creșterea rezoluției și cu utilizarea tehnologiilor avansate.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Rezoluție</h3>
+    <p class="mb-4">4K (3840 x 2160 pixeli) este standardul. Proiectoarele cu pixel-shifting pot simula 4K, dar cele native sunt superioare. Evită Full HD pentru ecrane mari.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Contrast Ratio</h3>
+    <p class="mb-4">Cât mai mare. Un contrast ridicat asigură negri profunzi și detalii mai bune în scenele întunecate. Caută raporturi de 1000:1 sau mai mari.</p>
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Prețuri în România: Cât te costă un proiector laser de top?</h2>
+    <p class="mb-4">Piața din România oferă o gamă variată de proiectoare laser. Modelele de bază, Full HD, dar cu sursă laser, încep de pe la 2500-3000 RON. Am văzut ceva interesant de la producători mai nișați, dar care oferă specificații bune pentru preț. De exemplu, un proiector laser 1080p cu 2000 Lumens de la un brand ca VAVA sau Dangbei poate fi găsit pe eMAG sau PCGarage în jur de 3500 RON.</p>
+    <p class="mb-4">Pentru a intra în lumea 4K, bugetul crește considerabil. Proiectoarele laser 4K de la branduri cunoscute precum XGIMI, BenQ sau Epson încep de la aproximativ 6000-7000 RON. Am testat un XGIMI HORIZON Pro, care la vremea lui costa cam 6500 RON, și a fost excelent. Acum, modelele noi, precum XGIMI HORIZON Ultra, pot ajunge și la 9000-10000 RON, oferind luminozitate sporită și HDR mai bun.</p>
+    <p class="mb-4">Proiectoarele de top, cu luminozitate foarte mare (peste 4000 Lumens) sau cu tehnologii avansate precum DLP cu cipuri native 4K, de la branduri ca Sony sau JVC, pot depăși lejer 15.000-20.000 RON. Acestea sunt pentru pasionații avansați, care vor cea mai bună imagine posibilă, fără compromisuri, și au spații dedicate. Pentru majoritatea utilizatorilor, un proiector laser 4K în zona 7000-10000 RON de la XGIMI, BenQ sau Optoma este un echilibru bun.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Experiența de utilizare: Sunet, Conectivitate și Smart Features</h2>
+    <p class="mb-4">Sunetul integrat la proiectoarele laser s-a îmbunătățit enorm. Multe modele vin acum cu difuzoare de la branduri audio cunoscute, cum ar fi Harman Kardon sau JBL. Am testat un proiector XGIMI care avea un sunet surprinzător de plin, cu bas destul de prezent. Nu înlocuiește un sistem audio dedicat, clar, dar pentru vizionare ocazională sau când vrei să nu complici lucrurile, e mai mult decât suficient. Totuși, dacă vrei experiența completă de cinema, o bară de sunet sau un sistem 5.1 rămâne recomandarea mea.</p>
+    <p class="mb-4">Conectivitatea e, de obicei, bogată. Majoritatea modelelor au cel puțin două porturi HDMI (unele cu suport ARC/eARC), USB-uri, Wi-Fi, Bluetooth. Asta îți permite să conectezi console de jocuri (am jucat Cyberpunk 2077 pe un ecran de 120 de inci, o experiență diferită!), laptopuri, playere Blu-ray sau dispozitive de streaming. Am apreciat și porturile USB, utile pentru a reda filme direct de pe un stick sau hard disk extern, fără a mai avea nevoie de un alt dispozitiv.</p>
+    <p class="mb-4">Funcționalitățile smart sunt standard acum. Android TV sau un sistem de operare proprietar similar îți oferă acces la aplicații precum Netflix, YouTube, Disney+. Am observat că unele interfețe sunt mai intuitive decât altele. Sistemul de operare de la XGIMI e destul de fluid, dar uneori am preferat să conectez un Google Chromecast sau un Apple TV pentru o experiență mai familiară și acces rapid la tot conținutul meu. Actualizările de software sunt importante, așa că verifică dacă producătorul oferă suport pe termen lung.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la cineva care le-a testat</h2>
+    <p class="mb-4">Instalează proiectorul cât mai stabil posibil. Chiar dacă au corecție keystone, o bază solidă ajută la o imagine mai clară și fără distorsiuni. Am folosit un mic trepied foto pentru a poziționa proiectorul mai sus, evitând astfel să fie blocat de obiecte pe mobilă. E o soluție ieftină și eficientă.</p>
+    <p class="mb-4">Investește într-un ecran de proiecție. Chiar și un perete alb vopsit special nu se compară cu un ecran dedicat. Am văzut diferențe mari între a proiecta pe un perete texturat și pe un ecran alb mat. Un ecran de calitate îmbunătățește contrastul, culorile și elimină reflexiile. Prețurile încep de la câteva sute de lei pentru ecrane manuale, dar merită.</p>
+    <p class="mb-4">Ține cont de distanța de proiecție. Fiecare proiector are un 'throw ratio' care determină dimensiunea imaginii în funcție de distanța față de ecran. Verifică manualul proiectorului sau folosește calculatoare online pentru a te asigura că poți obține dimensiunea dorită în spațiul tău. Am făcut greșeala să cumpăr un proiector fără să verific asta și am fost nevoit să-l mut de câteva ori până să găsesc poziția optimă.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi un proiector laser în timpul zilei?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, dar vei avea nevoie de un proiector cu luminozitate foarte mare (peste 4000 ANSI Lumens) și de control total asupra luminii ambientale. Pentru cele mai bune rezultate, vizionarea pe timp de zi este recomandată în camere cu draperii groase sau jaluzele.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de zgomotoase sunt proiectoarele laser?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Sunt mult mai silențioase decât modelele vechi cu becuri. Ventilatoarele sunt necesare pentru răcire, dar majoritatea modelelor noi sunt proiectate să fie discrete, cu niveluri de zgomot sub 30 dB. Modelele premium sunt aproape silențioase.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Am nevoie de un ecran special pentru proiectorul laser?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu este obligatoriu, dar este puternic recomandat. Un ecran de proiecție de calitate va îmbunătăți semnificativ calitatea imaginii, contrastul și culorile, comparativ cu un perete obișnuit. Un perete perfect alb și neted este o alternativă, dar nu la fel de eficientă.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot juca jocuri video pe un proiector laser?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Absolut. Multe proiectoare laser moderne au un input lag scăzut, esențial pentru gaming. Verifică specificațiile pentru 'input lag' sau 'response time'. Modelele 4K cu rată de refresh mare sunt excelente pentru jocuri.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cel-mai-bun-sistem-home-cinema-7-1/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-sistem-home-cinema-7-1.webp" alt="Cel mai bun sistem home cinema 7.1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun sistem home cinema 7.1</h3>
+              </div>
+            </a>
+
+            <a href="/televizor-curbat-uhd-55-inch/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/televizor-curbat-uhd-55-inch.webp" alt="Televizor Curbat Uhd 55 Inch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Televizor Curbat Uhd 55 Inch</h3>
+              </div>
+            </a>
+
+            <a href="/soundbar-compact-cu-dolby-atmos/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/soundbar-compact-cu-dolby-atmos.webp" alt="Soundbar Compact Cu Dolby Atmos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Soundbar Compact Cu Dolby Atmos</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

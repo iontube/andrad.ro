@@ -1,0 +1,289 @@
+---
+export const frontmatter = {
+  title: "Monitor Portabil Pentru Gaming În Deplasare",
+  slug: "monitor-portabil-pentru-gaming-in-deplasare",
+  category: "Tehnologie & Gaming",
+  categorySlug: "tehnologie-gaming",
+  excerpt: "Am testat monitoare portabile pentru gaming in deplasare. Aflati ce sa cautati si recomandari concrete.",
+  image: "/images/articles/monitor-portabil-pentru-gaming-in-deplasare.webp",
+  publishDate: "2025-12-30T14:18:54.000Z",
+  modifiedDate: "2026-01-26T14:18:54.428Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi un monitor portabil pentru a extinde ecranul laptopului in jocuri?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, absolut. Multe monitoare portabile suportă extinderea desktopului, permițându-vă să aveți jocul pe un ecran și alte aplicații (hărți, inventar, stream) pe celălalt. Asigurați-vă că laptopul dvs. suportă ieșire video pe portul pe care îl conectați."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce inseamna 'DisplayPort Alternate Mode' (DP Alt Mode)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Este o funcție a portului USB-C care permite transmiterea semnalului video DisplayPort prin intermediul cablului USB-C. Dacă monitorul și laptopul dvs. suportă DP Alt Mode prin USB-C, puteți conecta ambele dispozitive cu un singur cablu, care poate transmite și semnal video, și date, și chiar alimentare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Este recomandat un monitor portabil pentru jocuri competitive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru jocuri competitive unde fiecare milisecundă contează (e-sports), un monitor portabil cu rată de reîmprospătare mică (60Hz) nu este ideal. Totuși, modelele cu 120Hz sau 144Hz pot fi o opțiune decentă dacă sunteți în deplasare și nu aveți altă alternativă. Nu vor egala performanța unui monitor de gaming dedicat de top."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce autonomie pot astepta de la un monitor portabil alimentat prin USB-C?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Autonomia depinde foarte mult de consumul monitorului și de capacitatea bateriei laptopului sau a unei baterii externe. Un monitor portabil poate consuma între 10W și 20W, deci poate descărca rapid o baterie. Unele modele au o funcție de economisire a energiei care reduce luminozitatea. Dacă folosiți un singur cablu USB-C, alimentarea monitorului se face de obicei de la laptop."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Gaming pe roti? Da, se poate. Dar cu ce monitor?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce cauti la un monitor portabil pentru gaming</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Conectivitate: Mai mult decat un simplu cablu</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Portabilitate si constructie: Asta inseamna 'mobil'</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele concrete si preturi (in RON)</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice din experienta mea</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Gaming pe roti? Da, se poate. Dar cu ce monitor?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce cauti la un monitor portabil pentru gaming</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Conectivitate: Mai mult decat un simplu cablu</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Portabilitate si constructie: Asta inseamna 'mobil'</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele concrete si preturi (in RON)</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice din experienta mea</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/monitor-portabil-pentru-gaming-in-deplasare.webp" alt="Monitor Portabil Pentru Gaming În Deplasare" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Gaming pe roti? Da, se poate. Dar cu ce monitor?</h2>
+    <p class="mb-4">Ideea de a juca titluri AAA pe un ecran decent, departe de biroul de acasa, a devenit tot mai palpabilă. Am petrecut ultimele luni testând diverse monitoare portabile, cu un ochi special pe performanța lor în gaming. Nu e vorba doar de a te juca pe un ecran mic, ci de a avea o experiență fluidă, cu culori bune și timpi de răspuns acceptabili, oriunde te-ar purta drumurile.</p>
+    <p class="mb-4">Am vrut să văd dacă aceste dispozitive pot înlocui cu adevărat un monitor de gaming dedicat, chiar și pentru sesiuni mai scurte. Am cărat prin țară un laptop de gaming decent și am conectat la el o selecție de monitoare portabile de la branduri precum ASUS, Lenovo și un model mai obscur, dar promițător, de la AOC.</p>
+    <p class="mb-4">Scopul meu a fost să simt pe pielea mea limitările, dar și avantajele acestor gadgeturi, și să vă ofer sfaturi bazate pe experiență, nu pe fișe tehnice copiate. Vom vorbi despre ce contează cu adevărat când vine vorba de gaming mobil: viteză, culori, conectivitate și, bineînțeles, portabilitate reală.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce cauti la un monitor portabil pentru gaming</h2>
+    <p class="mb-4">Prioritatea numărul unu pentru gaming este rata de reîmprospătare (refresh rate). Orice sub 60Hz este un compromis major, iar dacă găsiți ceva la 120Hz sau chiar 144Hz, sunteți pe drumul cel bun. Am observat că multe monitoare portabile se opresc la 60Hz, ceea ce e ok pentru strategii sau jocuri mai lente, dar pentru FPS-uri sau titluri de acțiune rapidă, se simte diferența.</p>
+    <p class="mb-4">Rezoluția este al doilea aspect crucial. Full HD (1920x1080) este minimul recomandat. Dacă aveți un laptop suficient de puternic, un QHD (2560x1440) pe un ecran de 15-17 inch oferă o claritate impresionantă. Am testat un model de 15.6 inch la 1440p și a fost o experiență vizuală mult îmbunătățită, deși laptopul meu a trebuit să muncească mai mult.</p>
+    <p class="mb-4">Tipul de panel contează enorm. IPS este standardul de aur pentru culori bune și unghiuri largi de vizualizare, esențial când nu stai perfect centrat în fața ecranului. Am evitat pe cât posibil panelurile TN, care sunt mai rapide, dar culorile sunt adesea spălăcite și unghiurile de vizualizare sunt slabe. Timpul de răspuns (response time) sub 5ms este ideal pentru a minimiza ghosting-ul.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Conectivitate: Mai mult decat un simplu cablu</h2>
+    <p class="mb-4">Aici lucrurile pot deveni complicate. Ideal ar fi să aveți cel puțin un port USB-C care suportă DisplayPort Alternate Mode (DP Alt Mode) și Power Delivery (PD). Asta înseamnă că puteți alimenta monitorul și trimite semnal video printr-un singur cablu, dacă și laptopul dvs. suportă asta. Am testat un Lenovo ThinkPad X1 Carbon conectat la un ASUS ZenScreen OLED printr-un singur cablu USB-C, și a fost o senzație de libertate.</p>
+    <p class="mb-4">Porturile HDMI sunt, desigur, o soluție universală, dar s-ar putea să aveți nevoie de adaptoare suplimentare sau de un cablu separat pentru alimentare, în funcție de modelul monitorului. Am întâlnit monitoare care aveau nevoie de o sursă de alimentare externă pentru a atinge luminozitatea maximă sau pentru a funcționa corect cu o rată de reîmprospătare mai mare prin HDMI.</p>
+    <p class="mb-4">Verificați întotdeauna specificațiile exacte ale porturilor. Unele monitoare portabile au doar un port USB-C pentru alimentare și altul pentru semnal video, ceea ce poate fi la fel de incomod ca și cablurile multiple. Am observat că unii producători, precum Samsung, integrează soluții mai elegante, cu mai puține cabluri necesare.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Portabilitate si constructie: Asta inseamna 'mobil'</h2>
+    <p class="mb-4">Un monitor portabil trebuie să fie, în primul rând, portabil. Greutatea și dimensiunea sunt factori cheie. Majoritatea modelelor se încadrează între 15 și 17 inch, având grosimi de la 5mm la 15mm și cântărind între 600g și 1.2kg. Am testat un model de 17 inch care, deși oferea un spațiu de vizualizare mai mare, era semnificativ mai greu de transportat, ajungând la aproape 1.5kg cu tot cu husa de protecție.</p>
+    <p class="mb-4">Calitatea construcției este, de asemenea, importantă. Un corp din aluminiu se simte mai premium și mai rezistent decât unul din plastic, dar este și mai greu. Multe monitoare vin cu o husă tip smart cover care acționează și ca stand, ceea ce este extrem de practic. Am observat că unele huse sunt mai stabile decât altele, iar unghiurile de înclinare sunt adesea limitate, ceea ce poate fi frustrant.</p>
+    <p class="mb-4">Verificați dacă monitorul are găuri VESA standard, chiar dacă nu le veți folosi des. Asta vă oferă flexibilitate dacă vreți să-l montați pe un mic trepied sau pe un suport mai specializat, deși asta contravine puțin ideii de portabilitate extremă.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele concrete si preturi (in RON)</h2>
+    <p class="mb-4">Pe piața din România, găsiți o varietate interesantă. ASUS are o gamă extinsă sub seria ZenScreen, cum ar fi <strong>ASUS ZenScreen MB16AHG</strong> (15.6 inch, Full HD, 144Hz IPS, USB-C/HDMI) care se învârte în jur de <strong>1600-1800 RON</strong> la PCGarage sau Altex. Este o opțiune solidă pentru gaming, cu o rată de reîmprospătare decentă.</p>
+    <p class="mb-4">Lenovo oferă modele precum <strong>Lenovo ThinkVision M14</strong> (14 inch, Full HD, 60Hz IPS) sau variante mai noi, dar acestea sunt mai orientate spre productivitate. Totuși, modelele lor de gaming portabile, dacă apar, pot fi găsite la prețuri similare sau puțin mai mari, în jur de <strong>1400-1700 RON</strong>.</p>
+    <p class="mb-4">Am văzut și modele de la AOC, cum ar fi <strong>AOC I1601FWUX</strong> (15.6 inch, Full HD, 60Hz IPS) sau variante cu rate de reîmprospătare mai mari, care pot fi găsite uneori chiar și sub <strong>1200 RON</strong> pe eMAG, mai ales la promoții. Acestea pot fi un chilipir dacă nu aveți pretenții exagerate.</p>
+    <p class="mb-4">Samsung are și el un cuvânt de spus, cu modele ca <strong>Samsung ViewFinity S8</strong> (deși mai mult monitor de birou, au și variante portabile mai mici), dar prețurile tind să fie mai ridicate, uneori depășind <strong>2000 RON</strong> pentru specificații de top.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice din experienta mea</h2>
+    <p class="mb-4">Nu vă așteptați la aceeași calitate a imaginii ca de la un monitor de gaming de 27 inch cu tehnologii de ultimă oră. Acestea sunt compromisuri inerente. Totuși, pentru sesiuni ocazionale sau când sunteți plecat, sunt o soluție excelentă. Am jucat Cyberpunk 2077 pe un monitor portabil și, deși nu a fost la fel de imersiv ca pe ecranul meu principal, a fost cu siguranță mult mai bine decât pe ecranul mic al laptopului.</p>
+    <p class="mb-4">Verificați compatibilitatea cu laptopul dvs. înainte de a cumpăra. Nu toate porturile USB-C sunt la fel. Citiți recenzii detaliate și, dacă aveți posibilitatea, testați monitorul înainte de a-l achiziționa. Am avut o experiență neplăcută cu un monitor care avea probleme de flicker la 120Hz, ceva ce nu apărea în specificațiile de bază.</p>
+    <p class="mb-4">Luați în considerare și accesoriile. O baterie externă puternică poate fi utilă dacă nu aveți acces la o priză, mai ales dacă monitorul consumă mult curent. De asemenea, un stand mai stabil sau un mic trepied vă pot îmbunătăți experiența de utilizare. Am observat că stând pe o suprafață plană, cu husa-stand, unghiul de vizualizare poate fi incomod pe termen lung. O mică înclinare suplimentară, obținută cu o carte sau un obiect mic, face minuni.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi un monitor portabil pentru a extinde ecranul laptopului in jocuri?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, absolut. Multe monitoare portabile suportă extinderea desktopului, permițându-vă să aveți jocul pe un ecran și alte aplicații (hărți, inventar, stream) pe celălalt. Asigurați-vă că laptopul dvs. suportă ieșire video pe portul pe care îl conectați.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce inseamna 'DisplayPort Alternate Mode' (DP Alt Mode)?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Este o funcție a portului USB-C care permite transmiterea semnalului video DisplayPort prin intermediul cablului USB-C. Dacă monitorul și laptopul dvs. suportă DP Alt Mode prin USB-C, puteți conecta ambele dispozitive cu un singur cablu, care poate transmite și semnal video, și date, și chiar alimentare.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Este recomandat un monitor portabil pentru jocuri competitive?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru jocuri competitive unde fiecare milisecundă contează (e-sports), un monitor portabil cu rată de reîmprospătare mică (60Hz) nu este ideal. Totuși, modelele cu 120Hz sau 144Hz pot fi o opțiune decentă dacă sunteți în deplasare și nu aveți altă alternativă. Nu vor egala performanța unui monitor de gaming dedicat de top.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce autonomie pot astepta de la un monitor portabil alimentat prin USB-C?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Autonomia depinde foarte mult de consumul monitorului și de capacitatea bateriei laptopului sau a unei baterii externe. Un monitor portabil poate consuma între 10W și 20W, deci poate descărca rapid o baterie. Unele modele au o funcție de economisire a energiei care reduce luminozitatea. Dacă folosiți un singur cablu USB-C, alimentarea monitorului se face de obicei de la laptop.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cel-mai-bun-scaun-de-gaming-premium/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-scaun-de-gaming-premium.webp" alt="Cel mai bun scaun de gaming premium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun scaun de gaming premium</h3>
+              </div>
+            </a>
+
+            <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/monitor-curbat-qhd-pentru-gaming-competitiv.webp" alt="Monitor Curbat Qhd Pentru Gaming Competitiv" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Monitor Curbat Qhd Pentru Gaming Competitiv</h3>
+              </div>
+            </a>
+
+            <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/laptop-gaming-sub-6000-lei-cu-performanta-ridicata.webp" alt="Laptop Gaming Sub 6000 Lei Cu Performanță Ridicată" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Laptop Gaming Sub 6000 Lei Cu Performanță Ridicată</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

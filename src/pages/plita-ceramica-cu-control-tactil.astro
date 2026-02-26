@@ -1,0 +1,298 @@
+---
+export const frontmatter = {
+  title: "Plită Ceramică Cu Control Tactil",
+  slug: "plita-ceramica-cu-control-tactil",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Plitele ceramice cu control tactil: testate pe viu. Avantaje, dezavantaje si sfaturi de la un expert cu experienta.",
+  image: "/images/articles/plita-ceramica-cu-control-tactil.webp",
+  publishDate: "2026-01-05T10:34:02.000Z",
+  modifiedDate: "2026-01-28T10:34:02.714Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi oale din aluminiu pe o plită ceramică cu control tactil?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, poți folosi oale din aluminiu, dar este recomandat să fie cele cu fund gros și perfect plat. Oalele din aluminiu subțire pot lăsa urme sau pot încălzi neuniform. De asemenea, evită să le tragi pe suprafață, ci ridică-le."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce fac dacă suprafața tactilă nu răspunde?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Asigură-te că suprafața de control este curată și uscată. Mâinile umede sau murdare pot reduce sensibilitatea. De asemenea, verifică dacă plita este alimentată corect și dacă nu este activată funcția de blocare pentru copii."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de rezistentă la zgârieturi este o plită ceramică?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sticla-ceramică este destul de rezistentă la zgârieturi fine, dar nu este indestructibilă. Evită să folosești ustensile metalice ascuțite direct pe suprafață și nu trage oalele. Zgârieturile profunde pot apărea în timp dacă nu ești atent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot pune folie de aluminiu pe plita ceramică?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu este recomandat să pui folie de aluminiu direct pe suprafața plitei ceramice. Aceasta se poate topi, deteriora suprafața și poate bloca senzorii de căldură, afectând funcționarea plitei."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Plita ceramică cu control tactil: prima impresie și ce am descoperit</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum funcționează controlul tactil: dincolo de atingere</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prețuri și modele concrete: ce găsești pe piața din România</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantaje și dezavantaje: experiența mea cu plita ceramică tactilă</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice pentru utilizare și întreținere</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Plită ceramică vs. plită cu inducție: ce alegi?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Plita ceramică cu control tactil: prima impresie și ce am descoperit</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum funcționează controlul tactil: dincolo de atingere</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prețuri și modele concrete: ce găsești pe piața din România</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantaje și dezavantaje: experiența mea cu plita ceramică tactilă</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice pentru utilizare și întreținere</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Plită ceramică vs. plită cu inducție: ce alegi?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/plita-ceramica-cu-control-tactil.webp" alt="Plită Ceramică Cu Control Tactil" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Plita ceramică cu control tactil: prima impresie și ce am descoperit</h2>
+    <p class="mb-4">Am montat recent o plită ceramică cu control tactil în bucătăria mea, o schimbare majoră față de vechea plită pe gaz. Prima impresie a fost una de modernitate și minimalism. Suprafața netedă, fără butoane fizice, dă un aer futurist oricărei bucătării. Controlul tactil, deși inițial puțin intimidant, s-a dovedit a fi intuitiv odată ce te obișnuiești cu el.</p>
+    <p class="mb-4">Am testat modele de la producători cunoscuți precum Bosch, Electrolux și chiar o variantă mai accesibilă de la Beko. Fiecare a avut un sistem tactil ușor diferit, dar principiul de bază a rămas același: atingere sau glisare pentru controlul temperaturii și al funcțiilor. Am observat că răspunsul la atingere este rapid și precis, fără întârzieri frustrante.</p>
+    <p class="mb-4">În experiența mea, curățarea este un avantaj major. Fără spații unde să se adune grăsimea sau resturile de mâncare, o simplă ștergere cu o lavetă umedă este suficientă. Acest aspect a fost un factor decisiv pentru mine, având o familie numeroasă și puțin timp la dispoziție pentru curățenie.</p>
+    <p class="mb-4">Siguranța este un alt punct forte. Majoritatea modelelor au funcție de blocare pentru copii și indicator de căldură reziduală, elemente esențiale într-o gospodărie cu copii mici. Am testat și funcția de oprire automată, care se activează dacă lichidul fierbe și ajunge pe suprafața de control sau dacă plita este lăsată nesupravegheată pentru un timp îndelungat.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum funcționează controlul tactil: dincolo de atingere</h2>
+    <p class="mb-4">Controlul tactil pe o plită ceramică se bazează pe senzori capacitiv care detectează prezența și mișcarea degetului tău. Aceste suprafețe din sticlă-ceramică sunt rezistente la zgârieturi și la șocurile termice, ceea ce le face durabile în timp. Simbolurile sunt de obicei integrate direct în suprafață și iluminate, devenind vizibile doar când plita este activată.</p>
+    <p class="mb-4">Am observat că există două tipuri principale de control tactil: butoane virtuale statice și control prin glisare (slider). Modelele mai avansate, cum ar fi cele de la Siemens sau Neff, folosesc un sistem de glisare care permite ajustarea precisă a temperaturii prin simpla mișcare a degetului pe o scală. Este o experiență mult mai fluidă și mai rapidă decât apăsarea repetată a unor butoane.</p>
+    <p class="mb-4">În general, plitele ceramice cu control tactil oferă o gamă largă de setări de temperatură, de la cele mai joase pentru menținerea la cald, până la cele de top pentru fierbere rapidă. Unele modele, precum cele de la Whirlpool, au chiar funcții speciale precum "Booster" pentru a accelera procesul de încălzire.</p>
+    <p class="mb-4">Este important să reții că, spre deosebire de butoanele fizice, controlul tactil poate fi uneori mai puțin receptiv dacă degetele sunt ude sau murdare. De aceea, recomandarea mea este să te asiguri că suprafața de control este uscată și curată înainte de a o utiliza.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Prețuri și modele concrete: ce găsești pe piața din România</h2>
+    <p class="mb-4">Pe piața din România, găsești plite ceramice cu control tactil începând de la prețuri accesibile, până la modele premium. De exemplu, pe eMAG, am văzut modele de la Arctic cu control tactil la prețuri în jur de 800-1000 RON. Acestea sunt de obicei modele mai simple, cu 2-4 zone de gătit și funcții de bază.</p>
+    <p class="mb-4">Branduri precum Electrolux sau Beko oferă opțiuni în intervalul 1200-1800 RON, cu mai multe zone de gătit, funcții "Booster" și uneori chiar control prin glisare pe anumite zone. Acestea reprezintă un echilibru bun între funcționalitate și preț.</p>
+    <p class="mb-4">Modelele de top de la Bosch, Siemens, Neff sau AEG pot ajunge la prețuri de 2000-4000 RON sau chiar mai mult, în funcție de numărul de zone de gătit, tehnologiile suplimentare (cum ar fi zone flexibile sau conectori pentru hota inteligentă) și finisaje. Am văzut modele cu suprafețe de sticlă-ceramică de înaltă calitate, cu un design deosebit, care pot transforma bucătăria într-un spațiu premium.</p>
+    <p class="mb-4">Pe site-urile precum Altex sau Flanco, vei găsi oferte similare, cu posibilitatea de a compara prețurile între diferiți retaileri. PC Garage are de asemenea o selecție bună, orientată mai mult spre electrocasnice premium.</p>
+    <p class="mb-4">Recomandarea mea este să stabilești un buget clar înainte de a începe căutarea și să te uiți la specificațiile tehnice care contează cel mai mult pentru tine: numărul de zone de gătit, diametrul acestora, puterea maximă, prezența funcției "Booster" și nivelul de siguranță.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Avantaje și dezavantaje: experiența mea cu plita ceramică tactilă</h2>
+    <p class="mb-4">Cel mai mare avantaj, așa cum am menționat, este ușurința curățării. Suprafața netedă face ca orice strop de mâncare sau lichid să fie șters rapid, fără efort. Acest lucru face ca plita să arate mereu impecabil, cu minimă bătaie de cap. Am observat că și petele de grăsime se curăță mult mai ușor decât pe o plită cu butoane.</p>
+    <p class="mb-4">Un alt avantaj major este siguranța sporită. Blocarea pentru copii este o funcție excelentă pentru familiile cu cei mici, prevenind pornirea accidentală. Indicatorul de căldură reziduală te avertizează când suprafața este încă fierbinte, evitând arsurile neplăcute. Am apreciat și funcția de oprire automată, care oferă o liniște suplimentară.</p>
+    <p class="mb-4">Pe partea de dezavantaje, am întâmpinat uneori o sensibilitate redusă la atingere dacă mâinile erau umede. Acest lucru poate fi frustrant când gătești și ai mâinile murdare. De asemenea, deși sticla-ceramică este rezistentă, zgârieturile fine pot apărea în timp, mai ales dacă folosești oale cu fundul rugos sau le tragi pe suprafață.</p>
+    <p class="mb-4">Un alt aspect de luat în considerare este faptul că încălzirea și răcirea nu sunt instantanee, spre deosebire de plitele cu inducție. Poate dura un pic mai mult până când apa ajunge la punctul de fierbere sau până când suprafața se răcește după utilizare. Totuși, pentru majoritatea utilizatorilor, acest aspect nu reprezintă o problemă majoră.</p>
+    <p class="mb-4">În experiența mea, este esențial să folosești oale și cratițe cu fundul perfect plat și curat pentru a asigura o distribuție optimă a căldurii și o funcționare eficientă a plitei ceramice.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice pentru utilizare și întreținere</h2>
+    <p class="mb-4">Pentru a te bucura cât mai mult de plita ta ceramică cu control tactil, evită să folosești oale cu fundul deteriorat sau rugos. Acestea pot zgâria suprafața de sticlă-ceramică. De asemenea, nu trage oalele pe suprafața plitei, ci ridică-le. Acest lucru previne zgârieturile accidentale.</p>
+    <p class="mb-4">Curățarea zilnică este simplă: după ce plita s-a răcit complet, șterge-o cu o lavetă moale și umedă, eventual cu puțin detergent de vase. Pentru petele mai dificile sau arse, folosește un produs special de curățat plite ceramice, aplicându-l conform instrucțiunilor. Evită bureții abrazivi sau produsele de curățat universale care pot deteriora suprafața.</p>
+    <p class="mb-4">Am observat că utilizarea unor ustensile din inox sau email cu fund gros și plat este ideală. Cele din aluminiu sau cupru pot lăsa urme pe suprafața plitei dacă nu sunt tratate corespunzător. Verifică întotdeauna compatibilitatea oalelor cu plita ceramică.</p>
+    <p class="mb-4">Când gătești, evită să așezi obiecte metalice pe suprafața plitei, chiar și dacă aceasta este rece. Acestea se pot încălzi rapid și pot cauza arsuri sau deteriorări ale suprafeței. De asemenea, nu lăsa niciodată mânerele oalelor să atârne peste marginea plitei, pentru a evita accidentele.</p>
+    <p class="mb-4">Pentru a menține controlul tactil funcțional și receptiv, curăță periodic și zona de control. Orice reziduu sau lichid uscat poate afecta temporar sensibilitatea senzorilor. O ștergere rapidă cu o cârpă uscată este de obicei suficientă.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Plită ceramică vs. plită cu inducție: ce alegi?</h2>
+    <p class="mb-4">Alegerea între o plită ceramică și una cu inducție depinde mult de bugetul și preferințele tale. Plitele ceramice sunt în general mai accesibile ca preț. De exemplu, o plită ceramică bună de la producători precum Gorenje sau Zanussi poate fi găsită pe eMAG la prețuri în jur de 1000-1500 RON.</p>
+    <p class="mb-4">Plitele cu inducție, pe de altă parte, sunt mai rapide și mai eficiente energetic, deoarece încălzesc direct vasul, nu suprafața plitei. Aceasta înseamnă că apa fierbe mult mai repede și consumul de energie este mai mic. Modelele de inducție de la Samsung sau LG, cu tehnologii avansate, pot costa însă între 2000 RON și 5000 RON sau chiar mai mult.</p>
+    <p class="mb-4">Am observat că plitele cu inducție necesită oale și cratițe speciale, cu fund magnetic. Dacă ai deja o colecție de vase, verifică compatibilitatea înainte de a face achiziția. Plitele ceramice funcționează cu majoritatea tipurilor de vase, inclusiv cele din inox, email sau sticlă groasă.</p>
+    <p class="mb-4">Din punct de vedere al curățării, ambele suprafețe sunt netede și ușor de întreținut. Totuși, plita ceramică se poate zgâria mai ușor și se încălzește mai mult, existând un risc mai mare de ardere a resturilor de mâncare pe suprafață.</p>
+    <p class="mb-4">În concluzie, dacă bugetul este un factor important și nu ai nevoie de cea mai rapidă metodă de gătit, o plită ceramică cu control tactil este o opțiune excelentă. Dacă ești dispus să investești mai mult pentru eficiență energetică, viteză și tehnologii moderne, atunci inducția este calea de urmat.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi oale din aluminiu pe o plită ceramică cu control tactil?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, poți folosi oale din aluminiu, dar este recomandat să fie cele cu fund gros și perfect plat. Oalele din aluminiu subțire pot lăsa urme sau pot încălzi neuniform. De asemenea, evită să le tragi pe suprafață, ci ridică-le.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce fac dacă suprafața tactilă nu răspunde?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Asigură-te că suprafața de control este curată și uscată. Mâinile umede sau murdare pot reduce sensibilitatea. De asemenea, verifică dacă plita este alimentată corect și dacă nu este activată funcția de blocare pentru copii.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de rezistentă la zgârieturi este o plită ceramică?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Sticla-ceramică este destul de rezistentă la zgârieturi fine, dar nu este indestructibilă. Evită să folosești ustensile metalice ascuțite direct pe suprafață și nu trage oalele. Zgârieturile profunde pot apărea în timp dacă nu ești atent.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot pune folie de aluminiu pe plita ceramică?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu este recomandat să pui folie de aluminiu direct pe suprafața plitei ceramice. Aceasta se poate topi, deteriora suprafața și poate bloca senzorii de căldură, afectând funcționarea plitei.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/aparat-de-cafea-cu-capsule-reutilizabile/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aparat-de-cafea-cu-capsule-reutilizabile.webp" alt="Aparat De Cafea Cu Capsule Reutilizabile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aparat De Cafea Cu Capsule Reutilizabile</h3>
+              </div>
+            </a>
+
+            <a href="/frigider-cu-compartimente-inteligente/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/frigider-cu-compartimente-inteligente.webp" alt="Frigider Cu Compartimente Inteligente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Frigider Cu Compartimente Inteligente</h3>
+              </div>
+            </a>
+
+            <a href="/aer-conditionat-inverter-cu-consum-redus/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aer-conditionat-inverter-cu-consum-redus.webp" alt="Aer Condiționat Inverter Cu Consum Redus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aer Condiționat Inverter Cu Consum Redus</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

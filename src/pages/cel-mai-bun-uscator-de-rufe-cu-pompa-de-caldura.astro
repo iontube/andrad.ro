@@ -1,0 +1,332 @@
+---
+export const frontmatter = {
+  title: "Cel mai bun uscător de rufe cu pompă de căldură",
+  slug: "cel-mai-bun-uscator-de-rufe-cu-pompa-de-caldura",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Rutina de spălare a hainelor a evoluat mult, iar astăzi nu ne mai mulțumim doar cu rufe curate, ci și cu haine perfect uscate, gata de purtat sau de aranjat ...",
+  image: "/images/articles/cel-mai-bun-uscator-de-rufe-cu-pompa-de-caldura.webp",
+  publishDate: "2025-12-14T07:21:03.000Z",
+  modifiedDate: "2026-01-22T07:21:03.428Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cât de des trebuie curățat filtrul de scame la un uscător cu pompă de căldură?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Filtrul de scame ar trebui curățat după fiecare ciclu de uscare. Acumularea de scame reduce drastic eficiența aparatului și crește consumul de energie. Multe modele au un sistem de filtrare dublu, asigură-te că le cureți pe amândouă."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Uscătoarele cu pompă de căldură sunt zgomotoase?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "În general, uscătoarele cu pompă de căldură sunt mai silențioase decât cele tradiționale cu evacuare. Nivelul de zgomot variază, dar majoritatea operează între 60 și 65 dB. Modelele premium, cu motoare fără perii și tehnologii de amortizare, pot fi chiar mai silențioase, ajungând la aproximativ 62 dB sau chiar mai puțin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot usca orice tip de material într-un uscător cu pompă de căldură?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Datorită temperaturilor mai scăzute și programelor dedicate, uscătoarele cu pompă de căldură sunt mult mai delicate cu țesăturile. Poți usca în siguranță majoritatea materialelor, inclusiv lână, mătase sau articole delicate, folosind programele specifice. Este întotdeauna recomandat să verifici eticheta de îngrijire a fiecărui articol de îmbrăcăminte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Câtă energie electrică consumă un uscător cu pompă de căldură?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Uscătoarele cu pompă de căldură sunt extrem de eficiente energetic. Un model de clasă A+++ de 8 kg consumă aproximativ 176 kWh pe an, bazat pe 160 de cicluri de uscare standard. Aceasta este o economie semnificativă față de uscătoarele vechi cu condensare sau evacuare, care pot consuma de două sau trei ori mai mult."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Este necesară o evacuare specială pentru aceste uscătoare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu, nu este necesară o evacuare specială. Uscătoarele cu pompă de căldură, la fel ca cele cu condensare, colectează apa extrasă din rufe într-un rezervor intern pe care trebuie să-l golești manual după fiecare utilizare. Alternativ, multe modele pot fi conectate direct la sistemul de canalizare al locuinței printr-un furtun, eliminând necesitatea golirii manuale."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <!-- Hero -->
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <!-- Sidebar - Cuprins -->
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <!-- Mobile TOC - Collapsible -->
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De Ce Un Uscător Cu Pompă De Căldură Este Alegerea Perfectă?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Criterii Esențiale Când Alegi Uscătorul Ideal</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele Remarcabile De Uscătoare Cu Pompă De Căldură</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tehnologii Inovatoare Pentru O Uscare Fără Griji</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Pentru O Întreținere Corectă Și O Durată De Viață Extinsă</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+
+            <!-- Desktop TOC - Collapsible -->
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De Ce Un Uscător Cu Pompă De Căldură Este Alegerea Perfectă?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Criterii Esențiale Când Alegi Uscătorul Ideal</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele Remarcabile De Uscătoare Cu Pompă De Căldură</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tehnologii Inovatoare Pentru O Uscare Fără Griji</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Pentru O Întreținere Corectă Și O Durată De Viață Extinsă</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/cel-mai-bun-uscator-de-rufe-cu-pompa-de-caldura.webp" alt="Haine Uscate Perfect: Alege cel mai bun uscător de rufe cu pompă de căldură" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">De Ce Un Uscător Cu Pompă De Căldură Este Alegerea Perfectă?</h2>
+    <p class="mb-4">Rutina de spălare a hainelor a evoluat mult, iar astăzi nu ne mai mulțumim doar cu rufe curate, ci și cu haine perfect uscate, gata de purtat sau de aranjat în dulap. Un uscător de rufe nu este un lux, ci o necesitate modernă, aducând un confort uriaș în orice locuință, eliminând uscatul pe sârmă și dependența de vreme.</p>
+    <p class="mb-4">Atunci când vorbim despre eficiență și grijă pentru țesături, uscătoarele de rufe cu pompă de căldură sunt pe primul loc. Ele reprezintă vârful de lance al tehnologiei actuale în domeniu, oferind performanțe superioare uscătoarelor tradiționale cu evacuare sau condensare. Dacă ești în căutarea soluției optime pentru uscarea rufelor, ai ajuns exact unde trebuie.</p>
+    <p class="mb-4">Vom explora împreună ce face aceste aparate atât de speciale, cum să alegi modelul ideal pentru casa ta și vom arunca o privire la câteva opțiuni remarcabile de pe piață. Pregătește-te să descoperi cum poți transforma procesul de uscare a hainelor într-o experiență simplă, eficientă și economică.</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Eficiență Energetică Fără Compromis</h3>
+    <p class="mb-4">Secretul uscătoarelor cu pompă de căldură stă în modul lor de funcționare. Ele recirculă aerul cald în interiorul tamburului, folosind un agent frigorific pentru a extrage umiditatea din rufe. Acest proces permite uscarea la temperaturi mai scăzute, de aproximativ 50-60°C, spre deosebire de 70-80°C la modelele clasice. Rezultatul este o reducere semnificativă a consumului de energie, multe modele atingând clasa energetică A+++. Un uscător A+++ de 8 kg poate consuma aproximativ 176 kWh pe an, o diferență majoră comparativ cu un model vechi de condensare, ce poate depăși 500 kWh anual.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Protecția Avansată a Țesăturilor</h3>
+    <p class="mb-4">Temperaturile mai blânde nu sunt benefice doar pentru factură, ci și pentru hainele tale. Uscarea delicată reduce riscul de deteriorare, micșorare sau decolorare a țesăturilor, prelungind durata de viață a acestora. Chiar și articolele mai sensibile, care de obicei necesită uscare la aer, pot fi uscate în siguranță într-un uscător cu pompă de căldură, datorită programelor dedicate și controlului precis al temperaturii.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Versatilitate și Flexibilitate în Amplasare</h3>
+    <p class="mb-4">Spre deosebire de uscătoarele cu evacuare, care necesită o conductă externă pentru eliminarea aerului umed, modelele cu pompă de căldură colectează apa într-un rezervor sau o drenează direct la sistemul de canalizare. Acest lucru înseamnă că le poți amplasa aproape oriunde în casă – în baie, într-o debara, în bucătărie sau chiar în hol, fără să te complici cu instalații speciale. Singura cerință este o priză electrică.</p>
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Criterii Esențiale Când Alegi Uscătorul Ideal</h2>
+    <p class="mb-4">Investiția într-un uscător cu pompă de căldură este una pe termen lung, deci alegerea corectă este crucială. Iată la ce aspecte trebuie să fii atent pentru a găsi modelul perfect pentru nevoile tale:</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Capacitatea Tamburului</h3>
+    <p class="mb-4">Aceasta ar trebui să fie similară sau puțin mai mare decât capacitatea mașinii tale de spălat. Modelele variază de la 7 kg, potrivite pentru persoane singure sau cupluri, la 8 kg sau 9 kg, ideale pentru familii medii, și chiar 10 kg sau mai mult pentru familii numeroase. Un tambur de 8 kg este o opțiune echilibrată pentru majoritatea utilizatorilor, permițând uscarea eficientă a unei cantități considerabile de rufe.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Clasa Energetică și Consumul</h3>
+    <p class="mb-4">Un uscător cu pompă de căldură de clasă A+++ este cel mai eficient. Diferențele de consum sunt substanțiale. Un model A++ consumă, spre exemplu, aproximativ 235 kWh/an pentru 8 kg, în timp ce un A+++ se apropie de 176 kWh/an. Această economie se va vedea pe termen lung în factura de electricitate, justificând adesea un preț de achiziție inițial mai ridicat.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Nivelul de Zgomot</h3>
+    <p class="mb-4">Dacă uscătorul va fi amplasat într-o zonă de locuit sau aproape de dormitoare, nivelul de zgomot este un factor important. Majoritatea uscătoarelor cu pompă de căldură operează între 60 și 65 dB. Modelele cu tehnologii de amortizare a zgomotului, cum ar fi motoarele fără perii (Digital Inverter, EcoSilence Drive), pot coborî acest prag, oferind o experiență mai silențioasă.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Programe și Funcții Speciale</h3>
+    <p class="mb-4">Un uscător modern oferă o gamă variată de programe pentru diferite tipuri de țesături și nevoi. Caută programe specifice pentru lână, delicate, articole sport, cămăși, denim sau program rapid. Funcțiile anti-șifonare, care rotesc periodic tamburul după finalizarea ciclului, sunt extrem de utile. Senzorii de umiditate, precum OptimalDry de la Samsung sau AutoDry de la Bosch, detectează nivelul de uscare și opresc ciclul automat, prevenind suprauscarea și economisind energie. Conectivitatea Wi-Fi permite controlul de la distanță și descărcarea de programe suplimentare, oferind un plus de confort.</p>
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele Remarcabile De Uscătoare Cu Pompă De Căldură</h2>
+    <p class="mb-4">Piața oferă numeroase opțiuni excelente. Iată câteva exemple de branduri și caracteristici pe care le vei întâlni la modelele de top, care te pot ajuta să identifici cel mai bun uscător de rufe cu pompă de căldură:</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Bosch / Siemens</h3>
+    <p class="mb-4">Aceste branduri sunt cunoscute pentru fiabilitate și inovație. Modelele din seriile 6 sau 8, cum ar fi Bosch WTWH7560BY sau Siemens WT47W5H0BY, oferă clasa energetică A+++ și funcții precum AutoClean (condensator cu autocurățare, eliminând nevoia de întreținere manuală a acestuia) și IronAssist (programe cu aburi pentru reducerea șifonării). Motoarele EcoSilence Drive contribuie la un nivel redus de zgomot, de aproximativ 62 dB. Capacitățile standard sunt de 8 sau 9 kg.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Samsung</h3>
+    <p class="mb-4">Samsung se distinge prin design modern și tehnologii inteligente. Modelele precum DV80T5220AW/LE vin cu tehnologia OptimalDry, care folosește senzori de umiditate, temperatură și curățare pentru a ajusta timpul de uscare. Motoarele Digital Inverter asigură o funcționare silențioasă și o durată de viață lungă. Funcția AI Control permite personalizarea ciclurilor de uscare, iar conectivitatea SmartThings aduce controlul direct pe smartphone. Capacitățile tipice sunt de 8 sau 9 kg.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">LG</h3>
+    <p class="mb-4">LG inovează cu tehnologia Dual Inverter Heat Pump, care permite uscarea mai rapidă și o eficiență energetică superioară. Modele precum RC80V9AV4Q oferă programe Allergy Care, care elimină până la 99.9% din acarieni și praf, ideal pentru persoanele cu alergii. Funcția Eco Hybrid îți permite să alegi între economisirea energiei și reducerea timpului de uscare. Capacitățile sunt adesea de 8, 9 sau chiar 10 kg, perfecte pentru familiile numeroase.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Electrolux</h3>
+    <p class="mb-4">Electrolux se concentrează pe îngrijirea delicată a hainelor. Tehnologiile SensiCare și DelicateCare adaptează temperatura și mișcarea tamburului la tipul de țesătură, prevenind suprauscarea. Funcția Reverse Tumble reduce încrețirea hainelor. Modelele PerfectCare 800 sau 900, cu capacități de 8 sau 9 kg, sunt o alegere excelentă pentru cei care prioritizează protejarea țesăturilor.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Beko</h3>
+    <p class="mb-4">Beko oferă un raport calitate-preț foarte bun, aducând tehnologia pompei de căldură la un public mai larg. Modelele lor, cum ar fi Beko B5T68243W, dispun de tehnologia EcoGentle pentru uscare eficientă energetic și OptiSense, un sistem de senzori pentru optimizarea procesului. Multe uscătoare Beko au și funcția AquaWave, un design special al tamburului pentru o uscare mai delicată.</p>
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Tehnologii Inovatoare Pentru O Uscare Fără Griji</h2>
+    <p class="mb-4">Pe lângă eficiența energetică de bază, uscătoarele moderne cu pompă de căldură vin echipate cu o multitudine de inovații menite să simplifice procesul de uscare și să protejeze hainele:</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Senzori de Umiditate Inteligenți</h3>
+    <p class="mb-4">Majoritatea uscătoarelor premium folosesc senzori avansați care monitorizează constant nivelul de umiditate din tambur. Această tehnologie permite aparatului să oprească ciclul exact în momentul în care rufele ating gradul de uscare dorit, evitând suprauscarea, care poate deteriora fibrele și irosi energie. Funcții precum AutoDry (Bosch/Siemens) sau OptimalDry (Samsung) sunt exemple de astfel de sisteme inteligente.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Sisteme de Autocurățare a Condensatorului</h3>
+    <p class="mb-4">Un aspect important la uscătoarele cu condensare (și implicit la cele cu pompă de căldură) este curățarea condensatorului, care poate acumula scame și praf, reducând eficiența. Unele modele de top, cum ar fi cele de la Bosch (AutoClean) sau Siemens (SelfCleaning Condenser), au un sistem automat care curăță condensatorul la fiecare ciclu, menținând performanța energetică la cote maxime pe toată durata de viață a aparatului și eliminând o sarcină de întreținere pentru utilizator.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Conectivitate Smart și Control de la Distanță</h3>
+    <p class="mb-4">Uscătoarele inteligente pot fi conectate la rețeaua Wi-Fi a casei și controlate printr-o aplicație pe smartphone. Aceasta îți permite să pornești sau să oprești ciclul, să verifici statusul, să primești notificări sau chiar să descarci programe de uscare suplimentare, adaptate nevoilor tale specifice. Platforme precum Home Connect (Bosch/Siemens), SmartThings (Samsung) sau ThinQ (LG) transformă gestionarea rufelor într-o experiență modernă și convenabilă.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Funcții Anti-Șifonare și Reîmprospătare</h3>
+    <p class="mb-4">Multe uscătoare includ funcții care reduc semnificativ șifonarea rufelor. Mișcarea bidirecțională a tamburului (Reverse Tumble) sau ciclurile de răcire la finalul programului ajută la destinderea fibrelor. Există și funcții cu aburi, cum ar fi IronAssist de la Bosch, care reîmprospătează hainele și diminuează nevoia de călcare, economisind timp prețios.</p>
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi Pentru O Întreținere Corectă Și O Durată De Viață Extinsă</h2>
+    <p class="mb-4">Pentru ca uscătorul tău cu pompă de căldură să funcționeze la parametri optimi și să te servească mulți ani, o întreținere regulată este esențială. Nu te speria, este un proces simplu:</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Curățarea Filtrelor de Scame</h3>
+    <p class="mb-4">Acesta este cel mai important pas. Curăță filtrul de scame după fiecare ciclu de uscare. Scamele acumulate pot bloca fluxul de aer, reducând eficiența aparatului și crescând consumul de energie. Multe uscătoare au un sistem de filtre dublu, asigură-te că le cureți pe amândouă.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Golirea Rezervorului de Apă</h3>
+    <p class="mb-4">Dacă uscătorul tău nu este conectat la scurgere, rezervorul de colectare a apei trebuie golit după fiecare utilizare. Un rezervor plin va opri funcționarea uscătorului. Apa colectată este deionizată și poate fi folosită la călcat cu fierul de călcat cu aburi.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Întreținerea Condensatorului</h3>
+    <p class="mb-4">Chiar dacă ai un model cu autocurățare, o verificare periodică (o dată la câteva luni) nu strică. Pentru uscătoarele fără autocurățare, condensatorul trebuie curățat manual conform instrucțiunilor producătorului, de obicei la 3-6 luni. Acesta poate fi o sursă importantă de pierdere a eficienței dacă este blocat cu scame și praf.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Curățarea Tamburului și a Garniturii Ușii</h3>
+    <p class="mb-4">Periodic, șterge interiorul tamburului cu o cârpă umedă pentru a îndepărta orice reziduu de detergent sau balsam. Nu uita să cureți și garnitura de cauciuc de la ușă, unde se pot acumula scame și murdărie.</p>
+  </section>
+
+          <!-- FAQ Section -->
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de des trebuie curățat filtrul de scame la un uscător cu pompă de căldură?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Filtrul de scame ar trebui curățat după fiecare ciclu de uscare. Acumularea de scame reduce drastic eficiența aparatului și crește consumul de energie. Multe modele au un sistem de filtrare dublu, asigură-te că le cureți pe amândouă.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Uscătoarele cu pompă de căldură sunt zgomotoase?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  În general, uscătoarele cu pompă de căldură sunt mai silențioase decât cele tradiționale cu evacuare. Nivelul de zgomot variază, dar majoritatea operează între 60 și 65 dB. Modelele premium, cu motoare fără perii și tehnologii de amortizare, pot fi chiar mai silențioase, ajungând la aproximativ 62 dB sau chiar mai puțin.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot usca orice tip de material într-un uscător cu pompă de căldură?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Datorită temperaturilor mai scăzute și programelor dedicate, uscătoarele cu pompă de căldură sunt mult mai delicate cu țesăturile. Poți usca în siguranță majoritatea materialelor, inclusiv lână, mătase sau articole delicate, folosind programele specifice. Este întotdeauna recomandat să verifici eticheta de îngrijire a fiecărui articol de îmbrăcăminte.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Câtă energie electrică consumă un uscător cu pompă de căldură?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Uscătoarele cu pompă de căldură sunt extrem de eficiente energetic. Un model de clasă A+++ de 8 kg consumă aproximativ 176 kWh pe an, bazat pe 160 de cicluri de uscare standard. Aceasta este o economie semnificativă față de uscătoarele vechi cu condensare sau evacuare, care pot consuma de două sau trei ori mai mult.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Este necesară o evacuare specială pentru aceste uscătoare?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu, nu este necesară o evacuare specială. Uscătoarele cu pompă de căldură, la fel ca cele cu condensare, colectează apa extrasă din rufe într-un rezervor intern pe care trebuie să-l golești manual după fiecare utilizare. Alternativ, multe modele pot fi conectate direct la sistemul de canalizare al locuinței printr-un furtun, eliminând necesitatea golirii manuale.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/combina-frigorifica-cu-functie-fresh-zone/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/combina-frigorifica-cu-functie-fresh-zone.webp" alt="Combină Frigorifică Cu Funcție Fresh Zone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Combină Frigorifică Cu Funcție Fresh Zone</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-cuptor-incorporabil-premium/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-cuptor-incorporabil-premium.webp" alt="Cel mai bun cuptor încorporabil premium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun cuptor încorporabil premium</h3>
+              </div>
+            </a>
+
+            <a href="/multicooker-cu-programe-automate/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/multicooker-cu-programe-automate.webp" alt="Multicooker Cu Programe Automate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Multicooker Cu Programe Automate</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

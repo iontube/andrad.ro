@@ -1,0 +1,629 @@
+{
+  "pending": [
+    {
+      "keyword": "lentile macro pentru detalii fine",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "dronă cu filmare 6K pentru profesioniști",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "stabilizator video cu control automat",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "aparat foto cu timelapse automat",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "kit editare foto pentru amatori",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "lentile tilt-shift pentru creativitate",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "microfon wireless pentru interviuri",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "cameră 360 pentru tururi virtuale",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "obiectiv zoom optic 10x",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "sistem irigații controlat prin app",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "senzor temperatură și umiditate smart",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "buton panică pentru smart home",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "switch smart pentru telecomandă",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "hub IoT cu integrare Alexa și Google",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "încuietoare biometrică pentru ușă",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "camere IP cu detectare mișcare",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "sirenă smart cu notificări pe telefon",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "control automat jaluzele smart",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "aspirator robot integrat smart home",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "sistem audio multiroom smart",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "monitorizare consum electric smart",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "microfon shotgun pentru filmări în aer liber",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "cameră de supraveghere PTZ",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "priză inteligentă cu programare",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    }
+  ],
+  "completed": [
+    {
+      "keyword": "laptop gaming sub 6000 lei cu performanță ridicată",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-26T13:53:19.000Z",
+      "modifiedDate": "2026-01-25T13:53:19.000Z"
+    },
+    {
+      "keyword": "monitor curbat QHD pentru gaming competitiv",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-29T11:01:23.000Z",
+      "modifiedDate": "2026-01-26T11:01:23.142Z"
+    },
+    {
+      "keyword": "tastatură wireless mecanică pentru esports",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2026-01-17T16:06:18.000Z",
+      "modifiedDate": "2026-01-31T16:06:18.285Z"
+    },
+    {
+      "keyword": "mouse gaming cu DPI ajustabil",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-31T17:35:25.000Z",
+      "modifiedDate": "2026-01-26T17:35:25.714Z"
+    },
+    {
+      "keyword": "setup PC pentru streaming 4K",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2026-01-13T12:24:12.000Z",
+      "modifiedDate": "2026-01-30T12:24:12.571Z"
+    },
+    {
+      "keyword": "căști over-ear cu noise-canceling pentru gameri",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-11-29T14:24:12.000Z",
+      "modifiedDate": "2026-01-17T14:24:12.428Z"
+    },
+    {
+      "keyword": "laptop ultra-subțire pentru gaming și editare",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-28T19:27:21.000Z",
+      "modifiedDate": "2026-01-26T19:27:21.571Z"
+    },
+    {
+      "keyword": "placă video AMD performanță ridicată",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2026-01-04T07:17:31.000Z",
+      "modifiedDate": "2026-01-28T07:17:31.428Z"
+    },
+    {
+      "keyword": "SSD NVMe rapid pentru jocuri",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2026-01-16T10:32:16.000Z",
+      "modifiedDate": "2026-01-31T10:32:16.714Z"
+    },
+    {
+      "keyword": "scaun ergonomic cu suport lombar pentru gaming",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2026-01-12T09:07:41.000Z",
+      "modifiedDate": "2026-01-30T09:07:41.285Z"
+    },
+    {
+      "keyword": "periferice cu iluminare RGB sincronizată",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2026-01-04T18:00:00.000Z",
+      "modifiedDate": "2026-01-27T18:00:00.142Z"
+    },
+    {
+      "keyword": "console retro pentru colecționari",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-17T16:12:36.000Z",
+      "modifiedDate": "2026-01-22T16:12:36.285Z"
+    },
+    {
+      "keyword": "laptop pentru programare și gaming ușor",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-27T16:10:50.000Z",
+      "modifiedDate": "2026-01-25T16:10:50.285Z"
+    },
+    {
+      "keyword": "frigider cu compartimente inteligente",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-12-22T09:11:13.000Z",
+      "modifiedDate": "2026-01-24T09:11:13.285Z"
+    },
+    {
+      "keyword": "soundbar compact cu Dolby Atmos",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2026-01-14T18:58:14.000Z",
+      "modifiedDate": "2026-01-30T18:58:14.142Z"
+    },
+    {
+      "keyword": "mousepad extra mare pentru setup profesionist",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2026-01-01T06:52:56.000Z",
+      "modifiedDate": "2026-01-27T06:52:56.000Z"
+    },
+    {
+      "keyword": "aspirator robot compact pentru apartamente",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-11-23T07:25:35.000Z",
+      "modifiedDate": "2026-01-16T07:25:35.428Z"
+    },
+    {
+      "keyword": "boxe bookshelf pentru acasă",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2025-11-25T13:59:37.000Z",
+      "modifiedDate": "2026-01-16T13:59:37.000Z"
+    },
+    {
+      "keyword": "căști wireless pentru gaming mobil",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-11-29T17:41:43.000Z",
+      "modifiedDate": "2026-01-17T17:41:43.714Z"
+    },
+    {
+      "keyword": "cuptor multifuncțional cu aburi",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-12-17T19:29:07.000Z",
+      "modifiedDate": "2026-01-23T19:29:07.571Z"
+    },
+    {
+      "keyword": "proiector portabil Full HD",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2026-01-09T11:59:37.000Z",
+      "modifiedDate": "2026-01-29T11:59:37.142Z"
+    },
+    {
+      "keyword": "tastatură cu switch-uri liniare",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2026-01-16T13:49:47.000Z",
+      "modifiedDate": "2026-01-31T13:49:47.000Z"
+    },
+    {
+      "keyword": "mașină de spălat vase cu senzori eco",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-12-29T08:44:52.000Z",
+      "modifiedDate": "2026-01-26T08:44:52.857Z"
+    },
+    {
+      "keyword": "sistem audio multiroom wireless",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2026-01-13T15:41:43.000Z",
+      "modifiedDate": "2026-01-30T15:41:43.857Z"
+    },
+    {
+      "keyword": "PC modular cu răcire lichidă personalizată",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2026-01-03T15:43:29.000Z",
+      "modifiedDate": "2026-01-27T15:43:29.857Z"
+    },
+    {
+      "keyword": "plită ceramică cu control tactil",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2026-01-05T10:34:02.000Z",
+      "modifiedDate": "2026-01-28T10:34:02.714Z"
+    },
+    {
+      "keyword": "televizor 8K pentru living mare",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2026-01-18T19:23:49.000Z",
+      "modifiedDate": "2026-02-01T19:23:49.571Z"
+    },
+    {
+      "keyword": "accesorii VR pentru experiență imersivă",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-11-20T09:17:31.000Z",
+      "modifiedDate": "2026-01-15T09:17:31.285Z"
+    },
+    {
+      "keyword": "aparat de cafea cu capsule reutilizabile",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-11-21T12:34:02.000Z",
+      "modifiedDate": "2026-01-15T12:34:02.571Z"
+    },
+    {
+      "keyword": "receiver audio cu Bluetooth și Wi-Fi",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2026-01-10T17:33:39.000Z",
+      "modifiedDate": "2026-01-29T17:33:39.714Z"
+    },
+    {
+      "keyword": "display extern 144Hz pentru gameri",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-18T08:46:38.000Z",
+      "modifiedDate": "2026-01-23T08:46:38.857Z"
+    },
+    {
+      "keyword": "blender vertical cu funcție smoothie",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-11-24T10:42:06.000Z",
+      "modifiedDate": "2026-01-16T10:42:06.714Z"
+    },
+    {
+      "keyword": "boxe outdoor rezistente la ploaie",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2025-11-26T16:16:08.000Z",
+      "modifiedDate": "2026-01-16T16:16:08.285Z"
+    },
+    {
+      "keyword": "kit upgrade PC pentru performanță maximă",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-25T07:19:17.000Z",
+      "modifiedDate": "2026-01-25T07:19:17.428Z"
+    },
+    {
+      "keyword": "uscător compact de rufe pentru balcon",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2026-01-22T06:48:24.000Z",
+      "modifiedDate": "2026-02-02T06:48:24.000Z"
+    },
+    {
+      "keyword": "televizor LED cu refresh mare",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2026-01-19T11:57:51.000Z",
+      "modifiedDate": "2026-02-01T11:57:51.142Z"
+    },
+    {
+      "keyword": "laptop gaming cu autonomie mare",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-26T10:36:48.000Z",
+      "modifiedDate": "2026-01-25T10:36:48.714Z"
+    },
+    {
+      "keyword": "fier de călcat vertical profesional",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-12-20T17:37:11.000Z",
+      "modifiedDate": "2026-01-23T17:37:11.714Z"
+    },
+    {
+      "keyword": "home cinema cu subwoofer wireless",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2025-12-23T12:28:44.000Z",
+      "modifiedDate": "2026-01-24T12:28:44.571Z"
+    },
+    {
+      "keyword": "căști cu microfon detașabil",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-11-27T08:50:10.000Z",
+      "modifiedDate": "2026-01-17T08:50:10.857Z"
+    },
+    {
+      "keyword": "combină frigorifică cu funcție fresh zone",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-12-15T10:38:34.000Z",
+      "modifiedDate": "2026-01-22T10:38:34.714Z"
+    },
+    {
+      "keyword": "boxe smart controlabile prin voce",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2025-11-26T19:33:39.000Z",
+      "modifiedDate": "2026-01-17T19:33:39.571Z"
+    },
+    {
+      "keyword": "purificator de aer cu filtru HEPA",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2026-01-10T14:16:08.000Z",
+      "modifiedDate": "2026-01-29T14:16:08.428Z"
+    },
+    {
+      "keyword": "soundbar cu subwoofer integrat",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2026-01-15T07:15:45.000Z",
+      "modifiedDate": "2026-01-31T07:15:45.428Z"
+    },
+    {
+      "keyword": "console hibride portabile",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-16T13:55:05.000Z",
+      "modifiedDate": "2026-01-22T13:55:05.000Z"
+    },
+    {
+      "keyword": "prăjitor de pâine cu funcție baghetă",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2026-01-07T19:25:35.000Z",
+      "modifiedDate": "2026-01-29T19:25:35.571Z"
+    },
+    {
+      "keyword": "televizor curbat UHD 55 inch",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2026-01-19T08:40:20.000Z",
+      "modifiedDate": "2026-02-01T08:40:20.857Z"
+    },
+    {
+      "keyword": "monitor portabil pentru gaming în deplasare",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming",
+      "date": "2025-12-30T14:18:54.000Z",
+      "modifiedDate": "2026-01-26T14:18:54.428Z"
+    },
+    {
+      "keyword": "hotă cu evacuare silențioasă",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-12-23T15:45:15.000Z",
+      "modifiedDate": "2026-01-24T15:45:15.857Z"
+    },
+    {
+      "keyword": "căști hi-fi pentru audiofili",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2025-11-28T11:07:41.000Z",
+      "modifiedDate": "2026-01-17T11:07:41.142Z"
+    },
+    {
+      "keyword": "robot de bucătărie pentru patiserie",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2026-01-11T06:50:10.000Z",
+      "modifiedDate": "2026-01-30T06:50:10.000Z"
+    },
+    {
+      "keyword": "proiector laser pentru cinema acasă",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2026-01-08T08:42:06.000Z",
+      "modifiedDate": "2026-01-29T08:42:06.857Z"
+    },
+    {
+      "keyword": "aparat mirrorless cu autofocus rapid",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video",
+      "date": "2025-11-22T15:51:33.000Z",
+      "modifiedDate": "2026-01-15T15:51:33.857Z"
+    },
+    {
+      "keyword": "multicooker cu programe automate",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2026-01-01T09:09:27.000Z",
+      "modifiedDate": "2026-01-27T09:09:27.285Z"
+    },
+    {
+      "keyword": "ecran smart cu Chromecast încorporat",
+      "category": "TV & Audio",
+      "categorySlug": "tv-audio",
+      "date": "2025-12-20T14:20:40.000Z",
+      "modifiedDate": "2026-01-23T14:20:40.428Z"
+    },
+    {
+      "keyword": "dronă compactă pentru fotografii urbane",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video",
+      "date": "2025-12-19T11:03:09.000Z",
+      "modifiedDate": "2026-01-23T11:03:09.142Z"
+    },
+    {
+      "keyword": "filtru de apă sub chiuvetă performant",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-12-21T06:54:42.000Z",
+      "modifiedDate": "2026-01-24T06:54:42.000Z"
+    },
+    {
+      "keyword": "obiectiv prime pentru portrete profesionale",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video",
+      "date": "2026-01-02T12:26:58.000Z",
+      "modifiedDate": "2026-01-27T12:26:58.571Z"
+    },
+    {
+      "keyword": "hub smart pentru automatizarea casei",
+      "category": "Smart Home",
+      "categorySlug": "smart-home",
+      "date": "2025-12-24T18:02:46.000Z",
+      "modifiedDate": "2026-01-24T18:02:46.142Z"
+    },
+    {
+      "keyword": "aspirator cu sac automat de colectare",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice",
+      "date": "2025-11-23T18:08:04.000Z",
+      "modifiedDate": "2026-01-15T18:08:04.142Z"
+    },
+    {
+      "keyword": "trepied carbon pentru stabilitate maximă",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video",
+      "date": "2026-01-21T17:31:53.000Z",
+      "modifiedDate": "2026-02-01T17:31:53.714Z"
+    },
+    {
+      "keyword": "becuri RGB controlate prin app",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "sistem smart pentru iluminat grădină",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "periferice compacte pentru desk mic",
+      "category": "Tehnologie & Gaming",
+      "categorySlug": "tehnologie-gaming"
+    },
+    {
+      "keyword": "aer condiționat inverter cu consum redus",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice"
+    },
+    {
+      "keyword": "kit de lumini LED pentru videografie",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "senzori ușă și fereastră wireless",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "frigider cu dozator apă și gheață",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice"
+    },
+    {
+      "keyword": "aparat foto compact pentru vacanță",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "obiectiv wide-angle pentru peisaje",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "cuptor cu microunde combinat",
+      "category": "Electrocasnice",
+      "categorySlug": "electrocasnice"
+    },
+    {
+      "keyword": "gimbal portabil pentru smartphone",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "încuietoare smart cu acces prin telefon",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "cameră acțiune rezistentă la apă",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "termostat Wi-Fi cu programare săptămânală",
+      "category": "Smart Home",
+      "categorySlug": "smart-home",
+      "date": "2026-02-23T09:10:38.285Z"
+    },
+    {
+      "keyword": "kit accesorii foto pentru începători",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    }
+  ]
+}

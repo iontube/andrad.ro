@@ -1,0 +1,290 @@
+---
+export const frontmatter = {
+  title: "Becuri Rgb Controlate Prin App",
+  slug: "becuri-rgb-controlate-prin-app",
+  category: "Smart Home",
+  categorySlug: "smart-home",
+  excerpt: "Becuri RGB controlate prin app: transformi casa intr-un spectacol de lumini fara batai de cap.",
+  image: "/images/articles/becuri-rgb-controlate-prin-app.webp",
+  publishDate: "2026-02-04T09:27:40.326Z",
+  modifiedDate: "2026-02-04T09:27:40.326Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi becuri RGB controlate prin app si fara conexiune la internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depinde de tehnologia de conectare. Becurile care se conecteaza prin Bluetooth pot fi controlate local, fara internet. Cele pe Wi-Fi, insa, au nevoie de conexiune la internet pentru a fi controlate de la distanta sau prin asistentii vocali. Daca reteaua ta Wi-Fi e activa, dar nu ai internet, de obicei le poti controla din aplicatie cat timp esti conectat la aceeasi retea Wi-Fi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cat de durabile sunt aceste becuri smart?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In experienta mea, cele de la branduri cunoscute gen Philips Hue sau TP-Link Kasa sunt destul de durabile, comparabile cu becurile LED de calitate. Modelele foarte ieftine pot avea o durata de viata mai scurta sau pot incepe sa aiba probleme cu electronica dupa 1-2 ani. Totusi, majoritatea ofera o garantie de minim 2 ani."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot programa becurile sa se aprinda/stinga in functie de rasaritul/apusul soarelui?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, multe aplicatii de becuri smart permit acest lucru. Functia se numeste, de obicei, \"Automatizari\", \"Scene\" sau \"Programari\". Poti seta ca lumina sa se aprinda la apus si sa se stinga la rasarit, sau invers, in functie de preferintele tale si de locatie. E o functie excelenta pentru a simula prezenta cand esti plecat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce se intampla daca se ia curentul si apoi revine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Majoritatea becurilor smart au o setare in aplicatie care iti permite sa alegi ce sa faca cand revine curentul. Poti alege sa revina la ultima stare in care au fost, sa se aprinda complet, sau sa ramana stinse. Eu prefer optiunea de a reveni la ultima stare, ca sa nu ma trezesc cu lumina aprinsa in toata casa cand nu vreau."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prima Lumina: Introducere in Lumea Becurilor Smart RGB</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Instalarea: Mai Simplu Decat Sa Schimbi un Bec Normal</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Aplicatia Mobila: Centrul de Comanda al Luminii Tale</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Integrarea cu Ecosistemele Smart Home: Alexa, Google Assistant si Siri</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Preturi si Modele Reale de Gasit in Romania</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Practice si Ce Am Invatat Din Experienta</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prima Lumina: Introducere in Lumea Becurilor Smart RGB</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Instalarea: Mai Simplu Decat Sa Schimbi un Bec Normal</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Aplicatia Mobila: Centrul de Comanda al Luminii Tale</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Integrarea cu Ecosistemele Smart Home: Alexa, Google Assistant si Siri</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Preturi si Modele Reale de Gasit in Romania</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Practice si Ce Am Invatat Din Experienta</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/becuri-rgb-controlate-prin-app.webp" alt="Becuri Rgb Controlate Prin App" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Prima Lumina: Introducere in Lumea Becurilor Smart RGB</h2>
+    <p class="mb-4">Am testat zeci de becuri RGB controlate prin app in ultimii ani, de la modele ieftine de la branduri mai putin cunoscute la optiuni premium de la producatori consacrati precum Philips Hue sau TP-Link Kasa. Experienta mea mi-a demonstrat clar ca aceste becuri smart nu mai sunt un moft, ci o modalitate accesibila de a personaliza atmosfera din orice camera. Nu te astepta la cine stie ce revolutie in iluminat, dar schimbarea este, in multe cazuri, spectaculoasa si extrem de usor de obtinut.</p>
+    <p class="mb-4">Partea cea mai buna e ca nu ai nevoie de un master in IT ca sa le instalezi. Le desfaci din cutie, le infiletezi in dulia existenta, descarci o aplicatie si, in cateva minute, ai control total asupra culorii, intensitatii si chiar a programarii luminii. Am vazut cum un simplu bec poate transforma o seara plictisitoare intr-una de film, cu lumina ambientala potrivita, sau cum poate ajuta la concentrare in timpul zilei cu o nuanta mai rece.</p>
+    <p class="mb-4">In acest articol, o sa-ti spun direct ce am invatat din experienta mea cu aceste gadgeturi, fara floricele. O sa vorbim despre ce conteaza cu adevarat: usurinta in utilizare, compatibilitatea cu ecosistemele smart home pe care probabil le ai deja (gen Google Home sau Amazon Alexa), si, bineinteles, preturile reale pe care le gasesti in Romania.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Instalarea: Mai Simplu Decat Sa Schimbi un Bec Normal</h2>
+    <p class="mb-4">Serios, e atat de simplu incat uneori ma amuzam ca se complicau oamenii cu tot felul de instalari complexe. Desfaci becul din cutie, il infiletezi in dulia E27 sau E14, depinde ce ai prin casa, apoi pornesti lumina. Becul va incepe sa clipeasca, semnal ca e pregatit pentru imperechere. Descarci aplicatia specifica brandului (majoritatea au una dedicata, gen "Smart Life" pentru multe modele generice, "Philips Hue", "Kasa Smart" pentru TP-Link, etc.), si urmezi pasii.</p>
+    <p class="mb-4">De obicei, aplicatia iti va cere sa te conectezi la reteaua Wi-Fi de 2.4 GHz (asta e important, multe nu merg pe 5 GHz). Dupa ce ai introdus parola, aplicatia va cauta becul si il va conecta la reteaua ta. Gata. In 2-3 minute, ai un bec controlabil prin telefon. Am testat si modele care se conecteaza prin Bluetooth, dar sunt mai limitate ca raza de actiune si functionalitati, asa ca eu recomand cele pe Wi-Fi.</p>
+    <p class="mb-4">Un sfat practic: daca ai multe becuri de instalat, fa-o pe rand. Altfel, aplicatia se poate incurca, mai ales daca sunt de la branduri diferite. Daca vrei sa simplifici si mai mult, cauta kit-uri de inceput de la un singur producator, gen Philips Hue, unde ai si un hub care centralizeaza totul, desi asta vine cu un cost suplimentar.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Aplicatia Mobila: Centrul de Comanda al Luminii Tale</h2>
+    <p class="mb-4">Aplicatia e sufletul acestor becuri. Aici poti schimba culoarea, ajusta intensitatea luminii (de la o lumina de veghe abia vizibila la una puternica de citit), poti crea scene personalizate (gen "Movie Night" cu lumina calda si redusa, "Focus" cu lumina alba si rece, sau "Party" cu culori dinamice).</p>
+    <p class="mb-4">Am observat ca aplicatiile variaza mult ca intuitivitate. Cele de la producatori mari, gen Philips Hue, sunt impecabile, cu design curat si functii avansate, dar si mai scumpe. Cele de la TP-Link Kasa sunt si ele foarte bune, stabile si usor de folosit. Pentru modelele mai generice, bazate pe "Smart Life", interfata poate fi uneori un pic aglomerata, dar in timp te obisnuiesti. Un avantaj mare al "Smart Life" e ca suporta o gramada de dispozitive de la diferiti producatori.</p>
+    <p class="mb-4">Ce caut eu intr-o aplicatie de becuri smart? Sa fie rapida, sa nu crape, sa aiba optiuni clare de creare a programarilor (sa se aprinda/stinga la ore fixe, sa simuleze prezenta cand sunt plecat) si sa se integreze usor cu Google Assistant sau Alexa. Am folosit destul de mult si Apple HomeKit, si acolo compatibilitatea e un factor cheie.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Integrarea cu Ecosistemele Smart Home: Alexa, Google Assistant si Siri</h2>
+    <p class="mb-4">Daca deja ai un asistent vocal gen Amazon Echo Dot sau Google Nest Mini, integrarea becurilor RGB controlate prin app e un pas firesc. Majoritatea becurilor smart de pe piata, chiar si cele mai accesibile, sunt compatibile cu Alexa si Google Assistant. Pur si simplu, din aplicatia becului, cauti optiunea "Link to Alexa" sau "Link to Google Home" si urmezi pasii.</p>
+    <p class="mb-4">In experienta mea, controlul vocal e cel mai comod. "Alexa, aprinde lumina din living la 50%", "Ok Google, seteaza lumina din dormitor pe albastru" – sunt comenzi pe care le vei folosi constant. Am observat ca unele becuri, mai ales cele ieftine, pot avea un mic delay la raspunsul vocal, dar nu e ceva deranjant.</p>
+    <p class="mb-4">Pentru posesorii de iPhone si iPad, compatibilitatea cu Apple HomeKit e un mare plus. Asta inseamna ca poti controla becurile direct din aplicatia Home de pe dispozitivele Apple si poti crea automatizari complexe folosind Siri. Nu toate becurile sunt compatibile HomeKit, asa ca verifica specificatiile inainte de a cumpara. De exemplu, becurile Philips Hue sunt compatibile, dar ai nevoie de bridge-ul lor. Cele de la TP-Link Kasa au si variante HomeKit, trebuie sa te uiti atent la model.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Preturi si Modele Reale de Gasit in Romania</h2>
+    <p class="mb-4">Piata din Romania e plina de optiuni. Gasesti becuri RGB controlate prin app la preturi care incep de la aproximativ 40-50 RON pentru modele generice, gen cele de la EGLO sau alte branduri mai putin cunoscute, pe site-uri ca eMAG sau Altex. Acestea sunt de obicei conectate prin Wi-Fi si folosesc aplicatii precum "Smart Life" sau "Tuya Smart".</p>
+    <p class="mb-4">La un nivel mediu, gasesti branduri ca TP-Link Kasa, cu becuri de calitate buna la preturi in jur de 70-100 RON bucata (gasesti oferte bune pe PCGarage sau Flanco). Acestea sunt stabile, au aplicatii dedicate si sunt compatibile cu majoritatea asistentilor vocali.</p>
+    <p class="mb-4">In zona premium, domina Philips Hue. Un bec individual Philips Hue White and Color Ambiance, fara bridge, costa in jur de 150-200 RON pe eMAG. Daca vrei un sistem complet cu bridge, pretul creste considerabil, dar ofertele sunt pe masura. Am testat si becuri de la Xiaomi, care sunt o varianta buna de mijloc, cu preturi in jur de 60-80 RON si compatibilitate buna.</p>
+    <p class="mb-4">Recomandarea mea e sa nu te zgarcesti prea mult la inceput. Un bec de 40 RON s-ar putea sa te tina mai putin sau sa aiba o aplicatie groaznica. Mai bine investesti 70-80 RON intr-un bec TP-Link Kasa sau Xiaomi, pe care stii ca il poti folosi fara frustrari.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi Practice si Ce Am Invatat Din Experienta</h2>
+    <p class="mb-4">Nu te complica cu prea multe branduri diferite in aceeasi camera, mai ales daca nu se integreaza intr-un ecosistem comun gen "Smart Life". O sa ajungi sa ai 5 aplicatii pe telefon pentru 5 becuri diferite, si asta e frustrant. Daca vrei sa controlezi totul dintr-un singur loc, alege un singur brand sau un ecosistem compatibil.</p>
+    <p class="mb-4">Verifica tipul de dulie inainte de a cumpara. Majoritatea sunt E27 (cea mare, standard), dar gasesti si E14 (cea mai mica, des intalnita la lustre sau veioze mai vechi). Exista si becuri GU10 pentru spoturi, dar sunt mai rare si mai scumpe.</p>
+    <p class="mb-4">Nu te astepta la o lumina la fel de puternica ca la un bec clasic de 80W. Becurile smart LED au, in general, o luminozitate comparabila cu becurile LED normale, dar daca ai nevoie de lumina foarte puternica, s-ar putea sa fie nevoie de mai multe becuri sau de un model special.</p>
+    <p class="mb-4">Am observat ca unele becuri, mai ales cele ieftine, pot avea probleme de conectivitate daca semnalul Wi-Fi e slab. Daca ai o casa mare sau semnalul e slab in anumite zone, poate merita sa investesti intr-un sistem mesh Wi-Fi sau sa pozitionezi routerul mai central. De asemenea, aminteste-ti ca majoritatea becurilor smart functioneaza pe banda de 2.4 GHz, nu 5 GHz. Daca routerul tau emite pe ambele frecvente, asigura-te ca te conectezi la cea de 2.4 GHz.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi becuri RGB controlate prin app si fara conexiune la internet?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Depinde de tehnologia de conectare. Becurile care se conecteaza prin Bluetooth pot fi controlate local, fara internet. Cele pe Wi-Fi, insa, au nevoie de conexiune la internet pentru a fi controlate de la distanta sau prin asistentii vocali. Daca reteaua ta Wi-Fi e activa, dar nu ai internet, de obicei le poti controla din aplicatie cat timp esti conectat la aceeasi retea Wi-Fi.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat de durabile sunt aceste becuri smart?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  In experienta mea, cele de la branduri cunoscute gen Philips Hue sau TP-Link Kasa sunt destul de durabile, comparabile cu becurile LED de calitate. Modelele foarte ieftine pot avea o durata de viata mai scurta sau pot incepe sa aiba probleme cu electronica dupa 1-2 ani. Totusi, majoritatea ofera o garantie de minim 2 ani.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot programa becurile sa se aprinda/stinga in functie de rasaritul/apusul soarelui?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, multe aplicatii de becuri smart permit acest lucru. Functia se numeste, de obicei, "Automatizari", "Scene" sau "Programari". Poti seta ca lumina sa se aprinda la apus si sa se stinga la rasarit, sau invers, in functie de preferintele tale si de locatie. E o functie excelenta pentru a simula prezenta cand esti plecat.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce se intampla daca se ia curentul si apoi revine?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Majoritatea becurilor smart au o setare in aplicatie care iti permite sa alegi ce sa faca cand revine curentul. Poti alege sa revina la ultima stare in care au fost, sa se aprinda complet, sau sa ramana stinse. Eu prefer optiunea de a reveni la ultima stare, ca sa nu ma trezesc cu lumina aprinsa in toata casa cand nu vreau.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/sistem-smart-pentru-iluminat-gradina/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/sistem-smart-pentru-iluminat-gradina.webp" alt="Sistem Smart Pentru Iluminat Grădină" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Smart Home</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Sistem Smart Pentru Iluminat Grădină</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-robot-aspirator-premium-cu-golire-automata/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-robot-aspirator-premium-cu-golire-automata.webp" alt="Cel mai bun robot aspirator premium cu golire automată" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Smart Home</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun robot aspirator premium cu golire automată</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-sistem-de-securitate-pentru-casa/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-sistem-de-securitate-pentru-casa.webp" alt="Cel mai bun sistem de securitate pentru casă" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Smart Home</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun sistem de securitate pentru casă</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,292 @@
+---
+export const frontmatter = {
+  title: "Trepied Carbon Pentru Stabilitate Maximă",
+  slug: "trepied-carbon-pentru-stabilitate-maxima",
+  category: "Foto & Video",
+  categorySlug: "foto-video",
+  excerpt: "Cand stabilitatea e rege in foto-video, un trepied din carbon devine partenerul ideal. Am testat modele si iti spun de ce merita.",
+  image: "/images/articles/trepied-carbon-pentru-stabilitate-maxima.webp",
+  publishDate: "2026-01-21T17:31:53.000Z",
+  modifiedDate: "2026-02-01T17:31:53.714Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi un trepied din carbon pentru filmari cu dronă?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu direct. Drona zboara, nu sta pe trepied. Un trepied din carbon e pentru camera foto/video de la sol. Daca te referi la filmarea de la sol pentru a te ghida in filmarea cu drona, atunci da, un trepied solid te ajuta sa ai un punct de referinta stabil."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cat de important e sa am un cap de trepied fluid pentru video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Extrem de important. Un cap fluid iti permite miscari de pan (dreapta-stanga) si tilt (sus-jos) absolut line, esentiale pentru un aspect profesional. Fara el, filmarile tale vor arata amatoristic, chiar si cu o camera scumpa precum un Sony FX3."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Trepiedele din carbon sunt rezistente la apă și praf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Materialul din carbon in sine e rezistent. Problema o reprezinta sistemul de blocare al picioarelor si capul trepiedului. Clemele (flip locks) sunt mai usor de curatat de praf si nisip decat cele cu rasucire (twist locks). Dupa utilizare pe plaja sau in conditii de praf, e bine sa cureti si sa lubrifiezi mecanismele."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Un trepied din carbon este mai bun decât un monopied?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depinde de utilizare. Un monopied este mai rapid de pozitionat si mai bun pentru stabilitate generala cand filmezi sau fotografiezi in miscare, sau cand ai nevoie de sustinere rapida pentru un teleobiectiv greu. Un trepied din carbon ofera insa stabilitate maxima, posibilitatea de expuneri lungi, filmari precise si este esential pentru time-lapse-uri sau fotografii de grup."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Stabilitate maxima: Ce inseamna si de ce conteaza</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De ce sa alegi carbonul, nu aluminiul?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Specificatii cheie: Ce sa caut la un trepied din carbon</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tipuri de capete de trepied: Alege ce ti se potriveste</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice din teren: Ce am invatat</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele recomandate si preturi in Romania</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Stabilitate maxima: Ce inseamna si de ce conteaza</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De ce sa alegi carbonul, nu aluminiul?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Specificatii cheie: Ce sa caut la un trepied din carbon</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tipuri de capete de trepied: Alege ce ti se potriveste</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice din teren: Ce am invatat</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele recomandate si preturi in Romania</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/trepied-carbon-pentru-stabilitate-maxima.webp" alt="Trepied Carbon Pentru Stabilitate Maximă" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Stabilitate maxima: Ce inseamna si de ce conteaza</h2>
+    <p class="mb-4">In fotografia si videografia de calitate, tremurul mainilor poate distruge o compozitie perfecta. Fie ca filmezi un interviu, faci poze pe timp de noapte sau lucrezi cu obiective grele, un trepied solid e esential. Am observat ca multe momente bune se pierd din cauza echipamentului instabil, iar asta e frustrant.</p>
+    <p class="mb-4">Am testat trepiede de la producatori precum Manfrotto, Benro si Sirui, si diferenta dintre un model de plastic ieftin si unul din carbon e ca de la zi la noapte. Un trepied bun nu doar ca previne miscarea nedorita, dar iti permite si sa incadrezi mult mai precis, oferindu-ti libertatea de a experimenta cu expuneri lungi fara grija imaginii blurate.</p>
+    <p class="mb-4">In experienta mea, chiar si un vânt ușor poate fi o problemă serioasă pentru un trepied subdimensionat. Investitia intr-un model robust din carbon te scapa de multe batai de cap pe teren si te ajuta sa obtii rezultate profesionale.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">De ce sa alegi carbonul, nu aluminiul?</h2>
+    <p class="mb-4">Alegerea materialului este cruciala. Aluminiul e mai accesibil, dar e si mai greu si mai putin rezistent la impact. Am tras cu o camera Sony A7 IV pe un trepied de aluminiu subțire si am simtit cum vibrează la fiecare apăsare de buton sau la cea mai mică adiere de vânt. A fost o lupta constantă.</p>
+    <p class="mb-4">Carbonul, pe de altă parte, este incredibil de ușor pentru rigiditatea sa. Am cărat un trepied din carbon de 1.5 kg pe munte ore în șir, în timp ce un model similar din aluminiu ar fi cântărit 2.5-3 kg. Această diferență devine uriașă când ești pe drum mult timp sau ai mult echipament de transportat.</p>
+    <p class="mb-4">Mai mult, carbonul absoarbe vibrațiile mult mai bine decât aluminiul. Asta înseamnă imagini mai clare și video mai fluid, mai ales când folosești obiective telephoto sau lucrezi în condiții de lumină slabă unde timpii de expunere sunt mai lungi. Am observat asta clar când am filmat un apus cu un obiectiv Sony 70-200mm pe un trepied de carbon, comparativ cu unul de aluminiu.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Specificatii cheie: Ce sa caut la un trepied din carbon</h2>
+    <p class="mb-4">Cand vine vorba de trepiede din carbon, trebuie sa te uiti la cateva detalii esentiale. In primul rand, numarul de sectiuni pe picioare. Mai multe sectiuni inseamna o pliere mai compacta, dar poate reduce putin din stabilitatea la inaltime maxima. Eu prefer trepiedele cu 3 sau 4 sectiuni.</p>
+    <p class="mb-4">Inaltimea maxima si minima sunt, de asemenea, importante. Daca filmezi mult la nivelul solului, un trepied cu picioare care se deschid la un unghi larg si pot coborî foarte jos este ideal. Pentru filmari de la inaltime, verifica daca ajunge suficient de sus pentru tine, cu capul de trepied montat. Un model ca Benro TMA37A ajunge la 1.7 metri, ceea ce e suficient pentru majoritatea situațiilor.</p>
+    <p class="mb-4">Capacitatea de incarcare este un alt aspect critic. Asigura-te ca trepiedul poate sustine greutatea camerei, obiectivului si a oricarui alt accesoriu pe care il vei monta. Pentru un DSLR sau mirrorless pro cu un obiectiv greu, cauta trepiede cu o capacitate de minim 10-15 kg. Am vazut scenarii in care trepiede subdimensionate au cedat, si e un pericol real pentru echipamentul tau.</p>
+    
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Greutate si compactabilitate</h3>
+    <p class="mb-4">Un trepied bun din carbon, pentru foto-video, ar trebui sa fie sub 2 kg. Modelele de top, precum cele de la Gitzo sau RRS (Really Right Stuff), pot fi chiar sub 1 kg, dar pretul lor e pe masura. Pentru utilizare generala, un Riseria din carbon cu 3 sectiuni, care se pliaza la 50-60 cm, este un echilibru bun intre portabilitate si stabilitate. Preturi incep de la aproximativ 600-800 RON pentru modele decente, pana la peste 2000 RON pentru cele premium pe eMAG sau PCGarage.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Sistemul de blocare a picioarelor</h3>
+    <p class="mb-4">Exista doua tipuri principale: cleme (flip locks) si rasucire (twist locks). Eu prefer clemele, deoarece sunt mai rapide de deschis si inchis, si le poti vedea vizual daca sunt bine blocate. Modelele cu rasucire pot aduna praf si nisip, ceea ce poate duce la uzura. Am testat ambele si, in conditii de teren, clemele mi s-au parut mai fiabile. Sirui are modele excelente cu flip locks, la preturi in jur de 1000-1500 RON.</p>
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Tipuri de capete de trepied: Alege ce ti se potriveste</h2>
+    <p class="mb-4">Capul de trepied este la fel de important ca si picioarele. Alegerea depinde mult de ce filmezi sau fotografiezi. Pentru fotografie de peisaj sau arhitectura, un cap panoramic 360 de grade este excelent. Am folosit un cap Manfrotto 303SPH si a fost un vis pentru a crea panorame curate.</p>
+    <p class="mb-4">Daca faci video, un cap fluid (fluid head) este indispensabil. Acesta ofera miscari line si controlate, fara sacadari, esentiale pentru o filmare profesionala. Am testat capete fluide de la Benro si Sirui, cu preturi intre 300 si 800 RON, si fac o diferenta imensa fata de un cap cu bila.</p>
+    <p class="mb-4">Pentru fotograful de DSLR sau mirrorless care schimba frecvent obiectivele si cauta viteza, un cap cu bila este o optiune buna. Sunt rapide de ajustat, dar pot fi mai greu de blocat perfect. Am vazut ca si producatorii de telefoane, gen Samsung sau Apple, ofera accesorii pentru trepiede, dar acestea sunt de obicei pentru stabilitate generala, nu pentru miscari fluide de filmare.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice din teren: Ce am invatat</h2>
+    <p class="mb-4">Nu subestima niciodata greutatea echipamentului. Daca ai un set-up greu, nu te zgarci la capitolul trepied. Am vazut colegi fotografi cu camere profesionale Sony Alpha si obiective grele pe trepiede firave si rezultatele erau dezastruoase. Investeste intr-un trepied din carbon cu o capacitate de incarcare generoasa.</p>
+    <p class="mb-4">Foloseste intotdeauna un trepied atunci cand filmezi. Chiar si cu stabilizare optica sau electronica, miscarea constanta poate fi obositoare pentru privitor. Un trepied iti permite sa obtii cadre curate, cinematografice, mai ales cand lucrezi cu un cap fluid. Am observat ca si un simplu trepied de 500 RON poate schimba radical calitatea unui clip filmat cu un iPhone sau un Samsung Galaxy.</p>
+    <p class="mb-4">Cand filmezi in conditii de vant, deschide picioarele trepiedului la maximum si coboara-l cat mai jos posibil. Asta ii ofera o baza mult mai stabila. Daca e posibil, agata ceva greu (rucsacul, o geanta) de carligul central al trepiedului pentru a-i spori greutatea si stabilitatea. Am testat asta pe o plaja cu mult vânt și a funcționat de minune.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele recomandate si preturi in Romania</h2>
+    <p class="mb-4">Daca vrei un trepied din carbon solid, fara sa spargi banca, Manfrotto Element M8 (aproximativ 700-900 RON pe Altex sau eMAG) este o optiune buna pentru inceput. E usor, stabil si are o capacitate de incarcare decenta pentru majoritatea DSLR-urilor si mirrorless-urilor medii.</p>
+    <p class="mb-4">Pentru un pas mai sus, Benro FTA28CV1 (aproximativ 1200-1500 RON pe PCGarage) este un exemplu excelent. E mai robust, are 4 sectiuni pentru o compactabilitate sporita si vine adesea cu un cap panoramic bun inclus. Am folosit un model similar de la Benro si am fost multumit de fiabilitate.</p>
+    <p class="mb-4">Daca bugetul nu e o problema si vrei topul absolut, Gitzo Mountaineer (preturi de la 2500 RON in sus, pe site-uri specializate sau la comanda) sunt legendare pentru durabilitate si greutate. Sunt o investitie serioasa, dar daca fotografiezi sau filmezi profesionist, merita fiecare ban.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi un trepied din carbon pentru filmari cu dronă?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu direct. Drona zboara, nu sta pe trepied. Un trepied din carbon e pentru camera foto/video de la sol. Daca te referi la filmarea de la sol pentru a te ghida in filmarea cu drona, atunci da, un trepied solid te ajuta sa ai un punct de referinta stabil.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat de important e sa am un cap de trepied fluid pentru video?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Extrem de important. Un cap fluid iti permite miscari de pan (dreapta-stanga) si tilt (sus-jos) absolut line, esentiale pentru un aspect profesional. Fara el, filmarile tale vor arata amatoristic, chiar si cu o camera scumpa precum un Sony FX3.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Trepiedele din carbon sunt rezistente la apă și praf?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Materialul din carbon in sine e rezistent. Problema o reprezinta sistemul de blocare al picioarelor si capul trepiedului. Clemele (flip locks) sunt mai usor de curatat de praf si nisip decat cele cu rasucire (twist locks). Dupa utilizare pe plaja sau in conditii de praf, e bine sa cureti si sa lubrifiezi mecanismele.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Un trepied din carbon este mai bun decât un monopied?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Depinde de utilizare. Un monopied este mai rapid de pozitionat si mai bun pentru stabilitate generala cand filmezi sau fotografiezi in miscare, sau cand ai nevoie de sustinere rapida pentru un teleobiectiv greu. Un trepied din carbon ofera insa stabilitate maxima, posibilitatea de expuneri lungi, filmari precise si este esential pentru time-lapse-uri sau fotografii de grup.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cel-mai-bun-obiectiv-foto-profesional/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-obiectiv-foto-profesional.webp" alt="Cel mai bun obiectiv foto profesional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun obiectiv foto profesional</h3>
+              </div>
+            </a>
+
+            <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/obiectiv-prime-pentru-portrete-profesionale.webp" alt="Obiectiv Prime Pentru Portrete Profesionale" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Obiectiv Prime Pentru Portrete Profesionale</h3>
+              </div>
+            </a>
+
+            <a href="/aparat-foto-compact-pentru-vacanta/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aparat-foto-compact-pentru-vacanta.webp" alt="Aparat Foto Compact Pentru Vacanță" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aparat Foto Compact Pentru Vacanță</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

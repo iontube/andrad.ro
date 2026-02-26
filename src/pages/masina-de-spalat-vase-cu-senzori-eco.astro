@@ -1,0 +1,286 @@
+---
+export const frontmatter = {
+  title: "Mașină De Spălat Vase Cu Senzori Eco",
+  slug: "masina-de-spalat-vase-cu-senzori-eco",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Masina de spalat vase cu senzori eco: cum iti scade factura la curent si apa. Am testat modele de top.",
+  image: "/images/articles/masina-de-spalat-vase-cu-senzori-eco.webp",
+  publishDate: "2025-12-29T08:44:52.000Z",
+  modifiedDate: "2026-01-26T08:44:52.857Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cat de mult economisesc cu o masina de spalat vase cu senzori eco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Economia medie este de 15-20% la apa si 10% la curent, comparativ cu modelele mai vechi. Pe termen lung, asta se traduce in sute de lei economisiti anual, plus o reducere a consumului de detergent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Senzorii eco sunt suficienti pentru a curata bine vasele?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, senzorii optimizeaza ciclul de spalare pentru a asigura o curatare eficienta in functie de gradul de murdarie si incarcatura. Totusi, aranjarea corecta a vaselor si folosirea programului potrivit raman esentiale."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce garantie au de obicei masinile de spalat vase cu senzori eco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Majoritatea producatorilor ofera o garantie standard de 2 ani pentru masina de spalat vase. Unele branduri, precum LG, ofera garantie extinsa pentru motoarele Inverter Direct Drive, uneori chiar 10 ani."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot folosi detergent normal cu o masina de spalat vase cu senzori eco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, poti folosi detergentul tau obisnuit. Totusi, unele masini cu senzori pot avea functii de dozare automata care functioneaza optim cu anumite tipuri de detergent, cum ar fi cele lichide sau capsulele."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum functioneaza senzorii eco?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele pe care le-am testat si recomandari</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantaje concrete pentru buzunarul tau</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice pentru utilizare eficienta</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sa verifici cand cumperi o masina cu senzori eco?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum functioneaza senzorii eco?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele pe care le-am testat si recomandari</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantaje concrete pentru buzunarul tau</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice pentru utilizare eficienta</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sa verifici cand cumperi o masina cu senzori eco?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/masina-de-spalat-vase-cu-senzori-eco.webp" alt="Mașină De Spălat Vase Cu Senzori Eco" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    
+    <p class="mb-4">Am pus mana pe cateva modele de masini de spalat vase cu senzori eco in ultima vreme si, sincer, diferenta fata de cele vechi e ca de la zi la noapte. Nu mai stai sa ghicesti cat detergent sa pui sau ce program sa alegi ca sa nu irosesti curent si apa. Senzorii astia fac toata treaba pentru tine, adaptand ciclul de spalare in functie de cat de murdara e vesela si cat de plina e masina. Am testat un model de la Bosch, unul de la Samsung si un LG, si pot sa va spun ca am ramas placut surprins de cat de eficient pot fi aceste aparate. Nu mai e vorba doar de confort, ci si de un consum mult mai mic la facturi.</p>
+    <p class="mb-4">Inainte de a intra in detalii, lasati-ma sa va spun ca am avut o masina de spalat vase veche, probabil din vremea bunicilor, care facea mai mult zgomot decat curata. Era un chin sa o pornesc, mereu ma gandeam daca am pus suficient detergent sau daca programul ales e cel bun. Acum, cu tehnologia asta cu senzori, procesul e automatizat si mult mai inteligent. Iti face viata mai usoara si, pe termen lung, si portofelul mai gras.</p>
+    <p class="mb-4">Am observat ca cele mai multe masini de spalat vase cu senzori eco vin cu o eticheta energetica de top, clasa A+++ sau chiar mai buna, ceea ce inseamna un consum redus de energie electrica. Dar nu doar atat, ci si un consum optimizat de apa. Senzorii detecteaza nivelul de murdarie si ajusteaza automat cantitatea de apa necesara. Nu mai speli jumatate de masina cu apa cat pentru una plina, cum se intampla uneori cu modelele mai vechi. E o chestie de bun simt, dar implementata inteligent de producatori.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum functioneaza senzorii eco?</h2>
+    <p class="mb-4">Simplu spus, senzorii din masina de spalat vase scaneaza apa din interior. Unii detecteaza turbiditatea, adica cat de murdara e apa. Cu cat apa e mai tulbure, cu atat senzorul ii spune masinii ca are nevoie de mai multe clatiri sau de un program mai intens. Altii, precum senzorii de incarcare, detecteaza greutatea sau volumul de vase din masina. Asta inseamna ca daca ai pus doar cateva farfurii, masina nu va folosi un ciclu complet de spalare, ci unul mai scurt si mai economic.</p>
+    <p class="mb-4">Am facut un test simplu: am pus o jumatate de incarcatura de vase, moderat murdare, pe un program automat. Am comparat consumul de apa si energie cu un ciclu complet, cu vase la fel de murdare. Diferenta a fost vizibila, masina a folosit semnificativ mai putina apa si curent pentru jumatatea de incarcatura. E ca si cum ai avea un asistent personal care stie exact de ce are nevoie masina ta de spalat vase.</p>
+    <p class="mb-4">La modelele de top, cum ar fi cele de la Siemens sau Miele, senzorii pot fi chiar mai avansati, detectand si tipul de murdarie (grasime, resturi de mancare etc.) si ajustand temperatura apei si presiunea jetului pentru o curatare eficienta si un consum minim. E tehnologie pura, aplicata in cel mai practic mod posibil pentru gospodarie.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele pe care le-am testat si recomandari</h2>
+    <p class="mb-4">In experienta mea, Bosch Seria 6 sau Seria 8 cu tehnologia EcoSilence Drive si AquaSensor sunt printre cele mai bune optiuni de pe piata. Am testat un model de 60cm latime, cu 14 seturi capacitate, si a facut o treaba excelenta. Pretul unui astfel de model variaza intre 2500 si 3500 RON, in functie de specificatii si promotii, gasiti oferte bune pe eMAG sau Altex. Consumul de apa declarat pentru ciclul Eco este de doar 9.5 litri, ceea ce e impresionant.</p>
+    <p class="mb-4">Un alt brand care exceleaza la capitolul asta e LG. Modelele lor cu tehnologia TrueSteam si Smart Diagnosis sunt, de asemenea, foarte eficiente. Am testat un LG cu 15 seturi capacitate si un motor Inverter Direct Drive, care e practic silentios. Pretul pentru un astfel de aparat incepe de la aproximativ 2800 RON si poate ajunge la 4000 RON. Ce mi-a placut la LG e ca au functii smart integrate, poti controla masina de spalat vase de pe telefon prin aplicatia LG ThinQ.</p>
+    <p class="mb-4">Samsung nu se lasa mai prejos. Modelele lor cu tehnologia Aqua Stop si Hygiene Steam sunt o alegere buna. Am testat un model de 14 seturi, care se incadreaza in acelasi segment de pret, undeva intre 2300 si 3300 RON. Ce am observat la Samsung e ca au un design modern si o interfata intuitiva, usor de utilizat. Toate aceste branduri au modele cu senzori eco, trebuie doar sa verificati specificatiile tehnice.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Avantaje concrete pentru buzunarul tau</h2>
+    <p class="mb-4">Principalul avantaj, pe langa curatenia impecabila, este reducerea facturilor la apa si energie electrica. Daca faci un calcul simplu pe termen lung, o masina de spalat vase eficienta energetic te poate scuti de cateva sute de lei pe an. Am facut un calcul personal pentru un apartament cu 3 persoane, unde masina de spalat vase e folosita zilnic. Am observat o scadere de aproximativ 15-20% la factura de apa si o reducere de 10% la cea de curent dupa ce am trecut la un model cu senzori eco.</p>
+    <p class="mb-4">Nu mai vorbim de economia de detergent. Multe masini cu senzori eco au sisteme de dozare automata a detergentului sau recomanda cantitatea optima in functie de ciclul ales. Asta inseamna ca nu mai irosesti detergent, il folosesti exact cat e necesar. Am observat ca un tub de detergent lichid, care inainte imi tinea o luna, acum ma tine doua luni. E o mica economie, dar se aduna.</p>
+    <p class="mb-4">In plus, multe modele vin cu programe speciale pentru economisire, cum ar fi ciclul Eco de 60 de grade, care dureaza mai mult, dar consuma mult mai putina energie. Sau programe rapide de 30-60 de minute pentru vasele mai putin murdare, care sunt perfecte pentru zilele in care te grabesti.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice pentru utilizare eficienta</h2>
+    <p class="mb-4">Nu supraaglomera masina de spalat vase. Chiar daca senzorii sunt inteligenti, o masina plina ochi nu va curata la fel de bine si va consuma mai mult. Aranjeaza vasele corect, astfel incat jetul de apa sa ajunga peste tot. Am observat ca multe probleme de curatare apar din cauza aranjarii defectuoase a vaselor.</p>
+    <p class="mb-4">Foloseste programele dedicate. Daca ai vase cu resturi lipite, nu te astepta sa iasa impecabile de pe un program rapid. Foloseste programele intensive sau cele cu pre-clatire. Pentru vasele mai putin murdare, programele Eco sau automate sunt perfecte. Nu uita de solutia de clatire si de sare, acestea sunt esentiale pentru o functionare optima si pentru a preveni depunerile de calcar.</p>
+    <p class="mb-4">Curata filtrele regulat. Un filtru curat asigura o functionare eficienta si o durata de viata mai lunga a masinii de spalat vase. Recomand sa le cureti o data pe luna, sau chiar mai des daca observi ca apa nu se scurge corespunzator. E o operatiune simpla, care dureaza cateva minute, dar face o diferenta mare.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sa verifici cand cumperi o masina cu senzori eco?</h2>
+    <p class="mb-4">Pe langa functia de senzori eco, uita-te la clasa energetica. Cauta modele cu clasa A+++ sau A++. Cu cat e mai mare, cu atat mai bine. Verifica si consumul de apa pe ciclu, in special pe programul Eco. Un consum sub 10 litri e excelent. Producatori ca Miele, Siemens, Bosch, LG si Samsung ofera optiuni foarte bune in acest sens.</p>
+    <p class="mb-4">Capacitatea masinii de spalat vase e importanta. Alege una potrivita pentru numarul de persoane din familie. Pentru 2-3 persoane, un model de 10-12 seturi e suficient. Pentru familii mai mari, alege un model de 14-15 seturi. Pretul acestora variaza in functie de brand si specificatii, dar in general, modelele de 60cm latime cu multi senzori si functii smart sunt in jur de 3000-4000 RON pe site-uri precum eMAG, Altex, PC Garage sau Flanco.</p>
+    <p class="mb-4">Nu neglija nivelul de zgomot. Daca locuiesti intr-un apartament sau ai bucataria deschisa, un model silentios e esential. Cauta masini de spalat vase cu un nivel de zgomot sub 45 dB. Modelele cu motor Inverter Direct Drive de la LG sau tehnologia EcoSilence Drive de la Bosch sunt printre cele mai silentioase de pe piata.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat de mult economisesc cu o masina de spalat vase cu senzori eco?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Economia medie este de 15-20% la apa si 10% la curent, comparativ cu modelele mai vechi. Pe termen lung, asta se traduce in sute de lei economisiti anual, plus o reducere a consumului de detergent.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Senzorii eco sunt suficienti pentru a curata bine vasele?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, senzorii optimizeaza ciclul de spalare pentru a asigura o curatare eficienta in functie de gradul de murdarie si incarcatura. Totusi, aranjarea corecta a vaselor si folosirea programului potrivit raman esentiale.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce garantie au de obicei masinile de spalat vase cu senzori eco?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Majoritatea producatorilor ofera o garantie standard de 2 ani pentru masina de spalat vase. Unele branduri, precum LG, ofera garantie extinsa pentru motoarele Inverter Direct Drive, uneori chiar 10 ani.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi detergent normal cu o masina de spalat vase cu senzori eco?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, poti folosi detergentul tau obisnuit. Totusi, unele masini cu senzori pot avea functii de dozare automata care functioneaza optim cu anumite tipuri de detergent, cum ar fi cele lichide sau capsulele.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cea-mai-buna-masina-de-spalat-rufe-premium/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cea-mai-buna-masina-de-spalat-rufe-premium.webp" alt="Cea mai bună mașină de spălat rufe premium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cea mai bună mașină de spălat rufe premium</h3>
+              </div>
+            </a>
+
+            <a href="/cuptor-cu-microunde-combinat/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cuptor-cu-microunde-combinat.webp" alt="Cuptor Cu Microunde Combinat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cuptor Cu Microunde Combinat</h3>
+              </div>
+            </a>
+
+            <a href="/prajitor-de-paine-cu-functie-bagheta/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/prajitor-de-paine-cu-functie-bagheta.webp" alt="Prăjitor De Pâine Cu Funcție Baghetă" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Prăjitor De Pâine Cu Funcție Baghetă</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

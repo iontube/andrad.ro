@@ -1,0 +1,316 @@
+---
+export const frontmatter = {
+  title: "Cel mai bun frigider side by side premium",
+  slug: "cel-mai-bun-frigider-side-by-side-premium",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Bucătăria modernă a devenit un spațiu central în orice locuință, un loc unde funcționalitatea se împletește armonios cu estetica. Iar inima oricărei bucătări...",
+  image: "/images/articles/cel-mai-bun-frigider-side-by-side-premium.webp",
+  publishDate: "2025-12-03T18:06:18.000Z",
+  modifiedDate: "2026-01-18T18:06:18.142Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ce înseamnă exact 'premium' la un frigider side by side?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Termenul 'premium' se referă la o combinație de factori: materiale de calitate superioară (inox anti-amprentă, sticlă, elemente metalice), tehnologii inovatoare (sisteme avansate No Frost, zone de conservare speciale ca BioFresh sau VitaFresh, compresoare liniare/inverter), eficiență energetică excelentă, design sofisticat, durabilitate sporită și funcții smart care aduc un plus de confort și personalizare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Care sunt cele mai importante tehnologii de căutat la un frigider side by side premium?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sistemele avansate No Frost (care previn gheața), Twin Cooling sau DuoCooling (circuite de răcire separate pentru frigider și congelator), zonele de prospețime dedicate (BioFresh, VitaFresh, FreshBalancer), compresoarele Inverter (pentru eficiență și silențiozitate), precum și funcții de acces rapid (Door-in-Door, InstaView) și opțiunile smart home (Family Hub, Home Connect) sunt aspecte esențiale de luat în considerare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de importantă este clasa energetică la un frigider premium?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clasa energetică este extrem de importantă. Un model premium cu o clasă energetică bună (C sau D conform noii etichetări, echivalentul vechilor A+++ sau A++) va consuma semnificativ mai puțină electricitate pe durata de viață a aparatului, generând economii substanțiale la facturile de energie. Este o investiție care se amortizează în timp, contribuind și la un impact redus asupra mediului."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Un frigider side by side cu dispenser de apă necesită alimentare la rețea?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Majoritatea frigiderelor side by side cu dispenser de apă și gheață necesită conectarea directă la rețeaua de apă a locuinței, pentru un flux continuu de apă filtrată și gheață. Unele modele mai noi oferă și varianta cu rezervor intern, care nu necesită conectare la rețea, dar trebuie umplut manual periodic. Este important să verifici specificațiile modelului dorit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce garanție oferă de obicei producătorii pentru aceste modele premium?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru frigiderele side by side premium, majoritatea producătorilor oferă o garanție standard de 2 ani, conform legislației. Însă, mulți producători de top, precum LG cu compresoarele sale liniare, sau Samsung, oferă garanții extinse (5, 10 sau chiar 20 de ani) pentru anumite componente cheie, cum ar fi compresorul, reflectând încrederea în durabilitatea produselor lor. Este întotdeauna recomandat să verifici condițiile specifice de garanție pentru modelul ales."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <!-- Hero -->
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <!-- Sidebar - Cuprins -->
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <!-- Mobile TOC - Collapsible -->
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Introducere în Lumea Frigiderelor Side by Side Premium</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Definește un Frigider Side by Side Premium?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tehnologii Inovatoare: Mai mult decât Răcire Simplă</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Eficiența Energetică: Un Investiție pe Termen Lung</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Design și Ergonomie: Estetică și Funcționalitate</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Branduri de Top și Modele Recomandate</a>
+                <a href="#sectiune-7" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Aspecte de Luat în Considerare Înainte de Achiziție</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+
+            <!-- Desktop TOC - Collapsible -->
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Introducere în Lumea Frigiderelor Side by Side Premium</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Definește un Frigider Side by Side Premium?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tehnologii Inovatoare: Mai mult decât Răcire Simplă</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Eficiența Energetică: Un Investiție pe Termen Lung</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Design și Ergonomie: Estetică și Funcționalitate</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Branduri de Top și Modele Recomandate</a>
+                <a href="#sectiune-7" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Aspecte de Luat în Considerare Înainte de Achiziție</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/cel-mai-bun-frigider-side-by-side-premium.webp" alt="Eleganță și Performanță de Top: Alegem Împreună cel mai bun frigider Side by Side Premium" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Introducere în Lumea Frigiderelor Side by Side Premium</h2>
+    <p class="mb-4">Bucătăria modernă a devenit un spațiu central în orice locuință, un loc unde funcționalitatea se împletește armonios cu estetica. Iar inima oricărei bucătării este, fără îndoială, frigiderul. Când vorbim de electrocasnice care transformă o bucătărie obișnuită într-un sanctuar culinar, frigiderele side by side premium ocupă un loc aparte.</p>
+    <p class="mb-4">Nu este vorba doar de a păstra alimentele reci. Un frigider premium este o declarație de stil, un centru tehnologic și un partener de încredere în gestionarea proviziilor. Aceste modele aduc un nivel superior de confort, eficiență și inovație, gândite să îți simplifice viața și să îți ofere o experiență de utilizare excepțională.</p>
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Definește un Frigider Side by Side Premium?</h2>
+    <p class="mb-4">Un frigider side by side premium se diferențiază clar de modelele standard prin câteva caracteristici esențiale. Materialele de construcție sunt primul indicator. Așteaptă-te la oțel inoxidabil de înaltă calitate, finisaje anti-amprentă, sticlă securizată și elemente interioare robuste. Mânerul, de exemplu, nu este doar un simplu element funcțional, ci o piesă de design, deseori fabricat din metal solid.</p>
+    <p class="mb-4">Calitatea asamblării este impecabilă, cu uși care se închid etanș, rafturi solide și un interior bine compartimentat. Aceste aparate sunt construite să dureze, oferind o senzație de robustețe și fiabilitate. Un alt aspect important este atenția la detalii, de la iluminarea interioară LED, care pune în valoare alimentele, până la balamalele ușilor, proiectate pentru o deschidere lină și silențioasă.</p>
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Tehnologii Inovatoare: Mai mult decât Răcire Simplă</h2>
+    <p class="mb-4">Frigiderele premium sunt adevărate centre de inovație, integrând funcții care depășesc simpla răcire. Sistemele No Frost sunt standard, prevenind acumularea gheții și eliminând nevoia de decongelare manuală. Multe modele avansate, cum ar fi cele de la LG cu tehnologia Linear Compressor, reduc zgomotul și consumul energetic, oferind o răcire mai constantă. Samsung, cu sistemul Twin Cooling Plus, utilizează două circuite de răcire separate pentru frigider și congelator, menținând un nivel optim de umiditate în zona de refrigerare și prevenind amestecul mirosurilor.</p>
+    <p class="mb-4">Un plus de confort este adus de funcții precum Door-in-Door sau InstaView de la LG, care permit accesul rapid la băuturi și gustări fără a deschide complet ușa principală, reducând pierderile de aer rece. Zonele speciale de conservare sunt un element definitoriu. De exemplu, tehnologia BioFresh de la Liebherr sau VitaFresh de la Bosch creează condiții ideale de temperatură și umiditate pentru fructe, legume, carne și lactate, prelungind semnificativ prospețimea acestora. Unele modele Samsung vin cu sertare FlexZone, care pot fi transformate din frigider în congelator sau invers, cu temperaturi ajustabile pe diverse trepte, de la -23°C până la 4°C, oferind o flexibilitate incredibilă.</p>
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Eficiența Energetică: Un Investiție pe Termen Lung</h2>
+    <p class="mb-4">Chiar dacă prețul inițial al unui frigider premium este mai ridicat, eficiența energetică superioară se traduce în economii substanțiale pe termen lung. Caută modele cu o clasă energetică bună, preferabil C sau D conform noii etichetări UE (care corespund vechilor A+++ sau A++). Compresoarele Inverter, prezente la majoritatea modelelor premium, ajustează automat puterea de răcire în funcție de necesități, consumând mai puțină energie și fiind mai silențioase.</p>
+    <p class="mb-4">Tehnologii precum izolarea avansată SpaceMax de la Samsung, care permite pereți mai subțiri și un volum interior mai mare fără a crește dimensiunile exterioare, contribuie la o eficiență sporită. Un alt aspect important este iluminarea interioară LED, mult mai economică și cu o durată de viață mai lungă comparativ cu becurile tradiționale. Multe modele premium includ și funcții smart, care monitorizează consumul și oferă sfaturi pentru optimizarea acestuia, sau chiar intră în mod economic atunci când ești plecat de acasă.</p>
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Design și Ergonomie: Estetică și Funcționalitate</h2>
+    <p class="mb-4">Un frigider side by side premium nu este doar un aparat utilitar, ci o piesă centrală de design în bucătărie. Finisajele din inox, oțel negru mat, sau chiar uși din sticlă, completează perfect orice stil modern. Liniile curate, mânerele integrate sau minimaliste și ecranele tactile inteligente contribuie la un aspect sofisticat.</p>
+    <p class="mb-4">Organizarea interioară este gândită până în cel mai mic detaliu. Rafturile ajustabile din sticlă securizată, suporturile pentru sticle, compartimentele modulare și sertarele cu extragere totală facilitează accesul și organizarea alimentelor. Dispenserul de apă și gheață, adesea integrat elegant în ușă, este un element de confort indispensabil, oferind apă filtrată rece, cuburi de gheață sau gheață pisată la o simplă atingere. Samsung Family Hub, de exemplu, transformă ușa frigiderului într-un hub de divertisment și organizare familială, cu ecran tactil, aplicații și posibilitatea de a vizualiza conținutul interior prin camere integrate.</p>
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Branduri de Top și Modele Recomandate</h2>
+    <p class="mb-4">Când ești în căutarea celui mai bun frigider side by side premium, există câțiva producători care se disting prin inovație, calitate și fiabilitate.</p>
+    <p class="mb-4"><strong>Samsung</strong>: Cunoscut pentru designul modern și tehnologia avansată, Samsung oferă modele precum seriile Family Hub (cu ecran tactil inteligent) sau SpaceMax (cu izolație subțire pentru capacitate maximă). Tehnologii precum Twin Cooling Plus și No Frost integral sunt standard. Multe modele vin cu dispenser de apă și gheață, necesitând conectare la rețeaua de apă.</p>
+    <p class="mb-4"><strong>LG</strong>: Brandul LG impresionează prin inovații precum InstaView Door-in-Door, care îți permite să vezi conținutul frigiderului printr-o simplă atingere a ușii. Compresoarele liniare (Linear Compressor) sunt recunoscute pentru durabilitatea și eficiența lor energetică. Funcțiile FreshBalancer și FreshConverter optimizează condițiile pentru diverse tipuri de alimente.</p>
+    <p class="mb-4"><strong>Bosch / Siemens</strong>: Aceste branduri germane sunt sinonime cu fiabilitatea și ingineria precisă. Modelele lor side by side includ sisteme VitaFresh pentru păstrarea îndelungată a prospețimii, tehnologie NoFrost și conectivitate Home Connect, permițând controlul de la distanță. Designul este deseori minimalist și elegant.</p>
+    <p class="mb-4"><strong>Liebherr</strong>: Specializat în refrigerare, Liebherr este un nume de referință pentru calitatea premium. Sistemul BioFresh, care menține temperaturi aproape de 0°C și nivele optime de umiditate, este un punct forte. Tehnologia DuoCooling, cu două circuite de răcire separate, asigură o performanță excepțională și evită transferul de mirosuri. Sunt adesea mai scumpe, dar oferă o durată de viață impresionantă.</p>
+    <p class="mb-4"><strong>Electrolux</strong>: Cu un accent pe design scandinav și funcționalitate inteligentă, Electrolux oferă frigidere side by side cu tehnologii precum TwinTech No Frost și MultiFlow, care asigură o distribuție uniformă a aerului rece. Sunt o opțiune solidă pentru cei care caută un echilibru între preț și performanță premium.</p>
+    
+  </section>
+  <section id="sectiune-7" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Aspecte de Luat în Considerare Înainte de Achiziție</h2>
+    <p class="mb-4">Alegerea frigiderului perfect implică mai mult decât bugetul. Măsoară cu atenție spațiul disponibil în bucătărie, verificând nu doar lățimea și înălțimea, ci și adâncimea, pentru a te asigura că se integrează armonios și că ușile se pot deschide complet. Verifică și traseul de la intrarea în locuință până la bucătărie, pentru a evita surprize neplăcute la livrare.</p>
+    <p class="mb-4">Gândește-te la obiceiurile tale de consum. Ai nevoie de mult spațiu pentru congelator? Folosești des gheață sau apă rece? Un dispenser cu alimentare la rețea este mai comod, dar necesită o instalație de apă în apropiere. Dacă nu ai acces la o sursă de apă, există modele cu rezervor intern. Conectivitatea smart (Wi-Fi, aplicații mobile) poate adăuga un strat de confort, permițându-ți să monitorizezi și să ajustezi setările de la distanță. Nu uita să iei în considerare și nivelul de zgomot, mai ales dacă bucătăria este un spațiu deschis.</p>
+    
+  </section>
+
+          <!-- FAQ Section -->
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce înseamnă exact 'premium' la un frigider side by side?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Termenul 'premium' se referă la o combinație de factori: materiale de calitate superioară (inox anti-amprentă, sticlă, elemente metalice), tehnologii inovatoare (sisteme avansate No Frost, zone de conservare speciale ca BioFresh sau VitaFresh, compresoare liniare/inverter), eficiență energetică excelentă, design sofisticat, durabilitate sporită și funcții smart care aduc un plus de confort și personalizare.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Care sunt cele mai importante tehnologii de căutat la un frigider side by side premium?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Sistemele avansate No Frost (care previn gheața), Twin Cooling sau DuoCooling (circuite de răcire separate pentru frigider și congelator), zonele de prospețime dedicate (BioFresh, VitaFresh, FreshBalancer), compresoarele Inverter (pentru eficiență și silențiozitate), precum și funcții de acces rapid (Door-in-Door, InstaView) și opțiunile smart home (Family Hub, Home Connect) sunt aspecte esențiale de luat în considerare.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de importantă este clasa energetică la un frigider premium?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Clasa energetică este extrem de importantă. Un model premium cu o clasă energetică bună (C sau D conform noii etichetări, echivalentul vechilor A+++ sau A++) va consuma semnificativ mai puțină electricitate pe durata de viață a aparatului, generând economii substanțiale la facturile de energie. Este o investiție care se amortizează în timp, contribuind și la un impact redus asupra mediului.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Un frigider side by side cu dispenser de apă necesită alimentare la rețea?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Majoritatea frigiderelor side by side cu dispenser de apă și gheață necesită conectarea directă la rețeaua de apă a locuinței, pentru un flux continuu de apă filtrată și gheață. Unele modele mai noi oferă și varianta cu rezervor intern, care nu necesită conectare la rețea, dar trebuie umplut manual periodic. Este important să verifici specificațiile modelului dorit.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce garanție oferă de obicei producătorii pentru aceste modele premium?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru frigiderele side by side premium, majoritatea producătorilor oferă o garanție standard de 2 ani, conform legislației. Însă, mulți producători de top, precum LG cu compresoarele sale liniare, sau Samsung, oferă garanții extinse (5, 10 sau chiar 20 de ani) pentru anumite componente cheie, cum ar fi compresorul, reflectând încrederea în durabilitatea produselor lor. Este întotdeauna recomandat să verifici condițiile specifice de garanție pentru modelul ales.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/frigider-cu-compartimente-inteligente/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/frigider-cu-compartimente-inteligente.webp" alt="Frigider Cu Compartimente Inteligente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Frigider Cu Compartimente Inteligente</h3>
+              </div>
+            </a>
+
+            <a href="/cea-mai-buna-plita-cu-inductie-premium/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cea-mai-buna-plita-cu-inductie-premium.webp" alt="Cea mai bună plită cu inducție premium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cea mai bună plită cu inducție premium</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-cuptor-incorporabil-premium/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-cuptor-incorporabil-premium.webp" alt="Cel mai bun cuptor încorporabil premium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun cuptor încorporabil premium</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,327 @@
+---
+export const frontmatter = {
+  title: "Cuptor Multifuncțional Cu Aburi",
+  slug: "cuptor-multifunctional-cu-aburi",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Descoperă avantajele unui cuptor multifuncțional cu aburi: gătit sănătos, rapid și delicios. Alegerea perfectă pentru bucătăria modernă.",
+  image: "/images/articles/cuptor-multifunctional-cu-aburi.webp",
+  publishDate: "2025-12-17T19:29:07.000Z",
+  modifiedDate: "2026-01-23T19:29:07.571Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Este un cuptor multifuncțional cu aburi mai greu de curățat decât un cuptor obișnuit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "În general, un cuptor multifuncțional cu aburi modern este la fel de ușor, dacă nu chiar mai ușor de curățat decât un cuptor tradițional. Multe modele dispun de funcții de autocurățare (hidrolitică sau pirolitică) care fac o mare parte din muncă. Rezervorul de apă necesită o atenție sporită, dar golirea și curățarea sa sunt de obicei simple și rapide, prevenind acumularea de calcar și menținând igiena."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot găti orice fel de mâncare într-un cuptor multifuncțional cu aburi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aproape orice! Un cuptor multifuncțional cu aburi combină funcțiile unui cuptor electric tradițional cu cele ale unui aparat de gătit cu aburi. Astfel, poți coace, frige, gratina, găti la abur sau poți folosi o combinație de metode. Este ideal pentru legume, pește, carne, pâine, produse de patiserie și chiar deserturi, oferind o versatilitate extraordinară în bucătărie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de multă apă consumă un cuptor multifuncțional cu aburi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Consumul de apă variază în funcție de model, de durata și de tipul de program de gătire utilizat. Un rezervor de apă (de obicei între 0.5 și 1.5 litri) poate fi suficient pentru mai multe cicluri de gătire sau pentru o sesiune lungă de gătit la abur. Dacă optezi pentru un model cu conexiune directă la rețeaua de apă, consumul este gestionat automat și eficient de aparat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Este necesară dezinstalarea cuptorului pentru a curăța rezervorul de apă?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De obicei, nu. Majoritatea cuptoarelor multifuncționale cu aburi au rezervoare de apă accesibile, fie prin glisarea lor dintr-un compartiment dedicat, fie prin scoaterea lor completă. Acest lucru permite o umplere și o curățare ușoară, fără a fi nevoie de intervenții complicate sau de dezinstalarea aparatului din mobilierul bucătăriei."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce diferență este între un cuptor cu aburi și un cuptor cu funcție de abur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Termenii sunt adesea folosiți interschimbabil, dar pot exista diferențe subtile. Un \"cuptor cu aburi\" dedicat se concentrează în principal pe gătitul cu aburi, având adesea o cavitate separată sau tehnologii optimizate strict pentru abur. Un \"cuptor multifuncțional cu aburi\" integrează funcția de abur ca o caracteristică suplimentară la un cuptor electric convențional, oferind o gamă mai largă de moduri de gătit (coacere, grill, etc.) alături de opțiunile cu abur. Ambele tipuri oferă beneficii similare în ceea ce privește sănătatea și calitatea preparatelor."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce înseamnă cuptor multifuncțional cu aburi și cum funcționează?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Beneficiile gătitului cu aburi</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tipuri de cuptoare multifuncționale cu aburi și caracteristici cheie</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum să alegi cuptorul multifuncțional cu aburi potrivit pentru tine</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Întreținerea și curățarea cuptorului cu aburi</a>
+                <a href="#sectiune-7" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Rețete delicioase pe care le poți prepara cu un cuptor multifuncțional cu aburi</a>
+                <a href="#sectiune-8" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tehnologii inovatoare în cuptoarele cu aburi</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce înseamnă cuptor multifuncțional cu aburi și cum funcționează?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Beneficiile gătitului cu aburi</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tipuri de cuptoare multifuncționale cu aburi și caracteristici cheie</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum să alegi cuptorul multifuncțional cu aburi potrivit pentru tine</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Întreținerea și curățarea cuptorului cu aburi</a>
+                <a href="#sectiune-7" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Rețete delicioase pe care le poți prepara cu un cuptor multifuncțional cu aburi</a>
+                <a href="#sectiune-8" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tehnologii inovatoare în cuptoarele cu aburi</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/cuptor-multifunctional-cu-aburi.webp" alt="Cuptor Multifuncțional Cu Aburi" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    
+    <p class="mb-4">Îți dorești să transformi gătitul de zi cu zi într-o experiență culinară de excepție, plină de savoare și beneficii pentru sănătate? Atunci un <strong>cuptor multifuncțional cu aburi</strong> ar putea fi exact ceea ce cauți. Aceste electrocasnice revoluționare combină tehnologia tradițională de coacere cu puterea transformatoare a aburului, oferind o versatilitate incredibilă și rezultate pe care le vei adora. Indiferent dacă ești un pasionat de bucătărie sau doar cauți o modalitate mai eficientă și mai sănătoasă de a prepara mesele, acest tip de cuptor merită cu siguranță atenția ta.</p>
+    <p class="mb-4">În ultimele decade, tehnologia din bucătăria noastră a evoluat enorm, iar cuptoarele nu fac excepție. De la simple cuptoare electrice la cele pe gaz, am văzut o mulțime de inovații. Acum, însă, asistăm la o nouă eră, una în care gătitul cu aburi devine tot mai accesibil și mai popular, integrat inteligent în aparate multifuncționale. Un <strong>cuptor multifuncțional cu aburi</strong> nu este doar un aparat de gătit; este un partener în crearea unor preparate mai nutritive, mai fragede și mai aromate, păstrând în același timp vitaminele și mineralele esențiale. Imaginează-ți legume crocante și vibrante, carne suculentă și pâine cu o crustă perfectă – toate obținute cu o singură unealtă.</p>
+    <p class="mb-4">Ce face, mai exact, un cuptor cu funcție de aburi atât de special? Pe lângă modurile clasice de coacere (convecție, grill, încălzire superioară/inferioară), acesta dispune de un rezervor de apă și un sistem avansat care generează abur. Acesta poate fi injectat în cavitatea cuptorului fie singur, fie în combinație cu aerul cald, creând condiții optime pentru o varietate uimitoare de rețete. Această dualitate îl transformă într-un instrument de neînlocuit pentru oricine apreciază calitatea și sănătatea în alimentație, dar și pentru cei care vor să experimenteze noi tehnici culinare fără a supraaglomera bucătăria cu multiple aparate.</p>
+    <p class="mb-4">Investiția într-un <strong>cuptor multifuncțional cu aburi</strong> este, pe termen lung, o investiție în sănătatea ta și a familiei tale. Reducerea necesității de grăsimi în procesul de gătire, păstrarea nutrienților și obținerea unor texturi superioare sunt doar câteva dintre beneficiile care îl recomandă. Hai să explorăm mai în detaliu ce anume îl face atât de special și cum te poate ajuta să devii un bucătar mai bun, mai eficient și mai creativ.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce înseamnă cuptor multifuncțional cu aburi și cum funcționează?</h2>
+    <p class="mb-4">Un <strong>cuptor multifuncțional cu aburi</strong> este, în esență, un cuptor electric avansat care integrează o funcție dedicată generării și distribuției aburului în interiorul cavității de gătit. Spre deosebire de cuptoarele tradiționale care se bazează exclusiv pe aer cald, acest tip de aparat folosește o combinație de aer cald și abur pentru a găti alimentele. Rezervorul de apă, de obicei ascuns în partea superioară sau frontală a cuptorului, este încălzit pentru a produce abur, care este apoi injectat strategic în cavitate. Această metodă de gătire ajută la menținerea umidității interne a alimentelor, prevenind uscarea excesivă și asigurând o textură mult mai fragedă și mai suculentă.</p>
+    <p class="mb-4">Modurile de funcționare ale unui astfel de cuptor sunt variate. Pe lângă funcțiile standard pe care le găsești la un cuptor electric convențional – cum ar fi coacerea cu convecție (aer cald circulat uniform), grill-ul pentru rumenire, sau încălzirea superioară și inferioară pentru preparate clasice – cuptorul cu aburi adaugă opțiuni specifice. Acestea pot include "Gătire cu aburi 100%", ideală pentru legume, pește sau pentru a reîncălzi mâncăruri fără a le usca, "Abur combinat" unde poți seta nivelul de abur dorit (de la 25% la 100%) în combinație cu aerul cald, sau chiar programe automate predefinite pentru diverse tipuri de alimente. Această flexibilitate permite adaptarea perfectă a metodei de gătire la cerințele fiecărui preparat.</p>
+    <p class="mb-4">Tehnologia din spatele generării aburului variază între producători. Unele modele folosesc un rezervor de apă detașabil, ușor de umplut și curățat, în timp ce altele pot avea o conexiune directă la rețeaua de apă, eliminând necesitatea realimentării manuale. Sistemul de distribuție a aburului este, de asemenea, important; acesta trebuie să asigure o prezență uniformă a aburului în toată cavitatea cuptorului pentru a garanta o gătire omogenă. Fiecare componentă este proiectată pentru a optimiza procesul de gătire, transformând un simplu cuptor într-un instrument culinar performant și versatil.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Beneficiile gătitului cu aburi</h2>
+    <p class="mb-4">Principalul avantaj al gătitului cu aburi, și implicit al utilizării unui <strong>cuptor multifuncțional cu aburi</strong>, este conservarea nutrienților. Aburul gătește alimentele la o temperatură mai scăzută și într-un mediu umed, spre deosebire de coacerea tradițională sau prăjire, unde vitaminele solubile în apă și alte elemente nutritive se pot pierde prin evaporare sau degradare termică. Aceasta înseamnă că legumele tale vor fi mai bogate în vitamine, fructele de mare mai pline de proteine și carnea va reține mai mult din suculența și aroma sa naturală. Este o metodă excelentă pentru a te asigura că preparatele tale sunt nu doar gustoase, ci și cât mai sănătoase.</p>
+    <p class="mb-4">Textura și aroma alimentelor gătite cu aburi sunt, de asemenea, superioare. Aburul pătrunde delicat în alimente, gătindu-le uniform fără a le usca. Rezultatul este o carne incredibil de fragedă, orez pufos și legume care își păstrează o parte din crocant, dar sunt gătite perfect. Pentru produse de patiserie, aburul poate contribui la obținerea unei cruste crocante la exterior și a unui interior moale și aerat, mai ales când este folosit în combinație cu aerul cald. Gândește-te la pâinea coaptă acasă, cu o coajă perfectă datorită injecției de abur la începutul procesului de coacere.</p>
+    <p class="mb-4">Pe lângă beneficiile nutritive și de gust, gătitul cu aburi este adesea mai rapid și mai eficient energetic. Deoarece aburul transferă căldura mai eficient decât aerul uscat, alimentele se pot găti într-un timp mai scurt. Acest lucru este valabil mai ales pentru legume și pește. De asemenea, multe cuptoare multifuncționale cu aburi au programe automate care optimizează timpul și temperatura, făcând procesul de gătire mai simplu și mai predictibil. Un <strong>cuptor multifuncțional cu aburi</strong> poate fi, așadar, o unealtă care îți economisește timp și energie, contribuind în același timp la un stil de viață mai sănătos.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Tipuri de cuptoare multifuncționale cu aburi și caracteristici cheie</h2>
+    <p class="mb-4">Pe piață, vei găsi o varietate de <strong>cuptoare multifuncționale cu aburi</strong>, de la modele mai simple, cu funcții de bază, la aparate high-tech cu o multitudine de programe și funcții inteligente. Un aspect important de luat în considerare este capacitatea cuptorului, măsurată în litri, care ar trebui să se potrivească nevoilor familiei tale. De asemenea, este esențial să verifici tipul de control: manual, electronic cu butoane sau touchscreen, și dacă dispune de programe automate sau funcții de auto-curățare.</p>
+    <p class="mb-4">Caracteristicile tehnice esențiale includ puterea maximă de coacere (în wați), numărul de niveluri de gătit, prezența funcției de grill (simplu, dublu, cu ventilație), și, bineînțeles, modul în care este gestionat aburul. Unii producători, precum Bosch, Siemens sau AEG, oferă modele cu sisteme de generare a aburului foarte eficiente, cu rezervoare de apă generoase sau conexiuni directe la apă. Branduri precum Whirlpool sau Electrolux pun accent pe ușurința în utilizare și pe programele automate, ideale pentru începători.</p>
+    <p class="mb-4">Alte funcții care pot face diferența sunt: sistemul de curățare (hidrolitică sau catalitică), iluminarea interioară LED, funcția de menținere la cald, funcția de decongelare, sau chiar conectivitatea Wi-Fi pentru controlul cuptorului de la distanță prin intermediul unei aplicații mobile. Un <strong>cuptor multifuncțional cu aburi</strong> de la un brand de renume va oferi de obicei o garanție extinsă și un serviciu post-vânzare de încredere, aspecte de luat în calcul în decizia de cumpărare. De asemenea, este bine să te uiți la clasa energetică, pentru a te asigura că aparatul este eficient din punct de vedere al consumului de electricitate.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum să alegi cuptorul multifuncțional cu aburi potrivit pentru tine</h2>
+    <p class="mb-4">Alegerea unui <strong>cuptor multifuncțional cu aburi</strong> depinde de mai mulți factori, inclusiv de bugetul disponibil, spațiul din bucătăria ta și, cel mai important, de modul în care intenționezi să-l folosești. Gândește-te la ce tipuri de mâncăruri gătești cel mai des. Dacă preferi legumele și peștele, o funcție puternică de gătire cu aburi va fi prioritară. Dacă ești pasionat de coacerea pâinii sau a produselor de patiserie, caută un model care permite control precis al nivelului de abur și al temperaturii.</p>
+    <p class="mb-4">Verifică specificațiile tehnice cu atenție. Capacitatea cuptorului este un factor cheie; un cuptor de 60 de litri este, în general, suficient pentru o familie medie, dar dacă gătești des pentru mulți invitați, ai putea considera un model mai mare. Consumul de energie este, de asemenea, important pentru factura la electricitate pe termen lung; caută modele cu o clasă energetică superioară (A++ sau A+++). Sistemul de curățare automat (hidrolitic sau pirolitic) poate fi un factor decisiv dacă vrei să economisești timp și efort la întreținerea aparatului.</p>
+    <p class="mb-4">Nu uita să citești recenzii și să compari modele de la diferiți producători. Branduri precum Miele, Neff sau Electrolux oferă adesea cuptoare cu aburi de înaltă calitate, cu inovații tehnologice și un design premium. Este util să te informezi despre caracteristici specifice precum sistemul de generare a aburului (extern sau intern), tipul de control al temperaturii (electronic cu precizie, sau termostat clasic), și dacă dispune de funcții inteligente, cum ar fi conectivitatea Wi-Fi sau ghiduri de gătit integrate. Un <strong>cuptor multifuncțional cu aburi</strong> este o investiție pe termen lung, așa că merită să acorzi timp pentru a face cea mai bună alegere pentru bucătăria ta.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Întreținerea și curățarea cuptorului cu aburi</h2>
+    <p class="mb-4">Pentru a te bucura cât mai mult timp de performanța unui <strong>cuptor multifuncțional cu aburi</strong>, întreținerea regulată este esențială. Curățarea rezervorului de apă este un pas important pentru a preveni acumularea de calcar și apariția bacteriilor. Majoritatea modelelor vin cu instrucțiuni clare despre cum să golești și să cureți rezervorul, de obicei folosind o cârpă moale și, ocazional, o soluție specială anticalcar sau oțet diluat. Este recomandat să golești rezervorul după fiecare utilizare sau cel puțin la sfârșitul zilei.</p>
+    <p class="mb-4">Cavitatea cuptorului în sine necesită, de asemenea, curățare. Multe modele moderne dispun de programe de autocurățare, cum ar fi curățarea hidrolitică, care folosește aburul pentru a înmuia reziduurile de mâncare, făcându-le ușor de îndepărtat cu o lavetă. Alte cuptoare pot avea curățare pirolitică, ce incineră resturile la temperaturi foarte înalte. Indiferent de sistemul de autocurățare, este bine să ștergi interiorul cuptorului după finalizarea ciclului pentru a îndepărta orice urmă de murdărie.</p>
+    <p class="mb-4">Este important să respecți instrucțiunile din manualul de utilizare al producătorului (fie că este vorba de un cuptor Bosch, Siemens, AEG sau alt brand). Acestea vor oferi cele mai bune sfaturi privind curățarea componentelor specifice ale aparatului tău, inclusiv a elementelor de încălzire și a duzelor de abur. Evită utilizarea produselor de curățare abrazive sau a bureților metalici, care pot zgâria suprafețele interioare ale cuptorului. O curățare atentă și consecventă va asigura nu doar un aspect impecabil, ci și o funcționare optimă și o durată de viață mai lungă a <strong>cuptorului multifuncțional cu aburi</strong>.</p>
+    
+    
+  </section>
+  <section id="sectiune-7" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Rețete delicioase pe care le poți prepara cu un cuptor multifuncțional cu aburi</h2>
+    <p class="mb-4">Versatilitatea unui <strong>cuptor multifuncțional cu aburi</strong> deschide o lume de posibilități culinare. De la preparate simple și rapide la cele mai sofisticate, acest aparat te va ajuta să obții rezultate remarcabile. Legumele gătite la abur își păstrează culoarea vibrantă și textura crocantă, fiind perfecte ca garnitură sau ca bază pentru salate. Poți prepara broccoli, morcovi, sparanghel, fasole verde sau conopidă în câteva minute, păstrând toți nutrienții valoroși.</p>
+    <p class="mb-4">Puiul, peștele și fructele de mare sunt alte vedete ale gătitului cu aburi. Un file de somon gătit la abur va fi incredibil de suculent și fraged, puiul va rămâne moale și aromat, iar creveții vor fi perfect gătiți, fără a deveni gumoși. Experimentează cu ierburi aromatice, lămâie sau alte condimente pentru a adăuga un plus de savoare. Poți chiar găti un pui întreg la abur, care va ieși cu o piele frumos rumenită (folosind funcția combinată) și o carne extrem de fragedă.</p>
+    <p class="mb-4">Nu te limita la preparatele simple; un <strong>cuptor multifuncțional cu aburi</strong> este excelent și pentru pâine și produse de patiserie. Aburul inițial ajută la formarea unei cruste perfecte pentru pâinea artizanală, iar coacerea la temperaturi controlate asigură o consistență uniformă. Poți pregăti deserturi precum creme brulee, sufleuri sau chiar prăjituri umede, unde aburul ajută la obținerea unei texturi fine și catifelate. Mulți producători, precum Philips sau Tefal, oferă chiar și cărți de rețete sau aplicații dedicate pentru a te inspira în utilizarea cuptorului.</p>
+    
+    
+  </section>
+  <section id="sectiune-8" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Tehnologii inovatoare în cuptoarele cu aburi</h2>
+    <p class="mb-4">Producătorii de electrocasnice inovează constant pentru a face utilizarea <strong>cuptorului multifuncțional cu aburi</strong> cât mai eficientă și mai plăcută. Un exemplu elocvent este tehnologia "PerfectSteam" de la Miele, care asigură o distribuție uniformă a aburului în cavitatea cuptorului prin intermediul unei pompe performante, garantând rezultate de gătit consistente. De asemenea, modelele premium de la branduri precum Gaggenau sau Neff integrează sisteme de generare a aburului care pot fi controlate cu o precizie milimetrică, permițând bucătarilor amatori să experimenteze cu tehnici avansate.</p>
+    <p class="mb-4">Sistemele de curățare automată au evoluat și ele. Pe lângă hidroliză și piroliză, unele cuptoare oferă programe de curățare cu soluții dedicate, care sunt introduse automat în cavitate, simplificând procesul. Senzorii integrați pot monitoriza nivelul de umiditate din cuptor și pot ajusta automat temperatura și cantitatea de abur pentru a optimiza procesul de gătire, asigurând că alimentele sunt gătite perfect de fiecare dată. Acest nivel de automatizare transformă gătitul dintr-o sarcină complexă într-o activitate relaxantă și creativă.</p>
+    <p class="mb-4">Conectivitatea Wi-Fi și integrarea cu aplicații mobile reprezintă o altă direcție majoră de inovație. Prin intermediul smartphone-ului sau tabletei, poți monitoriza progresul gătitului, poți selecta programe, poți primi notificări atunci când preparatul este gata sau chiar poți descărca noi rețete direct în memoria cuptorului. Această funcționalitate aduce bucătăria ta la nivelul următor de inteligență și conveniență, transformând <strong>cuptorul multifuncțional cu aburi</strong> într-un element central al casei inteligente.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Este un cuptor multifuncțional cu aburi mai greu de curățat decât un cuptor obișnuit?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  În general, un cuptor multifuncțional cu aburi modern este la fel de ușor, dacă nu chiar mai ușor de curățat decât un cuptor tradițional. Multe modele dispun de funcții de autocurățare (hidrolitică sau pirolitică) care fac o mare parte din muncă. Rezervorul de apă necesită o atenție sporită, dar golirea și curățarea sa sunt de obicei simple și rapide, prevenind acumularea de calcar și menținând igiena.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot găti orice fel de mâncare într-un cuptor multifuncțional cu aburi?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Aproape orice! Un cuptor multifuncțional cu aburi combină funcțiile unui cuptor electric tradițional cu cele ale unui aparat de gătit cu aburi. Astfel, poți coace, frige, gratina, găti la abur sau poți folosi o combinație de metode. Este ideal pentru legume, pește, carne, pâine, produse de patiserie și chiar deserturi, oferind o versatilitate extraordinară în bucătărie.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de multă apă consumă un cuptor multifuncțional cu aburi?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Consumul de apă variază în funcție de model, de durata și de tipul de program de gătire utilizat. Un rezervor de apă (de obicei între 0.5 și 1.5 litri) poate fi suficient pentru mai multe cicluri de gătire sau pentru o sesiune lungă de gătit la abur. Dacă optezi pentru un model cu conexiune directă la rețeaua de apă, consumul este gestionat automat și eficient de aparat.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Este necesară dezinstalarea cuptorului pentru a curăța rezervorul de apă?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  De obicei, nu. Majoritatea cuptoarelor multifuncționale cu aburi au rezervoare de apă accesibile, fie prin glisarea lor dintr-un compartiment dedicat, fie prin scoaterea lor completă. Acest lucru permite o umplere și o curățare ușoară, fără a fi nevoie de intervenții complicate sau de dezinstalarea aparatului din mobilierul bucătăriei.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce diferență este între un cuptor cu aburi și un cuptor cu funcție de abur?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Termenii sunt adesea folosiți interschimbabil, dar pot exista diferențe subtile. Un "cuptor cu aburi" dedicat se concentrează în principal pe gătitul cu aburi, având adesea o cavitate separată sau tehnologii optimizate strict pentru abur. Un "cuptor multifuncțional cu aburi" integrează funcția de abur ca o caracteristică suplimentară la un cuptor electric convențional, oferind o gamă mai largă de moduri de gătit (coacere, grill, etc.) alături de opțiunile cu abur. Ambele tipuri oferă beneficii similare în ceea ce privește sănătatea și calitatea preparatelor.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/aer-conditionat-inverter-cu-consum-redus/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aer-conditionat-inverter-cu-consum-redus.webp" alt="Aer Condiționat Inverter Cu Consum Redus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aer Condiționat Inverter Cu Consum Redus</h3>
+              </div>
+            </a>
+
+            <a href="/frigider-cu-dozator-apa-si-gheata/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/frigider-cu-dozator-apa-si-gheata.webp" alt="Frigider Cu Dozator Apă Și Gheață" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Frigider Cu Dozator Apă Și Gheață</h3>
+              </div>
+            </a>
+
+            <a href="/masina-de-spalat-vase-cu-senzori-eco/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/masina-de-spalat-vase-cu-senzori-eco.webp" alt="Mașină De Spălat Vase Cu Senzori Eco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Mașină De Spălat Vase Cu Senzori Eco</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

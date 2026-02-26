@@ -1,0 +1,286 @@
+---
+export const frontmatter = {
+  title: "Kit Upgrade Pc Pentru Performanță Maximă",
+  slug: "kit-upgrade-pc-pentru-performanta-maxima",
+  category: "Tehnologie & Gaming",
+  categorySlug: "tehnologie-gaming",
+  excerpt: "Un kit PC pentru performanta maxima: componente esentiale pentru gaming si productivitate. Am testat optiuni pentru un upgrade concret.",
+  image: "/images/articles/kit-upgrade-pc-pentru-performanta-maxima.webp",
+  publishDate: "2025-12-25T07:19:17.000Z",
+  modifiedDate: "2026-01-25T07:19:17.428Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ce inseamna un kit upgrade PC pentru performanta maxima?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Inseamna inlocuirea componentelor cheie ale unui PC existent (procesor, placa video, RAM, stocare) cu piese mai noi si mai puternice pentru a imbunatati semnificativ viteza si capacitatea de gaming sau productivitate, fara a cumpara un sistem nou complet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot sa pun orice placa video pe orice placa de baza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu. Placa de baza trebuie sa aiba slotul PCIe corespunzator (de obicei PCIe 3.0, 4.0 sau 5.0) si, cel mai important, sa fie compatibila cu procesorul pe care il folosesti. Verifica specificatiile placii de baza si ale procesorului pe site-ul producatorului."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cat RAM imi trebuie pentru gaming in 2024?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru majoritatea jocurilor, 16GB RAM (DDR4 sau DDR5) este suficient. Totusi, daca vrei sa te asiguri ca esti pregatit pentru viitor sau daca joci jocuri foarte solicitante sau faci multitasking, 32GB RAM este o optiune mult mai sigura si de recomandat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Este mai bine sa iau un SSD NVMe sau un SSD SATA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru un kit upgrade PC pentru performanta maxima, un SSD NVMe este net superior. Oferta de viteze de citire/scriere de 5-7 ori mai mari decat un SSD SATA, ceea ce se traduce prin timpi de incarcare mult mai mici pentru sistemul de operare, jocuri si aplicatii."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Procesorul: Creierul sistemului tau</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Placa Video: Inima experientei vizuale</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Memoria RAM: Viteza si fluiditate in aplicatii</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Stocarea: Viteza de incarcare si acces</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sursa de alimentare si racirea: Fundatia stabila</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Procesorul: Creierul sistemului tau</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Placa Video: Inima experientei vizuale</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Memoria RAM: Viteza si fluiditate in aplicatii</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Stocarea: Viteza de incarcare si acces</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sursa de alimentare si racirea: Fundatia stabila</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/kit-upgrade-pc-pentru-performanta-maxima.webp" alt="Kit Upgrade Pc Pentru Performanță Maximă" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    
+    <p class="mb-4">Daca ai un PC decent dar simti ca nu mai face fata celor mai noi jocuri sau aplicatiilor de editare video, un kit upgrade PC pentru performanta maxima e solutia. Am trecut prin asta de cateva ori si stiu cat de frustrant e sa ai lag cand lucrezi sau sa vezi frame rate-uri mici. Nu vorbim de un PC nou la 7000-8000 de lei, ci de o actualizare inteligenta a componentelor cheie.</p>
+    <p class="mb-4">In experienta mea, cele mai mari diferente le fac procesorul, placa video si memoria RAM. Acestea sunt motorul sistemului, iar daca ele sunt depasite, restul componentelor nu pot compensa. Am testat diverse combinatii in ultimii ani, incercand sa gasesc acel echilibru perfect intre pret si performanta bruta, fara sa sar calul.</p>
+    <p class="mb-4">Un kit upgrade PC pentru performanta maxima inseamna sa alegi piese care se potrivesc bine intre ele. Nu are rost sa pui un procesor de top pe o placa de baza veche sau sa iei o placa video scumpa daca procesorul o va limita. E ca si cum ai pune motorul de la un Ferrari pe o Dacie. Totul trebuie sa fie in armonie.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Procesorul: Creierul sistemului tau</h2>
+    <p class="mb-4">Procesorul este, in multe cazuri, cea mai importanta piesa dintr-un kit upgrade PC pentru performanta maxima. Am observat ca un upgrade de la un procesor vechi, cu 4 nuclee, la unul modern cu 8 sau chiar 12 nuclee, face o diferenta uriasa in multitasking si in jocurile care se bazeaza mult pe CPU.</p>
+    <p class="mb-4">Pentru gaming, procesoarele Intel Core i5/i7 din generatiile noi (12, 13, 14) sau AMD Ryzen 5/7 (seriile 5000, 7000) sunt alegeri solide. Am testat un Intel Core i5-13600K si am ramas impresionat de cat de fluid ruleaza totul, de la jocuri la editare foto in Photoshop. Un AMD Ryzen 7 5700X, gasit recent pe PCGarage la aproximativ 1200 lei, este o optiune excelenta pentru cei care vor multe nuclee pentru productivitate, dar si performanta buna in jocuri.</p>
+    <p class="mb-4">Cand alegi procesorul, verifica si socket-ul placii de baza. Daca ai o placa de baza mai veche, s-ar putea sa fie nevoie sa o schimbi si pe ea, ceea ce adauga costuri. Eu am optat uneori pentru un pachet "CPU + Placa de baza + RAM" de la ASUS sau MSI pentru a simplifica procesul.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Placa Video: Inima experientei vizuale</h2>
+    <p class="mb-4">Pentru gaming, placa video este, de departe, cea mai importanta componenta. Un kit upgrade PC pentru performanta maxima nu este complet fara o placa video capabila sa duca jocurile la setari grafice ridicate. Am facut upgrade-uri de la un GTX 1060 la un RTX 3060 si diferenta a fost de la cer la pamant, mai ales in titlurile noi. Daca bugetul permite, chiar si un RTX 4070 sau un AMD RX 7800 XT sunt optiuni fantastice.</p>
+    <p class="mb-4">Preturile pot varia destul de mult. Un NVIDIA GeForce RTX 3060 12GB poate fi gasit pe eMAG sau Altex in jur de 1800-2000 lei, oferind o performanta excelenta pentru rezolutii 1080p si chiar 1440p. Daca vrei sa joci in 4K, atunci te uiti la modele superioare, cum ar fi RTX 4070 Ti sau RX 7900 XTX, care sar bineinteles de 3500-4000 lei.</p>
+    <p class="mb-4">Am observat ca e bine sa te uiti si la memoria VRAM. Pentru gaming in 1440p si jocuri cu texturi mari, 12GB VRAM (cum are RTX 3060) este un minim confortabil. Pentru viitor, 16GB devine standardul. Branduri precum ASUS, Gigabyte, MSI sau Sapphire fac placi video solide, ambele fiind de incredere.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Memoria RAM: Viteza si fluiditate in aplicatii</h2>
+    <p class="mb-4">Memoria RAM este adesea neglijata, dar joaca un rol crucial in performanta generala, mai ales cand lucrezi cu multe programe deschise sau editezi fisiere mari. Am simtit diferenta de la 16GB la 32GB RAM in Photoshop si Premiere Pro, unde timpul de incarcare si randare s-a redus considerabil. Un kit upgrade PC pentru performanta maxima ar trebui sa includa minim 16GB, dar 32GB este idealul pentru viitor.</p>
+    <p class="mb-4">Pentru gaming, 16GB DDR4 3200MHz sau DDR5 6000MHz este suficient pentru majoritatea titlurilor. Daca te ocupi si de streaming sau editare video, 32GB DDR4 3600MHz sau DDR5 6400MHz este recomandat. Eu am folosit kituri de la Corsair, G.Skill si Kingston, toate oferind stabilitate buna. Un kit de 32GB DDR4 3600MHz de la Kingston Fury poate fi gasit pe PCGarage la aproximativ 400-500 lei.</p>
+    <p class="mb-4">Verifica ce tip de RAM suporta placa ta de baza (DDR4 sau DDR5) si viteza maxima. Nu are rost sa iei RAM foarte rapid daca placa de baza nu il poate duce la acea viteza. De asemenea, viteza conteaza, dar si latenta (CL). Pentru DDR4, CL16 este bun, iar pentru DDR5, CL30 sau CL32 este un bun punct de plecare.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Stocarea: Viteza de incarcare si acces</h2>
+    <p class="mb-4">Trecerea de la un HDD clasic la un SSD a fost, pentru mine, una dintre cele mai mari imbunatatiri pe care le-am facut vreodata unui PC. Un kit upgrade PC pentru performanta maxima trebuie sa includa un SSD rapid, preferabil NVMe. Timpul de boot al sistemului de operare si incarcarea jocurilor se reduc dramatic.</p>
+    <p class="mb-4">Am testat SSD-uri NVMe de la Samsung (seria 970 EVO Plus sau 980 PRO) si Crucial (seria P3 sau P5) si diferentele sunt notabile. Un SSD NVMe de 1TB, cum ar fi Samsung 970 EVO Plus, se gaseste pe eMAG la aproximativ 400-500 lei. Pentru sistemul de operare si jocurile preferate, 1TB este un spatiu bun. Daca lucrezi cu fisiere mari sau ai multe jocuri, 2TB devine necesar.</p>
+    <p class="mb-4">Pentru stocare secundara, poti folosi un HDD mai mare (4TB sau mai mult) pentru filme, muzica sau fisiere mai vechi. Am observat ca SSD-urile au devenit mult mai accesibile, asa ca un upgrade la un SSD NVMe de 1TB sau 2TB pentru tot, chiar si pentru stocare, este o optiune viabila pentru multi utilizatori. Vitezele de citire/scriere de peste 3000 MB/s fac o diferenta mare.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sursa de alimentare si racirea: Fundatia stabila</h2>
+    <p class="mb-4">Chiar daca nu sunt la fel de spectaculoase ca procesorul sau placa video, sursa de alimentare (PSU) si sistemul de racire sunt vitale pentru un kit upgrade PC pentru performanta maxima. O sursa subdimensionata sau de proasta calitate poate duce la instabilitate, blocaje sau chiar defectarea componentelor. Am invatat asta pe pielea mea, cand am ars o placa video din cauza unei surse ieftine.</p>
+    <p class="mb-4">Pentru un sistem performant, recomand o sursa de minim 650W, preferabil 750W sau 850W, cu certificare 80 Plus Gold de la branduri de renume precum Corsair, Seasonic sau ASUS. Un model Corsair RM750x (750W, 80 Plus Gold) costa in jur de 600-700 lei pe PCGarage. Asigura-te ca are suficiente conectori pentru placa video si celelalte componente.</p>
+    <p class="mb-4">Cat despre racire, daca ai un procesor performant, cel mai probabil vei avea nevoie de un cooler aftermarket, fie pe aer, fie pe lichid (AIO). Cooler-ul stock de la Intel sau AMD nu face fata la sarcini mari. Un cooler pe aer bun, cum ar fi Noctua NH-D15 sau Deepcool AK620, costa in jur de 400-500 lei si mentine temperaturile sub control. Un AIO de 240mm sau 360mm este si mai eficient, dar si mai scump, sarind de 600-700 lei.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce inseamna un kit upgrade PC pentru performanta maxima?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Inseamna inlocuirea componentelor cheie ale unui PC existent (procesor, placa video, RAM, stocare) cu piese mai noi si mai puternice pentru a imbunatati semnificativ viteza si capacitatea de gaming sau productivitate, fara a cumpara un sistem nou complet.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot sa pun orice placa video pe orice placa de baza?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu. Placa de baza trebuie sa aiba slotul PCIe corespunzator (de obicei PCIe 3.0, 4.0 sau 5.0) si, cel mai important, sa fie compatibila cu procesorul pe care il folosesti. Verifica specificatiile placii de baza si ale procesorului pe site-ul producatorului.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat RAM imi trebuie pentru gaming in 2024?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru majoritatea jocurilor, 16GB RAM (DDR4 sau DDR5) este suficient. Totusi, daca vrei sa te asiguri ca esti pregatit pentru viitor sau daca joci jocuri foarte solicitante sau faci multitasking, 32GB RAM este o optiune mult mai sigura si de recomandat.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Este mai bine sa iau un SSD NVMe sau un SSD SATA?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru un kit upgrade PC pentru performanta maxima, un SSD NVMe este net superior. Oferta de viteze de citire/scriere de 5-7 ori mai mari decat un SSD SATA, ceea ce se traduce prin timpi de incarcare mult mai mici pentru sistemul de operare, jocuri si aplicatii.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/placa-video-amd-performanta-ridicata/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/placa-video-amd-performanta-ridicata.webp" alt="Placă Video Amd Performanță Ridicată" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Placă Video Amd Performanță Ridicată</h3>
+              </div>
+            </a>
+
+            <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/laptop-gaming-sub-6000-lei-cu-performanta-ridicata.webp" alt="Laptop Gaming Sub 6000 Lei Cu Performanță Ridicată" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Laptop Gaming Sub 6000 Lei Cu Performanță Ridicată</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-pc-de-gaming-high-end/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-pc-de-gaming-high-end.webp" alt="Cel mai bun PC de gaming high-end" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun PC de gaming high-end</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

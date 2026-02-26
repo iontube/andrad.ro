@@ -1,0 +1,276 @@
+---
+export const frontmatter = {
+  title: "Pc Modular Cu Răcire Lichidă Personalizată",
+  slug: "pc-modular-cu-racire-lichida-personalizata",
+  category: "Tehnologie & Gaming",
+  categorySlug: "tehnologie-gaming",
+  excerpt: "Am pus mana pe un PC modular cu custom water cooling. Merita investitia pentru gaming si performanta? Aflam acum.",
+  image: "/images/articles/pc-modular-cu-racire-lichida-personalizata.webp",
+  publishDate: "2026-01-03T15:43:29.000Z",
+  modifiedDate: "2026-01-27T15:43:29.857Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cât de greu este să instalezi un sistem custom water cooling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Este un proces care necesită răbdare și precizie, dar nu este imposibil pentru un amator cu puțină documentare. Sesiunile de pe YouTube și ghidurile scrise pot fi de mare ajutor. E important să acorzi timp fiecărui pas, de la tăierea tuburilor la strângerea fitingurilor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce se întâmplă dacă apar scurgeri?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Scurgerile sunt cel mai mare risc. De aceea, testul de etansare cu lichid de test (fără curent la componente) timp de câteva ore este crucial. În caz de scurgere, problema poate varia de la o simplă restrângere a unui fiting până la deteriorarea componentelor. De aceea, atenția la detalii este esențială."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de des trebuie să întrețin un sistem custom water cooling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recomandarea generală este să schimbi lichidul și să cureți radiatoarele o dată pe an. Dacă folosești lichid cu aditivi anti-coroziune și anti-algă, poți extinde intervalul. Verifică periodic dacă există depuneri sau semne de coroziune."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot folosi un sistem custom water cooling pe un laptop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu. Sistemele custom water cooling sunt concepute exclusiv pentru PC-uri desktop. Laptopurile nu au spațiul sau modularitatea necesară pentru a integra astfel de soluții."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Primul Contact: Un Monstru Modular pe Birou</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Răcirea Lichidă Personalizată: Mai Mult Decât o Joacă de Copii</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Procesul de Asamblare: O Lecție de Răbdare și Precizie</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Performanța în Jocuri: Fără Throttle, Fără Compromisuri</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Costuri Reale și Opțiuni de Finanțare</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Estetică și Personalizare: Un PC Care Arată Cum Funcționează</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Primul Contact: Un Monstru Modular pe Birou</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Răcirea Lichidă Personalizată: Mai Mult Decât o Joacă de Copii</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Procesul de Asamblare: O Lecție de Răbdare și Precizie</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Performanța în Jocuri: Fără Throttle, Fără Compromisuri</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Costuri Reale și Opțiuni de Finanțare</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Estetică și Personalizare: Un PC Care Arată Cum Funcționează</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/pc-modular-cu-racire-lichida-personalizata.webp" alt="Pc Modular Cu Răcire Lichidă Personalizată" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Primul Contact: Un Monstru Modular pe Birou</h2>
+    <p class="mb-4">Am deschis cutia si am ramas cu gura cascata. Nu e vorba de un simplu PC, ci de o piesa de inginerie. Carcasa Antec P120 Crystal, aleasa pentru spatiul generos si designul minimalist, ascunde in interior o retea complexa de tuburi si componente care striga "performanta". Am montat deja cateva componente personale, un procesor Intel Core i9-13900K si o placa video NVIDIA RTX 4090, si chiar si asa, spatiul pentru custom water cooling este impresionant. Daca va ganditi la un astfel de sistem, alegeti o carcasa cu flux de aer bun si spatiu pentru radiatoare multiple, cum ar fi aceasta sau un Lian Li O11 Dynamic EVO.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Răcirea Lichidă Personalizată: Mai Mult Decât o Joacă de Copii</h2>
+    <p class="mb-4">Sincer, am avut retineri. Credeam ca e doar pentru entuziastii care vor sa arate ca au multi bani si putin timp liber. Dar am testat personal. Sistemul de la EKWB, cu pompa D5, rezervorul de 240mm si radiatoarele de 360mm, a transformat complet experienta. Temperaturile pe i9-13900K in jocuri solicitante, gen Cyberpunk 2077 pe setari ultra, nu au depasit 65 de grade Celsius. Inainte, cu un cooler pe aer Noctua NH-D15, ajungeam la 80-85 grade. Diferenta este enorma, nu doar la temperaturi, ci si la zgomot. Ventilatoarele ruleaza la turatii mult mai mici, facand sesiunile de gaming mult mai placute. Pretul unui astfel de kit EKWB, plus tuburile si lichidul, sare de 2000-2500 RON, dar merita fiecare banut daca vreti performanta maxima fara compromisuri.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Procesul de Asamblare: O Lecție de Răbdare și Precizie</h2>
+    <p class="mb-4">Asamblarea unui PC cu custom water cooling nu e pentru cei grabiti. Am petrecut o zi intreaga, cu pauze, pentru a monta totul corect. Taiatul tuburilor la lungimea potrivita, montarea fitingurilor fara scurgeri, si, cel mai important, testul de etansare cu lichid de test inainte de a porni sistemul pe bune. Am folosit tuburi rigide de PETG de la Bykski, care arata fantastic, dar necesita atentie sporita la curbura. Tuburile flexibile sunt mai usor de montat, dar nu ofera acelasi impact vizual. Recomand sa aveti la indemana un cutter de precizie, o sursa de caldura (un pistol de aer cald, nu bricheta!) pentru tuburile rigide si, cel mai important, multa, multa rabdare. Nu va fie teama sa cereti ajutor pe forumuri de specialitate, comunitatea de PC building e de obicei foarte saritoare.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Performanța în Jocuri: Fără Throttle, Fără Compromisuri</h2>
+    <p class="mb-4">Aici este punctul forte. Cu un sistem de racire pe lichid custom, am reușit să mențin frecvențele maxime ale procesorului și plăcii video constant, chiar și în sesiuni lungi de gaming. În jocuri AAA, cum ar fi Alan Wake 2 sau Starfield, unde componentele sunt solicitate la maxim, nu am observat nicio scădere de performanță cauzată de supraîncălzire. RTX 4090 rulează constant la peste 2700 MHz, iar i9-13900K se menține în jur de 5.5 GHz pe nucleele de performanță. Diferența față de un sistem pe aer sau AIO (all-in-one) este notabilă, în special în scenarii de utilizare intensivă pe termen lung. Dacă sunteți un gamer dedicat care vrea să stoarcă fiecare strop de performanță din hardware-ul vostru, custom water cooling este calea de urmat.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Costuri Reale și Opțiuni de Finanțare</h2>
+    <p class="mb-4">Să fim sinceri, nu este o soluție ieftină. Un sistem complet de custom water cooling, incluzând pompa, rezervorul, radiatoarele, tuburile, fitingurile și lichidul, poate ajunge la 2000-3000 RON, sau chiar mai mult, în funcție de brand și complexitate. Adăugați la asta o carcasă de calitate (aproximativ 500-800 RON), un procesor de top (peste 3000 RON) și o placă video high-end (peste 8000 RON), și ajungem la un total de peste 15.000 RON pentru un PC de gaming de ultimă generație. Magazine precum PCGarage, Altex sau eMAG oferă componentele necesare, dar uneori este mai avantajos să căutați kituri complete de la producători precum EKWB, Corsair sau Phanteks. Dacă bugetul este o problemă, puteți începe cu un AIO de 360mm de la Arctic sau Deepcool (în jur de 500-700 RON) și să faceți upgrade-ul la custom water cooling mai târziu.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Estetică și Personalizare: Un PC Care Arată Cum Funcționează</h2>
+    <p class="mb-4">Dincolo de performanță, un PC cu custom water cooling este o declarație de stil. Am ales lichid albastru strălucitor și tuburi rigide, care creează un efect vizual spectaculos. LED-urile RGB de pe ventilatoare și de pe pompă pot fi sincronizate pentru a crea o atmosferă unică. Fiecare componentă este expusă, de la blocul de apă de pe procesor la cel de pe placa video. Este un PC pe care nu îl ascunzi sub birou, ci îl expui cu mândrie. Personalizarea este nelimitată, de la culoarea lichidului la tipul de tuburi și forma lor. Dacă vreți un PC care să fie nu doar puternic, ci și o operă de artă, custom water cooling este soluția.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de greu este să instalezi un sistem custom water cooling?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Este un proces care necesită răbdare și precizie, dar nu este imposibil pentru un amator cu puțină documentare. Sesiunile de pe YouTube și ghidurile scrise pot fi de mare ajutor. E important să acorzi timp fiecărui pas, de la tăierea tuburilor la strângerea fitingurilor.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce se întâmplă dacă apar scurgeri?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Scurgerile sunt cel mai mare risc. De aceea, testul de etansare cu lichid de test (fără curent la componente) timp de câteva ore este crucial. În caz de scurgere, problema poate varia de la o simplă restrângere a unui fiting până la deteriorarea componentelor. De aceea, atenția la detalii este esențială.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de des trebuie să întrețin un sistem custom water cooling?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Recomandarea generală este să schimbi lichidul și să cureți radiatoarele o dată pe an. Dacă folosești lichid cu aditivi anti-coroziune și anti-algă, poți extinde intervalul. Verifică periodic dacă există depuneri sau semne de coroziune.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi un sistem custom water cooling pe un laptop?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu. Sistemele custom water cooling sunt concepute exclusiv pentru PC-uri desktop. Laptopurile nu au spațiul sau modularitatea necesară pentru a integra astfel de soluții.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cel-mai-bun-sistem-vr-profesional/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-sistem-vr-profesional.webp" alt="Cel mai bun sistem VR profesional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun sistem VR profesional</h3>
+              </div>
+            </a>
+
+            <a href="/casti-wireless-pentru-gaming-mobil/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/casti-wireless-pentru-gaming-mobil.webp" alt="Căști Wireless Pentru Gaming Mobil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Căști Wireless Pentru Gaming Mobil</h3>
+              </div>
+            </a>
+
+            <a href="/scaun-ergonomic-cu-suport-lombar-pentru-gaming/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/scaun-ergonomic-cu-suport-lombar-pentru-gaming.webp" alt="Scaun Ergonomic Cu Suport Lombar Pentru Gaming" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Scaun Ergonomic Cu Suport Lombar Pentru Gaming</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,333 @@
+---
+export const frontmatter = {
+  title: "Cel mai bun televizor pentru gaming console",
+  slug: "cel-mai-bun-televizor-pentru-gaming-console",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Suntem cu toții de acord că jocurile video au evoluat enorm. Nu mai e suficient să ai o consolă puternică, precum un PlayStation 5 sau un Xbox Series X. Pent...",
+  image: "/images/articles/cel-mai-bun-televizor-pentru-gaming-console.webp",
+  publishDate: "2025-12-13T15:47:01.000Z",
+  modifiedDate: "2026-01-21T15:47:01.857Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "E obligatoriu HDMI 2.1 pentru gaming modern?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, pentru a te bucura de toate funcționalitățile consolelor PlayStation 5 și Xbox Series X la potențial maxim, precum 4K la 120Hz, VRR și ALLM, este absolut necesar ca televizorul să aibă cel puțin un port HDMI 2.1."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Care e diferența între VRR și FreeSync/G-Sync?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VRR (Variable Refresh Rate) este standardul general care permite televizorului să își ajusteze rata de refresh la cea a consolei. FreeSync (de la AMD) și G-Sync (de la NVIDIA) sunt implementări specifice ale tehnologiei VRR, optimizate de anumiți producători. Un televizor compatibil cu FreeSync Premium sau G-Sync Compatible va oferi o experiență VRR excelentă."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "OLED-urile au risc de burn-in cu gamingul?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, OLED-urile au un risc teoretic de burn-in (retenție permanentă a imaginii) dacă elemente statice (cum ar fi HUD-uri sau logo-uri de joc) sunt afișate pentru perioade foarte lungi și repetate. Cu toate acestea, televizoarele OLED moderne includ numeroase tehnologii de prevenție (pixel shift, screen refresh, logo dimming), iar pentru utilizare normală, riscul este foarte redus. O utilizare variată ajută la prevenirea acestui fenomen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce înseamnă ALLM și de ce e important?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ALLM (Auto Low Latency Mode) este o funcție HDMI 2.1 care permite televizorului să detecteze automat când o consolă este pornită și să comute într-un mod de latență redusă (Game Mode). Este important pentru că elimină necesitatea de a schimba manual setările televizorului, asigurând mereu cel mai mic input lag posibil pentru gaming."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de mare ar trebui să fie televizorul pentru gaming?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dimensiunea ideală depinde de preferințele personale și de distanța de vizionare. Pentru un televizor 4K, o recomandare generală este să stai la o distanță de aproximativ 1.5 până la 2.5 ori înălțimea ecranului. Un ecran mai mare (de la 55 la 77 de inchi sau chiar mai mult) poate amplifica imersiunea, dar asigură-te că ai spațiul necesar și că rezoluția 4K este suficient de clară la distanța respectivă."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <!-- Hero -->
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <!-- Sidebar - Cuprins -->
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <!-- Mobile TOC - Collapsible -->
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De Ce Contează Televizorul Tău Pentru Experiența de Gaming?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Rata de Refresh și Input Lag: Pilonii Performanței</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Conectivitate HDMI 2.1: Absolut Esențială</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tipul Panoului și Calitatea Imaginii: OLED vs. QLED vs. Mini-LED</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">HDR și Experiența Vizuală Superioară</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Funcții Suplimentare Optimizate Pentru Gaming</a>
+                <a href="#sectiune-7" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandările Noastre de Top Pentru Gaming</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+
+            <!-- Desktop TOC - Collapsible -->
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De Ce Contează Televizorul Tău Pentru Experiența de Gaming?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Rata de Refresh și Input Lag: Pilonii Performanței</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Conectivitate HDMI 2.1: Absolut Esențială</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tipul Panoului și Calitatea Imaginii: OLED vs. QLED vs. Mini-LED</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">HDR și Experiența Vizuală Superioară</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Funcții Suplimentare Optimizate Pentru Gaming</a>
+                <a href="#sectiune-7" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandările Noastre de Top Pentru Gaming</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/cel-mai-bun-televizor-pentru-gaming-console.webp" alt="Alegerea Perfectă: Cel Mai Bun Televizor Pentru Consolele Tale de Gaming" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">De Ce Contează Televizorul Tău Pentru Experiența de Gaming?</h2>
+    <p class="mb-4">Suntem cu toții de acord că jocurile video au evoluat enorm. Nu mai e suficient să ai o consolă puternică, precum un PlayStation 5 sau un Xbox Series X. Pentru a te bucura cu adevărat de grafica uimitoare, de fluiditatea acțiunii și de reacțiile instantanee pe care le promit titlurile AAA de astăzi, ai nevoie de un partener pe măsură: televizorul potrivit.</p>
+    <p class="mb-4">Un televizor optimizat pentru gaming nu este un simplu ecran. Este poarta ta către universuri virtuale, iar diferența între o experiență mediocră și una excepțională stă în detalii tehnice pe care mulți le trec cu vederea. De la latența de intrare minusculă la culorile vibrante și contrastul infinit, fiecare specificație contează enorm când pui mâna pe controller. Haide să vedem exact ce anume transformă un televizor bun într-unul fenomenal pentru sesiunile tale de gaming.</p>
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Rata de Refresh și Input Lag: Pilonii Performanței</h2>
+    <p class="mb-4">Când vorbim despre gaming, două specificații domină discuția despre fluiditate și responsivitate: rata de refresh și latența de intrare (input lag). Acestea sunt coloana vertebrală a oricărui televizor dedicat gamerilor, influențând direct cât de bine și cât de repede reacționează ecranul la comenzile tale.</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Frecvența de Împrospătare (Hz)</h3>
+    <p class="mb-4">Un televizor de gaming modern trebuie să suporte o rată de refresh de 120Hz. Atât PlayStation 5, cât și Xbox Series X pot rula jocuri la 120 de cadre pe secundă (FPS), dar numai dacă televizorul tău poate afișa aceste cadre. Un ecran de 120Hz face o diferență vizibilă în fluiditatea mișcării, esențială în shootere rapide sau jocuri de curse. Caută televizoare cu panouri native de 120Hz, nu cele care folosesc tehnici de interpolare pentru a simula o rată mai mare.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Latența de Intrare (Input Lag)</h3>
+    <p class="mb-4">Input lag-ul este timpul necesar pentru ca acțiunea de pe controller să se materializeze pe ecran. Un input lag redus înseamnă o reacție instantanee. Pentru gaming competitiv, ideal este un input lag sub 10ms, iar televizoarele de top pot ajunge chiar sub 5ms la 120Hz. Multe televizoare includ un mod 'Game Mode' (Mod Joc) care dezactivează procesările de imagine inutile pentru a minimiza această latență. Asigură-te că televizorul pe care îl alegi are un 'Game Mode' eficient și o latență de intrare cât mai mică.</p>
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Conectivitate HDMI 2.1: Absolut Esențială</h2>
+    <p class="mb-4">HDMI 2.1 nu este doar un număr mai mare; este un standard care deschide ușa către o nouă eră a gamingului pe console. Fără porturi HDMI 2.1, nu vei putea profita de potențialul maxim al consolelor de generație actuală. Acest standard aduce câteva funcționalități cruciale:</p>
+    <ul class="list-disc list-inside mb-4 space-y-2">
+      <li><strong>4K la 120Hz:</strong> Permite transmiterea semnalului video 4K cu o rată de refresh de 120Hz, ideal pentru jocurile moderne.</li>
+      <li><strong>VRR (Variable Refresh Rate):</strong> O funcție vitală care sincronizează rata de refresh a televizorului cu cea a consolei, eliminând efectul de 'screen tearing' și asigurând o imagine fluidă, chiar și atunci când framerate-ul jocului fluctuează. Mulți producători implementează FreeSync Premium sau G-Sync Compatible, care sunt variante ale VRR.</li>
+      <li><strong>ALLM (Auto Low Latency Mode):</strong> Televizorul detectează automat când o consolă este pornită și comută în 'Game Mode' pentru a minimiza input lag-ul, fără intervenția ta manuală.</li>
+      <li><strong>eARC (Enhanced Audio Return Channel):</strong> Permite transmiterea formatelor audio de înaltă calitate, precum Dolby Atmos sau DTS:X, către un soundbar sau un sistem home theater, folosind un singur cablu HDMI. Caută un televizor care oferă cel puțin două porturi HDMI 2.1 complete, pentru a conecta atât PS5, cât și Xbox Series X la performanță maximă.</li>
+    </ul>
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Tipul Panoului și Calitatea Imaginii: OLED vs. QLED vs. Mini-LED</h2>
+    <p class="mb-4">Calitatea imaginii este subiectivă, dar pentru gaming, anumite tehnologii de panou oferă avantaje clare. Alegerea între OLED, QLED și Mini-LED depinde de prioritățile tale, fie că e vorba de contrast, luminozitate sau rezistență la burn-in.</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">OLED: Perfecțiunea Contrastului</h3>
+    <p class="mb-4">Televizoarele OLED (Organic Light Emitting Diode) sunt renumite pentru negrul absolut și contrastul infinit. Fiecare pixel se aprinde și se stinge individual, rezultând o precizie a culorilor și o adâncime a imaginii inegalabilă. Modele precum LG C3 sau C4, ori Sony A95L (QD-OLED), sunt alegeri fantastice pentru gaming. Ele oferă timpi de răspuns aproape instantanei (sub 1ms), ceea ce elimină complet motion blur-ul. Un potențial dezavantaj este riscul de burn-in în cazul afișării prelungite a elementelor statice (HUD-uri de joc, logo-uri), deși producătorii au implementat numeroase tehnologii de prevenție.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">QLED/Mini-LED: Luminozitate și Culoare</h3>
+    <p class="mb-4">Televizoarele QLED (Quantum Dot LED) și Mini-LED folosesc o retroiluminare LED avansată, oferind o luminozitate mult superioară OLED-urilor. Acest lucru le face excelente pentru camere luminoase și pentru conținut HDR care necesită vârfuri de luminozitate intense. Tehnologia Mini-LED, prezentă la modele precum Samsung QN90C/QN90D Neo QLED sau TCL C845, aduce mii de zone de local dimming, rezultând un contrast semnificativ îmbunătățit și mai puține efecte de 'blooming' (halouri în jurul obiectelor luminoase pe fundal întunecat). Acestea sunt o alternativă excelentă pentru cei care își fac griji în privința burn-in-ului și își doresc o luminozitate excepțională.</p>
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">HDR și Experiența Vizuală Superioară</h2>
+    <p class="mb-4">HDR (High Dynamic Range) este o tehnologie care extinde gama de culori și contrast, oferind o imagine mult mai realistă și mai spectaculoasă. Jocurile moderne sunt din ce în ce mai optimizate pentru HDR, iar un televizor compatibil poate transforma radical experiența vizuală.</p>
+    <p class="mb-4">Caută televizoare care suportă multiple formate HDR, precum HDR10, HLG (Hybrid Log Gamma) și, ideal, Dolby Vision sau HDR10+. Dolby Vision este considerat un standard superior, deoarece folosește metadate dinamice, ajustând luminozitatea și contrastul scenă cu scenă sau chiar cadru cu cadru. Un televizor cu o luminozitate de vârf de peste 700-800 niți este considerat bun pentru HDR, iar modelele premium pot depăși 1500-2000 niți, oferind un impact vizual uimitor.</p>
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Funcții Suplimentare Optimizate Pentru Gaming</h2>
+    <p class="mb-4">Pe lângă specificațiile de bază, un televizor excelent pentru gaming vine cu o serie de funcții suplimentare care pot îmbunătăți considerabil sesiunile tale:</p>
+    <ul class="list-disc list-inside mb-4 space-y-2">
+      <li><strong>Game Bar/Dashboard:</strong> Multe televizoare moderne (Samsung, LG, Sony) oferă o interfață dedicată gamingului, unde poți verifica rapid rata de refresh, input lag-ul, activa VRR sau ajusta setările de imagine specifice jocului, fără a ieși din el.</li>
+      <li><strong>Sunet Integrat:</strong> Chiar dacă mulți gameri folosesc căști, un sistem audio decent integrat, cu suport pentru Dolby Atmos, poate contribui la imersiune. Unele televizoare Sony, cum ar fi X90L, au o integrare mai bună cu PlayStation 5, inclusiv funcții de calibrare automată a imaginii și sunetului specifică consolei.</li>
+      <li><strong>Design și Dimensiune:</strong> Alege o dimensiune care se potrivește spațiului tău și distanței de vizionare. Un televizor mai mare poate crește imersiunea, dar asigură-te că rezoluția 4K este vizibilă la distanța respectivă. De asemenea, un design cu margini subțiri va contribui la o experiență mai captivantă.</li>
+    </ul>
+    
+  </section>
+  <section id="sectiune-7" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Recomandările Noastre de Top Pentru Gaming</h2>
+    <p class="mb-4">Ținând cont de toate aspectele discutate, iată câteva modele de televizoare care excelează în gaming și sunt alegeri excelente pentru consolele de ultimă generație:</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">LG C-Series (C3, C4)</h3>
+    <p class="mb-4">Seria LG C este de ani buni etalonul pentru televizoare de gaming OLED. Oferă 4 porturi HDMI 2.1 complete, VRR (G-Sync Compatible și FreeSync Premium), ALLM, un input lag extrem de redus (sub 10ms la 4K@120Hz) și un timp de răspuns aproape instantaneu. Calitatea imaginii OLED, cu negru perfect și contrast infinit, este pur și simplu superbă pentru jocuri.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Samsung QN90C / QN90D Neo QLED</h3>
+    <p class="mb-4">Dacă preferi luminozitatea extremă și nu vrei să-ți faci griji legate de burn-in, seria QN90C sau QN90D (modelul mai nou) de la Samsung este o alegere fantastică. Aceste televizoare Mini-LED oferă o luminozitate de vârf impresionantă, culori vibrante, un filtru anti-reflexie excelent și, la fel ca LG, 4 porturi HDMI 2.1, VRR (FreeSync Premium Pro) și un input lag minim. Sunt ideale pentru camere luminoase sau pentru jocuri HDR care beneficiază de o luminozitate ridicată.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Sony A95L (QD-OLED) / X90L (Full Array LED)</h3>
+    <p class="mb-4">Sony A95L, un QD-OLED, combină negrul perfect al OLED-ului cu luminozitatea și culorile vibrante ale tehnologiei Quantum Dot, oferind o experiență vizuală de top. Are suport HDMI 2.1, VRR și ALLM. Pentru o opțiune mai accesibilă, Sony X90L este un Full Array LED excelent, cu o luminozitate solidă și o procesare a imaginii remarcabilă. Televizoarele Sony au adesea o integrare superioară cu PlayStation 5, cu funcții precum 'Auto HDR Tone Mapping' și 'Auto Genre Picture Mode'.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Alte Opțiuni: TCL C845 / Hisense U8HQ</h3>
+    <p class="mb-4">Pentru un buget mai restrâns, dar cu performanțe remarcabile pentru preț, televizoare precum TCL C845 sau Hisense U8HQ (sau modelele mai noi din aceleași serii) oferă tehnologie Mini-LED, luminozitate bună, HDMI 2.1, VRR și 120Hz, fiind alternative excelente care nu compromit prea mult din experiența de gaming.</p>
+  </section>
+
+          <!-- FAQ Section -->
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  E obligatoriu HDMI 2.1 pentru gaming modern?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, pentru a te bucura de toate funcționalitățile consolelor PlayStation 5 și Xbox Series X la potențial maxim, precum 4K la 120Hz, VRR și ALLM, este absolut necesar ca televizorul să aibă cel puțin un port HDMI 2.1.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Care e diferența între VRR și FreeSync/G-Sync?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  VRR (Variable Refresh Rate) este standardul general care permite televizorului să își ajusteze rata de refresh la cea a consolei. FreeSync (de la AMD) și G-Sync (de la NVIDIA) sunt implementări specifice ale tehnologiei VRR, optimizate de anumiți producători. Un televizor compatibil cu FreeSync Premium sau G-Sync Compatible va oferi o experiență VRR excelentă.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  OLED-urile au risc de burn-in cu gamingul?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, OLED-urile au un risc teoretic de burn-in (retenție permanentă a imaginii) dacă elemente statice (cum ar fi HUD-uri sau logo-uri de joc) sunt afișate pentru perioade foarte lungi și repetate. Cu toate acestea, televizoarele OLED moderne includ numeroase tehnologii de prevenție (pixel shift, screen refresh, logo dimming), iar pentru utilizare normală, riscul este foarte redus. O utilizare variată ajută la prevenirea acestui fenomen.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce înseamnă ALLM și de ce e important?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  ALLM (Auto Low Latency Mode) este o funcție HDMI 2.1 care permite televizorului să detecteze automat când o consolă este pornită și să comute într-un mod de latență redusă (Game Mode). Este important pentru că elimină necesitatea de a schimba manual setările televizorului, asigurând mereu cel mai mic input lag posibil pentru gaming.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de mare ar trebui să fie televizorul pentru gaming?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Dimensiunea ideală depinde de preferințele personale și de distanța de vizionare. Pentru un televizor 4K, o recomandare generală este să stai la o distanță de aproximativ 1.5 până la 2.5 ori înălțimea ecranului. Un ecran mai mare (de la 55 la 77 de inchi sau chiar mai mult) poate amplifica imersiunea, dar asigură-te că ai spațiul necesar și că rezoluția 4K este suficient de clară la distanța respectivă.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/home-cinema-cu-subwoofer-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/home-cinema-cu-subwoofer-wireless.webp" alt="Home Cinema Cu Subwoofer Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Home Cinema Cu Subwoofer Wireless</h3>
+              </div>
+            </a>
+
+            <a href="/receiver-audio-cu-bluetooth-si-wi-fi/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/receiver-audio-cu-bluetooth-si-wi-fi.webp" alt="Receiver Audio Cu Bluetooth Și Wi-fi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Receiver Audio Cu Bluetooth Și Wi-fi</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-sistem-home-cinema-7-1/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-sistem-home-cinema-7-1.webp" alt="Cel mai bun sistem home cinema 7.1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun sistem home cinema 7.1</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

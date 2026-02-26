@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { category: 'tehnologie-gaming' }, props: { name: 'Tehnologie & Gaming', description: 'Echipamente de gaming și tehnologie de ultimă generație pentru pasionați și profesioniști.' }},
+    { params: { category: 'electrocasnice' }, props: { name: 'Electrocasnice', description: 'Electrocasnice premium pentru o casă modernă și eficientă.' }},
+    { params: { category: 'tv-audio' }, props: { name: 'TV & Audio', description: 'Televizoare și sisteme audio pentru experiențe cinematice de excepție.' }},
+    { params: { category: 'foto-video' }, props: { name: 'Foto & Video', description: 'Echipamente profesionale pentru fotografie și videografie.' }},
+    { params: { category: 'smart-home' }, props: { name: 'Smart Home', description: 'Dispozitive inteligente pentru o casă conectată și automatizată.' }}
+  ];
+}
+
+const { category } = Astro.params;
+const { name, description } = Astro.props;
+
+// Pagination settings
+const ARTICLES_PER_PAGE = 30;
+
+// Get articles for this category
+const articleModules = import.meta.glob('./*.astro', { eager: true });
+const categoryArticles = Object.values(articleModules)
+  .filter((m: any) => m.frontmatter?.categorySlug === category)
+  .sort((a: any, b: any) =>
+    new Date(b.frontmatter.publishDate).getTime() - new Date(a.frontmatter.publishDate).getTime()
+  );
+
+const totalArticles = categoryArticles.length;
+const totalPages = Math.ceil(totalArticles / ARTICLES_PER_PAGE);
+const needsPagination = totalArticles > ARTICLES_PER_PAGE;
+---
+
+<Layout
+  title={name}
+  description={description}
+  canonical={`/${category}/`}
+>
+  <section class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+    <div class="container-main">
+      <nav class="text-sm text-slate-400 mb-4">
+        <a href="/" class="hover:text-white transition-colors">Acasă</a>
+        <span class="mx-2">/</span>
+        <span class="text-slate-200">{name}</span>
+      </nav>
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-3">{name}</h1>
+      <p class="text-slate-300 text-lg max-w-2xl">{description}</p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-slate-50">
+    <div class="container-main">
+      {categoryArticles.length > 0 ? (
+        <>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles-grid">
+            {categoryArticles.map((article: any, index: number) => (
+              <div class="article-item" data-index={index}>
+                <ArticleCard
+                  title={article.frontmatter.title}
+                  slug={article.frontmatter.slug}
+                  category={article.frontmatter.category}
+                  categorySlug={article.frontmatter.categorySlug}
+                  excerpt={article.frontmatter.excerpt}
+                  image={article.frontmatter.image}
+                />
+              </div>
+            ))}
+          </div>
+
+          {needsPagination && (
+            <nav class="mt-10 flex justify-center items-center gap-2" id="pagination" aria-label="Paginare">
+              <button
+                id="prev-page"
+                class="px-4 py-2 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                disabled
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <span id="page-info" class="px-4 py-2 text-slate-700 font-medium">
+                Pagina 1 din {totalPages}
+              </span>
+              <button
+                id="next-page"
+                class="px-4 py-2 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </nav>
+          )}
+
+          <script define:vars={{ ARTICLES_PER_PAGE, totalPages, needsPagination }}>
+            if (needsPagination) {
+              let currentPage = 1;
+              const articles = document.querySelectorAll('.article-item');
+              const prevBtn = document.getElementById('prev-page');
+              const nextBtn = document.getElementById('next-page');
+              const pageInfo = document.getElementById('page-info');
+
+              function showPage(page) {
+                const start = (page - 1) * ARTICLES_PER_PAGE;
+                const end = start + ARTICLES_PER_PAGE;
+
+                articles.forEach((article, index) => {
+                  if (index >= start && index < end) {
+                    article.style.display = 'block';
+                  } else {
+                    article.style.display = 'none';
+                  }
+                });
+
+                currentPage = page;
+                pageInfo.textContent = `Pagina ${page} din ${totalPages}`;
+                prevBtn.disabled = page === 1;
+                nextBtn.disabled = page === totalPages;
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+
+              prevBtn.addEventListener('click', () => {
+                if (currentPage > 1) showPage(currentPage - 1);
+              });
+
+              nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages) showPage(currentPage + 1);
+              });
+
+              // Initialize first page
+              showPage(1);
+            }
+          </script>
+        </>
+      ) : (
+        <div class="text-center py-12">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-slate-200 flex items-center justify-center">
+            <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-slate-900 mb-2">Articole în pregătire</h2>
+          <p class="text-slate-600">Lucrăm la conținut nou pentru această categorie.</p>
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>

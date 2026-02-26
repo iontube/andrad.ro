@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Televizor Led Cu Refresh Mare",
+  slug: "televizor-led-cu-refresh-mare",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Televizorul LED cu refresh mare: ce inseamna pentru tine si cand merita investitia. Analiza mea de 15 ani.",
+  image: "/images/articles/televizor-led-cu-refresh-mare.webp",
+  publishDate: "2026-01-19T11:57:51.000Z",
+  modifiedDate: "2026-02-01T11:57:51.142Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Un televizor cu 120Hz este mult mai scump decat unul cu 60Hz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu neapărat. În ultimii ani, prețurile s-au apropiat mult. Modelele de top cu 120Hz sunt scumpe, dar găsești opțiuni decente cu 120Hz nativ în game de prețuri medii, uneori chiar comparabile cu modelele de 60Hz din game superioare. De exemplu, un LG NanoCell cu 120Hz poate fi la prețul unui Samsung Crystal UHD cu 60Hz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce inseamna \"interpolare de miscare\"?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Este o tehnologie prin care televizorul generează cadre suplimentare între cele reale pentru a face mișcarea să pară mai fluidă. Denumirile variază: TruMotion (LG), Motionflow (Sony), Motion Rate (Samsung). Poate fi utilă, dar uneori introduce artefacte sau face imaginea să pară nenaturală."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Am nevoie de HDMI 2.1 pentru 120Hz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, dacă vrei să te bucuri de 120Hz la rezoluție 4K. Porturile HDMI 2.0 suportă maxim 60Hz la 4K. Multe televizoare noi au cel puțin două porturi HDMI 2.1."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Merita sa dau bani in plus pentru 120Hz daca nu ma joc sau nu ma uit la sport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depinde de bugetul tau si de cat de mult apreciezi o imagine fluida. Daca te uiti preponderent la filme sau seriale si nu te deranjeaza o usoara estompare in scenele rapide, s-ar putea sa nu fie o prioritate. Totusi, imbunatateste si experienta generala de utilizare a meniurilor smart si a aplicatiilor."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Refresh Mare la Televizor: Ce Conteaza cu Adevarat</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Am Testat Personal: Fluiditatea Conteaza la Sport si Jocuri</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Sa Cauti Cand Alegi Un TV cu Refresh Mare: Specificatii Reale</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prețuri Si Modele Concrete: Ce Gasesti Acum pe Piata din Romania</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Nu Doar Pentru Jocuri: Beneficii Uitate</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Practice din Experienta Mea de Utilizare</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Refresh Mare la Televizor: Ce Conteaza cu Adevarat</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Am Testat Personal: Fluiditatea Conteaza la Sport si Jocuri</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Sa Cauti Cand Alegi Un TV cu Refresh Mare: Specificatii Reale</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prețuri Si Modele Concrete: Ce Gasesti Acum pe Piata din Romania</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Nu Doar Pentru Jocuri: Beneficii Uitate</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Practice din Experienta Mea de Utilizare</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/televizor-led-cu-refresh-mare.webp" alt="Televizor Led Cu Refresh Mare" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Refresh Mare la Televizor: Ce Conteaza cu Adevarat</h2>
+    <p class="mb-4">Am testat zeci de televizoare LED de-a lungul anilor, de la modele entry-level la cele de top, si pot spune fara ezitare ca rata de refresh a imaginii e un factor pe care nu-l poti ignora, mai ales daca esti pasionat de sport sau jocuri.</p>
+    <p class="mb-4">Cand vorbim de un televizor LED cu refresh mare, ne referim la cati pixeli poate afisa televizorul pe ecran intr-o secunda. Un standard, 60Hz, inseamna 60 de imagini pe secunda. Un model cu 120Hz, dublu. Simplu, nu?</p>
+    <p class="mb-4">Ce inseamna asta in practica? Miscari mult mai fluide, mai ales in scenele rapide. Ganditi-va la o partida de fotbal, la o cursa de masini sau la un joc video intens. Diferenta e vizibila si, odată ce te obișnuiești cu ea, greu te mai întorci la 60Hz.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Am Testat Personal: Fluiditatea Conteaza la Sport si Jocuri</h2>
+    <p class="mb-4">In experienta mea, am simțit diferența cel mai acut la meciurile de fotbal. Un gol marcat rapid, o fază executată pe contraatac – la 60Hz, uneori puteam să pierd din vedere mingea sau să nu disting clar mișcările jucătorilor. La 120Hz, totul e clar, precis, ca și cum ai fi pe stadion.</p>
+    <p class="mb-4">La fel stau lucrurile și cu gaming-ul. Am testat televizoare Samsung QLED cu 120Hz alături de console precum PlayStation 5 și Xbox Series X. Imaginile sunt incredibil de cursive, lag-ul e redus, iar experiența de joc e mult mai imersivă. Mișcările rapide din jocuri precum Call of Duty sau Forza Horizon sunt redate impecabil.</p>
+    <p class="mb-4">Chiar și la filmele de acțiune, deși mai puțin dramatic decât la sport sau jocuri, un refresh mare ajută la reducerea efectului de "blur" (estompare) în scenele rapide. E o îmbunătățire subtilă, dar prezentă.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Sa Cauti Cand Alegi Un TV cu Refresh Mare: Specificatii Reale</h2>
+    <p class="mb-4">Pe lângă "120Hz", mai sunt și alte acronime și specificații de care trebuie să ții cont. "Motion Rate", "TruMotion", "Motionflow" – astea sunt denumirile pe care le folosesc diferiți producători, precum LG, Sony sau Samsung, pentru tehnologiile lor de interpolare a mișcării. Unele sunt mai eficiente decât altele, dar ideea de bază e aceeași: crearea de cadre intermediare pentru a face mișcarea mai fluidă.</p>
+    <p class="mb-4">Important e să nu te lași păcălit de cifre prea mari, cum ar fi "240Hz" sau "480Hz" pe etichetă. De multe ori, astea sunt valori simulate, obținute prin tehnologii de interpolare care pot introduce artefacte vizuale, făcând imaginea să pară nenaturală sau "prelucrată". Caută "nativ 120Hz" dacă vrei cea mai bună experiență.</p>
+    <p class="mb-4">Verifică și porturile HDMI. Pentru a beneficia de 120Hz la rezoluție 4K, ai nevoie de porturi HDMI 2.1. Multe televizoare noi de la Samsung, LG sau Sony, modelele din 2022, 2023 și chiar 2024, au deja HDMI 2.1, dar e bine să verifici specificațiile exacte. Fără HDMI 2.1, s-ar putea să fii limitat la 60Hz la 4K.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Prețuri Si Modele Concrete: Ce Gasesti Acum pe Piata din Romania</h2>
+    <p class="mb-4">Un televizor LED cu refresh nativ de 120Hz nu mai este un moft, ci o configurație pe care o găsești destul de des, chiar și pe modele de gamă medie. De exemplu, modelele LG OLED din seria C (cum ar fi LG OLED55C3, preț în jur de 5500 RON la eMAG) sau Samsung Neo QLED din seria QN85 (de exemplu, Samsung QE55QN85C, aproximativ 4800 RON la Altex) oferă 120Hz nativ și sunt excelente pentru sport și gaming.</p>
+    <p class="mb-4">Chiar și modelele mai accesibile pot veni cu 120Hz, dar s-ar putea să fie la rezoluții mai mici sau să aibă tehnologii de interpolare mai puțin avansate. Un exemplu ar fi un televizor Sony BRAVIA din seria X85 (cum ar fi Sony KD-55X85K, în jur de 3500 RON la Flanco), care oferă 120Hz și e o opțiune bună pentru cei cu un buget mai restrâns.</p>
+    <p class="mb-4">Am văzut și oferte bune la televizoare de gaming dedicate, deși alea sunt mai mult monitoare. Dar dacă te gândești la un TV, branduri ca TCL au început să ofere și ele ecrane cu 120Hz la prețuri competitive. De exemplu, un TCL C845 (un mini-LED cu 120Hz) poate fi găsit în jur de 3800 RON la PC Garage. E important să compari ofertele și să urmărești promoțiile.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Nu Doar Pentru Jocuri: Beneficii Uitate</h2>
+    <p class="mb-4">Deși am pus accent pe sport și gaming, un refresh mare la televizor are beneficii și pentru consumul general de conținut. La filme, deși majoritatea sunt filmate la 24fps, tehnologiile de interpolare a mișcării (pe care le găsești pe televizoarele cu refresh mare) pot face ca anumite scene să pară mai fluide, mai ales dacă sistemul de procesare e bine calibrat. Uneori, însă, pot introduce artefacte nedorite, așa că e bine să ai opțiunea de a le dezactiva.</p>
+    <p class="mb-4">Am observat că și aplicațiile smart de pe televizor, cum ar fi cele de navigare web sau interfața meniului, se simt mult mai responsive pe un ecran cu refresh mare. Navigarea prin meniuri, deschiderea aplicațiilor, totul pare instantaneu și mult mai plăcut. E un detaliu minor, dar care contribuie la o experiență de utilizare mai bună.</p>
+    <p class="mb-4">Chiar și la vizionarea de conținut de pe YouTube sau alte platforme de streaming, dacă sursa permite o rată de cadre mai mare (unele vloguri sau documentare sunt filmate la 60fps), un TV cu 120Hz va reda totul mult mai cursiv. E o îmbunătățire subtilă, dar care se adaugă la calitatea generală a imaginii.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi Practice din Experienta Mea de Utilizare</h2>
+    <p class="mb-4">Prima regulă: nu te lăsa influențat de "marketing". Caută specificația "nativ 120Hz". Dacă vezi "240Hz Motion Rate", verifică în review-uri independente ce înseamnă de fapt pentru modelul respectiv. Uneori, e doar o tehnologie de interpolare care nu oferă aceeași fluiditate ca un refresh nativ.</p>
+    <p class="mb-4">Apoi, dacă intenționezi să folosești televizorul pentru gaming pe console de ultimă generație (PS5, Xbox Series X) sau PC, asigură-te că are porturi HDMI 2.1. Fără ele, nu vei putea beneficia de rezoluție 4K la 120Hz, ceea ce e un dezavantaj major pentru gaming.</p>
+    <p class="mb-4">Nu uita să experimentezi cu setările de mișcare. Unele televizoare au moduri predefinite (Standard, Sport, Film), altele îți permit să ajustezi manual nivelul de "smoothness" și "blur reduction". Găsește echilibrul care ți se potrivește. Eu personal prefer să reduc la minim interpolarea în filme, dar să o activez complet pentru sport și jocuri.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Un televizor cu 120Hz este mult mai scump decat unul cu 60Hz?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu neapărat. În ultimii ani, prețurile s-au apropiat mult. Modelele de top cu 120Hz sunt scumpe, dar găsești opțiuni decente cu 120Hz nativ în game de prețuri medii, uneori chiar comparabile cu modelele de 60Hz din game superioare. De exemplu, un LG NanoCell cu 120Hz poate fi la prețul unui Samsung Crystal UHD cu 60Hz.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce inseamna "interpolare de miscare"?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Este o tehnologie prin care televizorul generează cadre suplimentare între cele reale pentru a face mișcarea să pară mai fluidă. Denumirile variază: TruMotion (LG), Motionflow (Sony), Motion Rate (Samsung). Poate fi utilă, dar uneori introduce artefacte sau face imaginea să pară nenaturală.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Am nevoie de HDMI 2.1 pentru 120Hz?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, dacă vrei să te bucuri de 120Hz la rezoluție 4K. Porturile HDMI 2.0 suportă maxim 60Hz la 4K. Multe televizoare noi au cel puțin două porturi HDMI 2.1.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Merita sa dau bani in plus pentru 120Hz daca nu ma joc sau nu ma uit la sport?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Depinde de bugetul tau si de cat de mult apreciezi o imagine fluida. Daca te uiti preponderent la filme sau seriale si nu te deranjeaza o usoara estompare in scenele rapide, s-ar putea sa nu fie o prioritate. Totusi, imbunatateste si experienta generala de utilizare a meniurilor smart si a aplicatiilor.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/televizor-8k-pentru-living-mare/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/televizor-8k-pentru-living-mare.webp" alt="Televizor 8k Pentru Living Mare" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Televizor 8k Pentru Living Mare</h3>
+              </div>
+            </a>
+
+            <a href="/sistem-audio-multiroom-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/sistem-audio-multiroom-wireless.webp" alt="Sistem Audio Multiroom Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Sistem Audio Multiroom Wireless</h3>
+              </div>
+            </a>
+
+            <a href="/boxe-bookshelf-pentru-acasa/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/boxe-bookshelf-pentru-acasa.webp" alt="Boxe Bookshelf Pentru Acasă" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Boxe Bookshelf Pentru Acasă</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

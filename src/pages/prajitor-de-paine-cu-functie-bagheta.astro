@@ -1,0 +1,298 @@
+---
+export const frontmatter = {
+  title: "Prăjitor De Pâine Cu Funcție Baghetă",
+  slug: "prajitor-de-paine-cu-functie-bagheta",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Am pus mana pe un prăjitor de pâine cu funcție baghetă. Îți spun sincer dacă merită upgrade-ul pentru diminețile tale la micul dejun.",
+  image: "/images/articles/prajitor-de-paine-cu-functie-bagheta.webp",
+  publishDate: "2026-01-07T19:25:35.000Z",
+  modifiedDate: "2026-01-29T19:25:35.571Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Poate un prăjitor clasic să prăjească o baghetă la fel de bine ca unul cu funcție dedicată?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, dar necesită mai multă atenție și ajustarea fină a setărilor. Funcția dedicată baghetei optimizează distribuția căldurii pentru a evita arderea marginilor și a asigura un interior moale. Un prăjitor clasic de calitate, precum un Philips sau Tefal, poate oferi rezultate bune, dar nu la fel de consistente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de mult spațiu ocupă un prăjitor cu funcție baghetă?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De obicei, ocupă la fel de mult spațiu ca un prăjitor clasic, dar fantele pot fi mai lungi sau mai late, ceea ce le poate face să pară puțin mai voluminoase. Verifică dimensiunile produsului înainte de a cumpăra, mai ales dacă spațiul pe blatul din bucătărie este limitat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Este funcția baghetă utilă pentru alte tipuri de pâine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Funcția baghetă este optimizată pentru forma și textura specifică a baghetei. Totuși, fantele mai largi sau alungite pot fi utile și pentru prăjirea unor felii groase de pâine de casă, chifle sau chiar croissanturi. Nu va avea același efect ca pe baghetă, dar oferă versatilitate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Care este diferența de preț între un prăjitor clasic și unul cu funcție baghetă?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "În general, prăjitoarele cu funcție baghetă sunt cu 50-150 RON mai scumpe decât modelele clasice echivalente ca brand și calitate. Prețurile încep de la aproximativ 250 RON pentru modelele cu funcție baghetă și pot ajunge la peste 400 RON pentru cele premium."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prăjitorul de pâine cu funcție baghetă: O iluzie sau o necesitate?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum funcționează, de fapt, funcția baghetă?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce modele am testat și la ce prețuri?</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Testul practic: Baghete, felii și rezultate</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantaje și dezavantaje: Să cântărim opțiunile</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cui îi recomand aceste prăjitoare?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prăjitorul de pâine cu funcție baghetă: O iluzie sau o necesitate?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum funcționează, de fapt, funcția baghetă?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce modele am testat și la ce prețuri?</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Testul practic: Baghete, felii și rezultate</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantaje și dezavantaje: Să cântărim opțiunile</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cui îi recomand aceste prăjitoare?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/prajitor-de-paine-cu-functie-bagheta.webp" alt="Prăjitor De Pâine Cu Funcție Baghetă" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Prăjitorul de pâine cu funcție baghetă: O iluzie sau o necesitate?</h2>
+    <p class="mb-4">Sincer, când am auzit prima dată de prăjitorul de pâine cu funcție baghetă, am ridicat din sprâncene. Ce rost are să separi o funcție pentru un singur tip de pâine, când majoritatea prăjitoarelor fac treaba bună cu orice fel de pâine? Asta m-a pus pe gânduri și am zis să iau la mână câteva modele de pe piața din România pentru a vedea dacă e un trend de marketing sau o inovație reală. Am testat prăjitoare de la branduri cunoscute precum Philips, Tefal și chiar și un model mai fancy de la Severin, ca să am o imagine completă.</p>
+    <p class="mb-4">În experiența mea de jurnalist tech care a trecut prin nenumărate aparate de bucătărie, de la blendere cu șase lame la frigidere smart care-ți comandă singure laptele, am învățat că uneori inovațiile par inutile la prima vedere, dar pot schimba complet modul în care folosești un aparat. Așa că, am zis să-i dau o șansă și să văd ce poate cu adevărat o funcție dedicată pentru baghetă.</p>
+    <p class="mb-4">Am pus pe masa de testare o baghetă proaspătă, una de ieri, și chiar și o baghetă congelată, ca să fiu sigur că acopăr toate scenariile posibile. Vreau să văd dacă acea fantomatică funcție de baghetă chiar face diferența față de o setare obișnuită pe un prăjitor clasic. Să vedem dacă merită investite bani în plus pentru acest feature specific.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum funcționează, de fapt, funcția baghetă?</h2>
+    <p class="mb-4">Simplu spus, funcția baghetă se concentrează pe prăjirea uniformă a fețelor exterioare ale baghetei, lăsând interiorul moale și pufos. Majoritatea prăjitoarelor clasice au elemente de încălzire pe ambele părți, dar o baghetă, prin forma ei, tinde să se prăjească inegal dacă o introduci pe jumătate. Prăjitoarele cu funcție baghetă au de obicei o fantă mai largă sau un mecanism care permite introducerea baghetei pe lungime, iar elementele de încălzire sunt dispuse astfel încât să acopere suprafața mai mare a acesteia, fără a arde marginile.</p>
+    <p class="mb-4">Am observat că la modelele testate, funcția baghetă implică adesea o distribuție a căldurii mai blândă pe exterior și o intensitate mai mare pe interior, în comparație cu setarea standard. Asta previne arderea rapidă a exteriorului, în timp ce miezul rămâne cald și ușor crocant. E ca și cum ai avea un cuptor mic dedicat doar pentru bagheta ta dimineața.</p>
+    <p class="mb-4">Un alt aspect pe care l-am remarcat este controlul mai fin al temperaturii. Unele modele îți permit să alegi gradul de prăjire specific pentru baghetă, iar asta e un plus major pentru cei care au gusturi pretențioase. Nu mai riști să obții o baghetă arsă sau, dimpotrivă, una doar încălzită.</p>
+    
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Tipuri de fante și design</h3>
+    <p class="mb-4">Am văzut modele cu fante lungi și înguste, perfecte pentru o jumătate de baghetă așezată pe lung. Altele au fante mai late, care permit introducerea a două jumătăți de baghetă sau chiar a unei baghete întregi tăiate pe lung. E important să te uiți la dimensiunile fantei dacă obișnuiești să cumperi baghete mai groase sau dacă vrei să prăjești mai multe felii odată. Modelele de la Philips, de exemplu, au adesea fante generoase, care permit și prăjirea unor felii mai groase de pâine de casă.</p>
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce modele am testat și la ce prețuri?</h2>
+    <p class="mb-4">Am pus mâna pe câteva modele reprezentative pentru a vedea dacă această funcție merită efortul. Un model care mi-a atras atenția a fost <strong>Tefal TT1A0D30</strong>, un prăjitor cu funcție baghetă, pe care l-am găsit pe eMAG la aproximativ 320 RON. Acesta promite o prăjire uniformă și are o fantă lungă, special gândită pentru baghete. Apoi, am testat și <strong>Philips Daily Collection HD2581/00</strong>, un prăjitor clasic, dar pe care l-am folosit în comparație, ca să văd diferența. Acesta costă în jur de 150 RON la Altex. Am inclus și un model mai accesibil de la <strong>Severin AT 2515</strong>, găsit pe PCGarage la circa 250 RON, care are și funcție de dezghețare, pe lângă cea de baghetă.</p>
+    <p class="mb-4">Prețurile variază destul de mult. Dacă bugetul e strâns, un prăjitor bun clasic, cum e Philips, își face treaba decent. Dar dacă bagheta e pâinea ta de bază dimineața și vrei perfecțiune, atunci modelele dedicate, cum e Tefal, merită investigate. Flanco are și ei oferte bune la prăjitoare, dar am observat că modelele cu funcție baghetă sunt mai puțin răspândite în magazinele fizice, fiind mai ușor de găsit online.</p>
+    <p class="mb-4">Am observat că, în general, modelele cu funcție baghetă sunt poziționate puțin mai sus în gamă, ca preț, dar adesea vin și cu alte funcții utile, cum ar fi controlul precis al gradului de prăjire, opțiunea de anulare sau cea de reîncălzire. E un pachet complet pentru cineva care vrea să-și optimizeze micul dejun.</p>
+    
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Specificații tehnice comune</h3>
+    <p class="mb-4">Majoritatea prăjitoarelor cu funcție baghetă au o putere între 800W și 1200W. Numărul de fante variază, dar cele dedicate baghetei au de obicei 1-2 fante lungi. Controlul gradului de prăjire este un element standard, de obicei cu 5-7 setări. Materialele folosite sunt adesea oțel inoxidabil sau plastic rezistent la căldură. Funcțiile de anulare, dezghețare și reîncălzire sunt prezente pe majoritatea modelelor, indiferent dacă au sau nu funcția dedicată baghetei.</p>
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Testul practic: Baghete, felii și rezultate</h2>
+    <p class="mb-4">Am început cu o baghetă proaspătă. Pe prăjitorul Tefal, cu funcția baghetă activată, rezultatul a fost excelent: exteriorul auriu, ușor crocant, iar interiorul cald și moale. Pe prăjitorul clasic Philips, setat pe o treaptă medie, am obținut un rezultat bun, dar marginile erau puțin mai prăjite decât la Tefal. Asta arată că funcția dedicată chiar face o diferență în distribuția căldurii.</p>
+    <p class="mb-4">Am trecut la o baghetă de o zi. Aici, funcția baghetă a fost salvatoare. A reușit să-i redea prospețimea și o textură plăcută, fără să o usuce. Pe prăjitorul clasic, a trebuit să fiu mai atent cu setarea, pentru că riscam să o fac tare. Am observat că prăjitoarele cu funcție baghetă sunt mai iertătoare, dacă pot spune așa.</p>
+    <p class="mb-4">Am testat și cu o baghetă congelată. Funcția de dezghețare, prezentă pe Severin, a funcționat bine. Bagheta a fost dezghețată uniform, apoi prăjită la perfecție. Fără această funcție, ar fi trebuit să o las mai mult timp la prăjit, riscând să se ardă exteriorul. În experiența mea, dacă mănânci des produse congelate, o funcție de dezghețare e un plus major.</p>
+    
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Sfaturi pentru utilizare optimă</h3>
+    <p class="mb-4">Cel mai important sfat este să experimentezi cu setările. Fiecare cuptor are personalitatea lui, la fel și prăjitoarele. Începe cu o setare medie și ajustează în funcție de cum îți place pâinea. Nu uita să cureți tăvița de firimituri regulat. Se acumulează rapid și pot lua foc dacă nu ești atent. Pentru baghetă, folosește fantele dedicate pe lungime, dacă există, pentru un rezultat uniform.</p>
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Avantaje și dezavantaje: Să cântărim opțiunile</h2>
+    <p class="mb-4">Principalul avantaj al unui prăjitor cu funcție baghetă este, evident, calitatea superioară a prăjirii baghetei. Obții acel echilibru perfect între exterior crocant și interior moale, care e greu de atins cu un prăjitor clasic. De asemenea, fantele mai largi sau alungite sunt un plus pentru cei care consumă des baghete sau pâine cu felii groase. Nu mai trebuie să tai pâinea în bucăți mici ca să încapă în fantele înguste.</p>
+    <p class="mb-4">Dezavantajul major este prețul. Aceste modele sunt, în general, mai scumpe decât cele clasice. Dacă bagheta nu e pâinea ta de bază, s-ar putea să nu justifice investiția. Am observat că și designul poate fi un pic mai voluminos, din cauza fantelor mai mari. Unele modele par mai greu de curățat din cauza complexității mecanismului pentru baghetă. </p>
+    <p class="mb-4">În experiența mea, dacă ești un fan declarat al baghetei și vrei să te bucuri de ea la micul dejun, un prăjitor dedicat merită. Dacă folosești prăjitorul ocazional și pentru diverse tipuri de pâine, un model clasic de calitate, cum e un Philips sau Tefal, ar fi o alegere mai potrivită și mai economică.</p>
+    
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Funcții adiționale care contează</h3>
+    <p class="mb-4">Pe lângă funcția baghetă, caută și alte opțiuni care îți pot face viața mai ușoară. Funcția de anulare e esențială pentru a opri prăjirea oricând. Opțiunea de reîncălzire e utilă dacă pâinea s-a răcit puțin. Iar funcția de dezghețare e un salvator pentru baghetele congelate. Am văzut modele de la Bosch care integrează toate aceste funcții, dar prețul sare de 400 RON.</p>
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cui îi recomand aceste prăjitoare?</h2>
+    <p class="mb-4">Aceste prăjitoare cu funcție baghetă sunt, în primul rând, pentru pasionații de pâine. Dacă micul dejun tău ideal implică o baghetă caldă și proaspăt prăjită, atunci un astfel de aparat îți va transforma experiența. Gândește-te la familiile care cumpără des baghete sau la persoanele care locuiesc singure și vor să se răsfețe dimineața. E un upgrade care se simte.</p>
+    <p class="mb-4">De asemenea, recomand aceste aparate persoanelor care apreciază detaliile și vor control maxim asupra modului în care le este preparată mâncarea. Dacă ești genul care analizează fiecare setare și vrei rezultate perfecte de fiecare dată, atunci funcția baghetă și controlul fin al temperaturii vor fi pe placul tău. Am observat că și persoanele mai în vârstă apreciază simplitatea și eficiența unui aparat dedicat.</p>
+    <p class="mb-4">Pentru cei care au un buget restrâns sau nu sunt mari consumatori de baghete, un prăjitor clasic de la branduri de renume precum Braun sau Russell Hobbs, care se găsesc la prețuri mai accesibile (între 100-200 RON), ar fi suficient. Important e să alegi un aparat fiabil, care să-ți facă dimineața mai plăcută, indiferent de complexitatea funcțiilor.</p>
+    
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Alternative la funcția baghetă</h3>
+    <p class="mb-4">Dacă nu găsești un prăjitor cu funcție baghetă sau bugetul nu permite, poți obține rezultate similare și cu un prăjitor clasic bun. Secretul stă în a alege o setare de prăjire potrivită și a supraveghea procesul. Poți folosi și un cuptor mic sau o friteuză cu aer cald pentru baghete, dar acestea necesită mai mult spațiu și consumă mai multă energie. Un prăjitor dedicat este, totuși, cea mai simplă și rapidă soluție.</p>
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Poate un prăjitor clasic să prăjească o baghetă la fel de bine ca unul cu funcție dedicată?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, dar necesită mai multă atenție și ajustarea fină a setărilor. Funcția dedicată baghetei optimizează distribuția căldurii pentru a evita arderea marginilor și a asigura un interior moale. Un prăjitor clasic de calitate, precum un Philips sau Tefal, poate oferi rezultate bune, dar nu la fel de consistente.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de mult spațiu ocupă un prăjitor cu funcție baghetă?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  De obicei, ocupă la fel de mult spațiu ca un prăjitor clasic, dar fantele pot fi mai lungi sau mai late, ceea ce le poate face să pară puțin mai voluminoase. Verifică dimensiunile produsului înainte de a cumpăra, mai ales dacă spațiul pe blatul din bucătărie este limitat.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Este funcția baghetă utilă pentru alte tipuri de pâine?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Funcția baghetă este optimizată pentru forma și textura specifică a baghetei. Totuși, fantele mai largi sau alungite pot fi utile și pentru prăjirea unor felii groase de pâine de casă, chifle sau chiar croissanturi. Nu va avea același efect ca pe baghetă, dar oferă versatilitate.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Care este diferența de preț între un prăjitor clasic și unul cu funcție baghetă?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  În general, prăjitoarele cu funcție baghetă sunt cu 50-150 RON mai scumpe decât modelele clasice echivalente ca brand și calitate. Prețurile încep de la aproximativ 250 RON pentru modelele cu funcție baghetă și pot ajunge la peste 400 RON pentru cele premium.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cuptor-cu-microunde-combinat/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cuptor-cu-microunde-combinat.webp" alt="Cuptor Cu Microunde Combinat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cuptor Cu Microunde Combinat</h3>
+              </div>
+            </a>
+
+            <a href="/cea-mai-buna-masina-de-spalat-rufe-premium/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cea-mai-buna-masina-de-spalat-rufe-premium.webp" alt="Cea mai bună mașină de spălat rufe premium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cea mai bună mașină de spălat rufe premium</h3>
+              </div>
+            </a>
+
+            <a href="/cuptor-multifunctional-cu-aburi/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cuptor-multifunctional-cu-aburi.webp" alt="Cuptor Multifuncțional Cu Aburi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cuptor Multifuncțional Cu Aburi</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

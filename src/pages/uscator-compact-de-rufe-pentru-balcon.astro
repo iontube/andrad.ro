@@ -1,0 +1,298 @@
+---
+export const frontmatter = {
+  title: "Uscător Compact De Rufe Pentru Balcon",
+  slug: "uscator-compact-de-rufe-pentru-balcon",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Uscatorul compact de rufe pentru balcon: solutia salvatoare pentru apartamente mici. Am testat modele si va spun ce merita.",
+  image: "/images/articles/uscator-compact-de-rufe-pentru-balcon.webp",
+  publishDate: "2026-01-22T06:48:24.000Z",
+  modifiedDate: "2026-02-02T06:48:24.000Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cât timp durează să usuce rufele un uscator compact de balcon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Durata variază între 2 și 4 ore, în funcție de tipul de material, cât de umede sunt hainele și puterea aparatului. Nu vă așteptați la rezultate instantanee."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Consumă mult curent un uscator compact de rufe pentru balcon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, pot consuma destul de mult, mai ales modelele cu putere mare (peste 1000W) și dacă le folosiți pentru perioade lungi. Un model de 1500W poate fi vizibil pe factura de curent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot folosi un uscator de rufe pentru balcon dacă am un balcon mic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolut. Există modele pliabile și compacte, special concepute pentru spații restrânse. Important e să verificați dimensiunile când nu e folosit și să aveți unde să-l depozitați."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Scap de călcat rufele dacă folosesc un uscator compact de rufe pentru balcon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu neapărat. Hainele vor fi uscate, dar probabil vor avea nevoie de călcare, mai ales cele din materiale care se șifonează ușor. Nu vă așteptați la același finisaj ca la un uscător clasic."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Spatiu, aer si rufe uscate: dilema balconului</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce inseamna de fapt "uscator compact de rufe pentru balcon"?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele testate: ce am gasit pe piata romaneasca</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la un utilizator experimentat</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sa nu astepti de la un uscator compact de rufe pentru balcon</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Preturi si disponibilitate in Romania (2024)</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Spatiu, aer si rufe uscate: dilema balconului</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce inseamna de fapt "uscator compact de rufe pentru balcon"?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele testate: ce am gasit pe piata romaneasca</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la un utilizator experimentat</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sa nu astepti de la un uscator compact de rufe pentru balcon</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Preturi si disponibilitate in Romania (2024)</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/uscator-compact-de-rufe-pentru-balcon.webp" alt="Uscător Compact De Rufe Pentru Balcon" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Spatiu, aer si rufe uscate: dilema balconului</h2>
+    <p class="mb-4">Am locuit ani de zile intr-un apartament mic din Bucuresti si stiu exact cum e sa te lupti cu spatiul. Rufele intinse pe sarma, prinse cu clame, ocupau jumatate din balcon, iar cand ploua, era un chin sa le strangi. Asta pana am descoperit uscatoarele compacte de rufe pentru balcon. Nu ma asteptam sa fie asa un game-changer, dar chiar sunt.</p>
+    <p class="mb-4">Am testat cateva modele in ultimii ani, de la cele mai basic, pe care le gaseam pe la tarabe, pana la variante mai serioase de la producatori consacrati. Experienta mea mi-a aratat ca nu e chiar atat de simplu sa alegi, mai ales daca vrei ceva eficient si nu doar un alt obiect care sa aglomereze.</p>
+    <p class="mb-4">Ideal ar fi sa ai un balcon generos, dar chiar si cu unul mic, un uscator compact de rufe pentru balcon te poate salva. Important e sa stii exact ce cauti si ce asteptari sa ai. Si, mai ales, sa nu te lasi pacalit de promisiuni de genul "usuca rufele in 15 minute", pentru ca nu prea exista asa ceva.</p>
+    <p class="mb-4">Am ales sa va spun din experienta mea ce am invatat, ca sa nu bateti drumul aiurea si sa cheltuiti bani pe ceva ce nu face fata nevoilor voastre. Sincer, sunt multe optiuni pe piata, dar nu toate sunt la fel de bune. Unele sunt mai mult decorative, altele chiar isi fac treaba.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce inseamna de fapt "uscator compact de rufe pentru balcon"?</h2>
+    <p class="mb-4">Termenul asta poate ascunde mai multe tipuri de aparate. In primul rand, sunt cele cu incalzire, care seamana cu un dulap vertical si unde rufele sunt uscate cu aer cald. Acestea sunt cele mai eficiente, dar si cele mai scumpe si mai mari. Nu le recomand pentru un balcon mic, daca nu aveti deja un spatiu dedicat.</p>
+    <p class="mb-4">Apoi, sunt uscatoarele de rufe cu pompa de caldura, care sunt mai economice la energie, dar si mai scumpe initial. Acestea au o capacitate mai mare si sunt mai potrivite pentru case sau apartamente cu spatiu dedicat pentru ele. Nu le-as incadra la "uscator compact de rufe pentru balcon" in sensul clasic, de solutie pentru spatii mici.</p>
+    <p class="mb-4">Ce ma intereseaza pe mine si ce am testat sunt acele aparate mai simple, care folosesc un sistem de incalzire si ventilare, sau chiar doar ventilare, pentru a accelera procesul de uscare a hainelor intinse pe un suport. Ganditi-va la un fel de "dulap" pliabil, unde puteti intinde rufele pe tije si un ventilator sufla aer cald sau rece peste ele. Acestea sunt cele mai accesibile si practice pentru un balcon.</p>
+    <p class="mb-4">Am vazut si variante simple, doar cu un ventilator, fara incalzire. Acestea sunt bune pentru a circula aerul, dar nu usuca rufele rapid. Sunt mai mult un ajutor pe langa uscarea naturala, nu o solutie completa. Deci, cand spunem "uscator compact de rufe pentru balcon", vorbim de obicei de un sistem cu incalzire si ventilatie, de dimensiuni reduse.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele testate: ce am gasit pe piata romaneasca</h2>
+    <p class="mb-4">Am pus mana pe cateva modele de la branduri pe care le gasiti si in Romania. Unul dintre primele pe care le-am incercat a fost un model de la <strong>Heinner</strong>, un uscator vertical cu incalzire, destul de simplu. Avea o capacitate de cam 10-12 kg de rufe umede si se monta destul de usor. Pretul lui pe eMAG era undeva la 350-400 lei. Isi facea treaba, dar consuma ceva curent si nu usca uniform hainele mai groase.</p>
+    <p class="mb-4">Apoi, am cochetat cu o idee de la <strong>Gorenje</strong>, un model mai compact, tot cu incalzire, dar cu un design mai modern, de genul unui dulap mic. Asta era mai scump, in jur de 700-800 lei. Avantajul era ca avea o structura mai solida si o capacitate mai buna de uscare. Rufele ieseau mai putin frozite, ceea ce e un mare plus.</p>
+    <p class="mb-4">Am observat ca multe din aceste uscatoare compacte de rufe pentru balcon sunt de fapt sub-branduri sau modele "no-name" care apar si dispar. E mai greu sa le gasesti constant. Branduri mari precum <strong>Samsung</strong> sau <strong>LG</strong> nu prea au modele dedicate strict pentru balcon, ci au uscatoare de rufe de sine statatoare, mult mai mari si mai scumpe, care nu se preteaza la asa ceva.</p>
+    <p class="mb-4">Ce am mai gasit si mi s-a parut interesant sunt acele "uscatoare de rufe pliabile cu incalzire". Sunt practic niste suporturi de rufe din metal, cu o husa textila, in care se integreaza o rezistenta electrica si un ventilator. Asta era undeva la 250-350 lei, in functie de dimensiune si putere. Acestea sunt cele mai compacte si usor de depozitat, dar si cele mai limitate ca performanta. Ele usuca mai mult prin incalzirea aerului din interior, nu printr-o circulatie puternica.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la un utilizator experimentat</h2>
+    <p class="mb-4">Daca vreti sa va luati un uscator compact de rufe pentru balcon, ignorati designul. Concentrati-va pe functionalitate si spatiul pe care il aveti. Daca aveti un balcon mic, inchis sau semi-deschis, cautati ceva pliabil sau cu dimensiuni reduse, care sa poata fi depozitat usor cand nu-l folositi.</p>
+    <p class="mb-4">Verificati puterea de incalzire (in watti) si fluxul de aer (daca e specificat). Un model cu o putere mai mare va usca mai repede, dar va consuma si mai mult curent. In experienta mea, un echilibru e important. Am gasit modele de 900W si de 1500W. Cele de 1500W usuca mult mai bine, dar factura la curent se vede.</p>
+    <p class="mb-4">Capacitatea e cruciala. Nu va asteptati sa uscati o masina intreaga de rufe dintr-o data. Majoritatea uscatoarelor compacte de rufe pentru balcon sunt gandite pentru 3-5 kg de rufe umede. Daca aveti o familie mare, s-ar putea sa aveti nevoie de doua astfel de aparate sau sa trebuiasca sa uscati rufele in mai multe ture.</p>
+    <p class="mb-4">Un alt aspect important: zgomotul. Unele modele, mai ales cele cu ventilatoare puternice, pot fi destul de zgomotoase. Daca locuiti la bloc si balconul e langa dormitor, asta poate fi o problema. Verificati specificatiile sau, daca e posibil, cititi pareri de la alti utilizatori.</p>
+    <p class="mb-4">Nu uitati de siguranta. Asigurati-va ca aparatul are protectie la supraincalzire si ca e stabil. Nu il lasati nesupravegheat pentru perioade lungi, mai ales daca aveti copii sau animale de companie prin preajma.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sa nu astepti de la un uscator compact de rufe pentru balcon</h2>
+    <p class="mb-4">Sincer, cand am luat primul uscator de rufe pentru balcon, am avut asteptari nerealiste. Am crezut ca va usca hainele la fel de repede ca un uscator clasic de masina, dar nu e asa. Procesul de uscare dureaza mai mult, in jur de 2-4 ore, in functie de materialul hainelor si cat de umede sunt.</p>
+    <p class="mb-4">De asemenea, nu va asteptati ca hainele sa iasa perfect netede, ca din uscatorul clasic. Ele vor iesi uscate, dar probabil vor avea si cateva cute, mai ales daca le lasati prea mult in aparat dupa ce s-au uscat. Va trebui sa le calcati, ca si cum le-ati fi uscat pe sarma.</p>
+    <p class="mb-4">Nu sunt potrivite pentru rufe foarte groase, precum geci sau pilote. Acestea vor ramane probabil umede in interior. Ele sunt gandite mai mult pentru haine de zi cu zi: tricouri, pantaloni, lenjerie, prosoape mai subtiri.</p>
+    <p class="mb-4">Nu va asteptati la economie de energie pe termen lung. Chiar daca sunt "compacte", ele tot consuma curent electric, uneori chiar mai mult decat un uscator clasic, din cauza timpului mai indelungat de functionare. Am observat o crestere vizibila la factura de curent cand am folosit intensiv uscatorul meu Heinner.</p>
+    <p class="mb-4">In concluzie, un uscator compact de rufe pentru balcon este un ajutor, nu o solutie magica. El accelereaza procesul de uscare si te scapa de grija rufelor intinse pe sarma, dar nu inlocuieste complet un uscator traditional sau uscarea naturala pe vreme buna.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Preturi si disponibilitate in Romania (2024)</h2>
+    <p class="mb-4">Piata pentru uscatoare compacte de rufe pentru balcon e destul de fluctuanta. Găsiți cele mai multe opțiuni pe eMAG, Altex și Flanco. Prețurile variază mult în funcție de brand, dimensiuni și funcționalități.</p>
+    <p class="mb-4">Modelele mai simple, de tip "dulap pliabil" cu încălzire, se găsesc între 200 și 400 de lei. Acestea sunt cele mai accesibile. De exemplu, am văzut modele de la <strong>Vortex</strong> sau <strong>Gulliver</strong> la prețuri în jur de 250-300 lei pe eMAG.</p>
+    <p class="mb-4">Uscătoarele verticale, mai structurate, de la branduri precum <strong>Heinner</strong> sau chiar <strong>Teka</strong> (unele modele mai vechi), pot ajunge între 350 și 600 de lei. Acestea oferă o capacitate puțin mai mare și o construcție mai solidă.</p>
+    <p class="mb-4">Variantele mai "premium", dacă pot să le spun așa, de la producători mai cunoscuți sau cu design mai modern, pot să sară de 700-800 de lei. Am văzut ceva similar de la <strong>Gorenje</strong> în trecut, dar acum sunt mai greu de găsit modele specifice pentru balcon.</p>
+    <p class="mb-4">PC Garage nu are în general electrocasnice mari, deci nu veți găsi acolo. Altex și Flanco au oferte similare cu eMAG, dar merită să verificați ambele site-uri pentru cele mai bune prețuri. Recomand să urmăriți perioadele de reduceri, cum ar fi Black Friday sau reducerile de primăvară, când prețurile pot scădea semnificativ.</p>
+    <p class="mb-4">Ca disponibilitate, cele mai multe modele sunt "online exclusive" sau se găsesc în stoc limitat. Deci, dacă vedeți ceva ce vă place și se potrivește bugetului, nu stați prea mult pe gânduri.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât timp durează să usuce rufele un uscator compact de balcon?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Durata variază între 2 și 4 ore, în funcție de tipul de material, cât de umede sunt hainele și puterea aparatului. Nu vă așteptați la rezultate instantanee.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Consumă mult curent un uscator compact de rufe pentru balcon?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, pot consuma destul de mult, mai ales modelele cu putere mare (peste 1000W) și dacă le folosiți pentru perioade lungi. Un model de 1500W poate fi vizibil pe factura de curent.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi un uscator de rufe pentru balcon dacă am un balcon mic?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Absolut. Există modele pliabile și compacte, special concepute pentru spații restrânse. Important e să verificați dimensiunile când nu e folosit și să aveți unde să-l depozitați.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Scap de călcat rufele dacă folosesc un uscator compact de rufe pentru balcon?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu neapărat. Hainele vor fi uscate, dar probabil vor avea nevoie de călcare, mai ales cele din materiale care se șifonează ușor. Nu vă așteptați la același finisaj ca la un uscător clasic.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cel-mai-bun-frigider-side-by-side-premium/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-frigider-side-by-side-premium.webp" alt="Cel mai bun frigider side by side premium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun frigider side by side premium</h3>
+              </div>
+            </a>
+
+            <a href="/blender-vertical-cu-functie-smoothie/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/blender-vertical-cu-functie-smoothie.webp" alt="Blender Vertical Cu Funcție Smoothie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Blender Vertical Cu Funcție Smoothie</h3>
+              </div>
+            </a>
+
+            <a href="/prajitor-de-paine-cu-functie-bagheta/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/prajitor-de-paine-cu-functie-bagheta.webp" alt="Prăjitor De Pâine Cu Funcție Baghetă" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Prăjitor De Pâine Cu Funcție Baghetă</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

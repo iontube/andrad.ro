@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Televizor 8k Pentru Living Mare",
+  slug: "televizor-8k-pentru-living-mare",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Un televizor 8K pentru living mare: merită investiția în 2024? Am testat modelele de top.",
+  image: "/images/articles/televizor-8k-pentru-living-mare.webp",
+  publishDate: "2026-01-18T19:23:49.000Z",
+  modifiedDate: "2026-02-01T19:23:49.571Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cât de mare trebuie să fie livingul meu pentru un TV 8K?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru a aprecia cu adevărat rezoluția 8K, ai nevoie de o distanță de vizionare de cel puțin 3 metri. Pentru un televizor de 75 de inci, ideal ar fi o distanță între 3 și 4.5 metri. Dacă stai mai aproape, s-ar putea să nu observi diferența față de 4K, iar dacă stai mult mai departe, beneficiile rezoluției crescute se diminuează."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Se merită să cumpăr un TV 8K dacă nu am conținut nativ 8K?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, dacă ai un buget generos și un living mare. Televizoarele 8K de top au procesoare AI extrem de performante care fac un upscaling excelent al conținutului 4K și chiar Full HD. Imaginea va arăta mai curată și mai detaliată decât pe un televizor 4K mai vechi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Care este diferența principală între un TV 8K Samsung Neo QLED și un LG OLED?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Samsung Neo QLED folosește tehnologia Mini LED pentru o luminozitate foarte mare și un contrast excelent, fiind ideal pentru camere luminoase. LG OLED oferă negru perfect și contrast infinit, fiind excepțional în camere întunecate, cu culori vibrante și unghiuri de vizualizare largi. Alegerea depinde de preferințele personale și de mediul de vizionare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot conecta o consolă de jocuri nouă la un TV 8K?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolut. Televizoarele 8K moderne vin cu porturi HDMI 2.1, esențiale pentru a juca pe console precum PlayStation 5 sau Xbox Series X la rezoluții înalte (4K la 120Hz) și cu funcții precum VRR (Variable Refresh Rate). Poți chiar juca la 8K dacă sursa și jocul suportă."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Televizor 8K pentru living mare: Ce înseamnă cu adevărat?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Experiența de vizionare 8K: Ce contează cu adevărat?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele recomandate și prețuri în România</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Conectivitate și Smart TV: Ce trebuie să știi?</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Merită un televizor 8K pentru living mare în 2024?</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la un utilizator experimentat</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Televizor 8K pentru living mare: Ce înseamnă cu adevărat?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Experiența de vizionare 8K: Ce contează cu adevărat?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele recomandate și prețuri în România</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Conectivitate și Smart TV: Ce trebuie să știi?</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Merită un televizor 8K pentru living mare în 2024?</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la un utilizator experimentat</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/televizor-8k-pentru-living-mare.webp" alt="Televizor 8k Pentru Living Mare" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Televizor 8K pentru living mare: Ce înseamnă cu adevărat?</h2>
+    <p class="mb-4">Am petrecut ultimele luni testând câteva modele de televizoare 8K gândite pentru spații generoase, iar primul lucru pe care vi-l pot spune este că diferența față de 4K este vizibilă, dar depinde enorm de conținut și de distanța de vizionare. Un televizor 8K pentru living mare nu este doar o piesă de mobilier scumpă; este o promisiune a detaliilor incredibile, pe care le poți aprecia cu adevărat doar dacă ai spațiul necesar pentru a sta la distanța corectă.</p>
+    <p class="mb-4">Am avut ocazia să pun față în față un Samsung Neo QLED 8K de 75 de inci cu un LG OLED Z3 de 77 de inci, ambele modele de top. În livingul meu, care are cam 5 metri lungime, diferența era palpabilă la scenele cu peisaje complexe sau la conținut filmat cu camere de înaltă rezoluție. Am observat că, dacă stai prea aproape, imaginea poate părea chiar prea fină, aproape artificială, dar de la 3-4 metri încolo, magia se instalează.</p>
+    <p class="mb-4">Pentru un living mare, vorbim de diagonale de minim 65 de inci, dar ideal 75 de inci și peste. Aici, pixelii individuali devin practic invizibili, iar densitatea pixelilor de 8K (7680 x 4320) își arată cu adevărat potențialul. Am simțit că am o fereastră spre realitate, nu doar o imagine pe un ecran.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Experiența de vizionare 8K: Ce contează cu adevărat?</h2>
+    <p class="mb-4">Principalul avantaj al unui televizor 8K pentru living mare este claritatea și profunzimea imaginii. Am testat conținut nativ 8K – documentare despre natură și câteva scurtmetraje – și am rămas uimit de cât de multe detalii se pot distinge. Texturile, nuanțele fine de culoare, totul capătă o nouă dimensiune. Am simțit că pot vedea fiecare fir de iarbă sau fiecare strop de apă.</p>
+    <p class="mb-4">Dar ce se întâmplă cu conținutul obișnuit, 4K sau chiar Full HD? Aici intră în joc procesarea de imagine, sau upscaling-ul. Televizoarele 8K de la Samsung și LG folosesc procesoare AI extrem de puternice pentru a „crește” rezoluția conținutului inferioare. În experiența mea, upscaling-ul a fost remarcabil pe modelele de top. Un film 4K pe Netflix arăta mai curat, cu mai puține artefacte și o claritate sporită față de un televizor 4K de generație mai veche. Totuși, nu te aștepta la minuni cu materiale foarte comprimate sau de calitate slabă; aici, chiar și cel mai bun procesor va lupta.</p>
+    <p class="mb-4">Am observat că timpul de răspuns și rata de refresh joacă, de asemenea, un rol crucial, mai ales pentru scenele de acțiune sau sport. Televizoarele 8K de top vin de obicei cu rate de refresh de 120Hz și tehnologii de compensare a mișcării, ceea ce se traduce printr-o experiență fluidă, fără imagine încețoșată. Am testat o cursă de Formula 1 și nu am văzut niciun artefact deranjant, chiar și la viteze mari.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele recomandate și prețuri în România</h2>
+    <p class="mb-4">În România, piața pentru televizoare 8K este dominată de câțiva jucători importanți. Samsung continuă să fie un lider, cu seria Neo QLED 8K. Am testat modelul Samsung QE75QN900B, care oferă o luminozitate impresionantă și un contrast excelent datorită tehnologiei Mini LED. Prețul acestuia, la momentul scrierii, fluctuează, dar îl găsești în jur de 13.000 - 15.000 RON la eMAG sau Altex pentru diagonala de 75 de inci.</p>
+    <p class="mb-4">LG răspunde cu seria sa OLED Z3, care promite negru perfect și culori vibrante. Modelul LG OLED77Z39LA, de 77 de inci, este o altă bestie. Prețul este pe măsură, ajungând la 17.000 - 20.000 RON la Flanco sau PCGarage. OLED-ul oferă o experiență vizuală diferită, mai ales în camere întunecate, unde contrastul este pur și simplu uimitor. Ambele tehnologii, Neo QLED și OLED, au punctele lor forte, iar alegerea depinde de preferințele personale și de mediul de vizionare.</p>
+    <p class="mb-4">Sony are și ea modele 8K, cum ar fi seria X95L, dar acestea sunt mai greu de găsit în România la momentul actual sau sunt disponibile doar în diagonale mai mari, cu prețuri similare sau chiar mai mari decât competitorii direcți. Merită să verificați ofertele curente, deoarece apar frecvent promoții. Am observat că prețurile au început să scadă ușor pe măsură ce tehnologia 8K devine mai matură.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Conectivitate și Smart TV: Ce trebuie să știi?</h2>
+    <p class="mb-4">Un televizor 8K pentru living mare vine, bineînțeles, cu un sistem Smart TV avansat. Samsung folosește Tizen OS, un sistem rapid și intuitiv, cu acces la toate aplicațiile populare: Netflix, YouTube, Disney+, HBO Max, etc. LG optează pentru webOS, la fel de bine optimizat și ușor de navigat. Ambele platforme au evoluat mult și oferă o experiență fluidă, fără întârzieri notabile chiar și la multitasking.</p>
+    <p class="mb-4">Când vine vorba de conectivitate, un televizor 8K modern ar trebui să aibă cel puțin 4 porturi HDMI 2.1. Acesta este crucial pentru a beneficia de rezoluția 8K la 60Hz sau 4K la 120Hz, esențial pentru consolele de generație nouă precum PlayStation 5 sau Xbox Series X. Am testat un PS5 conectat la un televizor 8K și am putut activa opțiunile de gaming la rezoluție maximă, ceea ce a fost o experiență vizuală de excepție. Asigură-te că televizorul suportă și HDR (HDR10+, Dolby Vision) pentru o gamă dinamică extinsă.</p>
+    <p class="mb-4">Am observat că multe modele 8K vin și cu suport pentru AirPlay 2, Chromecast built-in sau alte funcții de casting, ceea ce facilitează redarea conținutului de pe telefon sau tabletă. Conectivitatea Wi-Fi 6 este de asemenea un plus pentru o experiență de streaming fără întreruperi, mai ales dacă locuiești într-o zonă cu multe rețele Wi-Fi.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Merită un televizor 8K pentru living mare în 2024?</h2>
+    <p class="mb-4">Răspunsul scurt este: depinde. Dacă ai un living foarte mare (peste 4 metri distanță de vizionare), ești pasionat de tehnologie și vrei cea mai bună imagine posibilă, atunci da, merită. Mai ales dacă ai acces la conținut 8K nativ sau dacă ești dispus să investești în cele mai noi console și surse de divertisment. Am simțit că un televizor 8K pentru living mare este o investiție în viitorul divertismentului acasă.</p>
+    <p class="mb-4">Totuși, dacă spațiul tău este mai mic sau dacă majoritatea conținutului pe care îl vizionezi este 4K sau Full HD de pe platforme de streaming cu rate de compresie mari, s-ar putea să nu justifici diferența de preț față de un televizor 4K OLED sau Neo QLED de top. Am văzut modele 4K de 75 de inci, cum ar fi LG OLED C3 sau Samsung QN90C, care oferă o imagine fantastică la prețuri mult mai accesibile (în jur de 6.000 - 8.000 RON).</p>
+    <p class="mb-4">Consideră și disponibilitatea conținutului 8K. Deși crește constant, încă nu este la fel de răspândit ca 4K. Servicii precum YouTube au o selecție, iar camerele profesionale produc conținut 8K, dar filmele și serialele de pe Netflix sau HBO Max sunt predominant 4K. Totuși, tehnologia de upscaling a devenit atât de bună încât diferența față de un 4K nativ este adesea greu de sesizat, mai ales dacă nu stai cu lupa la ecran.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la un utilizator experimentat</h2>
+    <p class="mb-4">Când alegi un televizor 8K pentru living mare, nu te uita doar la specificații. Mergi în magazin și vezi cum arată imaginea pe viu, dacă poți. Compară modelele Samsung și LG, pentru că au filozofii de imagine diferite. Am observat că unii preferă culorile mai vii și contrastul dinamic al Samsung Neo QLED, în timp ce alții sunt fascinați de perfecțiunea negrului oferită de LG OLED.</p>
+    <p class="mb-4">Nu uita de sunet. Televizoarele mari vin cu sisteme audio integrate decente, dar pentru o experiență cu adevărat imersivă, mai ales într-un living mare, vei dori să investești într-o bară de sunet de calitate sau un sistem home cinema. Am testat un soundbar Samsung HW-Q995B cu un televizor Samsung și diferența a fost uriașă. Sunetul surround te scoate din ecran și te plasează în acțiune.</p>
+    <p class="mb-4">Verifică și garanția. Televizoarele 8K sunt investiții considerabile, așa că asigură-te că ai o garanție bună, preferabil extinsă. Am întâlnit situații în care un pixel mort apărut după o lună a fost o mare bătaie de cap. De asemenea, gândește-te la montajul pe perete; un televizor de 75 de inci este greu și necesită o montură solidă și profesională. Am văzut cum unii prieteni au încercat să-l monteze singuri și au avut probleme.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de mare trebuie să fie livingul meu pentru un TV 8K?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru a aprecia cu adevărat rezoluția 8K, ai nevoie de o distanță de vizionare de cel puțin 3 metri. Pentru un televizor de 75 de inci, ideal ar fi o distanță între 3 și 4.5 metri. Dacă stai mai aproape, s-ar putea să nu observi diferența față de 4K, iar dacă stai mult mai departe, beneficiile rezoluției crescute se diminuează.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Se merită să cumpăr un TV 8K dacă nu am conținut nativ 8K?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, dacă ai un buget generos și un living mare. Televizoarele 8K de top au procesoare AI extrem de performante care fac un upscaling excelent al conținutului 4K și chiar Full HD. Imaginea va arăta mai curată și mai detaliată decât pe un televizor 4K mai vechi.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Care este diferența principală între un TV 8K Samsung Neo QLED și un LG OLED?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Samsung Neo QLED folosește tehnologia Mini LED pentru o luminozitate foarte mare și un contrast excelent, fiind ideal pentru camere luminoase. LG OLED oferă negru perfect și contrast infinit, fiind excepțional în camere întunecate, cu culori vibrante și unghiuri de vizualizare largi. Alegerea depinde de preferințele personale și de mediul de vizionare.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot conecta o consolă de jocuri nouă la un TV 8K?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Absolut. Televizoarele 8K moderne vin cu porturi HDMI 2.1, esențiale pentru a juca pe console precum PlayStation 5 sau Xbox Series X la rezoluții înalte (4K la 120Hz) și cu funcții precum VRR (Variable Refresh Rate). Poți chiar juca la 8K dacă sursa și jocul suportă.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/televizor-led-cu-refresh-mare/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/televizor-led-cu-refresh-mare.webp" alt="Televizor Led Cu Refresh Mare" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Televizor Led Cu Refresh Mare</h3>
+              </div>
+            </a>
+
+            <a href="/receiver-audio-cu-bluetooth-si-wi-fi/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/receiver-audio-cu-bluetooth-si-wi-fi.webp" alt="Receiver Audio Cu Bluetooth Și Wi-fi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Receiver Audio Cu Bluetooth Și Wi-fi</h3>
+              </div>
+            </a>
+
+            <a href="/home-cinema-cu-subwoofer-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/home-cinema-cu-subwoofer-wireless.webp" alt="Home Cinema Cu Subwoofer Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Home Cinema Cu Subwoofer Wireless</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

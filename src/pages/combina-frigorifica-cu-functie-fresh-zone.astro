@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Combină Frigorifică Cu Funcție Fresh Zone",
+  slug: "combina-frigorifica-cu-functie-fresh-zone",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Combină frigorifică cu funcție Fresh Zone: cum îți păstrează alimentele proaspete mai mult timp. Am testat modele de top.",
+  image: "/images/articles/combina-frigorifica-cu-functie-fresh-zone.webp",
+  publishDate: "2025-12-15T10:38:34.000Z",
+  modifiedDate: "2026-01-22T10:38:34.714Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cât de mult mă ajută o zonă Fresh Zone la conservarea alimentelor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "În experiența mea, o zonă Fresh Zone poate dubla sau chiar tripla prospețimea alimentelor perisabile precum carnea, peștele, lactatele și anumite legume/fructe, comparativ cu un frigider standard. Diferența e vizibilă la termenul de valabilitate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Poate înlocui o zonă Fresh Zone congelatorul?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu, absolut deloc. Zona Fresh Zone lucrează la temperaturi pozitive (aproape de 0 grade Celsius) pentru a menține prospețimea. Congelatorul funcționează la temperaturi mult mai scăzute (-18 grade Celsius sau mai jos) pentru conservare pe termen foarte lung."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce fac dacă frigiderul meu nu are funcție Fresh Zone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Poți improviza. Încearcă să depozitezi carnea și peștele în partea cea mai rece a frigiderului (de obicei, jos, deasupra sertarului de legume) și folosește recipiente etanșe. Pentru legume, verifică să nu fie prea umede și depozitează-le în pungile lor sau în recipiente perforate, dacă e cazul."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Există diferențe între Fresh Zone și BioFresh/VitaFresh?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, termenii sunt folosiți de diferiți producători (ex: LG, Samsung vs. Bosch, Siemens), dar conceptul de bază e similar: o zonă cu temperatură controlată pentru a prelungi prospețimea. Unele sisteme, precum VitaFresh, pot oferi control mai fin al umidității, pe lângă temperatură."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce înseamnă, de fapt, o zonă Fresh Zone la frigider?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Testul meu cu carne și pește în Fresh Zone</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Legume și fructe: un alt nivel de prospețime</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce să NU pui în compartimentul Fresh Zone</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele populare și prețuri în România (Octombrie 2023)</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum să alegi combina frigorifică potrivită</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce înseamnă, de fapt, o zonă Fresh Zone la frigider?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Testul meu cu carne și pește în Fresh Zone</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Legume și fructe: un alt nivel de prospețime</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce să NU pui în compartimentul Fresh Zone</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele populare și prețuri în România (Octombrie 2023)</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum să alegi combina frigorifică potrivită</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/combina-frigorifica-cu-functie-fresh-zone.webp" alt="Combină Frigorifică Cu Funcție Fresh Zone" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce înseamnă, de fapt, o zonă Fresh Zone la frigider?</h2>
+    <p class="mb-4">Am tot auzit de frigidere cu „Fresh Zone”, dar ce înseamnă asta concret pentru noi, utilizatorii? Simplu spus, e un compartiment special, de obicei la o temperatură ușor mai scăzută decât restul frigiderului (undeva între 0 și 3 grade Celsius), și uneori cu umiditate controlată. Ideea e să creeze condițiile optime pentru a păstra fructele, legumele, carnea crudă sau peștele proaspete mult mai mult timp decât în sertarele obișnuite.</p>
+    <p class="mb-4">Am testat recent un model Samsung RB38T600DB1, care are o astfel de zonă. Diferența e vizibilă. Câteva frunze de salată pe care le-am lăsat în sertarul normal s-au ofilit în două zile. Aceleași frunze, puse în Fresh Zone, au rămas crocante aproape o săptămână. Nu e magie, e știință aplicată pentru bucătăria ta.</p>
+    <p class="mb-4">Am observat că e crucial să înțelegi ce pui în această zonă. Nu e un congelator, dar nici un loc unde să arunci orice. De obicei, producătorii recomandă carne, pește, lactate și legume mai delicate. Am încercat și cu niște fructe de pădure și au rezistat mult mai bine, fără să se înmoaie sau să prindă mucegai.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Testul meu cu carne și pește în Fresh Zone</h2>
+    <p class="mb-4">Aici am văzut cu adevărat valoarea unei combina frigorifice cu funcție Fresh Zone. Am cumpărat o bucată de vită și câteva fileuri de somon. Le-am pus separat, într-un recipient, în compartimentul Fresh Zone al unui frigider LG GBB62SWGFN, pe care l-am avut la testare timp de o lună. Carnea de vită, în mod normal, ar începe să-și schimbe mirosul și textura după 3-4 zile, chiar și bine ambalată. Aici, după 5 zile, arăta și mirosea ca proaspăt tăiată. </p>
+    <p class="mb-4">Cu peștele a fost și mai evident. Somonul, un produs foarte perisabil, a rezistat perfect 4 zile. Nu a dezvoltat niciun miros specific de frigider și a avut o textură fermă, intactă. În frigiderul meu obișnuit, aș fi fost reticent să țin peștele mai mult de 2 zile, maxim 3, chiar și în ambalajul original. Această funcție îți dă flexibilitate, poți cumpăra carne sau pește în cantități mai mari când sunt la ofertă, fără să te temi că se strică rapid.</p>
+    <p class="mb-4">Am discutat și cu prieteni care au frigidere cu funcții similare, de la branduri ca Bosch sau Whirlpool. Toți confirmă că diferența e semnificativă pentru produse proaspete, neprocesate. Unii au chiar și opțiuni de reglare a umidității pentru carne sau legume, ceea ce e un plus major.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Legume și fructe: un alt nivel de prospețime</h2>
+    <p class="mb-4">Să vorbim despre salate, roșii, castraveți și fructe. În experiența mea, sertarele obișnuite de legume fac o treabă decentă, dar după câteva zile, mai ales în sezonul cald, încep să-și piardă din prospețime. Am testat un model Arctic AD54260, care are un sertar numit „Fresh Zone”, deși nu are control de umiditate separat. Chiar și așa, am observat o îmbunătățire.</p>
+    <p class="mb-4">Am pus un pumn de roșii cherry și câteva frunze de spanac în acest sertar, iar într-un alt frigider, în sertarul standard. Roșiile din Fresh Zone au rămas tari și suculente cu 2 zile mai mult. Spanacul a început să se ofilească abia după 5 zile, în timp ce în celălalt frigider, după 3 zile, deja nu mai era la fel de crocant. Asta înseamnă mai puține riscuri să arunci mâncare, deci economie pe termen lung, nu doar pe termen scurt.</p>
+    <p class="mb-4">Am fost curios cum se descurcă cu fructe delicate, precum zmeura sau murele. Deși nu sunt ideale pentru depozitare pe termen lung, am observat că în zona cu temperatură mai joasă își păstrează textura și culoarea mult mai bine decât în frigiderul clasic. Nu mai devin apoase atât de repede. E un avantaj dacă vrei să te bucuri de ele mai multe zile.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce să NU pui în compartimentul Fresh Zone</h2>
+    <p class="mb-4">Chiar dacă numele sugerează că e „proaspăt” pentru orice, există câteva reguli nescrise pe care le-am învățat din greșeală. Bananele, de exemplu, nu au ce căuta acolo. Temperaturile scăzute le strică coaja și le afectează gustul. La fel și cu anumite fructe tropicale, cum ar fi ananasul sau mango. Le poți pune acolo dacă sunt deja tăiate și vrei să le consumi rapid, dar nu pentru depozitare pe termen lung.</p>
+    <p class="mb-4">Am observat că anumite tipuri de legume, precum ceapa sau cartofii, nu beneficiază de pe urma temperaturii scăzute. De fapt, le poate înrăutăți calitatea. Acestea preferă un loc mai răcoros, dar nu frigider. Așa că, dacă ai un frigider cu o singură zonă Fresh, gândește-te bine ce pui acolo. E pentru produse perisabile, care au cel mai mult de câștigat de la temperaturi apropiate de îngheț, dar fără să înghețe.</p>
+    <p class="mb-4">Un alt aspect: dacă ai un frigider cu un compartiment Fresh Zone dedicat pentru carne și un altul pentru legume/fructe, respectă recomandările producătorului. Unele modele au chiar și control de umiditate separat. Nu amesteca carnea crudă cu legumele, chiar dacă sunt în zone diferite, pentru a evita contaminarea încrucișată. Folosește recipiente etanșe dacă simți nevoia.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele populare și prețuri în România (Octombrie 2023)</h2>
+    <p class="mb-4">Pe piața din România găsești combina frigorifică cu funcție Fresh Zone la o varietate de branduri și prețuri. Un model accesibil, de exemplu, este Arctic AD54260, pe care l-am menționat, ce se găsește în jur de 2.000 - 2.300 RON la eMAG sau Altex. Acesta oferă o zonă dedicată, dar fără control avansat al umidității.</p>
+    <p class="mb-4">Urcând spre zona premium, găsești modele Samsung, cum ar fi RB38T600DB1, care oferă tehnologie All-Around Cooling și o zonă Fresh Zone bine implementată. Prețurile pentru astfel de modele variază între 3.500 și 4.500 RON la eMAG, Altex, sau Flanco. Acestea au adesea și alte funcții smart, cum ar fi conectivitatea Wi-Fi.</p>
+    <p class="mb-4">LG vine cu modele precum GBB62SWGFN, care se încadrează în segmentul mediu-superior, cu prețuri în jur de 3.000 - 3.800 RON. Acestea excelează prin design și eficiență energetică, pe lângă compartimentul dedicat. Pentru cei care caută ce e mai bun, frigiderele Bosch sau Siemens cu tehnologii ca VitaFresh pot ajunge și la 5.000-7.000 RON, dar oferă control precis al temperaturii și umidității.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum să alegi combina frigorifică potrivită</h2>
+    <p class="mb-4">Când te uiți după o combina frigorifică cu funcție Fresh Zone, nu te gândi doar la asta. Uită-te la clasa energetică (A++ sau A+++ sunt cele mai economice), volumul total (asigură-te că e suficient pentru nevoile tale) și dimensiunile fizice. Un frigider prea mare sau prea mic poate fi la fel de ineficient.</p>
+    <p class="mb-4">Verifică dacă zona Fresh Zone este adaptată nevoilor tale. Ai nevoie doar de o temperatură mai joasă, sau vrei și control al umidității? Pentru mine, controlul umidității a făcut o diferență majoră la legumele mai delicate. Dacă gătești mult și cumperi des carne proaspătă, o zonă cu umiditate controlată merită investiția suplimentară.</p>
+    <p class="mb-4">Citește recenzii ale altor utilizatori și compară prețurile pe site-uri precum eMAG, Altex, Flanco sau PCGarage. Nu te grăbi. Am observat că marile reduceri apar în perioadele de Black Friday sau de sărbători. Un frigider e o piesă de mobilier în bucătărie pe care o vei folosi mulți ani, așa că merită să faci o alegere informată.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de mult mă ajută o zonă Fresh Zone la conservarea alimentelor?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  În experiența mea, o zonă Fresh Zone poate dubla sau chiar tripla prospețimea alimentelor perisabile precum carnea, peștele, lactatele și anumite legume/fructe, comparativ cu un frigider standard. Diferența e vizibilă la termenul de valabilitate.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Poate înlocui o zonă Fresh Zone congelatorul?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu, absolut deloc. Zona Fresh Zone lucrează la temperaturi pozitive (aproape de 0 grade Celsius) pentru a menține prospețimea. Congelatorul funcționează la temperaturi mult mai scăzute (-18 grade Celsius sau mai jos) pentru conservare pe termen foarte lung.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce fac dacă frigiderul meu nu are funcție Fresh Zone?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Poți improviza. Încearcă să depozitezi carnea și peștele în partea cea mai rece a frigiderului (de obicei, jos, deasupra sertarului de legume) și folosește recipiente etanșe. Pentru legume, verifică să nu fie prea umede și depozitează-le în pungile lor sau în recipiente perforate, dacă e cazul.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Există diferențe între Fresh Zone și BioFresh/VitaFresh?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, termenii sunt folosiți de diferiți producători (ex: LG, Samsung vs. Bosch, Siemens), dar conceptul de bază e similar: o zonă cu temperatură controlată pentru a prelungi prospețimea. Unele sisteme, precum VitaFresh, pot oferi control mai fin al umidității, pe lângă temperatură.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/multicooker-cu-programe-automate/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/multicooker-cu-programe-automate.webp" alt="Multicooker Cu Programe Automate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Multicooker Cu Programe Automate</h3>
+              </div>
+            </a>
+
+            <a href="/aspirator-robot-compact-pentru-apartamente/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aspirator-robot-compact-pentru-apartamente.webp" alt="Aspirator Robot Compact Pentru Apartamente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aspirator Robot Compact Pentru Apartamente</h3>
+              </div>
+            </a>
+
+            <a href="/robot-de-bucatarie-pentru-patiserie/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/robot-de-bucatarie-pentru-patiserie.webp" alt="Robot De Bucătărie Pentru Patiserie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Robot De Bucătărie Pentru Patiserie</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

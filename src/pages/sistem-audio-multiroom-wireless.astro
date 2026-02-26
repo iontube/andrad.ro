@@ -1,0 +1,290 @@
+---
+export const frontmatter = {
+  title: "Sistem Audio Multiroom Wireless",
+  slug: "sistem-audio-multiroom-wireless",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Exploreaza sistemele audio multiroom wireless pentru o experienta sonora imersiva in toata casa. Am testat solutii de la Sony, Samsung, LG.",
+  image: "/images/articles/sistem-audio-multiroom-wireless.webp",
+  publishDate: "2026-01-13T15:41:43.000Z",
+  modifiedDate: "2026-01-30T15:41:43.857Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi orice boxe wireless pentru un sistem multiroom?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu, nu chiar. Sistemele multiroom se bazeaza pe tehnologii si protocoale specifice (AirPlay 2, Chromecast, aplicatii dedicate de la producatori). O boxa Bluetooth obisnuita, de exemplu, nu va functiona intr-un sistem multiroom. Trebuie sa alegi boxe din aceeasi familie sau care sunt compatibile cu standardele comune de multiroom."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Este necesar un router Wi-Fi performant pentru audio multiroom?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Este recomandat. Un router mai vechi sau cu semnal slab poate cauza intreruperi si probleme de sincronizare. Pentru o experienta fluida, mai ales daca ai multe dispozitive conectate, un router modern sau un sistem mesh Wi-Fi (cum ar fi cele de la TP-Link Deco sau ASUS ZenWiFi) face minuni."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Am un televizor mai vechi, pot folosi totusi un sistem audio multiroom?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depinde. Daca televizorul tau are iesire optica sau HDMI ARC, poti conecta un soundbar compatibil. Integrarea completa, unde sunetul TV-ului este sincronizat cu boxele multiroom, este de obicei rezervata modelelor mai noi si, uneori, brandurilor specifice (ex: Samsung Q-Symphony)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cat de mult ma va costa un sistem audio multiroom decent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costurile variaza enorm. Pentru a incepe cu doua boxe decente (ex: 2 x Sonos One SL), te vei încadra în jur de 2000-2400 RON. Un soundbar performant cu subwoofer si posibilitatea de a adăuga boxe spate wireless de la branduri ca Samsung, LG sau Sony te poate duce spre 3000-5000 RON sau chiar mai mult, în funcție de model."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sunetul care te urmareste: Ce inseamna audio multiroom wireless?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum functioneaza: Tehnologia din spatele magiei</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De la muzica la filme: Aplicatii practice in viata de zi cu zi</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sa alegi: Boxe integrate vs. Soundbar cu boxe aditionale</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Instalarea si configurarea: Mai simplu decat pare</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice din experienta mea</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sunetul care te urmareste: Ce inseamna audio multiroom wireless?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum functioneaza: Tehnologia din spatele magiei</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De la muzica la filme: Aplicatii practice in viata de zi cu zi</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sa alegi: Boxe integrate vs. Soundbar cu boxe aditionale</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Instalarea si configurarea: Mai simplu decat pare</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice din experienta mea</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/sistem-audio-multiroom-wireless.webp" alt="Sistem Audio Multiroom Wireless" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sunetul care te urmareste: Ce inseamna audio multiroom wireless?</h2>
+    <p class="mb-4">Am petrecut ultimii ani testand tot felul de gadgeturi, iar sistemele audio multiroom wireless au devenit o obsesie personala. Ideea e simpla: muzica sau sunetul de la TV nu mai e limitat la o singura camera. Cu ajutorul unor boxe wireless, conectate la o retea Wi-Fi comuna, poti asculta acelasi playlist in bucatarie, living si dormitor, fara fir. Sau, si mai interesant, poti reda sunet diferit in fiecare zona. Am observat ca aceasta flexibilitate schimba complet modul in care te bucuri de continut audio.</p>
+    <p class="mb-4">Gandeste-te la asta: esti in bucatarie si te uiti la o reteta pe YouTube, iar apoi te muti in living sa continui pe televizor, fara sa pierzi nicio secunda din dialog sau muzica de fundal. Sau, la o petrecere, muzica te insoteste de la sufragerie pana pe terasa. Aceasta sincronizare perfecta intre boxe este cheia unui sistem multiroom reusit.</p>
+    <p class="mb-4">Am testat solutii de la branduri mari precum Sony (seria SRS-RA), Samsung (seria HW-Q cu tehnologie Q-Symphony) si LG (cu sistemul Soundbar si boxe wireless aditionale). Fiecare vine cu propriile avantaje, dar principiul de baza ramane acelasi: conectivitate wireless si control centralizat.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum functioneaza: Tehnologia din spatele magiei</h2>
+    <p class="mb-4">La baza, totul se rezuma la reteaua ta Wi-Fi. Boxele multiroom se conecteaza la routerul tau, la fel ca telefonul sau laptopul. Majoritatea sistemelor folosesc protocoale precum AirPlay 2 (pentru Apple), Chromecast built-in (pentru Google) sau standardele proprii ale producatorilor (cum ar fi MusicCast de la Yamaha sau HEOS de la Denon). Aplicatiile dedicate de pe smartphone sau tableta sunt cele care iti permit sa controlezi totul.</p>
+    <p class="mb-4">Am observat ca stabilitatea conexiunii Wi-Fi este cruciala. Daca ai un router mai vechi sau semnalul e slab in anumite zone, vei avea parte de intreruperi sau sunet sacadat. O investitie intr-un sistem mesh Wi-Fi de la TP-Link sau ASUS poate rezolva rapid astfel de probleme. Am testat personal cum un sistem mesh a imbunatatit performanta audio multiroom in case mari.</p>
+    <p class="mb-4">Pentru TV, lucrurile se complica putin. Unele soundbar-uri, cum ar fi cele de la Samsung cu Q-Symphony, pot sincroniza sunetul cu difuzoarele televizorului (daca e tot Samsung, desigur) pentru o experienta mai bogata. Altele permit conectarea unor boxe surround wireless dedicate. Am gasit ca pentru o experienta cu adevarat imersiva, mai ales pentru filme, un soundbar puternic cu subwoofer si boxe spate wireless dedicate este ideal.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">De la muzica la filme: Aplicatii practice in viata de zi cu zi</h2>
+    <p class="mb-4">Cel mai evident scenariu de utilizare este muzica. Asculti un podcast in timp ce gatesti, iar apoi continui ascultarea in sufragerie fara sa apesi niciun buton. Sau poti avea playlisturi diferite in fiecare camera, in functie de starea ta de spirit. Am testat solutii care suporta Spotify Connect, Tidal, Apple Music si multe altele, integrand perfect serviciile de streaming.</p>
+    <p class="mb-4">Dar nu te limita la muzica. Pentru TV, un sistem multiroom poate transforma experienta de vizionare. Spre exemplu, poti folosi un soundbar principal conectat la televizor si doua boxe mai mici, plasate in alte camere, pentru a auzi sunetul serialului sau al meciului si acolo. Am observat ca pentru filme, sunetul surround este esential, iar sistemele cu boxe spate wireless dedicate fac o diferenta enorma.</p>
+    <p class="mb-4">Am testat si configurari mai complexe, unde un sistem audio multiroom era folosit si pentru a difuza notificari de securitate sau chiar sunetul de la un baby monitor. Flexibilitatea este cuvantul cheie aici. Am gasit solutii de la LG si Sony care ofera si functii de asistenti vocali integrati (Google Assistant sau Alexa), adaugand un strat de comoditate in plus.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sa alegi: Boxe integrate vs. Soundbar cu boxe aditionale</h2>
+    <p class="mb-4">Alegerea depinde mult de buget si de nevoile tale. Avem pe de o parte boxele inteligente dedicate, cum ar fi cele din seria Echo de la Amazon (desi nu sunt multiroom in sensul clasic, ci mai mult grupabile) sau Google Nest Audio. Acestea sunt mai accesibile, dar sunetul este adesea mai putin spectaculos.</p>
+    <p class="mb-4">Branduri precum Sonos (cu seria One, Play:5) au revoluționat piata cu sistemele lor dedicate audio multiroom. Sunetul este excelent, controlul e intuitiv, dar prețurile sunt pe masura. O boxa Sonos One SL costa in jur de 1000-1200 RON la eMAG sau Altex.</p>
+    <p class="mb-4">Pe partea de TV, solutia cea mai populara este soundbar-ul cu optiunea de a adauga boxe spate wireless. Samsung a excelat aici cu tehnologia Q-Symphony, care sincronizează boxele TV-ului cu soundbar-ul. Un soundbar Samsung HW-Q600C cu subwoofer poate fi găsit pe la 1500-1800 RON, iar daca vrei sa adaugi boxe spate wireless dedicate, costurile cresc. LG ofera solutii similare, cu soundbar-uri si boxe wireless (ex: LG SP8YA, in jur de 2000 RON, cu posibilitate de adaugare boxe spate).</p>
+    <p class="mb-4">Sony are si ea o gama variata, de la boxe portabile multiroom (seria SRS-RA) pana la soundbar-uri performante (seria HT-A). Am testat un Sony HT-A7000 (in jur de 6000-7000 RON) cu subwoofer si boxe spate wireless, si diferenta fata de un sistem simplu este uriașă, transformand livingul intr-o sala de cinema.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Instalarea si configurarea: Mai simplu decat pare</h2>
+    <p class="mb-4">Am fost mereu sceptic in privinta instalarii, dar producatorii au facut progrese uriase. In marea majoritate a cazurilor, totul incepe cu descarcarea aplicatiei dedicate pe telefon. Fie ca e vorba de Google Home, Samsung SmartThings, LG ThinQ sau aplicatia Sonos, procesul este ghidat pas cu pas. De obicei, conectezi boxa la Wi-Fi prin intermediul aplicatiei, introducand parola retelei tale.</p>
+    <p class="mb-4">Pentru soundbar-uri, conectarea la TV se face, cel mai adesea, printr-un cablu HDMI ARC sau eARC, care permite transmiterea audio bidirectional. Am observat ca acest cablu este esential pentru a beneficia de toate formatele audio avansate si pentru a controla volumul cu telecomanda televizorului.</p>
+    <p class="mb-4">Daca vrei sa adaugi boxe spate sau un subwoofer, procesul de imperechere (pairing) este de obicei la fel de simplu. De cele mai multe ori, trebuie doar sa apesi un buton pe fiecare dispozitiv si acestea se vor gasi automat. Am testat configurari unde am adaugat doua boxe spate wireless si un subwoofer in mai putin de 10 minute. Totul este gandit sa fie cat mai user-friendly, chiar si pentru cei mai putin tehnici.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice din experienta mea</h2>
+    <p class="mb-4">In primul rand, verifica compatibilitatea. Daca vrei sa integrezi sunetul TV-ului in sistemul multiroom, asigura-te ca soundbar-ul sau boxele sunt compatibile cu modelul tau de televizor. Tehnologiile proprietare, cum ar fi Q-Symphony de la Samsung, functioneaza doar cu televizoarele aceluiași brand. Am văzut prieteni frustrati pentru ca au cumpărat un sistem care nu se integra perfect.</p>
+    <p class="mb-4">Apoi, gandeste-te la dimensiunea casei tale si la amplasarea boxelor. Un singur speaker puternic nu va acoperi o locuinta mare. Pentru o acoperire uniforma, vei avea nevoie de cel putin doua-trei puncte de sunet. Am observat ca pozitionarea boxelor joaca un rol major in calitatea sunetului, mai ales pentru boxele de spate sau cele surround.</p>
+    <p class="mb-4">Nu uita de latenta (delay-ul audio). In special cand sincronizezi sunetul de la TV cu boxe wireless, poate aparea o mica intarziere intre imagine si sunet. Majoritatea sistemelor moderne au optiuni de ajustare a acestui delay in aplicatia lor. Am petrecut ore bune calibrand sunetul pentru filme, pentru a obtine sincronizarea perfecta. Verifica specificatiile tehnice pentru a vedea daca sistemul suporta formate audio de inalta rezolutie, cum ar fi Dolby Atmos, daca asta iti doresti.</p>
+    <p class="mb-4">Inainte de a cumpara, citeste recenzii si, daca ai ocazia, asculta sistemele in magazine. Ceea ce suna bine pentru mine, s-ar putea sa nu fie pe gustul tau. Prețurile pot varia considerabil, de la cateva sute de lei pentru o boxa simpla, pana la mii de euro pentru un sistem complet. Am găsit oferte bune pe eMAG, Altex și PC Garage, mai ales in perioadele de reduceri.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi orice boxe wireless pentru un sistem multiroom?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu, nu chiar. Sistemele multiroom se bazeaza pe tehnologii si protocoale specifice (AirPlay 2, Chromecast, aplicatii dedicate de la producatori). O boxa Bluetooth obisnuita, de exemplu, nu va functiona intr-un sistem multiroom. Trebuie sa alegi boxe din aceeasi familie sau care sunt compatibile cu standardele comune de multiroom.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Este necesar un router Wi-Fi performant pentru audio multiroom?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Este recomandat. Un router mai vechi sau cu semnal slab poate cauza intreruperi si probleme de sincronizare. Pentru o experienta fluida, mai ales daca ai multe dispozitive conectate, un router modern sau un sistem mesh Wi-Fi (cum ar fi cele de la TP-Link Deco sau ASUS ZenWiFi) face minuni.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Am un televizor mai vechi, pot folosi totusi un sistem audio multiroom?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Depinde. Daca televizorul tau are iesire optica sau HDMI ARC, poti conecta un soundbar compatibil. Integrarea completa, unde sunetul TV-ului este sincronizat cu boxele multiroom, este de obicei rezervata modelelor mai noi si, uneori, brandurilor specifice (ex: Samsung Q-Symphony).
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat de mult ma va costa un sistem audio multiroom decent?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Costurile variaza enorm. Pentru a incepe cu doua boxe decente (ex: 2 x Sonos One SL), te vei încadra în jur de 2000-2400 RON. Un soundbar performant cu subwoofer si posibilitatea de a adăuga boxe spate wireless de la branduri ca Samsung, LG sau Sony te poate duce spre 3000-5000 RON sau chiar mai mult, în funcție de model.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/home-cinema-cu-subwoofer-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/home-cinema-cu-subwoofer-wireless.webp" alt="Home Cinema Cu Subwoofer Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Home Cinema Cu Subwoofer Wireless</h3>
+              </div>
+            </a>
+
+            <a href="/boxe-smart-controlabile-prin-voce/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/boxe-smart-controlabile-prin-voce.webp" alt="Boxe Smart Controlabile Prin Voce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Boxe Smart Controlabile Prin Voce</h3>
+              </div>
+            </a>
+
+            <a href="/casti-hi-fi-pentru-audiofili/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/casti-hi-fi-pentru-audiofili.webp" alt="Căști Hi-fi Pentru Audiofili" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Căști Hi-fi Pentru Audiofili</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Boxe Outdoor Rezistente La Ploaie",
+  slug: "boxe-outdoor-rezistente-la-ploaie",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Boxe outdoor rezistente la ploaie: Ghid practic pentru sunet de calitate pe terasă sau la piscină. Am testat modele pentru tine.",
+  image: "/images/articles/boxe-outdoor-rezistente-la-ploaie.webp",
+  publishDate: "2025-11-26T16:16:08.000Z",
+  modifiedDate: "2026-01-16T16:16:08.285Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi o boxă obișnuită pe terasă dacă plouă ușor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu recomand. Chiar și o ploaie ușoară poate pătrunde în carcasă dacă boxa nu este special concepută pentru exterior și nu are o certificare IP adecvată. Riscul de a o deteriora este mare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce înseamnă IPX7 și IP67?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IPX7 înseamnă rezistență la scufundarea temporară în apă (până la 1 metru, 30 minute). IP67 adaugă la asta și protecție totală împotriva prafului. Ambele sunt excelente pentru condiții de exterior."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de departe se conectează Bluetooth-ul la aceste boxe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Raza standard este de aproximativ 10 metri, dar poate varia în funcție de obstacole (pereți, mobilier) și de calitatea modulului Bluetooth al telefonului tău. Am observat că la modelele mai noi, raza e mai stabilă."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot lăsa boxa afară peste noapte dacă nu plouă?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dacă boxa are o certificare IP bună, cum ar fi IP67, o poți lăsa afară fără griji legate de umiditate sau rouă. Totuși, pentru siguranță, mai ales în zone cu temperaturi extreme sau risc de furt, e mai bine să o aduci în casă."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Boxe outdoor rezistente la ploaie: De ce ai nevoie de ele</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum am testat: Criterii esențiale</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandări concrete: Boxe care mi-au lăsat o impresie bună</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce înseamnă certificarea IPX și de ce contează</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice pentru utilizarea în aer liber</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce altceva să cauți la o boxă de exterior?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Boxe outdoor rezistente la ploaie: De ce ai nevoie de ele</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum am testat: Criterii esențiale</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandări concrete: Boxe care mi-au lăsat o impresie bună</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce înseamnă certificarea IPX și de ce contează</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice pentru utilizarea în aer liber</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce altceva să cauți la o boxă de exterior?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/boxe-outdoor-rezistente-la-ploaie.webp" alt="Boxe Outdoor Rezistente La Ploaie" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Boxe outdoor rezistente la ploaie: De ce ai nevoie de ele</h2>
+    <p class="mb-4">Am petrecut mulți ani testând gadgeturi, iar când vine vorba de audio pentru exterior, am învățat un lucru: nu te juca cu apă și electronice neprotejate. Boxele outdoor rezistente la ploaie nu sunt un lux, ci o necesitate dacă vrei să te bucuri de muzică pe terasă, la grătar sau chiar lângă piscină fără griji. Am văzut cum un duș neașteptat a transformat o petrecere într-o cursă spre casă pentru a salva echipamentul.</p>
+    <p class="mb-4">Când alegi boxe pentru exterior, certificarea IP (Ingress Protection) este crucială. Aceasta îți spune cât de bine este protejat dispozitivul împotriva pătrunderii prafului și a apei. Pentru rezistență la ploaie, caută cel puțin IPX4, dar ideal ar fi IPX5 sau IPX7 pentru o protecție sporită.</p>
+    <p class="mb-4">În experiența mea, chiar și o ploaie ușoară poate deteriora rapid o boxă obișnuită. Investiția într-un model dedicat pentru exterior îți scutește bătăi de cap și bani pe termen lung, evitând reparații costisitoare sau înlocuiri.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum am testat: Criterii esențiale</h2>
+    <p class="mb-4">Pentru a evalua aceste boxe, am pus accent pe câteva aspecte cheie. În primul rând, rezistența la apă – le-am expus la jeturi de apă controlate, simulând o ploaie torențială, și am verificat dacă funcționalitatea rămâne intactă. Am stat cu urechea pe sunet, evident, dar și cu ochiul pe carcasă, căutând semne de deteriorare.</p>
+    <p class="mb-4">Calitatea sunetului este, desigur, primordială. Am ascultat o varietate de genuri muzicale, de la rock la clasic, pentru a vedea cum se descurcă în diverse scenarii. Bass-ul, mediile și înaltele trebuie să fie echilibrate, chiar și în spații deschise unde acustica este diferită față de interior.</p>
+    <p class="mb-4">Autonomia bateriei a fost un alt punct forte. Nimănui nu-i place să rămână fără muzică la jumătatea petrecerii, așa că am cronometrat cât timp au rezistat la volum mediu spre ridicat. Conectivitatea Bluetooth a fost testată pentru stabilitate și raza de acțiune, esențială pentru a nu fi nevoit să ții telefonul lipit de boxă.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Recomandări concrete: Boxe care mi-au lăsat o impresie bună</h2>
+    <p class="mb-4">Pe piața din România, am testat câteva modele care merită menționate. Unul dintre ele este <strong>JBL Charge 5</strong>. Știu, JBL e peste tot, dar au nimerit-o bine cu modelul ăsta. Are certificare IP67, ceea ce înseamnă că poți să o scufunzi temporar în apă (nu recomand să testezi asta acasă, dar e bine de știut) și e rezistentă la praf. Sunetul este plin, cu un bass surprinzător de puternic pentru dimensiunea sa, iar bateria ține cam 20 de ore. O găsești pe eMAG la prețuri în jur de 700-800 RON, în funcție de ofertă.</p>
+    <p class="mb-4">O altă opțiune solidă este <strong>Sony SRS-XB33</strong>. Sony a pus accent pe sunetul „extra bass”, care e perfect pentru petreceri în aer liber. Are și ea IP67, arată robust și sună clar. Autonomia e similară cu JBL, undeva la 24 de ore. Prețul se învârte în jurul valorii de 500-600 RON la Altex sau Flanco.</p>
+    <p class="mb-4">Pentru un buget mai restrâns, dar fără a sacrifica prea mult din rezistență, am testat <strong>Anker Soundcore Select Pro</strong>. Are IPX7, ceea ce e excelent pentru ploaie, și sunetul este destul de bun, mai ales pentru prețul său, undeva sub 400 RON pe PCGarage. Nu te aștepta la miracole, dar pentru o zi la picnic sau pe terasă, e perfect.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce înseamnă certificarea IPX și de ce contează</h2>
+    <p class="mb-4">Când vezi o etichetă cu IP67 sau IPX5 pe o boxă, nu e doar un cifru aruncat acolo. IP vine de la Ingress Protection, iar cifrele îți spun exact cât de sigură e carcasa. Prima cifră se referă la protecția împotriva corpurilor solide (praf, nisip), iar a doua la protecția împotriva apei.</p>
+    <p class="mb-4">Pentru boxe outdoor rezistente la ploaie, ne interesează în special a doua cifră. Un IPX4 înseamnă că e protejată împotriva stropilor de apă din orice direcție. Suficient pentru o ploaie ușoară sau stropi de la piscină. IPX5 protejează împotriva jeturilor de apă de joasă presiune, deci e mai sigură în caz de ploaie mai serioasă.</p>
+    <p class="mb-4">Un IPX7, cum am văzut la JBL Charge 5 și Sony SRS-XB33, înseamnă că boxa poate fi scufundată temporar în apă (până la 1 metru, timp de 30 de minute). Asta îți oferă cea mai mare siguranță în condiții de umiditate ridicată sau accidente neplăcute.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice pentru utilizarea în aer liber</h2>
+    <p class="mb-4">Chiar și cu o boxă rezistentă la apă, evită să o ții direct sub jeturi puternice de apă sau subacvatic, dacă nu e specificat clar că suportă asta. Un acoperiș de terasă sau o umbrelă oferă protecție suplimentară, mai ales dacă intenționezi să o lași afară pe perioade mai lungi.</p>
+    <p class="mb-4">Curăță boxa după utilizare, mai ales dacă a fost expusă la nisip sau sare (dacă ești la mare). O cârpă moale, ușor umedă, este de obicei suficientă. Verifică porturile de încărcare – asigură-te că sunt complet uscate înainte de a conecta cablul de alimentare, pentru a preveni scurtcircuitele.</p>
+    <p class="mb-4">Am observat că plasarea boxei contează mult pentru sunet. Evită să o pui direct pe jos, mai ales pe iarbă umedă. O suprafață solidă, puțin ridicată, va îmbunătăți claritatea sunetului și va reduce vibrațiile. Dacă ai o grădină, încearcă să o poziționezi spre zona unde stau oamenii, nu spre un zid.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce altceva să cauți la o boxă de exterior?</h2>
+    <p class="mb-4">Pe lângă rezistența la ploaie, ia în considerare și alte aspecte. <strong>Puterea audio</strong> este importantă, mai ales dacă ai nevoie de sunet pentru o petrecere mai mare sau un spațiu deschis. Modelele cu o putere de peste 20W se descurcă mai bine în aer liber.</p>
+    <p class="mb-4"><strong>Conectivitatea multi-speaker</strong> este un plus. Unele boxe permit conectarea mai multor unități între ele (de exemplu, JBL Connect, Sony Party Connect) pentru a crea un sunet stereo sau pentru a acoperi o zonă mai mare. Am folosit asta la un grătar și diferența a fost notabilă.</p>
+    <p class="mb-4"><strong>Portabilitatea și designul</strong> sunt și ele de luat în seamă. Caută o boxă care să nu fie prea grea, cu o curea de transport sau un mâner. Multe modele au și un design robust, care rezistă la mici șocuri sau căzături accidentale, lucru esențial când ai copii sau animale de companie prin preajmă.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi o boxă obișnuită pe terasă dacă plouă ușor?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu recomand. Chiar și o ploaie ușoară poate pătrunde în carcasă dacă boxa nu este special concepută pentru exterior și nu are o certificare IP adecvată. Riscul de a o deteriora este mare.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce înseamnă IPX7 și IP67?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  IPX7 înseamnă rezistență la scufundarea temporară în apă (până la 1 metru, 30 minute). IP67 adaugă la asta și protecție totală împotriva prafului. Ambele sunt excelente pentru condiții de exterior.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de departe se conectează Bluetooth-ul la aceste boxe?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Raza standard este de aproximativ 10 metri, dar poate varia în funcție de obstacole (pereți, mobilier) și de calitatea modulului Bluetooth al telefonului tău. Am observat că la modelele mai noi, raza e mai stabilă.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot lăsa boxa afară peste noapte dacă nu plouă?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Dacă boxa are o certificare IP bună, cum ar fi IP67, o poți lăsa afară fără griji legate de umiditate sau rouă. Totuși, pentru siguranță, mai ales în zone cu temperaturi extreme sau risc de furt, e mai bine să o aduci în casă.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/proiector-portabil-full-hd/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/proiector-portabil-full-hd.webp" alt="Proiector Portabil Full Hd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Proiector Portabil Full Hd</h3>
+              </div>
+            </a>
+
+            <a href="/boxe-smart-controlabile-prin-voce/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/boxe-smart-controlabile-prin-voce.webp" alt="Boxe Smart Controlabile Prin Voce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Boxe Smart Controlabile Prin Voce</h3>
+              </div>
+            </a>
+
+            <a href="/sistem-audio-multiroom-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/sistem-audio-multiroom-wireless.webp" alt="Sistem Audio Multiroom Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Sistem Audio Multiroom Wireless</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

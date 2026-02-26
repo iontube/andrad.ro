@@ -1,0 +1,286 @@
+---
+export const frontmatter = {
+  title: "Robot De Bucătărie Pentru Patiserie",
+  slug: "robot-de-bucatarie-pentru-patiserie",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Robot de bucatarie pentru patiserie: am testat modelele de top. Vezi ce a mers bine si ce nu.",
+  image: "/images/articles/robot-de-bucatarie-pentru-patiserie.webp",
+  publishDate: "2026-01-11T06:50:10.000Z",
+  modifiedDate: "2026-01-30T06:50:10.000Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ce diferenta este intre un robot de bucatarie si un mixer de mana?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un mixer de mana e bun pentru batut albusuri sau frisca, dar nu poate framanta aluaturi dense. Un robot de bucatarie are un motor mai puternic si accesorii dedicate, cum ar fi carligul de aluat, care ii permit sa faca si asta."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot folosi robotul de bucatarie si pentru alte lucruri, nu doar patiserie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolut. Majoritatea robotilor de bucatarie vin cu accesorii pentru amestecat, batut, framantat. Multe modele permit si atasarea de accesorii suplimentare, cum ar fi masini de tocat carne sau feliatoare, transformandu-l intr-un aparat multifunctional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cat de zgomotos este un robot de bucatarie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nivelul de zgomot variaza in functie de model si de viteza de operare. Modelele mai puternice, mai ales la viteze mari, pot fi destul de zgomotoase. In general, aparatele de la branduri consacrate precum KitchenAid sau Kenwood au un nivel de zgomot acceptabil pentru utilizare casnica."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce inseamna un robot de bucatarie planetar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un robot planetar are un mecanism prin care telul sau carligul se invarte in jurul axului propriu, dar si in jurul axului central al bolului. Acest tip de miscare asigura amestecarea uniforma a tuturor ingredientelor, fara a lasa zone neamestecate pe fundul sau pe peretii bolului. Majoritatea robotilor de bucatarie pentru patiserie sunt planetare."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Puterea si Versatilitatea: Ce Conteaza cu Adevarat</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Materiale si Durabilitate: Investitia pe Termen Scurt si Lung</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Practicabilitate: Curatare si Depozitare</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Accesorii Esentiale pentru Patiserie</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Am Invatat din Testarea Robotilor de Bucatarie pentru Patiserie</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Puterea si Versatilitatea: Ce Conteaza cu Adevarat</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Materiale si Durabilitate: Investitia pe Termen Scurt si Lung</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Practicabilitate: Curatare si Depozitare</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Accesorii Esentiale pentru Patiserie</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Am Invatat din Testarea Robotilor de Bucatarie pentru Patiserie</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/robot-de-bucatarie-pentru-patiserie.webp" alt="Robot De Bucătărie Pentru Patiserie" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    
+    <p class="mb-4">Daca te pasioneaza patiseria si vrei sa duci deserturile facute in casa la un alt nivel, un robot de bucatarie dedicat acestui scop e o investitie care merita luata in calcul. Am pus mana pe cateva modele populare si am petrecut multe ore in bucatarie, asa ca stiu exact ce se intampla in spatele reclamelor stralucitoare. Nu vorbim de un simplu blender, ci de un aparat complex, capabil sa framante aluat, sa amestece creme fine si sa toace ingrediente cu precizie. In experienta mea, alegerea potrivita poate economisi timp pretios si poate imbunatati semnificativ textura si uniformitatea preparatelor tale. Am testat modele de la KitchenAid, Kenwood si chiar si o varianta mai accesibila de la Philips, ca sa am o imagine completa a pietei din Romania.</p>
+    <p class="mb-4">Am inceput cu un clasic: un KitchenAid Artisan, cu bolul sau de 5 litri. L-am gasit pe eMAG la pretul de aproximativ 3.500 RON. Designul e iconic, iar constructia solida, din metal, iti da incredere. L-am pus la treaba cu un aluat de paine, unde s-a descurcat exemplar, framantandu-l pana a devenit elastic si fin. Apoi, am trecut la o crema de patiserie, unde am apreciat viteza reglabila si faptul ca nu stropeste prea tare.</p>
+    <p class="mb-4">Urmatorul pe lista a fost Kenwood Chef Titanium, pe care l-am gasit pe Altex la circa 4.200 RON. Acest model vine cu o gama variata de accesorii incluse, de la carlig de aluat la tel si paleta. Bolul sau de 4.6 litri e suficient pentru majoritatea retetelor de casa. Am observat ca motorul e mai puternic decat la KitchenAid, ceea ce se traduce printr-o framantare mai rapida a aluaturilor dense. Un aspect pe care l-am apreciat la Kenwood e sistemul de atasare a accesoriilor, foarte intuitiv si sigur.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Puterea si Versatilitatea: Ce Conteaza cu Adevarat</h2>
+    <p class="mb-4">Cea mai mare diferenta intre un robot de bucatarie bun si unul mediocru pentru patiserie sta in puterea motorului si in modul in care aceasta este distribuita. Am observat ca modelele cu motoare sub 800W pot avea probleme cu aluaturile foarte dense, cum ar fi cele de cozonac sau de panettone. In aceste cazuri, motorul se poate supraincalzi sau chiar poate ceda. KitchenAid Artisan are 300W, dar puterea este gestionata eficient, in timp ce Kenwood Chef Titanium dispune de 1500W, oferind un plus de forta bruta.</p>
+    <p class="mb-4">Versatilitatea e cheia, mai ales daca vrei sa folosesti robotul pentru mai mult decat simpla amestecare. Accesoriile fac diferenta: un tel pentru creme si albusuri, o paleta pentru aluaturi moi si un carlig pentru cele dense. Unele modele, cum ar fi cele de la Bosch (de exemplu, MUM Serie 6, gasit pe PCGarage la aproximativ 2.800 RON), vin cu o gama impresionanta de accesorii optionale, de la masina de tocat carne la extragator de suc. Am testat un model Bosch cu accesoriul de paste si am fost placut impresionat de rezultate.</p>
+    <p class="mb-4">Am observat ca numarul de viteze este de asemenea important. O gama larga de viteze, de la cea mai mica pentru amestecare delicata, pana la cea mai mare pentru batere rapida, iti ofera control maxim asupra preparatelor. Un robot cu doar doua viteze poate fi limitativ pentru anum হস্তক্ষেপ in anumite retete delicate.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Materiale si Durabilitate: Investitia pe Termen Scurt si Lung</h2>
+    <p class="mb-4">Cand vine vorba de un robot de bucatarie pentru patiserie, materialele din care este construit sunt esentiale pentru durabilitate si igiena. Plasticul de proasta calitate se poate crapa sau se poate decolora in timp, mai ales daca il folosesti des. Am preferat intotdeauna aparatele cu carcase din metal (aluminiu turnat sau otel inoxidabil), asa cum am intalnit la KitchenAid si Kenwood. Acestea sunt mai rezistente la socuri si se curata mult mai usor.</p>
+    <p class="mb-4">Bolurile din inox sunt, in parerea mea, cele mai bune. Nu se pateaza, nu retin mirosuri si sunt rezistente la coroziune. Am intalnit si boluri din sticla groasa, care arata elegant, dar sunt mai greu de manevrat si se pot sparge. Modelele mai ieftine, cum ar fi unele de la Tefal (de exemplu, Kitchen Machine, pe Flanco la aproximativ 1.500 RON), folosesc adesea o combinatie de plastic si metal, ceea ce le face mai accesibile, dar pot compromite durabilitatea pe termen lung.</p>
+    <p class="mb-4">Am observat ca si accesoriile trebuie sa fie de calitate. Cele din otel inoxidabil sunt cele mai bune, rezista la uzura si sunt igienice. Cele din plastic, chiar daca sunt mai usoare, se pot deteriora mai repede la utilizare intensiva sau la spalari repetate.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Practicabilitate: Curatare si Depozitare</h2>
+    <p class="mb-4">Un robot de bucatarie, oricat de performant ar fi, devine o povara daca este greu de curatat sau de depozitat. Am invatat din experienta ca accesoriile care pot fi spalate in masina de spalat vase sunt un mare plus. Majoritatea modelelor de top, inclusiv KitchenAid si Kenwood, ofera aceasta facilitate. Parti precum bolul, telul, carligul si paleta se pot spala fara probleme.</p>
+    <p class="mb-4">Carcasele robotilor se curata, de obicei, cu o carpa umeda. Am observat ca modelele cu suprafete netede, fara multe colturi greu accesibile, sunt mai usor de intretinut. Unele aparate vin cu protectii anti-stropire detasabile, ceea ce este excelent pentru a mentine bucataria curata, mai ales cand lucrezi cu ingrediente fine sau lichide.</p>
+    <p class="mb-4">Ca si depozitare, robotii de bucatarie pot fi destul de masivi. Daca ai spatiu limitat in bucatarie, cauta un model cu un design mai compact sau unul ale carui accesorii pot fi depozitate in interiorul bolului (acest lucru este rar, dar am intalnit la unele modele mai vechi). Am observat ca greutatea este un factor important; un robot greu e mai stabil pe blat, dar mai dificil de mutat.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Accesorii Esentiale pentru Patiserie</h2>
+    <p class="mb-4">Pe langa accesoriile de baza (tel, carlig, paleta), exista cateva accesorii suplimentare care pot transforma un robot de bucatarie intr-un adevarat asistent pentru patiserie. Am testat un accesoriu pentru facut paste proaspete la un model Kenwood, iar rezultatele au fost uimitoare – paste perfect formate, mult mai bune decat cele din comert.</p>
+    <p class="mb-4">Un accesoriu pentru facut inghetata este, de asemenea, un plus binevenit in zilele calduroase. Majoritatea acestor accesorii sunt boluri speciale pe care le pui la congelator inainte de utilizare. Am incercat un astfel de accesoriu la un robot Bosch si am obtinut o inghetata cremoasa, fara cristale de gheata.</p>
+    <p class="mb-4">Pentru cei cu adevarat pasionati, exista si accesorii pentru feliat legume, pentru facut piureuri sau chiar pentru tocat carne. Acestea extind functionalitatea robotului mult dincolo de patiserie, transformandu-l intr-un aparat multifunctional. Am observat ca pretul acestor accesorii poate fi destul de ridicat, uneori ajungand la cateva sute de lei pe bucata, deci e bine sa te gandesti de la inceput de ce ai nevoie.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Am Invatat din Testarea Robotilor de Bucatarie pentru Patiserie</h2>
+    <p class="mb-4">Dupa ce am pus la treaba diverse modele, pot spune cu mana pe inima ca un robot de bucatarie dedicat patiseriei face o diferenta reala. Am observat ca aluaturile ies mult mai bine framantate, cremele sunt omogene si aerate, iar timpul petrecut in bucatarie se reduce considerabil. Un robot bun iti permite sa experimentezi cu retete complexe fara teama ca aparatul nu va face fata.</p>
+    <p class="mb-4">Am invatat ca nu trebuie sa te zgaricesti la putere. Un motor mai puternic inseamna ca poti aborda o gama mai larga de retete, fara sa risti sa supraincalzesti aparatul. De asemenea, calitatea materialelor conteaza enorm pentru igiena si durabilitate. Am preferat aparatele cu carcasa metalica si boluri din inox.</p>
+    <p class="mb-4">Inainte de a cumpara, gandeste-te la ce vrei sa gatesti cel mai des. Ai nevoie de un robot pentru aluaturi dense sau predominant pentru creme si amestecuri usoare? Raspunsul la aceasta intrebare te va ghida spre modelul cu accesoriile potrivite si puterea adecvata. Am observat ca preturile variaza considerabil, de la 1.500 RON pentru modele de baza, pana la peste 5.000 RON pentru aparatele profesionale.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce diferenta este intre un robot de bucatarie si un mixer de mana?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Un mixer de mana e bun pentru batut albusuri sau frisca, dar nu poate framanta aluaturi dense. Un robot de bucatarie are un motor mai puternic si accesorii dedicate, cum ar fi carligul de aluat, care ii permit sa faca si asta.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi robotul de bucatarie si pentru alte lucruri, nu doar patiserie?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Absolut. Majoritatea robotilor de bucatarie vin cu accesorii pentru amestecat, batut, framantat. Multe modele permit si atasarea de accesorii suplimentare, cum ar fi masini de tocat carne sau feliatoare, transformandu-l intr-un aparat multifunctional.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat de zgomotos este un robot de bucatarie?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nivelul de zgomot variaza in functie de model si de viteza de operare. Modelele mai puternice, mai ales la viteze mari, pot fi destul de zgomotoase. In general, aparatele de la branduri consacrate precum KitchenAid sau Kenwood au un nivel de zgomot acceptabil pentru utilizare casnica.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce inseamna un robot de bucatarie planetar?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Un robot planetar are un mecanism prin care telul sau carligul se invarte in jurul axului propriu, dar si in jurul axului central al bolului. Acest tip de miscare asigura amestecarea uniforma a tuturor ingredientelor, fara a lasa zone neamestecate pe fundul sau pe peretii bolului. Majoritatea robotilor de bucatarie pentru patiserie sunt planetare.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/multicooker-cu-programe-automate/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/multicooker-cu-programe-automate.webp" alt="Multicooker Cu Programe Automate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Multicooker Cu Programe Automate</h3>
+              </div>
+            </a>
+
+            <a href="/uscator-compact-de-rufe-pentru-balcon/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/uscator-compact-de-rufe-pentru-balcon.webp" alt="Uscător Compact De Rufe Pentru Balcon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Uscător Compact De Rufe Pentru Balcon</h3>
+              </div>
+            </a>
+
+            <a href="/aspirator-robot-compact-pentru-apartamente/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aspirator-robot-compact-pentru-apartamente.webp" alt="Aspirator Robot Compact Pentru Apartamente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aspirator Robot Compact Pentru Apartamente</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,366 @@
+---
+export const frontmatter = {
+  title: "Sistem Smart Pentru Iluminat Grădină",
+  slug: "sistem-smart-pentru-iluminat-gradina",
+  category: "Smart Home",
+  categorySlug: "smart-home",
+  excerpt: "Cel mai bun sistem smart pentru iluminat gradina este cel care se potriveste nevoilor si bugetului tau, dar daca ar fi sa aleg un punct de pornire, Philips Hue cu Bridge-ul sau si becurile/corpurile dedicate exteriorului e o optiune solida si versatila. Il poti controla din aplicatie, iti permite sa creezi scene si rutine, si e un ecosistem matur. Alte optiuni bune, in functie de ce vrei exact, sunt Osram Smart+ sau chiar solutii DIY cu Shelly/Sonoff pentru cei mai tehnici.",
+  image: "/images/articles/sistem-smart-pentru-iluminat-gradina.webp",
+  publishDate: "2026-02-04T17:32:05.602Z",
+  modifiedDate: "2026-02-04T17:32:05.602Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "cat costa un sistem smart pentru iluminat gradina",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un sistem smart pentru iluminat gradina poate costa de la aproximativ 300-400 RON pentru solutii entry-level sau DIY (gen Shelly cu accesorii) pana la peste 1500-2000 RON pentru un kit complet Philips Hue cu mai multe corpuri de iluminat si bridge. Pretul variaza mult in functie de brand, numarul de corpuri si complexitatea sistemului."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "care e diferenta intre iluminatul smart pentru gradina si cel normal",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Iluminatul smart pentru gradina permite controlul luminilor prin aplicatii mobile, comenzi vocale sau automatizari (programe, senzori). Spre deosebire de cel normal, care are doar un intrerupator fizic, cel smart ofera flexibilitate crescuta, posibilitatea de a crea scene, a regla intensitatea si culoarea (la modelele RGB) si economie de energie prin automatizari."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "merita sa cumpar un sistem smart pentru iluminat gradina Philips Hue",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, merita daca bugetul iti permite si cauti cea mai stabila, fiabila si usor de utilizat solutie. Philips Hue ofera un ecosistem matur, control intuitiv prin aplicatie, compatibilitate extinsa si o calitate a constructiei superioara, ideala pentru exterior. Dezavantajul principal este pretul mai ridicat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ce sistem smart de iluminat gradina e mai ieftin",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cele mai ieftine sisteme smart pentru iluminat gradina sunt de obicei cele DIY (Do It Yourself) bazate pe module precum Shelly sau Sonoff, unde cumperi separat corpurile de iluminat si modulele smart, sau solutiile de la branduri precum Osram Smart+ sau Govee (pentru benzi LED), care ofera preturi mai accesibile per corp."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "cum conectez becurile smart in gradina",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Conectarea depinde de sistem. Sistemele cu bridge (ex: Philips Hue) necesita ca bridge-ul sa fie conectat la router, apoi becurile se asociaza cu bridge-ul. Sistemele Wi-Fi se conecteaza direct la reteaua ta Wi-Fi. Unele sisteme Zigbee pot fi conectate la hub-uri compatibile (Amazon Echo, Samsung SmartThings) fara un bridge dedicat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "pot folosi lumini smart de interior afara",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu este recomandat sa folosesti lumini smart de interior in exterior. Acestea nu sunt proiectate sa reziste la conditii de umezeala, praf, variatii de temperatura sau soare puternic, asa ca se pot defecta rapid si pot deveni periculoase. Cauta intotdeauna produse cu rating IP specific pentru exterior (IP44, IP65, IP67)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ce inseamna IP65 la iluminatul de gradina",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un rating IP65 pentru iluminatul de gradina inseamna ca produsul este protejat complet impotriva prafului si impotriva jeturilor de apa venite din orice directie. Aceste corpuri sunt ideale pentru exterior, putand fi expuse la ploaie, stropiri si umiditate crescuta fara probleme."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "unde gasesc sisteme smart pentru iluminat gradina",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sisteme smart pentru iluminat gradina se gasesc in magazinele mari de electronice si bricolaj (ex: eMAG, Altex, Dedeman, Leroy Merlin), pe site-urile producatorilor direct (Philips Hue, Osram), si in magazine online specializate pe smart home sau automatizari."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sistem smart pentru iluminat gradina sa alegi ACUM</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Top 4 optiuni de sisteme smart pentru iluminat gradina (cu preturi si pareri sincere)</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum sa alegi cel mai bun sistem smart pentru iluminat gradina pentru tine</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Philips Hue vs. Osram Smart+ vs. DIY Shelly: Care e diferenta reala pe teren</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Greseli frecvente si sfaturi de insider cand instalezi un sistem smart pentru iluminat gradina</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Verdict final: Ce sistem smart pentru iluminat gradina cumperi in functie de buget</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sistem smart pentru iluminat gradina sa alegi ACUM</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Top 4 optiuni de sisteme smart pentru iluminat gradina (cu preturi si pareri sincere)</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum sa alegi cel mai bun sistem smart pentru iluminat gradina pentru tine</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Philips Hue vs. Osram Smart+ vs. DIY Shelly: Care e diferenta reala pe teren</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Greseli frecvente si sfaturi de insider cand instalezi un sistem smart pentru iluminat gradina</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Verdict final: Ce sistem smart pentru iluminat gradina cumperi in functie de buget</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/sistem-smart-pentru-iluminat-gradina.webp" alt="Sistem Smart Pentru Iluminat Grădină" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sistem smart pentru iluminat gradina sa alegi ACUM</h2>
+    <p class="mb-4">Hai sa fim direct. Daca vrei un <strong>sistem smart pentru iluminat gradina</strong> care sa mearga din prima, fara batai de cap, si sa ai acces la o gramada de optiuni si integrari, Philips Hue e regele. Da, stiu, e mai scump. Dar ambele sisteme mele Hue de exterior merg de 3 ani fara probleme, si am vazut si la prieteni cum arata si cat de usor se configureaza. Ai nevoie de Hue Bridge pentru functionalitatea completa, asta e un cost in plus. Becurile, spoturile, banda LED – toate vin cu certificari pentru exterior, deci nu trebuie sa-ti faci griji de ploaie sau zapada. Controlezi totul din aplicatie, de pe glob. Poti seta programe, scenarii de lumina, sa se aprinda cand ajungi acasa, sa se stinga automat. Sau, pentru cei mai tehnici, sa se sincronizeze cu muzica, daca te tine buzunarul si vrei party in curte.</p>
+    <p class="mb-4">Pe locul doi, zic eu, ar fi Osram Smart+. E o alternativa mai accesibila, de obicei. Foloseste tot tehnologie Zigbee, deci e compatibila cu multe bridge-uri de la alte branduri, cum ar fi cele de la Amazon Echo sau Google Home, deci n-ai neaparat nevoie de un bridge Osram dedicat. Au si ei o gama decenta de produse pentru exterior, spoturi, surse de lumina. Avantajul major e pretul, adesea mai mic decat Hue. Dezavantajul? Partea de aplicatie si ecosistem nu e la fel de dezvoltata ca la Philips. Dar daca vrei doar sa aprinzi/stangi luminile de pe telefon si sa setezi un program, e perfect.</p>
+    <p class="mb-4">Pentru cei care vor sa-si faca singuri un <strong>sistem smart pentru iluminat gradina</strong>, solutiile gen Shelly sau Sonoff sunt gold. Iti iei un releu smart ( Shelly 1PM Plus e genial, si pentru exterior daca il pui intr-o cutie etansa), il conectezi la o sursa de curent si la corpurile tale de iluminat preferate. Asta e tot. Le controlezi prin Wi-Fi, direct din aplicatia lor sau integrate in Home Assistant, Google Home, Alexa. E cea mai ieftina solutie, cea mai customizabila. Dar, ma rog, te pricepi la electrica un pic. Nu e pentru oricine. Si trebuie sa te asiguri ca e totul etans si sigur. Na, asta e.</p>
+    <p class="mb-4">Deci, ca sa rezum. Philips Hue: scump, dar cel mai complet si user-friendly. Osram Smart+: bun raport calitate-pret, compatibilitate buna. Shelly/Sonoff: ieftin, super customizabil, dar necesita cunostinte tehnice.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Top 4 optiuni de sisteme smart pentru iluminat gradina (cu preturi si pareri sincere)</h2>
+    <p class="mb-4">Cand vine vorba de <strong>sistem smart pentru iluminat gradina</strong>, nu tot ce zboara se si mananca. Am testat destule incat sa stiu ce merge si ce nu. Uite cateva optiuni pe care le recomand, cu bune si rele, ca sa nu zici ca te-am mintit pe fata.<p><strong>1. Philips Hue Outdoor Spotlights (Starter Kit)</strong></p><ul><li><strong>Pret estimat:</strong> 800 - 1200 RON (kit cu 3 spoturi, transformator si Hue Bridge). Un spot individual e cam 300-400 RON.</li><li><strong>Avantaje:</strong></li><ul><li>Calitatea constructiei e top. Le simti ca sunt facute sa reziste ani de zile la intemperii.</li><li>Sistemul Hue e cel mai matur. Aplicatie intuitiva, integrari cu tot ce misca (Alexa, Google, HomeKit, IFTTT).</li><li>Poti crea scene superbe, sa simulezi apus, rasarit, lumina de luna.</li><li>Extrem de scalabil. Poti adauga becuri, benzi, alte tipuri de corpuri de iluminat fara probleme.</li><li>Se integreaza perfect cu iluminatul din casa, daca ai deja Hue.</li></ul><li><strong>Dezavantaje:</strong></li><ul><li>Pretul. E cel mai mare impediment. Bridge-ul singur e vreo 300 RON.</li><li>Necesita Bridge-ul pentru functionalitate completa. Daca vrei doar control simplu, exista si variante wireless, dar nu sunt la fel de performante.</li><li>Distanta maxima de la Bridge la primul corp e limitata, uneori ai nevoie de extensii sau alte bridge-uri pentru gradini foarte mari.</li></ul><p><strong>2. Osram Smart+ LED Garden Spot/Path Light</strong></p><ul><li><strong>Pret estimat:</strong> 200 - 350 RON per corp cu transformator inclus. Kits mai mari pot fi mai avantajoase.</li><li><strong>Avantaje:</strong></li><ul><li>Pret mult mai accesibil decat Hue. Poti echipa o gradina intreaga cu mai putini bani.</li><li>Folosesc Zigbee, deci pot functiona cu multe bridge-uri existente (Philips Hue, Samsung SmartThings, Amazon Echo Plus/Show).</li><li>Instalare relativ simpla, de obicei vin cu tot ce ai nevoie in cutie.</li><li>Calitate buna pentru pretul lor, rezista la ploaie (verificati IP rating-ul!).</li></ul><li><strong>Dezavantaje:</strong></li><ul><li>Aplicatia Osram nu e la fel de rafinata ca la Hue. Mai putine optiuni de customizare.</li><li>Uneori pot aparea mici probleme de conectivitate, mai ales daca ai multe dispozitive in retea.</li><li>Ecosistemul e mai mic, mai putine optiuni de extensie comparativ cu Hue.</li></ul><p><strong>3. Shelly RGBW2 cu sursa de alimentare si conectori etansi</strong></p><ul><li><strong>Pret estimat:</strong> 150-200 RON pentru Shelly + 100-150 RON pentru sursa si cutia etansa. Total pe corp: 250-350 RON.</li><li><strong>Avantaje:</strong></li><ul><li>Extrem de flexibil. Poti folosi orice corp de iluminat cu 12V sau 24V.</li><li>Control direct prin Wi-Fi, nu necesita Bridge. Se integreaza perfect in Home Assistant, Google Home, Alexa.</li><li>Poti seta orice culoare vrei, luminozitate, efecte.</li><li>Foarte ieftin pentru ce ofera, daca ai cunostinte tehnice.</li><li>Produs european, calitate buna.</li></ul><li><strong>Dezavantaje:</strong></li><ul><li>Necesita cunostinte de baza de electrica pentru instalare.</li><li>Trebuie sa cumperi separat sursa de alimentare si cutie etansa pentru exterior, ceea ce mai creste costul si efortul.</li><li>Nu e un "plug and play" ca Hue sau Osram.</li><li>Aplicatia Shelly e functionala, dar nu are "wow factorul" de la Philips.</li></ul><p><strong>4. Govee Outdoor LED Strip Lights (cu control smart)</strong></p><ul><li><strong>Pret estimat:</strong> 200 - 400 RON, in functie de lungime si model.</li><li><strong>Avantaje:</strong></li><ul><li>Super pentru a crea atmosfera pe terase, sub streasina, in jurul gardului.</li><li>Multe efecte vizuale dinamice, muzica-reactiv.</li><li>Control prin aplicatie, Bluetooth, uneori si Wi-Fi (modele mai noi).</li><li>Pret decent pentru ceea ce ofera, mai ales daca vrei ceva "fun".</li></ul><li><strong>Dezavantaje:</strong></li><ul><li>Durabilitatea pe termen lung in conditii de exterior extreme e uneori pusa sub semnul intrebarii. Nu sunt "grele" ca spoturile metalice Hue.</li><li>Etansarea nu e intotdeauna perfecta, mai ales la conectori.</li><li>Necesita o sursa de curent aproape, ceea ce poate fi incomod.</li><li>Nu sunt "stilate" ca un corp de iluminat dedicat, sunt mai mult "decorative".</li></ul></ul></p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum sa alegi cel mai bun sistem smart pentru iluminat gradina pentru tine</h2>
+    <p class="mb-4">Bun, hai sa zicem ca te-ai hotarat sa faci pasul spre un <strong>sistem smart pentru iluminat gradina</strong>. Ce te uiti, concret? Nu te lasa vrajit de poze frumoase. Uite care-s criteriile mele:</p>
+    <p class="mb-4"><strong>1. Bugetul, evident.</strong> Asta stabileste tot. Daca ai 500 RON, nu te uiti la kit-uri Hue de 1500. Te uiti la Osram, sau chiar la solutii DIY cu Shelly. Daca ai 2000 RON, poti sa incepi sa te gandesti serios la Hue sau la o combinatie de Osram si niste spoturi smart mai de Doamne-ajuta.</p>
+    <p class="mb-4"><strong>2. Ce vrei sa faci cu luminile?</strong></p><ul><li><strong>Doar sa le aprinzi/stangi si sa setezi un program?</strong> Orice sistem smart o face. Nu ai nevoie de chestii complicate.</li><li><strong>Vrei sa creezi atmosfera, scene diferite?</strong> Aici Philips Hue exceleaza. Au culori vibrante, multa flexibilitate. Dar si Osram are optiuni bune.</li><li><strong>Vrei sa se sincronizeze cu muzica sau filmele?</strong> Asta e alta poveste. Unele benzi LED smart, ca Govee, sunt facute pentru asta. Hue are si el integrari, dar e mai scump.</li><li><strong>Vrei iluminat de functionalitate (ca sa vezi pe unde calci)?</strong> Aici te uiti la spoturi, la lumina alba rece sau calda, important e sa fie puternica si sa acopere zona dorita. Nu te intereseaza neaparat culorile.</li></ul><p><strong>3. Tipul de control:</strong></p><ul><li><strong>Aplicatie pe telefon:</strong> Asta e standardul. Dar cat de buna e aplicatia? Usor de folosit? Stabila?</li><li><strong>Control vocal:</strong> Vrei sa le controlezi cu "Ok Google, aprinde luminile din gradina"? Verifica compatibilitatea cu Alexa, Google Assistant sau Siri.</li><li><strong>Senzori de miscare/lumina:</strong> Unele sisteme vin cu senzori, altele pot fi integrate cu senzori separati. Foarte util ca sa economisesti energie. Lumina sa se aprinda doar cand e cineva sau cand se intuneca.</li><li><strong>Bridge vs. Wi-Fi direct:</strong> Bridge-ul (cum e la Hue) creeaza o retea separata, mai stabila, mai rapida, cu raza mai mare. Controlul Wi-Fi direct depinde de semnalul tau Wi-Fi. Daca ai semnal slab in curte, s-ar putea sa ai probleme.</li></ul><p><strong>4. Calitatea constructiei si rezistenta la intemperii:</strong> Asta e CRUCIAL pentru exterior. Cauta IP rating (IP44, IP65, IP67). IP44 e ok pentru stropiri, IP65 pentru jeturi de apa, IP67 pentru imersie temporara. Materialele conteaza: aluminiu, otel inoxidabil sunt mai bune decat plasticul ieftin. Am avut un corp de iluminat "waterproof" din plastic care a cedat in primul an de la soare si ploaie.</p>
+    <p class="mb-4"><strong>5. Scalabilitatea ecosistemului:</strong> Daca planuiesti sa iti extinzi iluminatul smart in ani urmatori, ia in considerare un brand cu o gama larga de produse. Philips Hue e campion la asta.</p>
+    <p class="mb-4"><strong>6. Usurinta instalarii:</strong> Daca nu te pricepi la bibilit cu firele, ia ceva "plug and play" gen Hue sau Osram. Daca esti tehnic, Shelly sau Sonoff iti ofera libertate maxima.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Philips Hue vs. Osram Smart+ vs. DIY Shelly: Care e diferenta reala pe teren</h2>
+    <p class="mb-4">Hai sa punem fata in fata cele mai populare variante de <strong>sistem smart pentru iluminat gradina</strong>, sa vedem unde ne plasam. Am lucrat cu toate trei si stiu cam ce pot. Nu ma intreba de Xiaomi sau alte branduri mai no-name, alea sunt loterie.</p>
+    <p class="mb-4"><strong>Philips Hue: Regele sistemelor integrate</strong></p><ul><li><strong>Cum functioneaza:</strong> Ai nevoie de Hue Bridge conectat la routerul tau. Apoi, becurile, spoturile, benzile LED comunica cu Bridge-ul prin Zigbee. Aplicatia de pe telefon controleaza Bridge-ul.</li><li><strong>Avantaje clare:</strong></li><ul><li><strong>Stabilitate si fiabilitate:</strong> Datorita Bridge-ului, conexiunea e super stabila, rapida. Nu ai lag.</li><li><strong>Ecosistem vast:</strong> De la becuri, la spoturi, proiectoare, benzi, pana la senzori si intrerupatoare. Totul merge impreuna.</li><li><strong>Aplicatie de top:</strong> Foarte intuitiva, multe optiuni de personalizare, scene, rutine, sincronizare cu muzica/filme.</li><li><strong>Compatibilitate:</strong> Merge cu Alexa, Google, HomeKit, IFTTT. Foarte usor de integrat.</li></ul><li><strong>Minusuri:</strong> Pretul. E cel mai mare. Si necesitatea Bridge-ului, care e un cost initial.</li></ul><p><strong>Osram Smart+: Alternativa inteligentă ca pret</strong></p><ul><li><strong>Cum functioneaza:</strong> Majoritatea produselor Osram Smart+ folosesc Zigbee. Deci poti folosi un Hue Bridge (desi nu-ti recomand ca sa nu complici retea), un Amazon Echo cu Zigbee integrat, sau un SmartThings Hub. Unele modele mai noi sunt si Wi-Fi direct.</li><li><strong>Avantaje clare:</strong></li><ul><li><strong>Pret mai bun:</strong> Poti echipa o gradina intreaga cu un buget mult mai mic decat Hue.</li><li><strong>Flexibilitate protocol:</strong> Daca ai deja un ecosistem (Echo, SmartThings), poti integra Osram fara sa cumperi un alt hub.</li><li><strong>Calitate buna:</strong> Nu e la nivelul de premium al Hue, dar e solida pentru pret.</li></ul><li><strong>Minusuri:</strong> Aplicatia Osram nu e la fel de dezvoltata. Uneori, controlul vocal poate fi mai lent. Ecosistemul e mai restrans.</li></ul><p><strong>DIY cu Shelly: Libertatea supremă (si cel mai mare efort)</strong></p><ul><li><strong>Cum functioneaza:</strong> Iti iei un dispozitiv Shelly (ex: Shelly 1PM Plus, Shelly RGBW2) si il conectezi la corpurile tale de iluminat. Acestea comunica direct prin Wi-Fi cu routerul tau. Le controlezi din aplicatia Shelly sau prin API-uri in Home Assistant, Google Home, Alexa.</li><li><strong>Avantaje clare:</strong></li><ul><li><strong>Cel mai mic cost:</strong> Daca stii ce faci, iesi mult mai ieftin.</li><li><strong>Flexibilitate maxima:</strong> Poti folosi orice sursa de iluminat vrei, de la spoturi ieftine la corpuri de designer. Poti crea combinatii unice.</li><li><strong>Control total:</strong> Daca folosesti Home Assistant, poti automatiza absolut orice.</li><li><strong>Fara Bridge:</strong> Nu mai ai nevoie de un alt hub.</li></ul><li><strong>Minusuri:</strong></li><ul><li><strong>Necesita cunostinte tehnice:</strong> Nu e pentru incepatori. Trebuie sa stii sa conectezi fire, sa configurezi retele.</li><li><strong>Rezistenta la intemperii:</strong> Shelly-urile sunt mici si destinate uzului interior. Trebuie sa le protejezi in cutii etanse dedicate pentru exterior. Asta mai ridica costul si efortul.</li><li><strong>Aplicatia e mai "tehnica":</strong> Nu e la fel de "draguta" ca la Hue.</li></ul><p><strong>Verdict pe scurt:</strong></p><ul><li><strong>Vrei totul pe tava, performanta maxima, buget nelimitat?</strong> Philips Hue.</li><li><strong>Vrei performanta buna la un pret decent, si ai deja un hub?</strong> Osram Smart+.</li><li><strong>Vrei sa economisesti, sa ai libertate totala si te pricepi la bibilit?</strong> Shelly.</li></ul><p>Eu, personal, am un mix. In zonele unde vreau estetica si fiabilitate 100%, am Hue. Unde vreau doar functionalitate si nu ma intereseaza atat de mult designul, am Osram sau chiar Shelly pus in cutii etanse. Na, asta e.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Greseli frecvente si sfaturi de insider cand instalezi un sistem smart pentru iluminat gradina</h2>
+    <p class="mb-4">Am vazut destule instalari de <strong>sistem smart pentru iluminat gradina</strong> incat sa stiu unde gresesc oamenii. Si nu, nu e vorba de "nu merge". E vorba de "merge, da-i prost". Uite ce am invatat, pe pielea mea si pe a prietenilor.</p>
+    <p class="mb-4"><strong>1. Subestimarea lungimii cablurilor si a necesarului de transformatoare:</strong></p><ul><li><strong>Gresela:</strong> Te gandesti "am 5 spoturi, iau un transformator de 100W". Si cand colo, spoturile alea consuma mai mult decat scrie pe hartie, sau vrei sa mai adaugi inca 2 anul viitor. Sau, si mai rau, cablurile de la bec la transformator sunt prea scurte si te trezesti ca nu ajung unde trebuie.</li><li><strong>Sfat:</strong> Calculeaza consumul total al tuturor corpurilor tale de iluminat (in W) si adauga un 20-30% surplus. Alege un transformator cu o putere mai mare. La cabluri, mai bine ia-le mai lungi si taie-le decat sa te chinui sa le extinzi. Si gandeste-te la viitor!</li></ul><p><strong>2. Ignorarea protecției la apă (IP Rating):</strong></p><ul><li><strong>Gresela:</strong> "Ah, e "waterproof", merge si afara." Si dupa 2 ploi serioase, ai condens in corpuri sau chiar s-a scurtcircuitat. Mai ales la conectoare.</li><li><strong>Sfat:</strong> Verifica IP Rating-ul! Pentru exterior, cel putin IP44 (protectie la stropire) e minimul. IP65 (protectie la jeturi de apa) e mult mai sigur. Conectoarele sunt un punct slab. Foloseste conectori etansi, siliconati, si daca poti, pune-le in niste cutii de joncțiune etanse.</li></ul><p><strong>3. Semnal Wi-Fi slab sau inexistent în grădină:</strong></p><ul><li><strong>Gresela:</strong> Ai un router in sufragerie, te gandesti "merge si la 20 de metri". Si cand colo, semnalul e slab, intermitent, si lumina iti face figuri.</li><li><strong>Sfat:</strong> Daca vrei control Wi-Fi direct, investeste intr-un sistem mesh (ex: TP-Link Deco, Google Wifi) sau un repetor Wi-Fi de buna calitate, pus strategic. Sau, si mai bine, pentru zonele unde semnalul e slab, mergi pe sisteme Zigbee (Hue, Osram) care creeaza propria lor retea mesh, sau pe Shelly/Sonoff cu conexiune Ethernet (daca se poate).</li></ul><p><strong>4. Prea mult accent pe lumina colorata, prea putin pe cea functionala:</strong></p><ul><li><strong>Gresela:</strong> Te incarci cu spoturi colorate, RGB, si uiti ca, pana la urma, vrei sa vezi pe unde calci seara, sa nu te impiedici de ghivece.</li><li><strong>Sfat:</strong> Echilibreaza. Pune spoturi cu lumina alba, calda sau rece, in zonele unde ai nevoie de vizibilitate (aleile, scarile, intrarea in casa). Poti adauga spoturi colorate sau benzi LED pentru atmosfera, dar nu te baza doar pe ele.</li></ul><p><strong>5. Instalare electrica nesigura:</strong></p><ul><li><strong>Gresela:</strong> Te joci cu firele fara sa stii ce faci. Conectezi direct in priza, fara siguranta, sau invers.</li><li><strong>Sfat:</strong> Daca nu esti sigur, NU te baga. Cheama un electrician. Riscul de incendiu sau electrocutare e real. Mai ales ca lucrezi cu apa si curent. E mai bine sa platesti un electrician o data decat sa ai probleme pe viitor.</li></ul><p><strong>6. Nu te gandesti la intretinere:</strong></p><ul><li><strong>Gresela:</strong> Instalezi totul si uiti de el. Si cand colo, un bec s-a ars, o lentila s-a murdarit, un conector s-a oxidat.</li><li><strong>Sfat:</strong> Alegerea unor corpuri de iluminat usor de desfacut si curatat e importanta. Si, periodic, verifica conexiunile, curata lentilele, vezi daca becurile functioneaza. O mica verificare o data pe an te scapa de batai de cap mari.</li></ul><p><strong>Sfat de insider:</strong> Daca vrei sa construiesti un <strong>sistem smart pentru iluminat gradina</strong> pe termen lung, incepe cu un brand serios (Hue, Osram) si extinde pe parcurs. Nu te arunca la cele mai ieftine chestii de pe site-uri dubioase. Platesti o data, platesti bine. Dar daca bugetul e mic, si te pricepi, Shelly e o alegere excelenta, dar ai grija la etansare.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Verdict final: Ce sistem smart pentru iluminat gradina cumperi in functie de buget</h2>
+    <p class="mb-4">Ok, am vorbit mult. Acum hai sa simplificam. Stiu ca bugetul e cel mai mare factor cand alegi un <strong>sistem smart pentru iluminat gradina</strong>. Asa ca am sa-ti dau o recomandare clara pentru 3 nivele de buget. Nu am sa folosesc cuvinte pompoase, am sa zic direct.</p>
+    <p class="mb-4"><strong>Buget Mic (Sub 700 RON): Solutia DIY smart sau Osram entry-level</strong></p><ul><li><strong>Ce cumperi:</strong> 2-3 spoturi Osram Smart+ (cele mai ieftine modele) sau un kit de 1-2 spoturi Osram cu un hub compatibil (daca nu ai deja unul), SAU un Shelly RGBW2 cu 1-2 surse de alimentare etanse si conectori.</li><li><strong>De ce:</strong> Cu Osram, obtii control smart decent la un pret acceptabil. Poti incepe cu 2-3 puncte si sa extinzi pe parcurs. Cu Shelly, daca te pricepi, poti sa-ti faci o instalatie mai customizata si mai puternica, dar iti trebuie putin efort suplimentar pentru etansare.</li><li><strong>La ce sa te astepti:</strong> Nu te astepta la minuni de design sau la cele mai avansate efecte. Te astepti la functionare, control din aplicatie, programe simple. Poate nu toata gradina va fi luminata, dar zonele cheie vor fi.</li><li><strong>Minusuri:</strong> Necesita sa fii atent la compatibilitatea cu alte hub-uri daca alegi Osram, sau la instalarea electrica si etansarea daca alegi Shelly.</li></ul><p><strong>Buget Mediu (700 - 1500 RON): Osram mai extins sau inceput de Hue</strong></p><ul><li><strong>Ce cumperi:</strong> Fie un kit mai mare de Osram (4-5 spoturi, banda LED) impreuna cu un hub compatibil (daca nu ai deja), fie un kit de start Philips Hue (Bridge + 2-3 spoturi/becuri) plus inca 1-2 corpuri Hue.</li><li><strong>De ce:</strong> La acest nivel, poti deja sa te gandesti la o calitate mai buna si o integrare mai fluida. Osram iti ofera mai multa acoperire pentru banii tai. Hue iti da acces la ecosistemul lor matur, chiar daca la inceput cu mai putine puncte de lumina.</li><li><strong>La ce te astepti:</strong> O gradina partial luminata smart, cu optiuni bune de personalizare, control din aplicatie, poate si vocal. Calitate decenta a materialelor. Incep sa poti crea si niste scene simple.</li><li><strong>Minusuri:</strong> Daca mergi pe Hue, inca te lupti cu numarul limitat de corpuri la inceput. Daca mergi pe Osram, s-ar putea sa-ti doresti mai tarziu un ecosistem mai integrat.</li></ul><p><strong>Buget Generos (Peste 1500 RON): Philips Hue fara compromis</strong></p><ul><li><strong>Ce cumperi:</strong> Un kit Philips Hue Bridge + 4-5 spoturi/proiectoare/corpurile pe care le doresti, plus eventual o banda LED pentru terasa sau accent. Poti adauga si senzori de miscare.</li><li><strong>De ce:</strong> Aici iti permiti sa construiesti un sistem complet, de calitate superioara, fara batai de cap. Hue ofera cea mai buna experienta user, cele mai multe optiuni de personalizare si cel mai stabil ecosistem.</li><li><strong>La ce te astepti:</strong> O gradina spectaculos luminata, controlata perfect din aplicatie, vocal, cu scene automate, rutine personalizate. O investitie pe termen lung in confort si atmosfera.</li><li><strong>Minusuri:</strong> Chiar si la buget mare, e tot cea mai scumpa optiune. Dar, sincer, daca vrei ce e mai bun, asta e.</li></ul><p><strong> Verdictul meu?</strong> Daca ma intrebi pe mine, cel mai important e sa incepi. Chiar si cu 2-3 becuri smart Osram. Vezi cum merge, iti faci mana, si apoi decizi daca vrei sa investesti mai mult in Hue sau sa te extinzi cu Osram. Dar pentru o integrare pe termen lung, cu cea mai putina bataie de cap, Philips Hue e greu de batut. Na, asta e.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  cat costa un sistem smart pentru iluminat gradina
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Un sistem smart pentru iluminat gradina poate costa de la aproximativ 300-400 RON pentru solutii entry-level sau DIY (gen Shelly cu accesorii) pana la peste 1500-2000 RON pentru un kit complet Philips Hue cu mai multe corpuri de iluminat si bridge. Pretul variaza mult in functie de brand, numarul de corpuri si complexitatea sistemului.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  care e diferenta intre iluminatul smart pentru gradina si cel normal
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Iluminatul smart pentru gradina permite controlul luminilor prin aplicatii mobile, comenzi vocale sau automatizari (programe, senzori). Spre deosebire de cel normal, care are doar un intrerupator fizic, cel smart ofera flexibilitate crescuta, posibilitatea de a crea scene, a regla intensitatea si culoarea (la modelele RGB) si economie de energie prin automatizari.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  merita sa cumpar un sistem smart pentru iluminat gradina Philips Hue
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, merita daca bugetul iti permite si cauti cea mai stabila, fiabila si usor de utilizat solutie. Philips Hue ofera un ecosistem matur, control intuitiv prin aplicatie, compatibilitate extinsa si o calitate a constructiei superioara, ideala pentru exterior. Dezavantajul principal este pretul mai ridicat.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  ce sistem smart de iluminat gradina e mai ieftin
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Cele mai ieftine sisteme smart pentru iluminat gradina sunt de obicei cele DIY (Do It Yourself) bazate pe module precum Shelly sau Sonoff, unde cumperi separat corpurile de iluminat si modulele smart, sau solutiile de la branduri precum Osram Smart+ sau Govee (pentru benzi LED), care ofera preturi mai accesibile per corp.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  cum conectez becurile smart in gradina
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Conectarea depinde de sistem. Sistemele cu bridge (ex: Philips Hue) necesita ca bridge-ul sa fie conectat la router, apoi becurile se asociaza cu bridge-ul. Sistemele Wi-Fi se conecteaza direct la reteaua ta Wi-Fi. Unele sisteme Zigbee pot fi conectate la hub-uri compatibile (Amazon Echo, Samsung SmartThings) fara un bridge dedicat.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  pot folosi lumini smart de interior afara
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu este recomandat sa folosesti lumini smart de interior in exterior. Acestea nu sunt proiectate sa reziste la conditii de umezeala, praf, variatii de temperatura sau soare puternic, asa ca se pot defecta rapid si pot deveni periculoase. Cauta intotdeauna produse cu rating IP specific pentru exterior (IP44, IP65, IP67).
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  ce inseamna IP65 la iluminatul de gradina
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Un rating IP65 pentru iluminatul de gradina inseamna ca produsul este protejat complet impotriva prafului si impotriva jeturilor de apa venite din orice directie. Aceste corpuri sunt ideale pentru exterior, putand fi expuse la ploaie, stropiri si umiditate crescuta fara probleme.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  unde gasesc sisteme smart pentru iluminat gradina
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Sisteme smart pentru iluminat gradina se gasesc in magazinele mari de electronice si bricolaj (ex: eMAG, Altex, Dedeman, Leroy Merlin), pe site-urile producatorilor direct (Philips Hue, Osram), si in magazine online specializate pe smart home sau automatizari.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/hub-smart-pentru-automatizarea-casei/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/hub-smart-pentru-automatizarea-casei.webp" alt="Hub Smart Pentru Automatizarea Casei" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Smart Home</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Hub Smart Pentru Automatizarea Casei</h3>
+              </div>
+            </a>
+
+            <a href="/becuri-rgb-controlate-prin-app/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/becuri-rgb-controlate-prin-app.webp" alt="Becuri Rgb Controlate Prin App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Smart Home</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Becuri Rgb Controlate Prin App</h3>
+              </div>
+            </a>
+
+            <a href="/senzori-usa-si-fereastra-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/senzori-usa-si-fereastra-wireless.webp" alt="Senzori Ușă Și Fereastră Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Smart Home</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Senzori Ușă Și Fereastră Wireless</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

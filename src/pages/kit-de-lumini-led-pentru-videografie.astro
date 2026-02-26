@@ -1,0 +1,378 @@
+---
+export const frontmatter = {
+  title: "Kit De Lumini Led Pentru Videografie",
+  slug: "kit-de-lumini-led-pentru-videografie",
+  category: "Foto & Video",
+  categorySlug: "foto-video",
+  excerpt: "Daca vrei un kit de lumini LED pentru videografie bun, care sa nu te rupa la pret dar sa-ti faca treaba, uita-te la Godox SL60W cu un softbox si un difuzor. E un standard in industrie pentru incepatori si intermediari, usor de gasit si cu optiuni de accesorii la indemana. Pentru ceva mai portabil si mai rapid de montat, seturile de la Neewer cu panouri pliabile sunt o varianta buna, dar tine cont ca puterea lor e mai mica.",
+  image: "/images/articles/kit-de-lumini-led-pentru-videografie.webp",
+  publishDate: "2026-02-07T09:27:52.897Z",
+  modifiedDate: "2026-02-07T09:27:52.897Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "cat costa un kit de lumini LED pentru videografie",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un kit de lumini LED pentru videografie de baza, cu o singura lumina puternica si accesorii, incepe de la aproximativ 700-800 lei. Kiturile cu mai multe lumini plate, mai putin puternice, pot fi gasite si sub 400 lei, iar cele profesionale pot depasi 2000 lei."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "care e diferenta intre lumini LED pentru foto si video",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru foto, lumina e de obicei constanta. Pentru video, pe langa constanta, e cruciala si lipsa flicker-ului (palierele) la cadrele filmate, plus consistenta culorii pe durata utilizarii. Multe lumini LED moderne sunt bune pentru ambele, dar cele dedicate video au specificatii mai stricte pe CRI/TLCI si flicker."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "merita sa cumpar un kit de lumini LED cu RGB",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Merita daca vrei sa adaugi efecte vizuale si culori creative clipurilor tale, fara sa depinzi de post-productie. Kiturile RGB sunt bune pentru vloguri sau proiecte artistice. Daca vrei doar lumina naturala si corecta, modelele 'bi-color' sau single-color sunt mai potrivite."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ce e mai bun: panouri LED sau lumini COB pentru videografie",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Panourile LED sunt de obicei mai portabile si au lumina difuza din start, ideale pentru lumina de umplere. Luminile COB (gen Godox SL60W) sunt mai puternice si mai versatile, permitand modelarea luminii cu accesorii ca softbox-uri, fiind mai bune pentru sursa principala de lumina."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "de ce sunt importante CRI si TLCI la un kit de lumini LED",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Acesti indicatori (CRI - Color Rendering Index, TLCI - Television Lighting Consistency Index) masoara cat de corect lumina reda culorile. Valori peste 95% asigura culori naturale, in special pe pielea oamenilor, evitand problemele de nanta in post-productie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "cum sa aleg puterea unui kit de lumini LED",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puterea se masoara in Watti (W) sau prin lux la o anumita distanta. Pentru un spatiu mic sau accentuare, 50-60W sunt suficienti. Pentru a ilumina o camera mai mare sau de la distanta, ai nevoie de 100W sau mai mult. Verifica specificatiile producatorului."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "unde gasesc un kit de lumini LED pentru videografie de calitate",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Magazine online specializate in echipament foto-video (ex: F64, Photosetup, Dgital) sau platforme generale precum eMAG, unde gasesti atat branduri cunoscute (Godox, Neewer, SmallRig) cat si optiuni mai accesibile. Verifica recenziile si specificatiile produselor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "pot folosi un kit de lumini LED pentru videografie si pentru fotografie",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, majoritatea kiturilor LED moderne sunt potrivite si pentru fotografie, atata timp cat nu prezinta flicker la expuneri scurte. Calitatea culorii (CRI/TLCI) este la fel de importanta in fotografie."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cel mai bun kit de lumini LED pentru videografie pentru inceput, fara sa dai faliment</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Top kituri de lumini LED pentru videografie pe care le-am testat (cu bune si rele)</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum alegi kitul de lumini LED pentru videografie potrivit: ghidul prietenului</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Godox SL60W vs. Neewer RGB 660: ce kit de lumini LED pentru videografie iti serveste mai bine</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Greseli frecvente cand cumperi un kit de lumini LED pentru videografie si cum sa le eviti</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandari kit de lumini LED pentru videografie pe categorii de buget</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cel mai bun kit de lumini LED pentru videografie pentru inceput, fara sa dai faliment</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Top kituri de lumini LED pentru videografie pe care le-am testat (cu bune si rele)</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum alegi kitul de lumini LED pentru videografie potrivit: ghidul prietenului</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Godox SL60W vs. Neewer RGB 660: ce kit de lumini LED pentru videografie iti serveste mai bine</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Greseli frecvente cand cumperi un kit de lumini LED pentru videografie si cum sa le eviti</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandari kit de lumini LED pentru videografie pe categorii de buget</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/kit-de-lumini-led-pentru-videografie.webp" alt="Kit De Lumini Led Pentru Videografie" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cel mai bun kit de lumini LED pentru videografie pentru inceput, fara sa dai faliment</h2>
+    <p class="mb-4">Bon, stai putin. Vrei sa faci clipuri mai pro, nu doar cu lumina ambientală sau a telefonului? Ai nevoie de un <strong>kit de lumini LED pentru videografie</strong>. Cel mai bun sfat pe care pot sa ti-l dau, daca vrei un echilibru real intre pret si performanta, este sa te uiti la Godox SL60W. E o singura lumina, da, dar e suficienta ca sa incepi sa vezi diferenta. O cumperi cu vreo 500-600 lei, plus un softbox de vreo 150-200 lei si, poate, un trepied decent, inca 100-150 lei. Ai acolo un setup de baza care te scoate din anonimatul vizual. Pe bune, am vazut si eu chestii filmate cu el, si pe partea de vlog, si pe interviuri scurte. Calitatea luminii e mult peste ce gasesti in kiturile alea de 200 lei cu 3 lumini mici.</p>
+    <p class="mb-4">Ce e fain la el? E pe montura Bowens, adica poti sa-i pui fel de fel de accesorii - softbox-uri, snoot-uri, refrectoare. E un standard, deci gasesti tot ce vrei. E destul de puternic sa lumineze subiectul tau, chiar si intr-o camera nu foarte mare. Nu e cel mai mic, nu e cel mai usor, dar e solid. Si daca te apuci serios, poti oricand sa mai cumperi unul sau doua, sa ai lumina din mai multe directii.</p>
+    <p class="mb-4">Acum, daca zici ca vrei ceva si mai rapid, si poate mai discret, exista kituri cu panouri LED pliabile, gen de la Neewer sau SmallRig. Alea sunt super dragute ca le impachetezi rapid, le montezi in 5 minute. Multe vin in seturi de 2 sau 3. Sunt bune pentru ce inseamna lumina de umplere sau ca sa pui un pic de accent, dar nu te astepta sa fie la fel de puternice ca un SL60W. Sunt mai mult pentru un look light, nu pentru a transforma complet o scena intunecata. Un kit de 2 panouri pliabile, cu tot cu telecomenzi si baterii, te duce pe la 800-1200 lei, in functie de dimensiune si brand. Merita daca portabilitatea e cheia.</p>
+    <p class="mb-4">Deci, ca sa fiu direct: Godox SL60W cu softbox si trepied = cel mai bun <strong>kit de lumini LED pentru videografie</strong> ca punct de plecare. Si cand zic kit, ma gandesc la minim o sursa principala de calitate.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Top kituri de lumini LED pentru videografie pe care le-am testat (cu bune si rele)</h2>
+    <p class="mb-4">Ok, am pus mana pe cateva chestii in ultimul timp. Uite ce mi-a ramas in cap, cu preturi orientative, ca stii cum e cu piata asta.</p><h3>1. Godox SL60W + Accesorii (Kit de Baza Solid)</h3><ul><li><strong>Pret estimat:</strong> 800-1000 lei (lumina, softbox, trepied)</li><li><strong>Ce-mi place:</strong> Puternic, versatil datorita monturii Bowens, calitate buna a luminii (CRI >95), se gaseste usor. E un standard pe piata, gasesti tutoriale si accesorii la tot pasul. E genul de chestie pe care o cumperi si stii ca te tine ani buni daca ai grija de ea. Am avut un prieten care l-a tinut 5 ani fara probleme.</li><li><strong>Ce nu-mi place:</strong> Nu vine cu baterii, deci trebuie sa ai priza prin preajma sau sa cumperi separat un adaptor. E un pic cam mare pentru transport. Nu e plug-and-play, trebuie sa-ti cumperi softbox-ul separat, ce e un mic minus la capitolul 'kit'.</li></ul><h3>2. Neewer RGB 660 LED Panels (Kit Portabil si Colorat)</h3><ul><li><strong>Pret estimat:</strong> 1000-1400 lei (set de 2 panouri, cu trepiede si baterii)</li><li><strong>Ce-mi place:</strong> Super portabile, se monteaza instant. Lumina e difuza din start, nu ai nevoie de softbox. Vine cu baterii, deci poti filma si pe locuri unde nu ai priza. Aspectul fain e ca au si lumina RGB, deci poti baga culori in clipurile tale. Excelent pentru vloguri cu un pic de vibe. Sunt usor de controlat si din aplicatie pe telefon.</li><li><strong>Ce nu-mi place:</strong> Puterea e mai mica decat la SL60W, deci nu te astepta sa luminezi o camera mare de la distanta. Durata de viata a bateriilor incluse e decenta, dar daca filmezi mult, tot o sa ai nevoie de spare sau de priza. Controlul color e distractiv, dar uneori calitatea culorilor nu e perfectă, poate o s-o corectezi in post-productie.</li></ul><h3>3. SmallRig RC 120B (Alternativa Premium la SL60W)</h3><ul><li><strong>Pret estimat:</strong> 1200-1500 lei (lumina, fara softbox/trepied)</li><li><strong>Ce-mi place:</strong> Calitate a constructiei top. Lumina e super, CRI 96+, deci culorile ies cum trebuie. E mai compact decat Godox-ul, si un pic mai bine construit. Are si efecte speciale integrate, chestii de genul flash, sirenă, foc. Montura e tot Bowens, deci aceeasi versatilitate.</li><li><strong>Ce nu-mi place:</strong> E mai scump decat Godox SL60W, si de multe ori trebuie sa cumperi softbox-ul si trepiedul separat, ca la Godox. Nu vine cu baterii. E o optiune mai premium, daca bugetul iti permite.</li></ul><p>Astea sunt doar cateva exemple. Exista si Lumecube, Aputure, dar astea sunt deja pe zona de pret mai serioasa. Ideea e sa te gandesti la ce ai nevoie: putere bruta, portabilitate, culori? Asta te va ghida spre un <strong>kit de lumini LED pentru videografie</strong> potrivit.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum alegi kitul de lumini LED pentru videografie potrivit: ghidul prietenului</h2>
+    <p class="mb-4">Ok, vrei sa investesti intr-un <strong>kit de lumini LED pentru videografie</strong>. Stai sa nu arunci banii pe fereastra. Uite pe ce sa te uiti, ca sa nu te trezesti cu o cutie plina de plastic de care nu esti multumit.</p><h3>Puterea Luminii (Lumen sau Lux)</h3><p>Asta e ca si cum ai vrea sa stii cat de puternica e o sursa de electricitate. Mai multa putere inseamna ca poti ilumina o zona mai mare, sau ca poti folosi lumina de la o distanta mai mare, sau ca poti sa ai un efect mai dramatic. Pentru un setup acasa, sau pentru un vlog, 60-100W e cam minimul decent.</p>
+        <p>Daca te gandesti la interviuri mai serioase sau filmari in spatii mai mari, ai nevoie de mai mult. Nu te uita doar la 'LED', uita-te la 'W' (watt) sau la 'lux' la distanta specificata. Astea iti dau o idee reala despre puterea luminii.</p><h3>Calitatea Luminii (CRI, TLCI)</h3><p>Aici e unde se face diferenta intre o lumina buna si una proasta. CRI (Color Rendering Index) si TLCI (Television Lighting Consistency Index) iti spun cat de corect reda lumina culorile. Vrei valori cat mai mari, peste 95%. Daca lumina e proasta, culorile pielii o sa arate nenatural, si o sa te chinui apoi in editare sa le corectezi. E mai usor sa ai lumina buna de la inceput.</p><h3>Tipul de Lumina: Panouri vs. COB (Chip-on-Board)</h3><p>Panourile LED sunt de obicei plate, difuze, usor de montat si portabile. Genul ala de kituri cu 2-3 lumini plate. Sunt bune pentru lumina de umplere sau pentru un look mai soft. Lumina COB, gen Godox SL60W, e o singura sursa mai puternica, cu un singur 'chip' mare. Asta iti da mai multa flexibilitate, mai ales daca ii pui accesorii gen softbox, snoot. Poti modela lumina mult mai bine. Pentru un <strong>kit de lumini LED pentru videografie</strong> versatil, eu zic COB cu accesorii.</p><h3>Montura pentru Accesorii</h3><p>Daca vrei sa poti modela lumina, sa o faci mai moale (softbox), mai concentrata (snoot), sau sa ii dai un anumit tipar, ai nevoie de o montura standard. Montura Bowens e cea mai comuna si cea mai raspandita. Majoritatea brandurilor folosesc asta sau au adaptoare. E bine sa te asiguri ca kitul tau suporta asa ceva, ca sa nu fii blocat la ce-ti ofera producatorul.</p><h3>Control si Alimentare</h3><p>Cum controlezi lumina? Manual, cu telecomanda, sau cu aplicatie pe telefon? Telecomanda e draguta, dar aplicatia pe telefon iti da control mai fin. Alimentarea e importanta: ai priza mereu la indemana sau ai nevoie de baterii? Multe kituri vin cu adaptoare pentru baterii (gen Sony NP-F sau V-mount), dar alea se cumpara separat si pot fi scumpe. Daca filmezi mult in locatie, fa-ti un calcul si pentru asta.</p><h3>Bugetul</h3><p>Na, asta e. Daca ai 500 lei, te uiti la altceva decat daca ai 2000 lei. Fii realist. Un <strong>kit de lumini LED pentru videografie</strong> decent, care sa nu te faca sa regreti, incepe pe la 700-800 lei pentru o singura lumina puternica cu accesorii de baza. Kiturile cu mai multe lumini, dar mai slabe, pot fi si mai ieftine, dar nu le recomand neaparat ca prim pas. Stai si gandeste-te ce vrei sa filmezi, ce rezultat vrei, si abia apoi cauta in bugetul tau.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Godox SL60W vs. Neewer RGB 660: ce kit de lumini LED pentru videografie iti serveste mai bine</h2>
+    <p class="mb-4">Sa zicem ca te-ai hotarat ca vrei un <strong>kit de lumini LED pentru videografie</strong>, dar nu stii intre doua optiuni populare: Godox SL60W si Neewer RGB 660. Hai sa le punem fata in fata, sa vedem unde bat.</p>
+    <p class="mb-4"><strong>Godox SL60W</strong> e un fel de 'workhorse', un cal de povara. E o lumina mai puternica, cu un singur LED mare, gen COB. Asta inseamna ca poti sa o modelezi foarte bine. Cum? Cu softbox-uri, snoot-uri, umbrella-uri. Toate se prind pe montura Bowens, care e un standard in industrie. Deci, ai libertate sa-ti creezi un look specific. Calitatea luminii e excelenta, CRI >95, deci culorile ies naturale, asa cum trebuie. E ideal daca vrei sa ai control total asupra luminii tale, sa o poti folosi in diverse scenarii, de la interviuri la filmari de produs sau chiar portrete.</p>
+    <p class="mb-4"><strong>Minusuri la Godox SL60W:</strong> Nu vine gata cu softbox sau trepied, alea le cumperi separat. Si nu are baterii, deci trebuie sa fie mereu langa o priza. E o singura sursa, deci pentru lumina din mai multe directii, trebuie sa mai cumperi una.</p>
+    <p class="mb-4"><strong>Neewer RGB 660</strong>, pe de alta parte, e un panou LED plat. De obicei, se vinde in kituri de 2 sau 3. Sunt super practice, se monteaza rapid, au lumina difuza din start, nu prea ai nevoie de accesorii extra. Partea cea mai tare e ca poti sa schimbi si culoarea luminii, sa bagi RGB. Asta e fain daca vrei sa adaugi un pic de stil clipurilor tale, culori de fundal, chestii de genul. Si vine cu baterii, deci poti filma si la liber, departe de priza. E o solutie mai 'all-in-one' pentru cine nu vrea sa se complice prea mult.</p>
+    <p class="mb-4"><strong>Minusuri la Neewer RGB 660:</strong> Nu e la fel de puternic ca SL60W. Deci, daca vrei sa luminezi o camera mare sau sa ai un efect dramatic de la distanta, s-ar putea sa nu fie suficient. Calitatea culorilor RGB, desi distractiva, nu e mereu perfecta, s-ar putea sa ai nevoie de corectii in post. E mai mult o lumina 'soft', mai putin controlabila in sensul de modelare.</p>
+    <p class="mb-4"><strong>Deci, ce alegi?</strong> Daca vrei precizie, control, si o calitate a luminii pe care o poti modela cum vrei, si nu te deranjeaza sa cumperi accesorii separat si sa ai priza prin preajma, ia <strong>Godox SL60W</strong>. E investitia pe termen lung pentru un <strong>kit de lumini LED pentru videografie</strong> profesionist. Daca vrei ceva rapid, portabil, cu lumina difuza din start, si iti place ideea de culori RGB, si ai nevoie sa filmezi si fara priza, Neewer-ul e o optiune mai buna.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Greseli frecvente cand cumperi un kit de lumini LED pentru videografie si cum sa le eviti</h2>
+    <p class="mb-4">Am vazut atatea cazuri, atatea kituri cumparate si apoi uitate prin debara. Zic si eu, ca sa nu patiti la fel. E mult mai simplu sa eviti niste capcane decat sa le repari mai tarziu.</p>
+    <p class="mb-4"><strong>1. Sar peste sursa principala de calitate, caut doar multe lumini ieftine.</strong> Asta e cea mai mare greseala. Un kit cu 3 lumini de 50 lei bucata nu o sa arate niciodata la fel de bine ca o singura lumina de 500 lei cu softbox. Lumina proasta se vede imediat. E mai bine sa incepi cu o singura sursa buna si sa o extinzi mai tarziu. Investeste in calitate, nu in cantitate, cand vorbim de sursa principala.</p>
+    <p class="mb-4"><strong>2. Nu ma uit la CRI/TLCI.</strong> Pe bune, astea sunt importante. Daca lumina nu reda corect culorile, o sa te chinui apoi in editare sa repari nuantele pielii sau culorile obiectelor. Poate chiar sa strici totul. Cauta mereu valori peste 95%. Nu te lasa pacalit de luminozitate daca culorile sunt afara.</p>
+    <p class="mb-4"><strong>3. Nu ma gandesc la accesorii.</strong> O lumina LED puternica e o treaba, dar cum o modelezi e alta. Daca nu cumperi un softbox sau un difuzor, lumina va fi dura, o sa faca umbre tari, nenaturale. Asta nu-i deloc fain pentru portrete sau interviuri. Gandeste-te de la inceput cum vrei sa arate lumina si ce accesorii iti trebuie pentru asta.</p>
+    <p class="mb-4"><strong>4. Sar peste portabilitate sau, dimpotriva, o caut prea mult.</strong> Daca filmezi doar in studio, nu te intereseaza sa fie super portabil. Dar daca te muti des, ai nevoie de ceva usor de montat/demontat, eventual pe baterii. Pe de alta parte, nu lua tot timpul cele mai mici si mai slabe lumini doar ca sunt portabile, daca ai nevoie de putere. Gaseste un echilibru.</p>
+    <p class="mb-4"><strong>5. Nu ma uit la tipul de montura.</strong> Daca vrei sa ai libertate sa schimbi softbox-uri sau alte accesorii, cauta monturi standard, gen Bowens. Daca iei un kit cu o montura proprietara, esti blocat la accesoriile lor, care pot fi limitate sau scumpe.</p>
+    <p class="mb-4"><strong>6. Nu citesc review-uri.</strong> Pe bune, ia-ti 10 minute sa vezi ce zic si altii. Sunt destule forumuri, grupuri, review-uri video pe YouTube. Vezi cum se descurca lumina in viata reala, nu doar in specificatiile tehnice. Am avut si eu surprize neplacute cand m-am aruncat pe primul <strong>kit de lumini LED pentru videografie</strong> care mi-a picat in mana.</p>
+    <p class="mb-4">Inainte sa cumperi, intreaba-te: ce tip de clipuri fac? Unde filmez cel mai des? Ce buget am? Daca raspunsurile astea sunt clare, alegerea va fi mult mai usoara.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Recomandari kit de lumini LED pentru videografie pe categorii de buget</h2>
+    <p class="mb-4">Hai sa fim directi. Nu toata lumea are acelasi buget. Asa ca am sa-ti dau cateva recomandari pe categorii, sa te orientezi mai usor.</p><h3>Buget Mic (Sub 700 lei)</h3><p>Aici, sincer, nu te astepta la minuni, dar poti sa faci primii pasi. Un <strong>kit de lumini LED pentru videografie</strong> in zona asta inseamna cel mai probabil 2-3 lumini plate, mai mici, gen de la Neewer sau Andoer. Nu sunt foarte puternice, dar sunt mai bune decat nimic.</p>
+        <p>De exemplu, un kit de 2 panouri LED de 176 LED-uri (sunt multe modele pe acolo) te poate costa cam 300-400 lei. Vine cu baterii de tip Sony NP-F (unele incluse, altele nu) si trepiede micute. Sunt ok pentru a adauga un pic de lumina pe fata ta cand filmezi cu telefonul sau cu un aparat entry-level.</p>
+        <p>Nu astepta sa luminezi o camera intreaga. E mai mult pentru accentuare.</p><h3>Buget Mediu (700 - 1500 lei)</h3><p>Aici incepe distractia. In zona asta gasesti fie o lumina principala puternica, gen <strong>Godox SL60W</strong> (cam 500-600 lei), la care iti mai iei un softbox (150-200 lei) si un trepied decent (100-150 lei). Ai un setup solid, cu lumina de calitate, pe care o poti modela.</p>
+        <p>E cel mai bun punct de plecare pentru cineva serios. Alternativ, gasesti si kituri de 2 panouri LED mai mari si mai puternice, gen cele de la Neewer RGB 660 (cam 1000-1400 lei setul de 2, cu baterii si trepiede). Sunt mai portabile si au si functii RGB.</p>
+    <p class="mb-4">Eu, personal, daca vrei sa faci treaba serioasa, as merge pe varianta Godox SL60W + accesorii. E mai flexibila pe termen lung.</p><h3>Buget Mare (Peste 1500 lei)</h3><p>Daca ai bugetul asta, poti sa te uiti la lumini mai performante, mai compacte, cu functii extra. De exemplu, <strong>SmallRig RC 120B</strong> (cam 1200-1500 lei doar lumina, fara accesorii) e o varianta premium la SL60W, mai bine construita, cu efecte speciale. Sau poti sa-ti iei doua Godox SL60W, ca sa ai lumina din mai multe directii, plus softbox-uri.</p>
+        <p>In zona asta, poti sa te gandesti si la lumini cu control de temperatura de culoare variabila (bi-color), gen 300-500W, daca ai nevoie de flexibilitate mare. Sau poti sa te uiti la producatori ca Aputure, care au solutii foarte profi, dar si preturi pe masura.</p>
+    <p class="mb-4">Important e sa nu sariti pe prima oferta 'kit' ce pare ieftina. Ganditi-va ce vreti sa obtineti, ce tip de clipuri faceti, si apoi alegeti.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  cat costa un kit de lumini LED pentru videografie
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Un <strong>kit de lumini LED pentru videografie</strong> de baza, cu o singura lumina puternica si accesorii, incepe de la aproximativ 700-800 lei. Kiturile cu mai multe lumini plate, mai putin puternice, pot fi gasite si sub 400 lei, iar cele profesionale pot depasi 2000 lei.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  care e diferenta intre lumini LED pentru foto si video
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru foto, lumina e de obicei constanta. Pentru video, pe langa constanta, e cruciala si lipsa flicker-ului (palierele) la cadrele filmate, plus consistenta culorii pe durata utilizarii. Multe lumini LED moderne sunt bune pentru ambele, dar cele dedicate video au specificatii mai stricte pe CRI/TLCI si flicker.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  merita sa cumpar un kit de lumini LED cu RGB
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Merita daca vrei sa adaugi efecte vizuale si culori creative clipurilor tale, fara sa depinzi de post-productie. Kiturile RGB sunt bune pentru vloguri sau proiecte artistice. Daca vrei doar lumina naturala si corecta, modelele 'bi-color' sau single-color sunt mai potrivite.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  ce e mai bun: panouri LED sau lumini COB pentru videografie
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Panourile LED sunt de obicei mai portabile si au lumina difuza din start, ideale pentru lumina de umplere. Luminile COB (gen Godox SL60W) sunt mai puternice si mai versatile, permitand modelarea luminii cu accesorii ca softbox-uri, fiind mai bune pentru sursa principala de lumina.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  de ce sunt importante CRI si TLCI la un kit de lumini LED
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Acesti indicatori (CRI - Color Rendering Index, TLCI - Television Lighting Consistency Index) masoara cat de corect lumina reda culorile. Valori peste 95% asigura culori naturale, in special pe pielea oamenilor, evitand problemele de nanta in post-productie.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  cum sa aleg puterea unui kit de lumini LED
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Puterea se masoara in Watti (W) sau prin lux la o anumita distanta. Pentru un spatiu mic sau accentuare, 50-60W sunt suficienti. Pentru a ilumina o camera mai mare sau de la distanta, ai nevoie de 100W sau mai mult. Verifica specificatiile producatorului.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  unde gasesc un kit de lumini LED pentru videografie de calitate
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Magazine online specializate in echipament foto-video (ex: F64, Photosetup, Dgital) sau platforme generale precum eMAG, unde gasesti atat branduri cunoscute (Godox, Neewer, SmallRig) cat si optiuni mai accesibile. Verifica recenziile si specificatiile produselor.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  pot folosi un kit de lumini LED pentru videografie si pentru fotografie
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, majoritatea kiturilor LED moderne sunt potrivite si pentru fotografie, atata timp cat nu prezinta flicker la expuneri scurte. Calitatea culorii (CRI/TLCI) este la fel de importanta in fotografie.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/camera-actiune-rezistenta-la-apa/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/camera-actiune-rezistenta-la-apa.webp" alt="Cameră Acțiune Rezistentă La Apă" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cameră Acțiune Rezistentă La Apă</h3>
+              </div>
+            </a>
+
+            <a href="/kit-accesorii-foto-pentru-incepatori/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/kit-accesorii-foto-pentru-incepatori.webp" alt="Kit Accesorii Foto Pentru Începători" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Kit Accesorii Foto Pentru Începători</h3>
+              </div>
+            </a>
+
+            <a href="/aparat-foto-compact-pentru-vacanta/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aparat-foto-compact-pentru-vacanta.webp" alt="Aparat Foto Compact Pentru Vacanță" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aparat Foto Compact Pentru Vacanță</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

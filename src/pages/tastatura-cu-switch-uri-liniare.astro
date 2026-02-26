@@ -1,0 +1,292 @@
+---
+export const frontmatter = {
+  title: "Tastatură Cu Switch-uri Liniare",
+  slug: "tastatura-cu-switch-uri-liniare",
+  category: "Tehnologie & Gaming",
+  categorySlug: "tehnologie-gaming",
+  excerpt: "Tastaturile cu switch-uri liniare: Ghid practic pentru gaming si productivitate. Am testat si iti spun totul.",
+  image: "/images/articles/tastatura-cu-switch-uri-liniare.webp",
+  publishDate: "2026-01-16T13:49:47.000Z",
+  modifiedDate: "2026-01-31T13:49:47.000Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Sunt switch-urile liniare mai bune pentru tastat sau pentru gaming?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In experienta mea, sunt excelente pentru ambele, dar cu prioritati diferite. Pentru gaming, viteza si raspunsul rapid sunt cheia. Pentru tastat, reducerea oboselii si un sunet mai discret (daca alegi varianta silentioasa) sunt avantaje majore."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot schimba switch-urile pe o tastatura cu switch-uri liniare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depinde de tastatura. Daca este 'hot-swappable', atunci da, poti schimba switch-urile liniare cu altele liniare sau chiar tactile/clicky. Daca nu este hot-swappable, schimbarea switch-urilor necesita dezlipirea si apoi lipirea lor, un proces mult mai complex."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cat de zgomotoase sunt tastaturile cu switch-uri liniare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In mod implicit, sunt mai silentioase decat cele clicky, dar nu complet mute. Zgomotul vine de la taste care lovesc baza tastaturii. Poti reduce zgomotul semnificativ adaugand o-rings (garnituri) sau alegand modele 'silent red'."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce forta de actiune e potrivita pentru switch-urile liniare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "E o chestiune de preferinta. Majoritatea sunt in jur de 45-50g, ceea ce e un echilibru bun. Daca ai degete usoare si vrei sa reactionezi si mai repede, cauta switch-uri sub 45g. Daca apesi des accidental tastele, poate un switch mai greu (peste 50g) ar fi mai potrivit."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce inseamna, de fapt, o tastatura cu switch-uri liniare?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Switch-uri liniare vs. tactile vs. clicky: Care e diferenta pentru tine?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantajele switch-urilor liniare in gaming: Viteza pura si raspuns instant</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Productivitate si tastaturi liniare: Mai putina oboseala, mai multa concentrare</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sa cauti la o tastatura cu switch-uri liniare? Sfaturi practice de la un tester</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Exemple concrete si preturi in Romania</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce inseamna, de fapt, o tastatura cu switch-uri liniare?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Switch-uri liniare vs. tactile vs. clicky: Care e diferenta pentru tine?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantajele switch-urilor liniare in gaming: Viteza pura si raspuns instant</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Productivitate si tastaturi liniare: Mai putina oboseala, mai multa concentrare</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sa cauti la o tastatura cu switch-uri liniare? Sfaturi practice de la un tester</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Exemple concrete si preturi in Romania</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/tastatura-cu-switch-uri-liniare.webp" alt="Tastatură Cu Switch-uri Liniare" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce inseamna, de fapt, o tastatura cu switch-uri liniare?</h2>
+    <p class="mb-4">Dupa ani de testat tastaturi pentru tot felul de utilizatori, de la gameri impatimiti la programatori seriosi, am ajuns sa apreciez subtilitatile. O tastatura cu switch-uri liniare se simte diferit sub degete. Nu ai acel 'click' tactil pe care il gasesti la switch-urile mecanice mai vechi, nici acel bump care te anunta ca tasta a fost apasata. Ceea ce primesti este o cursa lina, constanta, de la momentul in care apesi tasta pana la capat.</p>
+    <p class="mb-4">In experienta mea, asta inseamna viteza. Atunci cand tastezi rapid sau in jocuri unde fiecare milisecunda conteaza, absenta rezistentei suplimentare face o diferenta palpabila. Nu trebuie sa fortezi tasta sa treaca de un anumit punct pentru a inregistra apasarea, ceea ce reduce oboseala la utilizare prelungita.</p>
+    <p class="mb-4">Am testat modele de la producatori precum Logitech (seria G Pro X), Razer (seria Huntsman cu switch-uri optice liniare) si chiar optiuni mai accesibile de la Redragon sau Keychron, si principiul de baza ramane acelasi: apesi, tasta e apasata. Simplu si eficient.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Switch-uri liniare vs. tactile vs. clicky: Care e diferenta pentru tine?</h2>
+    <p class="mb-4">Sa le luam pe rand. Switch-urile liniare sunt cele despre care vorbim – o cursa lina, fara feedback tactil sau auditiv distinct. Sunt ideale pentru cei care prioritizeaza viteza si un sunet mai discret, daca alegi switch-uri cu un profil mai silentios.</p>
+    <p class="mb-4">Switch-urile tactile au acel 'bump' pe care il simti cand tasta a fost apasata, fara un click audibil. E un feedback bun pentru tastat, te anunta clar ca ai apasat tasta corect, fara a deranja pe cei din jur. Am observat ca multi scriitori prefera aceasta senzatie.</p>
+    <p class="mb-4">Switch-urile clicky fac ambele lucruri: au acel bump tactil si un click audibil. Sunt satisfacatoare pentru unii, dar pot fi zgomotoase intr-un mediu de birou comun sau daca locuiesti cu cineva care nu apreciaza zgomotul.</p>
+    <p class="mb-4">Pentru gaming, in special jocurile rapide (FPS, MOBA), switch-urile liniare sunt adesea preferate pentru viteza de raspuns. Pentru tastat mult, multi se impart intre liniare si tactile, in functie de preferinta personala pentru feedback.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Avantajele switch-urilor liniare in gaming: Viteza pura si raspuns instant</h2>
+    <p class="mb-4">Am petrecut ore intregi pe diverse titluri, de la CS:GO la Call of Duty, folosind tastaturi cu switch-uri liniare. Ce am observat imediat este eliminarea oricarui fel de 'fricare'. Nu trebuie sa te gandesti daca ai apasat tasta suficient de tare sau daca ai depasit punctul de activare. Pur si simplu apesi, si actiunea se intampla.</p>
+    <p class="mb-4">Acest lucru este crucial in situatii critice de gaming. Daca trebuie sa te misti rapid, sa sari, sa schimbi arma sau sa lansezi o abilitate, viteza cu care poti repeta apasarea unei taste este esentiala. Switch-urile liniare, prin natura lor, permit cele mai rapide apasari repetate.</p>
+    <p class="mb-4">Am testat si switch-uri liniare cu diferite forte de actiune (actuation force). Cele mai comune sunt in jur de 45-50g, dar am gasit si modele mai usoare sau mai grele. Pentru gaming, o forta de actiune mai mica (cum ar fi la Gateron Red sau Cherry MX Red) te ajuta sa reactionezi si mai repede, dar poate duce si la apasari accidentale daca esti obisnuit cu o forta mai mare.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Productivitate si tastaturi liniare: Mai putina oboseala, mai multa concentrare</h2>
+    <p class="mb-4">Nu e vorba doar de gaming. Am folosit tastaturi cu switch-uri liniare si pentru sarcini de productivitate, si pot spune ca reducerea efortului fizic se traduce direct in mai multa concentrare pe munca. Daca petreci 8-10 ore pe zi tastand, acest aspect devine extrem de important.</p>
+    <p class="mb-4">Am observat ca, dupa o zi lunga de scris articole sau cod, degetele mele se simteau mai odihnite pe o tastatura cu switch-uri liniare, comparativ cu una cu switch-uri tactile mai grele. Acest lucru se datoreaza fortei de actiune constante si lipsei nevoii de a depasi un punct de rezistenta.</p>
+    <p class="mb-4">Pentru programatori, viteza de tastare poate fi importanta, dar si precizia. Switch-urile liniare, desi nu ofera feedback tactil, pot fi foarte precise odata ce te obisnuiesti cu ele. Unii prefera sa foloseasca tastaturi cu switch-uri liniare silentioase pentru a nu deranja colegii la birou sau pe cei din jur acasa. Modele precum Razer Huntsman Mini cu switch-uri lineare optice rosii sunt o optiune buna, iar pretul lor se invarte in jur de 500-600 RON la eMAG sau PCGarage.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sa cauti la o tastatura cu switch-uri liniare? Sfaturi practice de la un tester</h2>
+    <p class="mb-4">Primul lucru este sa te gandesti la tipul de switch-uri liniare. Cele mai populare sunt Cherry MX Red, Gateron Red, Kailh Red. Toate sunt liniare, dar au mici diferente de feel si sunet. Daca vrei ceva mai silentios, cauta variante 'silent red' sau switch-uri liniare cu garnituri de cauciuc (o-rings) la baza.</p>
+    <p class="mb-4">Verifica si forta de actiune (actuation force) si distanta de actiune (actuation distance). Majoritatea switch-urilor liniare au o forta de actiune intre 40-50g si o distanta de actiune de 2mm, dar exista si optiuni. Pentru gaming, ceva mai usor poate fi benefic, dar pentru tastat, poate vrei ceva mai greu pentru a evita apasarile accidentale.</p>
+    <p class="mb-4">Materialele conteaza. Tastele (keycaps) din PBT sunt mai durabile si nu capata luciu la fel de repede ca cele din ABS. Structura tastaturii (frame-ul) ar trebui sa fie solida, preferabil metalica sau un plastic gros, pentru a minimiza flexarea. O tastatura mecanica solida, precum un ASUS ROG Strix Scope sau un Corsair K70 cu switch-uri liniare, poate costa intre 500 si 1000 RON, dar se simte si rezista mult mai bine.</p>
+    <p class="mb-4">Iluminarea RGB e un bonus pentru multi gameri, dar nu afecteaza functionalitatea switch-urilor. Daca bugetul e mai restrans, poti gasi tastaturi cu switch-uri liniare decente de la branduri ca Redragon sau Havit in jur de 200-300 RON la Altex sau Flanco, dar calitatea constructiei si a switch-urilor nu se compara cu modelele premium.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Exemple concrete si preturi in Romania</h2>
+    <p class="mb-4">Sa trecem la fapte. Daca vrei sa incepi cu un buget mai mic, Redragon K552 Kumara (switch-uri Outemu Red, liniare) se gaseste des pe la 180-200 RON. Este o optiune entry-level, dar functionala.</p>
+    <p class="mb-4">Un pas mai sus, Logitech G413 SE (switch-uri GX Brown, dar exista si variante cu switch-uri rosii liniare) se învârte în jur de 350-400 RON. Este o tastatura mai bine construita, cu un design minimalist si taste din PBT.</p>
+    <p class="mb-4">Pentru zona de mijloc, Razer Huntsman V2 (cu switch-uri optice liniare Razer) este o alegere populara, pretul fiind undeva intre 600 si 800 RON. Switch-urile optice sunt si mai rapide.</p>
+    <p class="mb-4">La capitolul premium, Corsair K70 RGB TKL (cu switch-uri Cherry MX Speed Silver, care sunt liniare si cu distanta de actiune mai mica) sau un SteelSeries Apex Pro (cu switch-uri OmniPoint, ajustabile) pot ajunge la 700-1000+ RON. Acestea ofera cea mai buna calitate a constructiei, switch-uri de top si functionalitati avansate.</p>
+    <p class="mb-4">Am testat si tastaturi custom, unde poti alege exact switch-urile (de la Gateron, JWK, etc.) si tastele. Acestea pot ajunge la preturi si mai mari, dar ofera o experienta personalizata la cel mai inalt nivel. O tastatura custom cu switch-uri liniare de calitate de la producatori precum Keychron (modelele K sau Q) se poate lua cu 400-700 RON, in functie de model si specificatii.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Sunt switch-urile liniare mai bune pentru tastat sau pentru gaming?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  In experienta mea, sunt excelente pentru ambele, dar cu prioritati diferite. Pentru gaming, viteza si raspunsul rapid sunt cheia. Pentru tastat, reducerea oboselii si un sunet mai discret (daca alegi varianta silentioasa) sunt avantaje majore.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot schimba switch-urile pe o tastatura cu switch-uri liniare?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Depinde de tastatura. Daca este 'hot-swappable', atunci da, poti schimba switch-urile liniare cu altele liniare sau chiar tactile/clicky. Daca nu este hot-swappable, schimbarea switch-urilor necesita dezlipirea si apoi lipirea lor, un proces mult mai complex.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat de zgomotoase sunt tastaturile cu switch-uri liniare?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  In mod implicit, sunt mai silentioase decat cele clicky, dar nu complet mute. Zgomotul vine de la taste care lovesc baza tastaturii. Poti reduce zgomotul semnificativ adaugand o-rings (garnituri) sau alegand modele 'silent red'.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce forta de actiune e potrivita pentru switch-urile liniare?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  E o chestiune de preferinta. Majoritatea sunt in jur de 45-50g, ceea ce e un echilibru bun. Daca ai degete usoare si vrei sa reactionezi si mai repede, cauta switch-uri sub 45g. Daca apesi des accidental tastele, poate un switch mai greu (peste 50g) ar fi mai potrivit.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/placa-video-amd-performanta-ridicata/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/placa-video-amd-performanta-ridicata.webp" alt="Placă Video Amd Performanță Ridicată" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Placă Video Amd Performanță Ridicată</h3>
+              </div>
+            </a>
+
+            <a href="/mouse-gaming-cu-dpi-ajustabil/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/mouse-gaming-cu-dpi-ajustabil.webp" alt="Mouse Gaming Cu Dpi Ajustabil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Mouse Gaming Cu Dpi Ajustabil</h3>
+              </div>
+            </a>
+
+            <a href="/accesorii-vr-pentru-experienta-imersiva/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/accesorii-vr-pentru-experienta-imersiva.webp" alt="Accesorii Vr Pentru Experiență Imersivă" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Accesorii Vr Pentru Experiență Imersivă</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,305 @@
+---
+export const frontmatter = {
+  title: "Cea mai bună cameră video profesională 4K",
+  slug: "cea-mai-buna-camera-video-profesionala-4k",
+  category: "Foto & Video",
+  categorySlug: "foto-video",
+  excerpt: "Lumea producției video evoluează rapid, iar standardul 4K nu mai este un moft, ci o necesitate. Clienții, platformele de streaming și publicul se așteaptă la...",
+  image: "/images/articles/cea-mai-buna-camera-video-profesionala-4k.webp",
+  publishDate: "2025-11-30T06:58:14.000Z",
+  modifiedDate: "2026-01-18T06:58:14.000Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ce înseamnă \"profesională\" când vorbim de camere video 4K?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O cameră video 4K \"profesională\" se distinge prin calitatea superioară a imaginii (codecuri avansate, dynamic range extins, adâncime de culoare mare - 10-bit sau 12-bit), opțiuni de control manual detaliate, conectivitate robustă (SDI, XLR), fiabilitate în condiții de lucru dificile și un ecosistem extins de accesorii. Este concepută pentru a satisface cerințele fluxurilor de lucru din producția de film, televiziune, documentare sau conținut corporate de înaltă calitate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Care este diferența între un senzor Full-Frame și Super 35 pentru video 4K?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un senzor Full-Frame (FX) are o suprafață fizică mai mare, similară cu filmul de 35mm, oferind o performanță superioară în condiții de lumină scăzută, un control mai bun al profunzimii de câmp (bokeh mai pronunțat) și un \"look\" distinctiv. Senzorii Super 35 (APS-C) sunt puțin mai mici, oferă o compatibilitate largă cu obiectivele de cinema și sunt adesea preferați pentru o adâncime de câmp mai extinsă și o imagine mai \"curată\" pentru anumite tipuri de producții. Ambele pot produce imagini 4K de o calitate excepțională, alegerea depinzând de preferințele estetice și de obiectivele existente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Este importantă înregistrarea internă 10-bit 4:2:2?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, înregistrarea internă 10-bit 4:2:2 este foarte importantă pentru producțiile video profesionale. \"10-bit\" se referă la adâncimea de culoare, permițând camerei să captureze un miliard de culori, comparativ cu 16 milioane pentru 8-bit. Aceasta oferă o flexibilitate mult mai mare în color grading, evitând \"banding-ul\" (artefacte vizuale de culoare) în degradeuri. \"4:2:2\" se referă la subeșantionarea cromatică, indicând că sunt eșantionate de două ori mai multe informații de culoare decât 4:2:0, rezultând o fidelitate cromatică superioară și o rezistență mai bună la manipulări în post-producție, mai ales la aplicarea efectelor vizuale și keying."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot folosi obiective foto pe o cameră video profesională 4K?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, multe camere video profesionale 4K, în special cele hibride sau cinema compacte (precum Sony FX3, Canon C70, Panasonic GH6), utilizează aceleași monturi de obiective ca și camerele foto (E-mount, RF, M4/3). Aceasta înseamnă că poți folosi obiective foto, care sunt adesea mai accesibile și mai ușoare. Trebuie să ai în vedere că obiectivele foto pot avea \"focus breathing\" (schimbarea unghiului de vedere la modificarea focalizării) și diafragme \"clicky\" care nu sunt ideale pentru video. Obiectivele cinema sunt optimizate pentru video, având inele de focus și iris fluide și marcaje precise, dar sunt și semnificativ mai costisitoare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de importantă este stabilizarea imaginii la o cameră 4K?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stabilizarea imaginii este extrem de importantă, mai ales când filmezi 4K din mână. La rezoluții înalte, orice mișcare neintenționată este mult mai vizibilă. Stabilizarea optică în obiectiv (OIS) sau stabilizarea în corp (IBIS - In-Body Image Stabilization) poate reduce semnificativ tremuratul, permițând filmări fluide fără a recurge mereu la gimbal sau trepied. Unele camere combină chiar stabilizarea optică cu cea digitală pentru rezultate și mai bune. Pentru un profesionist, o imagine stabilă este fundamentală pentru un produs finit de calitate superioară."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <!-- Hero -->
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <!-- Sidebar - Cuprins -->
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <!-- Mobile TOC - Collapsible -->
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De Ce Standardul 4K Este Indispensabil Azi în Producția Video?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Contează Cu Adevărat la O Cameră Video 4K Profesională?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Candidați de Top la Titlul de "Cea Mai Bună Cameră Video Profesională 4K"</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ecosistemul și Ergonomia: Dincolo de Specificații Pure</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Fă Alegerea Potrivită Pentru Proiectele Tale</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+
+            <!-- Desktop TOC - Collapsible -->
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De Ce Standardul 4K Este Indispensabil Azi în Producția Video?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Contează Cu Adevărat la O Cameră Video 4K Profesională?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Candidați de Top la Titlul de "Cea Mai Bună Cameră Video Profesională 4K"</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ecosistemul și Ergonomia: Dincolo de Specificații Pure</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Fă Alegerea Potrivită Pentru Proiectele Tale</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/cea-mai-buna-camera-video-profesionala-4k.webp" alt="Alegerea Perfectă: Descoperă Cea Mai Bună Cameră Video Profesională 4K Pentru Proiectele Tale" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">De Ce Standardul 4K Este Indispensabil Azi în Producția Video?</h2>
+    <p class="mb-4">Lumea producției video evoluează rapid, iar standardul 4K nu mai este un moft, ci o necesitate. Clienții, platformele de streaming și publicul se așteaptă la o calitate vizuală impecabilă. O cameră video profesională 4K nu oferă doar o rezoluție superioară, ci deschide uși spre fluxuri de lucru creative mult mai flexibile. Imaginează-ți posibilitatea de a decupa și stabiliza cadre fără a pierde din calitatea finală a livrabilei Full HD, sau de a oferi o imagine detaliată care captează fiecare nuanță.</p>
+    <p class="mb-4">Investiția într-o cameră 4K profesională este o decizie strategică ce îți pregătește echipamentul pentru viitor. Chiar dacă livrările tale curente sunt predominant Full HD, înregistrarea în 4K îți oferă un spațiu de manevră incredibil în post-producție. Poți reîncadra, aplica zoom digital, sau chiar corecta mici erori de încadrare, păstrând o calitate superioară imaginii finale. Acest lucru se traduce prin eficiență crescută și o libertate creativă extinsă, esențiale în orice proiect serios.</p>
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Contează Cu Adevărat la O Cameră Video 4K Profesională?</h2>
+    <p class="mb-4">Atunci când cauți cea mai bună cameră video profesională 4K, nu te uita doar la rezoluție. Există o multitudine de factori care contribuie la performanța generală și la adaptabilitatea unei camere la diverse scenarii de producție. De la dimensiunea senzorului la tipul de codec și dynamic range, fiecare detaliu influențează calitatea imaginii și flexibilitatea în post-producție.</p>
+    <p class="mb-4">Senzorul este inima oricărei camere. Un senzor Full-Frame (FX) sau Super 35 (APS-C) oferă adesea performanțe superioare în condiții de lumină scăzută și un control mai bun al profunzimii de câmp, creând acel "look cinematografic" mult dorit. Montura obiectivului este un alt aspect vital – asigură-te că este compatibilă cu obiectivele pe care le deții deja sau cu cele pe care intenționezi să le achiziționezi. Standarde precum Sony E-mount, Canon RF, sau Micro Four Thirds oferă ecosisteme vaste de lentile.</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Codecuri, Rata de Biți și Dynamic Range</h3>
+    <p class="mb-4">Calitatea imaginii brute este definită de codecuri și rata de biți. Codecurile precum ProRes, Blackmagic RAW (BRAW) sau XAVC-I oferă o compresie minimă și păstrează o cantitate mare de informație, esențială pentru color grading. O înregistrare internă 10-bit 4:2:2 sau chiar 12-bit oferă o paletă de culori mult mai bogată și o mai mare toleranță la manipulare.</p>
+    <p class="mb-4">Dynamic range-ul, adică diferența dintre cele mai luminoase și cele mai întunecate zone pe care camera le poate captura, este crucial. Camerele profesionale oferă adesea 12-15 stopuri de dynamic range, utilizând profile Log (S-Log de la Sony, C-Log de la Canon, V-Log de la Panasonic). Acestea înregistrează o imagine "plat", necontrastată, care maximizează informația din umbre și lumini, permițând o gradare de culoare precisă și controlată în post-producție.</p>
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Candidați de Top la Titlul de "Cea Mai Bună Cameră Video Profesională 4K"</h2>
+    <p class="mb-4">Identificarea "celei mai bune" camere depinde, desigur, de nevoile specifice ale fiecărui proiect. Iată însă câteva modele care excelează în categoria camerelor video profesionale 4K și care sunt recunoscute pentru performanța și fiabilitatea lor.</p>
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Sony FX3: Compactă și Puternică</h3>
+    <p class="mb-4">Sony FX3 este o cameră full-frame care combină portabilitatea cu capabilitățile cinematografice ale seriei Cinema Line. Dispune de un senzor CMOS Exmor R full-frame de 10.2 MP optimizat pentru video, înregistrează 4K până la 120fps și oferă 15+ stopuri de dynamic range. Codecurile XAVC S-I 4K și XAVC HS 4K, împreună cu S-Cinetone și S-Log3, o fac ideală pentru producții care necesită flexibilitate și un look cinematografic direct din cameră. Stabilizarea optică pe 5 axe (IBIS) este un mare avantaj pentru filmările din mână, iar XLR handle-ul inclus oferă intrări audio profesionale.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Canon C70: Inovație cu Senzor DGO</h3>
+    <p class="mb-4">Canon C70 redefinește conceptul de "cinema hibrid" cu un senzor Super 35 DGO (Dual Gain Output) care promite un dynamic range excepțional, de peste 16 stopuri. Cu montura RF, oferă acces la o gamă modernă de lentile de înaltă performanță. Înregistrează 4K DCI până la 120fps (cu crop) și 4K UHD până la 60fps, folosind codecuri XF-AVC sau MP4. C70 include filtre ND interne și un design compact, fiind o alegere excelentă pentru documentare, evenimente și producții independente care cer calitate și rezistență.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Blackmagic Pocket Cinema Camera 4K / 6K Pro: Valoare și Calitate RAW</h3>
+    <p class="mb-4">Seria Blackmagic Pocket Cinema Camera, în special modelele 4K și 6K Pro, sunt recunoscute pentru calitatea lor cinematografică la un preț accesibil. BMPCC 4K utilizează un senzor Micro Four Thirds, oferind o imagine 4K DCI (4096x2160) până la 60fps și un dynamic range de 13 stopuri. Modelul 6K Pro, cu senzorul său Super 35, înregistrează 6K, dar oferă un 4K downsampled de o calitate excepțională, similar cu camerele de cinema de top. Ambele modele înregistrează în Blackmagic RAW și ProRes, direct pe SSD-uri externe sau carduri CFast 2.0/SD UHS-II, oferind o flexibilitate enormă în post-producție și un control complet asupra imaginii.</p>
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Panasonic Lumix GH6: Putere într-un Corp Compact</h3>
+    <p class="mb-4">Panasonic GH6 continuă tradiția seriei Lumix GH ca o cameră hibridă excepțională pentru video. Cu un senzor Micro Four Thirds de 25.2 MP, GH6 înregistrează 4K DCI și UHD până la 120fps, și chiar 5.7K până la 60fps. Este capabilă de înregistrare internă ProRes 422 HQ și 422 pe carduri CFexpress Type B, oferind o calitate superioară a imaginii. V-Log-ul integrat, cu 13+ stopuri de dynamic range, și stabilizarea pe 5 axe (IBIS) fac din GH6 o opțiune robustă pentru vloggeri, documentariști și echipe mici de producție care necesită performanță într-un corp compact.</p>
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ecosistemul și Ergonomia: Dincolo de Specificații Pure</h2>
+    <p class="mb-4">O cameră video profesională 4K nu este doar o sumă de specificații tehnice. Experiența de utilizare, ecosistemul de accesorii și modul în care se integrează în fluxul tău de lucru sunt factori la fel de importanți. Gândește-te la modul în care vei folosi camera: vei filma predominant din mână, pe trepied, sau pe un gimbal? Ergonomia camerei, dispunerea butoanelor și ușurința de navigare prin meniuri pot face o diferență enormă pe teren.</p>
+    <p class="mb-4">Ecosistemul include compatibilitatea cu obiective, monitoare externe, înregistratoare, microfoane și sistemele de alimentare. O cameră care necesită accesorii specifice și costisitoare poate deveni o povară financiară. Verifică porturile disponibile (SDI, HDMI, USB-C, intrări XLR pentru audio), capacitatea bateriei și opțiunile de stocare (carduri SD, CFast, SSD-uri). O cameră care se integrează fluid cu echipamentul tău existent și care oferă o gamă largă de accesorii compatibile va fi mult mai eficientă pe termen lung.</p>
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Fă Alegerea Potrivită Pentru Proiectele Tale</h2>
+    <p class="mb-4">Alegerea celei mai bune camere video profesionale 4K este o decizie personală, influențată de tipul de proiecte pe care le realizezi, de stilul tău de filmare și de bugetul disponibil. Fiecare dintre modelele menționate are punctele sale forte și se adresează unor nevoi specifice. Sony FX3 excelează în flexibilitate și look cinematografic compact, Canon C70 oferă un dynamic range excepțional și o ergonomie deosebită pentru filmările din mână, Blackmagic Pocket Cinema Camera oferă o calitate RAW imbatabilă pentru prețul său, iar Panasonic GH6 este o mașinărie video puternică într-un corp mirrorless.</p>
+    <p class="mb-4">Nu uita să iei în considerare investiția totală în sistem. Pe lângă cameră, vei avea nevoie de obiective, carduri de memorie rapide, baterii suplimentare, un sistem de sunet de calitate și, posibil, un monitor extern. Îți recomand să închiriezi câteva dintre opțiunile care te interesează înainte de a face o achiziție majoră. Testarea lor în condiții reale de filmare îți va oferi cea mai clară imagine despre care model se potrivește cel mai bine cerințelor și stilului tău de lucru. Calitatea 4K profesională este acum mai accesibilă ca niciodată, iar alegerea corectă îți va propulsa proiectele la un nou nivel vizual.</p>
+    
+  </section>
+
+          <!-- FAQ Section -->
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce înseamnă "profesională" când vorbim de camere video 4K?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  O cameră video 4K "profesională" se distinge prin calitatea superioară a imaginii (codecuri avansate, dynamic range extins, adâncime de culoare mare - 10-bit sau 12-bit), opțiuni de control manual detaliate, conectivitate robustă (SDI, XLR), fiabilitate în condiții de lucru dificile și un ecosistem extins de accesorii. Este concepută pentru a satisface cerințele fluxurilor de lucru din producția de film, televiziune, documentare sau conținut corporate de înaltă calitate.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Care este diferența între un senzor Full-Frame și Super 35 pentru video 4K?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Un senzor Full-Frame (FX) are o suprafață fizică mai mare, similară cu filmul de 35mm, oferind o performanță superioară în condiții de lumină scăzută, un control mai bun al profunzimii de câmp (bokeh mai pronunțat) și un "look" distinctiv. Senzorii Super 35 (APS-C) sunt puțin mai mici, oferă o compatibilitate largă cu obiectivele de cinema și sunt adesea preferați pentru o adâncime de câmp mai extinsă și o imagine mai "curată" pentru anumite tipuri de producții. Ambele pot produce imagini 4K de o calitate excepțională, alegerea depinzând de preferințele estetice și de obiectivele existente.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Este importantă înregistrarea internă 10-bit 4:2:2?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, înregistrarea internă 10-bit 4:2:2 este foarte importantă pentru producțiile video profesionale. "10-bit" se referă la adâncimea de culoare, permițând camerei să captureze un miliard de culori, comparativ cu 16 milioane pentru 8-bit. Aceasta oferă o flexibilitate mult mai mare în color grading, evitând "banding-ul" (artefacte vizuale de culoare) în degradeuri. "4:2:2" se referă la subeșantionarea cromatică, indicând că sunt eșantionate de două ori mai multe informații de culoare decât 4:2:0, rezultând o fidelitate cromatică superioară și o rezistență mai bună la manipulări în post-producție, mai ales la aplicarea efectelor vizuale și keying.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi obiective foto pe o cameră video profesională 4K?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, multe camere video profesionale 4K, în special cele hibride sau cinema compacte (precum Sony FX3, Canon C70, Panasonic GH6), utilizează aceleași monturi de obiective ca și camerele foto (E-mount, RF, M4/3). Aceasta înseamnă că poți folosi obiective foto, care sunt adesea mai accesibile și mai ușoare. Trebuie să ai în vedere că obiectivele foto pot avea "focus breathing" (schimbarea unghiului de vedere la modificarea focalizării) și diafragme "clicky" care nu sunt ideale pentru video. Obiectivele cinema sunt optimizate pentru video, având inele de focus și iris fluide și marcaje precise, dar sunt și semnificativ mai costisitoare.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de importantă este stabilizarea imaginii la o cameră 4K?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Stabilizarea imaginii este extrem de importantă, mai ales când filmezi 4K din mână. La rezoluții înalte, orice mișcare neintenționată este mult mai vizibilă. Stabilizarea optică în obiectiv (OIS) sau stabilizarea în corp (IBIS - In-Body Image Stabilization) poate reduce semnificativ tremuratul, permițând filmări fluide fără a recurge mereu la gimbal sau trepied. Unele camere combină chiar stabilizarea optică cu cea digitală pentru rezultate și mai bune. Pentru un profesionist, o imagine stabilă este fundamentală pentru un produs finit de calitate superioară.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/camera-actiune-rezistenta-la-apa/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/camera-actiune-rezistenta-la-apa.webp" alt="Cameră Acțiune Rezistentă La Apă" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cameră Acțiune Rezistentă La Apă</h3>
+              </div>
+            </a>
+
+            <a href="/kit-accesorii-foto-pentru-incepatori/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/kit-accesorii-foto-pentru-incepatori.webp" alt="Kit Accesorii Foto Pentru Începători" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Kit Accesorii Foto Pentru Începători</h3>
+              </div>
+            </a>
+
+            <a href="/aparat-mirrorless-cu-autofocus-rapid/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aparat-mirrorless-cu-autofocus-rapid.webp" alt="Aparat Mirrorless Cu Autofocus Rapid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aparat Mirrorless Cu Autofocus Rapid</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

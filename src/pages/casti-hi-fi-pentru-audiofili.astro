@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Căști Hi-fi Pentru Audiofili",
+  slug: "casti-hi-fi-pentru-audiofili",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Casti hi-fi pentru audiofili: ghid practic pentru a alege sunetul perfect. Experienta mea cu modele de top.",
+  image: "/images/articles/casti-hi-fi-pentru-audiofili.webp",
+  publishDate: "2025-11-28T11:07:41.000Z",
+  modifiedDate: "2026-01-17T11:07:41.142Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi căști hi-fi cu telefonul meu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depinde de impedanța căștilor. Cele sub 32 Ohmi funcționează bine. Pentru căștile cu impedanță mai mare (peste 100 Ohmi), vei avea nevoie de un DAC/amplificator portabil sau de un amplificator dedicat acasă pentru a auzi sunetul la potențialul maxim."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sunt căștile open-back potrivite pentru mine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Căștile open-back oferă o scenă sonoră mai largă și un sunet mai natural, aerisit. Sunt ideale pentru ascultare acasă, într-un mediu liniștit. Dezavantajul este că nu izolează fonic deloc, deci sunetul se aude și afară, iar zgomotul ambiental pătrunde în interior."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce înseamnă DAC și de ce mi-ar trebui?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DAC (Digital-to-Analog Converter) transformă semnalul digital (de pe telefon, PC) în semnal analogic pe care căștile îl pot reda. Un DAC extern sau integrat într-un amplificator poate oferi o calitate a sunetului superioară față de DAC-ul din dispozitivul tău, aducând mai multă claritate și detaliu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot să ascult muzică de pe YouTube cu căști hi-fi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, dar calitatea sunetului va fi limitată de calitatea fișierului audio de pe YouTube. Pentru a beneficia cu adevărat de căștile hi-fi, recomand servicii de streaming cu calitate lossless (FLAC, ALAC) precum Tidal, Qobuz sau chiar Apple Music, și fișiere locale de înaltă rezoluție."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sunetul pur: ce inseamna hi-fi pentru urechile tale</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tipuri de căști hi-fi: over-ear, on-ear și in-ear</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Drivere: inima căștilor tale</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Impedanța și sensibilitatea: ce contează pentru amplificatorul tău</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Materiale și construcție: confort și durabilitate</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandări specifice pentru bugetul tău</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sunetul pur: ce inseamna hi-fi pentru urechile tale</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Tipuri de căști hi-fi: over-ear, on-ear și in-ear</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Drivere: inima căștilor tale</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Impedanța și sensibilitatea: ce contează pentru amplificatorul tău</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Materiale și construcție: confort și durabilitate</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandări specifice pentru bugetul tău</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/casti-hi-fi-pentru-audiofili.webp" alt="Căști Hi-fi Pentru Audiofili" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sunetul pur: ce inseamna hi-fi pentru urechile tale</h2>
+    <p class="mb-4">Am petrecut ani de zile testând tot felul de căști, de la cele ieftine de la supermarket la modele de zeci de mii de lei. Când vine vorba de căști hi-fi, nu vorbim doar despre a auzi muzica, ci despre a o simți. E diferența dintre a vedea o poză și a fi acolo, în studio, cu artiștii.</p>
+    <p class="mb-4">Pentru un audiofil, căștile hi-fi sunt o poartă către o experiență auditivă imersivă. Vorbim despre o redare fidelă a sunetului, fără compromisuri, unde fiecare instrument, fiecare nuanță vocală, este redată cu o claritate uluitoare. Am observat că odată ce ai gustat din sunetul hi-fi, e greu să te mai întorci la altceva.</p>
+    <p class="mb-4">În experiența mea, căștile hi-fi te forțează să asculți muzica altfel. Nu mai e doar un fundal, devine o activitate. E o călătorie în sine, unde descoperi detalii pe care nu le-ai auzit niciodată în piesele tale preferate. De la texturile subtile ale unui vioară până la respirația unui vocalist, totul capătă o nouă dimensiune.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Tipuri de căști hi-fi: over-ear, on-ear și in-ear</h2>
+    <p class="mb-4">Alegerea tipului potrivit este primul pas. Căștile over-ear, cele care acoperă complet urechea, oferă de obicei cea mai bună izolare fonică și confort pentru sesiuni lungi de ascultare. Modele precum Sennheiser HD 660 S2 (aproximativ 2.300 RON la eMAG) sau Beyerdynamic DT 900 PRO X (în jur de 1.600 RON la PCGarage) sunt exemple excelente în această categorie.</p>
+    <p class="mb-4">Căștile on-ear, care se așează pe ureche, sunt mai compacte, dar pot deveni inconfortabile după o vreme și nu izolează la fel de bine. Totuși, pentru portabilitate, pot fi o opțiune. În schimb, căștile in-ear (sau dopuri) sunt ideale pentru mobilitate și izolare fonică activă, dar pentru audiofilii puristi, sunetul poate fi uneori perceput ca fiind mai puțin „aerisit” decât la cele over-ear. Totuși, pentru ascultare în mișcare, exemple ca Sony WF-1000XM5 (aproximativ 1.700 RON la Altex) oferă o calitate audio impresionantă pentru formatul lor.</p>
+    <p class="mb-4">Am testat multe modele și am observat că pentru acasă, în liniștea camerei mele, prefer clar over-ear. Dar când sunt pe drum, un set bun de in-ear hi-fi, cum ar fi cele de la Shure, pot face minuni. Alegerea depinde mult de contextul de utilizare.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Drivere: inima căștilor tale</h2>
+    <p class="mb-4">Driverul este componenta care produce sunetul, iar tipul și dimensiunea lui influențează direct calitatea audio. Cele mai comune sunt cele dinamice, folosite în majoritatea căștilor, dar pentru audiofili, driverele planare magnetice sau cele cu armătură balansată oferă adesea o rezoluție și o precizie superioare.</p>
+    <p class="mb-4">Am avut ocazia să ascult căști cu drivere planare magnetice, precum cele de la Audeze (modelele LCD încep de la 5.000 RON) și am rămas uimit de claritatea și viteza cu care redau sunetul. Detaliile fine, ca texturile instrumentelor de percuție sau micro-dinamica vocalelor, sunt redate cu o acuratețe incredibilă.</p>
+    <p class="mb-4">Driverele cu armătură balansată, întâlnite mai des la căștile in-ear de înaltă fidelitate, excelează la capitolul claritate și separare a sunetelor, în special în frecvențele medii și înalte. Pentru un sunet echilibrat și detaliat, am găsit că o combinație de drivere, uneori chiar 4-6 pe cască, poate oferi rezultate spectaculoase, dar și prețuri pe măsură.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Impedanța și sensibilitatea: ce contează pentru amplificatorul tău</h2>
+    <p class="mb-4">Aceste două specificații sunt cruciale, mai ales dacă nu vrei să cumperi și un amplificator dedicat. Impedanța (măsurată în Ohmi) indică rezistența la curent electric. Căștile cu impedanță mică (sub 32 Ohmi) sunt ușor de „condus” și pot fi folosite direct cu telefonul sau laptopul. Exemple sunt multe, de la Apple AirPods Max (aproximativ 2.500 RON la eMAG) la Sony WH-1000XM5.</p>
+    <p class="mb-4">Însă, căștile hi-fi destinate audiofililor au adesea o impedanță mai mare (peste 100 Ohmi, uneori chiar 300-600 Ohmi). Pentru acestea, un amplificator de căști dedicat este aproape obligatoriu pentru a scoate tot potențialul din ele. Am testat căști Sennheiser HD 650 (aproximativ 1.800 RON la PCGarage) conectate direct la un laptop și sunetul era fad, lipsit de viață. Cu un amplificator decent, însă, s-au transformat complet.</p>
+    <p class="mb-4">Sensibilitatea (măsurată în dB/mW sau dB/V) indică cât de tare poate reda o cască cu o anumită putere de intrare. O sensibilitate mai mare înseamnă că vei obține un volum mai mare cu aceeași putere de la sursă. Pentru căștile cu impedanță mare, o sensibilitate mai scăzută este normală, dar confirmă nevoia unui amplificator mai puternic.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Materiale și construcție: confort și durabilitate</h2>
+    <p class="mb-4">Nu neglija confortul, mai ales dacă plănuiești sesiuni lungi de ascultare. Pernițele pentru urechi din piele naturală sau velur sunt de preferat pentru o senzație plăcută și o izolare fonică bună. E important ca materialul să permită pielii să respire, altfel devine incomod după o oră.</p>
+    <p class="mb-4">Am observat că multe căști hi-fi folosesc materiale premium, cum ar fi aluminiul sau lemnul în construcție, nu doar pentru estetică, ci și pentru a reduce vibrațiile nedorite care pot afecta sunetul. Căștile HEDDphone TWO (peste 4.000 RON la Audioweb) au o construcție solidă, dar și o greutate pe măsură, ceea ce necesită o ajustare bună a curelei pentru cap.</p>
+    <p class="mb-4">Verifică și calitatea cablului. Un cablu detașabil este un mare plus, permițând înlocuirea ușoară în caz de deteriorare sau upgrade-ul cu unul de o calitate superioară. Multe modele high-end vin cu cabluri din cupru OFC (Oxygen-Free Copper) sau chiar argint, care promit o transmisie a semnalului mai pură.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Recomandări specifice pentru bugetul tău</h2>
+    <p class="mb-4">Pentru un buget sub 1.000 RON, căștile AKG K702 (aproximativ 800 RON la Altex) oferă un sunet deschis și detaliat, ideal pentru muzică clasică sau ambientală. Sunt open-back, deci nu izolează fonic, dar sunetul este spectaculos pentru prețul lor.</p>
+    <p class="mb-4">Între 1.000 și 2.000 RON, modele precum Audio-Technica ATH-M50x (în jur de 700 RON la eMAG, dar merită să cauți oferte) sunt o opțiune solidă pentru monitorizare și ascultare generală, oferind un sunet echilibrat și o construcție robustă. Pentru cei care vor o experiență mai rafinată, Fostex TH610 (aproximativ 1.900 RON la PCGarage) aduc o notă de eleganță și un sunet cald, detaliat.</p>
+    <p class="mb-4">Peste 2.000 RON, intrăm pe tărâmul audiofililor adevărați. Sennheiser HD 660 S2 (menționat anterior), Hifiman Sundara (aproximativ 2.000 RON la Audioweb) sau Beyerdynamic DT 1990 PRO (în jur de 2.500 RON la eMAG) sunt alegeri excelente, fiecare cu caracteristicile sale sonore unice, de la scena largă la precizia tonală.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi căști hi-fi cu telefonul meu?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Depinde de impedanța căștilor. Cele sub 32 Ohmi funcționează bine. Pentru căștile cu impedanță mai mare (peste 100 Ohmi), vei avea nevoie de un DAC/amplificator portabil sau de un amplificator dedicat acasă pentru a auzi sunetul la potențialul maxim.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Sunt căștile open-back potrivite pentru mine?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Căștile open-back oferă o scenă sonoră mai largă și un sunet mai natural, aerisit. Sunt ideale pentru ascultare acasă, într-un mediu liniștit. Dezavantajul este că nu izolează fonic deloc, deci sunetul se aude și afară, iar zgomotul ambiental pătrunde în interior.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce înseamnă DAC și de ce mi-ar trebui?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  DAC (Digital-to-Analog Converter) transformă semnalul digital (de pe telefon, PC) în semnal analogic pe care căștile îl pot reda. Un DAC extern sau integrat într-un amplificator poate oferi o calitate a sunetului superioară față de DAC-ul din dispozitivul tău, aducând mai multă claritate și detaliu.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot să ascult muzică de pe YouTube cu căști hi-fi?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, dar calitatea sunetului va fi limitată de calitatea fișierului audio de pe YouTube. Pentru a beneficia cu adevărat de căștile hi-fi, recomand servicii de streaming cu calitate lossless (FLAC, ALAC) precum Tidal, Qobuz sau chiar Apple Music, și fișiere locale de înaltă rezoluție.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/soundbar-cu-subwoofer-integrat/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/soundbar-cu-subwoofer-integrat.webp" alt="Soundbar Cu Subwoofer Integrat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Soundbar Cu Subwoofer Integrat</h3>
+              </div>
+            </a>
+
+            <a href="/ecran-smart-cu-chromecast-incorporat/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/ecran-smart-cu-chromecast-incorporat.webp" alt="Ecran Smart Cu Chromecast Încorporat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Ecran Smart Cu Chromecast Încorporat</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-televizor-qled-de-mari-dimensiuni/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-televizor-qled-de-mari-dimensiuni.webp" alt="Cel mai bun televizor QLED de mari dimensiuni" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun televizor QLED de mari dimensiuni</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

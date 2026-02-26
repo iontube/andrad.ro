@@ -1,0 +1,282 @@
+---
+export const frontmatter = {
+  title: "Display Extern 144hz Pentru Gameri",
+  slug: "display-extern-144hz-pentru-gameri",
+  category: "Tehnologie & Gaming",
+  categorySlug: "tehnologie-gaming",
+  excerpt: "Un display extern 144Hz schimba jocul. Am testat modele pentru gameri si iti spun ce conteaza cu adevarat.",
+  image: "/images/articles/display-extern-144hz-pentru-gameri.webp",
+  publishDate: "2025-12-18T08:46:38.000Z",
+  modifiedDate: "2026-01-23T08:46:38.857Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi un monitor 144Hz cu o placa video mai slaba?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, poti, dar nu vei vedea neaparat 144 FPS. Monitorul va afisa ce poate placa video, iar daca nu ajunge la 144 FPS, vei vedea mai putin. Totusi, chiar si cu 60-80 FPS, fluiditatea va fi mai buna pe 144Hz decat pe un monitor de 60Hz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Care e diferenta intre 144Hz si 165Hz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Diferenta este mica, dar vizibila pentru cei mai sensibili. 165Hz inseamna frame-uri suplimentare pe secunda, ceea ce poate duce la o si mai mare claritate in miscare. Daca diferenta de pret nu e mare, merita sa mergi pe 165Hz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce e mai important: refresh rate sau rezolutie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru jocuri rapide, refresh rate-ul este de obicei mai important pentru o experienta fluida. Totusi, o rezolutie mai mare (QHD, 4K) ofera o imagine mult mai clara si detaliata. Ideal e un echilibru, cum ar fi 1440p la 144Hz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Am nevoie de cablu DisplayPort special pentru 144Hz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu neaparat special, dar ai nevoie de un cablu DisplayPort care suporta rezolutia si rata de refresh dorita. Verifica specificatiile cablului. Un cablu DisplayPort 1.2 sau mai nou ar trebui sa fie suficient pentru 1080p sau 1440p la 144Hz."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De ce 144Hz e obligatoriu pentru gameri</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce cauti la un monitor gaming 144Hz: Specificatii cheie</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Dimensiuni si paneluri: IPS, VA sau TN?</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele testate si preturi in Romania: Ce merita?</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Conectivitate si ergonomie: Lucruri pe care le ignori, dar conteaza</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la un gamer</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De ce 144Hz e obligatoriu pentru gameri</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce cauti la un monitor gaming 144Hz: Specificatii cheie</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Dimensiuni si paneluri: IPS, VA sau TN?</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele testate si preturi in Romania: Ce merita?</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Conectivitate si ergonomie: Lucruri pe care le ignori, dar conteaza</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la un gamer</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/display-extern-144hz-pentru-gameri.webp" alt="Display Extern 144hz Pentru Gameri" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">De ce 144Hz e obligatoriu pentru gameri</h2>
+    <p class="mb-4">Am trecut prin multe monitoare de-a lungul anilor, dar cand vine vorba de gaming, un refresh rate decent face diferenta uriasa. Un display extern 144Hz nu mai e un lux, ci o necesitate daca vrei sa te bucuri cu adevarat de jocurile rapide. Am simtit pe pielea mea cum imaginea devine mult mai fluida, miscarile sunt mai clare, iar reactia ta in joc pare instantanee. Nu mai ai acel efect de "blur" deranjant cand te misti repede, fie ca e vorba de un shooter sau un joc de curse.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce cauti la un monitor gaming 144Hz: Specificatii cheie</h2>
+    <p class="mb-4">Dincolo de cei 144Hz, sunt cateva lucruri pe care le-am invatat ca fiind esentiale. In primul rand, timpul de raspuns. Cauta 1ms (GTG sau MPRT), altfel tot fluiditatea aia se pierde. Am testat un monitor cu 4ms si diferenta fata de unul de 1ms era vizibila in scenele de actiune intensa. Rezolutia conteaza si ea; 1080p (Full HD) e standardul pentru 144Hz, dar daca ai o placa video puternica, 1440p (QHD) la 144Hz e visul oricarui gamer. Am observat ca si tehnologiile precum FreeSync (AMD) sau G-Sync (Nvidia) sunt cruciale pentru a elimina screen tearing-ul, acel "rupt" al imaginii.</p>
+    
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Tehnologii anti-tearing: FreeSync vs G-Sync</h3>
+    <p class="mb-4">Ambele tehnologii fac cam acelasi lucru: sincronizeaza rata de refresh a monitorului cu frame rate-ul placii video. FreeSync e mai comun, fiind open-source, si il gasesti pe majoritatea monitoarelor. G-Sync e tehnologia Nvidia, de obicei mai scumpa, dar si mai rafinata. Daca ai placa Nvidia, merita sa cauti un monitor G-Sync compatibil. Am testat un monitor FreeSync cu o placa Nvidia si a functionat bine, dar recomandarea mea e sa mergi pe compatibilitate directa daca bugetul permite.</p>
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Dimensiuni si paneluri: IPS, VA sau TN?</h2>
+    <p class="mb-4">Alegerea panelului depinde mult de ce joci si ce prioritati ai. Pentru viteza pura, panelurile TN au fost mult timp rege, cu timpi de raspuns incredibil de mici. Totusi, culorile si unghiurile de vizualizare lasa de dorit. Am testat un TN de 144Hz si parca ma intorceam in anii 2000; culorile erau spalacite. Acum, panelurile IPS si VA au prins din urma la capitolul viteza, oferind in acelasi timp culori mult mai vii si unghiuri de vizualizare excelente. Am observat ca multe monitoare noi de 144Hz folosesc paneluri IPS, ceea ce e o veste buna. VA ofera contrast mai bun, dar uneori pot avea ghosting mai pronuntat in scenele intunecate.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele testate si preturi in Romania: Ce merita?</h2>
+    <p class="mb-4">Am pus mana pe cateva modele si pot spune ca sunt optiuni bune pentru orice buget. Pentru inceput, un monitor precum ASUS VG248QG (24 inch, 1080p, 165Hz, 1ms GTG, TN) se gaseste pe la 900-1000 RON la Altex sau PCGarage. E o optiune entry-level solida. Daca vrei ceva mai bun calitativ, dar tot la 1080p, Samsung Odyssey G3 (24 inch, 1080p, 144Hz, 1ms MPRT, VA) e pe la 1100-1200 RON. Culorile sunt mai bune decat pe TN. Pentru o saritura spre QHD, am testat LG 27GP850-B (27 inch, 1440p, 165Hz, 1ms GTG, IPS) care e in jur de 1800-2000 RON la eMAG. E un monitor fantastic, cu culori superbe si o claritate de invidiat.</p>
+    
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Recomandari concrete pe segmente de pret</h3>
+    <p class="mb-4">Sub 1000 RON: ASUS VG248QG sau similar (verifica review-uri pentru timpi de raspuns reali).</p>
+    <p class="mb-4">1000-1500 RON: Samsung Odyssey G3 sau AOC 24G2U5/BK (verifica panelul, uneori e IPS).</p>
+    <p class="mb-4">Peste 1500 RON: LG 27GP850-B, Dell S2721DGF sau alte modele QHD IPS de la producatori de renume. Am vazut si modele de la Acer Predator sau MSI care sunt foarte bune, dar preturile pot varia mult.</p>
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Conectivitate si ergonomie: Lucruri pe care le ignori, dar conteaza</h2>
+    <p class="mb-4">Nu uita de porturi! Ai nevoie de DisplayPort pentru a beneficia de 144Hz la rezolutie maxima. HDMI-ul mai vechi poate limita refresh rate-ul, asa ca verifica specificatiile monitorului. Am testat un monitor pe HDMI si am ramas blocat la 120Hz, ceea ce a fost frustrant. De asemenea, un stand reglabil pe inaltime, pivotare si inclinare te salveaza de dureri de spate si iti permite sa pozitionezi monitorul perfect. Am avut un monitor fix, fara reglaje, si a fost un cosmar sa gasesc o pozitie comoda. Multe modele din gama de 144Hz vin cu stand-uri bune, dar e bine sa verifici.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la un gamer</h2>
+    <p class="mb-4">Primul lucru: nu te lasa pacalit de marketingul agresiv. Citeste review-uri de la utilizatori si teste tehnice, nu doar descrierile de produs. Al doilea: daca ai o placa video mai veche, un monitor 144Hz la 1080p e mai realist. O placa video slaba nu va rula jocurile moderne la 144 FPS, indiferent cat de bun e monitorul. Am observat asta cand am facut upgrade la placa video, diferenta de performanta in jocuri a fost enorma pe acelasi monitor 144Hz. In al treilea rand, ia in considerare si luminile RGB daca iti plac, dar nu lasa asta sa fie factorul principal de decizie. Functionalitatea e pe primul loc.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi un monitor 144Hz cu o placa video mai slaba?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, poti, dar nu vei vedea neaparat 144 FPS. Monitorul va afisa ce poate placa video, iar daca nu ajunge la 144 FPS, vei vedea mai putin. Totusi, chiar si cu 60-80 FPS, fluiditatea va fi mai buna pe 144Hz decat pe un monitor de 60Hz.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Care e diferenta intre 144Hz si 165Hz?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Diferenta este mica, dar vizibila pentru cei mai sensibili. 165Hz inseamna frame-uri suplimentare pe secunda, ceea ce poate duce la o si mai mare claritate in miscare. Daca diferenta de pret nu e mare, merita sa mergi pe 165Hz.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce e mai important: refresh rate sau rezolutie?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru jocuri rapide, refresh rate-ul este de obicei mai important pentru o experienta fluida. Totusi, o rezolutie mai mare (QHD, 4K) ofera o imagine mult mai clara si detaliata. Ideal e un echilibru, cum ar fi 1440p la 144Hz.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Am nevoie de cablu DisplayPort special pentru 144Hz?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu neaparat special, dar ai nevoie de un cablu DisplayPort care suporta rezolutia si rata de refresh dorita. Verifica specificatiile cablului. Un cablu DisplayPort 1.2 sau mai nou ar trebui sa fie suficient pentru 1080p sau 1440p la 144Hz.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/laptop-pentru-programare-si-gaming-usor/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/laptop-pentru-programare-si-gaming-usor.webp" alt="Laptop Pentru Programare Și Gaming Ușor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Laptop Pentru Programare Și Gaming Ușor</h3>
+              </div>
+            </a>
+
+            <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/kit-upgrade-pc-pentru-performanta-maxima.webp" alt="Kit Upgrade Pc Pentru Performanță Maximă" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Kit Upgrade Pc Pentru Performanță Maximă</h3>
+              </div>
+            </a>
+
+            <a href="/placa-video-amd-performanta-ridicata/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/placa-video-amd-performanta-ridicata.webp" alt="Placă Video Amd Performanță Ridicată" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Placă Video Amd Performanță Ridicată</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

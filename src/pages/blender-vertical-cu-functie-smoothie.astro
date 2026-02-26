@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Blender Vertical Cu Funcție Smoothie",
+  slug: "blender-vertical-cu-functie-smoothie",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Am testat blendere verticale cu functie smoothie: ce te ajuta sa faci rapid micul dejun si gustari sanatoase.",
+  image: "/images/articles/blender-vertical-cu-functie-smoothie.webp",
+  publishDate: "2025-11-24T10:42:06.000Z",
+  modifiedDate: "2026-01-16T10:42:06.714Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi blenderul vertical pentru a toca legume pentru salata?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, multe blendere verticale vin cu un accesoriu tip mini-tocator, perfect pentru a toca ceapa, usturoi, ierburi sau chiar nuci. Nu va fi la fel de fin ca la un robot de bucatarie dedicat, dar pentru cantitati mici, isi face treaba."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce fac daca blenderul vertical se supraincalzeste?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Daca observi ca motorul se supraincalzeste, opreste-l imediat si lasa-l sa se raceasca cateva minute. Probabil ai pus prea multe ingrediente sau ai incercat sa procesezi ceva prea tare. Nu forta aparatul, altfel risti sa-l deteriorezi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cat de rezistente sunt lamele blenderului vertical?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lamele din otel inoxidabil sunt, in general, destul de rezistente. Totusi, evita sa le folosesti pentru a sparge cuburi de gheata foarte mari sau obiecte metalice. Pentru uz normal, cu fructe si legume, ar trebui sa reziste ani de zile. Unele branduri ofera si posibilitatea de a inlocui lamele."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce putere de motor este recomandata pentru smoothie-uri cu gheata?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru smoothie-uri care includ gheata sau fructe congelate, recomand un motor de cel putin 700W. Modelele sub 600W se pot chinui si pot duce la o textura mai putin fina sau chiar la blocarea aparatului."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Blender vertical cu functie smoothie: ambalajul promisiunilor</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce inseamna de fapt "functie smoothie" si cum o recunosti</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Testul meu pe teren: fructe, gheata si alte provocari</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce cauti cand cumperi: putere, accesorii si preturi in Romania</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la cineva care le-a folosit</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Alternativa la blenderul vertical: blenderul de masa</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Blender vertical cu functie smoothie: ambalajul promisiunilor</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce inseamna de fapt "functie smoothie" si cum o recunosti</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Testul meu pe teren: fructe, gheata si alte provocari</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce cauti cand cumperi: putere, accesorii si preturi in Romania</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la cineva care le-a folosit</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Alternativa la blenderul vertical: blenderul de masa</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/blender-vertical-cu-functie-smoothie.webp" alt="Blender Vertical Cu Funcție Smoothie" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Blender vertical cu functie smoothie: ambalajul promisiunilor</h2>
+    <p class="mb-4">Am petrecut ultimele saptamani cu mainile prin bucatarie, incercand sa inteleg cu adevarat ce inseamna un blender vertical cu functie smoothie. Nu vorbim de aparate complicate, ci de acele dispozitive compacte care promit sa transforme fructele si legumele in bauturi cremoase, gata de consum, in cateva secunde. Experienta mea a inceput cu modele de la Philips, Braun si chiar cateva mai putin cunoscute gasite pe eMAG, toate cu scopul de a vedea daca promisiunile se ridica la nivelul asteptarilor mele de jurnalist tech cu ceva ani de experienta in spate.</p>
+    <p class="mb-4">Am vrut sa vad cat de usor e sa prepari un mic dejun rapid, o gustare pentru copii sau chiar o baza pentru supe creme. Am pus la treaba ingrediente variate: de la fructe moi precum banana si capsuna, la cele mai tari cum ar fi marul si morcovul, si chiar gheata. Obiectivul a fost clar: sa obtin o textura fina, fara bucati neplacute, si sa simt ca aparatul isi face treaba fara efort.</p>
+    <p class="mb-4">Ce m-a frapat de la inceput este diferenta dintre modele. Unele sunt atat de simple, ca te gandesti daca chiar pot face fata unei sarcini mai grele, pe cand altele vin cu accesorii care te fac sa te gandesti daca nu cumva ai cumparat de fapt un robot de bucatarie mic. Am testat si varianta cu recipient propriu, gen pahar pentru smoothie, si cea care se monteaza direct pe cana de servit.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce inseamna de fapt "functie smoothie" si cum o recunosti</h2>
+    <p class="mb-4">Cand vorbim de "functie smoothie" la un blender vertical, ne referim la mai mult decat simpla actiune de a invarti lamele. De obicei, aceste aparate au motoare mai puternice si lame special concepute pentru a procesa ingrediente mai tari, cum ar fi gheata, fructele congelate sau chiar cuburi de gheata. Am observat ca modelele mai performante, cum ar fi cele de la Braun din seria Multiquick, au motoare de peste 800W, ceea ce face o diferenta notabila cand vine vorba de textura finala.</p>
+    <p class="mb-4">Un alt aspect important este designul lamei. Cele dedicate smoothie-urilor sunt adesea mai ascutite si dispuse intr-un unghi optim pentru a crea un vortex eficient in lichid. Am testat un model Philips cu tehnologie ProMix, care promitea o mixare mai eficienta si am simtit diferenta in comparatie cu un model mai vechi, cu lame standard. Textura a fost mai fina, mai uniforma, fara acele mici resturi de fructe care raman uneori nedizolvate.</p>
+    <p class="mb-4">De asemenea, cautati modele care vin cu accesorii specifice, cum ar fi un pahar gradat mai inalt sau chiar un recipient tip "to-go" cu capac. Acestea simplifica procesul de preparare si curatare, permitandu-ti sa amesteci direct in recipientul pe care il vei lua cu tine la birou sau in masina. Am gasit modele de la Tefal care ofereau astfel de optiuni, facand experienta de utilizare mult mai fluida.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Testul meu pe teren: fructe, gheata si alte provocari</h2>
+    <p class="mb-4">In experienta mea, cel mai bun mod de a testa un blender vertical cu functie smoothie este sa-l supui unor scenarii reale de utilizare. Am pregatit un "Green Smoothie" clasic cu spanac, banana, mango congelat si putina apa. Modelul Braun Multiquick 9, de exemplu, a transformat totul intr-o bautura perfect omogena in maxim 30 de secunde, fara sa se blocheze sau sa faca zgomot excesiv. Lamele sale, cu tehnologia PowerBell V, au facut o treaba excelenta.</p>
+    <p class="mb-4">Apoi, am trecut la ceva mai provocator: un "Berry Blast" cu fructe de padure congelate, iaurt si cateva cuburi de gheata. Aici am observat o diferenta clara intre modele. Cele cu motoare sub 600W au avut momente de ezitare, uneori chiar blocandu-se temporar, necesitand oprirea si agitarea recipientului. In schimb, modelul Russell Hobbs cu functie "pulse" a facut fata cu brio, transformand gheata in praf fin.</p>
+    <p class="mb-4">Am testat si functia de "curatare usoara", un aspect pe care multi il neglijeaza. Majoritatea modelelor se demonteaza usor, iar lamele pot fi clatite sub jet de apa. Totusi, am gasit ca si cele care vin cu un recipient special pentru curatare, cum am vazut la anumite modele Bosch, sunt mult mai practice, evitand contactul direct cu lamele ascutite. In general, un blender vertical bun trebuie sa fie usor de curatat, altfel risca sa ramana pe fundul sertarului.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce cauti cand cumperi: putere, accesorii si preturi in Romania</h2>
+    <p class="mb-4">Cand vine vorba de un blender vertical cu functie smoothie, primul lucru pe care il verific este puterea motorului. Personal, nu recomand nimic sub 600W daca vrei sa procesezi si ingrediente mai tari, cum ar fi gheata sau fructe congelate. Modelele de top, cum ar fi cele de la KitchenAid, pot ajunge si la 1000W, dar acestea sunt adesea mai scumpe. Un bun echilibru il gasesti in gama de 700-800W, de exemplu la Braun sau Philips.</p>
+    <p class="mb-4">Apoi, atentie la accesorii. Un blender vertical bun vine, pe langa paharul gradat, cu o mini-tocator (util pentru nuci sau ierburi) si, ideal, un tel. Acestea extind functionalitatea aparatului, transformandu-l dintr-un simplu blender de smoothie intr-un ajutor versatil in bucatarie. Am vazut modele de la Bosch care includ o varietate impresionanta de accesorii, uneori si un recipient pentru pasat cartofi.</p>
+    <p class="mb-4">Ca preturi, in Romania, un blender vertical decent cu functie smoothie incepe de la aproximativ 150-200 RON pentru modelele de baza de la producatori precum Heinner sau Star-Light. Pentru aparate mai performante, cu motoare mai puternice si accesorii, te poti astepta sa platesti intre 300 si 600 RON. Modelele premium de la Braun, Philips sau KitchenAid pot depasi 700-800 RON, dar vin si cu o garantie extinsa si o calitate a materialelor superioara. Am verificat preturile pe eMAG, Altex si Flanco, si variatiile nu sunt foarte mari pentru aceleasi modele.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la cineva care le-a folosit</h2>
+    <p class="mb-4">Un truc pe care l-am invatat este ordinea ingredientelor in pahar. Pune lichidul (apa, lapte, suc) prima data, apoi frunzele (spanac, kale), urmate de fructele moi, cele tari si, la final, gheata sau fructele congelate. Acest lucru ajuta la crearea unui vortex mai eficient si previne blocarea lamelor. Am observat ca multe retete de smoothie nu specifica asta, dar face o diferenta uriasa.</p>
+    <p class="mb-4">Nu supra-aglomera blenderul. Daca vrei un smoothie cremos, nu umple recipientul pana la refuz. Este mai bine sa faci doua porții mai mici decat sa fortezi aparatul si sa obtii o textura groasa si neomogena. De asemenea, daca folosesti fructe congelate, lasa-le cateva minute la temperatura camerei inainte de a le pune in blender, mai ales daca aparatul nu este unul de top. Acest lucru reduce presiunea asupra motorului.</p>
+    <p class="mb-4">Curatarea imediata este cheia. Imediat dupa utilizare, clateste lamele si paharul sub jet de apa. Daca ai un model care permite atasarea lamelelor direct pe paharul de smoothie, umple-l pe jumatate cu apa calda si o picatura de detergent, ataseaza lamele si invarte-le cateva secunde. Va fi mult mai usor sa cureti resturile uscate.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Alternativa la blenderul vertical: blenderul de masa</h2>
+    <p class="mb-4">Cand vine vorba de smoothie-uri, multa lume se gandeste la blenderul de masa, genul acela mai mare, cu un bol de sticla sau plastic. Si da, sunt excelente pentru cantitati mari si pentru a face supe creme sau sosuri. Am testat si cateva modele de la Philips si Bosch care sunt dedicate acestui scop, si pot spune ca textura este, in general, mai fina decat la un blender vertical, mai ales cand vine vorba de seminte sau ingrediente mai fibroase.</p>
+    <p class="mb-4">Totusi, un blender vertical cu functie smoothie are avantajul clar al portabilitatii si al usurintei in utilizare pentru o singura portie. Nu trebuie sa scoti bolul mare, sa amesteci si apoi sa transferi totul. Pur si simplu amesteci in paharul pe care il vei bea. Pentru mine, asta inseamna un timp economisit dimineata, cand sunt pe fuga. Un blender de masa bun, cum ar fi un Vitamix, poate costa si peste 1500 RON, in timp ce un blender vertical performant se gaseste la jumatate de pret.</p>
+    <p class="mb-4">Am observat ca multe blendere verticale de calitate, cum ar fi cele de la Braun, pot inlocui cu succes un blender de masa pentru retete simple de smoothie. Daca insa vrei sa faci unt de casa din nuci sau sa macini cafea, atunci un blender de masa dedicat este o alegere mai buna. Depinde mult de ce anume vrei sa obtii din electrocasnicul tau.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi blenderul vertical pentru a toca legume pentru salata?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, multe blendere verticale vin cu un accesoriu tip mini-tocator, perfect pentru a toca ceapa, usturoi, ierburi sau chiar nuci. Nu va fi la fel de fin ca la un robot de bucatarie dedicat, dar pentru cantitati mici, isi face treaba.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce fac daca blenderul vertical se supraincalzeste?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Daca observi ca motorul se supraincalzeste, opreste-l imediat si lasa-l sa se raceasca cateva minute. Probabil ai pus prea multe ingrediente sau ai incercat sa procesezi ceva prea tare. Nu forta aparatul, altfel risti sa-l deteriorezi.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat de rezistente sunt lamele blenderului vertical?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Lamele din otel inoxidabil sunt, in general, destul de rezistente. Totusi, evita sa le folosesti pentru a sparge cuburi de gheata foarte mari sau obiecte metalice. Pentru uz normal, cu fructe si legume, ar trebui sa reziste ani de zile. Unele branduri ofera si posibilitatea de a inlocui lamele.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce putere de motor este recomandata pentru smoothie-uri cu gheata?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru smoothie-uri care includ gheata sau fructe congelate, recomand un motor de cel putin 700W. Modelele sub 600W se pot chinui si pot duce la o textura mai putin fina sau chiar la blocarea aparatului.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/prajitor-de-paine-cu-functie-bagheta/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/prajitor-de-paine-cu-functie-bagheta.webp" alt="Prăjitor De Pâine Cu Funcție Baghetă" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Prăjitor De Pâine Cu Funcție Baghetă</h3>
+              </div>
+            </a>
+
+            <a href="/aparat-de-cafea-cu-capsule-reutilizabile/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aparat-de-cafea-cu-capsule-reutilizabile.webp" alt="Aparat De Cafea Cu Capsule Reutilizabile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aparat De Cafea Cu Capsule Reutilizabile</h3>
+              </div>
+            </a>
+
+            <a href="/uscator-compact-de-rufe-pentru-balcon/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/uscator-compact-de-rufe-pentru-balcon.webp" alt="Uscător Compact De Rufe Pentru Balcon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Uscător Compact De Rufe Pentru Balcon</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

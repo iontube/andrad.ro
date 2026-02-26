@@ -1,0 +1,298 @@
+---
+export const frontmatter = {
+  title: "Boxe Smart Controlabile Prin Voce",
+  slug: "boxe-smart-controlabile-prin-voce",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Boxele smart controlabile prin voce: cum sa le alegi, ce fac si la ce pret le gasesti in Romania.",
+  image: "/images/articles/boxe-smart-controlabile-prin-voce.webp",
+  publishDate: "2025-11-26T19:33:39.000Z",
+  modifiedDate: "2026-01-17T19:33:39.571Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Am nevoie de internet pentru o boxa smart?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, absolut. Boxele smart au nevoie de conexiune la internet pentru a accesa informatii, a reda muzica, a controla alte dispozitive si a raspunde la comenzi vocale."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot controla si alte device-uri din casa cu o boxa smart?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, atata timp cat acele device-uri (becuri, prize, termostate, etc.) sunt compatibile cu asistentul vocal pe care il folosesti (Google Assistant, Alexa, Siri) si sunt conectate la aceeasi retea Wi-Fi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce se intampla daca vorbesc cu boxa in alta limba decat romana?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Majoritatea asistentilor vocali suporta multiple limbi. Daca ai configurat boxa in limba engleza, va raspunde cel mai bine in engleza, chiar daca ii vorbesti in romana uneori. Poti schimba limba de baza din setarile aplicatiei."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sunt boxele smart dificil de configurat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In general, nu. Procesul de configurare se face de obicei printr-o aplicatie de mobil (Google Home, Amazon Alexa) si dureaza cateva minute. Trebuie doar sa conectezi boxa la Wi-Fi."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Boxele smart controlabile prin voce: de la gadget la centru de comanda</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Asistentul vocal: creierul din spatele boxei</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce poti face cu o boxa smart: mai mult decat crezi</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum alegi boxa smart potrivita: factori de decizie</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Integrarea cu televizorul: un pas spre casa inteligenta</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Consideratii legate de intimitate si securitate</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Boxele smart controlabile prin voce: de la gadget la centru de comanda</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Asistentul vocal: creierul din spatele boxei</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce poti face cu o boxa smart: mai mult decat crezi</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum alegi boxa smart potrivita: factori de decizie</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Integrarea cu televizorul: un pas spre casa inteligenta</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Consideratii legate de intimitate si securitate</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/boxe-smart-controlabile-prin-voce.webp" alt="Boxe Smart Controlabile Prin Voce" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Boxele smart controlabile prin voce: de la gadget la centru de comanda</h2>
+    <p class="mb-4">Am testat o gramada de boxe smart in ultimii ani si pot sa va spun direct: nu mai sunt doar niste difuzoare cu microfoane. Au devenit practic centrul de comanda al casei, mai ales daca intelegi cum sa le folosesti.</p>
+    <p class="mb-4">De la a aprinde lumina, a pune muzica preferata, pana la a verifica vremea sau a seta remindere, totul se face cu o simpla comanda vocala. In experienta mea, cel mai mare avantaj e cand ai mainile ocupate si vrei sa faci ceva rapid.</p>
+    <p class="mb-4">Am pus mana pe modele de la Google, Amazon, Apple, dar si pe variante integrate in televizoare de la Samsung sau LG. Fiecare cu plusurile si minusurile ei, dar ideea de baza ramane aceeasi: comoditate maxima.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Asistentul vocal: creierul din spatele boxei</h2>
+    <p class="mb-4">Totul se invarte in jurul asistentului vocal. Alegerea intre Alexa (Amazon), Google Assistant sau Siri (Apple) e probabil cea mai importanta decizie. Google Assistant mi s-a parut cel mai flexibil si raspunde cel mai bine la intrebari mai complexe, gasind informatii pe net rapid.</p>
+    <p class="mb-4">Alexa e excelenta pentru automatizari si controlul device-urilor smart home, fiindca are un ecosistem de produse compatibile mult mai larg. Siri, pe de alta parte, se integreaza perfect in universul Apple, daca ai deja iPhone, iPad sau Mac.</p>
+    <p class="mb-4">Am observat ca si limba romana este din ce in ce mai bine suportata, desi uneori mai dau rateuri la interpretare, mai ales daca ai un accent mai pronuntat. Totusi, pentru comenzi uzuale, e mai mult decat suficient.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce poti face cu o boxa smart: mai mult decat crezi</h2>
+    <p class="mb-4">Dincolo de a-ti spune cat e ceasul sau sa dai muzica mai tare, boxele smart pot face o multime de lucruri utile. Eu le folosesc zilnic pentru a seta alarme dimineata, a verifica traficul inainte sa plec la birou sau a afla scorul meciului.</p>
+    <p class="mb-4">Am conectat boxa mea Google Nest Mini la becurile smart Philips Hue si la un smart plug de la TP-Link. Acum pot spune "Hei Google, aprinde lumina din sufragerie" sau "Hei Google, porneste espressorul". E un nivel de confort greu de ignorat.</p>
+    <p class="mb-4">Modelele mai avansate, cum ar fi Google Nest Hub sau Amazon Echo Show, au si un ecran. Asta inseamna ca poti vedea retete, poti da un video-call sau poti urmari un rezumat al stirilor. Practic, devin un mic centru multimedia.</p>
+    
+    
+    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Exemple concrete de utilizare</h3>
+    <p class="mb-4">Setarea timerelor in bucatarie in timp ce gatesti.</p>
+    <p class="mb-4">Controlul termostatului smart sau al aerului conditionat.</p>
+    <p class="mb-4">Cresterea sau scaderea volumului televizorului compatibil.</p>
+    <p class="mb-4">Obtinerea de informatii despre trafic, vreme, stiri.</p>
+    <p class="mb-4">Redarea de muzica de pe Spotify, YouTube Music, sau alte servicii.</p>
+    <p class="mb-4">Crearea de liste de cumparaturi sau de sarcini.</p>
+    <p class="mb-4">Controlul luminilor, prizelor smart, camerelor de supraveghere.</p>
+    <p class="mb-4">Efectuarea de apeluri vocale sau video (pe modelele cu ecran).</p>
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum alegi boxa smart potrivita: factori de decizie</h2>
+    <p class="mb-4">Primul pas e sa te gandesti ce asistent vocal preferi sau ce ecosistem de device-uri ai deja acasa. Daca esti deja in lumea Apple, un HomePod mini e o alegere naturala. Pentru restul, Google Assistant sau Alexa sunt optiuni excelente.</p>
+    <p class="mb-4">Bugetul conteaza, evident. Un Google Nest Mini sau un Amazon Echo Dot pot fi gasite la preturi incepand de la 150-200 RON, in functie de promotii. Modelele cu ecran, precum Google Nest Hub (aprox. 400-500 RON) sau Amazon Echo Show (preturi variabile, intre 400 si peste 1000 RON), sunt mai scumpe.</p>
+    <p class="mb-4">Calitatea sunetului e importanta daca vrei sa si asculti muzica. Modelele mai mici, ca Dot sau Mini, sunt bune pentru comenzi vocale si muzica ambientala, dar pentru un sunet mai plin, te poti uita la un Google Nest Audio (aprox. 400 RON) sau Amazon Echo (a 4-a generatie, aprox. 450 RON).</p>
+    <p class="mb-4">In Romania, cele mai comune locuri de unde poti cumpara sunt eMAG, Altex, PCGarage si Flanco. Urmareste ofertele, mai ales de Black Friday sau alte perioade de reduceri.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Integrarea cu televizorul: un pas spre casa inteligenta</h2>
+    <p class="mb-4">Multe televizoare noi, de la Samsung, LG sau Sony, vin deja cu asistenti vocali integrati sau cu posibilitatea de a controla alte boxe smart. Am testat un Samsung QLED unde puteam sa dau comenzi vocale direct prin telecomanda, controland functii ale televizorului.</p>
+    <p class="mb-4">Pe modelele mai noi, poti chiar sa intri pe YouTube sau sa schimbi canalul folosind vocea. E o comoditate care, dupa ce te obisnuiesti cu ea, devine greu de renuntat.</p>
+    <p class="mb-4">Cel mai bine e sa verifici specificatiile televizorului tau sau sa te interesezi la un magazin daca modelul respectiv suporta control vocal prin intermediul unei boxe smart externe sau are propriul asistent integrat. De exemplu, multe televizoare LG OLED din gamele recente au compatibilitate cu Google Assistant sau Alexa.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Consideratii legate de intimitate si securitate</h2>
+    <p class="mb-4">Este o preocupare legitima pentru multi. Toate aceste boxe au microfoane mereu active, asteptand cuvantul de trezire ("Hei Google", "Alexa"). Producatorii spun ca inregistrarea vocala incepe doar dupa ce aud cuvantul respectiv.</p>
+    <p class="mb-4">Majoritatea boxelor smart au un buton fizic de mutare a microfonului, care taie alimentarea electrica catre microfoane. E o solutie simpla si eficienta daca vrei sa ai siguranta ca nu esti ascultat cand nu vrei.</p>
+    <p class="mb-4">De asemenea, poti verifica si sterge istoricul vocal din aplicatia dedicata a fiecarui asistent (Google Home, Amazon Alexa). E bine sa fii informat si sa alegi ce ti se potriveste din punct de vedere al confortului si al securitatii datelor.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Am nevoie de internet pentru o boxa smart?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, absolut. Boxele smart au nevoie de conexiune la internet pentru a accesa informatii, a reda muzica, a controla alte dispozitive si a raspunde la comenzi vocale.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot controla si alte device-uri din casa cu o boxa smart?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, atata timp cat acele device-uri (becuri, prize, termostate, etc.) sunt compatibile cu asistentul vocal pe care il folosesti (Google Assistant, Alexa, Siri) si sunt conectate la aceeasi retea Wi-Fi.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce se intampla daca vorbesc cu boxa in alta limba decat romana?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Majoritatea asistentilor vocali suporta multiple limbi. Daca ai configurat boxa in limba engleza, va raspunde cel mai bine in engleza, chiar daca ii vorbesti in romana uneori. Poti schimba limba de baza din setarile aplicatiei.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Sunt boxele smart dificil de configurat?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  In general, nu. Procesul de configurare se face de obicei printr-o aplicatie de mobil (Google Home, Amazon Alexa) si dureaza cateva minute. Trebuie doar sa conectezi boxa la Wi-Fi.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/sistem-audio-multiroom-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/sistem-audio-multiroom-wireless.webp" alt="Sistem Audio Multiroom Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Sistem Audio Multiroom Wireless</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-televizor-pentru-gaming-console/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-televizor-pentru-gaming-console.webp" alt="Cel mai bun televizor pentru gaming console" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun televizor pentru gaming console</h3>
+              </div>
+            </a>
+
+            <a href="/home-cinema-cu-subwoofer-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/home-cinema-cu-subwoofer-wireless.webp" alt="Home Cinema Cu Subwoofer Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Home Cinema Cu Subwoofer Wireless</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

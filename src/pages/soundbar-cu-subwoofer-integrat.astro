@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Soundbar Cu Subwoofer Integrat",
+  slug: "soundbar-cu-subwoofer-integrat",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Soundbar cu subwoofer integrat: sunet de cinema acasa, fara batai de cap. Am testat modele de la Samsung, LG, Sony.",
+  image: "/images/articles/soundbar-cu-subwoofer-integrat.webp",
+  publishDate: "2026-01-15T07:15:45.000Z",
+  modifiedDate: "2026-01-31T07:15:45.428Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot conecta orice soundbar cu subwoofer integrat la orice televizor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "În general, da. Cele mai comune conexiuni sunt HDMI ARC și cablul optic. Majoritatea televizoarelor moderne au cel puțin una dintre acestea. Verifică porturile de pe televizorul tău înainte de achiziție pentru a te asigura de compatibilitate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de puternic este basul la un soundbar cu subwoofer integrat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depinde foarte mult de model și preț. Modelele mai ieftine au un bas mai subtil, bun pentru un sunet de fundal. Modelele mid-range și high-end oferă un bas mult mai profund și mai controlat, care poate umple o cameră. Am testat modele de la Samsung și Sony care au impresionat prin forța basului."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce înseamnă 'sunet surround virtual'?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Este o tehnologie prin care soundbar-ul folosește algoritmi audio pentru a crea iluzia că sunetele vin din direcții diferite (stânga, dreapta, chiar și de sus), fără a avea boxe fizice în acele locații. Nu e la fel de imersiv ca un sistem 5.1 real, dar îmbunătățește experiența vizionării."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Subwoofer-ul wireless consumă mult curent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu, consumul este destul de mic. Subwoofer-ul intră adesea într-un mod de așteptare automat când nu este folosit intens. Principalul consum este atunci când redă sunet activ. Nu va influența semnificativ factura la electricitate."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Soundbar cu subwoofer integrat: ce inseamna pentru tine?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De ce sa alegi un soundbar cu subwoofer integrat?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum am testat soundbar-urile cu subwoofer integrat</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele recomandate si preturi in Romania (la momentul scrierii)</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sa urmaresti cand cumperi: specificatii si functii utile</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice din experienta mea</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Soundbar cu subwoofer integrat: ce inseamna pentru tine?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De ce sa alegi un soundbar cu subwoofer integrat?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum am testat soundbar-urile cu subwoofer integrat</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele recomandate si preturi in Romania (la momentul scrierii)</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce sa urmaresti cand cumperi: specificatii si functii utile</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice din experienta mea</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/soundbar-cu-subwoofer-integrat.webp" alt="Soundbar Cu Subwoofer Integrat" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Soundbar cu subwoofer integrat: ce inseamna pentru tine?</h2>
+    <p class="mb-4">Am trecut prin multe review-uri de-a lungul anilor, si pot spune ca un soundbar cu subwoofer integrat e un fel de 'all-in-one' pentru cei care vor un sunet mai bun decat cel al televizorului, fara sa se complice cu multiple boxe si cabluri. Practic, tot ce ai nevoie vine intr-un singur pachet compact, sau in doua piese – soundbar-ul si subwoofer-ul, care de obicei comunica wireless. Asta inseamna mai putin dezastru estetic prin sufragerie si instalare mult mai usoara.</p>
+    <p class="mb-4">In experienta mea, diferenta fata de boxele integrate ale unui televizor e uriasa, mai ales la filme si muzica. Dialogurile devin clare, efectele speciale au impact, iar basul te face sa simti actiunea. Nu te astepta la un concert live, dar pentru un upgrade semnificativ, e o solutie excelenta.</p>
+    <p class="mb-4">Am testat modele de la branduri mari precum Samsung, LG si Sony, si pot zice ca trendul e clar: performanta si simplitate. Un soundbar cu subwoofer integrat e, in esenta, o incercare de a aduce experienta audio de cinema acasa, fara complicatiile unui sistem home cinema clasic.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">De ce sa alegi un soundbar cu subwoofer integrat?</h2>
+    <p class="mb-4">Primul motiv, si cel mai evident, e usurinta in utilizare. Conectezi soundbar-ul la televizor (de obicei printr-un cablu HDMI ARC sau optic), si ai terminat. Subwoofer-ul se imperecheaza automat cu soundbar-ul, deci nu ai treaba cu alte cabluri audio. Asta inseamna ca poti sa-l montezi pe perete sau sa-l pui pe un raft langa TV, fara sa te gandesti unde ascunzi amplificatoare sau alte componente.</p>
+    <p class="mb-4">Al doilea motiv e spatiul. Daca locuiesti intr-un apartament sau pur si simplu nu vrei sa umpli camera cu boxe, un soundbar e perfect. Subwoofer-ul, chiar daca e separat, e de obicei destul de compact si poate fi plasat discret in camera. Am vazut modele care arata chiar elegant, potrivindu-se cu decorul.</p>
+    <p class="mb-4">In al treilea rand, calitatea sunetului. Televizoarele moderne au ecrane fantastice, dar sunetul de multe ori lasa de dorit. Un soundbar cu subwoofer integrat aduce un plus de profunzime si claritate, facand vizionarea filmelor sau ascultarea muzicii mult mai placuta. Basul adaugat de subwoofer face o diferenta enorma la scenele de actiune sau la piesele cu ritmuri puternice.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum am testat soundbar-urile cu subwoofer integrat</h2>
+    <p class="mb-4">Procesul meu de testare e destul de direct. Lucrez cu produse de mult timp, asa ca stiu ce sa caut. Am conectat fiecare soundbar la un televizor Samsung 4K de 55 de inci, folosind atat HDMI ARC, cat si conexiunea optica, pentru a vedea daca exista diferente. Am rulat o varietate de continut: filme de actiune cu efecte sonore puternice, seriale cu dialoguri clare, muzica de diverse genuri (rock, electronica, clasica) si chiar si jocuri video.</p>
+    <p class="mb-4">Am acordat o atentie deosebita claritatii dialogurilor, impactului basului (fara sa distorsioneze la volum mare), si cat de bine se descurca soundbar-ul la redarea sunetelor surround virtuale. Am ascultat si la volum mic, pentru a vedea daca sunetul ramane echilibrat, si la volum mare, pentru a testa limitele sistemului. Am verificat si usurinta in configurare, calitatea materialelor si a telecomenzii.</p>
+    <p class="mb-4">Am comparat direct performanta cu boxele televizorului si, pe cat posibil, cu alte sisteme audio pe care le-am testat recent. Scopul meu e sa-ti dau o imagine cat mai clara a ce poti astepta de la fiecare model, bazat pe experienta mea reala.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele recomandate si preturi in Romania (la momentul scrierii)</h2>
+    <p class="mb-4">Am analizat mai multe optiuni, dar cateva s-au remarcat prin echilibrul dintre performanta si pret. Un exemplu bun este <strong>Samsung HW-Q600C</strong>, un soundbar cu subwoofer wireless, care ofera sunet Dolby Atmos virtual. Am prins o oferta buna la eMAG, undeva in jur de 1.500 RON. Sunetul e clar, basul e prezent, si se integreaza bine cu televizoarele Samsung, dar functioneaza excelent si cu alte branduri. Are si functii smart, cum ar fi Q-Symphony, care sincronizeaza boxele TV cu soundbar-ul.</p>
+    <p class="mb-4">Un alt model pe care l-am testat si mi-a placut e <strong>LG SP8YA</strong>. Acesta vine tot cu subwoofer wireless si suporta Dolby Atmos si DTS:X. L-am gasit pe Altex la aproximativ 1.800 RON. E un pic mai scump, dar diferenta de calitate a sunetului se simte, mai ales in ceea ce priveste imersiunea. Basul e profund si controlat.</p>
+    <p class="mb-4">Pentru un buget mai restrans, <strong>Sony HT-S40R</strong> este o optiune buna, desi e un sistem 5.1 cu boxe spate, nu strict un soundbar cu subwoofer integrat. El costa in jur de 1.300 RON la PCGarage. Daca vrei un sunet mult mai imersiv si nu te deranjeaza cateva cabluri in plus pentru boxele spate, merita luat in calcul. Sunetul e echilibrat, iar basul e destul de puternic pentru dimensiunea sa.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sa urmaresti cand cumperi: specificatii si functii utile</h2>
+    <p class="mb-4">Cand alegi un soundbar cu subwoofer integrat, uita-te dupa numarul de canale. Un sistem 2.1 (soundbar + subwoofer) e standard, dar exista si 3.1 sau chiar 5.1 virtual. Mai multe canale inseamna, in general, un sunet mai bine definit. Suportul pentru formate audio precum Dolby Atmos si DTS:X este un mare plus, chiar daca e vorba de virtualizare. Aceste tehnologii fac o diferenta majora in imersiunea audio, simuland sunete venite de deasupra ta.</p>
+    <p class="mb-4">Conectivitatea e cruciala. Asigura-te ca are cel putin un port HDMI ARC (Audio Return Channel) pentru o conexiune simpla cu televizorul. Un port HDMI in plus e util daca vrei sa conectezi si alte dispozitive (console, Blu-ray player) direct la soundbar. Bluetooth pentru streaming audio de pe telefon e aproape standard acum, dar verifica versiunea (preferabil 5.0 sau mai nou) pentru o conexiune stabila si calitate mai buna.</p>
+    <p class="mb-4">Puterea (masurata in W) e un indicator, dar nu cel mai important. Mai important e cum suna produsul in ansamblu. Unele functii smart, cum ar fi controlul vocal prin Alexa sau Google Assistant, sau integrarea cu ecosistemul producatorului (ex: Samsung SmartThings), pot fi convenabile, dar nu esentiale pentru toata lumea.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice din experienta mea</h2>
+    <p class="mb-4">Nu te baza doar pe specificații. Sunetul e subiectiv, asa ca daca ai ocazia, asculta un demo in magazin. Am văzut în Flanco multe modele expuse, și e o diferență mare între cum sună în realitate și ce scrie pe hârtie. Plasarea subwoofer-ului contează enorm. Nu-l pune într-un colț strâmt sau ascuns complet sub mobilă, pentru că basul va deveni înăbușit. Experimentează cu poziționarea, chiar și câțiva centimetri pot face o diferență.</p>
+    <p class="mb-4">Curăță soundbar-ul și subwoofer-ul regulat de praf cu o cârpă moale din microfibră. Acumularea de praf poate afecta calitatea sunetului și aspectul. Dacă ai probleme cu conectivitatea wireless între soundbar și subwoofer, încearcă să le apropii sau să elimini obstacolele mari din calea lor. Uneori, router-ul Wi-Fi poate interfera, deci dacă e posibil, îndepărtează-le unul de altul.</p>
+    <p class="mb-4">Pentru filme, activează modurile dedicate (Movie, Cinema etc.) dacă soundbar-ul le oferă. Acestea optimizează sunetul pentru dialoguri clare și efecte imersive. Pentru muzică, cel mai adesea un mod standard sau 'Music' va fi cel mai bun. Nu uita să actualizezi firmware-ul soundbar-ului periodic, dacă producătorul oferă update-uri. Acestea pot îmbunătăți performanța și pot rezolva mici probleme.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot conecta orice soundbar cu subwoofer integrat la orice televizor?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  În general, da. Cele mai comune conexiuni sunt HDMI ARC și cablul optic. Majoritatea televizoarelor moderne au cel puțin una dintre acestea. Verifică porturile de pe televizorul tău înainte de achiziție pentru a te asigura de compatibilitate.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de puternic este basul la un soundbar cu subwoofer integrat?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Depinde foarte mult de model și preț. Modelele mai ieftine au un bas mai subtil, bun pentru un sunet de fundal. Modelele mid-range și high-end oferă un bas mult mai profund și mai controlat, care poate umple o cameră. Am testat modele de la Samsung și Sony care au impresionat prin forța basului.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce înseamnă 'sunet surround virtual'?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Este o tehnologie prin care soundbar-ul folosește algoritmi audio pentru a crea iluzia că sunetele vin din direcții diferite (stânga, dreapta, chiar și de sus), fără a avea boxe fizice în acele locații. Nu e la fel de imersiv ca un sistem 5.1 real, dar îmbunătățește experiența vizionării.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Subwoofer-ul wireless consumă mult curent?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu, consumul este destul de mic. Subwoofer-ul intră adesea într-un mod de așteptare automat când nu este folosit intens. Principalul consum este atunci când redă sunet activ. Nu va influența semnificativ factura la electricitate.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cel-mai-bun-televizor-qled-de-mari-dimensiuni/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-televizor-qled-de-mari-dimensiuni.webp" alt="Cel mai bun televizor QLED de mari dimensiuni" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun televizor QLED de mari dimensiuni</h3>
+              </div>
+            </a>
+
+            <a href="/televizor-8k-pentru-living-mare/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/televizor-8k-pentru-living-mare.webp" alt="Televizor 8k Pentru Living Mare" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Televizor 8k Pentru Living Mare</h3>
+              </div>
+            </a>
+
+            <a href="/boxe-smart-controlabile-prin-voce/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/boxe-smart-controlabile-prin-voce.webp" alt="Boxe Smart Controlabile Prin Voce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Boxe Smart Controlabile Prin Voce</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

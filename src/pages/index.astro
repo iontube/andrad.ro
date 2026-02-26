@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+
+const categories = [
+  {
+    name: 'Tehnologie & Gaming',
+    slug: 'tehnologie-gaming',
+    description: 'Echipamente de gaming și tehnologie de ultimă generație'
+  },
+  {
+    name: 'Electrocasnice',
+    slug: 'electrocasnice',
+    description: 'Electrocasnice premium pentru casa ta modernă'
+  },
+  {
+    name: 'TV & Audio',
+    slug: 'tv-audio',
+    description: 'Televizoare și sisteme audio pentru experiențe de top'
+  },
+  {
+    name: 'Foto & Video',
+    slug: 'foto-video',
+    description: 'Echipamente profesionale pentru creatori de conținut'
+  },
+  {
+    name: 'Smart Home',
+    slug: 'smart-home',
+    description: 'Dispozitive inteligente pentru o casă conectată'
+  }
+];
+
+// Get all articles (exclude system pages)
+const articleModules = import.meta.glob('./*.astro', { eager: true });
+const excludeFiles = ['index', 'contact', '[category]', 'politica-de-confidentialitate', 'termeni-si-conditii', 'politica-cookies'];
+const allArticles = Object.entries(articleModules)
+  .filter(([path, m]: [string, any]) => {
+    const filename = path.replace('./', '').replace('.astro', '');
+    return !excludeFiles.includes(filename) && m.frontmatter?.slug && m.frontmatter?.categorySlug;
+  })
+  .map(([_, m]) => m)
+  .sort((a: any, b: any) =>
+    new Date(b.frontmatter.publishDate).getTime() - new Date(a.frontmatter.publishDate).getTime()
+  );
+
+// Group by category
+const articlesByCategory = categories.map(cat => ({
+  ...cat,
+  articles: allArticles.filter((a: any) => a.frontmatter.categorySlug === cat.slug).slice(0, 6)
+})).filter(cat => cat.articles.length > 0);
+---
+
+<Layout
+  title="Recomandări pentru cele mai bune produse"
+  description="Recenzii detaliate și comparații obiective pentru a te ajuta să alegi cele mai bune produse. Tehnologie, electrocasnice, TV, audio, foto, video și smart home."
+  canonical="/"
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
+    <div class="container-main text-center">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
+        Alege <span class="text-gradient">produsele potrivite</span> pentru tine
+      </h1>
+      <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+        Recenzii detaliate și recomandări pentru a te ajuta să faci alegerea corectă.
+      </p>
+      <a href="#categorii" class="btn-primary">
+        Explorează categoriile
+        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Articles by Category -->
+  <div>
+    {articlesByCategory.length > 0 ? (
+      articlesByCategory.map((cat, i) => (
+        <section id={i === 0 ? 'categorii' : undefined} class={`py-12 md:py-16 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
+          <div class="container-main">
+            <div class="flex items-end justify-between mb-8">
+              <div>
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">{cat.name}</h2>
+                <p class="text-slate-600 mt-1">{cat.description}</p>
+              </div>
+              <a href={`/${cat.slug}/`} class="hidden md:flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm transition-colors">
+                Vezi toate
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {cat.articles.map((article: any) => (
+                <ArticleCard
+                  title={article.frontmatter.title}
+                  slug={article.frontmatter.slug}
+                  category={article.frontmatter.category}
+                  categorySlug={article.frontmatter.categorySlug}
+                  excerpt={article.frontmatter.excerpt}
+                  image={article.frontmatter.image}
+                />
+              ))}
+            </div>
+            <div class="mt-6 text-center md:hidden">
+              <a href={`/${cat.slug}/`} class="inline-flex items-center text-primary-600 font-medium">
+                Vezi toate articolele
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+      ))
+    ) : (
+      <section class="py-16 bg-white">
+        <div class="container-main">
+          <div class="text-center max-w-xl mx-auto">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-slate-100 flex items-center justify-center">
+              <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-3">Conținut în pregătire</h2>
+            <p class="text-slate-600">Lucrăm la articole noi. Revino în curând pentru recomandări detaliate.</p>
+          </div>
+        </div>
+      </section>
+    )}
+  </div>
+
+  <!-- Categories Grid -->
+  <section class="py-12 md:py-16 bg-slate-900">
+    <div class="container-main">
+      <h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-10">Toate categoriile</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {categories.map(cat => (
+          <a href={`/${cat.slug}/`} class="bg-slate-800 hover:bg-slate-700 rounded-xl p-6 transition-colors group">
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">{cat.name}</h3>
+            <p class="text-slate-400 text-sm">{cat.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

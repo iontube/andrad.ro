@@ -1,0 +1,290 @@
+---
+export const frontmatter = {
+  title: "Aparat Mirrorless Cu Autofocus Rapid",
+  slug: "aparat-mirrorless-cu-autofocus-rapid",
+  category: "Foto & Video",
+  categorySlug: "foto-video",
+  excerpt: "Cauti un aparat foto mirrorless cu autofocus rapid? Am testat modelele de top pentru foto si video. Vezi recomandari si preturi.",
+  image: "/images/articles/aparat-mirrorless-cu-autofocus-rapid.webp",
+  publishDate: "2025-11-22T15:51:33.000Z",
+  modifiedDate: "2026-01-15T15:51:33.857Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Care este diferenta dintre autofocus cu detectie de faza si cel cu detectie de contrast?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Detectia de faza masoara direct distanta pana la subiect, fiind mult mai rapida si precisa, ideala pentru subiecti in miscare. Detectia de contrast \"cauta\" contrastul maxim in imagine pentru a determina focalizarea, fiind mai lenta si mai predispusa la erori in conditii dinamice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot folosi obiective vechi pe un aparat mirrorless nou cu AF rapid?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, dar performanta AF poate varia. Cu adaptoare specifice, multe obiective DSLR pot functiona pe aparate mirrorless, insa viteza si precizia AF pot fi inferioare fata de obiectivele native, proiectate pentru sistemul mirrorless."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cat de important este procesorul de imagine pentru viteza AF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Foarte important. Un procesor puternic poate analiza datele de la senzori mult mai rapid, aplicand algoritmi avansati pentru recunoasterea si urmarirea subiectilor, ceea ce duce la un autofocus mult mai rapid si mai inteligent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce preturi pot astepta pentru un aparat mirrorless cu AF rapid bun?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru modele performante, preturile pentru body-ul aparatului incep de la aproximativ 5.000 - 6.000 RON si pot ajunge pana la 20.000 RON sau chiar mai mult pentru modelele de top. Kit-urile cu obiective adauga intre 1.000 si 5.000 RON, in functie de obiectiv."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Aparatul Mirrorless cu Autofocus Rapid: Ce Conteaza Cand Alegi</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum Functioneaza Autofocusul Rapid la Aparatele Mirrorless</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele Recomandate: Sony Alpha, Canon EOS R si Fujifilm X</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Autofocusul Rapid in Actiune: Foto vs. Video</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Alegerea Obiectivului Potrivit pentru AF Rapid</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Practice pentru Utilizarea AF Rapid</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Aparatul Mirrorless cu Autofocus Rapid: Ce Conteaza Cand Alegi</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum Functioneaza Autofocusul Rapid la Aparatele Mirrorless</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele Recomandate: Sony Alpha, Canon EOS R si Fujifilm X</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Autofocusul Rapid in Actiune: Foto vs. Video</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Alegerea Obiectivului Potrivit pentru AF Rapid</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Practice pentru Utilizarea AF Rapid</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/aparat-mirrorless-cu-autofocus-rapid.webp" alt="Aparat Mirrorless Cu Autofocus Rapid" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Aparatul Mirrorless cu Autofocus Rapid: Ce Conteaza Cand Alegi</h2>
+    <p class="mb-4">Daca te-ai lovit vreodata de un subiect care se misca rapid si aparatul tau foto a ratat focalizarea, stii exact de ce un autofocus rapid e crucial. In ultimii ani, producatori precum Sony, Canon si Fujifilm au dus aceasta tehnologie la un cu totul alt nivel. Am testat zeci de modele de aparate mirrorless, si pot spune cu mana pe inima ca viteza de autofocus poate face diferenta intre o poza ratata si un moment perfect surprins.</p>
+    <p class="mb-4">Pentru mine, ca jurnalist tech care acopera si evenimente sportive sau concerte, un sistem de autofocus rapid inseamna mai putine griji si mai multa incredere in echipament. Am observat ca tehnologia cu detectie pe faza, combinata cu algoritmi AI avansati pentru recunoasterea subiectului, a devenit standardul in clasa medie si superioara.</p>
+    <p class="mb-4">Chiar si pentru un amator pasionat, un autofocus rapid transforma experienta. Nu mai trebuie sa te gandesti constant la setari complicate, ci te poti concentra pe compozitie si emotie. Si cand vine vorba de video, unde subiectii se misca constant, un AF rapid si precis e absolut esential pentru cadre fluide si profesioniste.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum Functioneaza Autofocusul Rapid la Aparatele Mirrorless</h2>
+    <p class="mb-4">In esenta, aparatele mirrorless moderne folosesc o combinatie de senzori cu detectie de faza si contrast pentru a calcula distanta pana la subiect. Senzorii cu detectie de faza sunt pozitionati direct pe senzorul de imagine si pot determina direct cat de departe sau de aproape este subiectul, precum si directia in care trebuie sa se miste lentila. Acest lucru permite o focalizare mult mai rapida, fara "cautarile" specifice sistemelor mai vechi bazate doar pe contrast.</p>
+    <p class="mb-4">Procesoarele de imagine din ziua de azi, precum cele din seriile BIONZ XR de la Sony sau DIGIC X de la Canon, sunt incredibil de puternice. Ele analizeaza in timp real informatiile de la acesti senzori, aplicand algoritmi de inteligență artificială pentru a recunoaște si urmări subiecte specifice – oameni, animale (ochi, corp), vehicule, chiar si avioane. Am testat modele care pot urmari un ochi de pasare in zbor, ceea ce acum 5-7 ani era de neconceput.</p>
+    <p class="mb-4">Puterea de procesare combinata cu senzori performanti face ca aceste aparate sa poata focaliza in cateva fractiuni de secunda, chiar si in conditii de lumina slaba sau cu subiecti care se misca haotic. Aceasta viteza este esentiala, mai ales cand vrei sa surprinzi actiunea pura, fara a pierde momentele decisive.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele Recomandate: Sony Alpha, Canon EOS R si Fujifilm X</h2>
+    <p class="mb-4">Daca ar fi sa aleg cateva modele care exceleaza la capitolul autofocus rapid, Sony este, fara indoiala, un lider. Seria Alpha, in special modele precum Sony A7 IV sau Sony A1, ofera un sistem de autofocus cu peste 700 de puncte cu detectie de faza, acoperind aproximativ 94% din senzor. Am filmat cu A7 IV la un eveniment si am fost uimit cat de precis si constant urmarea subiectul, chiar si cand acesta alerga pe scena.</p>
+    <p class="mb-4">Canon a recuperat teren rapid cu seria EOS R. Aparate precum Canon EOS R6 Mark II sunt fantastice pentru viteza si precizia AF, cu un sistem hibrid performant capabil sa identifice si sa urmareasca o gama larga de subiecti. In experienta mea, R6 Mark II a focalizat la fel de bine pe oameni, caini, si chiar si masini de curse, cu o fluiditate remarcabila.</p>
+    <p class="mb-4">Fujifilm nu sta nici el mai prejos, mai ales cu modelele din seria X, precum Fujifilm X-T5 sau X-H2S. Acestea au implementat tehnologii de autofocus bazate pe AI care imbunatatesc constant urmarirea subiectilor, oferind rezultate excelente atat pentru fotografie, cat si pentru video. X-H2S, cu senzorul sau stacked, este special conceput pentru viteza extrema si poate filma chiar si 4K la 120fps cu autofocus activ.</p>
+    <p class="mb-4">Preturile pentru aceste modele variaza, dar ca sa va fac o idee: Sony A7 IV se gaseste pe eMAG in jur de 13.000 - 14.000 RON (doar body), Canon EOS R6 Mark II in jur de 12.000 - 13.000 RON (body), iar Fujifilm X-T5 in jur de 10.000 - 11.000 RON (body) pe PCGarage. Desigur, kit-urile cu obiective pot creste considerabil pretul.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Autofocusul Rapid in Actiune: Foto vs. Video</h2>
+    <p class="mb-4">Pentru fotografie, un AF rapid inseamna ca poti surprinde momente decisive – un salt, o explozie de bucurie, un zâmbet perfect. In multe cazuri, aparatele moderne pot chiar sa "anticipeze" miscarea subiectului, focalizand inainte ca tu sa apesi complet pe butonul de declansare. Am observat ca in modul de fotografiere in rafala, viteza AF este absolut cruciala pentru a obtine imagini clare pe toata durata rafalelor lungi.</p>
+    <p class="mb-4">La capitolul video, lucrurile devin si mai complexe. Un autofocus rapid si precis asigura ca subiectul ramane mereu in focus, chiar si atunci cand se misca prin cadru sau cand camera isi schimba unghiul. Acest lucru elimina nevoia de a re-focaliza manual constant, permitandu-ti sa te concentrezi pe poveste si pe regie. Am testat aparate care trec fluid de la un subiect la altul, fara salturi deranjante, si asta e o diferenta uriasa fata de ce era posibil acum cativa ani.</p>
+    <p class="mb-4">Producatorii ofera adesea setari fine pentru AF in video, cum ar fi viteza de urmarire sau sensibilitatea la miscarea subiectului. Acestea iti permit sa personalizezi comportamentul AF-ului in functie de scenariu. De exemplu, pentru un interviu, vrei o focalizare stabila pe fata, in timp ce pentru o scena de actiune, vrei ca aparatul sa fie mai reactiv la schimbarile de plan.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Alegerea Obiectivului Potrivit pentru AF Rapid</h2>
+    <p class="mb-4">Chiar si cel mai rapid sistem de autofocus dintr-un aparat mirrorless nu va performa la potential maxim daca nu este cuplat cu un obiectiv performant. Obiectivele cu motoare AF rapide si precise, cum ar fi cele cu motoare cu ultrasunete (USM la Canon, SSM la Sony) sau motoare pas (STM la Canon, LM la Fujifilm), sunt esentiale. Acestea pot misca elementele optice rapid si silentios, fara a introduce vibratii care ar putea afecta claritatea.</p>
+    <p class="mb-4">Am observat ca obiectivele primes (focalizare fixa) sunt adesea mai rapide si mai precise decat zoom-urile, datorita designului optic mai simplu. Totusi, multe obiective zoom moderne, in special cele din gamele profesionale, incorporeaza tehnologii AF de ultima generatie. De exemplu, un obiectiv precum Sony FE 24-70mm f/2.8 GM II sau Canon RF 70-200mm f/2.8 L IS USM III ofera performante AF exceptionale, fiind capabile sa tina pasul cu cele mai rapide aparate.</p>
+    <p class="mb-4">Cand cumperi un aparat, ia in considerare si gama de obiective disponibile pentru montura respectiva. Daca vrei sa filmezi mult, cauta obiective cu focalizare silentioasa, pentru a evita zgomotul inregistrat de microfonul aparatului. In general, investitia in obiective de calitate este la fel de importanta ca si alegerea aparatului.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi Practice pentru Utilizarea AF Rapid</h2>
+    <p class="mb-4">Nu te baza doar pe viteza AF. Incearca sa iti anticipezi miscarea subiectului. Daca stii ca va veni spre tine, incepe sa il "prinzi" in cadru din timp, cu AF-ul activat. Asta ii da aparatului mai mult timp sa se blocheze pe subiect.</p>
+    <p class="mb-4">Foloseste zone de focalizare adaptate. In loc sa lasi aparatul sa aleaga singur punctul AF (ceea ce uneori poate da gres), selecteaza manual o zona mica sau un singur punct si pozitioneaza-l pe ochiul subiectului. Multe aparate permit si "tracking" pe zona selectata, ceea ce este ideal. Am observat ca setarea "Wide" sau "Auto" functioneaza cel mai bine cand ai un singur subiect clar in cadru, dar pentru scene complexe, controlul manual e superior.</p>
+    <p class="mb-4">Experimenteaza cu setarile AF. Fiecare aparat are meniul sau, si poti ajusta viteza de raspuns, sensibilitatea la miscarea subiectului, sau tipul de detectie (ochi, corp etc.). Nu te teme sa testezi diferite combinatii pana gasesti ce functioneaza cel mai bine pentru tine. De exemplu, pentru filmari la evenimente, prefer sa setezi o viteza de urmarire mai mica, pentru a evita miscari bruste ale focalizarii cand subiectul se deplaseaza.</p>
+    <p class="mb-4">Curata senzorul si lentila. Praful sau murdaria pe senzor sau pe lentila obiectivului pot afecta performanta AF, mai ales in conditii de lumina slaba. O curatare periodica te poate scuti de multe frustrari.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Care este diferenta dintre autofocus cu detectie de faza si cel cu detectie de contrast?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Detectia de faza masoara direct distanta pana la subiect, fiind mult mai rapida si precisa, ideala pentru subiecti in miscare. Detectia de contrast "cauta" contrastul maxim in imagine pentru a determina focalizarea, fiind mai lenta si mai predispusa la erori in conditii dinamice.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi obiective vechi pe un aparat mirrorless nou cu AF rapid?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, dar performanta AF poate varia. Cu adaptoare specifice, multe obiective DSLR pot functiona pe aparate mirrorless, insa viteza si precizia AF pot fi inferioare fata de obiectivele native, proiectate pentru sistemul mirrorless.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat de important este procesorul de imagine pentru viteza AF?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Foarte important. Un procesor puternic poate analiza datele de la senzori mult mai rapid, aplicand algoritmi avansati pentru recunoasterea si urmarirea subiectilor, ceea ce duce la un autofocus mult mai rapid si mai inteligent.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce preturi pot astepta pentru un aparat mirrorless cu AF rapid bun?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru modele performante, preturile pentru body-ul aparatului incep de la aproximativ 5.000 - 6.000 RON si pot ajunge pana la 20.000 RON sau chiar mai mult pentru modelele de top. Kit-urile cu obiective adauga intre 1.000 si 5.000 RON, in functie de obiectiv.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/drona-compacta-pentru-fotografii-urbane/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/drona-compacta-pentru-fotografii-urbane.webp" alt="Dronă Compactă Pentru Fotografii Urbane" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Dronă Compactă Pentru Fotografii Urbane</h3>
+              </div>
+            </a>
+
+            <a href="/kit-de-lumini-led-pentru-videografie/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/kit-de-lumini-led-pentru-videografie.webp" alt="Kit De Lumini Led Pentru Videografie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Kit De Lumini Led Pentru Videografie</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-obiectiv-foto-profesional/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-obiectiv-foto-profesional.webp" alt="Cel mai bun obiectiv foto profesional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun obiectiv foto profesional</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Purificator De Aer Cu Filtru Hepa",
+  slug: "purificator-de-aer-cu-filtru-hepa",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Am testat purificatoare de aer cu filtru HEPA. Vezi ce modele merita atentia si cum te ajuta acasa.",
+  image: "/images/articles/purificator-de-aer-cu-filtru-hepa.webp",
+  publishDate: "2026-01-10T14:16:08.000Z",
+  modifiedDate: "2026-01-29T14:16:08.428Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cât de des trebuie înlocuite filtrele HEPA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Durata de viață a filtrelor HEPA variază între 6 și 12 luni, în funcție de model, intensitatea utilizării și nivelul de poluare a aerului. Multe aparate au indicatori luminoși sau notificări în aplicație când e timpul pentru înlocuire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot purificatoarele de aer cu filtru HEPA să elimine virușii?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, filtrele HEPA de înaltă eficiență (H13, H14) sunt capabile să capteze particule foarte mici, inclusiv viruși. Totuși, eficiența depinde și de rata de livrare a aerului curat (CADR) a aparatului și de cât timp funcționează."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât consumă un purificator de aer cu filtru HEPA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Consumul de curent este, în general, redus, variind între 20W și 60W pe treapta maximă. Pe treptele inferioare, consumul este similar cu al unui bec LED, deci nu va afecta semnificativ factura de electricitate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Am animale de companie, este util un purificator de aer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolut. Purificatoarele cu filtru HEPA și carbon activ sunt excelente pentru a elimina părul de animale, mătreața și mirosurile specifice. Ajută la crearea unui mediu mai curat și mai plăcut pentru toți membrii familiei, inclusiv pentru persoanele cu alergii la animale."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Purificatoare de aer cu filtru HEPA: Cum am ajuns sa le folosesc</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce inseamna HEPA si de ce conteaza</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele testate si impresii directe</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la cineva care le-a folosit</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Costuri si mentenanta: Ce trebuie sa stii</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cand un purificator de aer cu filtru HEPA chiar face diferenta</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Purificatoare de aer cu filtru HEPA: Cum am ajuns sa le folosesc</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce inseamna HEPA si de ce conteaza</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Modele testate si impresii directe</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la cineva care le-a folosit</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Costuri si mentenanta: Ce trebuie sa stii</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cand un purificator de aer cu filtru HEPA chiar face diferenta</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/purificator-de-aer-cu-filtru-hepa.webp" alt="Purificator De Aer Cu Filtru Hepa" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Purificatoare de aer cu filtru HEPA: Cum am ajuns sa le folosesc</h2>
+    <p class="mb-4">Am început să mă interesez serios de purificatoare de aer cu filtru HEPA acum vreo trei ani, când a început fiică-mea să dezvolte tot felul de alergii. Primele semne au apărut primăvara, apoi au persistat. Am încercat tot felul de soluții, de la spray-uri nazale la vizite la medic, dar parcă nu dădeam de capăt. Medicul a sugerat că ar putea fi vorba și de calitatea aerului din casă, praf, acarieni, polen. Așa am ajuns să citesc despre filtrele HEPA și cum funcționează ele, practic captând particule microscopice.</p>
+    <p class="mb-4">Am început cu un model mai mic, un Philips SERE SERE 1223, pe care l-am luat de la Altex, pe atunci la vreo 600 de lei. L-am pus în dormitor, unde petreceam cel mai mult timp. Diferența nu a fost instantanee, dar după vreo săptămână-două am observat că dimineața se trezea mai odihnită, fără strănuturi și ochi înlăcrimați. Asta m-a convins că merită să investesc mai mult în ceva mai performant.</p>
+    <p class="mb-4">Acum, după ce am testat mai multe modele de la branduri ca Xiaomi, Winix și chiar unul de la Samsung, pot spune că un purificator de aer cu filtru HEPA nu mai e un lux, ci o necesitate, mai ales dacă locuiești într-un oraș poluat sau ai probleme respiratorii în familie. Am observat că și mirosurile din casă, de la gătit la cele de animale de companie, dispar mult mai repede.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce inseamna HEPA si de ce conteaza</h2>
+    <p class="mb-4">HEPA vine de la High Efficiency Particulate Air. Ca să fie considerat HEPA, un filtru trebuie să capteze cel puțin 99.97% din particulele de 0.3 microni. Gândește-te la praf, polen, spori de mucegai, bacterii, virusuri, acarieni, scame și alte alergeni invizibili ochiului liber. Aceste particule plutesc în aer și, atunci când le respirăm, pot declanșa reacții alergice sau pot agrava afecțiuni respiratorii.</p>
+    <p class="mb-4">Am testat un aparat care pretindea că are filtru HEPA, dar nu avea standardul H13 sau H14, ci unul mai jos. Diferența a fost clară. Cel cu filtru standard nu reținea la fel de eficient particulele fine. Practic, dacă vrei să ai garanția că aerul e cu adevărat curat, caută un purificator cu filtru HEPA certificat, ideal H13 sau H14. Acestea sunt cele mai eficiente.</p>
+    <p class="mb-4">Pe lângă filtrul HEPA, majoritatea purificatoarelor au și un pre-filtru, care prinde particulele mai mari, cum ar fi părul de animale sau scamele, și un filtru de carbon activ, excelent pentru absorbția mirosurilor neplăcute și a compușilor organici volatili (COV). Un sistem complet de filtrare e cheia.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele testate si impresii directe</h2>
+    <p class="mb-4">Am avut ocazia să folosesc mai multe modele în ultimii ani, așa că am o perspectivă destul de clară asupra a ce funcționează și ce nu. Unul dintre primele modele pe care le-am testat intens a fost Xiaomi Mi Air Purifier 3H, luat de pe eMAG cu aproximativ 500 de lei. Era destul de silențios pe treapta minimă și avea o aplicație mobilă bună, prin care puteam monitoriza calitatea aerului și regla intensitatea. Însă, mi s-a părut că filtrul HEPA nu era la fel de performant ca la aparatele mai scumpe.</p>
+    <p class="mb-4">Un alt model care mi-a plăcut mult a fost Winix Zero, pe care l-am găsit la Flanco pe la 900 de lei. Acesta are un sistem de filtrare pe 4 etape, inclusiv un filtru True HEPA, care chiar face o treabă bună. Senzorii lui sunt destul de preciși, iar modul automat își face treaba excelent, ajustând viteza ventilatorului în funcție de poluare. L-am folosit în living și am observat o îmbunătățire vizibilă, mai ales când găteam ceva mai puternic mirositor.</p>
+    <p class="mb-4">Am testat și un Samsung AX4050, pe care l-am găsit la PCGarage cam la 700 de lei. Acesta mi s-a părut un pic mai zgomotos pe treptele superioare, dar designul e modern și filtrarea e eficientă. Aplicația mobilă Samsung SmartThings e utilă, dar uneori mi s-a părut că se deconectează. În general, am observat că aparatele de la branduri consacrate, chiar și cele din gama medie, oferă o performanță mai constantă.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la cineva care le-a folosit</h2>
+    <p class="mb-4">Cel mai important sfat pe care vi-l pot da este să nu economisiți la filtre. Acestea au o durată de viață limitată, de obicei între 6 și 12 luni, în funcție de cât de mult e purificatorul pornit și de cât de poluat e aerul. Când vedeți că aparatul vă semnalează că filtrul trebuie înlocuit, faceți-o. Un filtru uzat nu mai face față și aparatul începe să consume mai mult curent inutil.</p>
+    <p class="mb-4">Stabiliți unde aveți cea mai mare nevoie de purificare. Dacă aveți probleme cu alergiile, dormitorul e prioritar. Dacă petreceți mult timp în living, puneți-l acolo. Nu vă așteptați ca un singur aparat să curețe aerul din toată casa simultan, decât dacă investiți într-un model industrial, care nu e practic pentru uz casnic. De obicei, un purificator e eficient pentru o suprafață specificată de producător, de exemplu 30-40 mp.</p>
+    <p class="mb-4">Am observat că e bine să lăsați purificatorul să funcționeze continuu, pe o treaptă mai joasă, mai ales dacă aveți probleme respiratorii sau animale de companie. Asta menține un nivel constant de curățenie a aerului. Multe modele au un mod automat, care e ideal pentru asta. De asemenea, curățați regulat pre-filtrul (de obicei, o plasă metalică sau de plastic) pentru a prelungi viața filtrului HEPA propriu-zis.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Costuri si mentenanta: Ce trebuie sa stii</h2>
+    <p class="mb-4">Prețurile purificatoarelor de aer cu filtru HEPA variază destul de mult. Am văzut modele simple, pentru camere mici, de la 200-300 de lei (dar acestea nu au de obicei filtre HEPA de calitate sau sunt mult prea mici pentru a fi eficiente). Modelele medii, precum cele de la Xiaomi, Winix sau Samsung, pe care le-am menționat, se încadrează între 500 și 1000 de lei. Modelele premium, de la branduri ca Dyson sau Philips, cu funcții smart avansate și design deosebit, pot ajunge și la 1500-2500 de lei sau chiar mai mult.</p>
+    <p class="mb-4">Marea majoritate a costurilor pe termen lung vin de la înlocuirea filtrelor. Un set de filtre HEPA + carbon activ pentru un model mediu poate costa între 150 și 300 de lei. Acestea trebuie înlocuite o dată pe an sau la 6 luni, în funcție de utilizare. Verificați prețul filtrelor înainte de a cumpăra aparatul, ca să nu aveți surprize neplăcute. Uneori, prețul filtrelor poate ajunge la jumătate din prețul aparatului pe parcursul a doi ani.</p>
+    <p class="mb-4">Consumul de curent nu e foarte mare, de obicei între 20 și 60W, în funcție de treapta de funcționare. Pe treapta minimă, consumul e neglijabil, cam cât un bec LED. Pe treapta maximă, poate fi comparabil cu un ventilator mai puternic. Dar, repet, dacă îl țineți pe modul automat sau pe treapta minimă, costul la factura de curent va fi mic.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cand un purificator de aer cu filtru HEPA chiar face diferenta</h2>
+    <p class="mb-4">Dacă aveți copii mici, mai ales dacă sunt predispuși la răceli sau alergii, un purificator de aer cu filtru HEPA e o investiție care merită luată în considerare. Am observat că fiică-mea a avut mai puține episoade de congestie nazală și strănut de când folosesc aparatul în dormitorul ei. Aerul pare mai proaspăt și mai ușor de respirat, mai ales dimineața.</p>
+    <p class="mb-4">Pentru persoanele cu astm sau alte afecțiuni respiratorii, beneficiile sunt și mai evidente. Eliminarea alergenilor din aer poate reduce frecvența crizelor și poate îmbunătăți calitatea generală a vieții. Am un prieten cu astm sever care jură că aparatul pe care l-a luat de la mine (un Winix) i-a schimbat viața, permițându-i să doarmă mai bine și să aibă mai multă energie ziua.</p>
+    <p class="mb-4">Chiar și pentru cei care nu suferă de alergii sau astm, dar locuiesc în zone cu mult trafic, praf sau poluare, un purificator de aer aduce un plus de confort. În zilele în care afară e un miros dubios sau când se lucrează la drumuri în apropiere, să intri într-o casă cu aer curat e o senzație de bine. Plus că ajută la eliminarea mirosurilor de la gătit, de la animale de companie sau chiar a fumului de țigară, dacă e cazul.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de des trebuie înlocuite filtrele HEPA?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Durata de viață a filtrelor HEPA variază între 6 și 12 luni, în funcție de model, intensitatea utilizării și nivelul de poluare a aerului. Multe aparate au indicatori luminoși sau notificări în aplicație când e timpul pentru înlocuire.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot purificatoarele de aer cu filtru HEPA să elimine virușii?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, filtrele HEPA de înaltă eficiență (H13, H14) sunt capabile să capteze particule foarte mici, inclusiv viruși. Totuși, eficiența depinde și de rata de livrare a aerului curat (CADR) a aparatului și de cât timp funcționează.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât consumă un purificator de aer cu filtru HEPA?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Consumul de curent este, în general, redus, variind între 20W și 60W pe treapta maximă. Pe treptele inferioare, consumul este similar cu al unui bec LED, deci nu va afecta semnificativ factura de electricitate.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Am animale de companie, este util un purificator de aer?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Absolut. Purificatoarele cu filtru HEPA și carbon activ sunt excelente pentru a elimina părul de animale, mătreața și mirosurile specifice. Ajută la crearea unui mediu mai curat și mai plăcut pentru toți membrii familiei, inclusiv pentru persoanele cu alergii la animale.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cuptor-multifunctional-cu-aburi/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cuptor-multifunctional-cu-aburi.webp" alt="Cuptor Multifuncțional Cu Aburi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cuptor Multifuncțional Cu Aburi</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-frigider-side-by-side-premium/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-frigider-side-by-side-premium.webp" alt="Cel mai bun frigider side by side premium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun frigider side by side premium</h3>
+              </div>
+            </a>
+
+            <a href="/aer-conditionat-inverter-cu-consum-redus/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aer-conditionat-inverter-cu-consum-redus.webp" alt="Aer Condiționat Inverter Cu Consum Redus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aer Condiționat Inverter Cu Consum Redus</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

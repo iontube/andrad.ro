@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Căști Cu Microfon Detașabil",
+  slug: "casti-cu-microfon-detasabil",
+  category: "Tehnologie & Gaming",
+  categorySlug: "tehnologie-gaming",
+  excerpt: "Căștile cu microfon detașabil: flexibilitate pentru gaming și comunicare clară. Am testat modele versatile.",
+  image: "/images/articles/casti-cu-microfon-detasabil.webp",
+  publishDate: "2025-11-27T08:50:10.000Z",
+  modifiedDate: "2026-01-17T08:50:10.857Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cât de mult afectează calitatea audio a căștilor principale faptul că microfonul este detașabil?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "În general, nu afectează. Calitatea audio a difuzoarelor este determinată de driverele și construcția căștilor în sine. Microfonul detașabil este o componentă separată, iar prezența sau absența lui nu influențează sunetul redat de căști."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sunt căștile cu microfon detașabil mai scumpe decât cele cu microfon fix?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu neapărat. Brandurile oferă modele cu microfon fix la diverse prețuri. Însă, pentru a obține un microfon detașabil de bună calitate, s-ar putea să fie nevoie să investești puțin mai mult decât într-o pereche de bază cu microfon fix. Totuși, flexibilitatea adăugată justifică adesea diferența."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot folosi un microfon detașabil de la un brand la căști de la alt brand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Foarte rar. Conectorii și standardele sunt de obicei proprietare fiecărui producător. Există o mică șansă dacă ambele folosesc standarde comune de 3.5mm jack, dar compatibilitatea nu este garantată. Cel mai sigur este să folosești microfonul original al căștilor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce tip de microfon detașabil este cel mai bun pentru gaming?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru gaming, un microfon detașabil de tip condensator, cu pattern polar cardioid, este ideal. Acesta captează sunetul din fața ta, minimizând zgomotele ambientale (tastatură, mouse, ventilatoare) și oferind o voce clară. Funcțiile de anulare a zgomotului sunt, de asemenea, un mare plus."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Căștile cu Microfon Detașabil: Un Partener Versatil în Lumea Digitală</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantaje Concrete pentru Gameri</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Calitatea Microfonului Detașabil: Ce Să Cauți</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Căștile cu Microfon Detașabil în Afara Gamingului</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Aspecte Tehnice și Prețuri în România</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Practice pentru Alegere și Utilizare</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Căștile cu Microfon Detașabil: Un Partener Versatil în Lumea Digitală</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantaje Concrete pentru Gameri</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Calitatea Microfonului Detașabil: Ce Să Cauți</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Căștile cu Microfon Detașabil în Afara Gamingului</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Aspecte Tehnice și Prețuri în România</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Practice pentru Alegere și Utilizare</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/casti-cu-microfon-detasabil.webp" alt="Căști Cu Microfon Detașabil" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Căștile cu Microfon Detașabil: Un Partener Versatil în Lumea Digitală</h2>
+    <p class="mb-4">Am trecut prin multe căști în cei 15 ani de când mă joc cu gadgeturile, dar cele cu microfon detașabil au o clasă aparte. Nu sunt doar o piesă de echipament, ci o soluție inteligentă pentru oricine folosește căștile atât pentru gaming, cât și pentru alte activități unde un microfon discret e de preferat. Flexibilitatea asta e cheia, și o să vă spun de ce. </p>
+    <p class="mb-4">Am observat că mulți utilizatori se lovesc de problema microfoanelor mari, incomode, care stau agățate când vrei doar să asculți muzică sau să te uiți la un film. Sau invers, microfoane integrate, dar de proastă calitate, care te fac să suni ca prin apă la un call important. Căștile cu microfon detașabil rezolvă aceste dileme. Poți atașa microfonul când ai nevoie de el, de exemplu, pentru sesiunile intense de multiplayer cu prietenii pe Discord, și îl poți scoate complet când vrei un aspect mai curat, mai casual.</p>
+    <p class="mb-4">În experiența mea, această funcționalitate a transformat căștile dintr-un simplu accesoriu de gaming într-un companion de zi cu zi. Am folosit modele de la ASUS, HyperX și chiar și unele mai accesibile de la Trust, și diferența față de căștile cu microfon fix este notabilă. Alegerea depinde mult de buget și de cerințele specifice, dar principiul rămâne același: libertate de utilizare.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Avantaje Concrete pentru Gameri</h2>
+    <p class="mb-4">Pentru noi, gamerii, microfonul este la fel de important ca placa video sau procesorul. Comunicarea clară cu echipa poate face diferența între victorie și înfrângere. Am testat diverse microfoane detașabile și am văzut cum un model de calitate, cu anulare de zgomot, îți permite să transmiți comenzi precise fără ca colegii să audă zgomotul tastaturii sau al ventilatoarelor. </p>
+    <p class="mb-4">Un exemplu concret: am folosit ASUS ROG Delta S pe parcursul unei sesiuni de Apex Legends. Microfonul detașabil de pe aceste căști a captat vocea mea impecabil, chiar și în momentele tensionate când strigam "flank stânga!". Prietenii mei mi-au confirmat că mă aud mult mai clar decât cu căștile mele vechi, cu microfon integrat. Asta e o diferență pe care o simți imediat. </p>
+    <p class="mb-4">Pe lângă calitatea audio, comoditatea joacă un rol major. Când nu joc, pur și simplu dau microfonul jos și am niște căști confortabile pentru muzică sau streaming. Nu mai am acel braț enervant în fața feței. E o chestie mică, dar care contează enorm în utilizarea pe termen lung.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Calitatea Microfonului Detașabil: Ce Să Cauți</h2>
+    <p class="mb-4">Nu toate microfoanele detașabile sunt create la fel. Am avut ocazia să testez și variante mai ieftine, unde sunetul era metalic sau plin de interferențe. Când alegi o pereche de căști cu microfon detașabil, uită-te după specificații precum: tipul de microfon (condensator este de obicei mai bun pentru gaming), pattern polar (cardioid e ideal pentru a capta sunetul din față și a izola zgomotul ambiental) și funcții suplimentare ca anularea zgomotului. </p>
+    <p class="mb-4">De exemplu, microfonul detașabil de la HyperX Cloud Alpha S este un model cu un sunet foarte echilibrat și o bună izolare a sunetelor nedorite. L-am comparat direct cu un microfon integrat de pe un model Samsung, și diferența a fost clară în favoarea celui detașabil, mai ales în medii zgomotoase. Prețurile pentru astfel de căști variază, dar poți găsi modele bune în jur de 400-700 RON pe eMAG sau PCGarage. </p>
+    <p class="mb-4">Am observat că și modul în care se conectează microfonul la căști contează. Conectorii solizi, care nu se mișcă, asigură o conexiune stabilă și evită pocniturile neplăcute în timpul jocului. Unele modele au un sistem de prindere prin baionetă, altele pur și simplu se introduc, dar contează să fie ferm.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Căștile cu Microfon Detașabil în Afara Gamingului</h2>
+    <p class="mb-4">Aici intervine cu adevărat flexibilitatea. Am folosit căștile mele cu microfon detașabil pentru conferințe pe Zoom, apeluri pe WhatsApp și chiar pentru a înregistra scurte podcasturi. Când scoți microfonul, ai o pereche de căști cu un aspect mult mai elegant, potrivite pentru birou sau chiar pentru a ieși pe stradă. </p>
+    <p class="mb-4">Am testat un model Sony, unde microfonul detașabil era destul de discret, și am putut să-l folosesc fără probleme la un eveniment de prezentare tech. Nu am arătat ca un streamer care se pregătește de raid, ci ca un profesionist care folosește un echipament audio bun. Asta e un plus major pentru cei care vor un singur dispozitiv pentru multiple scopuri. </p>
+    <p class="mb-4">Chiar și pentru apeluri telefonice, un microfon detașabil de calitate superioară unui microfon integrat al telefonului poate face o mare diferență. Am primit feedback pozitiv de la interlocutori când am folosit căștile mele de gaming pentru apeluri, comparativ cu microfonul telefonului. E o investiție care se justifică pe mai multe planuri.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Aspecte Tehnice și Prețuri în România</h2>
+    <p class="mb-4">Când vorbim de căști cu microfon detașabil, prețurile pot varia enorm, de la modele accesibile sub 200 RON, la vârfuri de gamă care depășesc 1000 RON. Pentru gaming, am observat că modelele de la SteelSeries, Razer și HyperX oferă un echilibru bun între performanță și preț. De exemplu, un SteelSeries Arctis 5 (2021) cu microfon ClearCast, detașabil, poate fi găsit pe PCGarage la aproximativ 500-600 RON. </p>
+    <p class="mb-4">Specificațiile tehnice la care să fii atent includ: răspunsul în frecvență al difuzoarelor (20Hz-20kHz e standardul, dar uneori mai mult e mai bine), impedanța (ideal în jur de 32 ohmi pentru compatibilitate cu majoritatea dispozitivelor), și tipul de conexiune (USB, jack 3.5mm, sau wireless). Multe modele de top folosesc conexiunea USB pentru a oferi sunet digital de înaltă calitate și personalizare prin software. </p>
+    <p class="mb-4">Am văzut și opțiuni interesante de la Lenovo, cum ar fi seria Legion H500 Pro, care au microfoane detașabile și un design atrăgător, prețuri în jur de 400 RON pe Altex. Este important să citești review-uri specifice modelului pe care îl vizezi, pentru că nu toate brandurile excelează la fel în toate gamele de preț.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi Practice pentru Alegere și Utilizare</h2>
+    <p class="mb-4">Dacă vrei să cumperi căști cu microfon detașabil, gândește-te la ce vei folosi cel mai des. Ești un gamer hardcore care are nevoie de cea mai bună comunicare posibilă? Sau vrei o pereche versatilă pentru gaming, muzică și apeluri? Pentru gaming, caută modele cu microfoane clare și confortabile pentru sesiuni lungi. </p>
+    <p class="mb-4">Verifică dacă microfonul se poate poziționa ușor în fața gurii, fără să te incomodeze. Am avut o pereche unde brațul era prea rigid și nu puteam să-l ajustez cum trebuie, ceea ce afecta calitatea sunetului. Asigură-te că ai o mufă de conectare standard, ușor de înlocuit dacă se strică. </p>
+    <p class="mb-4">Pentru a menține calitatea sunetului microfonului, evită să-l expui la praf sau umezeală. Curăță-l ocazional cu o perie moale. Când nu îl folosești, depozitează-l într-un loc sigur, preferabil în husa căștilor, dacă aceasta are un compartiment dedicat. Așa vei prelungi durata de viață a microfonului și vei asigura o calitate audio constantă.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de mult afectează calitatea audio a căștilor principale faptul că microfonul este detașabil?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  În general, nu afectează. Calitatea audio a difuzoarelor este determinată de driverele și construcția căștilor în sine. Microfonul detașabil este o componentă separată, iar prezența sau absența lui nu influențează sunetul redat de căști.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Sunt căștile cu microfon detașabil mai scumpe decât cele cu microfon fix?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu neapărat. Brandurile oferă modele cu microfon fix la diverse prețuri. Însă, pentru a obține un microfon detașabil de bună calitate, s-ar putea să fie nevoie să investești puțin mai mult decât într-o pereche de bază cu microfon fix. Totuși, flexibilitatea adăugată justifică adesea diferența.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi un microfon detașabil de la un brand la căști de la alt brand?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Foarte rar. Conectorii și standardele sunt de obicei proprietare fiecărui producător. Există o mică șansă dacă ambele folosesc standarde comune de 3.5mm jack, dar compatibilitatea nu este garantată. Cel mai sigur este să folosești microfonul original al căștilor.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce tip de microfon detașabil este cel mai bun pentru gaming?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru gaming, un microfon detașabil de tip condensator, cu pattern polar cardioid, este ideal. Acesta captează sunetul din fața ta, minimizând zgomotele ambientale (tastatură, mouse, ventilatoare) și oferind o voce clară. Funcțiile de anulare a zgomotului sunt, de asemenea, un mare plus.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/cel-mai-bun-laptop-de-gaming-rtx-4090/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-laptop-de-gaming-rtx-4090.webp" alt="Cel mai bun laptop de gaming RTX 4090" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun laptop de gaming RTX 4090</h3>
+              </div>
+            </a>
+
+            <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/monitor-curbat-qhd-pentru-gaming-competitiv.webp" alt="Monitor Curbat Qhd Pentru Gaming Competitiv" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Monitor Curbat Qhd Pentru Gaming Competitiv</h3>
+              </div>
+            </a>
+
+            <a href="/casti-wireless-pentru-gaming-mobil/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/casti-wireless-pentru-gaming-mobil.webp" alt="Căști Wireless Pentru Gaming Mobil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Tehnologie & Gaming</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Căști Wireless Pentru Gaming Mobil</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

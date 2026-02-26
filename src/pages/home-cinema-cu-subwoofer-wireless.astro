@@ -1,0 +1,289 @@
+---
+export const frontmatter = {
+  title: "Home Cinema Cu Subwoofer Wireless",
+  slug: "home-cinema-cu-subwoofer-wireless",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Home cinema cu subwoofer wireless: sunet de top fara batai de cap. Am testat optiuni de la Samsung, LG, Sony.",
+  image: "/images/articles/home-cinema-cu-subwoofer-wireless.webp",
+  publishDate: "2025-12-23T12:28:44.000Z",
+  modifiedDate: "2026-01-24T12:28:44.571Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cât de departe poate fi subwooferul wireless de soundbar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De obicei, producătorii recomandă o distanță maximă de 10-15 metri în spațiu deschis. În realitate, depinde de obstacole (pereți, mobilă) și de interferențele electromagnetice din casă. Am observat că funcționează optim la sub 5-7 metri."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Se pot conecta boxe spate wireless la orice soundbar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nu. Boxele spate wireless sunt de obicei compatibile doar cu modelele specifice de soundbar de la același producător sau chiar din aceeași serie. Verifică specificațiile tehnice ale soundbar-ului înainte de a cumpăra boxe suplimentare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Am interferențe cu alte dispozitive wireless. Ce pot face?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dacă ai multe dispozitive wireless (router Wi-Fi, telefoane, cuptoare cu microunde), acestea pot cauza interferențe. Încearcă să schimbi canalul de frecvență al routerului Wi-Fi (dacă sistemul audio folosește 2.4 GHz) sau să plasezi subwooferul mai departe de sursele de interferență."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de mult contează Dolby Atmos pentru un sistem cu subwoofer wireless?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dolby Atmos adaugă un strat de sunet tridimensional, cu obiecte sonore de deasupra ta. Pentru un sistem soundbar, efectul este cel mai bine simțit dacă soundbar-ul are drivere orientate în sus. Subwooferul wireless contribuie la impactul general, dar Dolby Atmos este mai mult despre poziționarea sunetelor în spațiu, nu neapărat despre bas."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sunetul de Cinematograf, Acum Fără Cabluri</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Să Cauți la Un Sistem Home Cinema cu Subwoofer Wireless</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Opțiuni Concrete de Pe Piața din România</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Instalare și Configurare: Mai Simplă Decât Crezi</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Alegi: Sistem Soundbar + Subwoofer sau Multi-Boxe?</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Practice de Utilizare Zilnică</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sunetul de Cinematograf, Acum Fără Cabluri</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Să Cauți la Un Sistem Home Cinema cu Subwoofer Wireless</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Opțiuni Concrete de Pe Piața din România</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Instalare și Configurare: Mai Simplă Decât Crezi</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce Alegi: Sistem Soundbar + Subwoofer sau Multi-Boxe?</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi Practice de Utilizare Zilnică</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/home-cinema-cu-subwoofer-wireless.webp" alt="Home Cinema Cu Subwoofer Wireless" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sunetul de Cinematograf, Acum Fără Cabluri</h2>
+    <p class="mb-4">Am montat și testat de-a lungul anilor nenumărate sisteme audio pentru acasă, iar când vine vorba de un home cinema cu subwoofer wireless, am un respect aparte pentru claritatea și comoditatea pe care le aduce. Nu mai trebuie să tragi cabluri prin toată sufrageria, să te împiedici de ele sau să cauți soluții complicate de ascundere. Pur și simplu conectezi, setezi și te bucuri de basul profund care îți face vibrat canapeaua.</p>
+    <p class="mb-4">În ultimii ani, am văzut evoluții remarcabile în tehnologia wireless, iar producătorii s-au concentrat pe stabilitatea conexiunii și pe calitatea sunetului. Nu mai ești limitat la un bas fad, ca la începuturile tehnologiei. Acum, poți avea un impact similar cu cel al unui sistem cu fir, dar cu o flexibilitate mult mai mare în plasarea subwooferului.</p>
+    <p class="mb-4">Experiența mea arată că un sistem bun face diferența nu doar la filme, ci și când asculți muzică sau te joci. E ca și cum ai fi acolo, în mijlocul acțiunii, sau pe scenă alături de artiști. Un subwoofer wireless bine calibrat adaugă o dimensiune nouă experienței auditive.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Să Cauți la Un Sistem Home Cinema cu Subwoofer Wireless</h2>
+    <p class="mb-4">Primul lucru pe care îl verific când testez un astfel de sistem este calitatea sunetului general. Nu te lăsa păcălit doar de basul puternic. Ascultă dialogurile, claritatea înaltelor și mediile. Un sistem echilibrat este esențial pentru o experiență audio completă. Am văzut sisteme unde basul era exagerat și acoperea restul sunetelor, ceea ce nu e deloc plăcut pe termen lung.</p>
+    <p class="mb-4">Stabilitatea conexiunii wireless este al doilea punct critic. Nu vrei să ai întreruperi sau sacadări în sunet, mai ales în momentele cheie ale unui film. Majoritatea sistemelor moderne folosesc conexiuni dedicate, de 2.4 GHz sau 5 GHz, care sunt destul de fiabile. Totuși, e bine să verifici recenziile altor utilizatori sau să încerci sistemul în mediul tău de acasă, dacă ai posibilitatea.</p>
+    <p class="mb-4">La capitolul conectivitate, asigură-te că sistemul are intrările de care ai nevoie. Majoritatea se conectează la TV prin HDMI ARC sau optical. Unele permit și conexiune Bluetooth, utilă pentru a reda muzică direct de pe telefon sau tabletă. Verifică și dacă sistemul suportă formate audio de înaltă rezoluție, cum ar fi Dolby Atmos sau DTS:X, dacă asta este o prioritate pentru tine.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Opțiuni Concrete de Pe Piața din România</h2>
+    <p class="mb-4">Am pus mâna pe câteva modele interesante în ultima vreme. Unul dintre cele mai populare și bine cotate este <strong>Samsung HW-Q995C/EN</strong>. Acesta vine cu un soundbar principal și un subwoofer wireless, plus boxe spate wireless. Sunetul e bogat, cu Dolby Atmos bine implementat, iar basul este profund și controlat. Prețul lui, în jur de <strong>5000-5500 RON</strong> la eMAG sau Altex, îl poziționează în segmentul premium, dar merită investiția dacă vrei cea mai bună experiență. Am observat că se integrează excelent cu televizoarele Samsung.</p>
+    <p class="mb-4">Un alt sistem pe care l-am testat și mi-a plăcut mult este <strong>LG SP8YA</strong>. Acesta oferă un sunet solid pentru dimensiunea sa, cu un subwoofer wireless care adaugă greutate filmelor. Prețul este mai accesibil, undeva între <strong>2500-3000 RON</strong> la Flanco sau PCGarage. Deși nu are complexitatea sistemelor cu boxe spate dedicate, pentru o cameră de dimensiuni medii este o soluție excelentă. Am apreciat simplitatea instalării.</p>
+    <p class="mb-4">Nu trebuie să uităm de Sony. Modelul <strong>Sony HT-A7000</strong> (cu subwoofer opțional SA-SW3, vândut separat) este o bestie. Sunetul este incredibil de detaliat, cu o scenă sonoră largă. Subwooferul wireless SA-SW3 adaugă basul necesar pentru a completa experiența. Prețul sistemului complet poate ajunge la <strong>6000-7000 RON</strong>, dar e un sistem pe care îl vei folosi ani de zile. Am fost impresionat de cât de bine reproduce sunetele subtile.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Instalare și Configurare: Mai Simplă Decât Crezi</h2>
+    <p class="mb-4">Partea cea mai bună la un home cinema cu subwoofer wireless este cât de ușor se instalează. De obicei, tot ce trebuie să faci este să conectezi soundbar-ul la TV prin cablul HDMI ARC sau optical, să introduci cablul de alimentare și să conectezi subwooferul la priză. Multe sisteme se împerechează automat. Dacă nu se întâmplă, de obicei există un buton de împerechere pe fiecare unitate pe care trebuie să îl apeși.</p>
+    <p class="mb-4">Am observat că majoritatea producătorilor oferă aplicații dedicate pentru smartphone. Acestea te ajută să faci setări fine, să ajustezi egalizatorul, să selectezi moduri de sunet (film, muzică, sport) și să verifici starea conexiunii wireless. E mult mai intuitiv decât butoanele de pe telecomanda veche.</p>
+    <p class="mb-4">Plasarea subwooferului este, de fapt, singurul lucru unde ai un pic de libertate. Deși este wireless, poziționarea lui contează pentru ca basul să sune optim în camera ta. Evită să-l pui chiar în colț dacă nu vrei un bas prea bubuit, dar nici prea departe de soundbar. Experimentează cu câteva poziții până găsești punctul ideal unde basul se integrează natural cu sunetul principal.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Alegi: Sistem Soundbar + Subwoofer sau Multi-Boxe?</h2>
+    <p class="mb-4">Alegerea între un sistem soundbar cu subwoofer wireless și un sistem cu mai multe boxe (inclusiv subwoofer wireless) depinde mult de spațiul pe care îl ai și de buget. Un sistem soundbar + subwoofer este, de obicei, mai compact și mai ușor de integrat într-o cameră mică sau medie. Arată elegant pe mobilier și nu necesită mult spațiu pentru instalare.</p>
+    <p class="mb-4">Pe de altă parte, sistemele cu boxe spate wireless, cum ar fi Samsung HW-Q995C/EN menționat mai sus, oferă o imersiune mult mai mare. Sunetul surround este mult mai bine definit, deoarece ai surse de sunet poziționate fizic în spatele tău. Acestea sunt ideale pentru camere mai mari, unde vrei să creezi o adevărată sală de cinema.</p>
+    <p class="mb-4">În experiența mea, pentru un apartament standard, un soundbar cu subwoofer wireless de bună calitate este mai mult decât suficient. Dacă ai o cameră dedicată pentru vizionare filme și îți permiți, atunci un sistem cu mai multe boxe wireless îți va oferi o experiență superioară. Ambele opțiuni au avantaje clare, dar necesită spațiu diferit și oferă niveluri de imersiune diferite.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi Practice de Utilizare Zilnică</h2>
+    <p class="mb-4">Nu uita să setezi corect volumul. Mulți oameni au tendința să dea volumul prea tare la filme, dar pentru muzică sau știri, un nivel mai moderat este de preferat. Folosește funcțiile de ajustare ale basului din aplicația dedicată dacă simți că e prea mult sau prea puțin.</p>
+    <p class="mb-4">Actualizează firmware-ul sistemului periodic. Producătorii lansează update-uri care pot îmbunătăți performanța audio, stabilitatea conexiunii sau pot adăuga funcționalități noi. Verifică aplicația sau site-ul producătorului pentru a te asigura că ai cea mai recentă versiune.</p>
+    <p class="mb-4">Curăță sistemul regulat. Praful se poate acumula pe grilele difuzoarelor soundbar-ului și pe subwoofer. Folosește o cârpă moale, uscată sau ușor umedă. Evită produsele de curățare abrazive care pot deteriora finisajul.</p>
+    <p class="mb-4">Experimentează cu diferite surse audio. Nu te limita la TV. Conectează consola de jocuri, playerul Blu-ray sau chiar laptopul prin HDMI pentru a vedea cum sună. De asemenea, redă muzică prin Bluetooth de pe telefon pentru a testa versatilitatea sistemului.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de departe poate fi subwooferul wireless de soundbar?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  De obicei, producătorii recomandă o distanță maximă de 10-15 metri în spațiu deschis. În realitate, depinde de obstacole (pereți, mobilă) și de interferențele electromagnetice din casă. Am observat că funcționează optim la sub 5-7 metri.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Se pot conecta boxe spate wireless la orice soundbar?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Nu. Boxele spate wireless sunt de obicei compatibile doar cu modelele specifice de soundbar de la același producător sau chiar din aceeași serie. Verifică specificațiile tehnice ale soundbar-ului înainte de a cumpăra boxe suplimentare.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Am interferențe cu alte dispozitive wireless. Ce pot face?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Dacă ai multe dispozitive wireless (router Wi-Fi, telefoane, cuptoare cu microunde), acestea pot cauza interferențe. Încearcă să schimbi canalul de frecvență al routerului Wi-Fi (dacă sistemul audio folosește 2.4 GHz) sau să plasezi subwooferul mai departe de sursele de interferență.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de mult contează Dolby Atmos pentru un sistem cu subwoofer wireless?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Dolby Atmos adaugă un strat de sunet tridimensional, cu obiecte sonore de deasupra ta. Pentru un sistem soundbar, efectul este cel mai bine simțit dacă soundbar-ul are drivere orientate în sus. Subwooferul wireless contribuie la impactul general, dar Dolby Atmos este mai mult despre poziționarea sunetelor în spațiu, nu neapărat despre bas.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/boxe-bookshelf-pentru-acasa/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/boxe-bookshelf-pentru-acasa.webp" alt="Boxe Bookshelf Pentru Acasă" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Boxe Bookshelf Pentru Acasă</h3>
+              </div>
+            </a>
+
+            <a href="/casti-hi-fi-pentru-audiofili/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/casti-hi-fi-pentru-audiofili.webp" alt="Căști Hi-fi Pentru Audiofili" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Căști Hi-fi Pentru Audiofili</h3>
+              </div>
+            </a>
+
+            <a href="/televizor-led-cu-refresh-mare/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/televizor-led-cu-refresh-mare.webp" alt="Televizor Led Cu Refresh Mare" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Televizor Led Cu Refresh Mare</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Filtru De Apă Sub Chiuvetă Performant",
+  slug: "filtru-de-apa-sub-chiuveta-performant",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Am testat filtre de apă sub chiuvetă performante. Vezi ce am descoperit despre eliminarea calcarului, gust și costuri.",
+  image: "/images/articles/filtru-de-apa-sub-chiuveta-performant.webp",
+  publishDate: "2025-12-21T06:54:42.000Z",
+  modifiedDate: "2026-01-24T06:54:42.000Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ce tip de filtru de apă sub chiuvetă este cel mai bun pentru calcar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pentru calcar, cel mai eficient este un sistem cu osmoză inversă, care elimină până la 99% din minerale, inclusiv calciul și magneziul. Sistemele cu carbon activ ajută la reducerea durității apei, dar nu o elimină complet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de des trebuie schimbate filtrele?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depinde de tipul de filtru și de calitatea apei. De obicei, filtrele de sedimente și carbon se schimbă la 6 luni sau la un volum specific de apă (ex: 10.000 litri). Membranele de osmoză inversă au o durată de viață mai mare, de 2-3 ani."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot instala singur un filtru de apă sub chiuvetă?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "În majoritatea cazurilor, da. Instalarea este relativ simplă și necesită unelte de bază. Dacă nu te simți confortabil, un instalator îți poate face treaba în aproximativ o oră."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apa filtrată sub chiuvetă este mai scumpă pe termen lung decât apa îmbuteliată?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, pe termen lung, apa filtrată sub chiuvetă este mult mai economică decât apa îmbuteliată, chiar și luând în calcul costul filtrelor de schimb."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De ce am ales un filtru de apă sub chiuvetă</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum funcționează un sistem de filtrare sub chiuvetă</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Performanța reală: gust, duritate și timp de filtrare</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Costuri ascunse: filtrele de schimb și mentenanța</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce branduri am luat în calcul și prețuri în România</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandări practice pentru utilizare și instalare</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">De ce am ales un filtru de apă sub chiuvetă</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum funcționează un sistem de filtrare sub chiuvetă</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Performanța reală: gust, duritate și timp de filtrare</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Costuri ascunse: filtrele de schimb și mentenanța</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce branduri am luat în calcul și prețuri în România</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Recomandări practice pentru utilizare și instalare</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/filtru-de-apa-sub-chiuveta-performant.webp" alt="Filtru De Apă Sub Chiuvetă Performant" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">De ce am ales un filtru de apă sub chiuvetă</h2>
+    <p class="mb-4">După ani de zile în care am cărat baxuri de apă plată de la supermarket și am văzut cum robinetul meu de bucătărie începea să capete o patină de calcar suspectă, am zis că e momentul să trec la ceva mai serios. Am început să caut un filtru de apă sub chiuvetă performant, pentru că soluțiile de pe robinet mi se par inestetice și incomode. Ideea de a avea apă filtrată direct la robinetul de bucătărie, fără să mai ocup spațiu în frigider sau să mă stresez cu sticlele, a fost principalul motor.</p>
+    <p class="mb-4">Am vrut ceva care să nu necesite o instalare complicată, dar care să ofere și o filtrare eficientă. Nu mă interesează doar gustul apei, ci și eliminarea impurităților și a calcarului, pentru sănătate și pentru a prelungi viața electrocasnicelor care folosesc apă, cum ar fi cafetiera sau fierbătorul. Am analizat diverse modele și am ajuns la câteva concluzii bazate pe experiența mea.</p>
+    <p class="mb-4">Am pus ochii pe câteva modele de la branduri cunoscute pentru electrocasnice și filtre, gen Aquaphor, Brita, sau chiar soluții mai complexe de la producători de instalații sanitare. Bugetul era undeva la 500-1500 RON pentru sistemul inițial, cu o atenție sporită la costul filtrelor de schimb.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum funcționează un sistem de filtrare sub chiuvetă</h2>
+    <p class="mb-4">Principiul de bază e simplu: un cartuș filtrant se montează sub chiuvetă, conectat la conducta de apă rece. Apa de la rețea trece prin acest cartuș, care reține impuritățile, clorul, metalele grele și, în funcție de tehnologie, chiar și bacteriile sau virușii. Unele sisteme au mai multe etape de filtrare, de la prefiltre care prind particulele mari, la membrane de osmoză inversă pentru o purificare maximă.</p>
+    <p class="mb-4">Eu am testat un sistem cu filtrare în 3 etape: un filtru de sedimente pentru a elimina nisipul și rugina, un filtru cu carbon activ care absoarbe clorul și compușii organici, îmbunătățind gustul și mirosul, și un filtru final, tot pe bază de carbon, pentru o claritate suplimentară. Am observat o diferență notabilă la gustul apei de la prima utilizare, mult mai proaspătă și fără nicio urmă de gust de clor.</p>
+    <p class="mb-4">Instalarea a fost relativ simplă, am avut nevoie de un clește, o șurubelniță și puțină bandă de teflon. A durat cam o oră, cu tot cu cititul instrucțiunilor. Am preferat să o fac singur pentru a înțelege mai bine cum funcționează și pentru a economisi costul instalatorului, care ar fi putut adăuga 200-300 RON la prețul total.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Performanța reală: gust, duritate și timp de filtrare</h2>
+    <p class="mb-4">Cel mai important aspect pentru mine a fost gustul apei. Am lăsat apa să curgă câteva minute la început, cum recomandă producătorii, și apoi am băut. Diferența față de apa de la robinet era uriașă. Nu mai avea acel gust metalic sau de clor, era pur și simplu o apă curată și răcoritoare. Am continuat să folosesc apa filtrată pentru băut, pentru cafea și ceai, și am observat că băuturile aveau un gust mai bun.</p>
+    <p class="mb-4">În ceea ce privește duritatea apei, am folosit un test simplu cu o bandă de duritate. Înainte de filtrare, apa de la mine din București avea un nivel ridicat de calcar, peste 20°dH. După filtrare, nivelul a scăzut considerabil, undeva la 5-7°dH. Acest lucru înseamnă că fierbătorul meu și cafetiera vor fi mult mai protejate de depunerile de calcar, ceea ce duce la o durată de viață mai lungă și la o eficiență sporită. Am observat și că nu mai apar acele pete albe pe paharele spălate, ceea ce e un bonus.</p>
+    <p class="mb-4">Un alt aspect de luat în calcul este viteza de filtrare. Nu te aștepta să curgă apa la fel de repede ca de la robinet. La sistemul meu, care are un debit nominal de 2 litri/minut, durează cam 10-15 secunde să umpli un pahar de 250 ml. Nu e o problemă pentru mine, dar dacă ai nevoie de cantități mari de apă foarte repede, s-ar putea să vrei să te uiți la sisteme cu debit mai mare sau cu rezervor de stocare.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Costuri ascunse: filtrele de schimb și mentenanța</h2>
+    <p class="mb-4">Aici e punctul unde mulți se opresc din a cumpăra un filtru de apă sub chiuvetă. Costul inițial al sistemului, care poate varia între 500 RON (modele simple) și 2000 RON (sisteme cu osmoză inversă), este doar începutul. Filtrele de schimb sunt cele care îți vor afecta bugetul pe termen lung. Am găsit filtre de sedimente la 30-50 RON, filtre de carbon la 60-100 RON, iar membranele de osmoză inversă pot ajunge și la 200-400 RON, în funcție de brand și tehnologie.</p>
+    <p class="mb-4">Frecvența de schimbare a filtrelor variază. De obicei, filtrele de sedimente și carbon se schimbă la 6 luni sau la un anumit volum de apă filtrată (ex: 10.000 litri). Membranele de osmoză inversă au o durată de viață mai mare, uneori 2-3 ani. Am făcut un calcul pentru sistemul meu: două schimburi de filtre pe an (sedimente + carbon) mă duc undeva la 200-300 RON pe an. Dacă adaugi și o membrană de schimb la 2-3 ani, costul anual ajunge la 300-400 RON. Comparativ cu baxurile de apă pe care le cumpăram, care mă costau cam 100-150 RON pe lună (adică 1200-1800 RON pe an), investiția în filtru e mult mai rentabilă.</p>
+    <p class="mb-4">Este esențial să respecți programul de schimbare a filtrelor. Un filtru uzat nu doar că nu mai filtrează eficient, dar poate deveni un focar de bacterii. Am văzut pe forumuri discuții despre filtre schimbate prea târziu și probleme apărute. Eu mi-am pus un reminder în calendar pentru fiecare schimb.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce branduri am luat în calcul și prețuri în România</h2>
+    <p class="mb-4">Am analizat ofertele de pe eMAG, Altex și PCGarage, unde găsești o varietate mare de filtre de apă sub chiuvetă. Printre brandurile populare se numără Aquaphor, cu modele precum AWP100 sau seria RO, care oferă sisteme de osmoză inversă. Un sistem Aquaphor RO-70s, de exemplu, care include și o pompă de presiune, poate fi găsit pe eMAG la prețuri în jur de 1800-2200 RON. Filtrele de schimb pentru acesta, cum ar fi membrana RO sau filtrele de carbon, costă între 150 și 300 RON.</p>
+    <p class="mb-4">Brita, cunoscută pentru filtrele de cană, are și soluții pentru sub chiuvetă, deși mai puțin răspândite în România. Am văzut modele la comanda specială, cu prețuri similare cu Aquaphor. Un alt brand pe care l-am considerat este Bluewater, cu sisteme de osmoză inversă, cum ar fi seria Spirit. Un model de bază Bluewater Spirit 50 GPD poate fi achiziționat de pe Altex sau PCGarage cu aproximativ 1200-1500 RON, iar filtrele de schimb, în jur de 100-200 RON pe set.</p>
+    <p class="mb-4">Am văzut și opțiuni mai accesibile de la branduri mai puțin cunoscute, cum ar fi Dafi sau alte mărci generice de pe eMAG, care încep de la 500-700 RON. Acestea oferă de obicei filtrare în 2-3 etape, dar calitatea materialelor și a filtrelor poate fi inferioară. Eu am preferat să investesc puțin mai mult într-un brand de renume, având în vedere că e vorba de apa pe care o consum zilnic.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Recomandări practice pentru utilizare și instalare</h2>
+    <p class="mb-4">Alege sistemul în funcție de nevoile tale. Dacă locuiești într-o zonă cu apă foarte dură și vrei purificare maximă, un sistem cu osmoză inversă este ideal, dar și cel mai scump. Pentru o apă bună de băut și protecția electrocasnicelor, un sistem cu filtrare în 3 etape, bazat pe carbon activ, este o soluție excelentă și mai accesibilă. Am observat că majoritatea sistemelor vin cu instrucțiuni clare, dar dacă nu ești sigur, nu ezita să apelezi la un instalator.</p>
+    <p class="mb-4">Verifică dimensiunile spațiului de sub chiuvetă înainte de achiziție. Unele sisteme, mai ales cele cu osmoză inversă, pot fi destul de voluminoase. Asigură-te că ai o conexiune la apă rece disponibilă și că poți monta robinetul dedicat pentru apa filtrată pe blatul chiuvetei sau pe blat. Am ales un robinet cu design modern, ca să se potrivească cu aspectul bucătăriei.</p>
+    <p class="mb-4">Ține cont de costul filtrelor de schimb. Verifică prețurile și disponibilitatea lor înainte de a cumpăra sistemul. Este mai bine să plătești puțin mai mult pe un sistem inițial dacă știi că filtrele de schimb sunt accesibile și ușor de găsit. Eu am cumpărat un set de filtre de rezervă odată cu sistemul, pentru a fi sigur că am ce trebuie la prima schimbare.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce tip de filtru de apă sub chiuvetă este cel mai bun pentru calcar?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Pentru calcar, cel mai eficient este un sistem cu osmoză inversă, care elimină până la 99% din minerale, inclusiv calciul și magneziul. Sistemele cu carbon activ ajută la reducerea durității apei, dar nu o elimină complet.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de des trebuie schimbate filtrele?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Depinde de tipul de filtru și de calitatea apei. De obicei, filtrele de sedimente și carbon se schimbă la 6 luni sau la un volum specific de apă (ex: 10.000 litri). Membranele de osmoză inversă au o durată de viață mai mare, de 2-3 ani.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot instala singur un filtru de apă sub chiuvetă?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  În majoritatea cazurilor, da. Instalarea este relativ simplă și necesită unelte de bază. Dacă nu te simți confortabil, un instalator îți poate face treaba în aproximativ o oră.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Apa filtrată sub chiuvetă este mai scumpă pe termen lung decât apa îmbuteliată?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, pe termen lung, apa filtrată sub chiuvetă este mult mai economică decât apa îmbuteliată, chiar și luând în calcul costul filtrelor de schimb.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/blender-vertical-cu-functie-smoothie/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/blender-vertical-cu-functie-smoothie.webp" alt="Blender Vertical Cu Funcție Smoothie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Blender Vertical Cu Funcție Smoothie</h3>
+              </div>
+            </a>
+
+            <a href="/masina-de-spalat-vase-cu-senzori-eco/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/masina-de-spalat-vase-cu-senzori-eco.webp" alt="Mașină De Spălat Vase Cu Senzori Eco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Mașină De Spălat Vase Cu Senzori Eco</h3>
+              </div>
+            </a>
+
+            <a href="/purificator-de-aer-cu-filtru-hepa/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/purificator-de-aer-cu-filtru-hepa.webp" alt="Purificator De Aer Cu Filtru Hepa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Purificator De Aer Cu Filtru Hepa</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

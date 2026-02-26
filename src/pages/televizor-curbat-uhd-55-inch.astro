@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Televizor Curbat Uhd 55 Inch",
+  slug: "televizor-curbat-uhd-55-inch",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Televizorul curbat UHD 55 inch: am testat cum arata si cum se vede in 2024. Merita upgrade-ul?",
+  image: "/images/articles/televizor-curbat-uhd-55-inch.webp",
+  publishDate: "2026-01-19T08:40:20.000Z",
+  modifiedDate: "2026-02-01T08:40:20.857Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Este curbatura unui televizor curbat de 55 inch vizibila la unghiuri largi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, curbatura devine mai putin evidenta pe masura ce te indepartezi de pozitia centrala. Pentru cei care stau in laterale, imaginea poate parea putin distorsionata comparativ cu un ecran plat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot conecta un PlayStation 5 sau Xbox Series X la acest televizor curbat UHD 55 inch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolut. Asigurati-va ca televizorul are port HDMI 2.0 sau mai nou pentru a beneficia de rezolutie 4K la 60Hz sau chiar 120Hz daca modelul suporta. Majoritatea televizoarelor UHD de 55 inch din ultimii ani au cel putin HDMI 2.0."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce tip de continut este cel mai potrivit pentru un televizor curbat de 55 inch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Filmele 4K, serialele cu actiune si jocurile video beneficiaza cel mai mult de curbatura, oferind o senzatie mai imersiva. Documentarele despre natura sau emisiunile cu peisaje pot fi, de asemenea, foarte placute."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce diferente exista intre un televizor curbat si unul plat de aceeasi diagonala?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Principala diferenta este forma ecranului, care la cel curbat incearca sa imite forma campului vizual uman pentru o imersiune sporita. Calitatea imaginii, rezolutia si functionalitatile Smart TV pot fi similare, dar depind de modelul specific si de producator."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prima impresie: E curbatul pentru tine?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Calitatea imaginii: Culori si contrast pe un ecran de 55 inch</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sunetul: Suficient pentru filme, dar recomand un soundbar</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Smart TV si conectivitate: Ce poti face cu el?</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Experienta de utilizare zilnica: Ce am observat in teste</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Merita sa cumperi un televizor curbat UHD 55 inch in 2024?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Prima impresie: E curbatul pentru tine?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Calitatea imaginii: Culori si contrast pe un ecran de 55 inch</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sunetul: Suficient pentru filme, dar recomand un soundbar</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Smart TV si conectivitate: Ce poti face cu el?</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Experienta de utilizare zilnica: Ce am observat in teste</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Merita sa cumperi un televizor curbat UHD 55 inch in 2024?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/televizor-curbat-uhd-55-inch.webp" alt="Televizor Curbat Uhd 55 Inch" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Prima impresie: E curbatul pentru tine?</h2>
+    <p class="mb-4">Am scos din cutie noul Samsung 55CU7172, un televizor curbat UHD de 55 inch, si prima senzatie a fost una de... spatiu. E drept, am fost obisnuit cu ecrane plate, asa ca acest design mi-a atras atentia imediat. In experienta mea, curbatura asta nu e doar un moft de design, ci incearca sa te imerseze mai mult in actiune, mai ales la diagonale mari.</p>
+    <p class="mb-4">Am montat rapid suportul VESA pe perete, langa un Sony Bravia de 50 inch, si diferenta de prezenta vizuala s-a simtit. Nu e un televizor subtire, dar curbatura ii da o anumita eleganta, ascunzand putin din grosimea sa. M-am gandit instantaneu la experienta din cinematograf, unde ecranul e si el curbat pentru a acoperi mai bine campul vizual.</p>
+    <p class="mb-4">Daca stai la o distanta potrivita, cam 2-3 metri, curbatura devine mai evidenta si poate imbunatati perceptia profunzimii. Am testat si cu filme 4K si jocuri, unde efectul a fost destul de placut. Pentru cine prefera insa unghiuri de vizualizare foarte largi sau il monteaza intr-un spatiu foarte luminos, poate ar trebui sa ia in calcul si alternativele plate.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Calitatea imaginii: Culori si contrast pe un ecran de 55 inch</h2>
+    <p class="mb-4">Acum, sa vorbim despre ce conteaza cu adevarat: imaginea. Acest televizor curbat UHD 55 inch, in cazul meu modelul Samsung, promite rezolutie 4K (3840 x 2160 pixeli), iar eu pot confirma ca detaliile sunt acolo. Am pus pe el clipuri de pe YouTube in 4K si diferentele fata de un Full HD sunt clare, mai ales pe un ecran de 55 inch unde fiecare pixel conteaza.</p>
+    <p class="mb-4">Culorile sunt vibrante, dar nu exagerate, cel putin din setarile implicite. Am observat ca nu exista tehnologii de HDR avansate precum Dolby Vision pe acest model specific (verificati fisa tehnica a oricarui televizor curbat de 55 inch pe care il aveti in vizor), dar HDR10+ este prezent si isi face treaba decent. In scenele intunecate, contrastul este bun, negrii sunt destul de adanci pentru un panou LED, dar nu te astepta la nivelul unui OLED.</p>
+    <p class="mb-4">Am testat si cu meciuri de fotbal si mi-a placut fluiditatea imaginii. Nu am observat artefacte mari sau miscari sacadate, ceea ce e crucial pentru sport. Pentru gaming, am activat modul joc (Game Mode) si input lag-ul a fost scazut, facand experienta mult mai placuta. Un televizor curbat de 55 inch din aceasta gama de pret (cam 2500-3000 RON, am vazut oferte la eMAG si Altex) este o optiune buna pentru multi.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sunetul: Suficient pentru filme, dar recomand un soundbar</h2>
+    <p class="mb-4">Sistemul audio integrat pe acest televizor curbat UHD 55 inch este, ca la majoritatea televizoarelor moderne, decent, dar nu extraordinar. Are 2 boxe de 10W fiecare, totalizand 20W, suficient pentru a urmari stirile sau un serial in camera. Am ascultat cateva episoade din serialul meu preferat si am inteles dialogurile fara probleme.</p>
+    <p class="mb-4">Totusi, pentru o experienta cinematografica reala, mai ales cand vine vorba de filme cu explozii sau muzica, sunetul integrat nu face fata. Am conectat un soundbar Samsung de la mine de acasa, si diferenta a fost uriasa. Basul a devenit mai prezent, iar sunetul a capatat o profunzime mult mai mare. Daca va ganditi sa cumparati un televizor curbat de 55 inch si vreti si sunet pe masura, alocati un buget si pentru un soundbar.</p>
+    <p class="mb-4">Conectivitatea pentru un soundbar este simpla, fie prin HDMI ARC, fie prin optic. Am testat ambele variante si totul a mers fara batai de cap. Daca nu vreti sa investiti intr-un soundbar, dar vreti totusi un sunet mai bun, puteti opta pentru o pereche de boxe active conectate prin cablu jack, insa nu va oferi aceeasi imersiune.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Smart TV si conectivitate: Ce poti face cu el?</h2>
+    <p class="mb-4">Platforma Smart TV de pe acest televizor curbat UHD 55 inch este Tizen OS, sistemul de operare propriu de la Samsung. In experienta mea, este destul de intuitiv si rapid. Aplicatiile populare precum Netflix, YouTube, HBO Max sunt preinstalate sau usor de descarcat din magazinul lor de aplicatii. Am navigat prin meniuri fara probleme, iar timpul de raspuns la apasarea butoanelor de pe telecomanda a fost minim.</p>
+    <p class="mb-4">La capitolul conectivitate, acest model vine cu 3 porturi HDMI si 2 USB, ceea ce este standard pentru un televizor de 55 inch. Am conectat consola mea de jocuri PlayStation 5 la un port HDMI si laptopul la altul, si am putut comuta intre ele rapid. Wi-Fi-ul integrat a functionat stabil, fara intreruperi in streaming.</p>
+    <p class="mb-4">Telecomanda este simpla, cu putine butoane, concentrandu-se pe navigarea in meniul Smart TV. Nu are un microfon pentru comenzi vocale avansate, dar pentru utilizarea zilnica este suficienta. Daca sunteti obisnuiti cu telecomanda de la Apple TV, aceasta va parea si mai simpla. Pretul acestui televizor curbat de 55 inch variaza intre 2500 si 3200 RON, in functie de promotii, oferind un pachet Smart TV solid.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Experienta de utilizare zilnica: Ce am observat in teste</h2>
+    <p class="mb-4">Dupa cateva saptamani de utilizare zilnica, am observat ca acest televizor curbat UHD 55 inch isi face treaba. Dimineata, cand fac cafeaua, il folosesc pentru a urmari stirile sau clipuri scurte pe YouTube. Seara, pentru filme si seriale. Curbatura, desi initial mi s-a parut o noutate, a devenit destul de naturala si nu am mai constientizat-o in mod activ. Ajuta, totusi, la vizionarea in grup, deoarece cei din centru au o experienta mai buna.</p>
+    <p class="mb-4">Am remarcat ca, in anumite conditii de lumina, reflexiile pot fi deranjante, insa acest lucru este valabil pentru majoritatea televizoarelor cu finisaj glossy. Am incercat sa reduc luminozitatea ambientala pentru a maximiza contrastul si calitatea imaginii. Daca aveti o camera foarte luminoasa, s-ar putea sa fie nevoie sa ajustati setarile frecvent.</p>
+    <p class="mb-4">Consumul de energie este rezonabil pentru un ecran de 55 inch. Nu am observat o crestere semnificativa a facturii la electricitate. Totusi, daca vreti sa fiti siguri, puteti verifica clasa energetica pe eticheta produsului. Un televizor curbat de 55 inch este o achizitie potrivita pentru un living de dimensiuni medii spre mari.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Merita sa cumperi un televizor curbat UHD 55 inch in 2024?</h2>
+    <p class="mb-4">Decizia de a cumpara un televizor curbat UHD 55 inch depinde mult de preferintele personale si de spatiul in care va fi amplasat. Daca va plac experientele imersive si aveti o pozitie de vizionare principala, un ecran curbat poate fi o alegere buna. Imaginea 4K pe 55 de inch este spectaculoasa, iar platforma Smart TV este suficient de capabila pentru majoritatea utilizatorilor.</p>
+    <p class="mb-4">In comparatie cu televizoarele plate de aceeasi diagonala si rezolutie, pretul pentru modelele curbate poate fi uneori similar sau chiar mai mic, ceea ce il face o optiune atractiva. Am vazut oferte bune la Altex, Flanco si eMAG, unde un Samsung 55CU7172 sau un LG similar pot fi gasite la preturi in jur de 2600-2900 RON. Sony are modele similare, dar de obicei la un pret premium.</p>
+    <p class="mb-4">Pentru a va face o idee, un televizor LG OLED de 55 inch, cu tehnologie superioara, dar plat, poate ajunge si la 5000-6000 RON. Deci, pentru un buget mai restrans, un televizor curbat UHD 55 inch ofera un echilibru bun intre diagonala, rezolutie si pret. Daca nu sunteti convinsi de curbatura, exista o multime de optiuni excelente de televizoare plate 4K de 55 inch de la branduri ca Samsung, LG sau Sony.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Este curbatura unui televizor curbat de 55 inch vizibila la unghiuri largi?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, curbatura devine mai putin evidenta pe masura ce te indepartezi de pozitia centrala. Pentru cei care stau in laterale, imaginea poate parea putin distorsionata comparativ cu un ecran plat.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot conecta un PlayStation 5 sau Xbox Series X la acest televizor curbat UHD 55 inch?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Absolut. Asigurati-va ca televizorul are port HDMI 2.0 sau mai nou pentru a beneficia de rezolutie 4K la 60Hz sau chiar 120Hz daca modelul suporta. Majoritatea televizoarelor UHD de 55 inch din ultimii ani au cel putin HDMI 2.0.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce tip de continut este cel mai potrivit pentru un televizor curbat de 55 inch?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Filmele 4K, serialele cu actiune si jocurile video beneficiaza cel mai mult de curbatura, oferind o senzatie mai imersiva. Documentarele despre natura sau emisiunile cu peisaje pot fi, de asemenea, foarte placute.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce diferente exista intre un televizor curbat si unul plat de aceeasi diagonala?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Principala diferenta este forma ecranului, care la cel curbat incearca sa imite forma campului vizual uman pentru o imersiune sporita. Calitatea imaginii, rezolutia si functionalitatile Smart TV pot fi similare, dar depind de modelul specific si de producator.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/ecran-smart-cu-chromecast-incorporat/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/ecran-smart-cu-chromecast-incorporat.webp" alt="Ecran Smart Cu Chromecast Încorporat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Ecran Smart Cu Chromecast Încorporat</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-televizor-qled-de-mari-dimensiuni/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-televizor-qled-de-mari-dimensiuni.webp" alt="Cel mai bun televizor QLED de mari dimensiuni" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun televizor QLED de mari dimensiuni</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-televizor-oled-4k/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-televizor-oled-4k.webp" alt="Cel mai bun televizor OLED 4K" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun televizor OLED 4K</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

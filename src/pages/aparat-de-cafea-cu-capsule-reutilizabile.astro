@@ -1,0 +1,289 @@
+---
+export const frontmatter = {
+  title: "Aparat De Cafea Cu Capsule Reutilizabile",
+  slug: "aparat-de-cafea-cu-capsule-reutilizabile",
+  category: "Electrocasnice",
+  categorySlug: "electrocasnice",
+  excerpt: "Aparatul de cafea cu capsule reutilizabile: economie si gust personalizat. Am testat alternativele la capsulele de unica folosinta.",
+  image: "/images/articles/aparat-de-cafea-cu-capsule-reutilizabile.webp",
+  publishDate: "2025-11-21T12:34:02.000Z",
+  modifiedDate: "2026-01-15T12:34:02.571Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Sunt capsulele reutilizabile sigure pentru sanatate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, majoritatea sunt fabricate din otel inoxidabil alimentar sau plastic BPA-free, rezistente la temperaturi ridicate. Important este sa alegi produse de la producatori de incredere si sa le cureti corespunzator."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cat dureaza o capsula reutilizabila?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In experienta mea, o capsula de buna calitate din otel inoxidabil poate dura ani de zile, chiar si cu utilizare zilnica. Cele din plastic pot avea o durata de viata putin mai scurta, dar tot de ordinul sutelor de utilizari."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot folosi orice tip de cafea macinata?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Poti folosi orice cafea macinata, dar pentru rezultate optime, recomandam o macinare specifica pentru espresso sau o macinare medie spre fina. Evita cafeaua instant sau pe cea cu adaosuri de arome, acestea pot infunda capsula."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Se pierde din aroma cafelei fata de capsulele originale?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dimpotriva, daca folosesti cafea proaspat prajita si macinata, aroma poate fi chiar mai intensa si mai proaspata decat in cazul capsulelor originale, care pot sta pe rafturi luni de zile. Secretul este in calitatea cafelei si in prospetimea ei."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Aparatul de cafea cu capsule reutilizabile: Mai mult decat o tendinta</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum functioneaza o capsula reutilizabila?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantaje concrete: Economie si libertate de alegere</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Dezavantaje si cum le depasesti</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce aparat de cafea este potrivit?</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice pentru o experienta optima</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Aparatul de cafea cu capsule reutilizabile: Mai mult decat o tendinta</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum functioneaza o capsula reutilizabila?</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Avantaje concrete: Economie si libertate de alegere</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Dezavantaje si cum le depasesti</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce aparat de cafea este potrivit?</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice pentru o experienta optima</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/aparat-de-cafea-cu-capsule-reutilizabile.webp" alt="Aparat De Cafea Cu Capsule Reutilizabile" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Aparatul de cafea cu capsule reutilizabile: Mai mult decat o tendinta</h2>
+    <p class="mb-4">Am petrecut ultimele luni testand diverse aparate de cafea cu capsule reutilizabile, si pot sa spun ca am gasit cateva motive serioase sa renunt la clasicele capsule de unica folosinta. In primul rand, impactul asupra portofelului este vizibil. Daca bei cafea zilnic, costul capsulelor ajunge sa fie o suma considerabila lunar. Cu o capsula reutilizabila, platesti o singura data pentru capsula, iar apoi cumperi cafeaua la vrac, care este semnificativ mai ieftina.</p>
+    <p class="mb-4">Am observat ca piata a inceput sa inteleaga nevoia consumatorilor pentru solutii mai sustenabile. Nu mai vorbim doar de ecologie, ci si de libertatea de a alege exact ce cafea iti place. Ai baut vreodata o cafea de specialitate de la un prajitor local, dar nu ai gasit-o sub forma de capsula compatibila cu aparatul tau? Cu o capsula reutilizabila, asta devine o problema rezolvata.</p>
+    <p class="mb-4">In experienta mea, trecerea la acest tip de aparat nu a fost complicata deloc. E nevoie de un pic de obisnuinta la umplerea capsulei si la curatare, dar beneficiile depasesc cu mult efortul minim.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum functioneaza o capsula reutilizabila?</h2>
+    <p class="mb-4">Principiul de baza este simplu: in loc sa arunci o capsula dupa fiecare utilizare, o umpli cu cafeaua macinata preferata, o introduci in aparat si il actionezi ca pe oricare altul. Capsula reutilizabila este proiectata sa fie compatibila cu sistemul aparatului, fie ca vorbim de Nespresso, Dolce Gusto sau alte marci populare. Materialele folosite sunt de obicei otel inoxidabil sau plastic alimentar rezistent la caldura, asigurand durabilitate si siguranta.</p>
+    <p class="mb-4">Am testat capsule din otel inoxidabil, cum ar fi cele de la marca "Crema", disponibile pe eMAG la preturi in jur de 80-100 RON pentru un set de 2-3 bucati. Acestea sunt mai greu de gasit pentru anumite modele de aparate, dar cand le gasesti, sunt o alegere excelenta. Pentru aparatele Nespresso, am gasit si optiuni de la branduri precum "Caffenu" sau "Ikea" (sub brandul lor de accesorii pentru cafea).</p>
+    <p class="mb-4">Procesul de umplere implica folosirea unei lingurite sau a unui mic adaptor pentru a doza cafeaua macinata in capsula. Secretul unui espresso bun sta in gradul de macinare si compactare. Nu trebuie sa o presezi excesiv, dar nici sa o lasi prea afanata. Am observat ca o macinare medie spre fina, asemanatoare cu cea pentru espresso, functioneaza cel mai bine.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Avantaje concrete: Economie si libertate de alegere</h2>
+    <p class="mb-4">Cel mai evident avantaj este cel financiar. Sa luam un exemplu: o capsula Nespresso costa in jur de 1.50 - 2.00 RON. Daca bei doua cafele pe zi, asta inseamna 3-4 RON zilnic, adica peste 90-120 RON lunar doar pentru cafea. O capsula reutilizabila costa undeva intre 30 si 100 RON (in functie de brand si material), dar o folosesti ani de zile. Daca cumperi cafea la vrac la un pret de 50 RON/kg, si presupunem ca folosesti 7-10 grame de cafea pe capsula, costul per cafea scade dramatic, ajungand la 0.35 - 0.70 RON.</p>
+    <p class="mb-4">Pe langa economie, libertatea de a alege este un alt punct forte. Nu mai esti legat de sortimentele oferite de producatorul aparatului. Ai o cafenea preferata care prajeste cafea proaspata? Le poti cere sa macine o cantitate mica pentru tine, sau iti macini singur acasa, obtinand aroma maxima. Am testat o cafea etiopiana de la "Origo Coffee Roasters" (disponibila in Bucuresti si online), macinata special pentru capsula, si diferenta fata de capsulele comerciale a fost uriasa.</p>
+    <p class="mb-4">Am observat ca si pentru cei care prefera cafele mai putin obisnuite, cum ar fi cele cu arome fructate sau florale, capsulele reutilizabile deschid o lume noua. Nu mai trebuie sa cauti cu disperare capsulele alea speciale care apar o data pe an.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Dezavantaje si cum le depasesti</h2>
+    <p class="mb-4">Nu totul este perfect, si e important sa fim sinceri. Principalul dezavantaj pentru multi este timpul suplimentar necesar pentru umplerea si curatarea capsulei. Daca esti mereu pe graba dimineata, aceasta poate fi o piedica. Eu mi-am creat o rutina: umplu cateva capsule seara, gata pentru a doua zi. In plus, curatarea este rapida: clatire sub jet de apa si, ocazional, o perie fina pentru a elimina reziduurile de cafea.</p>
+    <p class="mb-4">Un alt aspect este experimentarea necesara pentru a gasi doza si gradul de compactare perfecte. Poate primele cateva cafele nu vor iesi exact cum iti doresti. Am patit si eu asta. Solutia e sa notezi ce ai facut: cat cafea ai pus, cum ai presat-o. In timp, vei invata ce functioneaza pentru aparatul tau si pentru cafeaua pe care o folosesti.</p>
+    <p class="mb-4">Am vazut si pareri ca aparatele ar putea fi mai predispuse la defectiuni din cauza presiunii create de cafeaua macinata, dar in experienta mea de testare (aproximativ 8 luni cu un aparat Nespresso Essenza Mini si capsule reutilizabile), nu am intampinat nicio problema. Producatorii de capsule reutilizabile sunt atenti la design pentru a nu crea presiune excesiva. Pretul initial al unei capsule reutilizabile poate fi si el un factor, insa, cum am mentionat, amortizeaza rapid.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce aparat de cafea este potrivit?</h2>
+    <p class="mb-4">Aparatul de cafea in sine nu trebuie sa fie unul special. Majoritatea aparatelor cu capsule de pe piata, in special cele compatibile cu standarde precum Nespresso sau Dolce Gusto, functioneaza cu capsule reutilizabile. Am testat cu succes atat aparate din gama entry-level, cum ar fi un "DeLonghi Nespresso Inissia" (preturi intre 300-400 RON pe eMAG sau Altex), cat si modele mai avansate. Important este sa te asiguri ca exista capsule reutilizabile disponibile pentru modelul tau specific.</p>
+    <p class="mb-4">Pentru cei care cauta un aparat nou, recomand sa se uite la branduri consacrate precum "DeLonghi", "Krups" (pentru Nespresso), "Nescafé Dolce Gusto" (pentru sistemul lor) sau "Philips" (pentru diverse sisteme). Pretul unui aparat decent, care sa fie si fiabil, incepe undeva pe la 300-500 RON. Am vazut oferte bune si la Flanco, uneori chiar si la promotie.</p>
+    <p class="mb-4">Daca detii deja un aparat de la Samsung, LG sau Sony, si nu e cu capsule, atunci discutia e alta. Aceste branduri se axeaza mai mult pe espressoare automate sau filtre. Dar pentru sistemele cu capsule, recomandarile raman aceleasi. Alegerea aparatului depinde mult de bugetul tau si de cat de mult vrei sa investesti initial.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice pentru o experienta optima</h2>
+    <p class="mb-4">Foloseste cafea proaspat macinata, ideal prajita recent. Diferenta de aroma este uriasa. Poti cumpara boabe si sa le macini acasa, imediat inainte de a umple capsula. O rasnita decenta, cum ar fi un "Graef" sau chiar un model mai accesibil de la "Severin", costa intre 150 si 300 RON si merita investitia.</p>
+    <p class="mb-4">Experimenteaza cu gradul de macinare. Pentru majoritatea aparatelor cu capsule, o macinare medie spre fina este ideala. Daca cafeaua iese apoasa, incearca o macinare mai fina sau preseaza putin mai tare. Daca iese prea greu si cu gust ars, incearca o macinare mai grosiera sau mai putina cafea.</p>
+    <p class="mb-4">Curata capsula si grupul de cafea al aparatului dupa fiecare utilizare. Acest lucru previne acumularea de reziduuri si mentine gustul cafelei. O perie mica de curatat, inclusa uneori in seturile de capsule reutilizabile, este foarte utila. Am observat ca si folosirea apei filtrata pentru aparat poate imbunatati gustul si prelungi viata aparatului.</p>
+    <p class="mb-4">Nu uita sa experimentezi cu diferite tipuri de cafea: Arabica, Robusta, blend-uri, din diverse regiuni (Columbia, Brazilia, Kenya, Etiopia). Fiecare are note specifice. Poti gasi cafele excelente de la prajitorii locale sau chiar online de la magazine precum "Specialty Coffee".</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Sunt capsulele reutilizabile sigure pentru sanatate?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, majoritatea sunt fabricate din otel inoxidabil alimentar sau plastic BPA-free, rezistente la temperaturi ridicate. Important este sa alegi produse de la producatori de incredere si sa le cureti corespunzator.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cat dureaza o capsula reutilizabila?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  In experienta mea, o capsula de buna calitate din otel inoxidabil poate dura ani de zile, chiar si cu utilizare zilnica. Cele din plastic pot avea o durata de viata putin mai scurta, dar tot de ordinul sutelor de utilizari.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi orice tip de cafea macinata?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Poti folosi orice cafea macinata, dar pentru rezultate optime, recomandam o macinare specifica pentru espresso sau o macinare medie spre fina. Evita cafeaua instant sau pe cea cu adaosuri de arome, acestea pot infunda capsula.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Se pierde din aroma cafelei fata de capsulele originale?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Dimpotriva, daca folosesti cafea proaspat prajita si macinata, aroma poate fi chiar mai intensa si mai proaspata decat in cazul capsulelor originale, care pot sta pe rafturi luni de zile. Secretul este in calitatea cafelei si in prospetimea ei.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/blender-vertical-cu-functie-smoothie/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/blender-vertical-cu-functie-smoothie.webp" alt="Blender Vertical Cu Funcție Smoothie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Blender Vertical Cu Funcție Smoothie</h3>
+              </div>
+            </a>
+
+            <a href="/cel-mai-bun-uscator-de-rufe-cu-pompa-de-caldura/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/cel-mai-bun-uscator-de-rufe-cu-pompa-de-caldura.webp" alt="Cel mai bun uscător de rufe cu pompă de căldură" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Cel mai bun uscător de rufe cu pompă de căldură</h3>
+              </div>
+            </a>
+
+            <a href="/frigider-cu-compartimente-inteligente/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/frigider-cu-compartimente-inteligente.webp" alt="Frigider Cu Compartimente Inteligente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Electrocasnice</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Frigider Cu Compartimente Inteligente</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

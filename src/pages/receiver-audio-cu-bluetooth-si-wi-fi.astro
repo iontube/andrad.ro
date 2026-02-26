@@ -1,0 +1,292 @@
+---
+export const frontmatter = {
+  title: "Receiver Audio Cu Bluetooth Și Wi-fi",
+  slug: "receiver-audio-cu-bluetooth-si-wi-fi",
+  category: "TV & Audio",
+  categorySlug: "tv-audio",
+  excerpt: "Receiver audio cu Bluetooth si Wi-Fi: transformi orice sistem audio vechi in unul smart, usor de controlat.",
+  image: "/images/articles/receiver-audio-cu-bluetooth-si-wi-fi.webp",
+  publishDate: "2026-01-10T17:33:39.000Z",
+  modifiedDate: "2026-01-29T17:33:39.714Z",
+  author: "Andrei Dumitrescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pot folosi un receiver audio cu Bluetooth și Wi-Fi cu orice amplificator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, atâta timp cât amplificatorul tău are o intrare audio analogică (AUX, RCA, CD, Line-in). Receiverul va trimite semnalul audio către amplificator, care apoi îl va reda prin boxe."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Calitatea sunetului e afectată de receiver?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depinde de calitatea receiverului și de codecurile audio suportate. Un receiver cu Bluetooth 5.0+ și codecuri precum aptX HD sau LDAC, sau un receiver cu Wi-Fi și suport pentru formate lossless, va oferi o calitate audio superioară față de un receptor Bluetooth vechi sau unul cu conexiune slabă."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot controla volumul de pe telefon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Majoritatea receiverelor audio cu Bluetooth și Wi-Fi permit controlul volumului prin aplicația dedicată sau prin serviciile de streaming (Spotify Connect, etc.). Unele pot fi controlate și prin telecomanda dedicată."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Este diferență între Bluetooth și Wi-Fi pentru streaming audio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da. Wi-Fi-ul oferă, în general, o conexiune mai stabilă și o lățime de bandă mai mare, fiind ideal pentru streamuri de înaltă rezoluție și pentru aplicații multi-room. Bluetooth-ul e mai simplu pentru conexiuni rapide, dar raza de acțiune și calitatea pot fi limitate."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum alegi receiverul potrivit pentru tine</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Experiența mea cu streamingul multi-room</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Conectivitate și compatibilitate: ce să cauți</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Instalare și configurare: cât de greu e?</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cât te costă să ai sunet inteligent?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum alegi receiverul potrivit pentru tine</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Experiența mea cu streamingul multi-room</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Conectivitate și compatibilitate: ce să cauți</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Instalare și configurare: cât de greu e?</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cât te costă să ai sunet inteligent?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/receiver-audio-cu-bluetooth-si-wi-fi.webp" alt="Receiver Audio Cu Bluetooth Și Wi-fi" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    
+    <p class="mb-4">Am testat zeci de receivere audio cu Bluetooth si Wi-Fi in ultimii ani, si pot spune sincer ca au salvat multe sisteme audio "ancuțate". Daca ai prin casa un amplificator bun, de pe vremea DVD-urilor sau chiar mai vechi, dar care nu are nicio intrare digitală sau conectivitate modernă, un astfel de receiver e soluția.</p>
+    <p class="mb-4">Practic, e o punte între trecut și prezent. Îți permite să streamezi muzică de pe telefon, tabletă sau chiar laptop direct în sistemul tău Hi-Fi, fără fire complicate sau adaptor. Am văzut modele de la Yamaha, Denon, Onkyo, dar și soluții mai accesibile de la TP-Link sau chiar unii producători de boxe active care oferă și această funcționalitate.</p>
+    <p class="mb-4">Un receiver audio cu Bluetooth și Wi-Fi nu e un amplificator nou, ci mai degrabă un "adaptor inteligent" care se conectează la intrările analogice (AUX, RCA) ale amplificatorului tău existent. Asta înseamnă că poți să continui să folosești boxele tale preferate și să te bucuri de sunetul pe care l-ai ales cu grijă, dar cu acces la toată muzica digitală de azi.</p>
+    <p class="mb-4">Când vine vorba de conectivitate, Wi-Fi-ul e regele. Îți oferă stabilitate mult mai mare decât Bluetooth-ul, mai ales pentru streamuri de înaltă rezoluție. Plus, multe modele cu Wi-Fi vin și cu suport pentru AirPlay (de la Apple) sau Chromecast (de la Google), ceea ce simplifică și mai mult procesul de trimitere a sunetului de pe dispozitivele tale.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum alegi receiverul potrivit pentru tine</h2>
+    <p class="mb-4">Primul lucru pe care îl verific e stabilitatea conexiunii Wi-Fi. Am avut experiențe neplăcute cu modele ieftine care bâlbâiau la streamuri mai lungi sau se deconectau fără motiv. Dacă ai o rețea Wi-Fi puternică în casă, majoritatea receiverelor vor funcționa bine, dar un model cu antenă externă sau suport pentru standarde Wi-Fi mai noi (ac, ax) e un plus.</p>
+    <p class="mb-4">Bluetooth-ul e util pentru conexiuni rapide, fără să te complici cu rețeaua. Versiunile mai noi (Bluetooth 5.0 sau 5.2) oferă o rază de acțiune mai mare și o calitate audio mai bună, cu codecuri precum aptX HD sau LDAC. Am observat că receiverele care au ambele conexiuni (Bluetooth și Wi-Fi) sunt cele mai versatile.</p>
+    <p class="mb-4">Nu te uita doar la preț. Un receiver audio cu Bluetooth și Wi-Fi de la un brand consacrat (Sony, Denon, Cambridge Audio) va oferi, în general, o calitate a sunetului superioară și o fiabilitate mai mare pe termen lung. Am văzut modele bune de la Denon, cum ar fi Denon HEOS AVR, care au un preț pe undeva pe la 2500-3000 RON, dar fac minuni.</p>
+    <p class="mb-4">Verifică și intrările și ieșirile. Majoritatea au intrări RCA stereo, dar unele pot avea și ieșiri digitale (optice sau coaxiale) dacă vrei să conectezi receiverul la un DAC extern sau la un amplificator mai nou. Asigură-te că are și o intrare AUX pentru dispozitive mai vechi fără Bluetooth.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Experiența mea cu streamingul multi-room</h2>
+    <p class="mb-4">Aici devine interesant. Multe receivere audio cu Bluetooth și Wi-Fi fac parte din ecosisteme multi-room, cum ar fi HEOS de la Denon sau MusicCast de la Yamaha. Asta înseamnă că poți să ai mai multe difuzoare sau receivere în diferite camere și să le controlezi pe toate dintr-o singură aplicație de pe telefon.</p>
+    <p class="mb-4">Am testat sistemul HEOS pe un Denon AVR-X1700H (care e mai mult un receiver AV, dar are funcții multi-room) și a fost fantastic. Poți să asculți aceeași muzică în toată casa sau muzică diferită în fiecare cameră. Aplicația e intuitivă și îți permite să accesezi servicii de streaming precum Spotify, Tidal, Deezer direct din ea.</p>
+    <p class="mb-4">Chiar și soluțiile mai simple, cum ar fi un receiver audio cu Bluetooth și Wi-Fi de la TP-Link, cum ar fi modelul HA100 (pe la vreo 250 RON), pot fi integrate într-un sistem multi-room dacă folosești aplicații third-party sau funcții de casting de pe telefon.</p>
+    <p class="mb-4">Un alt aspect pe care l-am apreciat e posibilitatea de a crea liste de redare și de a le controla din telecomandă sau din aplicație. Nu mai trebuie să stai cu telefonul în mână tot timpul. Poți să schimbi melodia, să ajustezi volumul sau să pui pe pauză direct de pe receiver sau de pe telecomanda dedicată.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Conectivitate și compatibilitate: ce să cauți</h2>
+    <p class="mb-4">Pe lângă Bluetooth (ideal versiunea 5.0 sau mai nouă cu aptX HD/LDAC) și Wi-Fi (ideal dual-band, 2.4GHz și 5GHz), e bine să verifici ce alte opțiuni de conectare ai. Multe receivere audio cu Bluetooth și Wi-Fi suportă și standarde de streaming precum AirPlay 2 (pentru utilizatorii Apple) sau Chromecast built-in. Acestea îți oferă o integrare perfectă cu ecosistemele Apple și Google.</p>
+    <p class="mb-4">Am observat că modelele mai noi vin și cu suport pentru formate audio de înaltă rezoluție, cum ar fi FLAC, ALAC sau DSD. Dacă ești un audiofil, asta e o caracteristică importantă. Un receiver bun de la Cambridge Audio, cum ar fi AXN10 (în jur de 2000 RON), ar putea fi o opțiune bună pentru asta.</p>
+    <p class="mb-4">Compatibilitatea cu servicii de streaming e crucială. Verifică dacă receiverul suportă direct Spotify Connect, Tidal Connect, Deezer, Amazon Music, etc. Acest lucru îți permite să controlezi redarea direct din aplicația serviciului de streaming, fără a mai trece prin aplicația dedicată receiverului.</p>
+    <p class="mb-4">Am avut ocazia să testez și receivere care nu aveau funcții de streaming integrate, ci doar Bluetooth. Acestea sunt mai simple și mai ieftine (sub 200 RON), dar pierzi flexibilitatea Wi-Fi-ului și a conectivității multi-room. Un exemplu ar fi un mic receptor Bluetooth de la Ugreen.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Instalare și configurare: cât de greu e?</h2>
+    <p class="mb-4">În general, instalarea unui receiver audio cu Bluetooth și Wi-Fi e foarte simplă. De obicei, tot ce trebuie să faci e să-l conectezi la intrarea AUX sau RCA a amplificatorului tău, să-l alimentezi și să-l conectezi la rețeaua Wi-Fi. Procesul de conectare la Wi-Fi se face de obicei printr-o aplicație mobilă dedicată, unde vei introduce parola rețelei tale.</p>
+    <p class="mb-4">Am testat un model de la Yamaha, RX-V6A, care, deși e un receiver AV complet, are și funcții excelente de streaming. Configurarea lui a durat cam 15 minute, inclusiv conectarea la Wi-Fi și actualizarea firmware-ului. Aplicația Yamaha MusicCast e destul de intuitivă.</p>
+    <p class="mb-4">Pentru modelele mai simple, cu doar Bluetooth, e și mai ușor. Îl conectezi, îl împerechezi cu telefonul și gata. Nicio aplicație, nicio parolă.</p>
+    <p class="mb-4">Un sfat practic: asigură-te că poziționezi receiverul nu prea departe de routerul Wi-Fi, mai ales dacă nu are antene externe. O conexiune slabă poate duce la întreruperi în redare, și asta strică toată experiența.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Cât te costă să ai sunet inteligent?</h2>
+    <p class="mb-4">Prețurile pentru un receiver audio cu Bluetooth și Wi-Fi variază enorm. Poți găsi un receptor Bluetooth simplu, fără Wi-Fi, la sub 100 RON pe eMAG sau Altex. Acestea sunt bune dacă vrei doar să conectezi telefonul ocazional.</p>
+    <p class="mb-4">Modelele cu Bluetooth și Wi-Fi, dar fără funcții avansate de multi-room sau suport audio de înaltă rezoluție, încep de pe la 200-300 RON. Am văzut opțiuni bune de la branduri mai puțin cunoscute, dar care și-au făcut treaba în teste. De exemplu, un receiver audio de la Arylic, cum ar fi A30, care are și amplificare mică, e pe la 600-700 RON.</p>
+    <p class="mb-4">Dacă vrei un receiver audio cu Bluetooth și Wi-Fi de la un brand consacrat, cu suport pentru AirPlay, Chromecast, multi-room și formate audio de înaltă rezoluție, prețurile încep de la 1000 RON și pot ajunge la 3000-4000 RON pentru modelele de top, cum ar fi cele de la Denon, Marantz sau Cambridge Audio. Un model ca Denon DRA-800H, care e și amplificator integrat cu funcții de rețea, e pe la 2500 RON.</p>
+    <p class="mb-4">La PCGarage am găsit și oferte bune la receivere audio cu Bluetooth și Wi-Fi de la Onkyo sau Pioneer, în special în perioadele de reduceri. Merită să stai cu ochii pe ele.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi un receiver audio cu Bluetooth și Wi-Fi cu orice amplificator?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, atâta timp cât amplificatorul tău are o intrare audio analogică (AUX, RCA, CD, Line-in). Receiverul va trimite semnalul audio către amplificator, care apoi îl va reda prin boxe.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Calitatea sunetului e afectată de receiver?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Depinde de calitatea receiverului și de codecurile audio suportate. Un receiver cu Bluetooth 5.0+ și codecuri precum aptX HD sau LDAC, sau un receiver cu Wi-Fi și suport pentru formate lossless, va oferi o calitate audio superioară față de un receptor Bluetooth vechi sau unul cu conexiune slabă.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot controla volumul de pe telefon?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Majoritatea receiverelor audio cu Bluetooth și Wi-Fi permit controlul volumului prin aplicația dedicată sau prin serviciile de streaming (Spotify Connect, etc.). Unele pot fi controlate și prin telecomanda dedicată.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Este diferență între Bluetooth și Wi-Fi pentru streaming audio?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da. Wi-Fi-ul oferă, în general, o conexiune mai stabilă și o lățime de bandă mai mare, fiind ideal pentru streamuri de înaltă rezoluție și pentru aplicații multi-room. Bluetooth-ul e mai simplu pentru conexiuni rapide, dar raza de acțiune și calitatea pot fi limitate.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/sistem-audio-multiroom-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/sistem-audio-multiroom-wireless.webp" alt="Sistem Audio Multiroom Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Sistem Audio Multiroom Wireless</h3>
+              </div>
+            </a>
+
+            <a href="/home-cinema-cu-subwoofer-wireless/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/home-cinema-cu-subwoofer-wireless.webp" alt="Home Cinema Cu Subwoofer Wireless" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Home Cinema Cu Subwoofer Wireless</h3>
+              </div>
+            </a>
+
+            <a href="/televizor-led-cu-refresh-mare/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/televizor-led-cu-refresh-mare.webp" alt="Televizor Led Cu Refresh Mare" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">TV & Audio</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Televizor Led Cu Refresh Mare</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

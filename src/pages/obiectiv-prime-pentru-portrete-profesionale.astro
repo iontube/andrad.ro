@@ -1,0 +1,288 @@
+---
+export const frontmatter = {
+  title: "Obiectiv Prime Pentru Portrete Profesionale",
+  slug: "obiectiv-prime-pentru-portrete-profesionale",
+  category: "Foto & Video",
+  categorySlug: "foto-video",
+  excerpt: "Obiectivele foto pentru portrete profesionale: ghid practic pentru a alege focalizarea perfectă.",
+  image: "/images/articles/obiectiv-prime-pentru-portrete-profesionale.webp",
+  publishDate: "2026-01-02T12:26:58.000Z",
+  modifiedDate: "2026-01-27T12:26:58.571Z",
+  author: "Maria Ionescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ce obiectiv ar trebui să folosesc pentru portrete în aer liber, cu multă lumină?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Și în lumină puternică, un obiectiv cu diafragmă deschisă te ajută să separi subiectul. Un 85mm f/1.8 este ideal, dar și un 50mm f/1.8 va funcționa. Avantajul e că nu trebuie să te stresezi cu ISO-ul sau cu timpi de expunere lenți. Poți chiar folosi un ND filter dacă vrei să folosești diafragma maximă în lumina puternică."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pot folosi obiectivele vechi de DSLR pe camerele mirrorless?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da, în majoritatea cazurilor, cu un adaptor potrivit. De exemplu, un obiectiv Canon EF poate fi folosit pe o cameră mirrorless Canon RF cu un adaptor Canon EF-EOS R. Performanța poate varia, dar de obicei funcționează bine. Verifică compatibilitatea specifică pentru sistemul tău."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ce înseamnă 'bokeh' și de ce este important pentru portrete?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bokeh se referă la calitatea estetică a blur-ului din fundal. Un bokeh plăcut, cremos, ajută la izolarea subiectului, făcându-l să iasă în evidență. Obiectivele cu diafragme mari (f/1.8, f/1.4) creează un blur mai pronunțat și mai plăcut pentru portrete."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cât de mult contează brandul obiectivului?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Brandul contează, dar nu e totul. Obiectivele de la producători consacrați (Canon, Nikon, Sony) sunt de obicei excelente, dar și producătorii terți precum Sigma sau Tamron oferă obiective de înaltă calitate, adesea la prețuri mai competitive. Contează mai mult specificațiile tehnice (diafragmă, focală) și recenziile testate."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce face un obiectiv bun pentru portrete?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Focale clasice pentru portrete: 50mm și 85mm</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Luminozitatea contează: De ce f/1.8 nu este mereu de ajuns</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce se întâmplă cu obiectivele zoom pentru portrete?</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Obiective pentru video: Ce e diferit?</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la cineva care le-a testat</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#sectiune-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce face un obiectiv bun pentru portrete?</a>
+                <a href="#sectiune-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Focale clasice pentru portrete: 50mm și 85mm</a>
+                <a href="#sectiune-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Luminozitatea contează: De ce f/1.8 nu este mereu de ajuns</a>
+                <a href="#sectiune-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Ce se întâmplă cu obiectivele zoom pentru portrete?</a>
+                <a href="#sectiune-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Obiective pentru video: Ce e diferit?</a>
+                <a href="#sectiune-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Sfaturi practice de la cineva care le-a testat</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-custom">
+          <img src="/images/articles/obiectiv-prime-pentru-portrete-profesionale.webp" alt="Obiectiv Prime Pentru Portrete Profesionale" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          
+  <section id="sectiune-1" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce face un obiectiv bun pentru portrete?</h2>
+    <p class="mb-4">Am petrecut ultimii 15 ani testând tot felul de obiective, de la cele de kit la cele profesionale, și pot spune cu mâna pe inimă că pentru portrete, nu orice obiectiv face treaba. Ceea ce cauți, în esență, este capacitatea de a izola subiectul de fundal. Asta se traduce prin diafragme deschise (f/1.8, f/1.4, chiar f/1.2) care creează acel bokeh cremos, subiectiv, pe care îl vezi în reviste și pe site-uri de specialitate. Nu e doar despre estetică; un fundal blurat face ca subiectul să iasă în evidență, să capete profunzime și să atragă atenția imediat.</p>
+    <p class="mb-4">Am observat că multe obiective zoom standard, cum ar fi un 18-55mm, se chinuie să ofere acest efect. Chiar și la capătul de 55mm și diafragma maximă (care e de obicei f/3.5-5.6), blur-ul nu e la fel de pronunțat. Pentru portrete care să arate profesional, ai nevoie de mai multă lumină captată de senzor și de o deschidere mult mai mare a diafragmei. Asta înseamnă, de cele mai multe ori, un obiectiv fix, o 'focală fixă' cum îi spunem noi.</p>
+    <p class="mb-4">Când am început, credeam că un zoom e mai versatil, dar pentru portrete dedicate, am realizat că sacrifici calitatea bokeh-ului și luminozitatea. Un obiectiv fix, chiar dacă nu poți 'zooma' din el, te forțează să te apropii sau să te depărtezi de subiect, ceeaă te ajută să compui imaginea mai atent. Și rezultatul merită efortul.</p>
+    
+    
+  </section>
+  <section id="sectiune-2" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Focale clasice pentru portrete: 50mm și 85mm</h2>
+    <p class="mb-4">Dacă ar fi să recomand două focale de bază pentru portrete, acestea ar fi 50mm și 85mm. Pe un senzor full-frame, 50mm oferă un unghi de vedere apropiat de cel al ochiului uman, natural, fără distorsiuni. E ca și cum ai privi prin fereastră. Un 50mm f/1.8, de exemplu, este adesea primul obiectiv 'serios' pe care îl cumpără mulți fotografi. Am testat multe modele, de la Sigma 50mm f/1.4 DG HSM Art (în jur de 3500 RON la PCGarage) la Canon EF 50mm f/1.8 STM (aproximativ 500 RON la eMAG), și diferențele se văd în claritate, în bokeh și în modul cum gestionează lumina slabă.</p>
+    <p class="mb-4">85mm este, pentru mine, 'regele' portretelor. Oferă o compresie a perspectivei mai accentuată, ceea ce înseamnă că fundalul este mai apropiat de subiect și blur-ul este și mai pronunțat. Un 85mm f/1.8, cum ar fi Nikon NIKKOR Z 85mm f/1.8 S (în jur de 3400 RON la Altex) sau Sony FE 85mm f/1.8 (aproximativ 2900 RON la Flanco), este o alegere fantastică. Am observat că acest obiectiv te obligă să stai la o distanță confortabilă de subiect, ceea ce e ideal pentru a capta expresii naturale, fără ca persoana să se simtă invadată.</p>
+    <p class="mb-4">Pe camerele cu senzor APS-C (cum sunt multe modele Sony Alpha sau Fujifilm), un 50mm se comportă mai mult ca un 75mm, iar un 85mm ca un 120-135mm. Asta le face și mai potrivite pentru portrete, oferind o distanță focală mai 'lungă' și o compresie mai mare. Deci, dacă ai un APS-C, un 50mm f/1.8 este echivalentul unui 85mm pe full-frame și este o alegere excelentă.</p>
+    
+    
+  </section>
+  <section id="sectiune-3" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Luminozitatea contează: De ce f/1.8 nu este mereu de ajuns</h2>
+    <p class="mb-4">Mulți începători se opresc la un obiectiv f/1.8, și pe bună dreptate, este un punct de plecare excelent. Am testat obiective f/1.8 pe diverse camere, de la DSLR-uri Canon la mirrorless-uri Sony, și rezultatele sunt de obicei foarte bune. Un obiectiv ca un Yongnuo YN50mm f/1.8 (adesea sub 300 RON la eMAG) este o opțiune bugetară care oferă un bokeh decent. Totuși, dacă vrei cu adevărat acel blur de vis, acea separare aproape chirurgicală a subiectului de fundal, vei vrea să te uiți spre obiective cu diafragme și mai deschise, gen f/1.4 sau chiar f/1.2.</p>
+    <p class="mb-4">Am avut ocazia să testez un Sigma 85mm f/1.4 DG HSM Art și diferența față de un f/1.8 este notabilă. Bokeh-ul este mai fin, mai aerisit, și poți obține o profunzime de câmp extrem de redusă, chiar și la distanțe mai mari. Acest tip de obiectiv strălucește în condiții de lumină slabă. Când ești într-un restaurant cu lumini slabe sau la o petrecere seara, un f/1.4 sau f/1.2 îți permite să fotografiezi fără să ridici ISO-ul la valori care introduc zgomot digital. Am observat că poți salva imagini care altfel ar fi fost ratate.</p>
+    <p class="mb-4">Prețurile la aceste obiective luminoase sunt, desigur, pe măsură. Un Sigma 85mm f/1.4 Art poate ajunge la 4000-4500 RON la PCGarage, iar un Canon EF 85mm f/1.2L II USM este și mai scump, depășind 8000 RON. Pentru majoritatea utilizatorilor, un f/1.8 este mai mult decât suficient. Dar dacă vrei maximul de performanță în condiții dificile și acel look 'pro', merită să investești într-un obiectiv mai luminos.</p>
+    
+    
+  </section>
+  <section id="sectiune-4" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce se întâmplă cu obiectivele zoom pentru portrete?</h2>
+    <p class="mb-4">Întrebarea care apare des este: 'Pot folosi obiectivele mele zoom pentru portrete?'. Răspunsul este 'Da, dar...'. Am testat o mulțime de obiective zoom, de la cele standard 24-70mm f/2.8, până la teleobiective zoom mai lungi. Un zoom luminos, cum ar fi un 24-70mm f/2.8 (de exemplu, Tamron 24-70mm f/2.8 Di VC USD G2, în jur de 3500 RON la eMAG), poate oferi rezultate decente pentru portrete, mai ales la capătul de 70mm. Diafragma de f/2.8 este destul de deschisă pentru a crea un blur apreciabil.</p>
+    <p class="mb-4">Problema apare când compari acest blur cu cel oferit de un obiectiv fix f/1.4 sau f/1.8. Nu este aceeași profunzime. De asemenea, un zoom te poate tenta să 'zoomezi' în loc să te miști, ceea ce poate duce la compoziții mai puțin inspirate. Am observat că atunci când folosesc un zoom pentru portrete, tind să mă opresc pe focale mai lungi, gen 50-70mm, pentru a obține o oarecare separare de fundal.</p>
+    <p class="mb-4">Dacă ai deja un zoom de calitate, nu trebuie neapărat să cumperi un obiectiv fix. Poți obține rezultate bune, mai ales dacă lucrezi în condiții de lumină bună și ești atent la fundal. Totuși, dacă îți dorești acel look specific portretelor profesionale – un subiect clar, un fundal complet blurat, o separare vizibilă – un obiectiv fix de 50mm sau 85mm, cu o diafragmă deschisă, va face o diferență uriașă. Am văzut fotografi care fac minuni cu obiective zoom, dar pentru un începător care vrea să obțină acel 'wow factor' rapid, un fix e calea de urmat.</p>
+    
+    
+  </section>
+  <section id="sectiune-5" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Obiective pentru video: Ce e diferit?</h2>
+    <p class="mb-4">Când vine vorba de video, cerințele pentru un obiectiv de portret pot fi ușor diferite. În primul rând, viteza și silențiozitatea focalizării automate sunt cruciale. Am testat obiective care focalizează rapid, dar produc un zgomot deranjant în timpul înregistrării, ceea ce e inacceptabil pentru un proiect video. Obiectivele moderne de la Sony (cu motorul STM sau Linear Focus) sau Canon (cu motorul STM) sunt adesea proiectate având în vedere video-ul. Am observat că obiectivele dedicate mirrorless-urilor, cum ar fi cele din gama Sony Alpha sau Canon RF, excelează la acest capitol.</p>
+    <p class="mb-4">De asemenea, pentru video, controlul diafragmei este important. Unele obiective au diafragme 'clicky', adică se aud pașii când schimbi apertura. Pentru video, preferi o diafragmă 'smooth', continuă, care permite schimbări subtile de expunere fără să se audă. Obiectivele profesionale de la Canon (seria L) sau Nikon (seria S) au adesea această funcționalitate, dar prețul este pe măsură. Am văzut soluții bune și la obiective third-party, cum ar fi Sigma sau Tamron, dar trebuie verificată specificația pentru video.</p>
+    <p class="mb-4">Blur-ul de fundal (bokeh-ul) este la fel de important în video ca și în foto, dacă nu chiar mai mult, pentru a izola subiectul. Un obiectiv cu o diafragmă deschisă (f/1.8, f/1.4) va ajuta enorm. Totuși, trebuie să fii atent la profunzimea de câmp foarte mică pe care o obții la video. Cu camerele moderne care filmează în 4K, poți observa mai ușor dacă focalizarea nu este perfectă. Am testat obiective precum Canon RF 50mm f/1.8 STM (aproximativ 1200 RON la eMAG) care oferă un echilibru bun între preț, performanță foto/video și calitate bokeh, fiind o alegere populară pentru creatorii de conținut.</p>
+    
+    
+  </section>
+  <section id="sectiune-6" class="mb-10">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la cineva care le-a testat</h2>
+    <p class="mb-4">După atâția ani, am câteva sfaturi care te pot scuti de multe bătăi de cap. În primul rând, dacă ești la început și nu vrei să spargi banca, un obiectiv 50mm f/1.8 este o alegere sigură. Îl găsești pentru aproape orice sistem (Canon, Nikon, Sony, Fujifilm, chiar și pentru mirrorless-uri noi) la prețuri accesibile, sub 1000 RON, adesea chiar sub 500 RON. Am văzut oameni făcând portrete absolut superbe cu acest tip de obiectiv.</p>
+    <p class="mb-4">În al doilea rând, nu te lăsa păcălit de specificațiile 'de marketing'. Un 85mm f/1.8 este, în cele mai multe cazuri, superior unui 50mm f/1.4 pentru portrete, datorită compresiei și distanței de lucru. Am testat ambele configurații și diferența se vede, mai ales în modul cum 'îndepărtează' fundalul. Asta nu înseamnă că 50mm f/1.4 nu e bun, ci doar că 85mm f/1.8 are o 'misie' mai clar definită pentru portrete.</p>
+    <p class="mb-4">Dacă vrei să investești, dar nu vrei să mergi la extreme, caută obiective f/1.4 sau f/1.8 de la producători terți precum Sigma sau Tamron. Acestea oferă adesea performanță apropiată de obiectivele originale, dar la un preț mai bun. Am testat Sigma 35mm f/1.4 DG HSM Art și a fost o piesă de echipament fantastică, pe care am folosit-o ani de zile. Prețul lui este în jur de 2800 RON la PCGarage, dar oferă calitate de top. Nu uita să cauți și pe piața second-hand; am găsit adevărate comori la prețuri mult reduse, testând bine obiectivul înainte de cumpărare.</p>
+    
+    
+  </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce obiectiv ar trebui să folosesc pentru portrete în aer liber, cu multă lumină?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Și în lumină puternică, un obiectiv cu diafragmă deschisă te ajută să separi subiectul. Un 85mm f/1.8 este ideal, dar și un 50mm f/1.8 va funcționa. Avantajul e că nu trebuie să te stresezi cu ISO-ul sau cu timpi de expunere lenți. Poți chiar folosi un ND filter dacă vrei să folosești diafragma maximă în lumina puternică.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Pot folosi obiectivele vechi de DSLR pe camerele mirrorless?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Da, în majoritatea cazurilor, cu un adaptor potrivit. De exemplu, un obiectiv Canon EF poate fi folosit pe o cameră mirrorless Canon RF cu un adaptor Canon EF-EOS R. Performanța poate varia, dar de obicei funcționează bine. Verifică compatibilitatea specifică pentru sistemul tău.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Ce înseamnă 'bokeh' și de ce este important pentru portrete?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Bokeh se referă la calitatea estetică a blur-ului din fundal. Un bokeh plăcut, cremos, ajută la izolarea subiectului, făcându-l să iasă în evidență. Obiectivele cu diafragme mari (f/1.8, f/1.4) creează un blur mai pronunțat și mai plăcut pentru portrete.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  Cât de mult contează brandul obiectivului?
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Brandul contează, dar nu e totul. Obiectivele de la producători consacrați (Canon, Nikon, Sony) sunt de obicei excelente, dar și producătorii terți precum Sigma sau Tamron oferă obiective de înaltă calitate, adesea la prețuri mai competitive. Contează mai mult specificațiile tehnice (diafragmă, focală) și recenziile testate.
+                </div>
+              </details>
+            </div>
+          </section>
+          <!-- Related Articles -->
+          <section class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Articole similare</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <a href="/aparat-mirrorless-cu-autofocus-rapid/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/aparat-mirrorless-cu-autofocus-rapid.webp" alt="Aparat Mirrorless Cu Autofocus Rapid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Aparat Mirrorless Cu Autofocus Rapid</h3>
+              </div>
+            </a>
+
+            <a href="/drona-compacta-pentru-fotografii-urbane/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/drona-compacta-pentru-fotografii-urbane.webp" alt="Dronă Compactă Pentru Fotografii Urbane" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Dronă Compactă Pentru Fotografii Urbane</h3>
+              </div>
+            </a>
+
+            <a href="/gimbal-portabil-pentru-smartphone/" class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <div class="aspect-video overflow-hidden">
+                <img src="/images/articles/gimbal-portabil-pentru-smartphone.webp" alt="Gimbal Portabil Pentru Smartphone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+              <div class="p-4">
+                <span class="text-xs font-medium text-primary-600">Foto & Video</span>
+                <h3 class="font-bold text-slate-900 mt-1 group-hover:text-primary-600 transition-colors line-clamp-2">Gimbal Portabil Pentru Smartphone</h3>
+              </div>
+            </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

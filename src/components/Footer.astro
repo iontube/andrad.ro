@@ -1,0 +1,76 @@
+---
+const currentYear = new Date().getFullYear();
+
+const categories = [
+  { name: 'Tehnologie & Gaming', slug: 'tehnologie-gaming' },
+  { name: 'Electrocasnice', slug: 'electrocasnice' },
+  { name: 'TV & Audio', slug: 'tv-audio' },
+  { name: 'Foto & Video', slug: 'foto-video' },
+  { name: 'Smart Home', slug: 'smart-home' }
+];
+
+const legalPages = [
+  { name: 'Politica de confidențialitate', slug: 'politica-de-confidentialitate' },
+  { name: 'Termeni și condiții', slug: 'termeni-si-conditii' },
+  { name: 'Politica cookies', slug: 'politica-cookies' },
+  { name: 'Contact', slug: 'contact' }
+];
+---
+
+<footer class="bg-slate-900 text-slate-300">
+  <div class="container-main py-12 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div class="lg:col-span-1">
+        <a href="/" class="flex items-center gap-2.5 mb-4">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
+            <span class="text-white font-bold text-lg">A</span>
+          </div>
+          <span class="text-xl font-bold text-white">Andrad</span>
+        </a>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Recenzii detaliate și recomandări pentru a te ajuta să alegi cele mai bune produse.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Categorii</h3>
+        <ul class="space-y-2.5">
+          {categories.map(cat => (
+            <li>
+              <a href={`/${cat.slug}/`} class="text-slate-400 hover:text-primary-400 transition-colors text-sm">
+                {cat.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Legal</h3>
+        <ul class="space-y-2.5">
+          {legalPages.map(page => (
+            <li>
+              <a href={`/${page.slug}/`} class="text-slate-400 hover:text-primary-400 transition-colors text-sm">
+                {page.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Contact</h3>
+        <p class="text-slate-400 text-sm mb-3">Pentru întrebări și colaborări:</p>
+        <a href="mailto:contact@andrad.ro" class="text-primary-400 hover:text-primary-300 transition-colors font-medium">
+          contact@andrad.ro
+        </a>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-800 mt-10 pt-8 text-center">
+      <p class="text-slate-500 text-sm">
+        &copy; {currentYear} Andrad.ro. Toate drepturile rezervate.
+      </p>
+    </div>
+  </div>
+</footer>
