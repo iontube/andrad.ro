@@ -1,11 +1,6 @@
 {
   "pending": [
     {
-      "keyword": "lentile macro pentru detalii fine",
-      "category": "Foto & Video",
-      "categorySlug": "foto-video"
-    },
-    {
       "keyword": "dronă cu filmare 6K pentru profesioniști",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
@@ -624,6 +619,11 @@
       "keyword": "sistem irigații controlat prin app",
       "category": "Smart Home",
       "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "lentile macro pentru detalii fine",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
     }
   ]
 }
