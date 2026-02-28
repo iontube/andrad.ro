@@ -41,11 +41,6 @@
       "categorySlug": "foto-video"
     },
     {
-      "keyword": "senzor temperatură și umiditate smart",
-      "category": "Smart Home",
-      "categorySlug": "smart-home"
-    },
-    {
       "keyword": "buton panică pentru smart home",
       "category": "Smart Home",
       "categorySlug": "smart-home"
@@ -624,6 +619,11 @@
       "keyword": "lentile macro pentru detalii fine",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "senzor temperatură și umiditate smart",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
     }
   ]
 }
