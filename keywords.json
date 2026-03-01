@@ -1,11 +1,6 @@
 {
   "pending": [
     {
-      "keyword": "dronă cu filmare 6K pentru profesioniști",
-      "category": "Foto & Video",
-      "categorySlug": "foto-video"
-    },
-    {
       "keyword": "stabilizator video cu control automat",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
@@ -624,6 +619,11 @@
       "keyword": "senzor temperatură și umiditate smart",
       "category": "Smart Home",
       "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "dronă cu filmare 6K pentru profesioniști",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
     }
   ]
 }
