@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://andrad.ro/sitemap-index.xml
+Sitemap: https://andrad.ro/sitemap_index.xml

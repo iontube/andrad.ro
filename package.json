@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/inject-images-sitemap.js",
+    "build": "astro build && node scripts/generate-sitemaps.js",
     "preview": "astro preview",
     "astro": "astro",
     "generate": "node scripts/generate-articles.js"
