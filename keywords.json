@@ -36,11 +36,6 @@
       "categorySlug": "foto-video"
     },
     {
-      "keyword": "buton panică pentru smart home",
-      "category": "Smart Home",
-      "categorySlug": "smart-home"
-    },
-    {
       "keyword": "switch smart pentru telecomandă",
       "category": "Smart Home",
       "categorySlug": "smart-home"
@@ -624,6 +619,11 @@
       "keyword": "dronă cu filmare 6K pentru profesioniști",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "buton panică pentru smart home",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
     }
   ]
 }
