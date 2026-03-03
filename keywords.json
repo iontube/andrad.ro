@@ -1,11 +1,6 @@
 {
   "pending": [
     {
-      "keyword": "stabilizator video cu control automat",
-      "category": "Foto & Video",
-      "categorySlug": "foto-video"
-    },
-    {
       "keyword": "aparat foto cu timelapse automat",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
@@ -624,6 +619,11 @@
       "keyword": "buton panică pentru smart home",
       "category": "Smart Home",
       "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "stabilizator video cu control automat",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
     }
   ]
 }
