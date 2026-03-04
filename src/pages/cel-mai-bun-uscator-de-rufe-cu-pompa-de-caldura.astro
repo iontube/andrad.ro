@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -188,7 +201,7 @@ import Layout from '../layouts/Layout.astro';
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Bosch / Siemens</h3>
     <p class="mb-4">Aceste branduri sunt cunoscute pentru fiabilitate și inovație. Modelele din seriile 6 sau 8, cum ar fi Bosch WTWH7560BY sau Siemens WT47W5H0BY, oferă clasa energetică A+++ și funcții precum AutoClean (condensator cu autocurățare, eliminând nevoia de întreținere manuală a acestuia) și IronAssist (programe cu aburi pentru reducerea șifonării). Motoarele EcoSilence Drive contribuie la un nivel redus de zgomot, de aproximativ 62 dB. Capacitățile standard sunt de 8 sau 9 kg.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Samsung</h3>
-    <p class="mb-4">Samsung se distinge prin design modern și tehnologii inteligente. Modelele precum DV80T5220AW/LE vin cu tehnologia OptimalDry, care folosește senzori de umiditate, temperatură și curățare pentru a ajusta timpul de uscare. Motoarele Digital Inverter asigură o funcționare silențioasă și o durată de viață lungă. Funcția AI Control permite personalizarea ciclurilor de uscare, iar conectivitatea SmartThings aduce controlul direct pe smartphone. Capacitățile tipice sunt de 8 sau 9 kg.</p>
+    <p class="mb-4">Samsung se distinge prin design modern și tehnologii inteligente. Modelele precum DV80T5220AW/LE vin cu tehnologia OptimalDry, care folosește senzori de umiditate, <a href="/senzor-temperatura-si-umiditate-smart/" class="interlink">temperatură și</a> curățare pentru a ajusta timpul de uscare. Motoarele Digital Inverter asigură o funcționare silențioasă și o durată de viață lungă. Funcția AI Control permite personalizarea ciclurilor de uscare, iar conectivitatea SmartThings aduce controlul direct pe smartphone. Capacitățile tipice sunt de 8 sau 9 kg.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">LG</h3>
     <p class="mb-4">LG inovează cu tehnologia Dual Inverter Heat Pump, care permite uscarea mai rapidă și o eficiență energetică superioară. Modele precum RC80V9AV4Q oferă programe Allergy Care, care elimină până la 99.9% din acarieni și praf, ideal pentru persoanele cu alergii. Funcția Eco Hybrid îți permite să alegi între economisirea energiei și reducerea timpului de uscare. Capacitățile sunt adesea de 8, 9 sau chiar 10 kg, perfecte pentru familiile numeroase.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Electrolux</h3>
@@ -201,9 +214,9 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Pe lângă eficiența energetică de bază, uscătoarele moderne cu pompă de căldură vin echipate cu o multitudine de inovații menite să simplifice procesul de uscare și să protejeze hainele:</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Senzori de Umiditate Inteligenți</h3>
-    <p class="mb-4">Majoritatea uscătoarelor premium folosesc senzori avansați care monitorizează constant nivelul de umiditate din tambur. Această tehnologie permite aparatului să oprească ciclul exact în momentul în care rufele ating gradul de uscare dorit, evitând suprauscarea, care poate deteriora fibrele și irosi energie. Funcții precum AutoDry (Bosch/Siemens) sau OptimalDry (Samsung) sunt exemple de astfel de sisteme inteligente.</p>
+    <p class="mb-4">Majoritatea uscătoarelor premium folosesc senzori avansați care monitorizează constant nivelul de umiditate din tambur. Această tehnologie permite aparatului să oprească ciclul exact în momentul în care rufele ating gradul de uscare dorit, evitând suprauscarea, care poate deteriora fibrele și irosi energie. Funcții precum AutoDry (Bosch/Siemens) sau OptimalDry (Samsung) sunt exemple de astfel de sisteme <a href="/frigider-cu-compartimente-inteligente/" class="interlink">inteligente</a>.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Sisteme de Autocurățare a Condensatorului</h3>
-    <p class="mb-4">Un aspect important la uscătoarele cu condensare (și implicit la cele cu pompă de căldură) este curățarea condensatorului, care poate acumula scame și praf, reducând eficiența. Unele modele de top, cum ar fi cele de la Bosch (AutoClean) sau Siemens (SelfCleaning Condenser), au un sistem automat care curăță condensatorul la fiecare ciclu, menținând performanța energetică la cote maxime pe toată durata de viață a aparatului și eliminând o sarcină de întreținere pentru utilizator.</p>
+    <p class="mb-4">Un aspect important la uscătoarele cu condensare (și implicit la cele cu pompă de căldură) este curățarea condensatorului, care poate acumula scame și praf, reducând eficiența. Unele modele de top, cum ar fi cele de la Bosch (AutoClean) sau Siemens (SelfCleaning Condenser), au un sistem automat care curăță condensatorul la fiecare ciclu, menținând <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanța</a> energetică la cote maxime pe toată durata de viață a aparatului și eliminând o sarcină de întreținere pentru utilizator.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Conectivitate Smart și Control de la Distanță</h3>
     <p class="mb-4">Uscătoarele inteligente pot fi conectate la rețeaua Wi-Fi a casei și controlate printr-o aplicație pe smartphone. Aceasta îți permite să pornești sau să oprești ciclul, să verifici statusul, să primești notificări sau chiar să descarci programe de uscare suplimentare, adaptate nevoilor tale specifice. Platforme precum Home Connect (Bosch/Siemens), SmartThings (Samsung) sau ThinQ (LG) transformă gestionarea rufelor într-o experiență modernă și convenabilă.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Funcții Anti-Șifonare și Reîmprospătare</h3>
@@ -216,7 +229,7 @@ import Layout from '../layouts/Layout.astro';
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Curățarea Filtrelor de Scame</h3>
     <p class="mb-4">Acesta este cel mai important pas. Curăță filtrul de scame după fiecare ciclu de uscare. Scamele acumulate pot bloca fluxul de aer, reducând eficiența aparatului și crescând consumul de energie. Multe uscătoare au un sistem de filtre dublu, asigură-te că le cureți pe amândouă.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Golirea Rezervorului de Apă</h3>
-    <p class="mb-4">Dacă uscătorul tău nu este conectat la scurgere, rezervorul de colectare a apei trebuie golit după fiecare utilizare. Un rezervor plin va opri funcționarea uscătorului. Apa colectată este deionizată și poate fi folosită la călcat cu fierul de călcat cu aburi.</p>
+    <p class="mb-4">Dacă uscătorul tău nu este conectat la scurgere, rezervorul <a href="/aspirator-cu-sac-automat-de-colectare/" class="interlink">de colectare</a> a apei trebuie golit după fiecare utilizare. Un rezervor plin va opri funcționarea uscătorului. Apa colectată este deionizată și poate fi folosită la călcat cu fierul de călcat cu aburi.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Întreținerea Condensatorului</h3>
     <p class="mb-4">Chiar dacă ai un model cu autocurățare, o verificare periodică (o dată la câteva luni) nu strică. Pentru uscătoarele fără autocurățare, condensatorul trebuie curățat manual conform instrucțiunilor producătorului, de obicei la 3-6 luni. Acesta poate fi o sursă importantă de pierdere a eficienței dacă este blocat cu scame și praf.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Curățarea Tamburului și a Garniturii Ușii</h3>
@@ -328,5 +341,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-uscator-de-rufe-cu-pompa-de-caldura"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

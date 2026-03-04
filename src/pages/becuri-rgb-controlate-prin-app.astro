@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,16 +158,16 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Prima Lumina: Introducere in Lumea Becurilor Smart RGB</h2>
-    <p class="mb-4">Am testat zeci de becuri RGB controlate prin app in ultimii ani, de la modele ieftine de la branduri mai putin cunoscute la optiuni premium de la producatori consacrati precum Philips Hue sau TP-Link Kasa. Experienta mea mi-a demonstrat clar ca aceste becuri smart nu mai sunt un moft, ci o modalitate accesibila de a personaliza atmosfera din orice camera. Nu te astepta la cine stie ce revolutie in iluminat, dar schimbarea este, in multe cazuri, spectaculoasa si extrem de usor de obtinut.</p>
+    <p class="mb-4">Am testat zeci de becuri RGB controlate prin app in ultimii ani, de la modele ieftine de la branduri mai putin cunoscute la optiuni premium de la producatori consacrati precum Philips Hue sau TP-Link Kasa. <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">Experienta</a> mea mi-a demonstrat clar ca aceste becuri smart nu mai sunt un moft, ci o modalitate accesibila de a personaliza atmosfera din orice camera. Nu te astepta la cine stie ce revolutie in iluminat, dar schimbarea este, in multe cazuri, spectaculoasa si extrem de usor de obtinut.</p>
     <p class="mb-4">Partea cea mai buna e ca nu ai nevoie de un master in IT ca sa le instalezi. Le desfaci din cutie, le infiletezi in dulia existenta, descarci o aplicatie si, in cateva minute, ai control total asupra culorii, intensitatii si chiar a programarii luminii. Am vazut cum un simplu bec poate transforma o seara plictisitoare intr-una de film, cu lumina ambientala potrivita, sau cum poate ajuta la concentrare in timpul zilei cu o nuanta mai rece.</p>
-    <p class="mb-4">In acest articol, o sa-ti spun direct ce am invatat din experienta mea cu aceste gadgeturi, fara floricele. O sa vorbim despre ce conteaza cu adevarat: usurinta in utilizare, compatibilitatea cu ecosistemele smart home pe care probabil le ai deja (gen Google Home sau Amazon Alexa), si, bineinteles, preturile reale pe care le gasesti in Romania.</p>
+    <p class="mb-4">In acest articol, o sa-ti spun direct ce am invatat din experienta mea cu aceste gadgeturi, fara floricele. O sa vorbim despre ce conteaza cu adevarat: usurinta in utilizare, compatibilitatea cu ecosistemele <a href="/buton-panica-pentru-smart-home/" class="interlink">smart home</a> pe care probabil le ai deja (gen Google Home sau Amazon Alexa), si, bineinteles, preturile reale pe care le gasesti in Romania.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Instalarea: Mai Simplu Decat Sa Schimbi un Bec Normal</h2>
     <p class="mb-4">Serios, e atat de simplu incat uneori ma amuzam ca se complicau oamenii cu tot felul de instalari complexe. Desfaci becul din cutie, il infiletezi in dulia E27 sau E14, depinde ce ai prin casa, apoi pornesti lumina. Becul va incepe sa clipeasca, semnal ca e pregatit pentru imperechere. Descarci aplicatia specifica brandului (majoritatea au una dedicata, gen "Smart Life" pentru multe modele generice, "Philips Hue", "Kasa Smart" pentru TP-Link, etc.), si urmezi pasii.</p>
-    <p class="mb-4">De obicei, aplicatia iti va cere sa te conectezi la reteaua Wi-Fi de 2.4 GHz (asta e important, multe nu merg pe 5 GHz). Dupa ce ai introdus parola, aplicatia va cauta becul si il va conecta la reteaua ta. Gata. In 2-3 minute, ai un bec controlabil prin telefon. Am testat si modele care se conecteaza prin Bluetooth, dar sunt mai limitate ca raza de actiune si functionalitati, asa ca eu recomand cele pe Wi-Fi.</p>
+    <p class="mb-4">De obicei, aplicatia iti va cere sa te conectezi la reteaua Wi-Fi de 2.4 GHz (asta e important, multe nu merg pe 5 GHz). Dupa ce ai introdus parola, aplicatia va cauta becul si il va conecta la reteaua ta. Gata. In 2-3 minute, ai un bec controlabil <a href="/incuietoare-smart-cu-acces-prin-telefon/" class="interlink">prin telefon</a>. Am testat si modele care se conecteaza prin Bluetooth, dar sunt mai limitate ca raza de actiune si functionalitati, asa ca eu recomand cele pe Wi-Fi.</p>
     <p class="mb-4">Un sfat practic: daca ai multe becuri de instalat, fa-o pe rand. Altfel, aplicatia se poate incurca, mai ales daca sunt de la branduri diferite. Daca vrei sa simplifici si mai mult, cauta kit-uri de inceput de la un singur producator, gen Philips Hue, unde ai si un hub care centralizeaza totul, desi asta vine cu un cost suplimentar.</p>
     
     
@@ -186,7 +199,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi Practice si Ce Am Invatat Din Experienta</h2>
-    <p class="mb-4">Nu te complica cu prea multe branduri diferite in aceeasi camera, mai ales daca nu se integreaza intr-un ecosistem comun gen "Smart Life". O sa ajungi sa ai 5 aplicatii pe telefon pentru 5 becuri diferite, si asta e frustrant. Daca vrei sa controlezi totul dintr-un singur loc, alege un singur brand sau un ecosistem compatibil.</p>
+    <p class="mb-4">Nu te complica cu prea multe branduri diferite in aceeasi camera, mai ales daca nu se integreaza intr-un ecosistem comun gen "Smart Life". O sa ajungi sa ai 5 aplicatii <a href="/sirena-smart-cu-notificari-pe-telefon/" class="interlink">pe telefon</a> pentru 5 becuri diferite, si asta e frustrant. Daca vrei sa controlezi totul dintr-un singur loc, alege un singur brand sau un ecosistem compatibil.</p>
     <p class="mb-4">Verifica tipul de dulie inainte de a cumpara. Majoritatea sunt E27 (cea mare, standard), dar gasesti si E14 (cea mai mica, des intalnita la lustre sau veioze mai vechi). Exista si becuri GU10 pentru spoturi, dar sunt mai rare si mai scumpe.</p>
     <p class="mb-4">Nu te astepta la o lumina la fel de puternica ca la un bec clasic de 80W. Becurile smart LED au, in general, o luminozitate comparabila cu becurile LED normale, dar daca ai nevoie de lumina foarte puternica, s-ar putea sa fie nevoie de mai multe becuri sau de un model special.</p>
     <p class="mb-4">Am observat ca unele becuri, mai ales cele ieftine, pot avea probleme de conectivitate daca semnalul Wi-Fi e slab. Daca ai o casa mare sau semnalul e slab in anumite zone, poate merita sa investesti intr-un sistem mesh Wi-Fi sau sa pozitionezi routerul mai central. De asemenea, aminteste-ti ca majoritatea becurilor smart functioneaza pe banda de 2.4 GHz, nu 5 GHz. Daca routerul tau emite pe ambele frecvente, asigura-te ca te conectezi la cea de 2.4 GHz.</p>
@@ -286,5 +299,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="becuri-rgb-controlate-prin-app"
+      currentCategory="smart-home"
+      articles={allArticles}
+    />
   </article>
 </Layout>

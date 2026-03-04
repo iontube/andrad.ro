@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -177,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cel mai bun kit de lumini LED pentru videografie pentru inceput, fara sa dai faliment</h2>
-    <p class="mb-4">Bon, stai putin. Vrei sa faci clipuri mai pro, nu doar cu lumina ambientală sau a telefonului? Ai nevoie de un <strong>kit de lumini LED pentru videografie</strong>. Cel mai bun sfat pe care pot sa ti-l dau, daca vrei un echilibru real intre pret si performanta, este sa te uiti la Godox SL60W. E o singura lumina, da, dar e suficienta ca sa incepi sa vezi diferenta. O cumperi cu vreo 500-600 lei, plus un softbox de vreo 150-200 lei si, poate, un trepied decent, inca 100-150 lei. Ai acolo un setup de baza care te scoate din anonimatul vizual. Pe bune, am vazut si eu chestii filmate cu el, si pe partea de vlog, si pe interviuri scurte. Calitatea luminii e mult peste ce gasesti in kiturile alea de 200 lei cu 3 lumini mici.</p>
+    <p class="mb-4">Bon, stai putin. Vrei sa faci clipuri mai pro, nu doar cu lumina ambientală sau a telefonului? Ai nevoie de un <strong>kit de lumini LED pentru videografie</strong>. Cel mai bun sfat pe care pot sa ti-l dau, daca vrei un echilibru real intre pret si <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanta</a>, este sa te uiti la Godox SL60W. E o singura lumina, da, dar e suficienta ca sa incepi sa vezi diferenta. O cumperi cu vreo 500-600 lei, plus un softbox de vreo 150-200 lei si, poate, un trepied decent, inca 100-150 lei. Ai acolo un setup de baza care te scoate din anonimatul vizual. Pe bune, am vazut si eu chestii filmate cu el, si pe partea de vlog, si pe interviuri scurte. Calitatea luminii e mult peste ce gasesti in kiturile alea de 200 lei cu 3 lumini mici.</p>
     <p class="mb-4">Ce e fain la el? E pe montura Bowens, adica poti sa-i pui fel de fel de accesorii - softbox-uri, snoot-uri, refrectoare. E un standard, deci gasesti tot ce vrei. E destul de puternic sa lumineze subiectul tau, chiar si intr-o camera nu foarte mare. Nu e cel mai mic, nu e cel mai usor, dar e solid. Si daca te apuci serios, poti oricand sa mai cumperi unul sau doua, sa ai lumina din mai multe directii.</p>
     <p class="mb-4">Acum, daca zici ca vrei ceva si mai rapid, si poate mai discret, exista kituri cu panouri LED pliabile, gen de la Neewer sau SmallRig. Alea sunt super dragute ca le impachetezi rapid, le montezi in 5 minute. Multe vin in seturi de 2 sau 3. Sunt bune pentru ce inseamna lumina de umplere sau ca sa pui un pic de accent, dar nu te astepta sa fie la fel de puternice ca un SL60W. Sunt mai mult pentru un look light, nu pentru a transforma complet o scena intunecata. Un kit de 2 panouri pliabile, cu tot cu telecomenzi si baterii, te duce pe la 800-1200 lei, in functie de dimensiune si brand. Merita daca portabilitatea e cheia.</p>
     <p class="mb-4">Deci, ca sa fiu direct: Godox SL60W cu softbox si trepied = cel mai bun <strong>kit de lumini LED pentru videografie</strong> ca punct de plecare. Si cand zic kit, ma gandesc la minim o sursa principala de calitate.</p>
@@ -204,7 +217,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4"><strong>Minusuri la Godox SL60W:</strong> Nu vine gata cu softbox sau trepied, alea le cumperi separat. Si nu are baterii, deci trebuie sa fie mereu langa o priza. E o singura sursa, deci pentru lumina din mai multe directii, trebuie sa mai cumperi una.</p>
     <p class="mb-4"><strong>Neewer RGB 660</strong>, pe de alta parte, e un panou LED plat. De obicei, se vinde in kituri de 2 sau 3. Sunt super practice, se monteaza rapid, au lumina difuza din start, nu prea ai nevoie de accesorii extra. Partea cea mai tare e ca poti sa schimbi si culoarea luminii, sa bagi RGB. Asta e fain daca vrei sa adaugi un pic de stil clipurilor tale, culori de fundal, chestii de genul. Si vine cu baterii, deci poti filma si la liber, departe de priza. E o solutie mai 'all-in-one' pentru cine nu vrea sa se complice prea mult.</p>
     <p class="mb-4"><strong>Minusuri la Neewer RGB 660:</strong> Nu e la fel de puternic ca SL60W. Deci, daca vrei sa luminezi o camera mare sau sa ai un efect dramatic de la distanta, s-ar putea sa nu fie suficient. Calitatea culorilor RGB, desi distractiva, nu e mereu perfecta, s-ar putea sa ai nevoie de corectii in post. E mai mult o lumina 'soft', mai putin controlabila in sensul de modelare.</p>
-    <p class="mb-4"><strong>Deci, ce alegi?</strong> Daca vrei precizie, control, si o calitate a luminii pe care o poti modela cum vrei, si nu te deranjeaza sa cumperi accesorii separat si sa ai priza prin preajma, ia <strong>Godox SL60W</strong>. E investitia pe termen lung pentru un <strong>kit de lumini LED pentru videografie</strong> profesionist. Daca vrei ceva rapid, portabil, cu lumina difuza din start, si iti place ideea de culori RGB, si ai nevoie sa filmezi si fara priza, Neewer-ul e o optiune mai buna.</p>
+    <p class="mb-4"><strong>Deci, ce alegi?</strong> Daca vrei precizie, control, si o calitate a luminii pe care o poti modela cum vrei, si nu te deranjeaza sa cumperi accesorii separat si sa ai priza prin preajma, ia <strong>Godox SL60W</strong>. E investitia pe termen lung pentru un <strong>kit de lumini LED pentru videografie</strong> <a href="/mousepad-extra-mare-pentru-setup-profesionist/" class="interlink">profesionist</a>. Daca vrei ceva rapid, portabil, cu lumina difuza din start, si iti place ideea de culori RGB, si ai nevoie sa filmezi si fara priza, Neewer-ul e o optiune mai buna.</p>
     
     
   </section>
@@ -213,7 +226,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Am vazut atatea cazuri, atatea kituri cumparate si apoi uitate prin debara. Zic si eu, ca sa nu patiti la fel. E mult mai simplu sa eviti niste capcane decat sa le repari mai tarziu.</p>
     <p class="mb-4"><strong>1. Sar peste sursa principala de calitate, caut doar multe lumini ieftine.</strong> Asta e cea mai mare greseala. Un kit cu 3 lumini de 50 lei bucata nu o sa arate niciodata la fel de bine ca o singura lumina de 500 lei cu softbox. Lumina proasta se vede imediat. E mai bine sa incepi cu o singura sursa buna si sa o extinzi mai tarziu. Investeste in calitate, nu in cantitate, cand vorbim de sursa principala.</p>
     <p class="mb-4"><strong>2. Nu ma uit la CRI/TLCI.</strong> Pe bune, astea sunt importante. Daca lumina nu reda corect culorile, o sa te chinui apoi in editare sa repari nuantele pielii sau culorile obiectelor. Poate chiar sa strici totul. Cauta mereu valori peste 95%. Nu te lasa pacalit de luminozitate daca culorile sunt afara.</p>
-    <p class="mb-4"><strong>3. Nu ma gandesc la accesorii.</strong> O lumina LED puternica e o treaba, dar cum o modelezi e alta. Daca nu cumperi un softbox sau un difuzor, lumina va fi dura, o sa faca umbre tari, nenaturale. Asta nu-i deloc fain pentru portrete sau interviuri. Gandeste-te de la inceput cum vrei sa arate lumina si ce accesorii iti trebuie pentru asta.</p>
+    <p class="mb-4"><strong>3. Nu ma gandesc la accesorii.</strong> O lumina LED puternica e o treaba, dar cum o modelezi e alta. Daca nu cumperi un softbox sau un difuzor, lumina va fi dura, o sa faca umbre tari, nenaturale. Asta nu-i deloc fain <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">pentru portrete</a> sau interviuri. Gandeste-te de la inceput cum vrei sa arate lumina si ce accesorii iti trebuie pentru asta.</p>
     <p class="mb-4"><strong>4. Sar peste portabilitate sau, dimpotriva, o caut prea mult.</strong> Daca filmezi doar in studio, nu te intereseaza sa fie super portabil. Dar daca te muti des, ai nevoie de ceva usor de montat/demontat, eventual pe baterii. Pe de alta parte, nu lua tot timpul cele mai mici si mai slabe lumini doar ca sunt portabile, daca ai nevoie de putere. Gaseste un echilibru.</p>
     <p class="mb-4"><strong>5. Nu ma uit la tipul de montura.</strong> Daca vrei sa ai libertate sa schimbi softbox-uri sau alte accesorii, cauta monturi standard, gen Bowens. Daca iei un kit cu o montura proprietara, esti blocat la accesoriile lor, care pot fi limitate sau scumpe.</p>
     <p class="mb-4"><strong>6. Nu citesc review-uri.</strong> Pe bune, ia-ti 10 minute sa vezi ce zic si altii. Sunt destule forumuri, grupuri, review-uri video pe YouTube. Vezi cum se descurca lumina in viata reala, nu doar in specificatiile tehnice. Am avut si eu surprize neplacute cand m-am aruncat pe primul <strong>kit de lumini LED pentru videografie</strong> care mi-a picat in mana.</p>
@@ -228,7 +241,7 @@ import Layout from '../layouts/Layout.astro';
         <p>Nu astepta sa luminezi o camera intreaga. E mai mult pentru accentuare.</p><h3>Buget Mediu (700 - 1500 lei)</h3><p>Aici incepe distractia. In zona asta gasesti fie o lumina principala puternica, gen <strong>Godox SL60W</strong> (cam 500-600 lei), la care iti mai iei un softbox (150-200 lei) si un trepied decent (100-150 lei). Ai un setup solid, cu lumina de calitate, pe care o poti modela.</p>
         <p>E cel mai bun punct de plecare pentru cineva serios. Alternativ, gasesti si kituri de 2 panouri LED mai mari si mai puternice, gen cele de la Neewer RGB 660 (cam 1000-1400 lei setul de 2, cu baterii si trepiede). Sunt mai portabile si au si functii RGB.</p>
     <p class="mb-4">Eu, personal, daca vrei sa faci treaba serioasa, as merge pe varianta Godox SL60W + accesorii. E mai flexibila pe termen lung.</p><h3>Buget Mare (Peste 1500 lei)</h3><p>Daca ai bugetul asta, poti sa te uiti la lumini mai performante, mai compacte, cu functii extra. De exemplu, <strong>SmallRig RC 120B</strong> (cam 1200-1500 lei doar lumina, fara accesorii) e o varianta premium la SL60W, mai bine construita, cu efecte speciale. Sau poti sa-ti iei doua Godox SL60W, ca sa ai lumina din mai multe directii, plus softbox-uri.</p>
-        <p>In zona asta, poti sa te gandesti si la lumini cu control de temperatura de culoare variabila (bi-color), gen 300-500W, daca ai nevoie de flexibilitate mare. Sau poti sa te uiti la producatori ca Aputure, care au solutii foarte profi, dar si preturi pe masura.</p>
+        <p>In zona asta, poti sa te gandesti si la lumini cu control de <a href="/senzor-temperatura-si-umiditate-smart/" class="interlink">temperatura</a> de culoare variabila (bi-color), gen 300-500W, daca ai nevoie de flexibilitate mare. Sau poti sa te uiti la producatori ca Aputure, care au solutii foarte profi, dar si preturi pe masura.</p>
     <p class="mb-4">Important e sa nu sariti pe prima oferta 'kit' ce pare ieftina. Ganditi-va ce vreti sa obtineti, ce tip de clipuri faceti, si apoi alegeti.</p>
     
     
@@ -374,5 +387,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="kit-de-lumini-led-pentru-videografie"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

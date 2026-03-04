@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ecran smart cu Chromecast: o pereche castigatoare pentru streaming</h2>
-    <p class="mb-4">Am pus mana pe cateva modele de ecrane smart cu Chromecast integrat in ultimele luni, si pot spune ca experienta de utilizare s-a schimbat considerabil pentru mine. Gata cu dongle-urile alea ciudate care stateau atarnate in spatele televizorului. Acum, totul este direct in ecran, simplificand procesul de la conectare la vizionare.</p>
+    <p class="mb-4">Am pus mana pe cateva modele de ecrane smart cu Chromecast integrat in ultimele luni, si pot spune ca <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experienta</a> de utilizare s-a schimbat considerabil pentru mine. Gata cu dongle-urile alea ciudate care stateau atarnate in spatele televizorului. Acum, totul este direct in ecran, simplificand procesul de la conectare la vizionare.</p>
     <p class="mb-4">Am testat modele de la Samsung si LG, in special cele din gamele mai noi, si diferenta fata de televizoarele mai vechi sau chiar fata de cele smart fara Chromecast e vizibila. E ca si cum ai avea un Google Nest Hub, dar la scara de televizor.</p>
     <p class="mb-4">Pentru cei care folosesc deja ecosistemul Google, fie cu un Pixel sau un telefon Android, integrarea e fluida. Arunci continut de pe telefon, tableta sau laptop pe ecranul mare aproape instantaneu. Am aruncat filmulete de pe YouTube, poze de vacanta si chiar prezentari de pe laptop direct pe ecranul de 55 de inci fara sa ma complic cu cabluri HDMI sau aplicatii separate.</p>
     
@@ -177,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Preturi si modele pe piata din Romania</h2>
-    <p class="mb-4">Am gasit modele de ecrane smart cu Chromecast incorporat la preturi variate. De exemplu, un televizor LED smart de 43 de inci cu Chromecast integrat de la Samsung, seria AU7172, poate fi gasit pe eMAG sau Altex in jur de 1800-2000 RON. Acesta e un punct bun de plecare pentru cine nu vrea sa investeasca prea mult.</p>
+    <p class="mb-4">Am gasit modele de ecrane smart cu Chromecast incorporat la preturi variate. De exemplu, un <a href="/televizor-led-cu-refresh-mare/" class="interlink">televizor LED</a> smart de 43 de inci cu Chromecast integrat de la Samsung, seria AU7172, poate fi gasit pe eMAG sau Altex in jur de 1800-2000 RON. Acesta e un punct bun de plecare pentru cine nu vrea sa investeasca prea mult.</p>
     <p class="mb-4">Pentru diagonale mai mari, cum ar fi 55 de inci, modelele QLED de la Samsung sau cele UHD de la LG, cu Chromecast incorporat, pot ajunge la 3000-4500 RON, in functie de specificatii. Am vazut oferte bune si pe PCGarage.</p>
     <p class="mb-4">La capatul superior, televizoarele OLED de la Sony sau LG, cu diagonale de 65 de inci sau mai mari, care vin cu Chromecast integrat, pot depasi 7000-8000 RON. Sunt investitii serioase, dar calitatea imaginii si a sunetului este de top.</p>
     
@@ -186,8 +199,8 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice pentru utilizatori</h2>
     <p class="mb-4">Daca ai deja un televizor smart mai vechi, dar vrei functionalitatea Chromecast, poti cumpara un Chromecast dongle separat (de la Google, preturi in jur de 200-300 RON pe eMAG). Totusi, integrarea nativa este mult mai eleganta si mai rapida.</p>
-    <p class="mb-4">Asigura-te ca ai o conexiune Wi-Fi stabila, de preferat pe banda de 5GHz, pentru streaming de inalta calitate, mai ales daca vrei sa rulezi continut 4K. Am observat ca semnalul Wi-Fi slab poate duce la intreruperi.</p>
-    <p class="mb-4">Nu te baza doar pe telecomanda televizorului pentru tot. Foloseste telefonul sau tableta pentru a initia streamingul. E mult mai intuitiv. Pentru controlul vocal, asigura-te ca microfonul televizorului este activat si ca ai acordat permisiunile necesare aplicatiei Google Assistant.</p>
+    <p class="mb-4">Asigura-te ca ai o conexiune Wi-Fi stabila, de preferat pe banda de 5GHz, <a href="/setup-pc-pentru-streaming-4k/" class="interlink">pentru streaming</a> de inalta calitate, mai ales daca vrei sa rulezi continut 4K. Am observat ca semnalul Wi-Fi slab poate duce la intreruperi.</p>
+    <p class="mb-4">Nu te baza doar pe <a href="/switch-smart-pentru-telecomanda/" class="interlink">telecomanda</a> televizorului pentru tot. Foloseste telefonul sau tableta pentru a initia streamingul. E mult mai intuitiv. Pentru controlul vocal, asigura-te ca microfonul televizorului este activat si ca ai acordat permisiunile necesare aplicatiei Google Assistant.</p>
     
     
   </section>
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="ecran-smart-cu-chromecast-incorporat"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

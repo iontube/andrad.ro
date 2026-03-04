@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -177,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Primii pasi: Ce iti trebuie NEAPARAT pentru un kit accesorii foto pentru începători</h2>
-    <p class="mb-4">Stai putin, vrei sa te apuci de fotografie si nu stii de unde sa incepi cu accesoriile? Uite care-i treaba: nu trebuie sa spargi banca de la inceput. Cel mai important lucru este sa ai baza. De asta, un <strong>kit accesorii foto pentru începători</strong> de baza ar trebui sa contina, in primul rand, un trepied. Nu te uita la ala de 50 de lei, ala se rastoarna la prima adiere de vant. Cauta unul stabil, din aluminiu, care sa duca greutatea aparatului tau fara probleme. Unul decent incepe pe la 200-300 de lei si te va salva de la poze miscate si de la momente ratate.</p>
+    <p class="mb-4">Stai putin, vrei sa te apuci de fotografie si nu stii de unde sa incepi cu accesoriile? Uite care-i treaba: nu trebuie sa spargi banca de la inceput. Cel mai important lucru este sa ai baza. De asta, un <strong>kit accesorii <a href="/kit-editare-foto-pentru-amatori/" class="interlink">foto pentru</a> începători</strong> de baza ar trebui sa contina, in primul rand, un trepied. Nu te uita la ala de 50 de lei, ala se rastoarna la prima adiere de vant. Cauta unul stabil, din aluminiu, care sa duca greutatea aparatului tau fara probleme. Unul decent incepe pe la 200-300 de lei si te va salva de la poze miscate si de la momente ratate.</p>
     <p class="mb-4">Apoi, gandeste-te la stocare. Un card de memorie e ca plamanul aparatului. Nu te zgarci aici. Ia unul de minim 32GB, clasa 10 sau U3, sa nu-ti blocheze aparatul cand tragi secvente rapide sau filmezi. Asta te duce cam 80-150 de lei, in functie de viteza si marca. Branduri ca SanDisk, Kingston sau Lexar sunt sigure.</p>
     <p class="mb-4">Ce altceva e esential intr-un <strong>kit accesorii foto pentru începători</strong>? O geanta! Nu, nu aia de laptop. O geanta foto e gandita sa protejeze aparatul. Sa aiba spatii separate, sa fie captusita. Nu trebuie sa fie de firma, una de la Manfrotto sau Lowepro e scumpa rau. Ai variante bune si la 150-250 de lei, care iti tin aparatul, un obiectiv de rezerva si cateva maruntisuri.</p>
     <p class="mb-4">Si ca sa nu-ti distrugi lentila cu prima ocazie, un kit mic de curatare. Suflanta aia mica de cauciuc, o pensula moale si o carpa din microfibra. E ieftin, vreo 50 de lei, dar iti poate salva obiectivul de la zgarieturi si praf permanent. Cam astea sunt elementele de baza, pe care poti construi mai tarziu.</p>
@@ -193,7 +206,7 @@ import Layout from '../layouts/Layout.astro';
     <ul><li>Viteza decenta pentru majoritatea nevoilor unui incepator (tip 100MB/s citire, 30MB/s scriere).</li><li>64GB e un spatiu bun pentru inceput.</li><li>Brand de incredere, putine probleme cu astea.</li></ul><strong>Dezavantaje Kingston Canvas Select Plus</strong>:
     <ul><li>Nu e cel mai rapid de pe piata, daca filmezi 4K la 60fps s-ar putea sa te limiteze.</li><li>Sunt si mai ieftine, dar cu viteze mai mici.</li></ul><ul><li><strong>Geanta foto mica: Vanguard Vesta Start 8</strong>. Asta e genul de borseta mai mica, pentru un aparat si un obiectiv. Costaa aprox. 100-130 de lei.</li></ul><strong>Avantaje Vanguard Vesta Start 8</strong>:
     <ul><li>Compacta si usoara.</li><li>Protejeaza bine aparatul.</li><li>Are destule buzunare mici pentru baterii sau carduri.</li></ul><strong>Dezavantaje Vanguard Vesta Start 8</strong>:
-    <ul><li>Nu incape un aparat DSLR mare cu un obiectiv zoom atasat.</li><li>Nu e cea mai stilata geanta.</li></ul><ul><li><strong>Kit curatare: Basic Lens Cleaning Kit (Marvo, K&F Concept, etc.)</strong>. Astea vin in trusa, cu suflanta, pensula, lichid si carpe. Pe la 50-70 de lei.</li></ul><strong>Avantaje Kit curatare</strong>:
+    <ul><li>Nu incape un aparat DSLR mare cu un <a href="/obiectiv-zoom-optic-10x/" class="interlink">obiectiv zoom</a> atasat.</li><li>Nu e cea mai stilata geanta.</li></ul><ul><li><strong>Kit curatare: Basic Lens Cleaning Kit (Marvo, K&F Concept, etc.)</strong>. Astea vin in trusa, cu suflanta, pensula, lichid si carpe. Pe la 50-70 de lei.</li></ul><strong>Avantaje Kit curatare</strong>:
     <ul><li>Protejeaza lentilele.</li><li>Contine tot ce ai nevoie la inceput.</li><li>Foarte ieftin.</li></ul><strong>Dezavantaje Kit curatare</strong>:
     <ul><li>Calitatea materialelor poate varia.</li><li> Lichidul de curatat s-ar putea sa nu fie cel mai bun.</li></ul>Deci, cu un <strong>kit accesorii foto pentru începători</strong> de genul asta, ajungi undeva pe la 330-400 de lei. E un start bun.
     
@@ -210,7 +223,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Trepied vs. Mono-pod: Ce ai nevoie pentru un kit accesorii foto pentru începători</h2>
-    <p class="mb-4">Multa lume se intreaba cand isi pune la punct un <strong>kit accesorii foto pentru începători</strong> daca are nevoie de un trepied sau de un monopied. Pai, depinde ce fel de poze vrei sa faci. Un trepied e cel mai versatil. Iti ofera stabilitate maxima pentru fotografii pe timp lung, pentru peisaje, portrete in studio sau chiar pentru filmari fara tremur. Cu un trepied, poti folosi viteze de expunere foarte lungi, sa obtii efectul ala de apa lina sau nori care curg.</p>
+    <p class="mb-4">Multa lume se intreaba cand isi pune la punct un <strong>kit accesorii foto pentru începători</strong> daca are nevoie de un trepied sau de un monopied. Pai, depinde ce fel de poze vrei sa faci. Un trepied e cel mai versatil. Iti ofera <a href="/trepied-carbon-pentru-stabilitate-maxima/" class="interlink">stabilitate maxima</a> pentru fotografii pe timp lung, pentru peisaje, portrete in studio sau chiar pentru filmari fara tremur. Cu un trepied, poti folosi viteze de expunere foarte lungi, sa obtii efectul ala de apa lina sau nori care curg.</p>
     <p class="mb-4">Un monopied, pe de alta parte, e mai agil. E bun daca te misti mult, daca mergi la evenimente sportive sau la concerte unde nu ai loc sa intinzi picioarele unui trepied. Iti ofera un plus de stabilitate fata de a tine aparatul in mana, dar nu se compara cu un trepied in materie de fixitate. E mai bun la a stabiliza aparatul cand folosesti obiective telephoto, de exemplu, ca sa nu tremure imaginea cand tii aparatul in mana.</p>
     <p class="mb-4">Daca ma intrebi pe mine, pentru un <strong>kit accesorii foto pentru începători</strong>, trepiedul e prioritar. De ce? Pentru ca te invata sa gandesti compozitia, sa astepti momentul potrivit. Monopiedul e mai mult un ajutor tehnic. Poti sa incepi cu un trepied decent, care sa nu te coste o avere, si daca simti nevoia de mobilitate maxima, mai tarziu poti lua si un monopied. Dar daca ai de ales, trepiedul iti deschide mai multe usi in fotografie la inceput.</p>
     <p class="mb-4">Un trepied bun, dar nu de top, il gasesti pe la 250-400 de lei. Un monopied, unul decent, de la 150 de lei in sus. Deci, in functie de buget si de ce vrei sa fotografiezi, poti sa iei ambele, dar trepiedul vine primul.</p>
@@ -221,7 +234,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Greseli de evitat cand iti cumperi accesorii foto</h2>
     <p class="mb-4">Na, ca am ajuns si la partea cu ce sa NU faci cand iti cauti un <strong>kit accesorii foto pentru începători</strong>. Prima greseala, si cea mai frecventa: sa cumperi tot ce vezi la oferta. Nu, nu-ti trebuie un filtru UV 'pentru protectie' care costa 20 de lei. De multe ori, alea fac mai mult rau pozei decat bine. Daca vrei filtre, ia-le de la branduri cunoscute, gen Hoya, K&F Concept sau Nisi, si alea sunt scumpe.</p>
     <p class="mb-4">A doua greseala: sa crezi ca un accesoriu scump e automat bun. Nu intotdeauna. Am vazut eu genii care dau 1000 de lei pe un trepied si tot poze tremurate fac, pentru ca nu stiu sa il foloseasca. Incepe cu ce iti permite buzunarul, dar alege inteligent. Cauta review-uri, compara. Nu te baza doar pe ce scrie pe ambalaj.</p>
-    <p class="mb-4">Alta chestie: sa ignori compatibilitatea. E ca si cum ai lua o cheie franceza sa repari un ceas elvetian. Daca ai un aparat mirrorless Fuji, nu-ti lua un trepied sau o geanta gandita pentru un DSLR Canon. Poate se potrivesc la o adica, dar nu sunt optimizate. Verifica specificatiile.</p>
+    <p class="mb-4">Alta chestie: sa ignori compatibilitatea. E ca si cum ai lua o cheie franceza sa repari un ceas elvetian. Daca ai un <a href="/aparat-mirrorless-cu-autofocus-rapid/" class="interlink">aparat mirrorless</a> Fuji, nu-ti lua un trepied sau o geanta gandita pentru un DSLR Canon. Poate se potrivesc la o adica, dar nu sunt optimizate. Verifica specificatiile.</p>
     <p class="mb-4">Si ultima, dar nu cea din urma: sa uiti de intretinere. Un <strong>kit accesorii foto pentru începători</strong> vine si cu responsabilitatea de a-l pastra. Nu lasa geanta cu aparatul in soare arzator sau in ploaie. Curata lentila regulat. Nu o freca cu tricoul, ca o zgarii. Asta e ca si cum ti-ai lua masina de lux si ai lasa-o sa rugineasca in parcare.</p>
     <p class="mb-4">Daca eviti astea, ai sanse mult mai mari sa ai un <strong>kit accesorii foto pentru începători</strong> care sa te bucure mult timp.</p>
     
@@ -378,5 +391,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="kit-accesorii-foto-pentru-incepatori"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

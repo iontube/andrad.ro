@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -184,20 +197,20 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Introducere în Lumea Curățeniei Smart</h2>
     <p class="mb-4">Să fim sinceri, cine nu visează la o casă curată lună, fără efort susținut? Vrem să ne bucurăm de timpul liber, nu să-l petrecem aspirând și spălând. În ultimii ani, roboții aspiratori au evoluat de la gadgeturi interesante la ajutoare esențiale în gospodărie, iar modelele premium, mai ales cele cu golire automată, redefinesc complet conceptul de curățenie.</p>
-    <p class="mb-4">Nu mai e vorba doar de un aspirator care merge singur. Acum vorbim despre sisteme inteligente, autonome, capabile să cartografieze spațiul, să evite obstacolele și să gestioneze singure colectarea prafului. E ca și cum ai avea un majordom dedicat curățeniei, mereu gata de treabă, fără să ceară pauze sau cafea.</p>
-    <p class="mb-4">În acest material, vom explora ce înseamnă cu adevărat un robot aspirator premium cu golire automată, ce tehnologii îl fac excepțional și care sunt modelele de top care merită atenția ta. Pregătește-te să descoperi cum poți transforma rutina de curățenie într-o experiență lipsită de griji.</p>
+    <p class="mb-4">Nu mai e vorba doar de un aspirator care merge singur. Acum vorbim despre sisteme <a href="/frigider-cu-compartimente-inteligente/" class="interlink">inteligente</a>, autonome, capabile să cartografieze spațiul, să evite obstacolele și să gestioneze singure colectarea prafului. E ca și cum ai avea un majordom dedicat curățeniei, mereu gata de treabă, fără să ceară pauze sau cafea.</p>
+    <p class="mb-4">În acest material, vom explora ce înseamnă cu adevărat un robot <a href="/aspirator-robot-compact-pentru-apartamente/" class="interlink">aspirator</a> premium cu golire automată, ce tehnologii îl fac excepțional și care sunt modelele de top care merită atenția ta. Pregătește-te să descoperi cum poți transforma rutina de curățenie într-o experiență lipsită de griji.</p>
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">De ce un robot aspirator premium cu golire automată?</h2>
-    <p class="mb-4">Atunci când vorbim de un robot aspirator premium, discutăm despre o investiție în confort și eficiență. Principala diferență față de modelele standard este nivelul de autonomie și performanță. Un robot premium nu doar aspiră, el înțelege spațiul, se adaptează la el și oferă o curățenie mult mai profundă. Cu o putere de aspirare superioară și algoritmi avansați de navigare, aceste aparate se descurcă impecabil pe diverse suprafețe, de la gresie și parchet, la covoare groase.</p>
+    <p class="mb-4">Atunci când vorbim de un robot aspirator premium, discutăm despre o investiție în confort și eficiență. Principala diferență față de modelele standard este nivelul de <a href="/laptop-gaming-cu-autonomie-mare/" class="interlink">autonomie</a> și performanță. Un robot premium nu doar aspiră, el înțelege spațiul, se adaptează la el și oferă o curățenie mult mai profundă. Cu o putere de aspirare superioară și algoritmi avansați de navigare, aceste aparate se descurcă impecabil pe diverse suprafețe, de la gresie și parchet, la covoare groase.</p>
     <p class="mb-4">Funcția de golire automată este, probabil, cel mai mare argument pentru upgrade. Imaginează-ți că robotul tău curăță zilnic, dar tu interacționezi cu el o dată pe lună, doar pentru a arunca sacul de praf din stația de andocare. E un plus de igienă, pentru că nu mai intri în contact direct cu murdăria colectată, și un plus de comoditate, eliminând grija golirii manuale a recipientului după fiecare sesiune de curățenie. Această funcționalitate te eliberează cu adevărat de una dintre cele mai plictisitoare sarcini casnice.</p>
     <p class="mb-4">Dincolo de aspectele practice, un robot premium cu golire automată aduce o senzație reală de liniște. Știi că locuința ta e mereu curată, fără să miști un deget. Este o soluție ideală pentru persoanele ocupate, pentru familiile cu animale de companie sau cu alergii, oferind un mediu de viață mai sănătos și mai plăcut, cu efort minim din partea ta.</p>
     
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce face un robot aspirator cu adevărat "premium"?</h2>
-    <p class="mb-4">Un robot aspirator nu devine premium doar prin preț. E o combinație de inovație, materiale de calitate și o serie de funcții care îl diferențiază clar. Să analizăm componentele cheie care definesc această clasă de dispozitive.</p>
+    <p class="mb-4">Un robot <a href="/aspirator-cu-sac-automat-de-colectare/" class="interlink">aspirator</a> nu devine premium doar prin preț. E o combinație de inovație, materiale de calitate și o serie de funcții care îl diferențiază clar. Să analizăm componentele cheie care definesc această clasă de dispozitive.</p>
     
   </section>
   <section id="sectiune-4" class="mb-10">
@@ -386,5 +399,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-robot-aspirator-premium-cu-golire-automata"
+      currentCategory="smart-home"
+      articles={allArticles}
+    />
   </article>
 </Layout>

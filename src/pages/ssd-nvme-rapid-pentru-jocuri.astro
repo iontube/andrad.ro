@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -156,9 +169,9 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     
     <p class="mb-4">Dacă ești pasionat de jocuri, știi cât de frustrant poate fi să aștepți minute în șir la ecranele de loading. Upgrade-ul la un <strong>SSD NVMe rapid pentru jocuri</strong> nu mai este un lux, ci o necesitate pentru oricine își dorește o experiență fluidă și imersivă. Viteza de transfer a datelor pe care o oferă un astfel de dispozitiv revoluționează modul în care interacționezi cu titlurile tale preferate, reducând drastic timpii de încărcare și eliminând stuttering-ul cauzat de limitările stocării tradiționale.</p>
-    <p class="mb-4">În prezent, piața abundă în opțiuni de stocare, dar pentru gaming, performanța este rege. Un SSD NVMe se conectează direct la placa de bază prin interfața PCIe, ocolind SATA-ul mai lent, ceea ce se traduce prin viteze de citire și scriere secvențială și aleatorie mult superioare. Acest salt de performanță este esențial pentru jocurile moderne, care încarcă texturi de înaltă rezoluție, modele complexe și nivele vaste într-un ritm alert. Un SSD NVMe rapid pentru jocuri este investiția cheie pentru a te bucura la maximum de potențialul sistemului tău.</p>
+    <p class="mb-4">În prezent, piața abundă în opțiuni de stocare, dar <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">pentru gaming</a>, performanța este rege. Un SSD NVMe se conectează direct la placa de bază prin interfața PCIe, ocolind SATA-ul mai lent, ceea ce se traduce prin viteze de citire și scriere secvențială și aleatorie mult superioare. Acest salt de performanță este esențial pentru jocurile moderne, care încarcă texturi de înaltă rezoluție, modele complexe și nivele vaste într-un ritm alert. Un SSD NVMe rapid pentru jocuri este investiția cheie pentru a te bucura la maximum de potențialul sistemului tău.</p>
     <p class="mb-4">Navigarea printre numeroasele modele și specificații poate părea intimidantă, dar scopul este simplu: să găsești o unitate de stocare care să țină pasul cu cerințele jocurilor actuale și viitoare. Nu vorbim doar despre viteza brută, ci și despre rezistența în timp și fiabilitatea datelor. Alegerea corectă a unui SSD NVMe rapid pentru jocuri îți va aduce beneficii pe termen lung, transformând sesiunile de gaming dintr-o așteptare pasivă într-o acțiune continuă.</p>
-    <p class="mb-4">Acest articol își propune să te ghideze prin labirintul specificațiilor tehnice și al recomandărilor, ajutându-te să identifici cel mai bun SSD NVMe rapid pentru jocuri care să se potrivească nevoilor și bugetului tău. Vom explora ce anume face un SSD NVMe excelent pentru gaming, ce specificații să urmărești și vom menționa câteva modele care au demonstrat performanțe remarcabile.</p>
+    <p class="mb-4">Acest articol își propune să te ghideze prin labirintul specificațiilor tehnice și al recomandărilor, ajutându-te să identifici cel mai bun SSD NVMe rapid pentru jocuri care să se potrivească nevoilor și bugetului tău. Vom explora ce anume face un SSD NVMe excelent <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">pentru gaming</a>, ce specificații să urmărești și vom menționa câteva modele care au demonstrat performanțe remarcabile.</p>
     
     
   </section>
@@ -166,8 +179,8 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce face un SSD NVMe atât de rapid pentru jocuri?</h2>
     <p class="mb-4">Principalul motiv pentru viteza impresionantă a unui SSD NVMe stă în interfața de conectare și protocolul de comunicare utilizat. Spre deosebire de SSD-urile SATA mai vechi, care folosesc interfața AHCI, SSD-urile NVMe (Non-Volatile Memory Express) comunică direct cu procesorul prin magistrala PCIe (Peripheral Component Interconnect Express). Această conexiune directă elimină bottleneck-urile inerente ale interfeței SATA, permițând un flux de date mult mai rapid și cu o latență redusă.</p>
     <p class="mb-4">Protocolul NVMe a fost proiectat special pentru memoriile flash de tip NAND, optimizând gestionarea comenzilor și paralelismul. Aceasta înseamnă că SSD-ul poate gestiona un număr mult mai mare de operațiuni de citire/scriere simultan, ceea ce este crucial pentru jocurile moderne. Jocurile solicită constant accesarea unor fișiere mari și disparate, iar un SSD NVMe rapid pentru jocuri excelează în acest scenariu, spre deosebire de un HDD tradițional sau chiar de un SSD SATA.</p>
-    <p class="mb-4">Vitezele de citire și scriere secvențială sunt adesea cele mai promovate cifre, dar pentru gaming, performanța în citirea aleatorie a fișierelor mici este la fel de importantă. Aceasta influențează direct timpii de încărcare a texturilor, a modelor 3D și a altor elemente ale jocului. Un SSD NVMe de înaltă performanță va avea cifre impresionante la ambele capitole, asigurând o experiență de joc fluidă, fără pauze neașteptate.</p>
-    <p class="mb-4">Pe lângă viteză, longevitatea și fiabilitatea sunt aspecte de luat în considerare. SSD-urile NVMe folosesc memorie flash NAND, care are un număr limitat de cicluri de scriere. Producătorii specifică un TBW (Total Bytes Written) sau DWPD (Drive Writes Per Day) pentru a indica durata de viață estimată a unității. Pentru gameri, un TBW ridicat este un indicator bun al rezistenței în timp, chiar și în condiții de utilizare intensă, transformând un SSD NVMe rapid pentru jocuri într-o investiție pe termen lung.</p>
+    <p class="mb-4">Vitezele de citire și scriere secvențială sunt adesea cele mai promovate cifre, dar <a href="/scaun-ergonomic-cu-suport-lombar-pentru-gaming/" class="interlink">pentru gaming</a>, performanța în citirea aleatorie a fișierelor mici este la fel de importantă. Aceasta influențează direct timpii de încărcare a texturilor, a modelor 3D și a altor elemente ale jocului. Un SSD NVMe de înaltă performanță va avea cifre impresionante la ambele capitole, asigurând o experiență de joc fluidă, fără pauze neașteptate.</p>
+    <p class="mb-4">Pe lângă viteză, longevitatea și fiabilitatea sunt aspecte de luat în considerare. SSD-urile NVMe folosesc memorie flash NAND, care are un număr limitat de cicluri de scriere. Producătorii specifică un TBW (Total Bytes Written) sau DWPD (Drive Writes Per Day) pentru a indica durata de viață estimată a unității. <a href="/casti-over-ear-cu-noise-canceling-pentru-gameri/" class="interlink">Pentru gameri</a>, un TBW ridicat este un indicator bun al rezistenței în timp, chiar și în condiții de utilizare intensă, transformând un SSD NVMe rapid pentru jocuri într-o investiție pe termen lung.</p>
     
     
   </section>
@@ -330,5 +343,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="ssd-nvme-rapid-pentru-jocuri"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

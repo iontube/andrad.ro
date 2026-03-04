@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -157,10 +170,10 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Introducere</h2>
-    <p class="mb-4">În peisajul tehnologic actual, căutarea unui <strong>laptop ultra-subțire pentru gaming și editare</strong> devine o misiune din ce în ce mai populară. Mulți dintre noi aspiră să dețină un dispozitiv care să nu facă rabat de la performanță, dar care să fie în același timp suficient de portabil pentru a ne însoți oriunde. Această categorie de laptopuri promite să îmbine puterea necesară pentru cele mai solicitante jocuri și aplicații de creație cu un design elegant și ușor de transportat, reprezentând astfel un compromis inteligent pentru utilizatorii moderni. Vom explora ce anume face un astfel de laptop să fie special și cum să alegi cel mai bun model pentru nevoile tale specifice.</p>
+    <p class="mb-4">În peisajul tehnologic actual, căutarea unui <strong>laptop ultra-subțire pentru gaming și editare</strong> devine o misiune din ce în ce mai populară. Mulți dintre noi aspiră să dețină un dispozitiv care să nu facă rabat de la performanță, dar care să fie în același timp suficient de <a href="/monitor-portabil-pentru-gaming-in-deplasare/" class="interlink">portabil pentru</a> a ne însoți oriunde. Această categorie de laptopuri promite să îmbine puterea necesară pentru cele mai solicitante jocuri și aplicații de creație cu un design elegant și ușor de transportat, reprezentând astfel un compromis inteligent pentru utilizatorii moderni. Vom explora ce anume face un astfel de laptop să fie special și cum să alegi cel mai bun model pentru nevoile tale specifice.</p>
     <p class="mb-4">Tradițional, laptopurile de gaming erau sinonime cu volumul și greutatea, iar cele ultra-subțiri erau adesea limitate în ceea ce privește puterea de procesare. Acum, însă, producătorii au reușit să stăpânească arta de a integra componente de înaltă performanță în șasiuri incredibil de subțiri și ușoare. Acest salt tehnologic deschide noi orizonturi pentru profesioniștii creativi și pasionații de jocuri care nu vor să fie constrânși de un birou. Alegerea unui laptop care să exceleze atât în gaming, cât și în editare, într-un pachet compact, necesită o înțelegere aprofundată a specificațiilor și a tehnologiilor disponibile pe piață.</p>
-    <p class="mb-4">Nevoia de a jongla între sarcini consumatoare de resurse, cum ar fi redarea grafică complexă în jocuri sau randarea fișierelor video 4K, și mobilitatea sporită a unui dispozitiv ușor, a dus la apariția unor soluții inovatoare. Un <strong>laptop ultra-subțire pentru gaming și editare</strong> nu mai este un vis, ci o realitate accesibilă, care oferă o flexibilitate remarcabilă. Vom diseca aspectele cheie pe care trebuie să le ai în vedere, de la tipurile de procesoare și plăci video, la calitatea ecranului și soluțiile de răcire, pentru a te asigura că faci o investiție inteligentă. Această explorare te va ajuta să navighezi prin multitudinea de opțiuni și să identifici acel <strong>laptop ultra-subțire pentru gaming și editare</strong> care se potrivește perfect stilului tău de viață.</p>
-    <p class="mb-4">Înțelegerea cerințelor specifice fiecărei sarcini este crucială. Gaming-ul solicită putere brută pentru rate de cadre ridicate și detalii grafice impresionante, în timp ce editarea video necesită o gestionare eficientă a memoriei RAM, un stocare rapidă și o precizie a culorilor pe ecran. Un <strong>laptop ultra-subțire pentru gaming și editare</strong> trebuie să balanseze aceste nevoi, integrând tehnologii de ultimă generație într-un format compact. Vom detalia cum diferitele componente interacționează pentru a oferi performanța dorită, fără a compromite portabilitatea sau designul estetic.</p>
+    <p class="mb-4">Nevoia de a jongla între sarcini consumatoare de resurse, cum ar fi redarea grafică complexă în jocuri sau randarea fișierelor video 4K, și mobilitatea sporită a unui dispozitiv ușor, a dus la apariția unor soluții inovatoare. Un <strong>laptop ultra-subțire <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">pentru gaming</a> și editare</strong> nu mai este un vis, ci o realitate accesibilă, care oferă o flexibilitate remarcabilă. Vom diseca aspectele cheie pe care trebuie să le ai în vedere, de la tipurile de procesoare și plăci video, la calitatea ecranului și soluțiile de răcire, pentru a te asigura că faci o investiție inteligentă. Această explorare te va ajuta să navighezi prin multitudinea de opțiuni și să identifici acel <strong>laptop ultra-subțire pentru gaming și editare</strong> care se potrivește perfect stilului tău de viață.</p>
+    <p class="mb-4">Înțelegerea cerințelor specifice fiecărei sarcini este crucială. Gaming-ul solicită putere brută pentru rate de cadre ridicate și detalii grafice impresionante, în timp ce editarea video necesită o gestionare eficientă a memoriei RAM, un stocare rapidă și o precizie a culorilor pe ecran. Un <strong>laptop ultra-subțire <a href="/scaun-ergonomic-cu-suport-lombar-pentru-gaming/" class="interlink">pentru gaming</a> și editare</strong> trebuie să balanseze aceste nevoi, integrând tehnologii de ultimă generație într-un format compact. Vom detalia cum diferitele componente interacționează pentru a oferi performanța dorită, fără a compromite portabilitatea sau designul estetic.</p>
     
     
   </section>
@@ -222,7 +235,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Anume Îl Definește ca un Laptop 'Ultra-Subțire'?</h2>
     <p class="mb-4">Termenul „ultra-subțire” în contextul unui <strong>laptop ultra-subțire pentru gaming și editare</strong> se referă la un design compact, cu o grosime și o greutate semnificativ reduse comparativ cu laptopurile tradiționale, inclusiv cele de gaming. În general, laptopurile considerate ultra-subțiri au o grosime sub 20mm și cântăresc sub 2 kg. Această estetică minimalistă și portabilitatea sporită sunt caracteristici definitorii, care îl diferențiază de modelele mai voluminoase și mai grele.</p>
     <p class="mb-4">Acest design compact impune, însă, anumite compromisuri tehnologice, în special în ceea ce privește sistemul de răcire și, uneori, numărul de porturi. Producătorii trebuie să inoveze constant pentru a integra componente de înaltă performanță, cum ar fi GPU-uri dedicate și procesoare puternice, în șasiuri atât de restrânse, fără a sacrifica performanța susținută. Provocarea este de a echilibra puterea cu eficiența termică și cu dimensiunile reduse.</p>
-    <p class="mb-4">Un <strong>laptop ultra-subțire pentru gaming și editare</strong> se distinge prin utilizarea de materiale premium, cum ar fi aluminiul sau magneziul, care oferă rezistență structurală și o disipare eficientă a căldurii, dar și un aspect premium. Designul este adesea elegant și minimalist, cu ecrane cu rame subțiri (bezel-uri) pentru a maximiza suprafața de vizualizare într-un amprentă fizică redusă. Aceste caracteristici îl fac un dispozitiv atractiv atât pentru profesioniști, cât și pentru entuziaștii de gaming care apreciază estetica.</p>
+    <p class="mb-4">Un <strong>laptop ultra-subțire pentru gaming și editare</strong> se distinge prin utilizarea de materiale premium, cum ar fi aluminiul sau magneziul, care oferă rezistență structurală și o disipare eficientă a căldurii, dar și un aspect premium. Designul este adesea elegant și minimalist, cu ecrane cu rame subțiri (bezel-uri) pentru a maximiza suprafața de vizualizare într-un amprentă fizică redusă. Aceste caracteristici îl fac un dispozitiv atractiv atât <a href="/drona-cu-filmare-6k-pentru-profesionisti/" class="interlink">pentru profesioniști</a>, cât și pentru entuziaștii de gaming care apreciază estetica.</p>
     <p class="mb-4">Este important să înțelegi că, deși un laptop este „ultra-subțire”, el nu trebuie să fie neapărat limitat în performanță. Progresele tehnologice au permis integrarea unor componente de gaming și editare de nivel înalt în aceste formate compacte. Prin urmare, un <strong>laptop ultra-subțire pentru gaming și editare</strong> de calitate va oferi un echilibru remarcabil între portabilitate, performanță și stil, adaptându-se perfect nevoilor dinamice ale utilizatorilor moderni.</p>
     
     
@@ -332,5 +345,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="laptop-ultra-subtire-pentru-gaming-si-editare"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

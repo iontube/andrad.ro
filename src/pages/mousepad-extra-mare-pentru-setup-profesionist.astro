@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -182,7 +195,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Materiale și Suprafețe: Secretul Preciziei</h2>
-    <p class="mb-4">Tipul de material din care este fabricat suprafața mousepad-ului și textura sa sunt elemente definitorii pentru performanța acestuia. Majoritatea mousepad-urilor extra mari pentru setup profesionist utilizează materiale textile, precum țesăturile fine sau microfibra. Acestea oferă un echilibru excelent între viteză și control, permițând mouse-ului să alunece ușor, dar oferind în același timp suficientă aderență pentru mișcări precise și opriri bruște.</p>
+    <p class="mb-4">Tipul de material din care este fabricat suprafața mousepad-ului și textura sa sunt elemente definitorii <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">pentru performanța</a> acestuia. Majoritatea mousepad-urilor extra mari pentru setup profesionist utilizează materiale textile, precum țesăturile fine sau microfibra. Acestea oferă un echilibru excelent între viteză și control, permițând mouse-ului să alunece ușor, dar oferind în același timp suficientă aderență pentru mișcări precise și opriri bruște.</p>
     <p class="mb-4">Există două tipuri principale de suprafețe textile: Speed (viteză) și Control (control). Suprafețele "Speed" sunt mai netede, cu o țesătură fină, permițând mișcări rapide și o alunecare fluidă, ideale pentru jocurile care necesită reacții fulgerătoare. Suprafețele "Control", pe de altă parte, au o textură mai pronunțată, oferind o aderență sporită și o precizie sporită pentru mișcări fine și controlate, utile în jocurile de strategie sau în sarcinile de design grafic unde precizia este crucială.</p>
     <p class="mb-4">Pe lângă suprafața textilă, baza mousepad-ului joacă un rol crucial. Majoritatea modelelor de top folosesc cauciuc natural sau spumă de cauciuc de înaltă densitate. Acest material asigură că mousepad-ul rămâne ferm pe birou, prevenind alunecarea indiferent de presiunea aplicată sau de mișcările rapide. O bază solidă, groasă (de obicei între 2-5 mm), contribuie și la confort, amortizând ușor mișcările și oferind o suprafață mai consistentă.</p>
     <p class="mb-4">Unele mousepad-uri pot avea și suprafețe hibride sau chiar rigide (din aluminiu sau plastic dur), deși acestea sunt mai puțin comune în categoria "extra mare" pentru uz general, fiind mai degrabă specifice unor nișe de gaming. Pentru un mousepad extra mare pentru setup profesionist, țesătura de înaltă calitate, combinată cu o bază de cauciuc solidă, este de obicei cea mai bună alegere, oferind o experiență echilibrată și durabilă. Branduri precum Artisan, Zowie (parte din BenQ) sau HyperX sunt cunoscute pentru calitatea materialelor folosite în mousepad-urile lor.</p>
@@ -191,7 +204,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Beneficii Extinse Pentru Productivitate și Gaming</h2>
-    <p class="mb-4">Un mousepad extra mare pentru setup profesionist transcende simpla funcționalitate de a susține mouse-ul; el aduce beneficii tangibile atât în mediul de gaming, cât și în cel profesional. Pentru gameri, spațiul generos elimină complet grija de a ieși de pe suprafața de acțiune în momente critice. Fie că joci un FPS rapid unde mișcările ample ale brațului sunt esențiale pentru țintire, fie că ești într-un joc RTS unde controlul precis al unităților este vital, un mousepad mare îți oferă libertatea necesară pentru a excela.</p>
+    <p class="mb-4">Un mousepad extra mare pentru setup profesionist transcende simpla funcționalitate de a susține mouse-ul; el aduce beneficii tangibile atât în mediul de gaming, cât și în cel profesional. <a href="/casti-over-ear-cu-noise-canceling-pentru-gameri/" class="interlink">Pentru gameri</a>, spațiul generos elimină complet grija de a ieși de pe suprafața de acțiune în momente critice. Fie că joci un FPS rapid unde mișcările ample ale brațului sunt esențiale pentru țintire, fie că ești într-un joc RTS unde controlul precis al unităților este vital, un mousepad mare îți oferă libertatea necesară pentru a excela.</p>
     <p class="mb-4">În contextul productivității, un mousepad extins poate îmbunătăți semnificativ eficiența. Poți poziționa mouse-ul și tastatura într-un unghi mai ergonomic, optimizând postura și reducând riscul de oboseală sau dureri. Spațiul suplimentar permite și organizarea mai eficientă a spațiului de lucru, având loc pentru a glisa mouse-ul pe suprafețe mai mari pentru a accesa rapid comenzi sau meniuri, fără a fi nevoit să ridici mouse-ul.</p>
     <p class="mb-4">Integrarea unui mousepad extra mare pentru setup profesionist poate contribui și la protejarea suprafeței biroului. Fie că este vorba de zgârieturi cauzate de baza mouse-ului, de pete de cafea sau de alte accidente, mousepad-ul acționează ca o barieră protectoare, păstrând biroul tău în stare perfectă. Acest aspect este deosebit de important pentru cei care investesc în mobilier de calitate.</p>
     <p class="mb-4">Pe lângă aceste beneficii practice, un mousepad mare poate adăuga și o notă estetică setup-ului tău. Multe modele vin cu designuri minimaliste, elegante sau cu grafică vibrantă, transformând un simplu accesoriu într-o piesă centrală a configurației tale. Alegerea unui mousepad extra mare pentru setup profesionist este, prin urmare, o decizie multifacțetată, care impactează pozitiv atât performanța, cât și confortul și aspectul general al spațiului tău de lucru.</p>
@@ -220,8 +233,8 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-8" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Recomandări de Branduri și Serii Populare</h2>
     <p class="mb-4">Pe piața românească, există o serie de branduri recunoscute pentru calitatea și varietatea mousepad-urilor extra mari pe care le oferă, adresându-se atât gamerilor pasionați, cât și profesioniștilor. SteelSeries, de exemplu, este un nume de referință în gaming, iar seriile lor precum QcK Edge XL sau QcK Heavy XL oferă suprafețe consistente și durabilitate sporită, fiind apreciate pentru echilibrul dintre viteză și control.</p>
-    <p class="mb-4">Razer, un alt gigant în industria gaming-ului, propune modele precum Razer Goliathus Extended Chroma, care combină o suprafață de joc optimizată cu iluminare RGB personalizabilă, satisfăcând atât nevoile de performanță, cât și pe cele estetice. De asemenea, seria Razer Sphex V3 oferă o variantă mai subțire, dar totuși generoasă, pentru cei care preferă un profil mai discret.</p>
-    <p class="mb-4">Corsair este un alt producător de încredere, cu modele precum Corsair MM300 sau MM500, care se remarcă prin suprafețele rezistente la uzură și prin marginile cusute pentru o durabilitate sporită. Acestea sunt construite să reziste la sesiuni lungi de utilizare intensă, oferind o bază solidă pentru mișcările mouse-ului.</p>
+    <p class="mb-4">Razer, un alt gigant în industria gaming-ului, propune modele precum Razer Goliathus Extended Chroma, care combină o suprafață de joc optimizată cu <a href="/periferice-cu-iluminare-rgb-sincronizata/" class="interlink">iluminare RGB</a> personalizabilă, satisfăcând atât nevoile de performanță, cât și pe cele estetice. De asemenea, seria Razer Sphex V3 oferă o variantă mai subțire, dar totuși generoasă, pentru cei care preferă un profil mai discret.</p>
+    <p class="mb-4">Corsair este un alt producător de încredere, cu modele precum Corsair MM300 sau MM500, care se remarcă prin suprafețele <a href="/boxe-outdoor-rezistente-la-ploaie/" class="interlink">rezistente la</a> uzură și prin marginile cusute pentru o durabilitate sporită. Acestea sunt construite să reziste la sesiuni lungi de utilizare intensă, oferind o bază solidă pentru mișcările mouse-ului.</p>
     <p class="mb-4">Nu putem omite nici Glorious PC Gaming Race, cunoscuți pentru mousepad-urile lor "hardcore", precum seria Glorious XXXL Extended. Acestea sunt apreciate pentru suprafețele lor netede, ce permit mișcări extrem de rapide, și pentru dimensiunile lor impunătoare, care acoperă o mare parte din birou. Pentru cei care caută varietate în texturi și performanță de nișă, branduri precum Zowie sau Artisan (deși mai greu de găsit în România) sunt adesea menționate în discuțiile despre cele mai bune mousepad-uri de gaming.</p>
     <p class="mb-4">Investiția într-un mousepad extra mare pentru setup profesionist de la un brand reputabil asigură o calitate superioară a materialelor, o construcție durabilă și o performanță consecventă. Este recomandat să cercetezi recenziile specifice fiecărui model și să alegi unul care se aliniază cel mai bine cerințelor tale de gaming sau de productivitate.</p>
     
@@ -332,5 +345,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="mousepad-extra-mare-pentru-setup-profesionist"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

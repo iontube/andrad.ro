@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -157,22 +170,22 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">De Ce Standardul 4K Este Indispensabil Azi în Producția Video?</h2>
-    <p class="mb-4">Lumea producției video evoluează rapid, iar standardul 4K nu mai este un moft, ci o necesitate. Clienții, platformele de streaming și publicul se așteaptă la o calitate vizuală impecabilă. O cameră video profesională 4K nu oferă doar o rezoluție superioară, ci deschide uși spre fluxuri de lucru creative mult mai flexibile. Imaginează-ți posibilitatea de a decupa și stabiliza cadre fără a pierde din calitatea finală a livrabilei Full HD, sau de a oferi o imagine detaliată care captează fiecare nuanță.</p>
+    <p class="mb-4">Lumea producției video evoluează rapid, iar standardul 4K nu mai este un moft, ci o necesitate. Clienții, platformele de streaming și publicul se așteaptă la o calitate vizuală impecabilă. O cameră video <a href="/fier-de-calcat-vertical-profesional/" class="interlink">profesional</a>ă 4K nu oferă doar o rezoluție superioară, ci deschide uși spre fluxuri de lucru creative mult mai flexibile. Imaginează-ți posibilitatea de a decupa și stabiliza cadre fără a pierde din calitatea finală a livrabilei Full HD, sau de a oferi o imagine detaliată care captează fiecare nuanță.</p>
     <p class="mb-4">Investiția într-o cameră 4K profesională este o decizie strategică ce îți pregătește echipamentul pentru viitor. Chiar dacă livrările tale curente sunt predominant Full HD, înregistrarea în 4K îți oferă un spațiu de manevră incredibil în post-producție. Poți reîncadra, aplica zoom digital, sau chiar corecta mici erori de încadrare, păstrând o calitate superioară imaginii finale. Acest lucru se traduce prin eficiență crescută și o libertate creativă extinsă, esențiale în orice proiect serios.</p>
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Contează Cu Adevărat la O Cameră Video 4K Profesională?</h2>
-    <p class="mb-4">Atunci când cauți cea mai bună cameră video profesională 4K, nu te uita doar la rezoluție. Există o multitudine de factori care contribuie la performanța generală și la adaptabilitatea unei camere la diverse scenarii de producție. De la dimensiunea senzorului la tipul de codec și dynamic range, fiecare detaliu influențează calitatea imaginii și flexibilitatea în post-producție.</p>
+    <p class="mb-4">Atunci când cauți cea mai bună cameră video profesională 4K, nu te uita doar la rezoluție. Există o multitudine de factori care contribuie la <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanța</a> generală și la adaptabilitatea unei camere la diverse scenarii de producție. De la dimensiunea senzorului la tipul de codec și dynamic range, fiecare detaliu influențează calitatea imaginii și flexibilitatea în post-producție.</p>
     <p class="mb-4">Senzorul este inima oricărei camere. Un senzor Full-Frame (FX) sau Super 35 (APS-C) oferă adesea performanțe superioare în condiții de lumină scăzută și un control mai bun al profunzimii de câmp, creând acel "look cinematografic" mult dorit. Montura obiectivului este un alt aspect vital – asigură-te că este compatibilă cu obiectivele pe care le deții deja sau cu cele pe care intenționezi să le achiziționezi. Standarde precum Sony E-mount, Canon RF, sau Micro Four Thirds oferă ecosisteme vaste de lentile.</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Codecuri, Rata de Biți și Dynamic Range</h3>
     <p class="mb-4">Calitatea imaginii brute este definită de codecuri și rata de biți. Codecurile precum ProRes, Blackmagic RAW (BRAW) sau XAVC-I oferă o compresie minimă și păstrează o cantitate mare de informație, esențială pentru color grading. O înregistrare internă 10-bit 4:2:2 sau chiar 12-bit oferă o paletă de culori mult mai bogată și o mai mare toleranță la manipulare.</p>
-    <p class="mb-4">Dynamic range-ul, adică diferența dintre cele mai luminoase și cele mai întunecate zone pe care camera le poate captura, este crucial. Camerele profesionale oferă adesea 12-15 stopuri de dynamic range, utilizând profile Log (S-Log de la Sony, C-Log de la Canon, V-Log de la Panasonic). Acestea înregistrează o imagine "plat", necontrastată, care maximizează informația din umbre și lumini, permițând o gradare de culoare precisă și controlată în post-producție.</p>
+    <p class="mb-4">Dynamic range-ul, adică diferența dintre cele mai luminoase și cele mai întunecate zone pe care camera le poate captura, este crucial. Camerele <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">profesionale</a> oferă adesea 12-15 stopuri de dynamic range, utilizând profile Log (S-Log de la Sony, C-Log de la Canon, V-Log de la Panasonic). Acestea înregistrează o imagine "plat", necontrastată, care maximizează informația din umbre și lumini, permițând o gradare de culoare precisă și controlată în post-producție.</p>
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Candidați de Top la Titlul de "Cea Mai Bună Cameră Video Profesională 4K"</h2>
-    <p class="mb-4">Identificarea "celei mai bune" camere depinde, desigur, de nevoile specifice ale fiecărui proiect. Iată însă câteva modele care excelează în categoria camerelor video profesionale 4K și care sunt recunoscute pentru performanța și fiabilitatea lor.</p>
+    <p class="mb-4">Identificarea "celei mai bune" camere depinde, desigur, de nevoile specifice ale fiecărui proiect. Iată însă câteva modele care excelează în categoria camerelor video profesionale 4K și care sunt recunoscute <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">pentru performanța</a> și fiabilitatea lor.</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Sony FX3: Compactă și Puternică</h3>
     <p class="mb-4">Sony FX3 este o cameră full-frame care combină portabilitatea cu capabilitățile cinematografice ale seriei Cinema Line. Dispune de un senzor CMOS Exmor R full-frame de 10.2 MP optimizat pentru video, înregistrează 4K până la 120fps și oferă 15+ stopuri de dynamic range. Codecurile XAVC S-I 4K și XAVC HS 4K, împreună cu S-Cinetone și S-Log3, o fac ideală pentru producții care necesită flexibilitate și un look cinematografic direct din cameră. Stabilizarea optică pe 5 axe (IBIS) este un mare avantaj pentru filmările din mână, iar XLR handle-ul inclus oferă intrări audio profesionale.</p>
@@ -301,5 +314,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cea-mai-buna-camera-video-profesionala-4k"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

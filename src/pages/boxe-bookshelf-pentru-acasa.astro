@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -158,13 +171,13 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Alegerea unor boxe bookshelf pentru acasă poate transforma radical experiența ta audio, fie că ești un meloman pasionat, un cinefil dedicat sau pur și simplu cauți o calitate superioară a sunetului pentru muzica ta preferată. Aceste incinte acustice compacte, concepute pentru a fi plasate pe rafturi, etajere sau standuri dedicate, oferă un echilibru remarcabil între performanță, dimensiuni și cost, devenind o opțiune populară pentru spațiile rezidențiale. Ele sunt adesea punctul de plecare pentru oricine dorește să iasă din tiparele sunetului redat de difuzoarele integrate în televizoare sau de sistemele audio generice.</p>
     <p class="mb-4">Pe piața din România, oferta de boxe bookshelf este extrem de variată, acoperind o gamă largă de bugete și preferințe tehnice. De la modele entry-level, perfecte pentru cei care fac primii pași în lumea audio de înaltă fidelitate, până la variante high-end, capabile să redea nuanțe subtile și dinamici impresionante, există o soluție pentru fiecare nevoie. Înțelegerea caracteristicilor esențiale și a modului în care acestea influențează performanța generală este crucială pentru a face o alegere informată. Vom explora aspectele cheie care te vor ajuta să selectezi perechea ideală de incinte acustice pentru spațiul tău.</p>
     <p class="mb-4">Acest articol își propune să te ghideze prin universul boxelor bookshelf, explicând ce anume le face speciale, la ce să te aștepți de la ele și cum să alegi modelul care se potrivește cel mai bine cerințelor tale specifice. Vom analiza de la specificațiile tehnice la considerațiile de plasare și integrare în sistemul audio existent, pentru a te asigura că investești în sunetul pe care îl meriți.</p>
-    <p class="mb-4">Indiferent dacă visezi la o imersiune totală în filme, la o redare fidelă a concertelor live sau la o experiență muzicală plină de emoție, boxele bookshelf reprezintă o soluție excelentă. Ele oferă o flexibilitate deosebită, putând fi integrate cu ușurință în diverse configurații, de la sisteme stereo simple la setup-uri home cinema mai complexe, aducând sunetul de calitate superioară direct în confortul casei tale.</p>
+    <p class="mb-4">Indiferent dacă visezi la o imersiune totală în filme, la o redare fidelă a concertelor live sau la o experiență muzicală plină de emoție, boxele bookshelf reprezintă o soluție excelentă. Ele oferă o flexibilitate deosebită, putând fi integrate cu ușurință în diverse configurații, de la sisteme stereo simple la setup-uri <a href="/home-cinema-cu-subwoofer-wireless/" class="interlink">home cinema</a> mai complexe, aducând sunetul de calitate superioară direct în confortul casei tale.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sunt Boxele Bookshelf și de ce sunt Populare?</h2>
-    <p class="mb-4">Boxele bookshelf, cunoscute și sub denumirea de incinte acustice de raft sau compacte, sunt proiectate pentru a oferi o performanță audio remarcabilă într-un pachet relativ mic. Spre deosebire de boxele de podea (floorstanding), acestea sunt concepute pentru a fi plasate pe suprafețe plane, cum ar fi etajere, birouri, comode sau pe standuri dedicate, optimizând astfel spațiul în locuință. Această versatilitate în plasare le face ideale pentru apartamente, studiouri sau camere de dimensiuni medii unde boxele mari ar putea fi incomode sau pur și simplu nepotrivite.</p>
+    <p class="mb-4">Boxele bookshelf, cunoscute și sub denumirea de incinte acustice de raft sau compacte, sunt proiectate pentru a oferi o performanță audio remarcabilă într-un pachet relativ mic. Spre deosebire de boxele de podea (floorstanding), acestea sunt concepute pentru a fi plasate pe suprafețe plane, cum ar fi etajere, birouri, comode sau pe standuri dedicate, optimizând astfel spațiul în locuință. Această versatilitate în plasare le face ideale <a href="/aspirator-robot-compact-pentru-apartamente/" class="interlink">pentru apartamente</a>, studiouri sau camere de dimensiuni medii unde boxele mari ar putea fi incomode sau pur și simplu nepotrivite.</p>
     <p class="mb-4">Popularitatea boxelor bookshelf provine din mai mulți factori. În primul rând, oferă o calitate a sunetului mult superioară față de majoritatea difuzoarelor integrate în televizoare sau de sistemele audio compacte, aducând o claritate, o profunzime și o scenă sonoră mult îmbunătățite. În al doilea rând, dimensiunile lor reduse le fac ușor de integrat estetic în orice decor, fără a domina vizual încăperea. Multe modele de boxe bookshelf dispun de finisaje elegante, care le transformă în adevărate piese de mobilier.</p>
     <p class="mb-4">Pe lângă aspectele legate de spațiu și estetică, boxele bookshelf oferă un raport excelent performanță-preț. Deși există modele high-end foarte scumpe, o mare parte din piață este ocupată de soluții accesibile care oferă o îmbunătățire semnificativă a experienței audio. Această accesibilitate, combinată cu calitatea sunetului, a contribuit la popularitatea lor în rândul audiofililor și al consumatorilor obișnuiți deopotrivă. Fie că vorbim despre muzică, filme sau jocuri, o pereche bună de boxe bookshelf poate face o diferență uriașă.</p>
     <p class="mb-4">Atunci când cauți boxe bookshelf pentru acasă, vei remarca adesea că sunt disponibile fie în configurație "pasivă", necesitând un amplificator extern, fie "activă", având amplificatorul integrat. Această distincție este importantă în funcție de sistemul audio pe care îl deții deja sau pe care intenționezi să îl achiziționezi. Boxele pasive oferă mai multă flexibilitate în personalizarea sunetului prin alegerea amplificatorului, în timp ce boxele active sunt soluții "all-in-one", mai simple de conectat și utilizat.</p>
@@ -184,7 +197,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Tipuri de Incinte Acustice pentru Boxe Bookshelf</h2>
     <p class="mb-4">Designul incintei acustice joacă un rol semnificativ în performanța boxelor bookshelf. Cel mai comun tip este incinta "bass-reflex" (sau cu port de bass), care dispune de unul sau mai multe tuburi (porturi) ce permit aerului să iasă din incintă. Aceste porturi sunt acordate la o anumită frecvență pentru a amplifica răspunsul în frecvențele joase, oferind un bas mai puternic și mai extins decât o incintă închisă de aceeași dimensiune. Multe modele populare folosesc această tehnologie pentru a oferi un sunet mai plin.</p>
     <p class="mb-4">Incintele "acustice închise" (sealed) sunt, așa cum sugerează și numele, complet sigilate, fără porturi. Acest design oferă, în general, un răspuns în frecvențele joase mai precis și mai controlat, cu o tranziție mai lină spre frecvențe mai joase, deși poate fi mai puțin "puternic" decât bass-reflex-ul. Boxele bookshelf cu incintă închisă sunt adesea preferate pentru acuratețea lor și pentru comportamentul lor mai predictibil în spații mici, unde rezonanțele pot fi o problemă. Ele sunt adesea mai ușor de amplificat.</p>
-    <p class="mb-4">Există și alte tipuri de incinte, cum ar fi cele "radiatoare pasive" (passive radiator), care folosesc un difuzor fără bobină mobilă pentru a ajuta la reproducerea frecvențelor joase, mimicând efectul unui port bass-reflex, dar fără zgomotul asociat acestuia. De asemenea, se pot întâlni și incinte "band-pass", mai complexe, care dirijează sunetul prin unul sau mai multe compartimente interne, oferind un control sporit asupra răspunsului în frecvență, dar fiind mai rare în categoria boxelor bookshelf obișnuite.</p>
+    <p class="mb-4">Există și alte tipuri de incinte, cum ar fi cele "radiatoare pasive" (passive radiator), care folosesc un difuzor fără bobină mobilă pentru a ajuta la reproducerea frecvențelor joase, mimicând efectul unui port bass-reflex, dar fără zgomotul asociat acestuia. De asemenea, se pot întâlni și incinte "band-pass", mai complexe, care dirijează sunetul prin unul sau mai multe <a href="/frigider-cu-compartimente-inteligente/" class="interlink">compartimente</a> interne, oferind un control sporit asupra răspunsului în frecvență, dar fiind mai rare în categoria boxelor bookshelf obișnuite.</p>
     <p class="mb-4">Alegerea tipului de incintă depinde de preferințele personale și de utilizarea preconizată. Dacă îți dorești un bas mai proeminent și mai "exploziv" pentru filme sau muzică electronică, un sistem bass-reflex ar putea fi mai potrivit. Dacă preferi o acuratețe sporită și un bas mai rafinat, o incintă închisă sau cu radiator pasiv ar putea fi o opțiune mai bună. Este bine să asculți, dacă este posibil, diferite tipuri de boxe bookshelf pentru a înțelege diferențele.</p>
     
     
@@ -220,7 +233,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Boxe Bookshelf Active vs. Pasive</h2>
     <p class="mb-4">Diferența fundamentală între boxele bookshelf active și cele pasive constă în prezența amplificatorului. Boxele pasive necesită un amplificator extern pentru a funcționa. Semnalul audio de la sursă (player CD, streamer, placă turnantă cu preamplificator) este trimis la amplificator, iar acesta amplifică semnalul și îl trimite la boxe prin cabluri. Această configurare oferă o flexibilitate mare în personalizarea sunetului, deoarece poți alege amplificatorul care se potrivește cel mai bine gusturilor tale și caracteristicilor boxelor.</p>
     <p class="mb-4">Pe de altă parte, boxele bookshelf active au amplificatoarele integrate direct în incintă. Acest lucru le face o soluție "all-in-one", eliminând necesitatea unui amplificator separat. Conectarea este, în general, mai simplă: sursa audio se conectează direct la boxe. Această abordare este ideală pentru cei care doresc o configurație audio simplă, compactă și performantă, fără a se complica cu achiziționarea și conectarea unui amplificator extern. Multe boxe active moderne includ și conectivitate Bluetooth sau Wi-Fi.</p>
-    <p class="mb-4">Avantajul boxelor pasive este controlul total asupra sunetului. Poți experimenta cu diferite amplificatoare pentru a găsi combinația perfectă. De asemenea, dacă un amplificator se defectează, îl poți înlocui relativ ușor. Dezavantajul este că necesită o investiție suplimentară într-un amplificator de calitate, iar spațiul ocupat crește. Boxele bookshelf pasive sunt adesea preferate de audiofilii care doresc să construiască un sistem audio personalizat.</p>
+    <p class="mb-4">Avantajul boxelor pasive este controlul total asupra sunetului. Poți experimenta cu diferite amplificatoare pentru a găsi combinația perfectă. De asemenea, dacă un amplificator se defectează, îl poți înlocui relativ ușor. Dezavantajul este că necesită o investiție suplimentară într-un amplificator de calitate, iar spațiul ocupat crește. Boxele bookshelf pasive sunt adesea preferate de audiofilii care doresc să construiască un <a href="/sistem-audio-multiroom-wireless/" class="interlink">sistem audio</a> personalizat.</p>
     <p class="mb-4">Boxele active sunt perfecte pentru utilizatorii care pun accent pe simplitate și eficiență. Ele sunt adesea mai compacte, deoarece nu necesită un amplificator separat, și pot fi o soluție excelentă pentru spații mici sau pentru cei care doresc o calitate audio superioară fără bătăi de cap. Performanța boxelor active de înaltă calitate poate fi comparabilă cu cea a sistemelor pasive cu amplificatoare dedicate. Alegerea între activ și pasiv depinde, în mare măsură, de nevoile tale specifice, de sistemul audio existent și de nivelul de complexitate dorit.</p>
     
     
@@ -330,5 +343,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="boxe-bookshelf-pentru-acasa"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

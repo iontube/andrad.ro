@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,13 +158,13 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Primul Contact: Un Monstru Modular pe Birou</h2>
-    <p class="mb-4">Am deschis cutia si am ramas cu gura cascata. Nu e vorba de un simplu PC, ci de o piesa de inginerie. Carcasa Antec P120 Crystal, aleasa pentru spatiul generos si designul minimalist, ascunde in interior o retea complexa de tuburi si componente care striga "performanta". Am montat deja cateva componente personale, un procesor Intel Core i9-13900K si o placa video NVIDIA RTX 4090, si chiar si asa, spatiul pentru custom water cooling este impresionant. Daca va ganditi la un astfel de sistem, alegeti o carcasa cu flux de aer bun si spatiu pentru radiatoare multiple, cum ar fi aceasta sau un Lian Li O11 Dynamic EVO.</p>
+    <p class="mb-4">Am deschis cutia si am ramas cu gura cascata. Nu e vorba de un simplu PC, ci de o piesa de inginerie. Carcasa Antec P120 Crystal, aleasa pentru spatiul generos si designul minimalist, ascunde in interior o retea complexa de tuburi si componente care striga "<a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanta</a>". Am montat deja cateva componente personale, un procesor Intel Core i9-13900K si o placa video NVIDIA RTX 4090, si chiar si asa, spatiul pentru custom water cooling este impresionant. Daca va ganditi la un astfel de sistem, alegeti o carcasa cu flux de aer bun si spatiu pentru radiatoare multiple, cum ar fi aceasta sau un Lian Li O11 Dynamic EVO.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Răcirea Lichidă Personalizată: Mai Mult Decât o Joacă de Copii</h2>
-    <p class="mb-4">Sincer, am avut retineri. Credeam ca e doar pentru entuziastii care vor sa arate ca au multi bani si putin timp liber. Dar am testat personal. Sistemul de la EKWB, cu pompa D5, rezervorul de 240mm si radiatoarele de 360mm, a transformat complet experienta. Temperaturile pe i9-13900K in jocuri solicitante, gen Cyberpunk 2077 pe setari ultra, nu au depasit 65 de grade Celsius. Inainte, cu un cooler pe aer Noctua NH-D15, ajungeam la 80-85 grade. Diferenta este enorma, nu doar la temperaturi, ci si la zgomot. Ventilatoarele ruleaza la turatii mult mai mici, facand sesiunile de gaming mult mai placute. Pretul unui astfel de kit EKWB, plus tuburile si lichidul, sare de 2000-2500 RON, dar merita fiecare banut daca vreti performanta maxima fara compromisuri.</p>
+    <p class="mb-4">Sincer, am avut retineri. Credeam ca e doar pentru entuziastii care vor sa arate ca au multi bani si putin timp liber. Dar am testat personal. Sistemul de la EKWB, cu pompa D5, rezervorul de 240mm si radiatoarele de 360mm, a transformat complet experienta. Temperaturile pe i9-13900K in jocuri solicitante, gen Cyberpunk 2077 pe setari ultra, nu au depasit 65 de grade Celsius. Inainte, cu un cooler pe aer Noctua NH-D15, ajungeam la 80-85 grade. Diferenta este enorma, nu doar la temperaturi, ci si la zgomot. Ventilatoarele ruleaza la turatii mult mai mici, facand sesiunile de gaming mult mai placute. Pretul unui astfel de kit EKWB, plus tuburile si lichidul, sare de 2000-2500 RON, dar merita fiecare banut daca vreti <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">performanta maxima</a> fara compromisuri.</p>
     
     
   </section>
@@ -169,7 +182,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Costuri Reale și Opțiuni de Finanțare</h2>
-    <p class="mb-4">Să fim sinceri, nu este o soluție ieftină. Un sistem complet de custom water cooling, incluzând pompa, rezervorul, radiatoarele, tuburile, fitingurile și lichidul, poate ajunge la 2000-3000 RON, sau chiar mai mult, în funcție de brand și complexitate. Adăugați la asta o carcasă de calitate (aproximativ 500-800 RON), un procesor de top (peste 3000 RON) și o placă video high-end (peste 8000 RON), și ajungem la un total de peste 15.000 RON pentru un PC de gaming de ultimă generație. Magazine precum PCGarage, Altex sau eMAG oferă componentele necesare, dar uneori este mai avantajos să căutați kituri complete de la producători precum EKWB, Corsair sau Phanteks. Dacă bugetul este o problemă, puteți începe cu un AIO de 360mm de la Arctic sau Deepcool (în jur de 500-700 RON) și să faceți upgrade-ul la custom water cooling mai târziu.</p>
+    <p class="mb-4">Să fim sinceri, nu este o soluție ieftină. Un sistem complet de custom water cooling, incluzând pompa, rezervorul, radiatoarele, tuburile, fitingurile și lichidul, poate ajunge la 2000-3000 RON, sau chiar mai mult, în funcție de brand și complexitate. Adăugați la asta o carcasă de calitate (aproximativ 500-800 RON), un procesor de top (peste 3000 RON) și o <a href="/placa-video-amd-performanta-ridicata/" class="interlink">placă video</a> high-end (peste 8000 RON), și ajungem la un total de peste 15.000 RON pentru un PC de gaming de ultimă generație. Magazine precum PCGarage, Altex sau eMAG oferă componentele necesare, dar uneori este mai avantajos să căutați kituri complete de la producători precum EKWB, Corsair sau Phanteks. Dacă bugetul este o problemă, puteți începe cu un AIO de 360mm de la Arctic sau Deepcool (în jur de 500-700 RON) și să faceți upgrade-ul la custom water cooling mai târziu.</p>
     
     
   </section>
@@ -272,5 +285,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="pc-modular-cu-racire-lichida-personalizata"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -179,11 +192,11 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Alegerea unui televizor OLED 4K implică mai mult decât simpla tehnologie de bază. Există câteva aspecte esențiale care diferențiază modelele și influențează direct experiența ta de vizionare.</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Luminozitatea și Performanța HDR</h3>
-    <p class="mb-4">Luminozitatea, măsurată în niți (nits), este crucială pentru conținutul HDR (High Dynamic Range). Modelele OLED "tradiționale" (WOLED) precum LG C3 sau Sony A80L oferă o luminozitate excelentă, de obicei în jur de 800-1000 niți pentru vârfurile HDR. Televizoarele OLED de generație nouă, cum ar fi LG G3 cu tehnologie MLA (Micro Lens Array) sau modelele QD-OLED de la Samsung (S90C, S95C) și Sony (A95L), pot depăși 1500-2000 niți, oferind o luminozitate superioară și un impact HDR mai puternic, mai ales în scenele luminoase și pentru detalii în umbre. Aceasta face ca imaginile să pară mai vii și mai apropiate de realitate.</p>
+    <p class="mb-4">Luminozitatea, măsurată în niți (nits), este crucială pentru conținutul HDR (High Dynamic Range). Modelele OLED "tradiționale" (WOLED) precum LG C3 sau Sony A80L oferă o luminozitate excelentă, de obicei în jur de 800-1000 niți pentru vârfurile HDR. Televizoarele OLED de generație nouă, cum ar fi LG G3 cu tehnologie MLA (Micro Lens Array) sau modelele QD-OLED de la Samsung (S90C, S95C) și Sony (A95L), pot depăși 1500-2000 niți, oferind o luminozitate superioară și un impact HDR mai puternic, mai ales în scenele luminoase și <a href="/lentile-macro-pentru-detalii-fine/" class="interlink">pentru detalii</a> în umbre. Aceasta face ca imaginile să pară mai vii și mai apropiate de realitate.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Procesarea Imaginii și Upscaling</h3>
     <p class="mb-4">Chip-ul de procesare al televizorului joacă un rol vital. El îmbunătățește calitatea imaginii, reduce zgomotul, fluidizează mișcarea și, foarte important, realizează upscaling-ul conținutului cu rezoluție mai mică (HD, Full HD) la 4K. Procesoare precum a9 Gen6 AI de la LG, Neural Quantum Processor 4K de la Samsung sau Cognitive Processor XR de la Sony sunt exemple de sisteme avansate care analizează și optimizează fiecare cadru, asigurând o imagine clară și detaliată chiar și din surse non-4K.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Rata de Refresh și Conectivitatea (Gaming)</h3>
-    <p class="mb-4">Pentru gameri și nu numai, rata de refresh și conectivitatea sunt esențiale. Un televizor OLED cu o rată de refresh de 120Hz este standard, oferind o mișcare fluidă. Porturile HDMI 2.1 sunt vitale, deoarece suportă 4K la 120Hz, Variable Refresh Rate (VRR) și Auto Low Latency Mode (ALLM). Aceste funcționalități reduc input lag-ul și elimină "screen tearing-ul", transformând experiența de gaming într-una excepțională. Modelele de top oferă adesea 4 porturi HDMI 2.1 complete.</p>
+    <p class="mb-4"><a href="/casti-over-ear-cu-noise-canceling-pentru-gameri/" class="interlink">Pentru gameri</a> și nu numai, rata de refresh și conectivitatea sunt esențiale. Un televizor OLED cu o rată de refresh de 120Hz este standard, oferind o mișcare fluidă. Porturile HDMI 2.1 sunt vitale, deoarece suportă 4K la 120Hz, Variable Refresh Rate (VRR) și Auto Low Latency Mode (ALLM). Aceste funcționalități reduc input lag-ul și elimină "screen tearing-ul", transformând experiența de gaming într-una excepțională. Modelele de top oferă adesea 4 porturi HDMI 2.1 complete.</p>
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele de Top pe Piață: Ce Oferă Fiecare Brand?</h2>
@@ -212,9 +225,9 @@ import Layout from '../layouts/Layout.astro';
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Estetica Modernă și Integrarea în Spațiu</h3>
     <p class="mb-4">Design-ul este un punct forte al televizoarelor OLED. Datorită absenței iluminării de fundal, panourile pot fi incredibil de subțiri, uneori de câțiva milimetri în cel mai subțire punct. Această estetică minimalistă permite integrarea perfectă în orice decor modern. Modele precum seria LG G sunt concepute pentru a fi montate pe perete, având un profil aproape lipit de suprafață, ca o ramă de tablou.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Calitatea Sunetului și Sisteme Audio Integrate</h3>
-    <p class="mb-4">Deși majoritatea utilizatorilor optează pentru un soundbar sau un sistem home cinema, televizoarele OLED moderne vin cu sisteme audio integrate performante. Multe modele suportă Dolby Atmos și DTS:X, oferind o experiență audio imersivă. Sisteme 2.0, 2.2 sau chiar 4.2 canale, cu puteri considerabile, sunt capabile să livreze un sunet clar și dinamic. Anumite televizoare Sony, cu tehnologia Acoustic Surface Audio+, folosesc chiar ecranul ca difuzor pentru o direcționalitate a sunetului perfect aliniată cu acțiunea vizuală.</p>
+    <p class="mb-4">Deși majoritatea utilizatorilor optează pentru un soundbar sau un sistem home cinema, televizoarele OLED moderne vin cu sisteme audio integrate performante. Multe modele suportă <a href="/soundbar-compact-cu-dolby-atmos/" class="interlink">Dolby Atmos</a> și DTS:X, oferind o experiență audio imersivă. Sisteme 2.0, 2.2 sau chiar 4.2 canale, cu puteri considerabile, sunt capabile să livreze un sunet clar și dinamic. Anumite televizoare Sony, cu tehnologia Acoustic Surface Audio+, folosesc chiar ecranul ca difuzor pentru o direcționalitate a sunetului perfect aliniată cu acțiunea vizuală.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Sisteme de Operare Smart TV</h3>
-    <p class="mb-4">Platformele Smart TV sunt inima funcționalităților inteligente. LG folosește webOS, Samsung Tizen, iar Sony și Philips se bazează pe Google TV. Toate aceste sisteme oferă interfețe rapide, acces la o multitudine de aplicații de streaming (Netflix, YouTube, HBO Max, Disney+, etc.), control vocal și integrare cu asistenți digitali precum Google Assistant sau Amazon Alexa. Ele fac navigarea prin conținut și controlul televizorului extrem de simple și intuitive.</p>
+    <p class="mb-4">Platformele Smart TV sunt inima funcționalităților <a href="/frigider-cu-compartimente-inteligente/" class="interlink">inteligente</a>. LG folosește webOS, Samsung Tizen, iar Sony și Philips se bazează pe Google TV. Toate aceste sisteme oferă interfețe rapide, acces la o multitudine de aplicații de streaming (Netflix, YouTube, HBO Max, Disney+, etc.), control vocal și integrare cu asistenți digitali precum Google Assistant sau Amazon Alexa. Ele fac navigarea prin conținut și controlul televizorului extrem de simple și intuitive.</p>
   </section>
   <section id="sectiune-7" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Întreținerea Televizorului OLED și Durata de Viață</h2>
@@ -331,5 +344,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-televizor-oled-4k"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

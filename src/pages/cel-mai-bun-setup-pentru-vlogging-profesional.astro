@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -163,13 +176,13 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Introducere</h2>
     <p class="mb-4">În lumea vlogging-ului, calitatea conținutului este rege. Nu vorbim doar despre idei bune sau o personalitate carismatică, ci și despre impactul vizual și auditiv. Publicul de astăzi este obișnuit cu standarde înalte, iar un setup profesional nu mai este un lux, ci o necesitate pentru a ieși în evidență și a menține angajamentul.</p>
-    <p class="mb-4">Construirea unui setup optim pentru vlogging profesional presupune investiții inteligente în echipamente care livrează performanță consistentă. Nu este vorba doar de a cumpăra cele mai scumpe gadgeturi, ci de a alege instrumentele potrivite nevoilor tale specifice și tipului de conținut pe care îl creezi.</p>
+    <p class="mb-4">Construirea unui setup optim pentru vlogging profesional presupune investiții <a href="/frigider-cu-compartimente-inteligente/" class="interlink">inteligente</a> în echipamente care livrează performanță consistentă. Nu este vorba doar de a cumpăra cele mai scumpe gadgeturi, ci de a alege instrumentele potrivite nevoilor tale specifice și tipului de conținut pe care îl creezi.</p>
     <p class="mb-4">Vom discuta despre fiecare piesă esențială din angrenajul unui vlogger de succes, de la camera care captează imaginile la microfonul ce preia sunetul, până la soluțiile de iluminare și post-producție. Pregătește-te să descoperi cum poți duce calitatea vlogging-ului tău la un cu totul alt nivel.</p>
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Camera Video: Alegerea Corectă pentru Imagini de Calitate</h2>
-    <p class="mb-4">Inima oricărui setup de vlogging este, fără îndoială, camera video. Alegerea potrivită depinde de stilul tău de vlogging și de buget, dar câteva caracteristici sunt esențiale pentru un rezultat profesional. Căutăm camere capabile de înregistrare 4K la minim 30fps, cu un autofocus rapid și precis, și opțiuni bune pentru stabilizarea imaginii.</p>
+    <p class="mb-4">Inima oricărui setup de vlogging este, fără îndoială, camera video. Alegerea potrivită depinde de stilul tău de vlogging și de buget, dar câteva caracteristici sunt esențiale pentru un rezultat profesional. Căutăm camere capabile de înregistrare 4K la minim 30fps, cu un <a href="/aparat-mirrorless-cu-autofocus-rapid/" class="interlink">autofocus rapid</a> și precis, și opțiuni bune pentru stabilizarea imaginii.</p>
     <p class="mb-4">Modelele mirrorless sunt adesea preferate de vloggeri datorită dimensiunilor compacte și calității superioare a imaginii. Gândește-te la serii precum Sony Alpha (A7 III, A7C, ZV-E10, ZV-1), Canon EOS R (R6 Mark II, R7, R50) sau Panasonic Lumix GH (GH5, GH6). Acestea oferă versatilitate prin obiective interschimbabile și performanțe excelente în condiții de lumină scăzută. Un aspect important este și prezența unui ecran rabatabil sau articulat, extrem de util pentru monitorizarea imaginii atunci când filmezi singur.</p>
     
   </section>
@@ -182,7 +195,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Iluminare Profesională: Transformă Ambianța și Calitatea Vizuală</h2>
     <p class="mb-4">Lumina este elementul care poate transforma o imagine mediocră într-una spectaculoasă. O iluminare corectă te ajută să arăți mai bine, să pui în evidență subiectul și să creezi o atmosferă potrivită conținutului tău. Chiar și cu o cameră de top, fără lumină adecvată, rezultatele vor fi dezamăgitoare. Folosește o configurație cu trei puncte de lumină pentru cele mai bune rezultate: lumina cheie (key light), lumina de umplere (fill light) și lumina de fundal (back light).</p>
-    <p class="mb-4">Panourile LED sunt o opțiune fantastică pentru vlogging. Modele precum Godox SL60W, Aputure Amaran 100x sau Nanlite FS-150B oferă lumina puternică, reglabilă și culori precise (CRI ridicat, peste 95). Un softbox sau un umbrelă difuzoare sunt esențiale pentru a înmuia lumina și a evita umbrele dure. Ring light-urile (Neewer, Elgato Ring Light) sunt utile pentru portrete și close-up-uri, oferind o lumină uniformă și eliminând umbrele de pe față.</p>
+    <p class="mb-4">Panourile LED sunt o opțiune fantastică pentru vlogging. Modele precum Godox SL60W, Aputure Amaran 100x sau Nanlite FS-150B oferă lumina puternică, reglabilă și culori precise (CRI ridicat, peste 95). Un softbox sau un umbrelă difuzoare sunt esențiale pentru a înmuia lumina și a evita umbrele dure. Ring light-urile (Neewer, Elgato Ring Light) sunt utile <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">pentru portrete</a> și close-up-uri, oferind o lumină uniformă și eliminând umbrele de pe față.</p>
     
   </section>
   <section id="sectiune-5" class="mb-10">
@@ -194,7 +207,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Monitoare și Echipamente de Monitorizare Esențiale</h2>
     <p class="mb-4">Un monitor extern îți oferă o vizualizare mai bună a ceea ce înregistrezi, ajutându-te să verifici expunerea, focusul și încadrarea cu precizie. Acesta este deosebit de util atunci când camera ta are un ecran mic sau când filmezi într-un unghi dificil. Monitoarele de la Atomos (Ninja V) sau Feelworld (F6 Plus, LUT7 Pro) sunt alegeri populare, oferind funcții avansate precum peaking, false color și LUT-uri personalizate.</p>
-    <p class="mb-4">Căștile de monitorizare sunt la fel de importante pentru a asigura o calitate audio impecabilă. Ele îți permit să asculți sunetul în timp real, identificând zgomotele nedorite sau problemele de nivel înainte de a fi prea târziu. Modele precum Sony MDR-7506 sau Audio-Technica ATH-M50x sunt standarde în industrie, oferind o reproducere fidelă a sunetului. Nu te baza niciodată doar pe indicatorii de nivel de pe cameră; urechea este cel mai bun instrument de verificare a sunetului.</p>
+    <p class="mb-4">Căștile de <a href="/monitorizare-consum-electric-smart/" class="interlink">monitorizare</a> sunt la fel de importante pentru a asigura o calitate audio impecabilă. Ele îți permit să asculți sunetul în timp real, identificând zgomotele nedorite sau problemele de nivel înainte de a fi prea târziu. Modele precum Sony MDR-7506 sau Audio-Technica ATH-M50x sunt standarde în industrie, oferind o reproducere fidelă a sunetului. Nu te baza niciodată doar pe indicatorii de nivel de pe cameră; urechea este cel mai bun instrument de verificare a sunetului.</p>
     
   </section>
   <section id="sectiune-7" class="mb-10">
@@ -309,5 +322,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-setup-pentru-vlogging-profesional"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

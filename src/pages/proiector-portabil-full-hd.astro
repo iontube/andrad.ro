@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -159,7 +172,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">De ce un Proiector Portabil Full HD este Investiția Perfectă pentru Tine</h2>
     <p class="mb-4">Dacă te gândești să-ți transformi camera într-un mic cinematograf sau ai nevoie de o soluție de prezentare flexibilă, un <strong>proiector portabil Full HD</strong> este, fără îndoială, alegerea potrivită. Aceste dispozitive compacte și puternice aduc imaginea la o rezoluție cristalină oriunde te-ai afla, eliminând barierele tehnologice și oferind o experiență vizuală impresionantă, fie că vrei să vizionezi filme, să joci jocuri video sau să faci prezentări de afaceri. Alegerea celui mai bun model poate părea o provocare dată fiind varietatea de opțiuni de pe piață, însă cu informațiile corecte, vei putea lua decizia perfectă.</p>
     <p class="mb-4">Ce face un proiector portabil Full HD atât de special? În primul rând, este vorba despre portabilitate. Spre deosebire de proiectoarele tradiționale, acestea sunt concepute pentru a fi ușor de transportat, adesea având dimensiuni reduse și o greutate mică. Dar nu te lăsa păcălit de dimensiunea lor, performanța este de top, oferind o rezoluție nativă Full HD (1920x1080 pixeli) care asigură detalii clare și culori vibrante. Această combinație de mobilitate și calitate a imaginii le face ideale pentru o multitudine de scenarii de utilizare, de la seri de film în curte, la prezentări dinamice în săli de conferințe sau chiar la sesiuni de gaming pe un ecran imens.</p>
-    <p class="mb-4">În era digitală, unde flexibilitatea și experiența multimedia sunt tot mai valorizate, un astfel de proiector se integrează perfect. Poți transforma rapid orice perete alb într-un ecran de cinema, creând momente memorabile alături de prieteni și familie. De asemenea, pentru profesioniști, posibilitatea de a avea la îndemână un dispozitiv capabil de prezentări de înaltă calitate, fără a fi legat de un spațiu fix, este un avantaj considerabil. Alegerea unui proiector portabil Full HD înseamnă, de fapt, investirea în divertisment și productivitate la un alt nivel.</p>
+    <p class="mb-4">În era digitală, unde flexibilitatea și experiența multimedia sunt tot mai valorizate, un astfel de proiector se integrează perfect. Poți transforma rapid orice perete alb într-un ecran de cinema, creând momente memorabile alături de prieteni și familie. De asemenea, <a href="/drona-cu-filmare-6k-pentru-profesionisti/" class="interlink">pentru profesioniști</a>, posibilitatea de a avea la îndemână un dispozitiv capabil de prezentări de înaltă calitate, fără a fi legat de un spațiu fix, este un avantaj considerabil. Alegerea unui proiector portabil Full HD înseamnă, de fapt, investirea în divertisment și productivitate la un alt nivel.</p>
     <p class="mb-4">Acest articol își propune să te ghideze prin universul proiectoarelor portabile Full HD, analizând caracteristicile esențiale, tehnologiile cheie și oferind recomandări bazate pe nevoile specifice. Vom explora ce anume diferențiază un model de altul, de la luminozitate și contrast, la conectivitate și autonomie, pentru ca tu să poți face cea mai informată alegere. Pregătește-te să descoperi cum poți aduce experiența vizuală la tine acasă sau la birou, cu ajutorul unui proiector portabil Full HD.</p>
     
     
@@ -236,9 +249,9 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-8" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Alegerea Proiectorului Portabil Full HD Potrivit Nevoilor Tale</h2>
-    <p class="mb-4">Acum că am explorat diversele aspecte ale unui proiector portabil Full HD, este momentul să definim cum să faci alegerea potrivită pentru tine. Primul pas este să-ți stabilești clar bugetul și nevoile principale: vrei să-l folosești predominant pentru filme acasă, pentru prezentări la birou, pentru gaming, sau o combinație a acestora?</p>
+    <p class="mb-4">Acum că am explorat diversele aspecte ale unui proiector portabil Full HD, este momentul să definim cum să faci alegerea potrivită pentru tine. Primul pas este să-ți stabilești clar bugetul și nevoile principale: vrei să-l folosești predominant pentru filme acasă, pentru prezentări la birou, <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">pentru gaming</a>, sau o combinație a acestora?</p>
     <p class="mb-4">Dacă prioritatea ta este experiența cinematografică, caută un proiector portabil Full HD cu o luminozitate ridicată, un contrast bun și, ideal, suport pentru tehnologii audio avansate precum Dolby Digital. Modele precum cele de la XGIMI sau benq pot fi opțiuni excelente. Pentru prezentări profesionale, portabilitatea, ușurința în configurare și claritatea textului sunt esențiale. Un proiector portabil Full HD cu opțiuni de conectivitate variate și o luminozitate decentă va fi o alegere potrivită.</p>
-    <p class="mb-4">Pentru gameri, latența (input lag) este un factor critic. Caută proiectoare portabile Full HD cu un input lag cât mai mic. De asemenea, o rată de refresh ridicată (dacă este suportată) și o luminozitate bună vor contribui la o experiență de joc imersivă. Verifică specificațiile tehnice detaliate și recenziile dedicate gaming-ului.</p>
+    <p class="mb-4"><a href="/casti-over-ear-cu-noise-canceling-pentru-gameri/" class="interlink">Pentru gameri</a>, latența (input lag) este un factor critic. Caută proiectoare portabile Full HD cu un input lag cât mai mic. De asemenea, o rată de refresh ridicată (dacă este suportată) și o luminozitate bună vor contribui la o experiență de joc imersivă. Verifică specificațiile tehnice detaliate și recenziile dedicate gaming-ului.</p>
     <p class="mb-4">Nu uita să acorzi atenție și autonomiei bateriei dacă intenționezi să-l folosești frecvent departe de o priză. De asemenea, funcționalitățile smart integrate pot simplifica mult utilizarea, eliminând nevoia de dispozitive suplimentare. Un proiector portabil Full HD de la branduri recunoscute precum Samsung, LG, Epson, Philips sau chiar cele de nișă precum Anker Nebula, oferă garanția calității și a suportului tehnic.</p>
     <p class="mb-4">În final, citește recenzii de la alți utilizatori și, dacă este posibil, testează proiectorul înainte de achiziție. Alegerea unui proiector portabil Full HD este o decizie personală, iar înțelegerea specificațiilor tehnice te va ajuta să găsești dispozitivul care se potrivește perfect stilului tău de viață și nevoilor tale.</p>
     
@@ -246,7 +259,7 @@ import Layout from '../layouts/Layout.astro';
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Definirea Nevoilor: Film, Gaming, Prezentări</h3>
     <p class="mb-4">Stabilește clar scopul principal pentru care vei folosi proiectorul portabil Full HD pentru a prioritiza caracteristicile esențiale.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Factori Suplimentari: Baterie, Latență, Branduri</h3>
-    <p class="mb-4">Autonomia bateriei, input lag-ul pentru gaming și reputația brandului sunt aspecte importante de luat în considerare în decizia finală.</p>
+    <p class="mb-4">Autonomia bateriei, input lag-ul <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">pentru gaming</a> și reputația brandului sunt aspecte importante de luat în considerare în decizia finală.</p>
   </section>
 
           <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
@@ -353,5 +366,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="proiector-portabil-full-hd"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,8 +158,8 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Prima impresie: E curbatul pentru tine?</h2>
-    <p class="mb-4">Am scos din cutie noul Samsung 55CU7172, un televizor curbat UHD de 55 inch, si prima senzatie a fost una de... spatiu. E drept, am fost obisnuit cu ecrane plate, asa ca acest design mi-a atras atentia imediat. In experienta mea, curbatura asta nu e doar un moft de design, ci incearca sa te imerseze mai mult in actiune, mai ales la diagonale mari.</p>
-    <p class="mb-4">Am montat rapid suportul VESA pe perete, langa un Sony Bravia de 50 inch, si diferenta de prezenta vizuala s-a simtit. Nu e un televizor subtire, dar curbatura ii da o anumita eleganta, ascunzand putin din grosimea sa. M-am gandit instantaneu la experienta din cinematograf, unde ecranul e si el curbat pentru a acoperi mai bine campul vizual.</p>
+    <p class="mb-4">Am scos din cutie noul Samsung 55CU7172, un televizor curbat UHD de 55 inch, si prima senzatie a fost una de... spatiu. E drept, am fost obisnuit cu ecrane plate, asa ca acest design mi-a atras atentia imediat. In <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experienta</a> mea, curbatura asta nu e doar un moft de design, ci incearca sa te imerseze mai mult in actiune, mai ales la diagonale mari.</p>
+    <p class="mb-4">Am montat rapid suportul VESA pe perete, langa un Sony Bravia de 50 inch, si diferenta de prezenta vizuala s-a simtit. Nu e un <a href="/televizor-8k-pentru-living-mare/" class="interlink">televizor</a> subtire, dar curbatura ii da o anumita eleganta, ascunzand putin din grosimea sa. M-am gandit instantaneu la experienta din cinematograf, unde ecranul e si el curbat pentru a acoperi mai bine campul vizual.</p>
     <p class="mb-4">Daca stai la o distanta potrivita, cam 2-3 metri, curbatura devine mai evidenta si poate imbunatati perceptia profunzimii. Am testat si cu filme 4K si jocuri, unde efectul a fost destul de placut. Pentru cine prefera insa unghiuri de vizualizare foarte largi sau il monteaza intr-un spatiu foarte luminos, poate ar trebui sa ia in calcul si alternativele plate.</p>
     
     
@@ -155,7 +168,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Calitatea imaginii: Culori si contrast pe un ecran de 55 inch</h2>
     <p class="mb-4">Acum, sa vorbim despre ce conteaza cu adevarat: imaginea. Acest televizor curbat UHD 55 inch, in cazul meu modelul Samsung, promite rezolutie 4K (3840 x 2160 pixeli), iar eu pot confirma ca detaliile sunt acolo. Am pus pe el clipuri de pe YouTube in 4K si diferentele fata de un Full HD sunt clare, mai ales pe un ecran de 55 inch unde fiecare pixel conteaza.</p>
     <p class="mb-4">Culorile sunt vibrante, dar nu exagerate, cel putin din setarile implicite. Am observat ca nu exista tehnologii de HDR avansate precum Dolby Vision pe acest model specific (verificati fisa tehnica a oricarui televizor curbat de 55 inch pe care il aveti in vizor), dar HDR10+ este prezent si isi face treaba decent. In scenele intunecate, contrastul este bun, negrii sunt destul de adanci pentru un panou LED, dar nu te astepta la nivelul unui OLED.</p>
-    <p class="mb-4">Am testat si cu meciuri de fotbal si mi-a placut fluiditatea imaginii. Nu am observat artefacte mari sau miscari sacadate, ceea ce e crucial pentru sport. Pentru gaming, am activat modul joc (Game Mode) si input lag-ul a fost scazut, facand experienta mult mai placuta. Un televizor curbat de 55 inch din aceasta gama de pret (cam 2500-3000 RON, am vazut oferte la eMAG si Altex) este o optiune buna pentru multi.</p>
+    <p class="mb-4">Am testat si cu meciuri de fotbal si mi-a placut fluiditatea imaginii. Nu am observat artefacte mari sau miscari sacadate, ceea ce e crucial pentru sport. <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">Pentru gaming</a>, am activat modul joc (Game Mode) si input lag-ul a fost scazut, facand experienta mult mai placuta. Un televizor curbat de 55 inch din aceasta gama de pret (cam 2500-3000 RON, am vazut oferte la eMAG si Altex) este o optiune buna pentru multi.</p>
     
     
   </section>
@@ -169,7 +182,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Smart TV si conectivitate: Ce poti face cu el?</h2>
-    <p class="mb-4">Platforma Smart TV de pe acest televizor curbat UHD 55 inch este Tizen OS, sistemul de operare propriu de la Samsung. In experienta mea, este destul de intuitiv si rapid. Aplicatiile populare precum Netflix, YouTube, HBO Max sunt preinstalate sau usor de descarcat din magazinul lor de aplicatii. Am navigat prin meniuri fara probleme, iar timpul de raspuns la apasarea butoanelor de pe telecomanda a fost minim.</p>
+    <p class="mb-4">Platforma Smart TV de pe acest televizor curbat UHD 55 inch este Tizen OS, sistemul de operare propriu de la Samsung. In experienta mea, este destul de intuitiv si rapid. Aplicatiile populare precum Netflix, YouTube, HBO Max sunt preinstalate sau usor de descarcat din magazinul lor de aplicatii. Am navigat prin meniuri fara probleme, iar timpul de raspuns la apasarea butoanelor de pe <a href="/switch-smart-pentru-telecomanda/" class="interlink">telecomanda</a> a fost minim.</p>
     <p class="mb-4">La capitolul conectivitate, acest model vine cu 3 porturi HDMI si 2 USB, ceea ce este standard pentru un televizor de 55 inch. Am conectat consola mea de jocuri PlayStation 5 la un port HDMI si laptopul la altul, si am putut comuta intre ele rapid. Wi-Fi-ul integrat a functionat stabil, fara intreruperi in streaming.</p>
     <p class="mb-4">Telecomanda este simpla, cu putine butoane, concentrandu-se pe navigarea in meniul Smart TV. Nu are un microfon pentru comenzi vocale avansate, dar pentru utilizarea zilnica este suficienta. Daca sunteti obisnuiti cu telecomanda de la Apple TV, aceasta va parea si mai simpla. Pretul acestui televizor curbat de 55 inch variaza intre 2500 si 3200 RON, in functie de promotii, oferind un pachet Smart TV solid.</p>
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="televizor-curbat-uhd-55-inch"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

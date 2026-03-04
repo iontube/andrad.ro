@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -159,15 +172,15 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Alegerea Sistemului Smart Home Complet: De Ce Contează Integrarea?</h2>
-    <p class="mb-4">Suntem într-o eră unde locuința noastră poate deveni un partener inteligent, gata să ne simplifice viața și să ne ofere confort la un cu totul alt nivel. Când vorbim despre un "sistem smart home complet", nu ne referim doar la câteva becuri inteligente sau un termostat conectat. Viziunea este mult mai amplă: o rețea complexă de dispozitive care comunică fluid, automatizează sarcini și reacționează proactiv la nevoile tale.</p>
+    <p class="mb-4">Suntem într-o eră unde locuința noastră poate deveni un partener inteligent, gata să ne simplifice viața și să ne ofere confort la un cu totul alt nivel. Când vorbim despre un "<a href="/sistem-smart-pentru-iluminat-gradina/" class="interlink">sistem smart</a> home complet", nu ne referim doar la câteva becuri inteligente sau un termostat conectat. Viziunea este mult mai amplă: o rețea complexă de dispozitive care comunică fluid, automatizează sarcini și reacționează proactiv la nevoile tale.</p>
     <p class="mb-4">Provocarea apare atunci când încerci să transformi această viziune în realitate. Piața este inundată de produse, iar alegerea unui sistem care să lege totul într-un mod coerent poate fi copleșitoare. Un sistem complet înseamnă interoperabilitate perfectă între dispozitive de la diferiți producători, control centralizat și scenarii de automatizare care funcționează fără cusur, transformând casa ta într-un ecosistem inteligent, nu doar o colecție de gadgeturi. Este vorba despre o experiență unitară, unde fiecare componentă contribuie la un întreg funcțional și intuitiv.</p>
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Protocoale de Comunicare: Coloana Vertebrală a Casei Inteligente</h2>
     <p class="mb-4">Un sistem smart home performant se bazează pe protocoale de comunicare eficiente. Acestea sunt limbajele prin care dispozitivele tale interacționează. Înțelegerea lor este esențială pentru a construi o rețea robustă și fiabilă.</p>
-    <p class="mb-4"><strong>Zigbee</strong> și <strong>Z-Wave</strong> sunt două dintre cele mai populare protocoale pentru dispozitivele smart home. Ambele creează rețele mesh, unde fiecare dispozitiv acționează ca un repetor, extinzând raza de acțiune a semnalului. Zigbee, operând pe frecvența de 2.4 GHz, este des întâlnit la becuri inteligente precum Philips Hue sau IKEA Tradfri, precum și la senzori de la Aqara. Z-Wave, pe de altă parte, folosește frecvențe mai joase (868 MHz în Europa), ceea ce îi conferă o penetrare mai bună prin pereți și mai puțină interferență cu rețelele Wi-Fi. Ecosisteme precum Fibaro sau Aeotec se bazează puternic pe Z-Wave, oferind o stabilitate remarcabilă, mai ales pentru securitate. Pe lângă acestea, <strong>Wi-Fi</strong> este omniprezent, fiind folosit de multe dispozitive independente, dar consumă mai multă energie și poate aglomera rețeaua. Nu uităm de <strong>Bluetooth</strong>, ideal pentru control local pe distanțe scurte, adesea utilizat pentru configurare inițială sau dispozitive portabile.</p>
-    <p class="mb-4">O inovație recentă o reprezintă <strong>Matter</strong> și <strong>Thread</strong>. Thread este un protocol de rețea mesh bazat pe IP, cu consum redus de energie, care formează fundamentul pentru Matter. Matter este un standard de conectivitate universal, susținut de giganți precum Apple, Google, Amazon și Samsung. Scopul său este să simplifice compatibilitatea, permițând dispozitivelor de la diferite mărci să lucreze împreună fără efort, indiferent de ecosistem. Această nouă direcție promite o integrare mult mai facilă și o experiență de utilizare superioară.</p>
+    <p class="mb-4"><strong>Zigbee</strong> și <strong>Z-Wave</strong> sunt două dintre cele mai populare protocoale pentru dispozitivele smart home. Ambele creează rețele mesh, unde fiecare dispozitiv acționează ca un repetor, extinzând raza de acțiune a semnalului. Zigbee, operând pe frecvența de 2.4 GHz, este des întâlnit la becuri <a href="/frigider-cu-compartimente-inteligente/" class="interlink">inteligente</a> precum Philips Hue sau IKEA Tradfri, precum și la senzori de la Aqara. Z-Wave, pe de altă parte, folosește frecvențe mai joase (868 MHz în Europa), ceea ce îi conferă o penetrare mai bună prin pereți și mai puțină interferență cu rețelele Wi-Fi. Ecosisteme precum Fibaro sau Aeotec se bazează puternic pe Z-Wave, oferind o stabilitate remarcabilă, mai ales pentru securitate. Pe lângă acestea, <strong>Wi-Fi</strong> este omniprezent, fiind folosit de multe dispozitive independente, dar consumă mai multă energie și poate aglomera rețeaua. Nu uităm de <strong>Bluetooth</strong>, ideal pentru control local pe distanțe scurte, adesea utilizat pentru configurare inițială sau dispozitive portabile.</p>
+    <p class="mb-4">O inovație recentă o reprezintă <strong>Matter</strong> și <strong>Thread</strong>. Thread este un protocol de rețea mesh bazat pe IP, cu <a href="/aer-conditionat-inverter-cu-consum-redus/" class="interlink">consum redus</a> de energie, care formează fundamentul pentru Matter. Matter este un standard de conectivitate universal, susținut de giganți precum Apple, Google, Amazon și Samsung. Scopul său este să simplifice compatibilitatea, permițând dispozitivelor de la diferite mărci să lucreze împreună fără efort, indiferent de ecosistem. Această nouă direcție promite o integrare mult mai facilă și o experiență de utilizare superioară.</p>
     
   </section>
   <section id="sectiune-3" class="mb-10">
@@ -181,7 +194,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Componentele Esențiale pentru O Casă Complet Automatizată</h2>
     <p class="mb-4">Un sistem smart home complet include o serie de componente cheie, fiecare adăugând un strat de inteligență și confort locuinței tale. Imaginează-ți cum acestea lucrează împreună pentru a crea o experiență fără efort.</p>
-    <p class="mb-4"><strong>Securitatea</strong> este, de multe ori, punctul de plecare. Camere de securitate inteligente, precum cele de la Ring, Arlo, Eufy sau Nest Cam, oferă monitorizare video cu detectare de mișcare și înregistrări în cloud. Senzorii de ușă/fereastră (de exemplu, de la Aqara sau Aeotec) și senzorii de mișcare te alertează la orice intruziune. Încuietorile inteligente (August Smart Lock, Yale Assure Lock) permit controlul accesului de la distanță și integrarea cu rutine de securitate. Nu uita de senzorii de fum/CO (Nest Protect) care te avertizează în caz de pericol.</p>
+    <p class="mb-4"><strong>Securitatea</strong> este, de multe ori, punctul de plecare. Camere de securitate inteligente, precum cele de la Ring, Arlo, Eufy sau Nest Cam, oferă monitorizare video <a href="/camere-ip-cu-detectare-miscare/" class="interlink">cu detectare</a> de mișcare și înregistrări în cloud. Senzorii de ușă/fereastră (de exemplu, de la Aqara sau Aeotec) și senzorii de mișcare te alertează la orice intruziune. Încuietorile inteligente (August Smart Lock, Yale Assure Lock) permit controlul accesului de la distanță și integrarea cu rutine de securitate. Nu uita de senzorii de fum/CO (Nest Protect) care te avertizează în caz de pericol.</p>
     <p class="mb-4"><strong>Iluminatul inteligent</strong> transformă atmosfera oricărei încăperi. Becurile inteligente (Philips Hue, LIFX, Nanoleaf) oferă controlul culorii, intensității și programări, creând scenarii personalizate. Întrerupătoarele inteligente (de la Shelly, Sonoff sau Fibaro) permit controlul luminilor tradiționale, integrându-le în sistemul smart home. Un sistem bun permite adaptarea luminii în funcție de momentul zilei sau activitate.</p>
     <p class="mb-4"><strong>Climatizarea inteligentă</strong> optimizează confortul termic și eficiența energetică. Termostatele inteligente (Nest Thermostat, Tado, Ecobee) învață preferințele tale și reglează temperatura automat, economisind energie. Capetele termostatice inteligente (de la Tado sau Netatmo) oferă control individual pentru fiecare radiator, maximizând economiile și confortul.</p>
     <p class="mb-4"><strong>Divertismentul conectat</strong> completează experiența. Televizoarele inteligente (cu sisteme de operare precum Samsung Tizen sau LG WebOS), soundbar-urile conectate și dispozitivele de streaming (Apple TV, Google Chromecast, Amazon Fire TV Stick) pot fi integrate în rutine. De exemplu, la o comandă vocală, luminile se diminuează și televizorul pornește filmul preferat.</p>
@@ -309,5 +322,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-sistem-smart-home-complet"
+      currentCategory="smart-home"
+      articles={allArticles}
+    />
   </article>
 </Layout>

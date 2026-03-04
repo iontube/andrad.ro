@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -146,7 +159,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Spatiu, aer si rufe uscate: dilema balconului</h2>
     <p class="mb-4">Am locuit ani de zile intr-un apartament mic din Bucuresti si stiu exact cum e sa te lupti cu spatiul. Rufele intinse pe sarma, prinse cu clame, ocupau jumatate din balcon, iar cand ploua, era un chin sa le strangi. Asta pana am descoperit uscatoarele compacte de rufe pentru balcon. Nu ma asteptam sa fie asa un game-changer, dar chiar sunt.</p>
-    <p class="mb-4">Am testat cateva modele in ultimii ani, de la cele mai basic, pe care le gaseam pe la tarabe, pana la variante mai serioase de la producatori consacrati. Experienta mea mi-a aratat ca nu e chiar atat de simplu sa alegi, mai ales daca vrei ceva eficient si nu doar un alt obiect care sa aglomereze.</p>
+    <p class="mb-4">Am testat cateva modele in ultimii ani, de la cele mai basic, pe care le gaseam pe la tarabe, pana la variante mai serioase de la producatori consacrati. <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">Experienta</a> mea mi-a aratat ca nu e chiar atat de simplu sa alegi, mai ales daca vrei ceva eficient si nu doar un alt obiect care sa aglomereze.</p>
     <p class="mb-4">Ideal ar fi sa ai un balcon generos, dar chiar si cu unul mic, un uscator compact de rufe pentru balcon te poate salva. Important e sa stii exact ce cauti si ce asteptari sa ai. Si, mai ales, sa nu te lasi pacalit de promisiuni de genul "usuca rufele in 15 minute", pentru ca nu prea exista asa ceva.</p>
     <p class="mb-4">Am ales sa va spun din experienta mea ce am invatat, ca sa nu bateti drumul aiurea si sa cheltuiti bani pe ceva ce nu face fata nevoilor voastre. Sincer, sunt multe optiuni pe piata, dar nu toate sunt la fel de bune. Unele sunt mai mult decorative, altele chiar isi fac treaba.</p>
     
@@ -155,7 +168,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce inseamna de fapt "uscator compact de rufe pentru balcon"?</h2>
     <p class="mb-4">Termenul asta poate ascunde mai multe tipuri de aparate. In primul rand, sunt cele cu incalzire, care seamana cu un dulap vertical si unde rufele sunt uscate cu aer cald. Acestea sunt cele mai eficiente, dar si cele mai scumpe si mai mari. Nu le recomand pentru un balcon mic, daca nu aveti deja un spatiu dedicat.</p>
-    <p class="mb-4">Apoi, sunt uscatoarele de rufe cu pompa de caldura, care sunt mai economice la energie, dar si mai scumpe initial. Acestea au o capacitate mai mare si sunt mai potrivite pentru case sau apartamente cu spatiu dedicat pentru ele. Nu le-as incadra la "uscator compact de rufe pentru balcon" in sensul clasic, de solutie pentru spatii mici.</p>
+    <p class="mb-4">Apoi, sunt uscatoarele de rufe cu pompa de caldura, care sunt mai economice la energie, dar si mai scumpe initial. Acestea au o capacitate mai mare si sunt mai potrivite pentru case sau <a href="/aspirator-robot-compact-pentru-apartamente/" class="interlink">apartamente</a> cu spatiu dedicat pentru ele. Nu le-as incadra la "uscator compact de rufe pentru balcon" in sensul clasic, de solutie pentru spatii mici.</p>
     <p class="mb-4">Ce ma intereseaza pe mine si ce am testat sunt acele aparate mai simple, care folosesc un sistem de incalzire si ventilare, sau chiar doar ventilare, pentru a accelera procesul de uscare a hainelor intinse pe un suport. Ganditi-va la un fel de "dulap" pliabil, unde puteti intinde rufele pe tije si un ventilator sufla aer cald sau rece peste ele. Acestea sunt cele mai accesibile si practice pentru un balcon.</p>
     <p class="mb-4">Am vazut si variante simple, doar cu un ventilator, fara incalzire. Acestea sunt bune pentru a circula aerul, dar nu usuca rufele rapid. Sunt mai mult un ajutor pe langa uscarea naturala, nu o solutie completa. Deci, cand spunem "uscator compact de rufe pentru balcon", vorbim de obicei de un sistem cu incalzire si ventilatie, de dimensiuni reduse.</p>
     
@@ -163,10 +176,10 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele testate: ce am gasit pe piata romaneasca</h2>
-    <p class="mb-4">Am pus mana pe cateva modele de la branduri pe care le gasiti si in Romania. Unul dintre primele pe care le-am incercat a fost un model de la <strong>Heinner</strong>, un uscator vertical cu incalzire, destul de simplu. Avea o capacitate de cam 10-12 kg de rufe umede si se monta destul de usor. Pretul lui pe eMAG era undeva la 350-400 lei. Isi facea treaba, dar consuma ceva curent si nu usca uniform hainele mai groase.</p>
+    <p class="mb-4">Am pus mana pe cateva modele de la branduri pe care le gasiti si in Romania. Unul dintre primele pe care le-am incercat a fost un model de la <strong>Heinner</strong>, un uscator <a href="/blender-vertical-cu-functie-smoothie/" class="interlink">vertical cu</a> incalzire, destul de simplu. Avea o capacitate de cam 10-12 kg de rufe umede si se monta destul de usor. Pretul lui pe eMAG era undeva la 350-400 lei. Isi facea treaba, dar consuma ceva curent si nu usca uniform hainele mai groase.</p>
     <p class="mb-4">Apoi, am cochetat cu o idee de la <strong>Gorenje</strong>, un model mai compact, tot cu incalzire, dar cu un design mai modern, de genul unui dulap mic. Asta era mai scump, in jur de 700-800 lei. Avantajul era ca avea o structura mai solida si o capacitate mai buna de uscare. Rufele ieseau mai putin frozite, ceea ce e un mare plus.</p>
     <p class="mb-4">Am observat ca multe din aceste uscatoare compacte de rufe pentru balcon sunt de fapt sub-branduri sau modele "no-name" care apar si dispar. E mai greu sa le gasesti constant. Branduri mari precum <strong>Samsung</strong> sau <strong>LG</strong> nu prea au modele dedicate strict pentru balcon, ci au uscatoare de rufe de sine statatoare, mult mai mari si mai scumpe, care nu se preteaza la asa ceva.</p>
-    <p class="mb-4">Ce am mai gasit si mi s-a parut interesant sunt acele "uscatoare de rufe pliabile cu incalzire". Sunt practic niste suporturi de rufe din metal, cu o husa textila, in care se integreaza o rezistenta electrica si un ventilator. Asta era undeva la 250-350 lei, in functie de dimensiune si putere. Acestea sunt cele mai compacte si usor de depozitat, dar si cele mai limitate ca performanta. Ele usuca mai mult prin incalzirea aerului din interior, nu printr-o circulatie puternica.</p>
+    <p class="mb-4">Ce am mai gasit si mi s-a parut interesant sunt acele "uscatoare de rufe pliabile cu incalzire". Sunt practic niste suporturi de rufe din metal, cu o husa textila, in care se integreaza o rezistenta electrica si un ventilator. Asta era undeva la 250-350 lei, in functie de dimensiune si putere. Acestea sunt cele mai compacte si usor de depozitat, dar si cele mai limitate ca <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanta</a>. Ele usuca mai mult prin incalzirea aerului din interior, nu printr-o circulatie puternica.</p>
     
     
   </section>
@@ -294,5 +307,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="uscator-compact-de-rufe-pentru-balcon"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

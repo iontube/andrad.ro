@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,9 +158,9 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Blender vertical cu functie smoothie: ambalajul promisiunilor</h2>
-    <p class="mb-4">Am petrecut ultimele saptamani cu mainile prin bucatarie, incercand sa inteleg cu adevarat ce inseamna un blender vertical cu functie smoothie. Nu vorbim de aparate complicate, ci de acele dispozitive compacte care promit sa transforme fructele si legumele in bauturi cremoase, gata de consum, in cateva secunde. Experienta mea a inceput cu modele de la Philips, Braun si chiar cateva mai putin cunoscute gasite pe eMAG, toate cu scopul de a vedea daca promisiunile se ridica la nivelul asteptarilor mele de jurnalist tech cu ceva ani de experienta in spate.</p>
+    <p class="mb-4">Am petrecut ultimele saptamani cu mainile prin bucatarie, incercand sa inteleg cu adevarat ce inseamna un blender vertical <a href="/combina-frigorifica-cu-functie-fresh-zone/" class="interlink">cu functie</a> smoothie. Nu vorbim de aparate complicate, ci de acele dispozitive compacte care promit sa transforme fructele si legumele in bauturi cremoase, gata de consum, in cateva secunde. Experienta mea a inceput cu modele de la Philips, Braun si chiar cateva mai putin cunoscute gasite pe eMAG, toate cu scopul de a vedea daca promisiunile se ridica la nivelul asteptarilor mele de jurnalist tech cu ceva ani de experienta in spate.</p>
     <p class="mb-4">Am vrut sa vad cat de usor e sa prepari un mic dejun rapid, o gustare pentru copii sau chiar o baza pentru supe creme. Am pus la treaba ingrediente variate: de la fructe moi precum banana si capsuna, la cele mai tari cum ar fi marul si morcovul, si chiar gheata. Obiectivul a fost clar: sa obtin o textura fina, fara bucati neplacute, si sa simt ca aparatul isi face treaba fara efort.</p>
-    <p class="mb-4">Ce m-a frapat de la inceput este diferenta dintre modele. Unele sunt atat de simple, ca te gandesti daca chiar pot face fata unei sarcini mai grele, pe cand altele vin cu accesorii care te fac sa te gandesti daca nu cumva ai cumparat de fapt un robot de bucatarie mic. Am testat si varianta cu recipient propriu, gen pahar pentru smoothie, si cea care se monteaza direct pe cana de servit.</p>
+    <p class="mb-4">Ce m-a frapat de la inceput este diferenta dintre modele. Unele sunt atat de simple, ca te gandesti daca chiar pot face fata unei sarcini mai grele, pe cand altele vin cu accesorii care te fac sa te gandesti daca nu cumva ai cumparat de fapt un robot <a href="/robot-de-bucatarie-pentru-patiserie/" class="interlink">de bucatarie</a> mic. Am testat si varianta cu recipient propriu, gen pahar pentru smoothie, si cea care se monteaza direct pe cana de servit.</p>
     
     
   </section>
@@ -161,7 +174,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Testul meu pe teren: fructe, gheata si alte provocari</h2>
-    <p class="mb-4">In experienta mea, cel mai bun mod de a testa un blender vertical cu functie smoothie este sa-l supui unor scenarii reale de utilizare. Am pregatit un "Green Smoothie" clasic cu spanac, banana, mango congelat si putina apa. Modelul Braun Multiquick 9, de exemplu, a transformat totul intr-o bautura perfect omogena in maxim 30 de secunde, fara sa se blocheze sau sa faca zgomot excesiv. Lamele sale, cu tehnologia PowerBell V, au facut o treaba excelenta.</p>
+    <p class="mb-4">In experienta mea, cel mai bun mod de a testa un blender vertical <a href="/prajitor-de-paine-cu-functie-bagheta/" class="interlink">cu functie</a> smoothie este sa-l supui unor scenarii reale de utilizare. Am pregatit un "Green Smoothie" clasic cu spanac, banana, mango congelat si putina apa. Modelul Braun Multiquick 9, de exemplu, a transformat totul intr-o bautura perfect omogena in maxim 30 de secunde, fara sa se blocheze sau sa faca zgomot excesiv. Lamele sale, cu tehnologia PowerBell V, au facut o treaba excelenta.</p>
     <p class="mb-4">Apoi, am trecut la ceva mai provocator: un "Berry Blast" cu fructe de padure congelate, iaurt si cateva cuburi de gheata. Aici am observat o diferenta clara intre modele. Cele cu motoare sub 600W au avut momente de ezitare, uneori chiar blocandu-se temporar, necesitand oprirea si agitarea recipientului. In schimb, modelul Russell Hobbs cu functie "pulse" a facut fata cu brio, transformand gheata in praf fin.</p>
     <p class="mb-4">Am testat si functia de "curatare usoara", un aspect pe care multi il neglijeaza. Majoritatea modelelor se demonteaza usor, iar lamele pot fi clatite sub jet de apa. Totusi, am gasit ca si cele care vin cu un recipient special pentru curatare, cum am vazut la anumite modele Bosch, sunt mult mai practice, evitand contactul direct cu lamele ascutite. In general, un blender vertical bun trebuie sa fie usor de curatat, altfel risca sa ramana pe fundul sertarului.</p>
     
@@ -178,7 +191,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la cineva care le-a folosit</h2>
     <p class="mb-4">Un truc pe care l-am invatat este ordinea ingredientelor in pahar. Pune lichidul (apa, lapte, suc) prima data, apoi frunzele (spanac, kale), urmate de fructele moi, cele tari si, la final, gheata sau fructele congelate. Acest lucru ajuta la crearea unui vortex mai eficient si previne blocarea lamelor. Am observat ca multe retete de smoothie nu specifica asta, dar face o diferenta uriasa.</p>
-    <p class="mb-4">Nu supra-aglomera blenderul. Daca vrei un smoothie cremos, nu umple recipientul pana la refuz. Este mai bine sa faci doua porții mai mici decat sa fortezi aparatul si sa obtii o textura groasa si neomogena. De asemenea, daca folosesti fructe congelate, lasa-le cateva minute la temperatura camerei inainte de a le pune in blender, mai ales daca aparatul nu este unul de top. Acest lucru reduce presiunea asupra motorului.</p>
+    <p class="mb-4">Nu supra-aglomera blenderul. Daca vrei un smoothie cremos, nu umple recipientul pana la refuz. Este mai bine sa faci doua porții mai mici decat sa fortezi aparatul si sa obtii o textura groasa si neomogena. De asemenea, daca folosesti fructe congelate, lasa-le cateva minute la <a href="/senzor-temperatura-si-umiditate-smart/" class="interlink">temperatura</a> camerei inainte de a le pune in blender, mai ales daca aparatul nu este unul de top. Acest lucru reduce presiunea asupra motorului.</p>
     <p class="mb-4">Curatarea imediata este cheia. Imediat dupa utilizare, clateste lamele si paharul sub jet de apa. Daca ai un model care permite atasarea lamelelor direct pe paharul de smoothie, umple-l pe jumatate cu apa calda si o picatura de detergent, ataseaza lamele si invarte-le cateva secunde. Va fi mult mai usor sa cureti resturile uscate.</p>
     
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="blender-vertical-cu-functie-smoothie"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

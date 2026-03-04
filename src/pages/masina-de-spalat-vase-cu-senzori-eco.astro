@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
     
     <p class="mb-4">Am pus mana pe cateva modele de masini de spalat vase cu senzori eco in ultima vreme si, sincer, diferenta fata de cele vechi e ca de la zi la noapte. Nu mai stai sa ghicesti cat detergent sa pui sau ce program sa alegi ca sa nu irosesti curent si apa. Senzorii astia fac toata treaba pentru tine, adaptand ciclul de spalare in functie de cat de murdara e vesela si cat de plina e masina. Am testat un model de la Bosch, unul de la Samsung si un LG, si pot sa va spun ca am ramas placut surprins de cat de eficient pot fi aceste aparate. Nu mai e vorba doar de confort, ci si de un consum mult mai mic la facturi.</p>
     <p class="mb-4">Inainte de a intra in detalii, lasati-ma sa va spun ca am avut o masina de spalat vase veche, probabil din vremea bunicilor, care facea mai mult zgomot decat curata. Era un chin sa o pornesc, mereu ma gandeam daca am pus suficient detergent sau daca programul ales e cel bun. Acum, cu tehnologia asta cu senzori, procesul e automatizat si mult mai inteligent. Iti face viata mai usoara si, pe termen lung, si portofelul mai gras.</p>
-    <p class="mb-4">Am observat ca cele mai multe masini de spalat vase cu senzori eco vin cu o eticheta energetica de top, clasa A+++ sau chiar mai buna, ceea ce inseamna un consum redus de energie electrica. Dar nu doar atat, ci si un consum optimizat de apa. Senzorii detecteaza nivelul de murdarie si ajusteaza automat cantitatea de apa necesara. Nu mai speli jumatate de masina cu apa cat pentru una plina, cum se intampla uneori cu modelele mai vechi. E o chestie de bun simt, dar implementata inteligent de producatori.</p>
+    <p class="mb-4">Am observat ca cele mai multe masini de spalat vase cu senzori eco vin cu o eticheta energetica de top, clasa A+++ sau chiar mai buna, ceea ce inseamna un <a href="/aer-conditionat-inverter-cu-consum-redus/" class="interlink">consum redus</a> de energie electrica. Dar nu doar atat, ci si un consum optimizat de apa. Senzorii detecteaza nivelul de murdarie si ajusteaza automat cantitatea de apa necesara. Nu mai speli jumatate de masina cu apa cat pentru una plina, cum se intampla uneori cu modelele mai vechi. E o chestie de bun simt, dar implementata inteligent de producatori.</p>
     
     
   </section>
@@ -153,13 +166,13 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum functioneaza senzorii eco?</h2>
     <p class="mb-4">Simplu spus, senzorii din masina de spalat vase scaneaza apa din interior. Unii detecteaza turbiditatea, adica cat de murdara e apa. Cu cat apa e mai tulbure, cu atat senzorul ii spune masinii ca are nevoie de mai multe clatiri sau de un program mai intens. Altii, precum senzorii de incarcare, detecteaza greutatea sau volumul de vase din masina. Asta inseamna ca daca ai pus doar cateva farfurii, masina nu va folosi un ciclu complet de spalare, ci unul mai scurt si mai economic.</p>
     <p class="mb-4">Am facut un test simplu: am pus o jumatate de incarcatura de vase, moderat murdare, pe un program automat. Am comparat consumul de apa si energie cu un ciclu complet, cu vase la fel de murdare. Diferenta a fost vizibila, masina a folosit semnificativ mai putina apa si curent pentru jumatatea de incarcatura. E ca si cum ai avea un asistent personal care stie exact de ce are nevoie masina ta de spalat vase.</p>
-    <p class="mb-4">La modelele de top, cum ar fi cele de la Siemens sau Miele, senzorii pot fi chiar mai avansati, detectand si tipul de murdarie (grasime, resturi de mancare etc.) si ajustand temperatura apei si presiunea jetului pentru o curatare eficienta si un consum minim. E tehnologie pura, aplicata in cel mai practic mod posibil pentru gospodarie.</p>
+    <p class="mb-4">La modelele de top, cum ar fi cele de la Siemens sau Miele, senzorii pot fi chiar mai avansati, detectand si tipul de murdarie (grasime, resturi de mancare etc.) si ajustand <a href="/senzor-temperatura-si-umiditate-smart/" class="interlink">temperatura</a> apei si presiunea jetului pentru o curatare eficienta si un consum minim. E tehnologie pura, aplicata in cel mai practic mod posibil pentru gospodarie.</p>
     
     
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele pe care le-am testat si recomandari</h2>
-    <p class="mb-4">In experienta mea, Bosch Seria 6 sau Seria 8 cu tehnologia EcoSilence Drive si AquaSensor sunt printre cele mai bune optiuni de pe piata. Am testat un model de 60cm latime, cu 14 seturi capacitate, si a facut o treaba excelenta. Pretul unui astfel de model variaza intre 2500 si 3500 RON, in functie de specificatii si promotii, gasiti oferte bune pe eMAG sau Altex. Consumul de apa declarat pentru ciclul Eco este de doar 9.5 litri, ceea ce e impresionant.</p>
+    <p class="mb-4">In <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experienta</a> mea, Bosch Seria 6 sau Seria 8 cu tehnologia EcoSilence Drive si AquaSensor sunt printre cele mai bune optiuni de pe piata. Am testat un model de 60cm latime, cu 14 seturi capacitate, si a facut o treaba excelenta. Pretul unui astfel de model variaza intre 2500 si 3500 RON, in functie de specificatii si promotii, gasiti oferte bune pe eMAG sau Altex. Consumul de apa declarat pentru ciclul Eco este de doar 9.5 litri, ceea ce e impresionant.</p>
     <p class="mb-4">Un alt brand care exceleaza la capitolul asta e LG. Modelele lor cu tehnologia TrueSteam si Smart Diagnosis sunt, de asemenea, foarte eficiente. Am testat un LG cu 15 seturi capacitate si un motor Inverter Direct Drive, care e practic silentios. Pretul pentru un astfel de aparat incepe de la aproximativ 2800 RON si poate ajunge la 4000 RON. Ce mi-a placut la LG e ca au functii smart integrate, poti controla masina de spalat vase de pe telefon prin aplicatia LG ThinQ.</p>
     <p class="mb-4">Samsung nu se lasa mai prejos. Modelele lor cu tehnologia Aqua Stop si Hygiene Steam sunt o alegere buna. Am testat un model de 14 seturi, care se incadreaza in acelasi segment de pret, undeva intre 2300 si 3300 RON. Ce am observat la Samsung e ca au un design modern si o interfata intuitiva, usor de utilizat. Toate aceste branduri au modele cu senzori eco, trebuie doar sa verificati specificatiile tehnice.</p>
     
@@ -169,7 +182,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Avantaje concrete pentru buzunarul tau</h2>
     <p class="mb-4">Principalul avantaj, pe langa curatenia impecabila, este reducerea facturilor la apa si energie electrica. Daca faci un calcul simplu pe termen lung, o masina de spalat vase eficienta energetic te poate scuti de cateva sute de lei pe an. Am facut un calcul personal pentru un apartament cu 3 persoane, unde masina de spalat vase e folosita zilnic. Am observat o scadere de aproximativ 15-20% la factura de apa si o reducere de 10% la cea de curent dupa ce am trecut la un model cu senzori eco.</p>
     <p class="mb-4">Nu mai vorbim de economia de detergent. Multe masini cu senzori eco au sisteme de dozare automata a detergentului sau recomanda cantitatea optima in functie de ciclul ales. Asta inseamna ca nu mai irosesti detergent, il folosesti exact cat e necesar. Am observat ca un tub de detergent lichid, care inainte imi tinea o luna, acum ma tine doua luni. E o mica economie, dar se aduna.</p>
-    <p class="mb-4">In plus, multe modele vin cu programe speciale pentru economisire, cum ar fi ciclul Eco de 60 de grade, care dureaza mai mult, dar consuma mult mai putina energie. Sau programe rapide de 30-60 de minute pentru vasele mai putin murdare, care sunt perfecte pentru zilele in care te grabesti.</p>
+    <p class="mb-4">In plus, multe modele vin <a href="/multicooker-cu-programe-automate/" class="interlink">cu programe</a> speciale pentru economisire, cum ar fi ciclul Eco de 60 de grade, care dureaza mai mult, dar consuma mult mai putina energie. Sau programe rapide de 30-60 de minute pentru vasele mai putin murdare, care sunt perfecte pentru zilele in care te grabesti.</p>
     
     
   </section>
@@ -282,5 +295,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="masina-de-spalat-vase-cu-senzori-eco"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,15 +158,15 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Gaming pe roti? Da, se poate. Dar cu ce monitor?</h2>
-    <p class="mb-4">Ideea de a juca titluri AAA pe un ecran decent, departe de biroul de acasa, a devenit tot mai palpabilă. Am petrecut ultimele luni testând diverse monitoare portabile, cu un ochi special pe performanța lor în gaming. Nu e vorba doar de a te juca pe un ecran mic, ci de a avea o experiență fluidă, cu culori bune și timpi de răspuns acceptabili, oriunde te-ar purta drumurile.</p>
+    <p class="mb-4">Ideea de a juca titluri AAA pe un ecran decent, departe de biroul de acasa, a devenit tot mai palpabilă. Am petrecut ultimele luni testând diverse monitoare portabile, cu un ochi special pe <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanța</a> lor în gaming. Nu e vorba doar de a te juca pe un ecran mic, ci de a avea o experiență fluidă, cu culori bune și timpi de răspuns acceptabili, oriunde te-ar purta drumurile.</p>
     <p class="mb-4">Am vrut să văd dacă aceste dispozitive pot înlocui cu adevărat un monitor de gaming dedicat, chiar și pentru sesiuni mai scurte. Am cărat prin țară un laptop de gaming decent și am conectat la el o selecție de monitoare portabile de la branduri precum ASUS, Lenovo și un model mai obscur, dar promițător, de la AOC.</p>
-    <p class="mb-4">Scopul meu a fost să simt pe pielea mea limitările, dar și avantajele acestor gadgeturi, și să vă ofer sfaturi bazate pe experiență, nu pe fișe tehnice copiate. Vom vorbi despre ce contează cu adevărat când vine vorba de gaming mobil: viteză, culori, conectivitate și, bineînțeles, portabilitate reală.</p>
+    <p class="mb-4">Scopul meu a fost să simt pe pielea mea limitările, dar și avantajele acestor gadgeturi, și să vă ofer sfaturi bazate pe experiență, nu pe fișe tehnice copiate. Vom vorbi despre ce contează cu adevărat când vine vorba de <a href="/casti-wireless-pentru-gaming-mobil/" class="interlink">gaming mobil</a>: viteză, culori, conectivitate și, bineînțeles, portabilitate reală.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce cauti la un monitor portabil pentru gaming</h2>
-    <p class="mb-4">Prioritatea numărul unu pentru gaming este rata de reîmprospătare (refresh rate). Orice sub 60Hz este un compromis major, iar dacă găsiți ceva la 120Hz sau chiar 144Hz, sunteți pe drumul cel bun. Am observat că multe monitoare portabile se opresc la 60Hz, ceea ce e ok pentru strategii sau jocuri mai lente, dar pentru FPS-uri sau titluri de acțiune rapidă, se simte diferența.</p>
+    <p class="mb-4">Prioritatea numărul unu <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">pentru gaming</a> este rata de reîmprospătare (refresh rate). Orice sub 60Hz este un compromis major, iar dacă găsiți ceva la 120Hz sau chiar 144Hz, sunteți pe drumul cel bun. Am observat că multe monitoare portabile se opresc la 60Hz, ceea ce e ok pentru strategii sau jocuri mai lente, dar pentru FPS-uri sau titluri de acțiune rapidă, se simte diferența.</p>
     <p class="mb-4">Rezoluția este al doilea aspect crucial. Full HD (1920x1080) este minimul recomandat. Dacă aveți un laptop suficient de puternic, un QHD (2560x1440) pe un ecran de 15-17 inch oferă o claritate impresionantă. Am testat un model de 15.6 inch la 1440p și a fost o experiență vizuală mult îmbunătățită, deși laptopul meu a trebuit să muncească mai mult.</p>
     <p class="mb-4">Tipul de panel contează enorm. IPS este standardul de aur pentru culori bune și unghiuri largi de vizualizare, esențial când nu stai perfect centrat în fața ecranului. Am evitat pe cât posibil panelurile TN, care sunt mai rapide, dar culorile sunt adesea spălăcite și unghiurile de vizualizare sunt slabe. Timpul de răspuns (response time) sub 5ms este ideal pentru a minimiza ghosting-ul.</p>
     
@@ -177,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele concrete si preturi (in RON)</h2>
-    <p class="mb-4">Pe piața din România, găsiți o varietate interesantă. ASUS are o gamă extinsă sub seria ZenScreen, cum ar fi <strong>ASUS ZenScreen MB16AHG</strong> (15.6 inch, Full HD, 144Hz IPS, USB-C/HDMI) care se învârte în jur de <strong>1600-1800 RON</strong> la PCGarage sau Altex. Este o opțiune solidă pentru gaming, cu o rată de reîmprospătare decentă.</p>
+    <p class="mb-4">Pe piața din România, găsiți o varietate interesantă. ASUS are o gamă extinsă sub seria ZenScreen, cum ar fi <strong>ASUS ZenScreen MB16AHG</strong> (15.6 inch, Full HD, 144Hz IPS, USB-C/HDMI) care se învârte în jur de <strong>1600-1800 RON</strong> la PCGarage sau Altex. Este o opțiune solidă <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">pentru gaming</a>, cu o rată de reîmprospătare decentă.</p>
     <p class="mb-4">Lenovo oferă modele precum <strong>Lenovo ThinkVision M14</strong> (14 inch, Full HD, 60Hz IPS) sau variante mai noi, dar acestea sunt mai orientate spre productivitate. Totuși, modelele lor de gaming portabile, dacă apar, pot fi găsite la prețuri similare sau puțin mai mari, în jur de <strong>1400-1700 RON</strong>.</p>
     <p class="mb-4">Am văzut și modele de la AOC, cum ar fi <strong>AOC I1601FWUX</strong> (15.6 inch, Full HD, 60Hz IPS) sau variante cu rate de reîmprospătare mai mari, care pot fi găsite uneori chiar și sub <strong>1200 RON</strong> pe eMAG, mai ales la promoții. Acestea pot fi un chilipir dacă nu aveți pretenții exagerate.</p>
     <p class="mb-4">Samsung are și el un cuvânt de spus, cu modele ca <strong>Samsung ViewFinity S8</strong> (deși mai mult monitor de birou, au și variante portabile mai mici), dar prețurile tind să fie mai ridicate, uneori depășind <strong>2000 RON</strong> pentru specificații de top.</p>
@@ -285,5 +298,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="monitor-portabil-pentru-gaming-in-deplasare"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

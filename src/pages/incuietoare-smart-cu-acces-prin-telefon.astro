@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -177,9 +190,9 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cea mai buna incuietoare smart cu acces prin telefon pentru tine: Recomandarea mea directa</h2>
-    <p class="mb-4">Uite care-i treaba: daca ma intrebi pe mine, cea mai buna optiune pentru o <strong>incuietoare smart cu acces prin telefon</strong> e un model care iti ofera flexibilitate maxima si securitate de top. Eu am tot testat prin casa cateva modele si, sincer, cand vine vorba de fiabilitate si usurinta in utilizare, Aqara A100 Pro mi-a placut cel mai mult. E un pic mai scumpa, cam pe la 900-1000 lei, dar face toti banii.</p>
-    <p class="mb-4">Are acces prin telefon (evident, pe Bluetooth si Wi-Fi), cod PIN, amprenta, cheie fizica (ca sa nu ramai blocat niciodata) si chiar si apel video daca vrei sa vezi cine e la usa inainte sa-i deschizi. Plus, se integreaza usor cu alte gadgeturi smart home de la ei, daca esti deja in ecosistemul ala. E robusta, arata si bine si, cel mai important, nu mi-a dat batai de cap de cand o am. Nu mai cauti chei prin geanta la 3 noaptea, dai un tap in aplicatie si gata. E un confort pe care nu-l mai poti da inapoi.</p>
-    <p class="mb-4">Pe langa asta, iti poti seta coduri temporare pentru musafiri sau curieri, primesti notificari pe telefon cand cineva intra sau iese, si poti verifica istoricul accesarilor. E genul ala de upgrade care iti schimba viata, chiar daca pare doar o mica piesa de tehnologie. Nu zic ca nu exista si variante mai ieftine, dar asta de la Aqara mi se pare ca bifeaza cam tot ce ar trebui sa faca o <strong>incuietoare smart cu acces prin telefon</strong> de clasa medie spre superioara.</p>
+    <p class="mb-4">Uite care-i treaba: daca ma intrebi pe mine, cea mai buna optiune pentru o <strong><a href="/incuietoare-biometrica-pentru-usa/" class="interlink">incuietoare</a> smart cu acces prin telefon</strong> e un model care iti ofera flexibilitate maxima si securitate de top. Eu am tot testat prin casa cateva modele si, sincer, cand vine vorba de fiabilitate si usurinta in utilizare, Aqara A100 Pro mi-a placut cel mai mult. E un pic mai scumpa, cam pe la 900-1000 lei, dar face toti banii.</p>
+    <p class="mb-4">Are acces prin telefon (evident, pe <a href="/receiver-audio-cu-bluetooth-si-wi-fi/" class="interlink">Bluetooth si</a> Wi-Fi), cod PIN, amprenta, cheie fizica (ca sa nu ramai blocat niciodata) si chiar si apel video daca vrei sa vezi cine e la usa inainte sa-i deschizi. Plus, se integreaza usor cu alte gadgeturi smart home de la ei, daca esti deja in ecosistemul ala. E robusta, arata si bine si, cel mai important, nu mi-a dat batai de cap de cand o am. Nu mai cauti chei prin geanta la 3 noaptea, dai un tap in aplicatie si gata. E un confort pe care nu-l mai poti da inapoi.</p>
+    <p class="mb-4">Pe langa asta, iti poti seta coduri temporare pentru musafiri sau curieri, primesti <a href="/sirena-smart-cu-notificari-pe-telefon/" class="interlink">notificari pe</a> telefon cand cineva intra sau iese, si poti verifica istoricul accesarilor. E genul ala de upgrade care iti schimba viata, chiar daca pare doar o mica piesa de tehnologie. Nu zic ca nu exista si variante mai ieftine, dar asta de la Aqara mi se pare ca bifeaza cam tot ce ar trebui sa faca o <strong>incuietoare smart cu acces prin telefon</strong> de clasa medie spre superioara.</p>
     
     
   </section>
@@ -198,7 +211,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Avantaje si dezavantaje: cand merita sa investesti intr-o incuietoare smart cu acces prin telefon</h2>
-    <p class="mb-4">Sincer, e clar ca o <strong>incuietoare smart cu acces prin telefon</strong> aduce o gramada de avantaje, dar la fel de bine, sunt si cateva lucruri de care trebuie sa tii cont. Nu e totul roz.</p><h3>Avantaje clare:</h3><ul><li><strong>Convenienta maxima:</strong> Nu mai cauti chei. Deschizi usa cu telefonul, cu amprenta, cu cod. Perfect cand ai mainile pline sau ai uitat cheile in casa.</li><li><strong>Securitate imbunatatita:</strong> Poti vedea cine a intrat si cand, poti seta coduri temporare pentru musafiri sau servicii de curatenie. Unele modele au si alarme integrate.</li><li><strong>Control de la distanta:</strong> Lasi un prieten sa intre cat esti la serviciu? Vrei sa verifici daca ai incuiat usa? Poti face asta de oriunde ai semnal la telefon.</li><li><strong>Automatizare:</strong> Se poate integra cu alte gadgeturi smart home. Usa se poate deschide automat cand ajungi acasa, luminile se pot aprinde, etc.</li></ul><h3>Dezavantaje de luat in calcul:</h3><ul><li><strong>Cost initial:</strong> Sunt, in general, mai scumpe decat o broasca clasica. Pretul poate varia de la cateva sute la peste o mie de lei.</li><li><strong>Bateriile:</strong> Functioneaza pe baterii. Daca uiți sa le schimbi la timp, te poti trezi blocat. E un risc real.</li><li><strong>Conectivitate:</strong> Depinzi de semnalul Wi-Fi sau Bluetooth. Daca reteaua pică, sau daca semnalul e slab, pot aparea probleme.</li><li><strong>Securitate cibernetica:</strong> Orice dispozitiv conectat la internet poate fi o ținta. E bine sa te informezi despre masurile de securitate ale producatorului.</li><li><strong>Instalare:</strong> Unele modele sunt mai usor de montat decat altele. Unele pot necesita interventia unui profesionist.</li></ul><p>Deci, ca sa zic pe scurt, daca valoareaesti confortul si esti dispus sa investesti un pic mai mult si sa fii atent la mentenanta (baterii, conexiune), atunci o <strong>incuietoare smart cu acces prin telefon</strong> e o alegere excelenta. Daca vrei ceva super simplu si ieftin, poate nu e pentru tine momentan.</p>
+    <p class="mb-4">Sincer, e clar ca o <strong>incuietoare smart cu acces prin telefon</strong> aduce o gramada de avantaje, dar la fel de bine, sunt si cateva lucruri de care trebuie sa tii cont. Nu e totul roz.</p><h3>Avantaje clare:</h3><ul><li><strong>Convenienta maxima:</strong> Nu mai cauti chei. Deschizi usa cu telefonul, cu amprenta, cu cod. Perfect cand ai mainile pline sau ai uitat cheile in casa.</li><li><strong>Securitate imbunatatita:</strong> Poti vedea cine a intrat si cand, poti seta coduri temporare pentru musafiri sau servicii de curatenie. Unele modele au si alarme integrate.</li><li><strong>Control de la distanta:</strong> Lasi un prieten sa intre cat esti la serviciu? Vrei sa verifici daca ai incuiat usa? Poti face asta de oriunde ai semnal la telefon.</li><li><strong>Automatizare:</strong> Se poate integra cu alte gadgeturi smart home. Usa se poate deschide automat cand ajungi acasa, luminile se pot aprinde, etc.</li></ul><h3>Dezavantaje de luat in calcul:</h3><ul><li><strong>Cost initial:</strong> Sunt, in general, mai scumpe decat o broasca clasica. Pretul poate varia de la cateva sute la peste o mie de lei.</li><li><strong>Bateriile:</strong> Functioneaza pe baterii. Daca uiți sa le schimbi la timp, te poti trezi blocat. E un risc real.</li><li><strong>Conectivitate:</strong> Depinzi de semnalul Wi-Fi sau Bluetooth. Daca reteaua pică, sau daca semnalul e slab, pot aparea probleme.</li><li><strong>Securitate cibernetica:</strong> Orice dispozitiv conectat la internet poate fi o ținta. E bine sa te informezi despre masurile de securitate ale producatorului.</li><li><strong>Instalare:</strong> Unele modele sunt mai usor de montat decat altele. Unele pot necesita interventia unui <a href="/mousepad-extra-mare-pentru-setup-profesionist/" class="interlink">profesionist</a>.</li></ul><p>Deci, ca sa zic pe scurt, daca valoareaesti confortul si esti dispus sa investesti un pic mai mult si sa fii atent la mentenanta (baterii, conexiune), atunci o <strong>incuietoare smart cu acces prin telefon</strong> e o alegere excelenta. Daca vrei ceva super simplu si ieftin, poate nu e pentru tine momentan.</p>
     
     
   </section>
@@ -360,5 +373,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="incuietoare-smart-cu-acces-prin-telefon"
+      currentCategory="smart-home"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -167,7 +180,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce înseamnă DPI și de ce contează în gaming?</h2>
     <p class="mb-4">DPI, sau Dots Per Inch, reprezintă sensibilitatea unui mouse. Practic, indică numărul de pixeli pe care cursorul îi parcurge pe ecran pentru fiecare inch de mișcare fizică a mouse-ului. Un DPI mai ridicat înseamnă că o mișcare mică a mâinii va genera o deplasare mare a cursorului pe ecran. De exemplu, la 1600 DPI, o mișcare de un inch a mouse-ului va deplasa cursorul cu 1600 pixeli. Acest lucru permite reacții extrem de rapide și mișcări ample pe ecran cu un efort minim.</p>
-    <p class="mb-4">Pe de altă parte, un DPI mai scăzut necesită o mișcare fizică mai amplă a mouse-ului pentru a deplasa cursorul aceeași distanță pe ecran. Această sensibilitate redusă este ideală pentru precizie, permițând țintirea fină a inamicilor sau executarea unor manevre delicate în jocuri. Mulți gameri profesioniști preferă DPI-uri mai joase (între 400 și 1600 DPI) pentru a maximiza precizia în jocurile de tip shooter, unde fiecare pixel contează. Ajustabilitatea DPI-ului devine astfel un instrument esențial pentru a naviga între aceste două extreme, optimizând performanța în diverse scenarii de joc.</p>
+    <p class="mb-4">Pe de altă parte, un DPI mai scăzut necesită o mișcare fizică mai amplă a mouse-ului pentru a deplasa cursorul aceeași distanță pe ecran. Această sensibilitate redusă este ideală pentru precizie, permițând țintirea fină a inamicilor sau executarea unor manevre delicate în jocuri. Mulți gameri <a href="/drona-cu-filmare-6k-pentru-profesionisti/" class="interlink">profesioniști</a> preferă DPI-uri mai joase (între 400 și 1600 DPI) pentru a maximiza precizia în jocurile de tip shooter, unde fiecare pixel contează. Ajustabilitatea DPI-ului devine astfel un instrument esențial pentru a naviga între aceste două extreme, optimizând performanța în diverse scenarii de joc.</p>
     <p class="mb-4">Impactul DPI-ului asupra performanței este direct proporțional cu tipul de joc. În jocurile de tip First-Person Shooter (FPS), unde țintirea rapidă și precisă este crucială, un mouse cu DPI ajustabil îți permite să comuți între o sensibilitate înaltă pentru viraje rapide și una joasă pentru a urmări un țintă mică la distanță. Pentru jocurile de tip Real-Time Strategy (RTS) sau Multiplayer Online Battle Arena (MOBA), unde ai nevoie să navighezi rapid pe hartă și să selectezi unități, un DPI mai ridicat poate fi benefic. Un mouse gaming cu DPI ajustabil îți oferă această versatilitate, permițându-ți să personalizezi setările exact pe gustul tău.</p>
     <p class="mb-4">Setările DPI nu sunt universale și depind mult de preferințele personale, rezoluția monitorului și chiar dimensiunea ecranului. Un monitor cu rezoluție înaltă, cum ar fi 1440p sau 4K, va necesita, în general, un DPI mai ridicat pentru a muta cursorul eficient pe întreaga suprafață a ecranului. Experimentarea cu diferite valori DPI, folosind butoanele dedicate de pe mouse sau software-ul producătorului, este cheia pentru a găsi configurația optimă pentru tine. Un mouse gaming cu DPI ajustabil este, prin urmare, un instrument de personalizare avansată.</p>
     
@@ -176,7 +189,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum funcționează ajustarea DPI pe un mouse gaming?</h2>
     <p class="mb-4">Majoritatea mouse-urilor gaming moderne cu DPI ajustabil dispun de butoane dedicate, plasate ergonomic pe carcasă, care permit modificarea instantanee a sensibilității. Aceste butoane sunt de obicei poziționate lângă rotița de scroll sau pe partea laterală a mouse-ului, permițând accesul rapid chiar și în timpul jocului. Apăsarea repetată a acestor butoane te va duce prin diferite trepte de DPI predefinite de producător, sau prin valorile pe care tu le-ai configurat anterior prin software.</p>
-    <p class="mb-4">Software-ul dedicat fiecărui brand de mouse gaming este un instrument extrem de puternic care extinde funcționalitatea DPI-ului. Prin intermediul acestor aplicații, poți seta exact valorile DPI dorite pentru fiecare treaptă, poți crea profiluri diferite pentru jocuri specifice sau chiar poți atribui funcții speciale butoanelor de ajustare DPI. De exemplu, unii utilizatori aleg să programeze un buton pentru a comuta la un DPI extrem de scăzut (considerat DPI 'sniper'), util pentru țintirea precisă, care revine la setarea normală când butonul este eliberat. Această flexibilitate este un avantaj imens.</p>
+    <p class="mb-4">Software-ul dedicat fiecărui brand de mouse gaming este un instrument extrem de puternic care extinde funcționalitatea DPI-ului. Prin intermediul acestor aplicații, poți seta exact valorile DPI dorite pentru fiecare treaptă, poți crea profiluri diferite <a href="/ssd-nvme-rapid-pentru-jocuri/" class="interlink">pentru jocuri</a> specifice sau chiar poți atribui funcții speciale butoanelor de ajustare DPI. De exemplu, unii utilizatori aleg să programeze un buton pentru a comuta la un DPI extrem de scăzut (considerat DPI 'sniper'), util pentru țintirea precisă, care revine la setarea normală când butonul este eliberat. Această flexibilitate este un avantaj imens.</p>
     <p class="mb-4">Valoarea maximă a DPI-ului pe care un mouse o poate atinge variază considerabil între modele. Producătorii precum PixArt (care furnizează senzori pentru majoritatea brandurilor) lansează constant senzori noi cu capabilități îmbunătățite. Astfel, vei găsi modele pe piață care oferă un DPI maxim de 8000, 12000, 18000, sau chiar peste 20000 DPI. Totuși, este important de menționat că DPI-ul maxim nu este neapărat cel mai bun. O valoare DPI foarte ridicată poate introduce artefacte sau poate face mișcările mai greu de controlat dacă nu este combinată cu o mișcare foarte fină a mâinii. Pentru majoritatea gamerilor, un interval de DPI între 400 și 16000 este mai mult decât suficient.</p>
     <p class="mb-4">Pe lângă ajustarea DPI, multe mouse-uri gaming permit și setarea 'polling rate'-ului (rata de raportare), care indică de câte ori pe secundă mouse-ul raportează poziția sa către computer (măsurată în Hz). O rată de raportare mai mare, cum ar fi 1000Hz, înseamnă o latență mai mică și o mișcare a cursorului mai fluidă și mai responsivă. Această combinație de DPI ajustabil și polling rate optimizat contribuie la o experiență de gaming superioară, unde fiecare mișcare este tradusă precis și rapid pe ecran. Un mouse gaming cu DPI ajustabil este, deci, o componentă cheie pentru performanță.</p>
     
@@ -186,8 +199,8 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Factori de luat în considerare la alegerea unui mouse gaming cu DPI ajustabil</h2>
     <p class="mb-4">Atunci când cauți cel mai bun <strong>mouse gaming cu DPI ajustabil</strong>, nu te opri doar la valoarea DPI. Ergonomia joacă un rol fundamental în confortul pe termen lung și în capacitatea ta de a juca sesiuni extinse fără oboseală. Există trei tipuri principale de grip: palm grip (întreaga palmă se odihnește pe mouse), claw grip (degetele sunt arcuitate, iar palma se odihnește doar pe partea din spate a mouse-ului) și fingertip grip (doar degetele ating mouse-ul). Alege un mouse a cărui formă se potrivește cu stilul tău de prindere pentru a asigura un control optim și a preveni disconfortul.</p>
     <p class="mb-4">Numărul de butoane programabile este un alt aspect important. Pe lângă cele două butoane principale și rotița de scroll, multe mouse-uri gaming oferă butoane laterale, butoane deasupra rotiței sau chiar butoane ascunse. Acestea pot fi reconfigurate prin software pentru a executa diverse comenzi, macro-uri sau pentru a schimba DPI-ul. Pentru jocurile complexe, cum ar fi MOBA-urile sau MMO-urile, un număr mai mare de butoane programabile poate simplifica semnificativ execuția abilităților și a acțiunilor.</p>
-    <p class="mb-4">Tipul de senzor este crucial pentru precizia și fiabilitatea mouse-ului. Senzorii optici sunt, în general, preferați pentru acuratețea lor pe o varietate de suprafețe, în timp ce senzorii laser pot oferi DPI-uri maximă mai ridicate, dar pot avea probleme cu urmărirea pe anumite suprafețe sau pot introduce 'acceleration' (accelerare nedorită). Producători precum PixArt oferă senzori de înaltă calitate, cum ar fi seria PMW33XX, care sunt renumiți pentru performanța lor în rândul gamerilor profesioniști. Caută informații despre senzorul specific al mouse-ului pe care îl consideri.</p>
-    <p class="mb-4">Durabilitatea este, de asemenea, un factor de luat în considerare, mai ales dacă intenționezi să folosești mouse-ul intensiv. Verifică specificațiile legate de durabilitatea butoanelor (milioane de click-uri) și calitatea materialelor folosite. Un mouse gaming cu DPI ajustabil de la un brand de renume, construit cu materiale de calitate și cu o garanție solidă, este o investiție pe termen lung care te va servi bine în numeroase partide. Nu uita să verifici și greutatea mouse-ului; unii preferă modele mai ușoare pentru mișcări rapide, alții modele mai grele pentru stabilitate.</p>
+    <p class="mb-4">Tipul de senzor este crucial pentru precizia și fiabilitatea mouse-ului. Senzorii optici sunt, în general, preferați pentru acuratețea lor pe o varietate de suprafețe, în timp ce senzorii laser pot oferi DPI-uri maximă mai ridicate, dar pot avea probleme cu urmărirea pe anumite suprafețe sau pot introduce 'acceleration' (accelerare nedorită). Producători precum PixArt oferă senzori de înaltă calitate, cum ar fi seria PMW33XX, care sunt renumiți <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">pentru performanța</a> lor în rândul gamerilor profesioniști. Caută informații despre senzorul specific al mouse-ului pe care îl consideri.</p>
+    <p class="mb-4">Durabilitatea este, de asemenea, un factor de luat în considerare, mai ales dacă intenționezi să folosești mouse-ul intensiv. Verifică specificațiile legate de durabilitatea butoanelor (milioane de click-uri) și calitatea materialelor folosite. Un mouse gaming cu DPI ajustabil de la un brand de renume, construit cu materiale de calitate și cu o garanție solidă, este o investiție pe termen lung care te va servi bine în numeroase partide. Nu uita să verifici și greutatea mouse-ului; unii preferă modele mai ușoare pentru mișcări rapide, alții modele mai grele <a href="/trepied-carbon-pentru-stabilitate-maxima/" class="interlink">pentru stabilitate</a>.</p>
     
     
   </section>
@@ -341,5 +354,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="mouse-gaming-cu-dpi-ajustabil"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

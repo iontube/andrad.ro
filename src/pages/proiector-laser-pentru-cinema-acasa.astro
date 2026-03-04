@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -147,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Proiectoare laser pentru cinema acasă: Am primit un upgrade major</h2>
     <p class="mb-4">Am testat destule proiectoare în ultimii ani ca să-mi dau seama când ceva chiar merită atenția. Iar proiectoarele laser pentru cinema acasă au schimbat jocul. Am trecut de la becuri scumpe și cu viață scurtă la o sursă de lumină care practic nu te mai stresează, iar calitatea imaginii a sărit și ea un nivel. Nu mai vorbim de acele proiectoare DLP care făceau un zgomot infernal; acum liniștea e la ea acasă.</p>
     <p class="mb-4">Am instalat în sufragerie un model de la XGIMI, un brand care a prins mult teren pe nișa asta. E vorba de un proiector laser 4K, și să fiu sincer, diferența față de un TV mare, chiar și OLED, începe să se estompeze. Suprafața de proiecție e uriașă, culorile sunt vibrante, iar contrastul e mult mai bun decât mă așteptam. Am uitat complet de TV-ul meu de 65 de inci pentru serile de film. Mă simt ca în multiplex, dar cu propriul meu popcorn și fără bilet.</p>
-    <p class="mb-4">Când vine vorba de instalare, am avut și experiențe mai puțin plăcute cu proiectoare mai vechi, care necesitau reglaje complicate. Acum, multe modele vin cu autofocus și corecție keystone automată. Pur și simplu pui proiectorul pe o mobilă, îl pornești, și el își face treaba. Am testat și pe un perete nu perfect drept, și rezultatul a fost surprinzător de bun. E mult mai user-friendly decât îți imaginezi.</p>
+    <p class="mb-4">Când vine vorba de instalare, am avut și experiențe mai puțin plăcute cu proiectoare mai vechi, care necesitau reglaje complicate. Acum, multe modele vin <a href="/aparat-mirrorless-cu-autofocus-rapid/" class="interlink">cu autofocus</a> și corecție keystone automată. Pur și simplu pui proiectorul pe o mobilă, îl pornești, și el își face treaba. Am testat și pe un perete nu perfect drept, și rezultatul a fost surprinzător de bun. E mult mai user-friendly decât îți imaginezi.</p>
     
     
   </section>
@@ -183,15 +196,15 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Experiența de utilizare: Sunet, Conectivitate și Smart Features</h2>
-    <p class="mb-4">Sunetul integrat la proiectoarele laser s-a îmbunătățit enorm. Multe modele vin acum cu difuzoare de la branduri audio cunoscute, cum ar fi Harman Kardon sau JBL. Am testat un proiector XGIMI care avea un sunet surprinzător de plin, cu bas destul de prezent. Nu înlocuiește un sistem audio dedicat, clar, dar pentru vizionare ocazională sau când vrei să nu complici lucrurile, e mai mult decât suficient. Totuși, dacă vrei experiența completă de cinema, o bară de sunet sau un sistem 5.1 rămâne recomandarea mea.</p>
+    <p class="mb-4">Sunetul integrat la proiectoarele laser s-a îmbunătățit enorm. Multe modele vin acum cu difuzoare de la branduri audio cunoscute, cum ar fi Harman Kardon sau JBL. Am testat un proiector XGIMI care avea un sunet surprinzător de plin, cu bas destul de prezent. Nu înlocuiește un <a href="/sistem-audio-multiroom-wireless/" class="interlink">sistem audio</a> dedicat, clar, dar pentru vizionare ocazională sau când vrei să nu complici lucrurile, e mai mult decât suficient. Totuși, dacă vrei experiența completă de cinema, o bară de sunet sau un sistem 5.1 rămâne recomandarea mea.</p>
     <p class="mb-4">Conectivitatea e, de obicei, bogată. Majoritatea modelelor au cel puțin două porturi HDMI (unele cu suport ARC/eARC), USB-uri, Wi-Fi, Bluetooth. Asta îți permite să conectezi console de jocuri (am jucat Cyberpunk 2077 pe un ecran de 120 de inci, o experiență diferită!), laptopuri, playere Blu-ray sau dispozitive de streaming. Am apreciat și porturile USB, utile pentru a reda filme direct de pe un stick sau hard disk extern, fără a mai avea nevoie de un alt dispozitiv.</p>
-    <p class="mb-4">Funcționalitățile smart sunt standard acum. Android TV sau un sistem de operare proprietar similar îți oferă acces la aplicații precum Netflix, YouTube, Disney+. Am observat că unele interfețe sunt mai intuitive decât altele. Sistemul de operare de la XGIMI e destul de fluid, dar uneori am preferat să conectez un Google Chromecast sau un Apple TV pentru o experiență mai familiară și acces rapid la tot conținutul meu. Actualizările de software sunt importante, așa că verifică dacă producătorul oferă suport pe termen lung.</p>
+    <p class="mb-4">Funcționalitățile smart sunt standard acum. Android TV sau un sistem de operare proprietar similar îți oferă acces la aplicații precum Netflix, YouTube, Disney+. Am observat că unele interfețe sunt mai intuitive decât altele. Sistemul de operare de la XGIMI e destul de fluid, dar uneori am preferat să conectez un Google <a href="/ecran-smart-cu-chromecast-incorporat/" class="interlink">Chromecast</a> sau un Apple TV pentru o experiență mai familiară și acces rapid la tot conținutul meu. Actualizările de software sunt importante, așa că verifică dacă producătorul oferă suport pe termen lung.</p>
     
     
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la cineva care le-a testat</h2>
-    <p class="mb-4">Instalează proiectorul cât mai stabil posibil. Chiar dacă au corecție keystone, o bază solidă ajută la o imagine mai clară și fără distorsiuni. Am folosit un mic trepied foto pentru a poziționa proiectorul mai sus, evitând astfel să fie blocat de obiecte pe mobilă. E o soluție ieftină și eficientă.</p>
+    <p class="mb-4">Instalează proiectorul cât mai stabil posibil. Chiar dacă au corecție keystone, o bază solidă ajută la o imagine mai clară și fără distorsiuni. Am folosit un mic trepied <a href="/kit-accesorii-foto-pentru-incepatori/" class="interlink">foto pentru</a> a poziționa proiectorul mai sus, evitând astfel să fie blocat de obiecte pe mobilă. E o soluție ieftină și eficientă.</p>
     <p class="mb-4">Investește într-un ecran de proiecție. Chiar și un perete alb vopsit special nu se compară cu un ecran dedicat. Am văzut diferențe mari între a proiecta pe un perete texturat și pe un ecran alb mat. Un ecran de calitate îmbunătățește contrastul, culorile și elimină reflexiile. Prețurile încep de la câteva sute de lei pentru ecrane manuale, dar merită.</p>
     <p class="mb-4">Ține cont de distanța de proiecție. Fiecare proiector are un 'throw ratio' care determină dimensiunea imaginii în funcție de distanța față de ecran. Verifică manualul proiectorului sau folosește calculatoare online pentru a te asigura că poți obține dimensiunea dorită în spațiul tău. Am făcut greșeala să cumpăr un proiector fără să verific asta și am fost nevoit să-l mut de câteva ori până să găsesc poziția optimă.</p>
     
@@ -290,5 +303,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="proiector-laser-pentru-cinema-acasa"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

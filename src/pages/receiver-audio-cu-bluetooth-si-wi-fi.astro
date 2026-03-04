@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -146,7 +159,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Am testat zeci de receivere audio cu Bluetooth si Wi-Fi in ultimii ani, si pot spune sincer ca au salvat multe sisteme audio "ancuțate". Daca ai prin casa un amplificator bun, de pe vremea DVD-urilor sau chiar mai vechi, dar care nu are nicio intrare digitală sau conectivitate modernă, un astfel de receiver e soluția.</p>
     <p class="mb-4">Practic, e o punte între trecut și prezent. Îți permite să streamezi muzică de pe telefon, tabletă sau chiar laptop direct în sistemul tău Hi-Fi, fără fire complicate sau adaptor. Am văzut modele de la Yamaha, Denon, Onkyo, dar și soluții mai accesibile de la TP-Link sau chiar unii producători de boxe active care oferă și această funcționalitate.</p>
     <p class="mb-4">Un receiver audio cu Bluetooth și Wi-Fi nu e un amplificator nou, ci mai degrabă un "adaptor inteligent" care se conectează la intrările analogice (AUX, RCA) ale amplificatorului tău existent. Asta înseamnă că poți să continui să folosești boxele tale preferate și să te bucuri de sunetul pe care l-ai ales cu grijă, dar cu acces la toată muzica digitală de azi.</p>
-    <p class="mb-4">Când vine vorba de conectivitate, Wi-Fi-ul e regele. Îți oferă stabilitate mult mai mare decât Bluetooth-ul, mai ales pentru streamuri de înaltă rezoluție. Plus, multe modele cu Wi-Fi vin și cu suport pentru AirPlay (de la Apple) sau Chromecast (de la Google), ceea ce simplifică și mai mult procesul de trimitere a sunetului de pe dispozitivele tale.</p>
+    <p class="mb-4">Când vine vorba de conectivitate, Wi-Fi-ul e regele. Îți oferă <a href="/trepied-carbon-pentru-stabilitate-maxima/" class="interlink">stabilitate</a> mult mai mare decât Bluetooth-ul, mai ales pentru streamuri de înaltă rezoluție. Plus, multe modele cu Wi-Fi vin și cu suport pentru AirPlay (de la Apple) sau Chromecast (de la Google), ceea ce simplifică și mai mult procesul de trimitere a sunetului de pe dispozitivele tale.</p>
     
     
   </section>
@@ -164,13 +177,13 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Aici devine interesant. Multe receivere audio cu Bluetooth și Wi-Fi fac parte din ecosisteme multi-room, cum ar fi HEOS de la Denon sau MusicCast de la Yamaha. Asta înseamnă că poți să ai mai multe difuzoare sau receivere în diferite camere și să le controlezi pe toate dintr-o singură aplicație de pe telefon.</p>
     <p class="mb-4">Am testat sistemul HEOS pe un Denon AVR-X1700H (care e mai mult un receiver AV, dar are funcții multi-room) și a fost fantastic. Poți să asculți aceeași muzică în toată casa sau muzică diferită în fiecare cameră. Aplicația e intuitivă și îți permite să accesezi servicii de streaming precum Spotify, Tidal, Deezer direct din ea.</p>
     <p class="mb-4">Chiar și soluțiile mai simple, cum ar fi un receiver audio cu Bluetooth și Wi-Fi de la TP-Link, cum ar fi modelul HA100 (pe la vreo 250 RON), pot fi integrate într-un sistem multi-room dacă folosești aplicații third-party sau funcții de casting de pe telefon.</p>
-    <p class="mb-4">Un alt aspect pe care l-am apreciat e posibilitatea de a crea liste de redare și de a le controla din telecomandă sau din aplicație. Nu mai trebuie să stai cu telefonul în mână tot timpul. Poți să schimbi melodia, să ajustezi volumul sau să pui pe pauză direct de pe receiver sau de pe telecomanda dedicată.</p>
+    <p class="mb-4">Un alt aspect pe care l-am apreciat e posibilitatea de a crea liste de redare și de a le controla din telecomandă sau din aplicație. Nu mai trebuie să stai cu telefonul în mână tot timpul. Poți să schimbi melodia, să ajustezi volumul sau să pui pe pauză direct de pe receiver sau de pe <a href="/switch-smart-pentru-telecomanda/" class="interlink">telecomanda</a> dedicată.</p>
     
     
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Conectivitate și compatibilitate: ce să cauți</h2>
-    <p class="mb-4">Pe lângă Bluetooth (ideal versiunea 5.0 sau mai nouă cu aptX HD/LDAC) și Wi-Fi (ideal dual-band, 2.4GHz și 5GHz), e bine să verifici ce alte opțiuni de conectare ai. Multe receivere audio cu Bluetooth și Wi-Fi suportă și standarde de streaming precum AirPlay 2 (pentru utilizatorii Apple) sau Chromecast built-in. Acestea îți oferă o integrare perfectă cu ecosistemele Apple și Google.</p>
+    <p class="mb-4">Pe lângă Bluetooth (ideal versiunea 5.0 sau mai nouă cu aptX HD/LDAC) și Wi-Fi (ideal dual-band, 2.4GHz și 5GHz), e bine să verifici ce alte opțiuni de conectare ai. Multe receivere audio cu Bluetooth și Wi-Fi suportă și standarde de streaming precum AirPlay 2 (pentru utilizatorii Apple) sau <a href="/ecran-smart-cu-chromecast-incorporat/" class="interlink">Chromecast</a> built-in. Acestea îți oferă o integrare perfectă cu ecosistemele Apple și Google.</p>
     <p class="mb-4">Am observat că modelele mai noi vin și cu suport pentru formate audio de înaltă rezoluție, cum ar fi FLAC, ALAC sau DSD. Dacă ești un audiofil, asta e o caracteristică importantă. Un receiver bun de la Cambridge Audio, cum ar fi AXN10 (în jur de 2000 RON), ar putea fi o opțiune bună pentru asta.</p>
     <p class="mb-4">Compatibilitatea cu servicii de streaming e crucială. Verifică dacă receiverul suportă direct Spotify Connect, Tidal Connect, Deezer, Amazon Music, etc. Acest lucru îți permite să controlezi redarea direct din aplicația serviciului de streaming, fără a mai trece prin aplicația dedicată receiverului.</p>
     <p class="mb-4">Am avut ocazia să testez și receivere care nu aveau funcții de streaming integrate, ci doar Bluetooth. Acestea sunt mai simple și mai ieftine (sub 200 RON), dar pierzi flexibilitatea Wi-Fi-ului și a conectivității multi-room. Un exemplu ar fi un mic receptor Bluetooth de la Ugreen.</p>
@@ -182,7 +195,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">În general, instalarea unui receiver audio cu Bluetooth și Wi-Fi e foarte simplă. De obicei, tot ce trebuie să faci e să-l conectezi la intrarea AUX sau RCA a amplificatorului tău, să-l alimentezi și să-l conectezi la rețeaua Wi-Fi. Procesul de conectare la Wi-Fi se face de obicei printr-o aplicație mobilă dedicată, unde vei introduce parola rețelei tale.</p>
     <p class="mb-4">Am testat un model de la Yamaha, RX-V6A, care, deși e un receiver AV complet, are și funcții excelente de streaming. Configurarea lui a durat cam 15 minute, inclusiv conectarea la Wi-Fi și actualizarea firmware-ului. Aplicația Yamaha MusicCast e destul de intuitivă.</p>
     <p class="mb-4">Pentru modelele mai simple, cu doar Bluetooth, e și mai ușor. Îl conectezi, îl împerechezi cu telefonul și gata. Nicio aplicație, nicio parolă.</p>
-    <p class="mb-4">Un sfat practic: asigură-te că poziționezi receiverul nu prea departe de routerul Wi-Fi, mai ales dacă nu are antene externe. O conexiune slabă poate duce la întreruperi în redare, și asta strică toată experiența.</p>
+    <p class="mb-4">Un sfat practic: asigură-te că poziționezi receiverul nu prea departe de routerul Wi-Fi, mai ales dacă nu are antene externe. O conexiune slabă poate duce la întreruperi în redare, și asta strică toată <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experiența</a>.</p>
     
     
   </section>
@@ -288,5 +301,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="receiver-audio-cu-bluetooth-si-wi-fi"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -157,10 +170,10 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Descoperă Ușurința Curățeniei: Aspiratorul Robot Compact pentru Apartamente</h2>
-    <p class="mb-4">Într-un ritm de viață alert, timpul devine cea mai prețioasă resursă. Gândește-te cât de mult ai putea câștiga dacă ai elimina o sarcină casnică repetitivă, dar esențială. Aici intervine salvatorul modern: aspiratorul robot compact pentru apartamente. Aceste dispozitive ingenioase nu mai sunt un lux, ci o necesitate practică, mai ales pentru cei care locuiesc în spații mai restrânse unde fiecare centimetru contează și unde manevrarea unui aspirator clasic poate fi uneori anevoioasă. Un astfel de aparat promite să preia povara aspirării zilnice, lăsându-ți mai mult timp liber pentru pasiunile tale sau pentru relaxare.</p>
-    <p class="mb-4">Am ales să explorăm în detaliu ce înseamnă un aspirator robot compact pentru apartamente, de la funcționalitățile de bază la cele mai avansate caracteristici, și cum poți alege modelul perfect care să se potrivească nevoilor specifice ale locuinței tale. Nu te lăsa intimidat de multitudinea de opțiuni; scopul nostru este să-ți oferim o imagine clară, bazată pe experiență și pe specificații tehnice reale, pentru a lua cea mai informată decizie. Un robot aspirator mic și eficient poate face o diferență uriașă în calitatea vieții tale cotidiene.</p>
+    <p class="mb-4">Într-un ritm de viață alert, timpul devine cea mai prețioasă resursă. Gândește-te cât de mult ai putea câștiga dacă ai elimina o sarcină casnică repetitivă, dar esențială. Aici intervine salvatorul modern: aspiratorul robot <a href="/aparat-foto-compact-pentru-vacanta/" class="interlink">compact pentru</a> apartamente. Aceste dispozitive ingenioase nu mai sunt un lux, ci o necesitate practică, mai ales pentru cei care locuiesc în spații mai restrânse unde fiecare centimetru contează și unde manevrarea unui aspirator clasic poate fi uneori anevoioasă. Un astfel de aparat promite să preia povara aspirării zilnice, lăsându-ți mai mult timp liber pentru pasiunile tale sau pentru relaxare.</p>
+    <p class="mb-4">Am ales să explorăm în detaliu ce înseamnă un <a href="/aspirator-robot-integrat-smart-home/" class="interlink">aspirator robot</a> compact pentru apartamente, de la funcționalitățile de bază la cele mai avansate caracteristici, și cum poți alege modelul perfect care să se potrivească nevoilor specifice ale locuinței tale. Nu te lăsa intimidat de multitudinea de opțiuni; scopul nostru este să-ți oferim o imagine clară, bazată pe experiență și pe specificații tehnice reale, pentru a lua cea mai informată decizie. Un robot aspirator mic și eficient poate face o diferență uriașă în calitatea vieții tale cotidiene.</p>
     <p class="mb-4">Pentru un apartament, unde spațiul este adesea limitat, dimensiunea și agilitatea unui aspirator robot sunt cruciale. Un model compact nu doar că se va descurca excelent în spații înguste și sub mobilă, dar va fi și mai ușor de depozitat. Vom analiza cum aceste caracteristici se traduc în beneficii practice, de la curățarea eficientă a colțurilor la navigarea inteligentă printre obstacole. Pregătește-te să descoperi cum tehnologia poate simplifica curățenia.</p>
-    <p class="mb-4">Pe piața din România, oferta de aspiratoare robot s-a diversificat considerabil, iar alegerea unui aspirator robot compact pentru apartamente poate părea descurajantă. Cu toate acestea, prin înțelegerea funcțiilor cheie și prin compararea modelelor populare, vei găsi cu siguranță soluția ideală. Vom aborda aspecte precum puterea de aspirație, tipurile de senzori, autonomia bateriei și conectivitatea inteligentă, toate esențiale pentru performanța unui astfel de aparat în mediul specific unui apartament.</p>
+    <p class="mb-4">Pe piața din România, oferta de aspiratoare robot s-a diversificat considerabil, iar alegerea unui aspirator robot compact pentru apartamente poate părea descurajantă. Cu toate acestea, prin înțelegerea funcțiilor cheie și prin compararea modelelor populare, vei găsi cu siguranță soluția ideală. Vom aborda aspecte precum puterea de aspirație, tipurile de senzori, autonomia bateriei și conectivitatea inteligentă, toate esențiale <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">pentru performanța</a> unui astfel de aparat în mediul specific unui apartament.</p>
     <p class="mb-4">Acest articol își propune să fie partenerul tău de nădejde în procesul de selecție. Fie că ești la prima achiziție de un robot de aspirare sau cauți să-ți upgradezi modelul curent, informațiile prezentate aici sunt concepute pentru a-ți oferi claritate și încredere în alegerea ta. Vom pune accent pe modelele care excelează în spații mici, demonstrând că un aspirator robot compact pentru apartamente este o investiție inteligentă în confortul tău.</p>
     
     
@@ -215,7 +228,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Integrarea cu Locuința Smart și Controlul Avansat</h2>
-    <p class="mb-4">Pentru cei pasionați de tehnologie și de un stil de viață modern, integrarea aspiratorului robot cu ecosistemul smart home este un aspect din ce în ce mai important. Multe modele noi de aspiratoare robot compacte pentru apartamente oferă conectivitate Wi-Fi și pot fi controlate prin aplicații mobile dedicate, care permit nu doar programarea curățeniei, ci și accesul la funcționalități avansate. Aceste aplicații pot genera hărți detaliate ale apartamentului, permițându-ți să stabilești zone „no-go” (unde robotul nu trebuie să intre, de exemplu, lângă bolurile de apă ale animalelor de companie sau lângă cabluri expuse) sau să desemnezi zone specifice pentru curățenie intensă.</p>
+    <p class="mb-4">Pentru cei pasionați de tehnologie și de un stil de viață modern, integrarea aspiratorului robot cu ecosistemul smart home este un aspect din ce în ce mai important. Multe modele noi de aspiratoare robot compacte pentru apartamente oferă conectivitate Wi-Fi și pot fi <a href="/becuri-rgb-controlate-prin-app/" class="interlink">controlate prin</a> aplicații mobile dedicate, care permit nu doar programarea curățeniei, ci și accesul la funcționalități avansate. Aceste aplicații pot genera hărți detaliate ale apartamentului, permițându-ți să stabilești zone „no-go” (unde robotul nu trebuie să intre, de exemplu, lângă bolurile de apă ale animalelor de companie sau lângă cabluri expuse) sau să desemnezi zone specifice pentru curățenie intensă.</p>
     <p class="mb-4">Controlul vocal este o altă facilitate care adaugă un plus de confort. Prin integrarea cu asistenți virtuali precum Google Assistant sau Amazon Alexa, poți porni, opri sau trimite robotul la stația de încărcare printr-o simplă comandă vocală. Imaginează-ți că poți spune „Ok Google, pornește aspiratorul robot” în timp ce te pregătești să pleci de acasă, iar la întoarcere vei găsi podelele curate. Această automatizare simplifică și mai mult rutina zilnică.</p>
     <p class="mb-4">Pe lângă controlul direct, unele aplicații permit și personalizarea experienței de curățenie. Poți seta niveluri diferite de aspirație pentru diferite camere (mai puternic pe gresie, mai blând pe parchet) sau poți ajusta fluxul de apă pentru funcția de mop. Această personalizare fină asigură că aspiratorul robot compact pentru apartamente funcționează optim pe toate tipurile de suprafețe și în diverse condiții, adaptându-se perfect nevoilor locuinței tale specifice.</p>
     <p class="mb-4">Investiția într-un aspirator robot cu capabilități smart poate transforma curățenia dintr-o corvoadă într-o sarcină automatizată și eficientă. Aceste dispozitive nu doar că aspiră, ci devin parte integrantă a unui sistem inteligent de gestionare a casei, oferindu-ți mai mult timp liber și un confort sporit. Un aspirator robot compact pentru apartamente cu astfel de funcționalități este o alegere modernă și practică.</p>
@@ -357,5 +370,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="aspirator-robot-compact-pentru-apartamente"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -146,14 +159,14 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Refresh Mare la Televizor: Ce Conteaza cu Adevarat</h2>
     <p class="mb-4">Am testat zeci de televizoare LED de-a lungul anilor, de la modele entry-level la cele de top, si pot spune fara ezitare ca rata de refresh a imaginii e un factor pe care nu-l poti ignora, mai ales daca esti pasionat de sport sau jocuri.</p>
-    <p class="mb-4">Cand vorbim de un televizor LED cu refresh mare, ne referim la cati pixeli poate afisa televizorul pe ecran intr-o secunda. Un standard, 60Hz, inseamna 60 de imagini pe secunda. Un model cu 120Hz, dublu. Simplu, nu?</p>
+    <p class="mb-4">Cand vorbim de un <a href="/televizor-8k-pentru-living-mare/" class="interlink">televizor</a> LED cu refresh mare, ne referim la cati pixeli poate afisa televizorul pe ecran intr-o secunda. Un standard, 60Hz, inseamna 60 de imagini pe secunda. Un model cu 120Hz, dublu. Simplu, nu?</p>
     <p class="mb-4">Ce inseamna asta in practica? Miscari mult mai fluide, mai ales in scenele rapide. Ganditi-va la o partida de fotbal, la o cursa de masini sau la un joc video intens. Diferenta e vizibila si, odată ce te obișnuiești cu ea, greu te mai întorci la 60Hz.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Am Testat Personal: Fluiditatea Conteaza la Sport si Jocuri</h2>
-    <p class="mb-4">In experienta mea, am simțit diferența cel mai acut la meciurile de fotbal. Un gol marcat rapid, o fază executată pe contraatac – la 60Hz, uneori puteam să pierd din vedere mingea sau să nu disting clar mișcările jucătorilor. La 120Hz, totul e clar, precis, ca și cum ai fi pe stadion.</p>
+    <p class="mb-4">In <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experienta</a> mea, am simțit diferența cel mai acut la meciurile de fotbal. Un gol marcat rapid, o fază executată pe contraatac – la 60Hz, uneori puteam să pierd din vedere mingea sau să nu disting clar mișcările jucătorilor. La 120Hz, totul e clar, precis, ca și cum ai fi pe stadion.</p>
     <p class="mb-4">La fel stau lucrurile și cu gaming-ul. Am testat televizoare Samsung QLED cu 120Hz alături de console precum PlayStation 5 și Xbox Series X. Imaginile sunt incredibil de cursive, lag-ul e redus, iar experiența de joc e mult mai imersivă. Mișcările rapide din jocuri precum Call of Duty sau Forza Horizon sunt redate impecabil.</p>
     <p class="mb-4">Chiar și la filmele de acțiune, deși mai puțin dramatic decât la sport sau jocuri, un refresh mare ajută la reducerea efectului de "blur" (estompare) în scenele rapide. E o îmbunătățire subtilă, dar prezentă.</p>
     
@@ -169,7 +182,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Prețuri Si Modele Concrete: Ce Gasesti Acum pe Piata din Romania</h2>
-    <p class="mb-4">Un televizor LED cu refresh nativ de 120Hz nu mai este un moft, ci o configurație pe care o găsești destul de des, chiar și pe modele de gamă medie. De exemplu, modelele LG OLED din seria C (cum ar fi LG OLED55C3, preț în jur de 5500 RON la eMAG) sau Samsung Neo QLED din seria QN85 (de exemplu, Samsung QE55QN85C, aproximativ 4800 RON la Altex) oferă 120Hz nativ și sunt excelente pentru sport și gaming.</p>
+    <p class="mb-4">Un <a href="/televizor-curbat-uhd-55-inch/" class="interlink">televizor</a> LED cu refresh nativ de 120Hz nu mai este un moft, ci o configurație pe care o găsești destul de des, chiar și pe modele de gamă medie. De exemplu, modelele LG OLED din seria C (cum ar fi LG OLED55C3, preț în jur de 5500 RON la eMAG) sau Samsung Neo QLED din seria QN85 (de exemplu, Samsung QE55QN85C, aproximativ 4800 RON la Altex) oferă 120Hz nativ și sunt excelente pentru sport și gaming.</p>
     <p class="mb-4">Chiar și modelele mai accesibile pot veni cu 120Hz, dar s-ar putea să fie la rezoluții mai mici sau să aibă tehnologii de interpolare mai puțin avansate. Un exemplu ar fi un televizor Sony BRAVIA din seria X85 (cum ar fi Sony KD-55X85K, în jur de 3500 RON la Flanco), care oferă 120Hz și e o opțiune bună pentru cei cu un buget mai restrâns.</p>
     <p class="mb-4">Am văzut și oferte bune la televizoare de gaming dedicate, deși alea sunt mai mult monitoare. Dar dacă te gândești la un TV, branduri ca TCL au început să ofere și ele ecrane cu 120Hz la prețuri competitive. De exemplu, un TCL C845 (un mini-LED cu 120Hz) poate fi găsit în jur de 3800 RON la PC Garage. E important să compari ofertele și să urmărești promoțiile.</p>
     
@@ -186,7 +199,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi Practice din Experienta Mea de Utilizare</h2>
     <p class="mb-4">Prima regulă: nu te lăsa influențat de "marketing". Caută specificația "nativ 120Hz". Dacă vezi "240Hz Motion Rate", verifică în review-uri independente ce înseamnă de fapt pentru modelul respectiv. Uneori, e doar o tehnologie de interpolare care nu oferă aceeași fluiditate ca un refresh nativ.</p>
-    <p class="mb-4">Apoi, dacă intenționezi să folosești televizorul pentru gaming pe console de ultimă generație (PS5, Xbox Series X) sau PC, asigură-te că are porturi HDMI 2.1. Fără ele, nu vei putea beneficia de rezoluție 4K la 120Hz, ceea ce e un dezavantaj major pentru gaming.</p>
+    <p class="mb-4">Apoi, dacă intenționezi să folosești televizorul <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">pentru gaming</a> pe console de ultimă generație (PS5, Xbox Series X) sau PC, asigură-te că are porturi HDMI 2.1. Fără ele, nu vei putea beneficia de rezoluție 4K la 120Hz, ceea ce e un dezavantaj major pentru gaming.</p>
     <p class="mb-4">Nu uita să experimentezi cu setările de mișcare. Unele televizoare au moduri predefinite (Standard, Sport, Film), altele îți permit să ajustezi manual nivelul de "smoothness" și "blur reduction". Găsește echilibrul care ți se potrivește. Eu personal prefer să reduc la minim interpolarea în filme, dar să o activez complet pentru sport și jocuri.</p>
     
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="televizor-led-cu-refresh-mare"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

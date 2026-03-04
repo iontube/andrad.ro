@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -162,8 +175,8 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sisteme de Urmărire a Mișcării: Libertate Totală</h2>
     <p class="mb-4">Sistemele de urmărire a mișcării, cum ar fi cele bazate pe senzori externi (ex. Lighthouse de la Valve), oferă un nivel de precizie și libertate pe care sistemele inside-out, cum au majoritatea headset-urilor moderne, nu îl pot egala complet. Am instalat un sistem Lighthouse pentru PC VR și am fost uimit de cât de fluid și precis a fost totul, chiar și în spații mai mari.</p>
-    <p class="mb-4">Aceste sisteme folosesc stații de bază laser pentru a urmări poziția controlerelor și a headset-ului în spațiu. Avantajul major este că nu ai zone moarte sau limitări ale câmpului vizual al camerelor de pe headset. Dezavantajul este că necesită o configurare mai atentă și spațiu dedicat. Un kit SteamVR Tracking (două stații de bază și doi senzori) poate costa în jur de 1000-1500 RON.</p>
-    <p class="mb-4">Am observat că pentru jocuri competitive sau experiențe VR care necesită mișcări rapide și precise, un sistem de urmărire extern este un game-changer. Pentru cineva care joacă în spații restrânse, sistemul integrat al headset-ului este, probabil, suficient.</p>
+    <p class="mb-4">Aceste sisteme folosesc stații de bază <a href="/proiector-laser-pentru-cinema-acasa/" class="interlink">laser pentru</a> a urmări poziția controlerelor și a headset-ului în spațiu. Avantajul major este că nu ai zone moarte sau limitări ale câmpului vizual al camerelor de pe headset. Dezavantajul este că necesită o configurare mai atentă și spațiu dedicat. Un kit SteamVR Tracking (două stații de bază și doi senzori) poate costa în jur de 1000-1500 RON.</p>
+    <p class="mb-4">Am observat că <a href="/ssd-nvme-rapid-pentru-jocuri/" class="interlink">pentru jocuri</a> competitive sau experiențe VR care necesită mișcări rapide și precise, un sistem de urmărire extern este un game-changer. Pentru cineva care joacă în spații restrânse, sistemul integrat al headset-ului este, probabil, suficient.</p>
     
     
   </section>
@@ -178,14 +191,14 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sisteme Audio Imersive: Auzul, Calea spre Suflet</h2>
     <p class="mb-4">Sunetul este jumătate din imersiune, și am observat că difuzoarele integrate ale multor headset-uri VR sunt doar decente. Căștile de înaltă calitate pot schimba complet percepția. Am testat combinații cu căști Sony WH-1000XM5 conectate la PC, și diferența față de sunetul standard este uriașă, oferind spațialitate și claritate mult superioare.</p>
-    <p class="mb-4">Pentru o experiență cu adevărat imersivă, căutăm căști cu sunet surround virtual sau tehnologii care recreează cu precizie direcția sunetului. Căștile de gaming dedicate, cum ar fi cele de la SteelSeries sau HyperX, pot fi o opțiune bună, având prețuri între 300-800 RON. Pentru cei care vor maximul, un sistem audio extern de calitate, cu sunet 7.1 virtual, poate fi integrat, dar necesită atenție la cabluri și compatibilitate.</p>
+    <p class="mb-4">Pentru o experiență cu adevărat imersivă, căutăm căști cu sunet surround virtual sau tehnologii care recreează cu precizie direcția sunetului. Căștile de gaming dedicate, cum ar fi cele de la SteelSeries sau HyperX, pot fi o opțiune bună, având prețuri între 300-800 RON. Pentru cei care vor maximul, un <a href="/sistem-audio-multiroom-wireless/" class="interlink">sistem audio</a> extern de calitate, cu sunet 7.1 virtual, poate fi integrat, dar necesită atenție la cabluri și compatibilitate.</p>
     <p class="mb-4">Am observat că nu e vorba doar de volum, ci de calitatea sunetului și de capacitatea de a localiza sursele sonore în spațiul virtual. Asta te ajută enorm în jocuri, fie că e vorba de a auzi pașii unui inamic sau de a te bucura de coloana sonoră a unui film în VR.</p>
     
     
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ventilatoare și Sisteme de Răcire: Confortul Contează</h2>
-    <p class="mb-4">Sesiunile lungi de VR pot fi epuizante, mai ales în zilele călduroase. Am simțit pe pielea mea cum căldura acumulată de headset poate deveni deranjantă și poate chiar afecta performanța. Un ventilator mic, orientat strategic, poate face minuni. Există soluții dedicate, ca cele de la BoboVR pentru Meta Quest, care includ ventilatoare integrate și baterii suplimentare, costând undeva între 400-600 RON.</p>
+    <p class="mb-4">Sesiunile lungi de VR pot fi epuizante, mai ales în zilele călduroase. Am simțit pe pielea mea cum căldura acumulată de headset poate deveni deranjantă și poate chiar afecta <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanța</a>. Un ventilator mic, orientat strategic, poate face minuni. Există soluții dedicate, ca cele de la BoboVR pentru Meta Quest, care includ ventilatoare integrate și baterii suplimentare, costând undeva între 400-600 RON.</p>
     <p class="mb-4">Am testat și soluții mai simple: un mic ventilator USB poziționat pe birou, orientat spre mine în timp ce joc. Chiar și asta ajută enorm la menținerea confortului. Pentru cei care transpiră mult, un bandou absorbant, lavabil, este, de asemenea, o investiție mică, dar foarte utilă, costând sub 100 RON.</p>
     <p class="mb-4">Confortul este cheia pentru a te bucura de VR pe termen lung. Nu vrei ca o sesiune de gaming să se termine din cauza supraîncălzirii sau a disconfortului fizic. Am observat că micile detalii, precum o bună ventilație, pot prelungi semnificativ durata sesiunilor de VR.</p>
     
@@ -292,5 +305,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="accesorii-vr-pentru-experienta-imersiva"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

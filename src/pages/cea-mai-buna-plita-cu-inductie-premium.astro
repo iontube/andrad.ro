@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -165,16 +178,16 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Funcții Inovatoare Specifice Segmentului Premium</h2>
-    <p class="mb-4">Plitele cu inducție din clasa premium sunt adevărate centre de comandă inteligente, integrând tehnologii de ultimă generație menite să simplifice și să îmbunătățească procesul de gătit.</p>
+    <p class="mb-4">Plitele cu inducție din clasa premium sunt adevărate centre de comandă <a href="/frigider-cu-compartimente-inteligente/" class="interlink">inteligente</a>, integrând tehnologii de ultimă generație menite să simplifice și să îmbunătățească procesul de gătit.</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Zone Flexibile și Funcția Bridge</h3>
     <p class="mb-4">Uită de limitările zonelor de gătit fixe. Multe plite premium, precum cele din seria Siemens flexInduction sau Bosch CombiZone, permit combinarea mai multor zone mici într-una mare. Această funcție este ideală pentru vase de dimensiuni neobișnuite, tigăi grill sau platouri de pește. Unele modele Miele, cum ar fi KM 7897 FL, oferă chiar o suprafață complet flexibilă (FullSurface), unde poți plasa vase oriunde pe plită, iar sistemul detectează automat poziția și dimensiunea acestora.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Conectivitate Inteligentă și Automatizare</h3>
     <p class="mb-4">Viitorul este smart, iar bucătăria ta poate fi la fel. Plitele premium includ adesea funcții de conectivitate, cum ar fi sistemul Home Connect de la Bosch și Siemens, care permite controlul plitei prin intermediul unei aplicații mobile. Poți porni preîncălzirea, ajusta puterea sau monitoriza procesul de gătire de la distanță. Branduri precum AEG și Electrolux oferă tehnologia Hob2Hood, care sincronizează automat plita cu hota compatibilă, reglând puterea de extracție a aburului în funcție de intensitatea gătirii.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Control Intuitiv și Display-uri Avansate</h3>
-    <p class="mb-4">Experiența utilizatorului este esențială. Plitele premium se disting prin interfețe de control moderne și intuitive. Sistemul TwistPad Fire de la Siemens/Neff este un bun exemplu, oferind un selector magnetic detașabil pentru control precis. Display-urile TFT full-touch sunt o altă inovație, afișând informații clare, culori vibrante și permițând o navigare facilă prin meniuri și funcții. Acestea transformă interacțiunea cu plita într-o experiență plăcută și eficientă.</p>
+    <p class="mb-4"><a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">Experiența</a> utilizatorului este esențială. Plitele premium se disting prin interfețe de control moderne și intuitive. Sistemul TwistPad Fire de la Siemens/Neff este un bun exemplu, oferind un selector magnetic detașabil pentru control precis. Display-urile TFT full-touch sunt o altă inovație, afișând informații clare, culori vibrante și permițând o navigare facilă prin meniuri și funcții. Acestea transformă interacțiunea cu plita într-o experiență plăcută și eficientă.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Funcții de Siguranță și Durabilitate</h3>
-    <p class="mb-4">Siguranța este o prioritate, iar plitele premium vin echipate cu multiple sisteme de protecție: detectarea automată a vaselor, oprirea automată în caz de supraîncălzire sau vărsare de lichide, indicator de căldură reziduală și blocare pentru copii. Materialele utilizate, precum sticla ceramică Schott Ceran de înaltă rezistență, asigură o durabilitate crescută și o rezistență la zgârieturi și șocuri termice, menținând aspectul impecabil al plitei pe termen lung.</p>
+    <p class="mb-4">Siguranța este o prioritate, iar plitele premium vin echipate cu multiple sisteme de protecție: detectarea automată a vaselor, oprirea automată în caz de supraîncălzire sau vărsare de lichide, indicator de căldură reziduală și blocare pentru copii. Materialele utilizate, precum sticla ceramică Schott Ceran de înaltă rezistență, asigură o durabilitate crescută și o <a href="/camera-actiune-rezistenta-la-apa/" class="interlink">rezistență la</a> zgârieturi și șocuri termice, menținând aspectul impecabil al plitei pe termen lung.</p>
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Performanță și Putere: Ce Căutăm la O Plită Premium?</h2>
@@ -193,7 +206,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Pe piața plitelor cu inducție premium, anumite branduri se disting prin inovație, fiabilitate și performanță excepțională. Iată câteva dintre ele:</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Siemens</h3>
-    <p class="mb-4">Cunoscut pentru tehnologia avansată și designul elegant, Siemens oferă plite din seriile iQ700 și iQ500 cu funcții precum flexInduction, TwistPad Fire și conectivitate Home Connect. Acestea combină estetica modernă cu performanța de vârf.</p>
+    <p class="mb-4">Cunoscut pentru tehnologia avansată și designul elegant, Siemens oferă plite din seriile iQ700 și iQ500 cu funcții precum flexInduction, TwistPad Fire și conectivitate Home Connect. Acestea combină estetica modernă <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">cu performanța</a> de vârf.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Bosch</h3>
     <p class="mb-4">Plitele Bosch din Seria 8 sunt renumite pentru inovațiile lor, incluzând PerfectFry pentru controlul precis al temperaturii la prăjire și PerfectCook pentru controlul fierberii. Funcția CombiZone și integrarea Home Connect completează un pachet tehnologic robust și intuitiv.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Miele</h3>
@@ -315,5 +328,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cea-mai-buna-plita-cu-inductie-premium"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

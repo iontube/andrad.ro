@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -162,7 +175,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">De Ce Contează Televizorul Tău Pentru Experiența de Gaming?</h2>
     <p class="mb-4">Suntem cu toții de acord că jocurile video au evoluat enorm. Nu mai e suficient să ai o consolă puternică, precum un PlayStation 5 sau un Xbox Series X. Pentru a te bucura cu adevărat de grafica uimitoare, de fluiditatea acțiunii și de reacțiile instantanee pe care le promit titlurile AAA de astăzi, ai nevoie de un partener pe măsură: televizorul potrivit.</p>
-    <p class="mb-4">Un televizor optimizat pentru gaming nu este un simplu ecran. Este poarta ta către universuri virtuale, iar diferența între o experiență mediocră și una excepțională stă în detalii tehnice pe care mulți le trec cu vederea. De la latența de intrare minusculă la culorile vibrante și contrastul infinit, fiecare specificație contează enorm când pui mâna pe controller. Haide să vedem exact ce anume transformă un televizor bun într-unul fenomenal pentru sesiunile tale de gaming.</p>
+    <p class="mb-4">Un televizor optimizat <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">pentru gaming</a> nu este un simplu ecran. Este poarta ta către universuri virtuale, iar diferența între o experiență mediocră și una excepțională stă în detalii tehnice pe care mulți le trec cu vederea. De la latența de intrare minusculă la culorile vibrante și contrastul infinit, fiecare specificație contează enorm când pui mâna pe controller. Haide să vedem exact ce anume transformă un televizor bun într-unul fenomenal pentru sesiunile tale de gaming.</p>
     
   </section>
   <section id="sectiune-2" class="mb-10">
@@ -172,7 +185,7 @@ import Layout from '../layouts/Layout.astro';
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Frecvența de Împrospătare (Hz)</h3>
     <p class="mb-4">Un televizor de gaming modern trebuie să suporte o rată de refresh de 120Hz. Atât PlayStation 5, cât și Xbox Series X pot rula jocuri la 120 de cadre pe secundă (FPS), dar numai dacă televizorul tău poate afișa aceste cadre. Un ecran de 120Hz face o diferență vizibilă în fluiditatea mișcării, esențială în shootere rapide sau jocuri de curse. Caută televizoare cu panouri native de 120Hz, nu cele care folosesc tehnici de interpolare pentru a simula o rată mai mare.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Latența de Intrare (Input Lag)</h3>
-    <p class="mb-4">Input lag-ul este timpul necesar pentru ca acțiunea de pe controller să se materializeze pe ecran. Un input lag redus înseamnă o reacție instantanee. Pentru gaming competitiv, ideal este un input lag sub 10ms, iar televizoarele de top pot ajunge chiar sub 5ms la 120Hz. Multe televizoare includ un mod 'Game Mode' (Mod Joc) care dezactivează procesările de imagine inutile pentru a minimiza această latență. Asigură-te că televizorul pe care îl alegi are un 'Game Mode' eficient și o latență de intrare cât mai mică.</p>
+    <p class="mb-4">Input lag-ul este timpul necesar pentru ca acțiunea de pe controller să se materializeze pe ecran. Un input lag redus înseamnă o reacție instantanee. Pentru <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">gaming competitiv</a>, ideal este un input lag sub 10ms, iar televizoarele de top pot ajunge chiar sub 5ms la 120Hz. Multe televizoare includ un mod 'Game Mode' (Mod Joc) care dezactivează procesările de imagine inutile pentru a minimiza această latență. Asigură-te că televizorul pe care îl alegi are un 'Game Mode' eficient și o latență de intrare cât mai mică.</p>
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Conectivitate HDMI 2.1: Absolut Esențială</h2>
@@ -187,7 +200,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Tipul Panoului și Calitatea Imaginii: OLED vs. QLED vs. Mini-LED</h2>
-    <p class="mb-4">Calitatea imaginii este subiectivă, dar pentru gaming, anumite tehnologii de panou oferă avantaje clare. Alegerea între OLED, QLED și Mini-LED depinde de prioritățile tale, fie că e vorba de contrast, luminozitate sau rezistență la burn-in.</p>
+    <p class="mb-4">Calitatea imaginii este subiectivă, dar <a href="/scaun-ergonomic-cu-suport-lombar-pentru-gaming/" class="interlink">pentru gaming</a>, anumite tehnologii de panou oferă avantaje clare. Alegerea între OLED, QLED și Mini-LED depinde de prioritățile tale, fie că e vorba de contrast, luminozitate sau rezistență la burn-in.</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">OLED: Perfecțiunea Contrastului</h3>
     <p class="mb-4">Televizoarele OLED (Organic Light Emitting Diode) sunt renumite pentru negrul absolut și contrastul infinit. Fiecare pixel se aprinde și se stinge individual, rezultând o precizie a culorilor și o adâncime a imaginii inegalabilă. Modele precum LG C3 sau C4, ori Sony A95L (QD-OLED), sunt alegeri fantastice pentru gaming. Ele oferă timpi de răspuns aproape instantanei (sub 1ms), ceea ce elimină complet motion blur-ul. Un potențial dezavantaj este riscul de burn-in în cazul afișării prelungite a elementelor statice (HUD-uri de joc, logo-uri), deși producătorii au implementat numeroase tehnologii de prevenție.</p>
@@ -215,7 +228,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Ținând cont de toate aspectele discutate, iată câteva modele de televizoare care excelează în gaming și sunt alegeri excelente pentru consolele de ultimă generație:</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">LG C-Series (C3, C4)</h3>
-    <p class="mb-4">Seria LG C este de ani buni etalonul pentru televizoare de gaming OLED. Oferă 4 porturi HDMI 2.1 complete, VRR (G-Sync Compatible și FreeSync Premium), ALLM, un input lag extrem de redus (sub 10ms la 4K@120Hz) și un timp de răspuns aproape instantaneu. Calitatea imaginii OLED, cu negru perfect și contrast infinit, este pur și simplu superbă pentru jocuri.</p>
+    <p class="mb-4">Seria LG C este de ani buni etalonul pentru televizoare de gaming OLED. Oferă 4 porturi HDMI 2.1 complete, VRR (G-Sync Compatible și FreeSync Premium), ALLM, un input lag extrem de redus (sub 10ms la 4K@120Hz) și un timp de răspuns aproape instantaneu. Calitatea imaginii OLED, cu negru perfect și contrast infinit, este pur și simplu superbă <a href="/ssd-nvme-rapid-pentru-jocuri/" class="interlink">pentru jocuri</a>.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Samsung QN90C / QN90D Neo QLED</h3>
     <p class="mb-4">Dacă preferi luminozitatea extremă și nu vrei să-ți faci griji legate de burn-in, seria QN90C sau QN90D (modelul mai nou) de la Samsung este o alegere fantastică. Aceste televizoare Mini-LED oferă o luminozitate de vârf impresionantă, culori vibrante, un filtru anti-reflexie excelent și, la fel ca LG, 4 porturi HDMI 2.1, VRR (FreeSync Premium Pro) și un input lag minim. Sunt ideale pentru camere luminoase sau pentru jocuri HDR care beneficiază de o luminozitate ridicată.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Sony A95L (QD-OLED) / X90L (Full Array LED)</h3>
@@ -329,5 +342,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-televizor-pentru-gaming-console"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

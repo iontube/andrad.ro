@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -155,7 +168,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     
-    <p class="mb-4">Îți dorești să transformi gătitul de zi cu zi într-o experiență culinară de excepție, plină de savoare și beneficii pentru sănătate? Atunci un <strong>cuptor multifuncțional cu aburi</strong> ar putea fi exact ceea ce cauți. Aceste electrocasnice revoluționare combină tehnologia tradițională de coacere cu puterea transformatoare a aburului, oferind o versatilitate incredibilă și rezultate pe care le vei adora. Indiferent dacă ești un pasionat de bucătărie sau doar cauți o modalitate mai eficientă și mai sănătoasă de a prepara mesele, acest tip de cuptor merită cu siguranță atenția ta.</p>
+    <p class="mb-4">Îți dorești să transformi gătitul de zi cu zi într-o experiență culinară de excepție, plină de savoare și beneficii pentru sănătate? Atunci un <strong>cuptor multifuncțional cu aburi</strong> ar putea fi exact ceea ce cauți. Aceste electrocasnice revoluționare combină tehnologia tradițională de coacere cu puterea transformatoare a aburului, oferind o versatilitate incredibilă și rezultate pe care le vei adora. Indiferent dacă ești un pasionat <a href="/robot-de-bucatarie-pentru-patiserie/" class="interlink">de bucătărie</a> sau doar cauți o modalitate mai eficientă și mai sănătoasă de a prepara mesele, acest tip de cuptor merită cu siguranță atenția ta.</p>
     <p class="mb-4">În ultimele decade, tehnologia din bucătăria noastră a evoluat enorm, iar cuptoarele nu fac excepție. De la simple cuptoare electrice la cele pe gaz, am văzut o mulțime de inovații. Acum, însă, asistăm la o nouă eră, una în care gătitul cu aburi devine tot mai accesibil și mai popular, integrat inteligent în aparate multifuncționale. Un <strong>cuptor multifuncțional cu aburi</strong> nu este doar un aparat de gătit; este un partener în crearea unor preparate mai nutritive, mai fragede și mai aromate, păstrând în același timp vitaminele și mineralele esențiale. Imaginează-ți legume crocante și vibrante, carne suculentă și pâine cu o crustă perfectă – toate obținute cu o singură unealtă.</p>
     <p class="mb-4">Ce face, mai exact, un cuptor cu funcție de aburi atât de special? Pe lângă modurile clasice de coacere (convecție, grill, încălzire superioară/inferioară), acesta dispune de un rezervor de apă și un sistem avansat care generează abur. Acesta poate fi injectat în cavitatea cuptorului fie singur, fie în combinație cu aerul cald, creând condiții optime pentru o varietate uimitoare de rețete. Această dualitate îl transformă într-un instrument de neînlocuit pentru oricine apreciază calitatea și sănătatea în alimentație, dar și pentru cei care vor să experimenteze noi tehnici culinare fără a supraaglomera bucătăria cu multiple aparate.</p>
     <p class="mb-4">Investiția într-un <strong>cuptor multifuncțional cu aburi</strong> este, pe termen lung, o investiție în sănătatea ta și a familiei tale. Reducerea necesității de grăsimi în procesul de gătire, păstrarea nutrienților și obținerea unor texturi superioare sunt doar câteva dintre beneficiile care îl recomandă. Hai să explorăm mai în detaliu ce anume îl face atât de special și cum te poate ajuta să devii un bucătar mai bun, mai eficient și mai creativ.</p>
@@ -165,7 +178,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce înseamnă cuptor multifuncțional cu aburi și cum funcționează?</h2>
     <p class="mb-4">Un <strong>cuptor multifuncțional cu aburi</strong> este, în esență, un cuptor electric avansat care integrează o funcție dedicată generării și distribuției aburului în interiorul cavității de gătit. Spre deosebire de cuptoarele tradiționale care se bazează exclusiv pe aer cald, acest tip de aparat folosește o combinație de aer cald și abur pentru a găti alimentele. Rezervorul de apă, de obicei ascuns în partea superioară sau frontală a cuptorului, este încălzit pentru a produce abur, care este apoi injectat strategic în cavitate. Această metodă de gătire ajută la menținerea umidității interne a alimentelor, prevenind uscarea excesivă și asigurând o textură mult mai fragedă și mai suculentă.</p>
-    <p class="mb-4">Modurile de funcționare ale unui astfel de cuptor sunt variate. Pe lângă funcțiile standard pe care le găsești la un cuptor electric convențional – cum ar fi coacerea cu convecție (aer cald circulat uniform), grill-ul pentru rumenire, sau încălzirea superioară și inferioară pentru preparate clasice – cuptorul cu aburi adaugă opțiuni specifice. Acestea pot include "Gătire cu aburi 100%", ideală pentru legume, pește sau pentru a reîncălzi mâncăruri fără a le usca, "Abur combinat" unde poți seta nivelul de abur dorit (de la 25% la 100%) în combinație cu aerul cald, sau chiar programe automate predefinite pentru diverse tipuri de alimente. Această flexibilitate permite adaptarea perfectă a metodei de gătire la cerințele fiecărui preparat.</p>
+    <p class="mb-4">Modurile de funcționare ale unui astfel de cuptor sunt variate. Pe lângă funcțiile standard pe care le găsești la un cuptor electric convențional – cum ar fi coacerea cu convecție (aer cald circulat uniform), grill-ul pentru rumenire, sau încălzirea superioară și inferioară pentru preparate clasice – cuptorul cu aburi adaugă opțiuni specifice. Acestea pot include "Gătire cu aburi 100%", ideală pentru legume, pește sau pentru a reîncălzi mâncăruri fără a le usca, "Abur combinat" unde poți seta nivelul de abur dorit (de la 25% la 100%) în combinație cu aerul cald, sau chiar <a href="/multicooker-cu-programe-automate/" class="interlink">programe automate</a> predefinite pentru diverse tipuri de alimente. Această flexibilitate permite adaptarea perfectă a metodei de gătire la cerințele fiecărui preparat.</p>
     <p class="mb-4">Tehnologia din spatele generării aburului variază între producători. Unele modele folosesc un rezervor de apă detașabil, ușor de umplut și curățat, în timp ce altele pot avea o conexiune directă la rețeaua de apă, eliminând necesitatea realimentării manuale. Sistemul de distribuție a aburului este, de asemenea, important; acesta trebuie să asigure o prezență uniformă a aburului în toată cavitatea cuptorului pentru a garanta o gătire omogenă. Fiecare componentă este proiectată pentru a optimiza procesul de gătire, transformând un simplu cuptor într-un instrument culinar performant și versatil.</p>
     
     
@@ -181,7 +194,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Tipuri de cuptoare multifuncționale cu aburi și caracteristici cheie</h2>
     <p class="mb-4">Pe piață, vei găsi o varietate de <strong>cuptoare multifuncționale cu aburi</strong>, de la modele mai simple, cu funcții de bază, la aparate high-tech cu o multitudine de programe și funcții inteligente. Un aspect important de luat în considerare este capacitatea cuptorului, măsurată în litri, care ar trebui să se potrivească nevoilor familiei tale. De asemenea, este esențial să verifici tipul de control: manual, electronic cu butoane sau touchscreen, și dacă dispune de programe automate sau funcții de auto-curățare.</p>
-    <p class="mb-4">Caracteristicile tehnice esențiale includ puterea maximă de coacere (în wați), numărul de niveluri de gătit, prezența funcției de grill (simplu, dublu, cu ventilație), și, bineînțeles, modul în care este gestionat aburul. Unii producători, precum Bosch, Siemens sau AEG, oferă modele cu sisteme de generare a aburului foarte eficiente, cu rezervoare de apă generoase sau conexiuni directe la apă. Branduri precum Whirlpool sau Electrolux pun accent pe ușurința în utilizare și pe programele automate, ideale pentru începători.</p>
+    <p class="mb-4">Caracteristicile tehnice esențiale includ puterea maximă de coacere (în wați), numărul de niveluri de gătit, prezența funcției de grill (simplu, dublu, cu ventilație), și, bineînțeles, modul în care este gestionat aburul. Unii producători, precum Bosch, Siemens sau AEG, oferă modele cu sisteme de generare a aburului foarte eficiente, cu rezervoare de apă generoase sau conexiuni directe la apă. Branduri precum Whirlpool sau Electrolux pun accent pe ușurința în utilizare și pe programele automate, ideale <a href="/kit-accesorii-foto-pentru-incepatori/" class="interlink">pentru începători</a>.</p>
     <p class="mb-4">Alte funcții care pot face diferența sunt: sistemul de curățare (hidrolitică sau catalitică), iluminarea interioară LED, funcția de menținere la cald, funcția de decongelare, sau chiar conectivitatea Wi-Fi pentru controlul cuptorului de la distanță prin intermediul unei aplicații mobile. Un <strong>cuptor multifuncțional cu aburi</strong> de la un brand de renume va oferi de obicei o garanție extinsă și un serviciu post-vânzare de încredere, aspecte de luat în calcul în decizia de cumpărare. De asemenea, este bine să te uiți la clasa energetică, pentru a te asigura că aparatul este eficient din punct de vedere al consumului de electricitate.</p>
     
     
@@ -213,7 +226,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-8" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Tehnologii inovatoare în cuptoarele cu aburi</h2>
     <p class="mb-4">Producătorii de electrocasnice inovează constant pentru a face utilizarea <strong>cuptorului multifuncțional cu aburi</strong> cât mai eficientă și mai plăcută. Un exemplu elocvent este tehnologia "PerfectSteam" de la Miele, care asigură o distribuție uniformă a aburului în cavitatea cuptorului prin intermediul unei pompe performante, garantând rezultate de gătit consistente. De asemenea, modelele premium de la branduri precum Gaggenau sau Neff integrează sisteme de generare a aburului care pot fi controlate cu o precizie milimetrică, permițând bucătarilor amatori să experimenteze cu tehnici avansate.</p>
-    <p class="mb-4">Sistemele de curățare automată au evoluat și ele. Pe lângă hidroliză și piroliză, unele cuptoare oferă programe de curățare cu soluții dedicate, care sunt introduse automat în cavitate, simplificând procesul. Senzorii integrați pot monitoriza nivelul de umiditate din cuptor și pot ajusta automat temperatura și cantitatea de abur pentru a optimiza procesul de gătire, asigurând că alimentele sunt gătite perfect de fiecare dată. Acest nivel de automatizare transformă gătitul dintr-o sarcină complexă într-o activitate relaxantă și creativă.</p>
+    <p class="mb-4">Sistemele de curățare automată au evoluat și ele. Pe lângă hidroliză și piroliză, unele cuptoare oferă programe de curățare cu soluții dedicate, care sunt introduse automat în cavitate, simplificând procesul. Senzorii integrați pot monitoriza nivelul de umiditate din cuptor și pot ajusta automat <a href="/senzor-temperatura-si-umiditate-smart/" class="interlink">temperatura și</a> cantitatea de abur pentru a optimiza procesul de gătire, asigurând că alimentele sunt gătite perfect de fiecare dată. Acest nivel de automatizare transformă gătitul dintr-o sarcină complexă într-o activitate relaxantă și creativă.</p>
     <p class="mb-4">Conectivitatea Wi-Fi și integrarea cu aplicații mobile reprezintă o altă direcție majoră de inovație. Prin intermediul smartphone-ului sau tabletei, poți monitoriza progresul gătitului, poți selecta programe, poți primi notificări atunci când preparatul este gata sau chiar poți descărca noi rețete direct în memoria cuptorului. Această funcționalitate aduce bucătăria ta la nivelul următor de inteligență și conveniență, transformând <strong>cuptorul multifuncțional cu aburi</strong> într-un element central al casei inteligente.</p>
     
     
@@ -323,5 +336,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cuptor-multifunctional-cu-aburi"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

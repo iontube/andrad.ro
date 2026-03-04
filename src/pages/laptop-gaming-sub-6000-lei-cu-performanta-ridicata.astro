@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -177,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     
-    <p class="mb-4">A găsi un laptop gaming sub 6000 lei cu performanță ridicată poate părea o provocare, având în vedere ritmul alert al inovațiilor tehnologice și prețurile în continuă schimbare. Mulți pasionați de jocuri cred că performanța de top necesită un buget mult mai mare, însă piața actuală oferă opțiuni surprinzătoare, capabile să ruleze titluri AAA la setări decente.</p>
+    <p class="mb-4">A găsi un <a href="/laptop-gaming-cu-autonomie-mare/" class="interlink">laptop gaming</a> sub 6000 lei cu performanță ridicată poate părea o provocare, având în vedere ritmul alert al inovațiilor tehnologice și prețurile în continuă schimbare. Mulți pasionați de jocuri cred că performanța de top necesită un buget mult mai mare, însă piața actuală oferă opțiuni surprinzătoare, capabile să ruleze titluri AAA la setări decente.</p>
     <p class="mb-4">Nu trebuie să faci compromisuri majore dacă știi exact ce să cauți. Segmentul de preț de până în 6000 de lei este extrem de competitiv, iar producătorii se străduiesc să ofere cele mai bune configurații posibile pentru a atrage un public larg. Este important să înțelegi că un laptop gaming accesibil nu înseamnă neapărat o experiență de joc inferioară, ci mai degrabă o selecție inteligentă a componentelor cheie.</p>
     <p class="mb-4">Vom explora împreună ce anume definește un laptop performant în acest segment de preț, ce specificații sunt esențiale și cum să identifici cele mai bune oferte. Scopul este să te ajutăm să alegi un sistem portabil capabil să-ți satisfacă nevoile de gaming, fără să depășești bugetul stabilit.</p>
     <p class="mb-4">Vom analiza în detaliu procesorul, placa grafică, memoria RAM, stocarea, ecranul și sistemul de răcire, pentru a te asigura că investiția ta este una inteligentă și durabilă. Alege un laptop de gaming care să te propulseze în universurile virtuale preferate cu o fluiditate remarcabilă.</p>
@@ -188,7 +201,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Înseamnă „Performanță Ridicată” la un Buget de 6000 Lei?</h2>
     <p class="mb-4">Când vorbim despre un laptop gaming sub 6000 lei cu performanță ridicată, trebuie să stabilim niște așteptări realiste. Nu ne referim la rularea jocurilor la setări ultra cu ray tracing activat și 144+ FPS în orice titlu, ci la o experiență de joc fluidă și plăcută la rezoluție Full HD (1080p). Majoritatea titlurilor moderne vor funcționa excelent la setări medii spre înalte, cu un framerate stabil de peste 60 FPS, ceea ce este mai mult decât suficient pentru majoritatea jucătorilor.</p>
     <p class="mb-4">Acest buget permite accesul la plăci grafice dedicate din generații recente, cum ar fi NVIDIA GeForce RTX 3050, RTX 3050 Ti sau chiar RTX 4050, iar în unele cazuri, cu o căutare atentă, chiar și RTX 4060. Aceste GPU-uri sunt capabile să gestioneze o gamă largă de jocuri, de la esports competitive la titluri single-player cu grafică intensivă, oferind o calitate vizuală impresionantă. Este esențial să înțelegi că performanța nu este doar despre numărul de cadre pe secundă, ci și despre stabilitatea acestora și despre cât de bine se comportă sistemul pe termen lung.</p>
-    <p class="mb-4">Un laptop de gaming performant în acest segment se va descurca admirabil și în sarcini non-gaming, cum ar fi editarea foto/video ocazională sau munca intensivă cu aplicații de productivitate. Versatilitatea este un punct forte al acestor mașinării, transformându-le în investiții valoroase pentru studenți, profesioniști și, desigur, gameri. Obținerea unui laptop gaming sub 6000 lei care să livreze performanțe solide este mai accesibilă ca niciodată.</p>
+    <p class="mb-4">Un laptop de gaming performant în acest segment se va descurca admirabil și în sarcini non-gaming, cum ar fi editarea foto/video ocazională sau munca intensivă cu aplicații de productivitate. Versatilitatea este un punct forte al acestor mașinării, transformându-le în investiții valoroase pentru studenți, <a href="/drona-cu-filmare-6k-pentru-profesionisti/" class="interlink">profesioniști</a> și, desigur, gameri. Obținerea unui laptop gaming sub 6000 lei care să livreze performanțe solide este mai accesibilă ca niciodată.</p>
     
     
   </section>
@@ -200,7 +213,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Procesorul – Creierul Operațiunilor</h2>
-    <p class="mb-4">În acest buget, vei întâlni predominant procesoare Intel Core i5 de generația a 12-a sau a 13-a, precum și AMD Ryzen 5 din seriile 6000 sau 7000. Ocazional, poți găsi și configurații cu Intel Core i7 sau AMD Ryzen 7, însă acestea vin de obicei cu o placă grafică ușor mai slabă pentru a se încadra în preț. Un Intel Core i5-12500H sau un AMD Ryzen 5 6600H sunt alegeri excelente, oferind suficiente nuclee și fire de execuție pentru gaming și multitasking.</p>
+    <p class="mb-4">În acest buget, vei întâlni predominant procesoare Intel Core i5 de generația a 12-a sau a 13-a, precum și AMD Ryzen 5 din seriile 6000 sau 7000. Ocazional, poți găsi și configurații cu Intel Core i7 sau AMD Ryzen 7, însă acestea vin de obicei cu o placă grafică ușor mai slabă pentru a se încadra în preț. Un Intel Core i5-12500H sau un AMD Ryzen 5 6600H sunt alegeri excelente, oferind suficiente nuclee și fire de execuție <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">pentru gaming</a> și multitasking.</p>
     <p class="mb-4">Procesoarele moderne sunt mult mai eficiente și oferă o putere de calcul remarcabilă. Un procesor cu un număr decent de nuclee (6 sau 8, cu 12 sau 16 fire de execuție) va asigura că jocurile rulează fără probleme și că sistemul poate gestiona mai multe sarcini simultan, cum ar fi streaming-ul sau înregistrarea gameplay-ului. Caută modele cu sufixul H sau HS, care indică procesoare de înaltă performanță, special concepute pentru laptopuri de gaming.</p>
     <p class="mb-4">Nu subestima importanța unui procesor bun; el nu doar că ajută placa grafică să-și atingă potențialul maxim, dar contribuie și la viteza generală a sistemului, de la pornire la încărcarea aplicațiilor. Un echilibru între CPU și GPU este cheia pentru a obține un laptop gaming sub 6000 lei cu adevărat performant.</p>
     
@@ -262,7 +275,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-13" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Construcție și Ergonomie</h2>
-    <p class="mb-4">Chiar și la un buget de 6000 lei, poți găsi laptopuri cu o construcție solidă, adesea cu elemente din aluminiu sau plastic de calitate superioară. Tastatura este extrem de importantă pentru gaming; caută una cu o cursă bună a tastelor, anti-ghosting și iluminare RGB sau măcar albă. Trackpad-ul, deși mai puțin folosit în gaming (majoritatea gamerilor folosesc un mouse extern), ar trebui să fie precis și responsiv pentru utilizarea generală. Designul poate varia de la cel agresiv, specific gaming-ului, la unul mai sobru și elegant, potrivit și pentru mediul de lucru.</p>
+    <p class="mb-4">Chiar și la un buget de 6000 lei, poți găsi laptopuri cu o construcție solidă, adesea cu elemente din aluminiu sau plastic de calitate superioară. Tastatura este extrem de importantă <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">pentru gaming</a>; caută una cu o cursă bună a tastelor, anti-ghosting și iluminare RGB sau măcar albă. Trackpad-ul, deși mai puțin folosit în gaming (majoritatea gamerilor folosesc un mouse extern), ar trebui să fie precis și responsiv pentru utilizarea generală. Designul poate varia de la cel agresiv, specific gaming-ului, la unul mai sobru și elegant, potrivit și pentru mediul de lucru.</p>
     <p class="mb-4">Conectivitatea este un alt aspect cheie. Asigură-te că laptopul are suficiente porturi USB (inclusiv Type-C, preferabil cu suport DisplayPort sau Thunderbolt, dacă este disponibil), un port HDMI pentru conectarea la un monitor extern, un port Ethernet pentru o conexiune stabilă la internet și, desigur, Wi-Fi 6 sau 6E pentru viteze wireless rapide. Un laptop de gaming bine echipat din punct de vedere al conectivității oferă multă flexibilitate.</p>
     
     
@@ -409,5 +422,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="laptop-gaming-sub-6000-lei-cu-performanta-ridicata"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

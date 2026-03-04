@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -168,7 +181,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Procesorul (CPU): Inima Performanței</h2>
     <p class="mb-4">Când vine vorba de un <strong>laptop pentru programare și gaming ușor</strong>, procesorul este, fără îndoială, una dintre cele mai critice componente. Pentru programare, în special pentru compilarea codului, rularea mașinilor virtuale sau lucrul cu baze de date mari, un CPU puternic cu mai multe nuclee și o frecvență ridicată este esențial. Un procesor bun va reduce drastic timpii de așteptare, permițându-ți să iterezi mai rapid asupra proiectelor tale.</p>
     <p class="mb-4">În contextul gaming-ului, chiar și cel ușor, procesorul joacă un rol important, deși placa video preia adesea lumina reflectoarelor. Un CPU performant asigură că jocul rulează fluid, fără bottleneck-uri, mai ales în scenarii cu mulți obiecte pe ecran sau în jocuri competitive unde fiecare milisecundă contează. Pentru a acoperi ambele scenarii, caută procesoare din generațiile recente de la Intel (Core i5, i7, i9 - generațiile 11, 12, 13 sau mai noi) sau AMD (Ryzen 5, 7, 9 - seria 5000, 6000, 7000 sau mai noi).</p>
-    <p class="mb-4">Specific, pentru programare, un număr mare de nuclee (cel puțin 6, ideal 8 sau mai multe) și un număr ridicat de thread-uri (de exemplu, un procesor cu 8 nuclee și 16 thread-uri) vor face o diferență notabilă. Acestea permit sistemului să gestioneze eficient sarcinile multiple. Pentru gaming, frecvența boost (care poate ajunge la 4.5 GHz sau chiar mai sus) devine un factor important pentru performanța în jocuri. Un <strong>laptop pentru programare și gaming ușor</strong> necesită acest echilibru.</p>
+    <p class="mb-4">Specific, pentru programare, un număr mare de nuclee (cel puțin 6, ideal 8 sau mai multe) și un număr ridicat de thread-uri (de exemplu, un procesor cu 8 nuclee și 16 thread-uri) vor face o diferență notabilă. Acestea permit sistemului să gestioneze eficient sarcinile multiple. Pentru gaming, frecvența boost (care poate ajunge la 4.5 GHz sau chiar mai sus) devine un factor important <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">pentru performanța</a> în jocuri. Un <strong>laptop pentru programare și gaming ușor</strong> necesită acest echilibru.</p>
     <p class="mb-4">Nu uita să verifici și consumul de energie (TDP - Thermal Design Power) al procesorului, deoarece acesta influențează direct sistemul de răcire al laptopului și, implicit, capacitatea acestuia de a menține performanțe ridicate pe termen lung. Un TDP mai mare necesită o soluție de răcire mai robustă, ceea ce poate duce la un laptop mai voluminos sau mai zgomotos, un compromis de luat în calcul atunci când cauți un <strong>laptop pentru programare și gaming ușor</strong>.</p>
     
     
@@ -185,9 +198,9 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Placa Video (GPU): Imagini Fluide în Jocuri și Vizualizări</h2>
     <p class="mb-4">Când vorbim despre un <strong>laptop pentru programare și gaming ușor</strong>, placa video (GPU - Graphics Processing Unit) este componenta care face diferența majoră în ceea ce privește experiența de gaming. Pentru programare, un GPU dedicat nu este întotdeauna strict necesar, dar poate aduce beneficii în anumite scenarii, cum ar fi prelucrarea grafică, machine learning sau lucrul cu aplicații 3D.</p>
-    <p class="mb-4">Pentru gaming ușor, nu ai nevoie de cea mai performantă placă video de pe piață, dar una integrată în procesor (cum ar fi Intel Iris Xe sau AMD Radeon Graphics) s-ar putea să nu fie suficientă pentru a rula jocurile moderne, chiar și la setări minime. Caută o placă video dedicată, chiar și una de gamă entry-level sau mid-range. Opțiuni populare care se potrivesc unui <strong>laptop pentru programare și gaming ușor</strong> includ seria NVIDIA GeForce GTX 1650, RTX 3050 sau seria AMD Radeon RX 6500M.</p>
+    <p class="mb-4"><a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">Pentru gaming</a> ușor, nu ai nevoie de cea mai performantă placă video de pe piață, dar una integrată în procesor (cum ar fi Intel Iris Xe sau AMD Radeon Graphics) s-ar putea să nu fie suficientă pentru a rula jocurile moderne, chiar și la setări minime. Caută o placă video dedicată, chiar și una de gamă entry-level sau mid-range. Opțiuni populare care se potrivesc unui <strong>laptop pentru programare și gaming ușor</strong> includ seria NVIDIA GeForce GTX 1650, RTX 3050 sau seria AMD Radeon RX 6500M.</p>
     <p class="mb-4">Aceste plăci video dedicate vor permite rularea confortabilă a jocurilor mai vechi, a titlurilor indie și a celor competitive la setări grafice medii sau chiar înalte, la rezoluții HD sau Full HD. De asemenea, o placă video dedicată poate accelera anumite sarcini de programare, cum ar fi antrenarea modelelor de inteligență artificială sau randarea în aplicații de design.</p>
-    <p class="mb-4">Este important să verifici cantitatea de memorie VRAM a plăcii video. Pentru gaming ușor și sarcini moderate de programare, 4 GB VRAM este un punct de plecare decent, dar 6 GB sau chiar 8 GB VRAM oferă o marjă de manevră mai mare și o performanță îmbunătățită în jocuri mai solicitante sau în aplicații complexe. Alegerea unui <strong>laptop pentru programare și gaming ușor</strong> implică găsirea echilibrului corect între GPU și celelalte componente.</p>
+    <p class="mb-4">Este important să verifici cantitatea de memorie VRAM a plăcii video. <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">Pentru gaming</a> ușor și sarcini moderate de programare, 4 GB VRAM este un punct de plecare decent, dar 6 GB sau chiar 8 GB VRAM oferă o marjă de manevră mai mare și o performanță îmbunătățită în jocuri mai solicitante sau în aplicații complexe. Alegerea unui <strong>laptop pentru programare și gaming ușor</strong> implică găsirea echilibrului corect între GPU și celelalte componente.</p>
     
     
   </section>
@@ -196,7 +209,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Tipul și capacitatea de stocare sunt esențiale pentru un <strong>laptop pentru programare și gaming ușor</strong>. Timpul de bootare, viteza de încărcare a aplicațiilor și transferul fișierelor depind în mare măsură de acest aspect. În prezent, unitățile SSD (Solid State Drive) sunt standardul de aur, oferind viteze de citire/scriere mult superioare față de vechile HDD-uri (Hard Disk Drive).</p>
     <p class="mb-4">Pentru programare, un SSD este aproape obligatoriu. Compilarea codului, rularea mașinilor virtuale și lucrul cu baze de date mari vor beneficia enorm de viteza unui SSD. Un SSD NVMe, care folosește interfața PCIe, este și mai rapid decât un SSD SATA standard și, dacă bugetul permite, este o alegere excelentă. Când cauți un <strong>laptop pentru programare și gaming ușor</strong>, asigură-te că are cel puțin un SSD.</p>
     <p class="mb-4">În ceea ce privește gaming-ul, jocurile moderne ocupă din ce în ce mai mult spațiu și beneficiază de timpi de încărcare mai mici oferiți de SSD-uri. Un joc care se încarcă în câteva secunde pe un SSD în loc de minute pe un HDD face o diferență majoră în experiența de joc.</p>
-    <p class="mb-4">Capacitatea de stocare este, de asemenea, un factor important. Pentru programare, unde poți avea multiple proiecte, IDE-uri și mașini virtuale, 512 GB SSD este un punct de plecare bun. Pentru gaming, unde jocurile pot ocupa zeci sau chiar sute de gigabyți, 1 TB SSD este ideal. Multe laptopuri oferă combinații, cum ar fi un SSD de 256 GB pentru sistemul de operare și aplicațiile principale, și un HDD de 1 TB pentru stocare suplimentară. Totuși, pentru un <strong>laptop pentru programare și gaming ușor</strong>, un SSD de cel puțin 512 GB este recomandat pentru a evita compromisurile.</p>
+    <p class="mb-4">Capacitatea de stocare este, de asemenea, un factor important. Pentru programare, unde poți avea multiple proiecte, IDE-uri și mașini virtuale, 512 GB SSD este un punct de plecare bun. <a href="/scaun-ergonomic-cu-suport-lombar-pentru-gaming/" class="interlink">Pentru gaming</a>, unde jocurile pot ocupa zeci sau chiar sute de gigabyți, 1 TB SSD este ideal. Multe laptopuri oferă combinații, cum ar fi un SSD de 256 GB pentru sistemul de operare și aplicațiile principale, și un HDD de 1 TB pentru stocare suplimentară. Totuși, pentru un <strong>laptop pentru programare și gaming ușor</strong>, un SSD de cel puțin 512 GB este recomandat pentru a evita compromisurile.</p>
     <p class="mb-4">Verifică dacă laptopul permite adăugarea unui al doilea drive (fie un alt SSD, fie un HDD) sau dacă poți înlocui ușor unitatea existentă pentru a extinde spațiul de stocare în viitor. Această flexibilitate este un atu important atunci când construiești un <strong>laptop pentru programare și gaming ușor</strong>.</p>
     
     
@@ -351,5 +364,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="laptop-pentru-programare-si-gaming-usor"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

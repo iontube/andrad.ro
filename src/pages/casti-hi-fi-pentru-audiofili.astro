@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -147,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sunetul pur: ce inseamna hi-fi pentru urechile tale</h2>
     <p class="mb-4">Am petrecut ani de zile testând tot felul de căști, de la cele ieftine de la supermarket la modele de zeci de mii de lei. Când vine vorba de căști hi-fi, nu vorbim doar despre a auzi muzica, ci despre a o simți. E diferența dintre a vedea o poză și a fi acolo, în studio, cu artiștii.</p>
     <p class="mb-4">Pentru un audiofil, căștile hi-fi sunt o poartă către o experiență auditivă imersivă. Vorbim despre o redare fidelă a sunetului, fără compromisuri, unde fiecare instrument, fiecare nuanță vocală, este redată cu o claritate uluitoare. Am observat că odată ce ai gustat din sunetul hi-fi, e greu să te mai întorci la altceva.</p>
-    <p class="mb-4">În experiența mea, căștile hi-fi te forțează să asculți muzica altfel. Nu mai e doar un fundal, devine o activitate. E o călătorie în sine, unde descoperi detalii pe care nu le-ai auzit niciodată în piesele tale preferate. De la texturile subtile ale unui vioară până la respirația unui vocalist, totul capătă o nouă dimensiune.</p>
+    <p class="mb-4">În <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experiența</a> mea, căștile hi-fi te forțează să asculți muzica altfel. Nu mai e doar un fundal, devine o activitate. E o călătorie în sine, unde descoperi detalii pe care nu le-ai auzit niciodată în piesele tale preferate. De la texturile subtile ale unui vioară până la respirația unui vocalist, totul capătă o nouă dimensiune.</p>
     
     
   </section>
@@ -169,7 +182,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Impedanța și sensibilitatea: ce contează pentru amplificatorul tău</h2>
-    <p class="mb-4">Aceste două specificații sunt cruciale, mai ales dacă nu vrei să cumperi și un amplificator dedicat. Impedanța (măsurată în Ohmi) indică rezistența la curent electric. Căștile cu impedanță mică (sub 32 Ohmi) sunt ușor de „condus” și pot fi folosite direct cu telefonul sau laptopul. Exemple sunt multe, de la Apple AirPods Max (aproximativ 2.500 RON la eMAG) la Sony WH-1000XM5.</p>
+    <p class="mb-4">Aceste două specificații sunt cruciale, mai ales dacă nu vrei să cumperi și un amplificator dedicat. Impedanța (măsurată în Ohmi) indică <a href="/camera-actiune-rezistenta-la-apa/" class="interlink">rezistența la</a> curent electric. Căștile cu impedanță mică (sub 32 Ohmi) sunt ușor de „condus” și pot fi folosite direct cu telefonul sau laptopul. Exemple sunt multe, de la Apple AirPods Max (aproximativ 2.500 RON la eMAG) la Sony WH-1000XM5.</p>
     <p class="mb-4">Însă, căștile hi-fi destinate audiofililor au adesea o impedanță mai mare (peste 100 Ohmi, uneori chiar 300-600 Ohmi). Pentru acestea, un amplificator de căști dedicat este aproape obligatoriu pentru a scoate tot potențialul din ele. Am testat căști Sennheiser HD 650 (aproximativ 1.800 RON la PCGarage) conectate direct la un laptop și sunetul era fad, lipsit de viață. Cu un amplificator decent, însă, s-au transformat complet.</p>
     <p class="mb-4">Sensibilitatea (măsurată în dB/mW sau dB/V) indică cât de tare poate reda o cască cu o anumită putere de intrare. O sensibilitate mai mare înseamnă că vei obține un volum mai mare cu aceeași putere de la sursă. Pentru căștile cu impedanță mare, o sensibilitate mai scăzută este normală, dar confirmă nevoia unui amplificator mai puternic.</p>
     
@@ -179,14 +192,14 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Materiale și construcție: confort și durabilitate</h2>
     <p class="mb-4">Nu neglija confortul, mai ales dacă plănuiești sesiuni lungi de ascultare. Pernițele pentru urechi din piele naturală sau velur sunt de preferat pentru o senzație plăcută și o izolare fonică bună. E important ca materialul să permită pielii să respire, altfel devine incomod după o oră.</p>
     <p class="mb-4">Am observat că multe căști hi-fi folosesc materiale premium, cum ar fi aluminiul sau lemnul în construcție, nu doar pentru estetică, ci și pentru a reduce vibrațiile nedorite care pot afecta sunetul. Căștile HEDDphone TWO (peste 4.000 RON la Audioweb) au o construcție solidă, dar și o greutate pe măsură, ceea ce necesită o ajustare bună a curelei pentru cap.</p>
-    <p class="mb-4">Verifică și calitatea cablului. Un cablu detașabil este un mare plus, permițând înlocuirea ușoară în caz de deteriorare sau upgrade-ul cu unul de o calitate superioară. Multe modele high-end vin cu cabluri din cupru OFC (Oxygen-Free Copper) sau chiar argint, care promit o transmisie a semnalului mai pură.</p>
+    <p class="mb-4">Verifică și calitatea cablului. Un cablu <a href="/casti-cu-microfon-detasabil/" class="interlink">detașabil</a> este un mare plus, permițând înlocuirea ușoară în caz de deteriorare sau upgrade-ul cu unul de o calitate superioară. Multe modele high-end vin cu cabluri din cupru OFC (Oxygen-Free Copper) sau chiar argint, care promit o transmisie a semnalului mai pură.</p>
     
     
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Recomandări specifice pentru bugetul tău</h2>
     <p class="mb-4">Pentru un buget sub 1.000 RON, căștile AKG K702 (aproximativ 800 RON la Altex) oferă un sunet deschis și detaliat, ideal pentru muzică clasică sau ambientală. Sunt open-back, deci nu izolează fonic, dar sunetul este spectaculos pentru prețul lor.</p>
-    <p class="mb-4">Între 1.000 și 2.000 RON, modele precum Audio-Technica ATH-M50x (în jur de 700 RON la eMAG, dar merită să cauți oferte) sunt o opțiune solidă pentru monitorizare și ascultare generală, oferind un sunet echilibrat și o construcție robustă. Pentru cei care vor o experiență mai rafinată, Fostex TH610 (aproximativ 1.900 RON la PCGarage) aduc o notă de eleganță și un sunet cald, detaliat.</p>
+    <p class="mb-4">Între 1.000 și 2.000 RON, modele precum Audio-Technica ATH-M50x (în jur de 700 RON la eMAG, dar merită să cauți oferte) sunt o opțiune solidă pentru <a href="/monitorizare-consum-electric-smart/" class="interlink">monitorizare</a> și ascultare generală, oferind un sunet echilibrat și o construcție robustă. Pentru cei care vor o experiență mai rafinată, Fostex TH610 (aproximativ 1.900 RON la PCGarage) aduc o notă de eleganță și un sunet cald, detaliat.</p>
     <p class="mb-4">Peste 2.000 RON, intrăm pe tărâmul audiofililor adevărați. Sennheiser HD 660 S2 (menționat anterior), Hifiman Sundara (aproximativ 2.000 RON la Audioweb) sau Beyerdynamic DT 1990 PRO (în jur de 2.500 RON la eMAG) sunt alegeri excelente, fiecare cu caracteristicile sale sonore unice, de la scena largă la precizia tonală.</p>
     
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="casti-hi-fi-pentru-audiofili"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

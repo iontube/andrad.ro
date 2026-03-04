@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce este un hub smart pentru automatizarea casei si de ce ai nevoie de el</h2>
-    <p class="mb-4">Daca ai inceput sa cumperi gadgeturi smart – becuri, prize, termostate – probabil te-ai lovit de problema asta: aplicatii separate pentru fiecare. Un hub smart pentru automatizarea casei e practic creierul intregului sistem. El centralizeaza controlul, permite comunicarea intre dispozitive de la producatori diferiti si automatizeaza actiuni complexe.</p>
+    <p class="mb-4">Daca ai inceput sa cumperi gadgeturi smart – becuri, prize, termostate – probabil te-ai lovit de problema asta: aplicatii separate pentru fiecare. Un hub <a href="/switch-smart-pentru-telecomanda/" class="interlink">smart pentru</a> automatizarea casei e practic creierul intregului sistem. El centralizeaza controlul, permite comunicarea intre dispozitive de la producatori diferiti si automatizeaza actiuni complexe.</p>
     <p class="mb-4">Am testat diverse configuratii in ultimii ani, de la cateva becuri inteligente pana la un sistem complet cu senzori de miscare, camere si sisteme audio. Diferenta e uriasa. Fara un hub, esti nevoit sa deschizi 5-6 aplicatii pentru a seta o scena simpla, gen "film seara". Cu un hub, apesi un buton sau ii spui asistentului vocal si totul se intampla.</p>
     <p class="mb-4">Practic, un hub smart îți transformă locuința într-una cu adevărat inteligentă, unde dispozitivele lucrează împreună pentru a-ți face viața mai ușoară și mai eficientă. E ca și cum ai avea un majordom digital care se ocupă de toate detaliile.</p>
     
@@ -155,7 +168,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum functioneaza un hub smart: protocoale si compatibilitate</h2>
     <p class="mb-4">Cheia functionarii unui hub smart stă în protocoalele de comunicare pe care le suportă. Cele mai comune sunt Wi-Fi, Bluetooth, Zigbee și Z-Wave. Wi-Fi e omniprezent, dar consumă mult curent și poate supraaglomera rețeaua. Zigbee și Z-Wave sunt mai eficiente energetic și creează o rețea mesh, unde dispozitivele se pot ajuta reciproc să transmită semnalul, extinzând raza de acțiune.</p>
     <p class="mb-4">Am observat că un hub bun suportă cel puțin Zigbee și Z-Wave, pe lângă Wi-Fi. Asta îți oferă flexibilitate maximă în alegerea gadgeturilor. Un dispozitiv Zigbee se va conecta direct la hub, nu prin routerul tău Wi-Fi. Asta reduce latența și eliberează banda de internet.</p>
-    <p class="mb-4">Producători mari precum Samsung (cu SmartThings Hub), Philips Hue (pentru iluminat) sau chiar Apple (cu HomePod ca hub pentru HomeKit) au propriile ecosisteme, dar cele mai versatile hub-uri permit integrarea dispozitivelor din diverse ecosisteme. Verifică atent lista de compatibilitate înainte de achiziție.</p>
+    <p class="mb-4">Producători mari precum Samsung (cu SmartThings Hub), Philips Hue (<a href="/sistem-smart-pentru-iluminat-gradina/" class="interlink">pentru iluminat</a>) sau chiar Apple (cu HomePod ca hub pentru HomeKit) au propriile ecosisteme, dar cele mai versatile hub-uri permit integrarea dispozitivelor din diverse ecosisteme. Verifică atent lista de compatibilitate înainte de achiziție.</p>
     
     
   </section>
@@ -169,8 +182,8 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Automatizări practice: ce poti face cu un hub smart</h2>
-    <p class="mb-4">Aici începe distracția, la automatizări. Poți crea scenarii care să-ți ușureze zi de zi. De exemplu, la apus, luminile din living se aprind automat la 10% intensitate, iar termostatul setează temperatura la 21°C. Asta se face prin reguli simple: "Când apune soarele, execută acțiunile X, Y, Z".</p>
-    <p class="mb-4">Un alt exemplu concret: pleci de acasă. Poți crea o rutină "Plecare" care oprește toate luminile, setează termostatul pe "Eco" și activează senzorii de mișcare pentru supraveghere. Totul se declanșează când ieși pe ușă și activezi modul respectiv din aplicație sau printr-un buton smart. Am salvat mult timp și energie așa.</p>
+    <p class="mb-4">Aici începe distracția, la automatizări. Poți crea scenarii care să-ți ușureze zi de zi. De exemplu, la apus, luminile din living se aprind automat la 10% intensitate, iar termostatul setează <a href="/senzor-temperatura-si-umiditate-smart/" class="interlink">temperatura</a> la 21°C. Asta se face prin reguli simple: "Când apune soarele, execută acțiunile X, Y, Z".</p>
+    <p class="mb-4">Un alt exemplu concret: pleci de acasă. Poți crea o rutină "Plecare" care oprește toate luminile, setează termostatul pe "Eco" și activează senzorii de mișcare pentru <a href="/camera-de-supraveghere-ptz/" class="interlink">supraveghere</a>. Totul se declanșează când ieși pe ușă și activezi modul respectiv din aplicație sau printr-un buton smart. Am salvat mult timp și energie așa.</p>
     <p class="mb-4">Poți chiar să integrezi sistemul cu alarma de la telefon. Când telefonul intră în modul "Nu deranja" seara, luminile din dormitor se sting, iar ușa de la intrare se blochează automat. Posibilitățile sunt practic nelimitate, depinzând doar de dispozitivele pe care le ai și de imaginația ta.</p>
     
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="hub-smart-pentru-automatizarea-casei"
+      currentCategory="smart-home"
+      articles={allArticles}
+    />
   </article>
 </Layout>

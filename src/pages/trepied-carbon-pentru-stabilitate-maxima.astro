@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -147,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Stabilitate maxima: Ce inseamna si de ce conteaza</h2>
     <p class="mb-4">In fotografia si videografia de calitate, tremurul mainilor poate distruge o compozitie perfecta. Fie ca filmezi un interviu, faci poze pe timp de noapte sau lucrezi cu obiective grele, un trepied solid e esential. Am observat ca multe momente bune se pierd din cauza echipamentului instabil, iar asta e frustrant.</p>
     <p class="mb-4">Am testat trepiede de la producatori precum Manfrotto, Benro si Sirui, si diferenta dintre un model de plastic ieftin si unul din carbon e ca de la zi la noapte. Un trepied bun nu doar ca previne miscarea nedorita, dar iti permite si sa incadrezi mult mai precis, oferindu-ti libertatea de a experimenta cu expuneri lungi fara grija imaginii blurate.</p>
-    <p class="mb-4">In experienta mea, chiar si un vânt ușor poate fi o problemă serioasă pentru un trepied subdimensionat. Investitia intr-un model robust din carbon te scapa de multe batai de cap pe teren si te ajuta sa obtii rezultate profesionale.</p>
+    <p class="mb-4">In experienta mea, chiar si un vânt ușor poate fi o problemă serioasă pentru un trepied subdimensionat. Investitia intr-un model robust din carbon te scapa de multe batai de cap pe teren si te ajuta sa obtii rezultate <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">profesionale</a>.</p>
     
     
   </section>
@@ -162,8 +175,8 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Specificatii cheie: Ce sa caut la un trepied din carbon</h2>
     <p class="mb-4">Cand vine vorba de trepiede din carbon, trebuie sa te uiti la cateva detalii esentiale. In primul rand, numarul de sectiuni pe picioare. Mai multe sectiuni inseamna o pliere mai compacta, dar poate reduce putin din stabilitatea la inaltime maxima. Eu prefer trepiedele cu 3 sau 4 sectiuni.</p>
-    <p class="mb-4">Inaltimea maxima si minima sunt, de asemenea, importante. Daca filmezi mult la nivelul solului, un trepied cu picioare care se deschid la un unghi larg si pot coborî foarte jos este ideal. Pentru filmari de la inaltime, verifica daca ajunge suficient de sus pentru tine, cu capul de trepied montat. Un model ca Benro TMA37A ajunge la 1.7 metri, ceea ce e suficient pentru majoritatea situațiilor.</p>
-    <p class="mb-4">Capacitatea de incarcare este un alt aspect critic. Asigura-te ca trepiedul poate sustine greutatea camerei, obiectivului si a oricarui alt accesoriu pe care il vei monta. Pentru un DSLR sau mirrorless pro cu un obiectiv greu, cauta trepiede cu o capacitate de minim 10-15 kg. Am vazut scenarii in care trepiede subdimensionate au cedat, si e un pericol real pentru echipamentul tau.</p>
+    <p class="mb-4">Inaltimea maxima si minima sunt, de asemenea, importante. Daca filmezi mult la nivelul solului, un trepied cu picioare care se deschid la un unghi larg si pot coborî foarte jos este ideal. <a href="/microfon-shotgun-pentru-filmari-in-aer-liber/" class="interlink">Pentru filmari</a> de la inaltime, verifica daca ajunge suficient de sus pentru tine, cu capul de trepied montat. Un model ca Benro TMA37A ajunge la 1.7 metri, ceea ce e suficient pentru majoritatea situațiilor.</p>
+    <p class="mb-4">Capacitatea de incarcare este un alt aspect critic. Asigura-te ca trepiedul poate sustine greutatea camerei, obiectivului si a oricarui alt accesoriu pe care il vei monta. Pentru un DSLR sau <a href="/aparat-mirrorless-cu-autofocus-rapid/" class="interlink">mirrorless</a> pro cu un obiectiv greu, cauta trepiede cu o capacitate de minim 10-15 kg. Am vazut scenarii in care trepiede subdimensionate au cedat, si e un pericol real pentru echipamentul tau.</p>
     
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Greutate si compactabilitate</h3>
@@ -191,7 +204,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele recomandate si preturi in Romania</h2>
     <p class="mb-4">Daca vrei un trepied din carbon solid, fara sa spargi banca, Manfrotto Element M8 (aproximativ 700-900 RON pe Altex sau eMAG) este o optiune buna pentru inceput. E usor, stabil si are o capacitate de incarcare decenta pentru majoritatea DSLR-urilor si mirrorless-urilor medii.</p>
     <p class="mb-4">Pentru un pas mai sus, Benro FTA28CV1 (aproximativ 1200-1500 RON pe PCGarage) este un exemplu excelent. E mai robust, are 4 sectiuni pentru o compactabilitate sporita si vine adesea cu un cap panoramic bun inclus. Am folosit un model similar de la Benro si am fost multumit de fiabilitate.</p>
-    <p class="mb-4">Daca bugetul nu e o problema si vrei topul absolut, Gitzo Mountaineer (preturi de la 2500 RON in sus, pe site-uri specializate sau la comanda) sunt legendare pentru durabilitate si greutate. Sunt o investitie serioasa, dar daca fotografiezi sau filmezi profesionist, merita fiecare ban.</p>
+    <p class="mb-4">Daca bugetul nu e o problema si vrei topul absolut, Gitzo Mountaineer (preturi de la 2500 RON in sus, pe site-uri specializate sau la comanda) sunt legendare pentru durabilitate si greutate. Sunt o investitie serioasa, dar daca fotografiezi sau filmezi <a href="/mousepad-extra-mare-pentru-setup-profesionist/" class="interlink">profesionist</a>, merita fiecare ban.</p>
     
     
   </section>
@@ -288,5 +301,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="trepied-carbon-pentru-stabilitate-maxima"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -176,7 +189,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Criterii Esențiale în Alegerea unui QLED Mare</h2>
-    <p class="mb-4">Alegerea unui televizor QLED de mari dimensiuni implică mai mult decât doar tehnologia de bază. Trebuie să iei în considerare o serie de specificații care influențează direct calitatea imaginii, performanța și experiența generală de utilizare. Să analizăm ce contează cu adevărat când faci această investiție importantă.</p>
+    <p class="mb-4">Alegerea unui televizor QLED de mari dimensiuni implică mai mult decât doar tehnologia de bază. Trebuie să iei în considerare o serie de specificații care influențează direct calitatea imaginii, <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanța</a> și experiența generală de utilizare. Să analizăm ce contează cu adevărat când faci această investiție importantă.</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Rezoluție și Rata de Reîmprospătare</h3>
     <p class="mb-4">Rezoluția 4K (3840x2160 pixeli) este standardul actual și oferă o claritate excepțională pe ecrane mari. Un pas înainte ar fi 8K (7680x4320 pixeli), dar conținutul nativ 8K este încă limitat, iar beneficiile sunt sesizabile mai ales la distanțe de vizionare foarte mici. Pentru majoritatea utilizatorilor, un QLED 4K de calitate superioară este o alegere excelentă. Rata de reîmprospătare de 120Hz este crucială pentru o mișcare fluidă, fie că te uiți la sport, la filme de acțiune sau te joci. Asigură o imagine clară, fără blur, ceea ce îmbunătățește semnificativ experiența vizuală.</p>
@@ -195,12 +208,12 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Experiența de Utilizare: Dincolo de Specificații</h2>
-    <p class="mb-4">Un televizor QLED de mari dimensiuni nu este doar o colecție de specificații impresionante; este centrul de divertisment al casei tale. Ceea ce contează cu adevărat este cum se integrează în viața ta de zi cu zi și ce fel de experiențe îți oferă. Hai să vedem cum se traduce performanța tehnică în momente de neuitat.</p>
+    <p class="mb-4">Un televizor QLED de mari dimensiuni nu este doar o colecție de specificații impresionante; este centrul de divertisment al casei tale. Ceea ce contează cu adevărat este cum se integrează în viața ta de zi cu zi și ce fel de experiențe îți oferă. Hai să vedem cum se traduce <a href="/placa-video-amd-performanta-ridicata/" class="interlink">performanța</a> tehnică în momente de neuitat.</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Pentru Pasionații de Gaming</h3>
-    <p class="mb-4">Dacă ești un gamer, un QLED de mari dimensiuni cu HDMI 2.1 este un vis devenit realitate. Modelele de top oferă suport pentru 4K la 120Hz, VRR (Variable Refresh Rate) – care elimină tearing-ul imaginii, și ALLM (Auto Low Latency Mode) – care reduce întârzierea de intrare (input lag) la un nivel minim, asigurând o experiență de joc fluidă și receptivă. Unele QLED-uri de la Samsung chiar suportă AMD FreeSync Premium Pro, oferind un avantaj competitiv. Culorile vibrante și luminozitatea ridicată aduc la viață lumile virtuale într-un mod spectaculos.</p>
+    <p class="mb-4">Dacă ești un gamer, un QLED de mari dimensiuni cu HDMI 2.1 este un vis devenit realitate. Modelele de top oferă suport pentru 4K la 120Hz, VRR (Variable Refresh Rate) – care elimină tearing-ul imaginii, și ALLM (Auto Low Latency Mode) – care reduce întârzierea de intrare (input lag) la un nivel minim, asigurând o experiență de joc fluidă și receptivă. Unele QLED-uri de la Samsung chiar suportă AMD FreeSync Premium Pro, oferind un avantaj <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">competitiv</a>. Culorile vibrante și luminozitatea ridicată aduc la viață lumile virtuale într-un mod spectaculos.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Cinematografie Acasă și Conținut Streaming</h3>
-    <p class="mb-4">Pentru filme și seriale, un QLED mare cu suport HDR10+, Dolby Vision (disponibil pe TCL și Hisense) și o luminozitate excelentă transformă orice vizionare într-o experiență cinematografică. Modul Filmmaker, prezent pe multe modele, ajustează imaginea exact așa cum a intenționat regizorul, fără procesare suplimentară. Sunetul este de asemenea important. Multe QLED-uri premium integrează sisteme audio avansate, cu suport pentru Dolby Atmos, capabile să umple camera cu un sunet imersiv. Pentru o experiență audio completă, poți conecta un soundbar performant prin portul eARC.</p>
+    <p class="mb-4">Pentru filme și seriale, un QLED mare cu suport HDR10+, Dolby Vision (disponibil pe TCL și Hisense) și o luminozitate excelentă transformă orice vizionare într-o experiență cinematografică. Modul Filmmaker, prezent pe multe modele, ajustează imaginea exact așa cum a intenționat regizorul, fără procesare suplimentară. Sunetul este de asemenea important. Multe QLED-uri premium integrează sisteme audio avansate, cu suport pentru <a href="/soundbar-compact-cu-dolby-atmos/" class="interlink">Dolby Atmos</a>, capabile să umple camera cu un sunet imersiv. Pentru o experiență audio completă, poți conecta un soundbar performant prin portul eARC.</p>
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi pentru O Achiziție Inteligentă</h2>
@@ -317,5 +330,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-televizor-qled-de-mari-dimensiuni"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

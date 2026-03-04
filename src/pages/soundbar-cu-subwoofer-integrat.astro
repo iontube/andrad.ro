@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -147,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Soundbar cu subwoofer integrat: ce inseamna pentru tine?</h2>
     <p class="mb-4">Am trecut prin multe review-uri de-a lungul anilor, si pot spune ca un soundbar cu subwoofer integrat e un fel de 'all-in-one' pentru cei care vor un sunet mai bun decat cel al televizorului, fara sa se complice cu multiple boxe si cabluri. Practic, tot ce ai nevoie vine intr-un singur pachet compact, sau in doua piese – soundbar-ul si subwoofer-ul, care de obicei comunica wireless. Asta inseamna mai putin dezastru estetic prin sufragerie si instalare mult mai usoara.</p>
     <p class="mb-4">In experienta mea, diferenta fata de boxele integrate ale unui televizor e uriasa, mai ales la filme si muzica. Dialogurile devin clare, efectele speciale au impact, iar basul te face sa simti actiunea. Nu te astepta la un concert live, dar pentru un upgrade semnificativ, e o solutie excelenta.</p>
-    <p class="mb-4">Am testat modele de la branduri mari precum Samsung, LG si Sony, si pot zice ca trendul e clar: performanta si simplitate. Un soundbar cu subwoofer integrat e, in esenta, o incercare de a aduce experienta audio de cinema acasa, fara complicatiile unui sistem home cinema clasic.</p>
+    <p class="mb-4">Am testat modele de la branduri mari precum Samsung, LG si Sony, si pot zice ca trendul e clar: performanta si simplitate. Un soundbar cu subwoofer integrat e, in esenta, o incercare de a aduce experienta audio de <a href="/proiector-laser-pentru-cinema-acasa/" class="interlink">cinema acasa</a>, fara complicatiile unui sistem home cinema clasic.</p>
     
     
   </section>
@@ -169,8 +182,8 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele recomandate si preturi in Romania (la momentul scrierii)</h2>
-    <p class="mb-4">Am analizat mai multe optiuni, dar cateva s-au remarcat prin echilibrul dintre performanta si pret. Un exemplu bun este <strong>Samsung HW-Q600C</strong>, un soundbar cu subwoofer wireless, care ofera sunet Dolby Atmos virtual. Am prins o oferta buna la eMAG, undeva in jur de 1.500 RON. Sunetul e clar, basul e prezent, si se integreaza bine cu televizoarele Samsung, dar functioneaza excelent si cu alte branduri. Are si functii smart, cum ar fi Q-Symphony, care sincronizeaza boxele TV cu soundbar-ul.</p>
-    <p class="mb-4">Un alt model pe care l-am testat si mi-a placut e <strong>LG SP8YA</strong>. Acesta vine tot cu subwoofer wireless si suporta Dolby Atmos si DTS:X. L-am gasit pe Altex la aproximativ 1.800 RON. E un pic mai scump, dar diferenta de calitate a sunetului se simte, mai ales in ceea ce priveste imersiunea. Basul e profund si controlat.</p>
+    <p class="mb-4">Am analizat mai multe optiuni, dar cateva s-au remarcat prin echilibrul dintre performanta si pret. Un exemplu bun este <strong>Samsung HW-Q600C</strong>, un soundbar cu <a href="/home-cinema-cu-subwoofer-wireless/" class="interlink">subwoofer wireless</a>, care ofera sunet Dolby Atmos virtual. Am prins o oferta buna la eMAG, undeva in jur de 1.500 RON. Sunetul e clar, basul e prezent, si se integreaza bine cu televizoarele Samsung, dar functioneaza excelent si cu alte branduri. Are si functii smart, cum ar fi Q-Symphony, care sincronizeaza boxele TV cu soundbar-ul.</p>
+    <p class="mb-4">Un alt model pe care l-am testat si mi-a placut e <strong>LG SP8YA</strong>. Acesta vine tot cu subwoofer wireless si suporta <a href="/soundbar-compact-cu-dolby-atmos/" class="interlink">Dolby Atmos</a> si DTS:X. L-am gasit pe Altex la aproximativ 1.800 RON. E un pic mai scump, dar diferenta de calitate a sunetului se simte, mai ales in ceea ce priveste imersiunea. Basul e profund si controlat.</p>
     <p class="mb-4">Pentru un buget mai restrans, <strong>Sony HT-S40R</strong> este o optiune buna, desi e un sistem 5.1 cu boxe spate, nu strict un soundbar cu subwoofer integrat. El costa in jur de 1.300 RON la PCGarage. Daca vrei un sunet mult mai imersiv si nu te deranjeaza cateva cabluri in plus pentru boxele spate, merita luat in calcul. Sunetul e echilibrat, iar basul e destul de puternic pentru dimensiunea sa.</p>
     
     
@@ -178,7 +191,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sa urmaresti cand cumperi: specificatii si functii utile</h2>
     <p class="mb-4">Cand alegi un soundbar cu subwoofer integrat, uita-te dupa numarul de canale. Un sistem 2.1 (soundbar + subwoofer) e standard, dar exista si 3.1 sau chiar 5.1 virtual. Mai multe canale inseamna, in general, un sunet mai bine definit. Suportul pentru formate audio precum Dolby Atmos si DTS:X este un mare plus, chiar daca e vorba de virtualizare. Aceste tehnologii fac o diferenta majora in imersiunea audio, simuland sunete venite de deasupra ta.</p>
-    <p class="mb-4">Conectivitatea e cruciala. Asigura-te ca are cel putin un port HDMI ARC (Audio Return Channel) pentru o conexiune simpla cu televizorul. Un port HDMI in plus e util daca vrei sa conectezi si alte dispozitive (console, Blu-ray player) direct la soundbar. Bluetooth pentru streaming audio de pe telefon e aproape standard acum, dar verifica versiunea (preferabil 5.0 sau mai nou) pentru o conexiune stabila si calitate mai buna.</p>
+    <p class="mb-4">Conectivitatea e cruciala. Asigura-te ca are cel putin un port HDMI ARC (Audio Return Channel) pentru o conexiune simpla cu televizorul. Un port HDMI in plus e util daca vrei sa conectezi si alte dispozitive (console, Blu-ray player) direct la soundbar. Bluetooth <a href="/setup-pc-pentru-streaming-4k/" class="interlink">pentru streaming</a> audio de pe telefon e aproape standard acum, dar verifica versiunea (preferabil 5.0 sau mai nou) pentru o conexiune stabila si calitate mai buna.</p>
     <p class="mb-4">Puterea (masurata in W) e un indicator, dar nu cel mai important. Mai important e cum suna produsul in ansamblu. Unele functii smart, cum ar fi controlul vocal prin Alexa sau Google Assistant, sau integrarea cu ecosistemul producatorului (ex: Samsung SmartThings), pot fi convenabile, dar nu esentiale pentru toata lumea.</p>
     
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="soundbar-cu-subwoofer-integrat"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

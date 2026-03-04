@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -178,7 +191,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ecranul Perfect: O Fereastră către Lumea Gamingului Ultra</h2>
     <p class="mb-4">Un laptop cu RTX 4090 merită un ecran pe măsură. Calitatea vizuală este la fel de importantă ca performanța brută. Opțiunile variază, dar toate vizează o imersiune maximă.</p>
     <p class="mb-4"><strong>Rezoluție și Rata de Reîmprospătare</strong></p>
-    <p class="mb-4">Cele mai bune laptopuri cu RTX 4090 vin cu ecrane QHD (2560x1600 sau 2560x1440) cu rate de reîmprospătare de 240Hz sau chiar 360Hz. Această combinație oferă un echilibru excelent între claritate și fluiditate, perfectă pentru gaming competitiv și experiențe vizuale captivante. Unele modele includ ecrane 4K cu 120Hz sau 144Hz, ideale pentru cei care prioritizează claritatea absolută a imaginii în jocuri single-player sau pentru munca de creație. Tehnologiile G-Sync sau FreeSync sunt prezente, eliminând tearing-ul și stuttering-ul.</p>
+    <p class="mb-4">Cele mai bune laptopuri cu RTX 4090 vin cu ecrane QHD (2560x1600 sau 2560x1440) cu rate de reîmprospătare de 240Hz sau chiar 360Hz. Această combinație oferă un echilibru excelent între claritate și fluiditate, perfectă pentru <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">gaming competitiv</a> și experiențe vizuale captivante. Unele modele includ ecrane 4K cu 120Hz sau 144Hz, ideale pentru cei care prioritizează claritatea absolută a imaginii în jocuri single-player sau pentru munca de creație. Tehnologiile G-Sync sau FreeSync sunt prezente, eliminând tearing-ul și stuttering-ul.</p>
     <p class="mb-4"><strong>Tehnologii de Afișare</strong></p>
     <p class="mb-4">Ecranele Mini LED sau OLED sunt opțiuni premium care oferă un contrast excepțional, negru profund și culori vibrante. Luminozitatea poate ajunge la peste 1000 de niți pe anumite panouri Mini LED, făcând conținutul HDR să arate spectaculos. Reproducerea culorilor, adesea 100% DCI-P3, este vitală pentru creatorii de conținut și garantează o acuratețe vizuală ridicată.</p>
     
@@ -189,14 +202,14 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4"><strong>Sisteme de Răcire Avansate</strong></p>
     <p class="mb-4">Laptopurile de top cu RTX 4090 utilizează soluții de răcire sofisticate. Acestea includ camere de vapori (vapor chambers) mari, pastă termică cu metal lichid pentru CPU și GPU, multiple ventilatoare cu pale subțiri și un număr impresionant de heat pipe-uri. Capacitatea termică (TGP) a plăcii grafice RTX 4090 poate ajunge la 175W, un nivel la care doar sistemele de răcire de excepție pot face față eficient. Un sistem de răcire robust previne throttling-ul termic și asigură performanțe constante în sesiuni lungi de gaming.</p>
     <p class="mb-4"><strong>Estetică și Construcție</strong></p>
-    <p class="mb-4">Materialele premium, precum aluminiul și aliajele de magneziu, sunt folosite pentru șasiu, oferind durabilitate și un aspect elegant. Design-ul este adesea agresiv, cu elemente iluminate RGB personalizabile, dar există și modele cu un aspect mai sobru, pentru cei care preferă discreția. Tastaturile mecanice sau optice, cu iluminare RGB per-key, sunt frecvente, oferind o experiență de tastare și gaming superioară. Conectivitatea este bogată, incluzând porturi Thunderbolt 4, USB 3.2 Gen 2, HDMI 2.1 și Ethernet 2.5Gbps, plus Wi-Fi 6E sau 7.</p>
+    <p class="mb-4">Materialele premium, precum aluminiul și aliajele de magneziu, sunt folosite pentru șasiu, oferind durabilitate și un aspect elegant. Design-ul este adesea agresiv, cu elemente iluminate RGB personalizabile, dar există și modele cu un aspect mai sobru, pentru cei care preferă discreția. Tastaturile mecanice sau optice, cu <a href="/periferice-cu-iluminare-rgb-sincronizata/" class="interlink">iluminare RGB</a> per-key, sunt frecvente, oferind o experiență de tastare și gaming superioară. Conectivitatea este bogată, incluzând porturi Thunderbolt 4, USB 3.2 Gen 2, HDMI 2.1 și Ethernet 2.5Gbps, plus Wi-Fi 6E sau 7.</p>
     
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele de Top: Alegerea Campionilor</h2>
     <p class="mb-4">Pe piață există câteva modele care se disting prin performanța, inovația și calitatea lor, reprezentând creme de la creme a laptopurilor cu RTX 4090. Iată câteva exemple care merită atenția ta:</p>
     <p class="mb-4"><strong>ASUS ROG Strix Scar 18</strong></p>
-    <p class="mb-4">Acest model este un gigant al performanței, adesea echipat cu cele mai noi procesoare Intel Core i9 HX și sisteme de răcire avansate, incluzând metal lichid pe CPU și GPU. Display-ul său de 18 inci QHD cu 240Hz este superb pentru gaming. Design-ul agresiv și tastatura RGB complet personalizabilă completează pachetul.</p>
+    <p class="mb-4">Acest model este un gigant al performanței, adesea echipat cu cele mai noi procesoare Intel Core i9 HX și sisteme de răcire avansate, incluzând metal lichid pe CPU și GPU. Display-ul său de 18 inci QHD cu 240Hz este superb <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">pentru gaming</a>. Design-ul agresiv și tastatura RGB complet personalizabilă completează pachetul.</p>
     <p class="mb-4"><strong>Razer Blade 18</strong></p>
     <p class="mb-4">Razer Blade 18 oferă un echilibru impresionant între performanță brutală și un design premium, minimalist. Este un laptop puternic, cu un șasiu din aluminiu prelucrat, un ecran QHD de 18 inci cu 240Hz și o tastatură excelentă. Răcirea este, de asemenea, un punct forte, gestionând eficient căldura.</p>
     <p class="mb-4"><strong>MSI Titan GT77 HX</strong></p>
@@ -219,7 +232,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-7" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Merită Investiția? O Privire Onestă Asupra Valorii</h2>
     <p class="mb-4">Un laptop cu RTX 4090 reprezintă o investiție semnificativă. Întrebarea este: merită? Răspunsul depinde de nevoile și așteptările tale.</p>
-    <p class="mb-4">Dacă ești un gamer entuziast care dorește cele mai bune performanțe posibile, capabil să ruleze orice titlu la setări ultra, cu ray tracing și DLSS 3, atunci da, investiția este justificată. Aceste laptopuri oferă o experiență de gaming fără precedent, depășind cu mult majoritatea sistemelor desktop. De asemenea, pentru profesioniștii din domenii precum editare video, randare 3D, inteligență artificială sau dezvoltare de jocuri, puterea de calcul oferită de un RTX 4090 este un accelerator uriaș de productivitate, economisind timp prețios. Durata de viață a acestor sisteme este, de asemenea, un aspect de luat în considerare. Un laptop cu RTX 4090 va rămâne relevant pentru gaming și sarcini profesionale pentru mulți ani de acum încolo, oferind o valoare pe termen lung. Experiența premium, calitatea construcției și tehnologiile de vârf sunt argumente puternice pentru această categorie de laptopuri.</p>
+    <p class="mb-4">Dacă ești un gamer entuziast care dorește cele mai bune performanțe posibile, capabil să ruleze orice titlu la setări ultra, cu ray tracing și DLSS 3, atunci da, investiția este justificată. Aceste laptopuri oferă o experiență de gaming fără precedent, depășind cu mult majoritatea sistemelor desktop. De asemenea, pentru profesioniștii din domenii precum editare video, randare 3D, inteligență artificială sau dezvoltare de jocuri, puterea de calcul oferită de un RTX 4090 este un accelerator uriaș de productivitate, economisind timp prețios. Durata de viață a acestor sisteme este, de asemenea, un aspect de luat în considerare. Un laptop cu RTX 4090 va rămâne relevant <a href="/scaun-ergonomic-cu-suport-lombar-pentru-gaming/" class="interlink">pentru gaming</a> și sarcini profesionale pentru mulți ani de acum încolo, oferind o valoare pe termen lung. Experiența premium, calitatea construcției și tehnologiile de vârf sunt argumente puternice pentru această categorie de laptopuri.</p>
     
   </section>
 
@@ -328,5 +341,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-laptop-de-gaming-rtx-4090"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

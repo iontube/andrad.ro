@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -146,7 +159,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Purificatoare de aer cu filtru HEPA: Cum am ajuns sa le folosesc</h2>
     <p class="mb-4">Am început să mă interesez serios de purificatoare de aer cu filtru HEPA acum vreo trei ani, când a început fiică-mea să dezvolte tot felul de alergii. Primele semne au apărut primăvara, apoi au persistat. Am încercat tot felul de soluții, de la spray-uri nazale la vizite la medic, dar parcă nu dădeam de capăt. Medicul a sugerat că ar putea fi vorba și de calitatea aerului din casă, praf, acarieni, polen. Așa am ajuns să citesc despre filtrele HEPA și cum funcționează ele, practic captând particule microscopice.</p>
-    <p class="mb-4">Am început cu un model mai mic, un Philips SERE SERE 1223, pe care l-am luat de la Altex, pe atunci la vreo 600 de lei. L-am pus în dormitor, unde petreceam cel mai mult timp. Diferența nu a fost instantanee, dar după vreo săptămână-două am observat că dimineața se trezea mai odihnită, fără strănuturi și ochi înlăcrimați. Asta m-a convins că merită să investesc mai mult în ceva mai performant.</p>
+    <p class="mb-4">Am început cu un model mai mic, un Philips SERE SERE 1223, pe care l-am luat de la Altex, pe atunci la vreo 600 de lei. L-am pus în dormitor, unde petreceam cel mai mult timp. Diferența nu a fost instantanee, dar după vreo săptămână-două am observat că dimineața se trezea mai odihnită, fără strănuturi și ochi înlăcrimați. Asta m-a convins că merită să investesc mai mult în ceva mai <a href="/filtru-de-apa-sub-chiuveta-performant/" class="interlink">performant</a>.</p>
     <p class="mb-4">Acum, după ce am testat mai multe modele de la branduri ca Xiaomi, Winix și chiar unul de la Samsung, pot spune că un purificator de aer cu filtru HEPA nu mai e un lux, ci o necesitate, mai ales dacă locuiești într-un oraș poluat sau ai probleme respiratorii în familie. Am observat că și mirosurile din casă, de la gătit la cele de animale de companie, dispar mult mai repede.</p>
     
     
@@ -162,14 +175,14 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele testate si impresii directe</h2>
     <p class="mb-4">Am avut ocazia să folosesc mai multe modele în ultimii ani, așa că am o perspectivă destul de clară asupra a ce funcționează și ce nu. Unul dintre primele modele pe care le-am testat intens a fost Xiaomi Mi Air Purifier 3H, luat de pe eMAG cu aproximativ 500 de lei. Era destul de silențios pe treapta minimă și avea o aplicație mobilă bună, prin care puteam monitoriza calitatea aerului și regla intensitatea. Însă, mi s-a părut că filtrul HEPA nu era la fel de performant ca la aparatele mai scumpe.</p>
-    <p class="mb-4">Un alt model care mi-a plăcut mult a fost Winix Zero, pe care l-am găsit la Flanco pe la 900 de lei. Acesta are un sistem de filtrare pe 4 etape, inclusiv un filtru True HEPA, care chiar face o treabă bună. Senzorii lui sunt destul de preciși, iar modul automat își face treaba excelent, ajustând viteza ventilatorului în funcție de poluare. L-am folosit în living și am observat o îmbunătățire vizibilă, mai ales când găteam ceva mai puternic mirositor.</p>
+    <p class="mb-4">Un alt model care mi-a plăcut mult a fost Winix Zero, pe care l-am găsit la Flanco pe la 900 de lei. Acesta are un sistem de filtrare pe 4 etape, inclusiv un filtru True HEPA, care chiar face o treabă bună. Senzorii lui sunt destul de preciși, iar modul automat își face treaba excelent, ajustând viteza ventilatorului în <a href="/blender-vertical-cu-functie-smoothie/" class="interlink">funcție</a> de poluare. L-am folosit în living și am observat o îmbunătățire vizibilă, mai ales când găteam ceva mai puternic mirositor.</p>
     <p class="mb-4">Am testat și un Samsung AX4050, pe care l-am găsit la PCGarage cam la 700 de lei. Acesta mi s-a părut un pic mai zgomotos pe treptele superioare, dar designul e modern și filtrarea e eficientă. Aplicația mobilă Samsung SmartThings e utilă, dar uneori mi s-a părut că se deconectează. În general, am observat că aparatele de la branduri consacrate, chiar și cele din gama medie, oferă o performanță mai constantă.</p>
     
     
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la cineva care le-a folosit</h2>
-    <p class="mb-4">Cel mai important sfat pe care vi-l pot da este să nu economisiți la filtre. Acestea au o durată de viață limitată, de obicei între 6 și 12 luni, în funcție de cât de mult e purificatorul pornit și de cât de poluat e aerul. Când vedeți că aparatul vă semnalează că filtrul trebuie înlocuit, faceți-o. Un filtru uzat nu mai face față și aparatul începe să consume mai mult curent inutil.</p>
+    <p class="mb-4">Cel mai important sfat pe care vi-l pot da este să nu economisiți la filtre. Acestea au o durată de viață limitată, de obicei între 6 și 12 luni, în <a href="/combina-frigorifica-cu-functie-fresh-zone/" class="interlink">funcție</a> de cât de mult e purificatorul pornit și de cât de poluat e aerul. Când vedeți că aparatul vă semnalează că filtrul trebuie înlocuit, faceți-o. Un filtru uzat nu mai face față și aparatul începe să consume mai mult curent inutil.</p>
     <p class="mb-4">Stabiliți unde aveți cea mai mare nevoie de purificare. Dacă aveți probleme cu alergiile, dormitorul e prioritar. Dacă petreceți mult timp în living, puneți-l acolo. Nu vă așteptați ca un singur aparat să curețe aerul din toată casa simultan, decât dacă investiți într-un model industrial, care nu e practic pentru uz casnic. De obicei, un purificator e eficient pentru o suprafață specificată de producător, de exemplu 30-40 mp.</p>
     <p class="mb-4">Am observat că e bine să lăsați purificatorul să funcționeze continuu, pe o treaptă mai joasă, mai ales dacă aveți probleme respiratorii sau animale de companie. Asta menține un nivel constant de curățenie a aerului. Multe modele au un mod automat, care e ideal pentru asta. De asemenea, curățați regulat pre-filtrul (de obicei, o plasă metalică sau de plastic) pentru a prelungi viața filtrului HEPA propriu-zis.</p>
     
@@ -178,7 +191,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Costuri si mentenanta: Ce trebuie sa stii</h2>
     <p class="mb-4">Prețurile purificatoarelor de aer cu filtru HEPA variază destul de mult. Am văzut modele simple, pentru camere mici, de la 200-300 de lei (dar acestea nu au de obicei filtre HEPA de calitate sau sunt mult prea mici pentru a fi eficiente). Modelele medii, precum cele de la Xiaomi, Winix sau Samsung, pe care le-am menționat, se încadrează între 500 și 1000 de lei. Modelele premium, de la branduri ca Dyson sau Philips, cu funcții smart avansate și design deosebit, pot ajunge și la 1500-2500 de lei sau chiar mai mult.</p>
-    <p class="mb-4">Marea majoritate a costurilor pe termen lung vin de la înlocuirea filtrelor. Un set de filtre HEPA + carbon activ pentru un model mediu poate costa între 150 și 300 de lei. Acestea trebuie înlocuite o dată pe an sau la 6 luni, în funcție de utilizare. Verificați prețul filtrelor înainte de a cumpăra aparatul, ca să nu aveți surprize neplăcute. Uneori, prețul filtrelor poate ajunge la jumătate din prețul aparatului pe parcursul a doi ani.</p>
+    <p class="mb-4">Marea majoritate a costurilor pe termen lung vin de la înlocuirea filtrelor. Un set de filtre HEPA + carbon activ pentru un model mediu poate costa între 150 și 300 de lei. Acestea trebuie înlocuite o dată pe an sau la 6 luni, în <a href="/prajitor-de-paine-cu-functie-bagheta/" class="interlink">funcție</a> de utilizare. Verificați prețul filtrelor înainte de a cumpăra aparatul, ca să nu aveți surprize neplăcute. Uneori, prețul filtrelor poate ajunge la jumătate din prețul aparatului pe parcursul a doi ani.</p>
     <p class="mb-4">Consumul de curent nu e foarte mare, de obicei între 20 și 60W, în funcție de treapta de funcționare. Pe treapta minimă, consumul e neglijabil, cam cât un bec LED. Pe treapta maximă, poate fi comparabil cu un ventilator mai puternic. Dar, repet, dacă îl țineți pe modul automat sau pe treapta minimă, costul la factura de curent va fi mic.</p>
     
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="purificator-de-aer-cu-filtru-hepa"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

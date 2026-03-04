@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -152,23 +165,23 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Procesorul: Creierul sistemului tau</h2>
     <p class="mb-4">Procesorul este, in multe cazuri, cea mai importanta piesa dintr-un kit upgrade PC pentru performanta maxima. Am observat ca un upgrade de la un procesor vechi, cu 4 nuclee, la unul modern cu 8 sau chiar 12 nuclee, face o diferenta uriasa in multitasking si in jocurile care se bazeaza mult pe CPU.</p>
-    <p class="mb-4">Pentru gaming, procesoarele Intel Core i5/i7 din generatiile noi (12, 13, 14) sau AMD Ryzen 5/7 (seriile 5000, 7000) sunt alegeri solide. Am testat un Intel Core i5-13600K si am ramas impresionat de cat de fluid ruleaza totul, de la jocuri la editare foto in Photoshop. Un AMD Ryzen 7 5700X, gasit recent pe PCGarage la aproximativ 1200 lei, este o optiune excelenta pentru cei care vor multe nuclee pentru productivitate, dar si performanta buna in jocuri.</p>
+    <p class="mb-4"><a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">Pentru gaming</a>, procesoarele Intel Core i5/i7 din generatiile noi (12, 13, 14) sau AMD Ryzen 5/7 (seriile 5000, 7000) sunt alegeri solide. Am testat un Intel Core i5-13600K si am ramas impresionat de cat de fluid ruleaza totul, de la jocuri la editare foto in Photoshop. Un AMD Ryzen 7 5700X, gasit recent pe PCGarage la aproximativ 1200 lei, este o optiune excelenta pentru cei care vor multe nuclee pentru productivitate, dar si performanta buna in jocuri.</p>
     <p class="mb-4">Cand alegi procesorul, verifica si socket-ul placii de baza. Daca ai o placa de baza mai veche, s-ar putea sa fie nevoie sa o schimbi si pe ea, ceea ce adauga costuri. Eu am optat uneori pentru un pachet "CPU + Placa de baza + RAM" de la ASUS sau MSI pentru a simplifica procesul.</p>
     
     
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Placa Video: Inima experientei vizuale</h2>
-    <p class="mb-4">Pentru gaming, placa video este, de departe, cea mai importanta componenta. Un kit upgrade PC pentru performanta maxima nu este complet fara o placa video capabila sa duca jocurile la setari grafice ridicate. Am facut upgrade-uri de la un GTX 1060 la un RTX 3060 si diferenta a fost de la cer la pamant, mai ales in titlurile noi. Daca bugetul permite, chiar si un RTX 4070 sau un AMD RX 7800 XT sunt optiuni fantastice.</p>
+    <p class="mb-4"><a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">Pentru gaming</a>, placa video este, de departe, cea mai importanta componenta. Un kit upgrade PC pentru performanta maxima nu este complet fara o placa video capabila sa duca jocurile la setari grafice ridicate. Am facut upgrade-uri de la un GTX 1060 la un RTX 3060 si diferenta a fost de la cer la pamant, mai ales in titlurile noi. Daca bugetul permite, chiar si un RTX 4070 sau un AMD RX 7800 XT sunt optiuni fantastice.</p>
     <p class="mb-4">Preturile pot varia destul de mult. Un NVIDIA GeForce RTX 3060 12GB poate fi gasit pe eMAG sau Altex in jur de 1800-2000 lei, oferind o performanta excelenta pentru rezolutii 1080p si chiar 1440p. Daca vrei sa joci in 4K, atunci te uiti la modele superioare, cum ar fi RTX 4070 Ti sau RX 7900 XTX, care sar bineinteles de 3500-4000 lei.</p>
-    <p class="mb-4">Am observat ca e bine sa te uiti si la memoria VRAM. Pentru gaming in 1440p si jocuri cu texturi mari, 12GB VRAM (cum are RTX 3060) este un minim confortabil. Pentru viitor, 16GB devine standardul. Branduri precum ASUS, Gigabyte, MSI sau Sapphire fac placi video solide, ambele fiind de incredere.</p>
+    <p class="mb-4">Am observat ca e bine sa te uiti si la memoria VRAM. <a href="/scaun-ergonomic-cu-suport-lombar-pentru-gaming/" class="interlink">Pentru gaming</a> in 1440p si jocuri cu texturi mari, 12GB VRAM (cum are RTX 3060) este un minim confortabil. Pentru viitor, 16GB devine standardul. Branduri precum ASUS, Gigabyte, MSI sau Sapphire fac placi video solide, ambele fiind de incredere.</p>
     
     
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Memoria RAM: Viteza si fluiditate in aplicatii</h2>
     <p class="mb-4">Memoria RAM este adesea neglijata, dar joaca un rol crucial in performanta generala, mai ales cand lucrezi cu multe programe deschise sau editezi fisiere mari. Am simtit diferenta de la 16GB la 32GB RAM in Photoshop si Premiere Pro, unde timpul de incarcare si randare s-a redus considerabil. Un kit upgrade PC pentru performanta maxima ar trebui sa includa minim 16GB, dar 32GB este idealul pentru viitor.</p>
-    <p class="mb-4">Pentru gaming, 16GB DDR4 3200MHz sau DDR5 6000MHz este suficient pentru majoritatea titlurilor. Daca te ocupi si de streaming sau editare video, 32GB DDR4 3600MHz sau DDR5 6400MHz este recomandat. Eu am folosit kituri de la Corsair, G.Skill si Kingston, toate oferind stabilitate buna. Un kit de 32GB DDR4 3600MHz de la Kingston Fury poate fi gasit pe PCGarage la aproximativ 400-500 lei.</p>
+    <p class="mb-4"><a href="/casti-wireless-pentru-gaming-mobil/" class="interlink">Pentru gaming</a>, 16GB DDR4 3200MHz sau DDR5 6000MHz este suficient pentru majoritatea titlurilor. Daca te ocupi si de streaming sau editare video, 32GB DDR4 3600MHz sau DDR5 6400MHz este recomandat. Eu am folosit kituri de la Corsair, G.Skill si Kingston, toate oferind stabilitate buna. Un kit de 32GB DDR4 3600MHz de la Kingston Fury poate fi gasit pe PCGarage la aproximativ 400-500 lei.</p>
     <p class="mb-4">Verifica ce tip de RAM suporta placa ta de baza (DDR4 sau DDR5) si viteza maxima. Nu are rost sa iei RAM foarte rapid daca placa de baza nu il poate duce la acea viteza. De asemenea, viteza conteaza, dar si latenta (CL). Pentru DDR4, CL16 este bun, iar pentru DDR5, CL30 sau CL32 este un bun punct de plecare.</p>
     
     
@@ -282,5 +295,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="kit-upgrade-pc-pentru-performanta-maxima"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

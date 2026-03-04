@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -163,8 +176,8 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Introducere în Lumea VR-ului Profesional</h2>
-    <p class="mb-4">Ești pe punctul de a explora un univers unde realitatea virtuală transcende simpla distracție, devenind o unealtă esențială în domenii precum ingineria, medicina, designul și simulările complexe. Vorbim despre sisteme VR profesionale, echipamente de top concepute pentru performanță extremă, precizie excepțională și imersiune fără compromisuri. Nu ne referim la căștile de gaming obișnuite; aici intrăm într-o ligă superioară, unde fiecare pixel, fiecare milisecundă de latență și fiecare detaliu al tracking-ului contează.</p>
-    <p class="mb-4">Această discuție este dedicată profesioniștilor care caută să-și extindă orizonturile cu tehnologia VR. Vom analiza ce anume face un sistem VR "profesional", vom explora liderii pieței și vom descompune factorii cheie care influențează decizia de cumpărare. Pregătește-te să vezi ce poate oferi VR-ul atunci când este împins la limită.</p>
+    <p class="mb-4">Ești pe punctul de a explora un univers unde realitatea virtuală transcende simpla distracție, devenind o unealtă esențială în domenii precum ingineria, medicina, designul și simulările complexe. Vorbim despre sisteme VR <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">profesionale</a>, echipamente de top concepute pentru performanță extremă, precizie excepțională și imersiune fără compromisuri. Nu ne referim la căștile de gaming obișnuite; aici intrăm într-o ligă superioară, unde fiecare pixel, fiecare milisecundă de latență și fiecare detaliu al tracking-ului contează.</p>
+    <p class="mb-4">Această discuție este dedicată profesioniștilor care caută să-și extindă orizonturile cu tehnologia VR. Vom analiza ce anume face un sistem VR "<a href="/fier-de-calcat-vertical-profesional/" class="interlink">profesional</a>", vom explora liderii pieței și vom descompune factorii cheie care influențează decizia de cumpărare. Pregătește-te să vezi ce poate oferi VR-ul atunci când este împins la limită.</p>
     <p class="mb-4">În paginile următoare, vom discuta despre:</p>
     <ul class="list-disc list-inside mb-4 space-y-2">
       <li>Ce Înseamnă VR Profesional? Diferențele Cheie</li>
@@ -179,13 +192,13 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Înseamnă VR Profesional? Diferențele Cheie</h2>
-    <p class="mb-4">VR-ul profesional se distinge de cel de consum prin câteva aspecte fundamentale. În primul rând, rezoluția și claritatea imaginii sunt mult superioare. Aici, nu e vorba doar de a "vede" ceva, ci de a "distinge" detalii fine, texturi și linii precise, esențiale în designul industrial sau chirurgia virtuală. Un "efect de plasă" (screen door effect) este inacceptabil într-un mediu profesional.</p>
+    <p class="mb-4">VR-ul profesional se distinge de cel de consum prin câteva aspecte fundamentale. În primul rând, rezoluția și claritatea imaginii sunt mult superioare. Aici, nu e vorba doar de a "vede" ceva, ci de a "distinge" <a href="/lentile-macro-pentru-detalii-fine/" class="interlink">detalii fine</a>, texturi și linii precise, esențiale în designul industrial sau chirurgia virtuală. Un "efect de plasă" (screen door effect) este inacceptabil într-un mediu profesional.</p>
     <p class="mb-4">Apoi, câmpul vizual (FOV) este un aspect crucial. O imersiune completă necesită un FOV larg, care să replice cât mai fidel vederea periferică umană. Precizia tracking-ului, fie că vorbim de poziția căștii sau a controlerelor, este vitală pentru interacțiuni realiste și fără erori. Confortul ergonomic pentru sesiuni lungi de utilizare, fiabilitatea hardware-ului și suportul software pentru aplicații enterprise sunt alte piloni care definesc un sistem VR profesional.</p>
     
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Varjo: Punctul Culminant al Fidelității Vizuale</h2>
-    <p class="mb-4">Când vine vorba de fidelitate vizuală absolută, Varjo este adesea considerat etalonul. Aceste sisteme sunt concepute pentru profesioniști unde fiecare detaliu contează, de la design auto la training-uri de piloți. Tehnologia lor "bionic display" este unică, combinând un "focus display" de rezoluție ultra-înaltă în centrul vederii cu un "context display" periferic.</p>
+    <p class="mb-4">Când vine vorba de fidelitate vizuală absolută, Varjo este adesea considerat etalonul. Aceste sisteme sunt concepute <a href="/drona-cu-filmare-6k-pentru-profesionisti/" class="interlink">pentru profesioniști</a> unde fiecare detaliu contează, de la design auto la training-uri de piloți. Tehnologia lor "bionic display" este unică, combinând un "focus display" de rezoluție ultra-înaltă în centrul vederii cu un "context display" periferic.</p>
     <p class="mb-4">De exemplu, <strong>Varjo XR-3</strong> oferă o rezoluție de peste 70 pixeli pe grad (PPD) în zona centrală, cu o rezoluție totală de 2880 x 2720 pixeli per ochi. Include passthrough video de înaltă rezoluție, creând o experiență de realitate mixtă (XR) incredibil de realistă. <strong>Varjo Aero</strong> este o opțiune puțin mai accesibilă, dar păstrează o claritate excepțională, cu o rezoluție de 2880 x 2720 pixeli per ochi și o densitate de pixeli de 35 PPD, acoperind un câmp vizual de 115 grade. Aceste căști necesită stații de lucru puternice și sunt adesea folosite în sectoare precum ingineria, arhitectura și cercetarea științifică.</p>
     
   </section>
@@ -326,5 +339,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-sistem-vr-profesional"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

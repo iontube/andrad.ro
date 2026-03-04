@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -146,16 +159,16 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Boxe outdoor rezistente la ploaie: De ce ai nevoie de ele</h2>
     <p class="mb-4">Am petrecut mulți ani testând gadgeturi, iar când vine vorba de audio pentru exterior, am învățat un lucru: nu te juca cu apă și electronice neprotejate. Boxele outdoor rezistente la ploaie nu sunt un lux, ci o necesitate dacă vrei să te bucuri de muzică pe terasă, la grătar sau chiar lângă piscină fără griji. Am văzut cum un duș neașteptat a transformat o petrecere într-o cursă spre casă pentru a salva echipamentul.</p>
-    <p class="mb-4">Când alegi boxe pentru exterior, certificarea IP (Ingress Protection) este crucială. Aceasta îți spune cât de bine este protejat dispozitivul împotriva pătrunderii prafului și a apei. Pentru rezistență la ploaie, caută cel puțin IPX4, dar ideal ar fi IPX5 sau IPX7 pentru o protecție sporită.</p>
-    <p class="mb-4">În experiența mea, chiar și o ploaie ușoară poate deteriora rapid o boxă obișnuită. Investiția într-un model dedicat pentru exterior îți scutește bătăi de cap și bani pe termen lung, evitând reparații costisitoare sau înlocuiri.</p>
+    <p class="mb-4">Când alegi boxe pentru exterior, certificarea IP (Ingress Protection) este crucială. Aceasta îți spune cât de bine este protejat dispozitivul împotriva pătrunderii prafului și a apei. Pentru <a href="/camera-actiune-rezistenta-la-apa/" class="interlink">rezistență la</a> ploaie, caută cel puțin IPX4, dar ideal ar fi IPX5 sau IPX7 pentru o protecție sporită.</p>
+    <p class="mb-4">În <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experiența</a> mea, chiar și o ploaie ușoară poate deteriora rapid o boxă obișnuită. Investiția într-un model dedicat pentru exterior îți scutește bătăi de cap și bani pe termen lung, evitând reparații costisitoare sau înlocuiri.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum am testat: Criterii esențiale</h2>
-    <p class="mb-4">Pentru a evalua aceste boxe, am pus accent pe câteva aspecte cheie. În primul rând, rezistența la apă – le-am expus la jeturi de apă controlate, simulând o ploaie torențială, și am verificat dacă funcționalitatea rămâne intactă. Am stat cu urechea pe sunet, evident, dar și cu ochiul pe carcasă, căutând semne de deteriorare.</p>
+    <p class="mb-4">Pentru a evalua aceste boxe, am pus accent pe câteva aspecte cheie. În primul rând, rezistența la apă – le-am expus la jeturi de apă <a href="/becuri-rgb-controlate-prin-app/" class="interlink">controlate</a>, simulând o ploaie torențială, și am verificat dacă funcționalitatea rămâne intactă. Am stat cu urechea pe sunet, evident, dar și cu ochiul pe carcasă, căutând semne de deteriorare.</p>
     <p class="mb-4">Calitatea sunetului este, desigur, primordială. Am ascultat o varietate de genuri muzicale, de la rock la clasic, pentru a vedea cum se descurcă în diverse scenarii. Bass-ul, mediile și înaltele trebuie să fie echilibrate, chiar și în spații deschise unde acustica este diferită față de interior.</p>
-    <p class="mb-4">Autonomia bateriei a fost un alt punct forte. Nimănui nu-i place să rămână fără muzică la jumătatea petrecerii, așa că am cronometrat cât timp au rezistat la volum mediu spre ridicat. Conectivitatea Bluetooth a fost testată pentru stabilitate și raza de acțiune, esențială pentru a nu fi nevoit să ții telefonul lipit de boxă.</p>
+    <p class="mb-4">Autonomia bateriei a fost un alt punct forte. Nimănui nu-i place să rămână fără muzică la jumătatea petrecerii, așa că am cronometrat cât timp au rezistat la volum mediu spre ridicat. Conectivitatea Bluetooth a fost testată <a href="/trepied-carbon-pentru-stabilitate-maxima/" class="interlink">pentru stabilitate</a> și raza de acțiune, esențială pentru a nu fi nevoit să ții telefonul lipit de boxă.</p>
     
     
   </section>
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="boxe-outdoor-rezistente-la-ploaie"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

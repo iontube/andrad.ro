@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sunetul care te urmareste: Ce inseamna audio multiroom wireless?</h2>
-    <p class="mb-4">Am petrecut ultimii ani testand tot felul de gadgeturi, iar sistemele audio multiroom wireless au devenit o obsesie personala. Ideea e simpla: muzica sau sunetul de la TV nu mai e limitat la o singura camera. Cu ajutorul unor boxe wireless, conectate la o retea Wi-Fi comuna, poti asculta acelasi playlist in bucatarie, living si dormitor, fara fir. Sau, si mai interesant, poti reda sunet diferit in fiecare zona. Am observat ca aceasta flexibilitate schimba complet modul in care te bucuri de continut audio.</p>
+    <p class="mb-4">Am petrecut ultimii ani testand tot felul de gadgeturi, iar sistemele <a href="/sistem-audio-multiroom-smart/" class="interlink">audio multiroom</a> wireless au devenit o obsesie personala. Ideea e simpla: muzica sau sunetul de la TV nu mai e limitat la o singura camera. Cu ajutorul unor boxe wireless, conectate la o retea Wi-Fi comuna, poti asculta acelasi playlist in bucatarie, living si dormitor, fara fir. Sau, si mai interesant, poti reda sunet diferit in fiecare zona. Am observat ca aceasta flexibilitate schimba complet modul in care te bucuri de continut audio.</p>
     <p class="mb-4">Gandeste-te la asta: esti in bucatarie si te uiti la o reteta pe YouTube, iar apoi te muti in living sa continui pe televizor, fara sa pierzi nicio secunda din dialog sau muzica de fundal. Sau, la o petrecere, muzica te insoteste de la sufragerie pana pe terasa. Aceasta sincronizare perfecta intre boxe este cheia unui sistem multiroom reusit.</p>
     <p class="mb-4">Am testat solutii de la branduri mari precum Sony (seria SRS-RA), Samsung (seria HW-Q cu tehnologie Q-Symphony) si LG (cu sistemul Soundbar si boxe wireless aditionale). Fiecare vine cu propriile avantaje, dar principiul de baza ramane acelasi: conectivitate wireless si control centralizat.</p>
     
@@ -155,7 +168,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum functioneaza: Tehnologia din spatele magiei</h2>
     <p class="mb-4">La baza, totul se rezuma la reteaua ta Wi-Fi. Boxele multiroom se conecteaza la routerul tau, la fel ca telefonul sau laptopul. Majoritatea sistemelor folosesc protocoale precum AirPlay 2 (pentru Apple), Chromecast built-in (pentru Google) sau standardele proprii ale producatorilor (cum ar fi MusicCast de la Yamaha sau HEOS de la Denon). Aplicatiile dedicate de pe smartphone sau tableta sunt cele care iti permit sa controlezi totul.</p>
     <p class="mb-4">Am observat ca stabilitatea conexiunii Wi-Fi este cruciala. Daca ai un router mai vechi sau semnalul e slab in anumite zone, vei avea parte de intreruperi sau sunet sacadat. O investitie intr-un sistem mesh Wi-Fi de la TP-Link sau ASUS poate rezolva rapid astfel de probleme. Am testat personal cum un sistem mesh a imbunatatit performanta audio multiroom in case mari.</p>
-    <p class="mb-4">Pentru TV, lucrurile se complica putin. Unele soundbar-uri, cum ar fi cele de la Samsung cu Q-Symphony, pot sincroniza sunetul cu difuzoarele televizorului (daca e tot Samsung, desigur) pentru o experienta mai bogata. Altele permit conectarea unor boxe surround wireless dedicate. Am gasit ca pentru o experienta cu adevarat imersiva, mai ales pentru filme, un soundbar puternic cu subwoofer si boxe spate wireless dedicate este ideal.</p>
+    <p class="mb-4">Pentru TV, lucrurile se complica putin. Unele soundbar-uri, cum ar fi cele de la Samsung cu Q-Symphony, pot sincroniza sunetul cu difuzoarele televizorului (daca e tot Samsung, desigur) pentru o experienta mai bogata. Altele permit conectarea unor boxe surround wireless dedicate. Am gasit ca pentru o experienta cu adevarat imersiva, mai ales pentru filme, un soundbar puternic <a href="/home-cinema-cu-subwoofer-wireless/" class="interlink">cu subwoofer</a> si boxe spate wireless dedicate este ideal.</p>
     
     
   </section>
@@ -171,7 +184,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sa alegi: Boxe integrate vs. Soundbar cu boxe aditionale</h2>
     <p class="mb-4">Alegerea depinde mult de buget si de nevoile tale. Avem pe de o parte boxele inteligente dedicate, cum ar fi cele din seria Echo de la Amazon (desi nu sunt multiroom in sensul clasic, ci mai mult grupabile) sau Google Nest Audio. Acestea sunt mai accesibile, dar sunetul este adesea mai putin spectaculos.</p>
     <p class="mb-4">Branduri precum Sonos (cu seria One, Play:5) au revoluționat piata cu sistemele lor dedicate audio multiroom. Sunetul este excelent, controlul e intuitiv, dar prețurile sunt pe masura. O boxa Sonos One SL costa in jur de 1000-1200 RON la eMAG sau Altex.</p>
-    <p class="mb-4">Pe partea de TV, solutia cea mai populara este soundbar-ul cu optiunea de a adauga boxe spate wireless. Samsung a excelat aici cu tehnologia Q-Symphony, care sincronizează boxele TV-ului cu soundbar-ul. Un soundbar Samsung HW-Q600C cu subwoofer poate fi găsit pe la 1500-1800 RON, iar daca vrei sa adaugi boxe spate wireless dedicate, costurile cresc. LG ofera solutii similare, cu soundbar-uri si boxe wireless (ex: LG SP8YA, in jur de 2000 RON, cu posibilitate de adaugare boxe spate).</p>
+    <p class="mb-4">Pe partea de TV, solutia cea mai populara este soundbar-ul cu optiunea de a adauga boxe spate wireless. Samsung a excelat aici cu tehnologia Q-Symphony, care sincronizează boxele TV-ului cu soundbar-ul. Un soundbar Samsung HW-Q600C <a href="/soundbar-cu-subwoofer-integrat/" class="interlink">cu subwoofer</a> poate fi găsit pe la 1500-1800 RON, iar daca vrei sa adaugi boxe spate wireless dedicate, costurile cresc. LG ofera solutii similare, cu soundbar-uri si boxe wireless (ex: LG SP8YA, in jur de 2000 RON, cu posibilitate de adaugare boxe spate).</p>
     <p class="mb-4">Sony are si ea o gama variata, de la boxe portabile multiroom (seria SRS-RA) pana la soundbar-uri performante (seria HT-A). Am testat un Sony HT-A7000 (in jur de 6000-7000 RON) cu subwoofer si boxe spate wireless, si diferenta fata de un sistem simplu este uriașă, transformand livingul intr-o sala de cinema.</p>
     
     
@@ -188,7 +201,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice din experienta mea</h2>
     <p class="mb-4">In primul rand, verifica compatibilitatea. Daca vrei sa integrezi sunetul TV-ului in sistemul multiroom, asigura-te ca soundbar-ul sau boxele sunt compatibile cu modelul tau de televizor. Tehnologiile proprietare, cum ar fi Q-Symphony de la Samsung, functioneaza doar cu televizoarele aceluiași brand. Am văzut prieteni frustrati pentru ca au cumpărat un sistem care nu se integra perfect.</p>
     <p class="mb-4">Apoi, gandeste-te la dimensiunea casei tale si la amplasarea boxelor. Un singur speaker puternic nu va acoperi o locuinta mare. Pentru o acoperire uniforma, vei avea nevoie de cel putin doua-trei puncte de sunet. Am observat ca pozitionarea boxelor joaca un rol major in calitatea sunetului, mai ales pentru boxele de spate sau cele surround.</p>
-    <p class="mb-4">Nu uita de latenta (delay-ul audio). In special cand sincronizezi sunetul de la TV cu boxe wireless, poate aparea o mica intarziere intre imagine si sunet. Majoritatea sistemelor moderne au optiuni de ajustare a acestui delay in aplicatia lor. Am petrecut ore bune calibrand sunetul pentru filme, pentru a obtine sincronizarea perfecta. Verifica specificatiile tehnice pentru a vedea daca sistemul suporta formate audio de inalta rezolutie, cum ar fi Dolby Atmos, daca asta iti doresti.</p>
+    <p class="mb-4">Nu uita de latenta (delay-ul audio). In special cand sincronizezi sunetul de la TV cu boxe wireless, poate aparea o mica intarziere intre imagine si sunet. Majoritatea sistemelor moderne au optiuni de ajustare a acestui delay in aplicatia lor. Am petrecut ore bune calibrand sunetul pentru filme, pentru a obtine sincronizarea perfecta. Verifica specificatiile tehnice pentru a vedea daca sistemul suporta formate audio de inalta rezolutie, cum ar fi <a href="/soundbar-compact-cu-dolby-atmos/" class="interlink">Dolby Atmos</a>, daca asta iti doresti.</p>
     <p class="mb-4">Inainte de a cumpara, citeste recenzii si, daca ai ocazia, asculta sistemele in magazine. Ceea ce suna bine pentru mine, s-ar putea sa nu fie pe gustul tau. Prețurile pot varia considerabil, de la cateva sute de lei pentru o boxa simpla, pana la mii de euro pentru un sistem complet. Am găsit oferte bune pe eMAG, Altex și PC Garage, mai ales in perioadele de reduceri.</p>
     
     
@@ -286,5 +299,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="sistem-audio-multiroom-wireless"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

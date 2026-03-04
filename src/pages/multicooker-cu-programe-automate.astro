@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -147,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Multicookerul automat: Prietenul tau in bucatarie</h2>
     <p class="mb-4">Am testat o gramada de aparate in ultimii 15 ani, dar nimic nu a adus un plus de comoditate in bucataria mea precum un multicooker cu programe automate. Practic, e ca si cum ai avea un bucatar personal care stie exact ce sa faca, de la fiert la copt, fara sa stai tu sa supraveghezi. In experienta mea, asta inseamna mai mult timp pentru mine si mai putin stres inainte de cina.</p>
     <p class="mb-4">Am observat ca multa lume se sperie de termenul "automat", crezand ca e complicat. Nici vorba. Am scos din cutie un model de la Tefal, l-am conectat, am pus ingredientele, am apasat un buton si gata. Nu a trebuit sa citesc manuale complicate sau sa urmaresc tutoriale interminabile. E acelasi principiu ca la un smartphone nou: deschizi, vezi butoanele, apesi si functioneaza.</p>
-    <p class="mb-4">Ce inseamna "programe automate"? Inseamna ca aparatul stie cat timp sa gateasca si la ce temperatura pentru a obtine rezultatul dorit. Fie ca vrei sa faci orez, iaurt, supa, tocana sau chiar prajituri, ai un buton dedicat. Si nu ma refer la cateva functii generice, ci la zeci de optiuni, adaptate pentru diferite tipuri de mancare. E o diferenta uriasa fata de oala sub presiune clasica sau un slow cooker simplu.</p>
+    <p class="mb-4">Ce inseamna "programe automate"? Inseamna ca aparatul stie cat timp sa gateasca si la ce <a href="/senzor-temperatura-si-umiditate-smart/" class="interlink">temperatura</a> pentru a obtine rezultatul dorit. Fie ca vrei sa faci orez, iaurt, supa, tocana sau chiar prajituri, ai un buton dedicat. Si nu ma refer la cateva functii generice, ci la zeci de optiuni, adaptate pentru diferite tipuri de mancare. E o diferenta uriasa fata de oala sub presiune clasica sau un slow cooker simplu.</p>
     
     
   </section>
@@ -163,7 +176,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sa cauti la un multicooker automat: Specificatii si functii</h2>
     <p class="mb-4">Când vine vorba de alegerea unui multicooker, am invatat ca nu e bine sa te pripesti. In primul rand, uita-te la capacitatea cuvei. Daca gatesti pentru o familie numeroasa, ai nevoie de cel putin 5-6 litri. Pentru 2-3 persoane, 3-4 litri sunt suficienti. Am avut o experienta neplacuta cu o cuva prea mica, nu puteam gati cantitatea dorita.</p>
     <p class="mb-4">Apoi, verifica numarul si tipul programelor automate. Unele modele au peste 100 de programe, altele doar 10-20. Gandeste-te ce gatesti cel mai des. Ai nevoie de program pentru orez, paste, supe, iaurt, prajituri, gatit la aburi? Uita-te si la functiile suplimentare: mentinere la cald, programare intarziata, functie de curatare. Acestea pot face o diferenta mare in utilizarea zilnica.</p>
-    <p class="mb-4">Materialul cuvei e important. Cele cu invelis antiaderent sunt cele mai populare si usor de curatat. Am preferat mereu cuvele groase, din otel inoxidabil sau cu invelis ceramic, pentru o distribuire mai buna a caldurii si durabilitate. Si nu uita de presiunea de operare, daca vrei un model cu functie de oala sub presiune. Cu cat e mai mare, cu atat gatirea e mai rapida. Aparatele de la Philips, de exemplu, au sisteme de presiune bine optimizate.</p>
+    <p class="mb-4">Materialul cuvei e important. Cele cu invelis antiaderent sunt cele mai populare si usor de curatat. Am preferat mereu cuvele groase, din otel inoxidabil sau cu invelis ceramic, pentru o distribuire mai buna a caldurii si durabilitate. Si nu uita de presiunea de operare, daca vrei un model <a href="/blender-vertical-cu-functie-smoothie/" class="interlink">cu functie</a> de oala sub presiune. Cu cat e mai mare, cu atat gatirea e mai rapida. Aparatele de la Philips, de exemplu, au sisteme de presiune bine optimizate.</p>
     
     
   </section>
@@ -177,8 +190,8 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la un utilizator experimentat</h2>
-    <p class="mb-4">Nu te astepta sa gatesti la fel ca un chef profesionist din prima zi. E nevoie de putina acomodare. Incearca retete simple la inceput, apoi treci la cele mai complexe. Am observat ca respectarea proportiilor ingredientelor e cruciala, mai ales la programele automate.</p>
-    <p class="mb-4">Curatarea e floare la ureche, de obicei. Majoritatea cuvelor sunt antiaderente si se pot spala la masina de spalat vase. Totusi, am preferat mereu sa le spal manual, cu un burete moale, pentru a proteja stratul antiaderent. Verifica si instructiunile de curatare ale modelului tau.</p>
+    <p class="mb-4">Nu te astepta sa gatesti la fel ca un chef <a href="/mousepad-extra-mare-pentru-setup-profesionist/" class="interlink">profesionist</a> din prima zi. E nevoie de putina acomodare. Incearca retete simple la inceput, apoi treci la cele mai complexe. Am observat ca respectarea proportiilor ingredientelor e cruciala, mai ales la programele automate.</p>
+    <p class="mb-4">Curatarea e floare la ureche, de obicei. Majoritatea cuvelor sunt antiaderente si se pot spala la masina de <a href="/masina-de-spalat-vase-cu-senzori-eco/" class="interlink">spalat vase</a>. Totusi, am preferat mereu sa le spal manual, cu un burete moale, pentru a proteja stratul antiaderent. Verifica si instructiunile de curatare ale modelului tau.</p>
     <p class="mb-4">Nu uita de accesoriile suplimentare. Multe multicookere vin cu un cos pentru gatit la aburi, o spatula si o cana de masurare. Acestea sunt utile si te ajuta sa profiti la maximum de functiile aparatului. Am vazut chiar si modele de la Ninja care vin cu accesorii suplimentare pentru functii specifice, cum ar fi prajirea cu aer cald.</p>
     
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="multicooker-cu-programe-automate"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

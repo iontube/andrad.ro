@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -156,7 +169,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     
     <p class="mb-4">Pentru pasionații de gaming din România, căutarea de <strong>console retro pentru colecționari</strong> reprezintă o adevărată odisee în lumea memoriei și a valorii. Aceste aparate nu sunt doar simple dispozitive de divertisment; ele sunt artefacte culturale, capsule ale timpului care ne transportă înapoi la vremurile jocurilor arcade și ale seriilor iconice care au definit o generație. Fie că vorbim despre pasiunea pentru istoria gaming-ului, fie că urmărim potențialul de investiție, colecționarea de console retro a devenit un hobby tot mai popular, oferind o conexiune tangibilă cu originile industriei.</p>
-    <p class="mb-4">Valoarea acestor sisteme de jocuri nu stă doar în performanța lor tehnică, deși aceasta era revoluționară la vremea ei, ci mai ales în impactul cultural și emoțional pe care l-au avut. Fiecare consolă retro are o poveste, o serie de titluri nemuritoare care au lansat cariere și au creat amintiri de neuitat pentru milioane de jucători. Pentru un colecționar, a deține o astfel de piesă înseamnă a păstra o parte din istoria jocurilor video, a contribui la conservarea patrimoniului digital și a împărtăși pasiunea cu alți entuziaști.</p>
+    <p class="mb-4">Valoarea acestor sisteme de jocuri nu stă doar în <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanța</a> lor tehnică, deși aceasta era revoluționară la vremea ei, ci mai ales în impactul cultural și emoțional pe care l-au avut. Fiecare consolă retro are o poveste, o serie de titluri nemuritoare care au lansat cariere și au creat amintiri de neuitat pentru milioane de jucători. Pentru un colecționar, a deține o astfel de piesă înseamnă a păstra o parte din istoria jocurilor video, a contribui la conservarea patrimoniului digital și a împărtăși pasiunea cu alți entuziaști.</p>
     <p class="mb-4">Înțelegerea pieței de console retro pentru colecționari necesită o perspectivă nuanțată, care să ia în considerare starea produsului, raritatea sa, prezența accesoriilor originale și, bineînțeles, jocurile asociate. De la consolele care au pus bazele industriei, la cele care au adus inovații majore, fiecare sistem merită o analiză atentă. Alegerea de a investi în astfel de produse poate fi motivată de nostalgie, de dorința de a juca titluri clasice pe hardware-ul original, sau de perspectiva unei aprecieri în timp a valorii colecției.</p>
     <p class="mb-4">Acest articol este dedicat explorării profunde a universului <strong>console retro pentru colecționari</strong>, oferind informații esențiale pentru oricine dorește să se aventureze în acest domeniu fascinant. Vom discuta despre cele mai căutate modele, despre ce anume le face valoroase și cum să îți construiești o colecție impresionantă, plină de semnificație și, potențial, de valoare financiară.</p>
     
@@ -167,7 +180,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Începuturile gaming-ului pe consolă au fost marcate de inovații revoluționare care au pus bazele industriei așa cum o cunoaștem astăzi. Console precum Magnavox Odyssey, considerată prima consolă de jocuri video de uz casnic, și Atari 2600 au deschis drumul către divertismentul interactiv în sufragerie. Atari 2600, lansată în 1977, a fost un fenomen cultural, popularizând jocurile pe cartușe și aducând titluri iconice precum 'Space Invaders' și 'Pac-Man' în casele oamenilor. Pentru colecționarii de console retro, aceste prime aparate reprezintă fundamentul istoriei gaming-ului, piese de muzeu funcționale care evocă primele experiențe ale multor pasionați.</p>
     <p class="mb-4">Fascinația pentru aceste console timpurii constă în simplitatea lor ingenioasă și în impactul lor imens. Deși grafică lor poate părea rudimentară prin standardele moderne, jocurile de pe Atari 2600, de exemplu, au fost inovatoare pentru vremea lor, oferind o interactivitate captivantă. Găsirea unui Atari 2600 în stare bună, cu toate accesoriile originale și câteva cartușe clasice, poate fi o achiziție extrem de valoroasă pentru un colecționar dedicat. Această consolă este un simbol al începutului erei jocurilor video de acasă.</p>
     <p class="mb-4">Pe lângă Atari, alte sisteme din această perioadă timpurie merită menționate, cum ar fi ColecoVision, cunoscut pentru grafica sa superioară pentru acea vreme, și Intellivision de la Mattel, care a încercat să ofere o experiență mai sofisticată. Fiecare dintre aceste console retro pentru colecționari aduce cu sine o bucată de istorie, reprezentând etape cruciale în evoluția tehnologiei de divertisment. Căutarea lor implică adesea explorarea piețelor de vechituri, a magazinelor specializate și a platformelor online dedicate.</p>
-    <p class="mb-4">Starea de conservare a acestor console este esențială pentru valoarea lor ca obiecte de colecție. Un aparat bine întreținut, funcțional și, pe cât posibil, cu ambalajul original, va fi mult mai apreciat decât unul deteriorat sau incomplet. Pentru colecționarii de console retro, scopul este adesea acela de a recrea experiența autentică a jocului, cu toate elementele sale originale.</p>
+    <p class="mb-4">Starea de conservare a acestor console este esențială pentru valoarea lor ca obiecte de colecție. Un aparat bine întreținut, funcțional și, pe cât posibil, cu ambalajul original, va fi mult mai apreciat decât unul deteriorat sau incomplet. Pentru colecționarii de console retro, scopul este adesea acela de a recrea <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experiența</a> autentică a jocului, cu toate elementele sale originale.</p>
     
     
   </section>
@@ -182,9 +195,9 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Consola Portabilă: Libertatea de a Juca Oriunde</h2>
-    <p class="mb-4">Pe lângă consolele de masă, segmentul de console portabile a jucat un rol crucial în evoluția gaming-ului, oferind posibilitatea de a te bucura de jocuri oriunde te-ai afla. Nintendo Game Boy, lansat în 1989, a fost un pionier în acest domeniu, transformând jocurile video într-o activitate accesibilă și portabilă. Cu jocuri precum 'Tetris' (inclus în multe pachete de lansare) și 'Pokémon Red/Blue', Game Boy-ul a devenit un fenomen global și un obiect de dorit pentru colecționarii de console retro.</p>
+    <p class="mb-4">Pe lângă consolele de masă, segmentul de console <a href="/console-hibride-portabile/" class="interlink">portabile</a> a jucat un rol crucial în evoluția gaming-ului, oferind posibilitatea de a te bucura de jocuri oriunde te-ai afla. Nintendo Game Boy, lansat în 1989, a fost un pionier în acest domeniu, transformând jocurile video într-o activitate accesibilă și portabilă. Cu jocuri precum 'Tetris' (inclus în multe pachete de lansare) și 'Pokémon Red/Blue', Game Boy-ul a devenit un fenomen global și un obiect de dorit pentru colecționarii de console retro.</p>
     <p class="mb-4">Succesorii săi, Game Boy Pocket și Game Boy Color, au continuat să inoveze, oferind ecrane mai clare și, în cazul celui din urmă, capabilități de afișare color. Aceste versiuni sunt, de asemenea, foarte căutate, în special modelele mai rare sau cele în culori neobișnuite. Colecționarii apreciază Game Boy-ul nu doar pentru jocurile sale iconice, ci și pentru designul său robust și pentru impactul său asupra culturii pop.</p>
-    <p class="mb-4">Sega a încercat să intre pe piața portabilă cu Game Gear, o consolă cu ecran color și iluminare de fundal, dar a fost limitată de consumul ridicat de baterie. Cu toate acestea, Game Gear rămâne o piesă interesantă pentru colecționarii de console retro, reprezentând o alternativă la oferta Nintendo din acea perioadă. Găsirea unui Game Gear în stare bună, cu o baterie care încă funcționează, poate fi o provocare.</p>
+    <p class="mb-4">Sega a încercat să intre pe piața portabilă cu Game Gear, o consolă cu ecran color și <a href="/periferice-cu-iluminare-rgb-sincronizata/" class="interlink">iluminare</a> de fundal, dar a fost limitată de consumul ridicat de baterie. Cu toate acestea, Game Gear rămâne o piesă interesantă pentru colecționarii de console retro, reprezentând o alternativă la oferta Nintendo din acea perioadă. Găsirea unui Game Gear în stare bună, cu o baterie care încă funcționează, poate fi o provocare.</p>
     <p class="mb-4">Mai târziu, Nintendo a continuat să domine piața portabilă cu Game Boy Advance (GBA), care a adus grafică 32-bit pe un dispozitiv portabil, și cu Nintendo DS, care a introdus ecranul tactil și jocuri inovatoare. Acestea sunt, de asemenea, considerate console retro de către mulți, mai ales modelele mai vechi ale DS-ului sau variantele speciale de GBA. Colecționarii de console retro portabile caută adesea completitudinea: consola, încărcătorul, manualele și, desigur, o selecție de jocuri esențiale.</p>
     
     
@@ -334,5 +347,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="console-retro-pentru-colectionari"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -169,7 +182,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Conectivitate și Smart TV: Ce trebuie să știi?</h2>
-    <p class="mb-4">Un televizor 8K pentru living mare vine, bineînțeles, cu un sistem Smart TV avansat. Samsung folosește Tizen OS, un sistem rapid și intuitiv, cu acces la toate aplicațiile populare: Netflix, YouTube, Disney+, HBO Max, etc. LG optează pentru webOS, la fel de bine optimizat și ușor de navigat. Ambele platforme au evoluat mult și oferă o experiență fluidă, fără întârzieri notabile chiar și la multitasking.</p>
+    <p class="mb-4">Un televizor 8K pentru living mare vine, bineînțeles, cu un <a href="/sistem-smart-pentru-iluminat-gradina/" class="interlink">sistem Smart</a> TV avansat. Samsung folosește Tizen OS, un sistem rapid și intuitiv, cu acces la toate aplicațiile populare: Netflix, YouTube, Disney+, HBO Max, etc. LG optează pentru webOS, la fel de bine optimizat și ușor de navigat. Ambele platforme au evoluat mult și oferă o experiență fluidă, fără întârzieri notabile chiar și la multitasking.</p>
     <p class="mb-4">Când vine vorba de conectivitate, un televizor 8K modern ar trebui să aibă cel puțin 4 porturi HDMI 2.1. Acesta este crucial pentru a beneficia de rezoluția 8K la 60Hz sau 4K la 120Hz, esențial pentru consolele de generație nouă precum PlayStation 5 sau Xbox Series X. Am testat un PS5 conectat la un televizor 8K și am putut activa opțiunile de gaming la rezoluție maximă, ceea ce a fost o experiență vizuală de excepție. Asigură-te că televizorul suportă și HDR (HDR10+, Dolby Vision) pentru o gamă dinamică extinsă.</p>
     <p class="mb-4">Am observat că multe modele 8K vin și cu suport pentru AirPlay 2, Chromecast built-in sau alte funcții de casting, ceea ce facilitează redarea conținutului de pe telefon sau tabletă. Conectivitatea Wi-Fi 6 este de asemenea un plus pentru o experiență de streaming fără întreruperi, mai ales dacă locuiești într-o zonă cu multe rețele Wi-Fi.</p>
     
@@ -179,15 +192,15 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Merită un televizor 8K pentru living mare în 2024?</h2>
     <p class="mb-4">Răspunsul scurt este: depinde. Dacă ai un living foarte mare (peste 4 metri distanță de vizionare), ești pasionat de tehnologie și vrei cea mai bună imagine posibilă, atunci da, merită. Mai ales dacă ai acces la conținut 8K nativ sau dacă ești dispus să investești în cele mai noi console și surse de divertisment. Am simțit că un televizor 8K pentru living mare este o investiție în viitorul divertismentului acasă.</p>
     <p class="mb-4">Totuși, dacă spațiul tău este mai mic sau dacă majoritatea conținutului pe care îl vizionezi este 4K sau Full HD de pe platforme de streaming cu rate de compresie mari, s-ar putea să nu justifici diferența de preț față de un televizor 4K OLED sau Neo QLED de top. Am văzut modele 4K de 75 de inci, cum ar fi LG OLED C3 sau Samsung QN90C, care oferă o imagine fantastică la prețuri mult mai accesibile (în jur de 6.000 - 8.000 RON).</p>
-    <p class="mb-4">Consideră și disponibilitatea conținutului 8K. Deși crește constant, încă nu este la fel de răspândit ca 4K. Servicii precum YouTube au o selecție, iar camerele profesionale produc conținut 8K, dar filmele și serialele de pe Netflix sau HBO Max sunt predominant 4K. Totuși, tehnologia de upscaling a devenit atât de bună încât diferența față de un 4K nativ este adesea greu de sesizat, mai ales dacă nu stai cu lupa la ecran.</p>
+    <p class="mb-4">Consideră și disponibilitatea conținutului 8K. Deși crește constant, încă nu este la fel de răspândit ca 4K. Servicii precum YouTube au o selecție, iar camerele <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">profesionale</a> produc conținut 8K, dar filmele și serialele de pe Netflix sau HBO Max sunt predominant 4K. Totuși, tehnologia de upscaling a devenit atât de bună încât diferența față de un 4K nativ este adesea greu de sesizat, mai ales dacă nu stai cu lupa la ecran.</p>
     
     
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la un utilizator experimentat</h2>
     <p class="mb-4">Când alegi un televizor 8K pentru living mare, nu te uita doar la specificații. Mergi în magazin și vezi cum arată imaginea pe viu, dacă poți. Compară modelele Samsung și LG, pentru că au filozofii de imagine diferite. Am observat că unii preferă culorile mai vii și contrastul dinamic al Samsung Neo QLED, în timp ce alții sunt fascinați de perfecțiunea negrului oferită de LG OLED.</p>
-    <p class="mb-4">Nu uita de sunet. Televizoarele mari vin cu sisteme audio integrate decente, dar pentru o experiență cu adevărat imersivă, mai ales într-un living mare, vei dori să investești într-o bară de sunet de calitate sau un sistem home cinema. Am testat un soundbar Samsung HW-Q995B cu un televizor Samsung și diferența a fost uriașă. Sunetul surround te scoate din ecran și te plasează în acțiune.</p>
-    <p class="mb-4">Verifică și garanția. Televizoarele 8K sunt investiții considerabile, așa că asigură-te că ai o garanție bună, preferabil extinsă. Am întâlnit situații în care un pixel mort apărut după o lună a fost o mare bătaie de cap. De asemenea, gândește-te la montajul pe perete; un televizor de 75 de inci este greu și necesită o montură solidă și profesională. Am văzut cum unii prieteni au încercat să-l monteze singuri și au avut probleme.</p>
+    <p class="mb-4">Nu uita de sunet. Televizoarele mari vin cu sisteme audio integrate decente, dar pentru o experiență cu adevărat imersivă, mai ales într-un living mare, vei dori să investești într-o bară de sunet de calitate sau un sistem <a href="/home-cinema-cu-subwoofer-wireless/" class="interlink">home cinema</a>. Am testat un soundbar Samsung HW-Q995B cu un televizor Samsung și diferența a fost uriașă. Sunetul surround te scoate din ecran și te plasează în acțiune.</p>
+    <p class="mb-4">Verifică și garanția. Televizoarele 8K sunt investiții considerabile, așa că asigură-te că ai o garanție bună, preferabil extinsă. Am întâlnit situații în care un pixel mort apărut după o lună a fost o mare bătaie de cap. De asemenea, gândește-te la montajul pe perete; un televizor de 75 de inci este greu și necesită o montură solidă și <a href="/fier-de-calcat-vertical-profesional/" class="interlink">profesional</a>ă. Am văzut cum unii prieteni au încercat să-l monteze singuri și au avut probleme.</p>
     
     
   </section>
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="televizor-8k-pentru-living-mare"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

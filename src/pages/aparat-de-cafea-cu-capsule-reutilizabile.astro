@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -146,15 +159,15 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Aparatul de cafea cu capsule reutilizabile: Mai mult decat o tendinta</h2>
     <p class="mb-4">Am petrecut ultimele luni testand diverse aparate de cafea cu capsule reutilizabile, si pot sa spun ca am gasit cateva motive serioase sa renunt la clasicele capsule de unica folosinta. In primul rand, impactul asupra portofelului este vizibil. Daca bei cafea zilnic, costul capsulelor ajunge sa fie o suma considerabila lunar. Cu o capsula reutilizabila, platesti o singura data pentru capsula, iar apoi cumperi cafeaua la vrac, care este semnificativ mai ieftina.</p>
-    <p class="mb-4">Am observat ca piata a inceput sa inteleaga nevoia consumatorilor pentru solutii mai sustenabile. Nu mai vorbim doar de ecologie, ci si de libertatea de a alege exact ce cafea iti place. Ai baut vreodata o cafea de specialitate de la un prajitor local, dar nu ai gasit-o sub forma de capsula compatibila cu aparatul tau? Cu o capsula reutilizabila, asta devine o problema rezolvata.</p>
-    <p class="mb-4">In experienta mea, trecerea la acest tip de aparat nu a fost complicata deloc. E nevoie de un pic de obisnuinta la umplerea capsulei si la curatare, dar beneficiile depasesc cu mult efortul minim.</p>
+    <p class="mb-4">Am observat ca piata a inceput sa inteleaga nevoia consumatorilor pentru solutii mai sustenabile. Nu mai vorbim doar de ecologie, ci si de libertatea de a alege exact ce cafea iti place. Ai baut vreodata o cafea de specialitate de la un <a href="/prajitor-de-paine-cu-functie-bagheta/" class="interlink">prajitor</a> local, dar nu ai gasit-o sub forma de capsula compatibila cu aparatul tau? Cu o capsula reutilizabila, asta devine o problema rezolvata.</p>
+    <p class="mb-4">In <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experienta</a> mea, trecerea la acest tip de aparat nu a fost complicata deloc. E nevoie de un pic de obisnuinta la umplerea capsulei si la curatare, dar beneficiile depasesc cu mult efortul minim.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum functioneaza o capsula reutilizabila?</h2>
     <p class="mb-4">Principiul de baza este simplu: in loc sa arunci o capsula dupa fiecare utilizare, o umpli cu cafeaua macinata preferata, o introduci in aparat si il actionezi ca pe oricare altul. Capsula reutilizabila este proiectata sa fie compatibila cu sistemul aparatului, fie ca vorbim de Nespresso, Dolce Gusto sau alte marci populare. Materialele folosite sunt de obicei otel inoxidabil sau plastic alimentar rezistent la caldura, asigurand durabilitate si siguranta.</p>
-    <p class="mb-4">Am testat capsule din otel inoxidabil, cum ar fi cele de la marca "Crema", disponibile pe eMAG la preturi in jur de 80-100 RON pentru un set de 2-3 bucati. Acestea sunt mai greu de gasit pentru anumite modele de aparate, dar cand le gasesti, sunt o alegere excelenta. Pentru aparatele Nespresso, am gasit si optiuni de la branduri precum "Caffenu" sau "Ikea" (sub brandul lor de accesorii pentru cafea).</p>
+    <p class="mb-4">Am testat capsule din otel inoxidabil, cum ar fi cele de la marca "Crema", disponibile pe eMAG la preturi in jur de 80-100 RON pentru un set de 2-3 bucati. Acestea sunt mai greu de gasit pentru anumite modele de aparate, dar cand le gasesti, sunt o alegere excelenta. Pentru aparatele Nespresso, am gasit si optiuni de la branduri precum "Caffenu" sau "Ikea" (sub brandul lor de <a href="/kit-accesorii-foto-pentru-incepatori/" class="interlink">accesorii</a> pentru cafea).</p>
     <p class="mb-4">Procesul de umplere implica folosirea unei lingurite sau a unui mic adaptor pentru a doza cafeaua macinata in capsula. Secretul unui espresso bun sta in gradul de macinare si compactare. Nu trebuie sa o presezi excesiv, dar nici sa o lasi prea afanata. Am observat ca o macinare medie spre fina, asemanatoare cu cea pentru espresso, functioneaza cel mai bine.</p>
     
     
@@ -179,7 +192,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce aparat de cafea este potrivit?</h2>
     <p class="mb-4">Aparatul de cafea in sine nu trebuie sa fie unul special. Majoritatea aparatelor cu capsule de pe piata, in special cele compatibile cu standarde precum Nespresso sau Dolce Gusto, functioneaza cu capsule reutilizabile. Am testat cu succes atat aparate din gama entry-level, cum ar fi un "DeLonghi Nespresso Inissia" (preturi intre 300-400 RON pe eMAG sau Altex), cat si modele mai avansate. Important este sa te asiguri ca exista capsule reutilizabile disponibile pentru modelul tau specific.</p>
     <p class="mb-4">Pentru cei care cauta un aparat nou, recomand sa se uite la branduri consacrate precum "DeLonghi", "Krups" (pentru Nespresso), "Nescafé Dolce Gusto" (pentru sistemul lor) sau "Philips" (pentru diverse sisteme). Pretul unui aparat decent, care sa fie si fiabil, incepe undeva pe la 300-500 RON. Am vazut oferte bune si la Flanco, uneori chiar si la promotie.</p>
-    <p class="mb-4">Daca detii deja un aparat de la Samsung, LG sau Sony, si nu e cu capsule, atunci discutia e alta. Aceste branduri se axeaza mai mult pe espressoare automate sau filtre. Dar pentru sistemele cu capsule, recomandarile raman aceleasi. Alegerea aparatului depinde mult de bugetul tau si de cat de mult vrei sa investesti initial.</p>
+    <p class="mb-4">Daca detii deja un aparat de la Samsung, LG sau Sony, si nu e cu capsule, atunci discutia e alta. Aceste branduri se axeaza mai mult pe espressoare <a href="/multicooker-cu-programe-automate/" class="interlink">automate</a> sau filtre. Dar pentru sistemele cu capsule, recomandarile raman aceleasi. Alegerea aparatului depinde mult de bugetul tau si de cat de mult vrei sa investesti initial.</p>
     
     
   </section>
@@ -285,5 +298,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="aparat-de-cafea-cu-capsule-reutilizabile"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

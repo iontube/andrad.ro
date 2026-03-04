@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -182,14 +195,14 @@ import Layout from '../layouts/Layout.astro';
         <p>Daca gasesti ceva cu 2:1 sau 4:1, si mai bine. La capitolul distanta focala, stai putin. Pentru insecte, de exemplu, ai vrea o distanta focala mai mare (gen 90mm, 100mm, 180mm).</p>
         <p>De ce? Ca sa nu le sperii si sa ai loc sa te misti. Daca vrei sa pozezi timbre sau banuti, un obiectiv cu distanta focala mai mica (gen 50mm, 60mm) e ok, esti deja langa ele de obicei. Pe bune, nu te zgarci la asta, ca diferenta e uriasa.</p>
         <p>Ce am mai vazut si-a mers bine, sunt filtrele macro sau lentilele adaugate (close-up lenses). Sunt mai ieftine, se infileteaza pe obiectivul tau normal. Functioneaza cumva ca o lupa.</p>
-        <p>Avantajul e pretul mic, dezavantajul e ca pierzi din calitatea imaginii. Gen, colturile pot fi un pic neclare, culorile pot fi arse. Sunt bune ca sa testezi daca iti place fotografia macro, dar pe termen lung, daca vrei ceva serios, cu <strong>lentile macro pentru detalii fine</strong> de profesionisti, nu te baza pe filtre.</p>
+        <p>Avantajul e pretul mic, dezavantajul e ca pierzi din calitatea imaginii. Gen, colturile pot fi un pic neclare, culorile pot fi arse. Sunt bune ca sa testezi daca iti place fotografia macro, dar pe termen lung, daca vrei ceva serios, cu <strong>lentile macro pentru detalii fine</strong> de <a href="/drona-cu-filmare-6k-pentru-profesionisti/" class="interlink">profesionisti</a>, nu te baza pe filtre.</p>
         <p>Am testat personal un 100mm macro de la Canon si un Tamron 90mm. Diferenta e colosala fata de orice alt obiectiv „normal” care pretinde ca face macro. Culorile sunt vii, detaliile ies in evidenta, bokeh-ul e cremos. Daca chiar vrei sa spui povesti prin imagini cu insecte, flori sau texturi, asta e singura cale. Nu te lasa pacalit de marketingul unor telefoane care spun „macro”. De obicei, e o lentila cu focus fix la 2-4 cm, si cam atat. Nu e adevarat macro.</p>
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Top 5 Alegeri Sigure Pentru Detalii Care Te Lasă Cu Gura Casca</h2>
-    <p>Ok, am strans cateva optiuni care mi s-au parut cele mai bune, bazat pe experienta mea si pe ce spun si colegii prin forumuri. Nu-s chestii noi-noutze, dar sunt „cal de bătaie”.</p>
-        <ul><li><strong>Canon EF 100mm f/2.8L Macro IS USM</strong>: Asta e un clasic. Pretul lui sare de 3000 lei, dar ce face, face! Are stabilizare optica (IS), ceea ce e super cand ti-e mana clatinata. Magnificatie 1:1, claritate de top, bokeh superb. E ideal pentru flori, insecte, orice vrei sa te apropii mult. Minusuri? E scump, evident. Si pentru telefoane noi, nu e direct compatibil fara adaptor.</li><li><strong>Nikon AF-S VR Micro-Nikkor 105mm f/2.8G IF-ED</strong>: Cam pe aceeasi linie cu Canonul, dar pentru Nikon. Vorbim de vreo 3500 lei. Are si el stabilizare (VR), claritate excelenta, culori naturale. Distanta focala de 105mm e super pentru insecte. E greu, cam 750g. Si, na, tot nu e pentru mirrorless-uri noi fara adaptor.</li><li><strong>Tamron SP 90mm f/2.8 Di Macro 1:1 VC USD</strong>: Asta e o optiune mai accesibila, pe la 2500-2800 lei. Tamron a facut obiecte macro excelente de ani de zile. Are stabilizare (VC), focus rapid (USD), si magnificatie 1:1. E un pic mai usor decat cele de la Canon/Nikon. Un minus ar fi ca, uneori, poate fi un pic mai lent la focus in conditii de lumina slaba.</li><li><strong>Sigma 105mm f/2.8 EX DG OS HSM Macro</strong>: Sigma vine mereu cu alternative bune. Asta e pe la 2300 lei. Magnificatie 1:1, stabilizare optica (OS), focus rapid (HSM). E robust construit. Unii zic ca diafragma de f/2.8 nu e la fel de luminoasa ca la concurenta de top, dar pentru macro, unde deseori strangi diafragma, nu e asa mare problema. Greutatea e similară cu celelalte.</li><li><strong>Laowa 60mm f/2.8 Macro 2:1</strong>: Asta e diferit. Nu are focus automat, e manual. Dar vine cu magnificatie 2:1, adica dublul celorlalte! Si e mai ieftin, pe la 1600 lei. E perfect daca vrei detalii extreme si nu te deranjeaza sa dai tu dinelul de focus. Daca ai rabdare si precizie, pozele ies spectaculoase. Dezavantajul major e lipsa autofocusului, care poate fi frustrant.</li></ul>
+    <p>Ok, am strans cateva optiuni care mi s-au parut cele mai bune, bazat pe <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experienta</a> mea si pe ce spun si colegii prin forumuri. Nu-s chestii noi-noutze, dar sunt „cal de bătaie”.</p>
+        <ul><li><strong>Canon EF 100mm f/2.8L Macro IS USM</strong>: Asta e un clasic. Pretul lui sare de 3000 lei, dar ce face, face! Are stabilizare optica (IS), ceea ce e super cand ti-e mana clatinata. Magnificatie 1:1, claritate de top, bokeh superb. E ideal pentru flori, insecte, orice vrei sa te apropii mult. Minusuri? E scump, evident. Si pentru telefoane noi, nu e direct compatibil fara adaptor.</li><li><strong>Nikon AF-S VR Micro-Nikkor 105mm f/2.8G IF-ED</strong>: Cam pe aceeasi linie cu Canonul, dar pentru Nikon. Vorbim de vreo 3500 lei. Are si el stabilizare (VR), claritate excelenta, culori naturale. Distanta focala de 105mm e super pentru insecte. E greu, cam 750g. Si, na, tot nu e pentru <a href="/aparat-mirrorless-cu-autofocus-rapid/" class="interlink">mirrorless</a>-uri noi fara adaptor.</li><li><strong>Tamron SP 90mm f/2.8 Di Macro 1:1 VC USD</strong>: Asta e o optiune mai accesibila, pe la 2500-2800 lei. Tamron a facut obiecte macro excelente de ani de zile. Are stabilizare (VC), focus rapid (USD), si magnificatie 1:1. E un pic mai usor decat cele de la Canon/Nikon. Un minus ar fi ca, uneori, poate fi un pic mai lent la focus in conditii de lumina slaba.</li><li><strong>Sigma 105mm f/2.8 EX DG OS HSM Macro</strong>: Sigma vine mereu cu alternative bune. Asta e pe la 2300 lei. Magnificatie 1:1, stabilizare optica (OS), focus rapid (HSM). E robust construit. Unii zic ca diafragma de f/2.8 nu e la fel de luminoasa ca la concurenta de top, dar pentru macro, unde deseori strangi diafragma, nu e asa mare problema. Greutatea e similară cu celelalte.</li><li><strong>Laowa 60mm f/2.8 Macro 2:1</strong>: Asta e diferit. Nu are focus automat, e manual. Dar vine cu magnificatie 2:1, adica dublul celorlalte! Si e mai ieftin, pe la 1600 lei. E perfect daca vrei detalii extreme si nu te deranjeaza sa dai tu dinelul de focus. Daca ai rabdare si precizie, pozele ies spectaculoase. Dezavantajul major e lipsa autofocusului, care poate fi frustrant.</li></ul>
         <p>Deci, da, astea sunt cateva optiuni de <strong>lentile macro pentru detalii fine</strong> care chiar isi fac treaba. Fiecare are plusurile si minusurile ei, dar toate iti vor deschide o lume noua in fotografie.</p>
     
   </section>
@@ -216,7 +229,7 @@ import Layout from '../layouts/Layout.astro';
         <p>Ele „ajuta” obiectivul tau sa focalizeze mai de aproape. Dar aici e marea problema: calitatea imaginii. De obicei, se pierde din claritatea pe margini, apar distorsiuni, culorile pot fi spalacite.</p>
         <p>Practic, obiectivul tau normal nu e proiectat pentru asta. E ca si cum ai pune ochelari de soare peste ochelarii tai de vedere, doar ca sa vezi mai bine la distanta. Nu prea merge.
 <strong>Comparatie pe fapte</strong>:</p>
-        <ul><li><strong>Calitate Imagine</strong>: Lentila macro dedicata castiga detașat. Detalii clare, fara distorsiuni pe margini, culori vii. Filtrele close-up degradeaza imaginea.</li><li><strong>Magnificatie</strong>: Lentilele dedicate ofera 1:1 sau mai mult. Filtrele depind de puterea lor (ex: +2, +4 dioptrii) si de distanta focala a obiectivului original.</li><li><strong>Versatilitate</strong>: Lentila macro dedicata poate fi folosita si pentru portrete sau alte tipuri de fotografie (daca are distanta focala potrivita). Un filtru close-up iti limiteaza obiectivul doar la „aproape”.</li><li><strong>Pret</strong>: Filtrele close-up sunt mult, mult mai ieftine. De la 100 lei la 500 lei pentru seturi de calitate mai buna. Lentilele dedicate incep de pe la 1500 lei si pot ajunge la 5000 lei.</li><li><strong>Usor de folosit</strong>: Filtrele se infileteaza pe loc. Lentilele macro dedicate se monteaza ca orice alt obiectiv.</li></ul>
+        <ul><li><strong>Calitate Imagine</strong>: Lentila macro dedicata castiga detașat. Detalii clare, fara distorsiuni pe margini, culori vii. Filtrele close-up degradeaza imaginea.</li><li><strong>Magnificatie</strong>: Lentilele dedicate ofera 1:1 sau mai mult. Filtrele depind de puterea lor (ex: +2, +4 dioptrii) si de distanta focala a obiectivului original.</li><li><strong>Versatilitate</strong>: Lentila macro dedicata poate fi folosita si <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">pentru portrete</a> sau alte tipuri de fotografie (daca are distanta focala potrivita). Un filtru close-up iti limiteaza obiectivul doar la „aproape”.</li><li><strong>Pret</strong>: Filtrele close-up sunt mult, mult mai ieftine. De la 100 lei la 500 lei pentru seturi de calitate mai buna. Lentilele dedicate incep de pe la 1500 lei si pot ajunge la 5000 lei.</li><li><strong>Usor de folosit</strong>: Filtrele se infileteaza pe loc. Lentilele macro dedicate se monteaza ca orice alt obiectiv.</li></ul>
         <p>Deci, daca vrei sa iei fotografia macro in serios si sa ai <strong>lentile macro pentru detalii fine</strong> care sa te ajute sa creezi imagini profesionale, investeste intr-un obiectiv dedicat. Filtrele close-up sunt bune de joaca sau pentru a vedea daca iti place genul asta de fotografie, dar nu te astepta la minuni.</p>
     
   </section>
@@ -389,5 +402,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="lentile-macro-pentru-detalii-fine"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

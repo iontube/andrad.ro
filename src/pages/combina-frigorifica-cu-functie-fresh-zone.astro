@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -153,7 +166,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Testul meu cu carne și pește în Fresh Zone</h2>
-    <p class="mb-4">Aici am văzut cu adevărat valoarea unei combina frigorifice cu funcție Fresh Zone. Am cumpărat o bucată de vită și câteva fileuri de somon. Le-am pus separat, într-un recipient, în compartimentul Fresh Zone al unui frigider LG GBB62SWGFN, pe care l-am avut la testare timp de o lună. Carnea de vită, în mod normal, ar începe să-și schimbe mirosul și textura după 3-4 zile, chiar și bine ambalată. Aici, după 5 zile, arăta și mirosea ca proaspăt tăiată. </p>
+    <p class="mb-4">Aici am văzut cu adevărat valoarea unei combina frigorifice <a href="/blender-vertical-cu-functie-smoothie/" class="interlink">cu funcție</a> Fresh Zone. Am cumpărat o bucată de vită și câteva fileuri de somon. Le-am pus separat, într-un recipient, în compartimentul Fresh Zone al unui frigider LG GBB62SWGFN, pe care l-am avut la testare timp de o lună. Carnea de vită, în mod normal, ar începe să-și schimbe mirosul și textura după 3-4 zile, chiar și bine ambalată. Aici, după 5 zile, arăta și mirosea ca proaspăt tăiată. </p>
     <p class="mb-4">Cu peștele a fost și mai evident. Somonul, un produs foarte perisabil, a rezistat perfect 4 zile. Nu a dezvoltat niciun miros specific de frigider și a avut o textură fermă, intactă. În frigiderul meu obișnuit, aș fi fost reticent să țin peștele mai mult de 2 zile, maxim 3, chiar și în ambalajul original. Această funcție îți dă flexibilitate, poți cumpăra carne sau pește în cantități mai mari când sunt la ofertă, fără să te temi că se strică rapid.</p>
     <p class="mb-4">Am discutat și cu prieteni care au frigidere cu funcții similare, de la branduri ca Bosch sau Whirlpool. Toți confirmă că diferența e semnificativă pentru produse proaspete, neprocesate. Unii au chiar și opțiuni de reglare a umidității pentru carne sau legume, ceea ce e un plus major.</p>
     
@@ -170,14 +183,14 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce să NU pui în compartimentul Fresh Zone</h2>
     <p class="mb-4">Chiar dacă numele sugerează că e „proaspăt” pentru orice, există câteva reguli nescrise pe care le-am învățat din greșeală. Bananele, de exemplu, nu au ce căuta acolo. Temperaturile scăzute le strică coaja și le afectează gustul. La fel și cu anumite fructe tropicale, cum ar fi ananasul sau mango. Le poți pune acolo dacă sunt deja tăiate și vrei să le consumi rapid, dar nu pentru depozitare pe termen lung.</p>
-    <p class="mb-4">Am observat că anumite tipuri de legume, precum ceapa sau cartofii, nu beneficiază de pe urma temperaturii scăzute. De fapt, le poate înrăutăți calitatea. Acestea preferă un loc mai răcoros, dar nu frigider. Așa că, dacă ai un frigider cu o singură zonă Fresh, gândește-te bine ce pui acolo. E pentru produse perisabile, care au cel mai mult de câștigat de la temperaturi apropiate de îngheț, dar fără să înghețe.</p>
-    <p class="mb-4">Un alt aspect: dacă ai un frigider cu un compartiment Fresh Zone dedicat pentru carne și un altul pentru legume/fructe, respectă recomandările producătorului. Unele modele au chiar și control de umiditate separat. Nu amesteca carnea crudă cu legumele, chiar dacă sunt în zone diferite, pentru a evita contaminarea încrucișată. Folosește recipiente etanșe dacă simți nevoia.</p>
+    <p class="mb-4">Am observat că anumite tipuri de legume, precum ceapa sau cartofii, nu beneficiază de pe urma temperaturii scăzute. De fapt, le poate înrăutăți calitatea. Acestea preferă un loc mai răcoros, dar nu frigider. Așa că, dacă ai un <a href="/frigider-cu-compartimente-inteligente/" class="interlink">frigider cu</a> o singură zonă Fresh, gândește-te bine ce pui acolo. E pentru produse perisabile, care au cel mai mult de câștigat de la temperaturi apropiate de îngheț, dar fără să înghețe.</p>
+    <p class="mb-4">Un alt aspect: dacă ai un <a href="/frigider-cu-dozator-apa-si-gheata/" class="interlink">frigider cu</a> un compartiment Fresh Zone dedicat pentru carne și un altul pentru legume/fructe, respectă recomandările producătorului. Unele modele au chiar și control de umiditate separat. Nu amesteca carnea crudă cu legumele, chiar dacă sunt în zone diferite, pentru a evita contaminarea încrucișată. Folosește recipiente etanșe dacă simți nevoia.</p>
     
     
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele populare și prețuri în România (Octombrie 2023)</h2>
-    <p class="mb-4">Pe piața din România găsești combina frigorifică cu funcție Fresh Zone la o varietate de branduri și prețuri. Un model accesibil, de exemplu, este Arctic AD54260, pe care l-am menționat, ce se găsește în jur de 2.000 - 2.300 RON la eMAG sau Altex. Acesta oferă o zonă dedicată, dar fără control avansat al umidității.</p>
+    <p class="mb-4">Pe piața din România găsești combina frigorifică <a href="/prajitor-de-paine-cu-functie-bagheta/" class="interlink">cu funcție</a> Fresh Zone la o varietate de branduri și prețuri. Un model accesibil, de exemplu, este Arctic AD54260, pe care l-am menționat, ce se găsește în jur de 2.000 - 2.300 RON la eMAG sau Altex. Acesta oferă o zonă dedicată, dar fără control avansat al umidității.</p>
     <p class="mb-4">Urcând spre zona premium, găsești modele Samsung, cum ar fi RB38T600DB1, care oferă tehnologie All-Around Cooling și o zonă Fresh Zone bine implementată. Prețurile pentru astfel de modele variază între 3.500 și 4.500 RON la eMAG, Altex, sau Flanco. Acestea au adesea și alte funcții smart, cum ar fi conectivitatea Wi-Fi.</p>
     <p class="mb-4">LG vine cu modele precum GBB62SWGFN, care se încadrează în segmentul mediu-superior, cu prețuri în jur de 3.000 - 3.800 RON. Acestea excelează prin design și eficiență energetică, pe lângă compartimentul dedicat. Pentru cei care caută ce e mai bun, frigiderele Bosch sau Siemens cu tehnologii ca VitaFresh pot ajunge și la 5.000-7.000 RON, dar oferă control precis al temperaturii și umidității.</p>
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="combina-frigorifica-cu-functie-fresh-zone"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

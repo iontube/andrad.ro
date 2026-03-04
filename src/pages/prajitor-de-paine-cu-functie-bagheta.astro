@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,15 +158,15 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Prăjitorul de pâine cu funcție baghetă: O iluzie sau o necesitate?</h2>
-    <p class="mb-4">Sincer, când am auzit prima dată de prăjitorul de pâine cu funcție baghetă, am ridicat din sprâncene. Ce rost are să separi o funcție pentru un singur tip de pâine, când majoritatea prăjitoarelor fac treaba bună cu orice fel de pâine? Asta m-a pus pe gânduri și am zis să iau la mână câteva modele de pe piața din România pentru a vedea dacă e un trend de marketing sau o inovație reală. Am testat prăjitoare de la branduri cunoscute precum Philips, Tefal și chiar și un model mai fancy de la Severin, ca să am o imagine completă.</p>
-    <p class="mb-4">În experiența mea de jurnalist tech care a trecut prin nenumărate aparate de bucătărie, de la blendere cu șase lame la frigidere smart care-ți comandă singure laptele, am învățat că uneori inovațiile par inutile la prima vedere, dar pot schimba complet modul în care folosești un aparat. Așa că, am zis să-i dau o șansă și să văd ce poate cu adevărat o funcție dedicată pentru baghetă.</p>
+    <p class="mb-4">Sincer, când am auzit prima dată de prăjitorul de pâine <a href="/blender-vertical-cu-functie-smoothie/" class="interlink">cu funcție</a> baghetă, am ridicat din sprâncene. Ce rost are să separi o funcție pentru un singur tip de pâine, când majoritatea prăjitoarelor fac treaba bună cu orice fel de pâine? Asta m-a pus pe gânduri și am zis să iau la mână câteva modele de pe piața din România pentru a vedea dacă e un trend de marketing sau o inovație reală. Am testat prăjitoare de la branduri cunoscute precum Philips, Tefal și chiar și un model mai fancy de la Severin, ca să am o imagine completă.</p>
+    <p class="mb-4">În experiența mea de jurnalist tech care a trecut prin nenumărate aparate <a href="/robot-de-bucatarie-pentru-patiserie/" class="interlink">de bucătărie</a>, de la blendere cu șase lame la frigidere smart care-ți comandă singure laptele, am învățat că uneori inovațiile par inutile la prima vedere, dar pot schimba complet modul în care folosești un aparat. Așa că, am zis să-i dau o șansă și să văd ce poate cu adevărat o funcție dedicată pentru baghetă.</p>
     <p class="mb-4">Am pus pe masa de testare o baghetă proaspătă, una de ieri, și chiar și o baghetă congelată, ca să fiu sigur că acopăr toate scenariile posibile. Vreau să văd dacă acea fantomatică funcție de baghetă chiar face diferența față de o setare obișnuită pe un prăjitor clasic. Să vedem dacă merită investite bani în plus pentru acest feature specific.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum funcționează, de fapt, funcția baghetă?</h2>
-    <p class="mb-4">Simplu spus, funcția baghetă se concentrează pe prăjirea uniformă a fețelor exterioare ale baghetei, lăsând interiorul moale și pufos. Majoritatea prăjitoarelor clasice au elemente de încălzire pe ambele părți, dar o baghetă, prin forma ei, tinde să se prăjească inegal dacă o introduci pe jumătate. Prăjitoarele cu funcție baghetă au de obicei o fantă mai largă sau un mecanism care permite introducerea baghetei pe lungime, iar elementele de încălzire sunt dispuse astfel încât să acopere suprafața mai mare a acesteia, fără a arde marginile.</p>
+    <p class="mb-4">Simplu spus, funcția baghetă se concentrează pe prăjirea uniformă a fețelor exterioare ale baghetei, lăsând interiorul moale și pufos. Majoritatea prăjitoarelor clasice au elemente de încălzire pe ambele părți, dar o baghetă, prin forma ei, tinde să se prăjească inegal dacă o introduci pe jumătate. Prăjitoarele <a href="/combina-frigorifica-cu-functie-fresh-zone/" class="interlink">cu funcție</a> baghetă au de obicei o fantă mai largă sau un mecanism care permite introducerea baghetei pe lungime, iar elementele de încălzire sunt dispuse astfel încât să acopere suprafața mai mare a acesteia, fără a arde marginile.</p>
     <p class="mb-4">Am observat că la modelele testate, funcția baghetă implică adesea o distribuție a căldurii mai blândă pe exterior și o intensitate mai mare pe interior, în comparație cu setarea standard. Asta previne arderea rapidă a exteriorului, în timp ce miezul rămâne cald și ușor crocant. E ca și cum ai avea un cuptor mic dedicat doar pentru bagheta ta dimineața.</p>
     <p class="mb-4">Un alt aspect pe care l-am remarcat este controlul mai fin al temperaturii. Unele modele îți permit să alegi gradul de prăjire specific pentru baghetă, iar asta e un plus major pentru cei care au gusturi pretențioase. Nu mai riști să obții o baghetă arsă sau, dimpotrivă, una doar încălzită.</p>
     
@@ -175,7 +188,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Testul practic: Baghete, felii și rezultate</h2>
     <p class="mb-4">Am început cu o baghetă proaspătă. Pe prăjitorul Tefal, cu funcția baghetă activată, rezultatul a fost excelent: exteriorul auriu, ușor crocant, iar interiorul cald și moale. Pe prăjitorul clasic Philips, setat pe o treaptă medie, am obținut un rezultat bun, dar marginile erau puțin mai prăjite decât la Tefal. Asta arată că funcția dedicată chiar face o diferență în distribuția căldurii.</p>
     <p class="mb-4">Am trecut la o baghetă de o zi. Aici, funcția baghetă a fost salvatoare. A reușit să-i redea prospețimea și o textură plăcută, fără să o usuce. Pe prăjitorul clasic, a trebuit să fiu mai atent cu setarea, pentru că riscam să o fac tare. Am observat că prăjitoarele cu funcție baghetă sunt mai iertătoare, dacă pot spune așa.</p>
-    <p class="mb-4">Am testat și cu o baghetă congelată. Funcția de dezghețare, prezentă pe Severin, a funcționat bine. Bagheta a fost dezghețată uniform, apoi prăjită la perfecție. Fără această funcție, ar fi trebuit să o las mai mult timp la prăjit, riscând să se ardă exteriorul. În experiența mea, dacă mănânci des produse congelate, o funcție de dezghețare e un plus major.</p>
+    <p class="mb-4">Am testat și cu o baghetă congelată. Funcția de dezghețare, prezentă pe Severin, a funcționat bine. Bagheta a fost dezghețată uniform, apoi prăjită la perfecție. Fără această funcție, ar fi trebuit să o las mai mult timp la prăjit, riscând să se ardă exteriorul. În <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experiența</a> mea, dacă mănânci des produse congelate, o funcție de dezghețare e un plus major.</p>
     
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Sfaturi pentru utilizare optimă</h3>
@@ -294,5 +307,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="prajitor-de-paine-cu-functie-bagheta"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

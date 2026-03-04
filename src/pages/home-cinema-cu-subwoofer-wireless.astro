@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sunetul de Cinematograf, Acum Fără Cabluri</h2>
-    <p class="mb-4">Am montat și testat de-a lungul anilor nenumărate sisteme audio pentru acasă, iar când vine vorba de un home cinema cu subwoofer wireless, am un respect aparte pentru claritatea și comoditatea pe care le aduce. Nu mai trebuie să tragi cabluri prin toată sufrageria, să te împiedici de ele sau să cauți soluții complicate de ascundere. Pur și simplu conectezi, setezi și te bucuri de basul profund care îți face vibrat canapeaua.</p>
+    <p class="mb-4">Am montat și testat de-a lungul anilor nenumărate sisteme audio pentru acasă, iar când vine vorba de un home cinema <a href="/soundbar-cu-subwoofer-integrat/" class="interlink">cu subwoofer</a> wireless, am un respect aparte pentru claritatea și comoditatea pe care le aduce. Nu mai trebuie să tragi cabluri prin toată sufrageria, să te împiedici de ele sau să cauți soluții complicate de ascundere. Pur și simplu conectezi, setezi și te bucuri de basul profund care îți face vibrat canapeaua.</p>
     <p class="mb-4">În ultimii ani, am văzut evoluții remarcabile în tehnologia wireless, iar producătorii s-au concentrat pe stabilitatea conexiunii și pe calitatea sunetului. Nu mai ești limitat la un bas fad, ca la începuturile tehnologiei. Acum, poți avea un impact similar cu cel al unui sistem cu fir, dar cu o flexibilitate mult mai mare în plasarea subwooferului.</p>
     <p class="mb-4">Experiența mea arată că un sistem bun face diferența nu doar la filme, ci și când asculți muzică sau te joci. E ca și cum ai fi acolo, în mijlocul acțiunii, sau pe scenă alături de artiști. Un subwoofer wireless bine calibrat adaugă o dimensiune nouă experienței auditive.</p>
     
@@ -155,7 +168,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Să Cauți la Un Sistem Home Cinema cu Subwoofer Wireless</h2>
     <p class="mb-4">Primul lucru pe care îl verific când testez un astfel de sistem este calitatea sunetului general. Nu te lăsa păcălit doar de basul puternic. Ascultă dialogurile, claritatea înaltelor și mediile. Un sistem echilibrat este esențial pentru o experiență audio completă. Am văzut sisteme unde basul era exagerat și acoperea restul sunetelor, ceea ce nu e deloc plăcut pe termen lung.</p>
     <p class="mb-4">Stabilitatea conexiunii wireless este al doilea punct critic. Nu vrei să ai întreruperi sau sacadări în sunet, mai ales în momentele cheie ale unui film. Majoritatea sistemelor moderne folosesc conexiuni dedicate, de 2.4 GHz sau 5 GHz, care sunt destul de fiabile. Totuși, e bine să verifici recenziile altor utilizatori sau să încerci sistemul în mediul tău de acasă, dacă ai posibilitatea.</p>
-    <p class="mb-4">La capitolul conectivitate, asigură-te că sistemul are intrările de care ai nevoie. Majoritatea se conectează la TV prin HDMI ARC sau optical. Unele permit și conexiune Bluetooth, utilă pentru a reda muzică direct de pe telefon sau tabletă. Verifică și dacă sistemul suportă formate audio de înaltă rezoluție, cum ar fi Dolby Atmos sau DTS:X, dacă asta este o prioritate pentru tine.</p>
+    <p class="mb-4">La capitolul conectivitate, asigură-te că sistemul are intrările de care ai nevoie. Majoritatea se conectează la TV prin HDMI ARC sau optical. Unele permit și conexiune Bluetooth, utilă pentru a reda muzică direct de pe telefon sau tabletă. Verifică și dacă sistemul suportă formate audio de înaltă rezoluție, cum ar fi <a href="/soundbar-compact-cu-dolby-atmos/" class="interlink">Dolby Atmos</a> sau DTS:X, dacă asta este o prioritate pentru tine.</p>
     
     
   </section>
@@ -170,7 +183,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Instalare și Configurare: Mai Simplă Decât Crezi</h2>
     <p class="mb-4">Partea cea mai bună la un home cinema cu subwoofer wireless este cât de ușor se instalează. De obicei, tot ce trebuie să faci este să conectezi soundbar-ul la TV prin cablul HDMI ARC sau optical, să introduci cablul de alimentare și să conectezi subwooferul la priză. Multe sisteme se împerechează automat. Dacă nu se întâmplă, de obicei există un buton de împerechere pe fiecare unitate pe care trebuie să îl apeși.</p>
-    <p class="mb-4">Am observat că majoritatea producătorilor oferă aplicații dedicate pentru smartphone. Acestea te ajută să faci setări fine, să ajustezi egalizatorul, să selectezi moduri de sunet (film, muzică, sport) și să verifici starea conexiunii wireless. E mult mai intuitiv decât butoanele de pe telecomanda veche.</p>
+    <p class="mb-4">Am observat că majoritatea producătorilor oferă aplicații dedicate <a href="/gimbal-portabil-pentru-smartphone/" class="interlink">pentru smartphone</a>. Acestea te ajută să faci setări fine, să ajustezi egalizatorul, să selectezi moduri de sunet (film, muzică, sport) și să verifici starea conexiunii wireless. E mult mai intuitiv decât butoanele de pe telecomanda veche.</p>
     <p class="mb-4">Plasarea subwooferului este, de fapt, singurul lucru unde ai un pic de libertate. Deși este wireless, poziționarea lui contează pentru ca basul să sune optim în camera ta. Evită să-l pui chiar în colț dacă nu vrei un bas prea bubuit, dar nici prea departe de soundbar. Experimentează cu câteva poziții până găsești punctul ideal unde basul se integrează natural cu sunetul principal.</p>
     
     
@@ -186,7 +199,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi Practice de Utilizare Zilnică</h2>
     <p class="mb-4">Nu uita să setezi corect volumul. Mulți oameni au tendința să dea volumul prea tare la filme, dar pentru muzică sau știri, un nivel mai moderat este de preferat. Folosește funcțiile de ajustare ale basului din aplicația dedicată dacă simți că e prea mult sau prea puțin.</p>
-    <p class="mb-4">Actualizează firmware-ul sistemului periodic. Producătorii lansează update-uri care pot îmbunătăți performanța audio, stabilitatea conexiunii sau pot adăuga funcționalități noi. Verifică aplicația sau site-ul producătorului pentru a te asigura că ai cea mai recentă versiune.</p>
+    <p class="mb-4">Actualizează firmware-ul sistemului periodic. Producătorii lansează update-uri care pot îmbunătăți <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanța</a> audio, stabilitatea conexiunii sau pot adăuga funcționalități noi. Verifică aplicația sau site-ul producătorului pentru a te asigura că ai cea mai recentă versiune.</p>
     <p class="mb-4">Curăță sistemul regulat. Praful se poate acumula pe grilele difuzoarelor soundbar-ului și pe subwoofer. Folosește o cârpă moale, uscată sau ușor umedă. Evită produsele de curățare abrazive care pot deteriora finisajul.</p>
     <p class="mb-4">Experimentează cu diferite surse audio. Nu te limita la TV. Conectează consola de jocuri, playerul Blu-ray sau chiar laptopul prin HDMI pentru a vedea cum sună. De asemenea, redă muzică prin Bluetooth de pe telefon pentru a testa versatilitatea sistemului.</p>
     
@@ -285,5 +298,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="home-cinema-cu-subwoofer-wireless"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -146,7 +159,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Boxele smart controlabile prin voce: de la gadget la centru de comanda</h2>
     <p class="mb-4">Am testat o gramada de boxe smart in ultimii ani si pot sa va spun direct: nu mai sunt doar niste difuzoare cu microfoane. Au devenit practic centrul de comanda al casei, mai ales daca intelegi cum sa le folosesti.</p>
-    <p class="mb-4">De la a aprinde lumina, a pune muzica preferata, pana la a verifica vremea sau a seta remindere, totul se face cu o simpla comanda vocala. In experienta mea, cel mai mare avantaj e cand ai mainile ocupate si vrei sa faci ceva rapid.</p>
+    <p class="mb-4">De la a aprinde lumina, a pune muzica preferata, pana la a verifica vremea sau a seta remindere, totul se face cu o simpla comanda vocala. In <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experienta</a> mea, cel mai mare avantaj e cand ai mainile ocupate si vrei sa faci ceva rapid.</p>
     <p class="mb-4">Am pus mana pe modele de la Google, Amazon, Apple, dar si pe variante integrate in televizoare de la Samsung sau LG. Fiecare cu plusurile si minusurile ei, dar ideea de baza ramane aceeasi: comoditate maxima.</p>
     
     
@@ -168,12 +181,12 @@ import Layout from '../layouts/Layout.astro';
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Exemple concrete de utilizare</h3>
     <p class="mb-4">Setarea timerelor in bucatarie in timp ce gatesti.</p>
-    <p class="mb-4">Controlul termostatului smart sau al aerului conditionat.</p>
+    <p class="mb-4">Controlul termostatului smart sau al aerului <a href="/aer-conditionat-inverter-cu-consum-redus/" class="interlink">conditionat</a>.</p>
     <p class="mb-4">Cresterea sau scaderea volumului televizorului compatibil.</p>
     <p class="mb-4">Obtinerea de informatii despre trafic, vreme, stiri.</p>
     <p class="mb-4">Redarea de muzica de pe Spotify, YouTube Music, sau alte servicii.</p>
     <p class="mb-4">Crearea de liste de cumparaturi sau de sarcini.</p>
-    <p class="mb-4">Controlul luminilor, prizelor smart, camerelor de supraveghere.</p>
+    <p class="mb-4">Controlul luminilor, prizelor smart, camerelor <a href="/camera-de-supraveghere-ptz/" class="interlink">de supraveghere</a>.</p>
     <p class="mb-4">Efectuarea de apeluri vocale sau video (pe modelele cu ecran).</p>
   </section>
   <section id="sectiune-4" class="mb-10">
@@ -187,7 +200,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Integrarea cu televizorul: un pas spre casa inteligenta</h2>
-    <p class="mb-4">Multe televizoare noi, de la Samsung, LG sau Sony, vin deja cu asistenti vocali integrati sau cu posibilitatea de a controla alte boxe smart. Am testat un Samsung QLED unde puteam sa dau comenzi vocale direct prin telecomanda, controland functii ale televizorului.</p>
+    <p class="mb-4">Multe televizoare noi, de la Samsung, LG sau Sony, vin deja cu asistenti vocali integrati sau cu posibilitatea de a controla alte boxe smart. Am testat un Samsung QLED unde puteam sa dau comenzi vocale direct prin <a href="/switch-smart-pentru-telecomanda/" class="interlink">telecomanda</a>, controland functii ale televizorului.</p>
     <p class="mb-4">Pe modelele mai noi, poti chiar sa intri pe YouTube sau sa schimbi canalul folosind vocea. E o comoditate care, dupa ce te obisnuiesti cu ea, devine greu de renuntat.</p>
     <p class="mb-4">Cel mai bine e sa verifici specificatiile televizorului tau sau sa te interesezi la un magazin daca modelul respectiv suporta control vocal prin intermediul unei boxe smart externe sau are propriul asistent integrat. De exemplu, multe televizoare LG OLED din gamele recente au compatibilitate cu Google Assistant sau Alexa.</p>
     
@@ -294,5 +307,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="boxe-smart-controlabile-prin-voce"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

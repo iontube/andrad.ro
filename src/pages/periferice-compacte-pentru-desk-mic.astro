@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -177,9 +190,9 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Solutia Rapida pentru Spatiu: Ce Periferice Compacte Sunt Regele Deskilor Mici?</h2>
-    <p class="mb-4">Bun, hai sa fim directi. Ai un <strong>desk mic</strong> si te lupti constant cu spatiul? Perfect.  Uita de monstrul ala de tastatura full-size care iti ocupa jumatate din birou si de mausul ala de gamer profesionist care pare o barca.  Adevarul e ca pentru un <strong>desk mic</strong>, ai nevoie de <strong>periferice compacte</strong> care sa faca treaba fara sa te incomodeze.  Cel mai des, asta inseamna tastaturi mai mici, in special cele 60% (fara numpad, fara taste F) sau TKL (tenkeyless - fara numpad, dar cu F-uri).  Si la maus, cauti ceva care sa fie confortabil, dar sa nu fie un bloc de plastic imens.  Castile? Stergi pe jos de cele cu fir lung si greoaie; mergi pe wireless, usor si discret.</p>
+    <p class="mb-4">Bun, hai sa fim directi. Ai un <strong>desk mic</strong> si te lupti constant cu spatiul? Perfect.  Uita de monstrul ala de tastatura full-size care iti ocupa jumatate din birou si de mausul ala de gamer <a href="/mousepad-extra-mare-pentru-setup-profesionist/" class="interlink">profesionist</a> care pare o barca.  Adevarul e ca pentru un <strong>desk mic</strong>, ai nevoie de <strong>periferice compacte</strong> care sa faca treaba fara sa te incomodeze.  Cel mai des, asta inseamna tastaturi mai mici, in special cele 60% (fara numpad, fara taste F) sau TKL (tenkeyless - fara numpad, dar cu F-uri).  Si la maus, cauti ceva care sa fie confortabil, dar sa nu fie un bloc de plastic imens.  Castile? Stergi pe jos de cele cu fir lung si greoaie; mergi pe wireless, usor si discret.</p>
     <p class="mb-4">Am testat zeci de produse pentru spatii de lucru inghesuite si iti zic sincer, secretul e in functionalitate si dimensiune.  Nu cauta tot felul de nebunii cu RGB cat casa, daca nu ai unde sa le pui.  Focus pe ce conteaza: ergonomie, raspuns rapid si un design care sa se integreze.</p>
-    <p class="mb-4">Deci, ca sa iti dau un raspuns concret: pentru un <strong>desk mic</strong>, cea mai buna optiune de <strong>periferice compacte</strong> este un kit format dintr-o tastatura mecanica 60% sau TKL, un maus ergonomic cu dimensiuni reduse si o pereche de casti wireless compacte, preferabil on-ear sau chiar earbuds daca nu vrei sa depasesti prea mult din volum.</p>
+    <p class="mb-4">Deci, ca sa iti dau un raspuns concret: pentru un <strong>desk mic</strong>, cea mai buna optiune de <strong>periferice compacte</strong> este un kit format dintr-o tastatura mecanica 60% sau TKL, un maus ergonomic cu dimensiuni reduse si o pereche de <a href="/casti-wireless-pentru-gaming-mobil/" class="interlink">casti wireless</a> compacte, preferabil on-ear sau chiar earbuds daca nu vrei sa depasesti prea mult din volum.</p>
     <p class="mb-4">Gândește-te asa: cat de des folosesti efectiv numpad-ul? Sau tastele de F1-F12 pentru un document Excel pe care il editezi o data pe luna? Probabil nu prea des.  Asa ca, renuntarea la ele iti elibereaza spatiu pretios pe <strong>desk mic</strong>.  La fel si cu mausul – unii sunt asa de mari ca ajungi sa lovești tastatura cand misti mana.  Nu e normal.</p>
     <p class="mb-4">Am văzut prieteni care au încercat să-și pună pe un birou mic tot felul de periferice „full feature” și ajungeau să lucreze cu laptopul pe un scaun și tastatura pe un taburet.  Ridicol.  Până la urmă, totul se rezumă la eficiență și la cum te simți când lucrezi sau te joci.  Cu <strong>periferice compacte pentru desk mic</strong>, scopul este să creezi un mediu de lucru funcțional și plăcut, nu o junglă de cabluri și gadgeturi nefolosite.</p>
     
@@ -194,7 +207,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum Alegi Perifericele Potrivite pentru Spatiul Tau Re strâns</h2>
     <p class="mb-4">Alegerea <strong>perifericelor compacte pentru desk mic</strong> nu e chiar asa de complicata daca stii la ce sa te uiti. Prima chestie e<strong> dimensiunea</strong>, evident. Masoara-ti biroul si gandeste-te cat spatiu ai la dispozitie. Nu cumpara o tastatura TKL daca abia iti intra un maus pe latime.</p>
-    <p class="mb-4">Apoi,<strong> scopul principal</strong>. Folosesti biroul mai mult pentru munca de birou, browsing si social media, sau pentru gaming intens? Daca e vorba de munca, ergonomia si confortul sunt cheia. Un maus care se simte bine in mana pentru 8 ore e mai important decat un senzor de 20.000 DPI. Daca e gaming, atunci raspunsul rapid, precizia si greutatea mausului conteaza enorm. Tastaturile mecanice, chiar si cele compacte, ofera o experienta superioara la scris si la jocuri, comparativ cu cele pe membrana.</p>
+    <p class="mb-4">Apoi,<strong> scopul principal</strong>. Folosesti biroul mai mult pentru munca de birou, browsing si social media, sau <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">pentru gaming</a> intens? Daca e vorba de munca, ergonomia si confortul sunt cheia. Un maus care se simte bine in mana pentru 8 ore e mai important decat un senzor de 20.000 DPI. Daca e gaming, atunci raspunsul rapid, precizia si greutatea mausului conteaza enorm. Tastaturile mecanice, chiar si cele compacte, ofera o experienta superioara la scris si la jocuri, comparativ cu cele pe membrana.</p>
     <p class="mb-4"><strong>Tipul de conexiune</strong> e si el important. Pentru un <strong>desk mic</strong>, eliminarea cablurilor e un vis frumos. Wireless-ul a avansat mult. Cauta tehnologii low-latency, cum ar fi cele de la Logitech (Lightspeed) sau Razer (HyperSpeed) daca vrei performanta fara fir. Totusi, fii pregatit ca tastaturile si mausurile wireless de top pot fi mai scumpe.</p>
     <p class="mb-4"><strong>Ergonomia</strong> e un capitol la fel de important. Nu te lua dupa aspectul cel mai cool. Un maus care iti forteaza mana intr-o pozitie nenaturala o sa te doara pe termen lung. La fel si cu tastatura. Unele tastaturi 60% au tastele de sageti delegate pe alte butoane, ceea ce poate fi incomod la inceput. Ia in calcul si asta.</p>
     <p class="mb-4">Nu uita de <strong>calitatea materialelor</strong>. O tastatura cu taste din plastic ieftin o sa se simta prost si o sa se uzeze rapid. Cauta taste PBT, de exemplu, care sunt mult mai durabile si nu prind luciu. La maus, finisajul conteaza. Un cauciuc bun pe laterale te ajuta sa nu-ti alunece mana.</p>
@@ -229,7 +242,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Verdict pe Buget: Periferice Compacte pentru Fiecare Buzunar</h2>
     <p class="mb-4">Ok, hai sa punem lucrurile la punct, pe categorii de pret. Nu toata lumea isi permite sa dea 1000 de lei pe un set de <strong>periferice compacte</strong>, si e normal. Gasesti solutii bune pentru orice buget.</p>
-    <p class="mb-4"><strong>Buget Mic (sub 400 lei pentru tot setul):</strong> Aici trebuie sa faci cele mai mari compromisuri, dar nu imposibil. Pentru tastatura, te poti uita la modele TKL de la Redragon sau Motospeed. Sunt mecanice, au iluminare RGB si sunt destul de accesibile (~150-200 lei). Nu te astepta la materiale premium, dar isi fac treaba. La maus, cauta modele de gaming compacte de la Redragon sau Marvo (~100-150 lei). Au senzori decenti si sunt destul de manevrabile. Pentru casti, niste earbuds wireless ieftine de la un brand mai mic (~100 lei) iti pot acoperi nevoia de sunet fara fir. Va fi un mix, dar functional.</p>
+    <p class="mb-4"><strong>Buget Mic (sub 400 lei pentru tot setul):</strong> Aici trebuie sa faci cele mai mari compromisuri, dar nu imposibil. Pentru tastatura, te poti uita la modele TKL de la Redragon sau Motospeed. Sunt mecanice, au <a href="/periferice-cu-iluminare-rgb-sincronizata/" class="interlink">iluminare RGB</a> si sunt destul de accesibile (~150-200 lei). Nu te astepta la materiale premium, dar isi fac treaba. La maus, cauta modele de gaming compacte de la Redragon sau Marvo (~100-150 lei). Au senzori decenti si sunt destul de manevrabile. Pentru casti, niste earbuds wireless ieftine de la un brand mai mic (~100 lei) iti pot acoperi nevoia de sunet fara fir. Va fi un mix, dar functional.</p>
     <p class="mb-4"><strong>Buget Mediu (400 - 900 lei pentru tot setul):</strong> Aici incepe distractia. Poti lua o tastatura mecanica TKL sau 60% de la HyperX, Ozone, sau chiar un model entry-level de la Logitech sau Corsair (~300-500 lei). Calitatea materialelor creste vizibil, switch-urile sunt mai bune, iluminarea e mai placuta. La maus, te poti uita la Razer Viper Mini sau Logitech G Pro Wireless (la reduceri, poate) (~250-400 lei). Performanta si ergonomie mult imbunatatite. Casti wireless de la Sony (seria WH-CH) sau JBL iti ofera un sunet decent si confort (~200-350 lei).</p>
     <p class="mb-4"><strong>Buget Generos (peste 900 lei pentru tot setul):</strong> Aici vorbim de varf. Tastatura mecanica 60% sau TKL de la Logitech G Pro X, Corsair K70 TKL sau Razer Huntsman V2 TKL (~600-900 lei). Calitate de top, switch-uri rapide, constructie solida, softuri avansate. Mausul? Logitech MX Master 3S (daca vrei confort maxim pentru productivitate) sau Razer Viper Ultimate/DeathAdder V3 Pro (daca vrei performanta de top in gaming) (~400-600 lei). Astea sunt gadgeturi de top, precise, confortabile si durabile. La casti, poti lua modele premium de la Sony, Bose sau Sennheiser, fie ca vrei over-ear, fie earbuds, dar focus pe performanta audio si anulare a zgomotului (~600-1000+ lei).</p>
     <p class="mb-4">Indiferent de buget, nu uita de compromisuri. La buget mic, sacrifici calitatea premium si anumite functii. La buget mare, platesti pentru cea mai buna experienta, dar tot pot exista mici chestii care nu-ti plac. Important e sa gasesti echilibrul potrivit pentru tine si <strong>desk-ul tau mic</strong>.</p>
@@ -377,5 +390,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="periferice-compacte-pentru-desk-mic"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

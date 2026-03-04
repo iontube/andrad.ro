@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -155,7 +168,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     
-    <p class="mb-4">Dacă ești în căutarea unei plăci video AMD performanță ridicată, ai ajuns în locul potrivit. Piața actuală este plină de opțiuni impresionante, iar AMD s-a impus ca un jucător de temut, oferind soluții capabile să ruleze cele mai noi jocuri la setări maxime și să accelereze fluxurile de lucru profesionale. Alegerea unei plăci video de top poate fi o decizie complexă, având în vedere multitudinea de specificații tehnice și diferențele subtile dintre modele. Vom explora împreună ce înseamnă cu adevărat performanță ridicată în contextul plăcilor video AMD și cum să identifici cea mai bună opțiune pentru nevoile tale specifice, fie că ești un gamer pasionat sau un creator de conținut.</p>
+    <p class="mb-4">Dacă ești în căutarea unei plăci video AMD performanță ridicată, ai ajuns în locul potrivit. Piața actuală este plină de opțiuni impresionante, iar AMD s-a impus ca un jucător de temut, oferind soluții capabile să ruleze cele mai noi jocuri la setări maxime și să accelereze fluxurile de lucru <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">profesionale</a>. Alegerea unei plăci video de top poate fi o decizie complexă, având în vedere multitudinea de specificații tehnice și diferențele subtile dintre modele. Vom explora împreună ce înseamnă cu adevărat performanță ridicată în contextul plăcilor video AMD și cum să identifici cea mai bună opțiune pentru nevoile tale specifice, fie că ești un gamer pasionat sau un creator de conținut.</p>
     <p class="mb-4">Înțelegerea arhitecturii și a tehnologiilor specifice AMD este esențială pentru a face o alegere informată. De la arhitecturi RDNA 3 la caracteristici precum Ray Tracing îmbunătățit și tehnologii de upscaling, fiecare detaliu contează. Nu este vorba doar despre numărul de nuclee sau frecvența de ceas, ci și despre eficiența arhitecturală, lățimea de bandă a memoriei și optimizările software. O placă video AMD performanță ridicată nu este doar o componentă hardware, ci un ecosistem care lucrează în armonie pentru a oferi o experiență vizuală de excepție.</p>
     <p class="mb-4">Acest articol își propune să te ghideze prin labirintul opțiunilor, demistificând specificațiile tehnice și evidențiind avantajele pe care le oferă plăcile video AMD de ultimă generație. Vom analiza diferitele segmente de performanță, vom discuta despre cum să potrivești placa video cu restul sistemului tău și vom oferi sfaturi practice pentru a te asigura că faci cea mai bună investiție. Pregătește-te să descoperi ce înseamnă cu adevărat o placă video AMD performanță ridicată, capabilă să ducă experiența ta digitală la un nou nivel.</p>
     
@@ -179,9 +192,9 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele de Top și Specificații Cheie</h2>
-    <p class="mb-4">Când vine vorba de plăci video AMD performanță ridicată, seria Radeon RX 7000 se distinge prin inovație și putere brută. Modele precum Radeon RX 7900 XTX și RX 7900 XT sunt exemple de vârf ale arhitecturii RDNA 3, oferind performanțe excepționale. RX 7900 XTX, de exemplu, este adesea comparată cu cele mai performante soluții de la concurență, oferind un număr impresionant de stream processori (peste 10.000), frecvențe de boost ridicate (peste 2.5 GHz) și o memorie VRAM generoasă de 24GB GDDR6 cu o interfață de 384-bit. Aceasta o face ideală pentru gaming 4K la cele mai înalte setări.</p>
+    <p class="mb-4">Când vine vorba de plăci video AMD performanță ridicată, seria Radeon RX 7000 se distinge prin inovație și putere brută. Modele precum Radeon RX 7900 XTX și RX 7900 XT sunt exemple de vârf ale arhitecturii RDNA 3, oferind performanțe excepționale. RX 7900 XTX, de exemplu, este adesea comparată cu cele mai performante soluții de la concurență, oferind un număr impresionant de stream processori (peste 10.000), frecvențe de boost ridicate (peste 2.5 GHz) și o memorie VRAM generoasă de 24GB GDDR6 cu o interfață de 384-bit. Aceasta o face ideală <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">pentru gaming</a> 4K la cele mai înalte setări.</p>
     <p class="mb-4">Modelul RX 7900 XT, deși puțin mai modest, rămâne o placă video AMD performanță ridicată de excepție. Dispune de un număr mai mic de stream processori (aproximativ 8.000-9.000) și o memorie VRAM de 20GB GDDR6 pe o interfață de 320-bit. Chiar și așa, oferă performanțe fantastice la 1440p și este capabilă să ruleze multe titluri la 4K cu setări ajustate. Ambele plăci beneficiază de tehnologii de ultimă oră, precum FSR 3 și accelerare hardware pentru Ray Tracing, asigurând o experiență modernă și imersivă.</p>
-    <p class="mb-4">Pentru cei care caută un echilibru între performanță și preț, modele precum Radeon RX 7800 XT sau chiar RX 7700 XT pot fi opțiuni excelente. RX 7800 XT, de exemplu, cu 16GB de memorie GDDR6 și un număr solid de stream processori, se poziționează ca o placă video AMD performanță ridicată pentru gaming 1440p, rivalizând cu soluții din generații anterioare de top. Alegerea depinde de rezoluția țintă, de jocurile pe care le preferi și de bugetul alocat, dar toate aceste modele oferă o experiență de gaming de înaltă calitate.</p>
+    <p class="mb-4">Pentru cei care caută un echilibru între performanță și preț, modele precum Radeon RX 7800 XT sau chiar RX 7700 XT pot fi opțiuni excelente. RX 7800 XT, de exemplu, cu 16GB de memorie GDDR6 și un număr solid de stream processori, se poziționează ca o placă video AMD performanță ridicată <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">pentru gaming</a> 1440p, rivalizând cu soluții din generații anterioare de top. Alegerea depinde de rezoluția țintă, de jocurile pe care le preferi și de bugetul alocat, dar toate aceste modele oferă o experiență de gaming de înaltă calitate.</p>
     
     
   </section>
@@ -213,7 +226,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Tehnologii AMD pentru Experiență Îmbunătățită</h2>
     <p class="mb-4">AMD a investit masiv în dezvoltarea tehnologiilor software care completează hardware-ul plăcilor video AMD performanță ridicată, oferind utilizatorilor o experiență de gaming și productivitate superioară. FidelityFX Super Resolution (FSR) este, fără îndoială, una dintre cele mai notabile. FSR 2 și, mai nou, FSR 3, utilizează algoritmi avansați de upscaling pentru a crește FPS-ul în jocuri, permițând rularea titlurilor la rezoluții înalte cu un impact minim asupra calității vizuale. FSR 3 adaugă și tehnologia AMD Fluid Motion Frames, generând cadre suplimentare pentru o fluiditate excepțională.</p>
     <p class="mb-4">AMD Radeon Anti-Lag și Radeon Boost sunt alte tehnologii valoroase, menite să reducă latența de intrare și să optimizeze performanța în jocuri. Anti-Lag minimizează întârzierile între mișcarea mouse-ului și acțiunea de pe ecran, un avantaj crucial în jocurile competitive. Radeon Boost, pe de altă parte, ajustează dinamic rezoluția în timpul mișcărilor rapide ale camerei, crescând FPS-ul fără a afecta semnificativ calitatea percepută a imaginii. Aceste optimizări fac o diferență palpabilă în experiența de joc.</p>
-    <p class="mb-4">Driverele Radeon Software Adrenalin sunt centrul de comandă pentru toate aceste tehnologii. Ele oferă o interfață intuitivă pentru a monitoriza performanța sistemului, a ajusta setările grafice, a înregistra gameplay-ul și a accesa funcții avansate. Suportul continuu pentru optimizări la lansarea jocurilor noi asigură că o placă video AMD performanță ridicată va funcționa la potențial maxim pe termen lung. Aceste inovații demonstrează angajamentul AMD față de comunitatea de gaming și de utilizatorii profesioniști.</p>
+    <p class="mb-4">Driverele Radeon Software Adrenalin sunt centrul de comandă pentru toate aceste tehnologii. Ele oferă o interfață intuitivă pentru a monitoriza performanța sistemului, a ajusta setările grafice, a înregistra gameplay-ul și a accesa funcții avansate. Suportul continuu pentru optimizări la lansarea jocurilor noi asigură că o placă video AMD performanță ridicată va funcționa la potențial maxim pe termen lung. Aceste inovații demonstrează angajamentul AMD față de comunitatea de gaming și de utilizatorii <a href="/drona-cu-filmare-6k-pentru-profesionisti/" class="interlink">profesioniști</a>.</p>
     
     
   </section>
@@ -322,5 +335,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="placa-video-amd-performanta-ridicata"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

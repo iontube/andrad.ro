@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,8 +158,8 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Prima impresie: ce e cu sacul asta automat?</h2>
-    <p class="mb-4">Am pus mana pe aspiratorul cu sac automat de colectare acum vreo luna si am zis ca e momentul sa vedem daca merita hype-ul. Initial, am fost sceptic. Mi se parea o complicatie inutila fata de un aspirator clasic, dar am zis sa-i dau o sansa. Ideea de baza e simpla: dupa ce termini de aspirat, aspiratorul se duce singur la baza lui, unde isi varsa sacul intr-un recipient mai mare, sigilat.</p>
-    <p class="mb-4">In practică, asta inseamna ca nu te mai murdaresti pe maini cand schimbi sacul, plus ca aerul evacuat de aspirator e mai curat. Am testat mai multe modele, de la branduri precum Samsung si Philips, si fiecare are abordarea lui. Unele baze sunt mai compacte, altele mai voluminoase, dar toate promit o experienta de curatenie mai… lipsita de efort.</p>
+    <p class="mb-4">Am pus mana pe aspiratorul cu sac automat de colectare acum vreo luna si am zis ca e momentul sa vedem daca merita hype-ul. Initial, am fost sceptic. Mi se parea o complicatie inutila fata de un <a href="/aspirator-robot-compact-pentru-apartamente/" class="interlink">aspirator</a> clasic, dar am zis sa-i dau o sansa. Ideea de baza e simpla: dupa ce termini de aspirat, aspiratorul se duce singur la baza lui, unde isi varsa sacul intr-un recipient mai mare, sigilat.</p>
+    <p class="mb-4">In practică, asta inseamna ca nu te mai murdaresti pe maini cand schimbi sacul, plus ca aerul evacuat de aspirator e mai curat. Am testat mai multe modele, de la branduri precum Samsung si Philips, si fiecare are abordarea lui. Unele baze sunt mai compacte, altele mai voluminoase, dar toate promit o <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experienta</a> de curatenie mai… lipsita de efort.</p>
     <p class="mb-4">Am observat ca acest tip de aspirator se potriveste cel mai bine celor care nu vor sa se gandeasca prea mult la intretinerea aparatului. Daca esti genul care uita sa schimbe sacul sau pur si simplu nu-ti place contactul cu praful, ai putea fi un candidat ideal.</p>
     
     
@@ -161,8 +174,8 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Performanta de aspirare: nu e doar despre sac</h2>
-    <p class="mb-4">Indiferent cat de automatizat e sacul, performanta de aspirare ramane cruciala. Am testat aspiratoare cu sac automat de la branduri ca Philips si Samsung, si pot spune ca majoritatea se descurca bine pe covoare si parchet. Puterea de aspirare e, in general, comparabila cu cea a aspiratoarelor traditionale cu sac, dar exista diferente.</p>
-    <p class="mb-4">Am observat ca modelele mai scumpe, precum Samsung Bespoke Jet, vin cu motoare digitale puternice si accesorii inovatoare, care fac fata cu brio parului de animale sau resturilor mai mari. In teste, am pus diverse materiale pe jos: firimituri, par de caine, praf fin. Majoritatea aspiratoarelor cu sac automat au reusit sa curete eficient, insa am simtit o diferenta la aspiratoarele cu sisteme de filtrare mai avansate.</p>
+    <p class="mb-4">Indiferent cat de automatizat e sacul, <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanta</a> de aspirare ramane cruciala. Am testat aspiratoare cu sac automat de la branduri ca Philips si Samsung, si pot spune ca majoritatea se descurca bine pe covoare si parchet. Puterea de aspirare e, in general, comparabila cu cea a aspiratoarelor traditionale cu sac, dar exista diferente.</p>
+    <p class="mb-4">Am observat ca modelele mai scumpe, precum Samsung Bespoke Jet, vin cu motoare digitale puternice si <a href="/kit-accesorii-foto-pentru-incepatori/" class="interlink">accesorii</a> inovatoare, care fac fata cu brio parului de animale sau resturilor mai mari. In teste, am pus diverse materiale pe jos: firimituri, par de caine, praf fin. Majoritatea aspiratoarelor cu sac automat au reusit sa curete eficient, insa am simtit o diferenta la aspiratoarele cu sisteme de filtrare mai avansate.</p>
     <p class="mb-4">Un aspect important e zgomotul. De obicei, aspiratorul in sine nu e foarte zgomotos, insa procesul de golire automata de la baza poate fi destul de puternic. Nu dureaza mult, dar e un sunet specific pe care trebuie sa-l ai in vedere.</p>
     
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="aspirator-cu-sac-automat-de-colectare"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

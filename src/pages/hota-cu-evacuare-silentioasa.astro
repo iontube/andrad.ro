@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Hota cu evacuare silențioasă: De ce am ajuns să le testăm?</h2>
-    <p class="mb-4">Zgomotul produs de hota din bucătărie a fost dintotdeauna o problemă. Fie că gătești des, fie că doar reîncălzești ceva, sunetul constant al ventilatorului poate fi deranjant. De aceea, am început să mă uit mai atent la ce înseamnă o hotă cu evacuare silențioasă, dincolo de marketing.</p>
+    <p class="mb-4">Zgomotul produs de hota din <a href="/robot-de-bucatarie-pentru-patiserie/" class="interlink">bucătărie</a> a fost dintotdeauna o problemă. Fie că gătești des, fie că doar reîncălzești ceva, sunetul constant al ventilatorului poate fi deranjant. De aceea, am început să mă uit mai atent la ce înseamnă o hotă cu evacuare silențioasă, dincolo de marketing.</p>
     <p class="mb-4">Am testat personal câteva modele în ultimii ani, de la branduri cunoscute precum Bosch, Franke, și chiar și variante mai accesibile de la producători mai puțin cunoscuți. Scopul meu a fost să înțeleg dacă aceste promisiuni de liniște se traduc și în practică, și dacă merită investiția suplimentară.</p>
     <p class="mb-4">Ce am observat este că "silențios" este un termen relativ, dar există diferențe clare între modelele care își iau în serios acest aspect și cele care doar menționează "nivel de zgomot redus" ca un detaliu secundar.</p>
     
@@ -161,7 +174,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce să cauți la o hotă cu evacuare silențioasă: Specificații cheie</h2>
-    <p class="mb-4">Primul lucru la care mă uit este nivelul de zgomot, exprimat în decibeli (dB). Nu te baza doar pe cifrele de pe etichetă; caută recenzii care menționează experiența reală. Un nivel de zgomot sub 55 dB la viteza maximă este un bun punct de plecare.</p>
+    <p class="mb-4">Primul lucru la care mă uit este nivelul de zgomot, exprimat în decibeli (dB). Nu te baza doar pe cifrele de pe etichetă; caută recenzii care menționează <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experiența</a> reală. Un nivel de zgomot sub 55 dB la viteza maximă este un bun punct de plecare.</p>
     <p class="mb-4">Apoi, vine puterea de absorbție. O hotă silențioasă nu trebuie să fie și ineficientă. Caută modele care oferă cel puțin 400-500 m³/h pentru o bucătărie medie. Am văzut hote cu motor puternic, dar cu un design acustic prost, care erau zgomotoase. Invers, am testat și modele cu motoare mai puțin puternice, dar cu un flux de aer bine optimizat, care făceau o treabă bună la un nivel de zgomot decent.</p>
     <p class="mb-4">Alte aspecte importante sunt calitatea materialelor (inox, sticlă), tipul de filtre (metalice, lavabile, cu carbon activ pentru recirculare) și eficiența energetică. O hotă bună ar trebui să fie și ușor de curățat.</p>
     
@@ -178,7 +191,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Instalarea corectă face diferența: Sfaturi practice</h2>
     <p class="mb-4">Chiar și cea mai silențioasă hotă poate deveni zgomotoasă dacă nu este instalată corect. Un detaliu pe care mulți îl ignoră este diametrul tubulaturii de evacuare. Folosirea unui tub prea îngust forțează motorul și crește zgomotul. Recomandarea generală este să folosești un tub cu diametrul specificat în manual, de obicei 120 mm sau 150 mm.</p>
-    <p class="mb-4">Lungimea tubulaturii contează și ea. Cu cât tubul este mai lung și are mai multe coturi, cu atât rezistența la fluxul de aer crește, iar zgomotul se poate amplifica. Încearcă să minimizezi lungimea și numărul de coturi.</p>
+    <p class="mb-4">Lungimea tubulaturii contează și ea. Cu cât tubul este mai lung și are mai multe coturi, cu atât <a href="/camera-actiune-rezistenta-la-apa/" class="interlink">rezistența la</a> fluxul de aer crește, iar zgomotul se poate amplifica. Încearcă să minimizezi lungimea și numărul de coturi.</p>
     <p class="mb-4">Am văzut instalatori care nu etanșează corect conexiunile între secțiunile tubulaturii. Acest lucru duce la pierderi de aer și la un zgomot suplimentar de "șuierat". Asigură-te că toate conexiunile sunt bine sigilate, ideal cu bandă specială pentru tubulatură.</p>
     
     
@@ -187,7 +200,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Recirculare vs. Evacuare: Ce alegi pentru bucătăria ta?</h2>
     <p class="mb-4">O hotă cu evacuare curată aerul din bucătărie prin tubulatura exterioară. Aceasta este metoda cea mai eficientă pentru eliminarea mirosurilor și a vaporilor. Pentru a obține o hotă silențioasă cu evacuare, accentul se pune pe motor și pe designul aerodinamic.</p>
     <p class="mb-4">O hotă cu recirculare filtrează aerul prin filtre de carbon activ și îl reintroduce în bucătărie. Acestea sunt utile dacă nu poți instala tubulatură de evacuare. Totuși, filtrele de carbon trebuie înlocuite periodic (costuri suplimentare) și eficiența lor nu este la fel de mare ca la evacuare. În plus, modelele de recirculare pot fi, în general, mai zgomotoase, deoarece aerul este forțat prin mai multe straturi de filtre.</p>
-    <p class="mb-4">Am testat și modele hibride, care pot funcționa și cu evacuare, și cu recirculare. Ele oferă flexibilitate, dar dacă ai posibilitatea de evacuare, alege acea variantă pentru o performanță maximă și, de obicei, pentru un nivel de zgomot mai bun.</p>
+    <p class="mb-4">Am testat și modele <a href="/console-hibride-portabile/" class="interlink">hibride</a>, care pot funcționa și cu evacuare, și cu recirculare. Ele oferă flexibilitate, dar dacă ai posibilitatea de evacuare, alege acea variantă pentru o performanță maximă și, de obicei, pentru un nivel de zgomot mai bun.</p>
     
     
   </section>
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="hota-cu-evacuare-silentioasa"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

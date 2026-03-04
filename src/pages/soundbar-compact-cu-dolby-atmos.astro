@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -167,19 +180,19 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Avantajele unui soundbar compact față de un sistem tradițional</h2>
-    <p class="mb-4">Principalul avantaj al unui soundbar, în special al unui model compact, este simplitatea și economia de spațiu. Spre deosebire de un sistem home cinema tradițional, care necesită amplasarea a multiple boxe (față, centru, spate, subwoofer, boxe de tavan), un soundbar integrează majoritatea acestor componente într-o singură bară elegantă, care se potrivește discret sub televizor. Acest lucru elimină dezordinea de cabluri și simplifică instalarea, făcându-l ideal pentru apartamente mici, camere de zi minimalist decorate sau oricine dorește o soluție audio performantă fără bătăi de cap. Chiar și un <strong>soundbar compact cu Dolby Atmos</strong> oferă o experiență mult superioară boxelor integrate ale televizorului, aducând sunetul la viață într-un mod spectaculos.</p>
+    <p class="mb-4">Principalul avantaj al unui soundbar, în special al unui model compact, este simplitatea și economia de spațiu. Spre deosebire de un sistem home cinema tradițional, care necesită amplasarea a multiple boxe (față, centru, spate, subwoofer, boxe de tavan), un soundbar integrează majoritatea acestor componente într-o singură bară elegantă, care se potrivește discret sub televizor. Acest lucru elimină dezordinea de cabluri și simplifică instalarea, făcându-l ideal <a href="/aspirator-robot-compact-pentru-apartamente/" class="interlink">pentru apartamente</a> mici, camere de zi minimalist decorate sau oricine dorește o soluție audio performantă fără bătăi de cap. Chiar și un <strong>soundbar compact cu Dolby Atmos</strong> oferă o experiență mult superioară boxelor integrate ale televizorului, aducând sunetul la viață într-un mod spectaculos.</p>
     
     
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Aspecte tehnice de luat în considerare la alegerea unui soundbar compact cu Dolby Atmos</h2>
-    <p class="mb-4">Atunci când cauți un <strong>soundbar compact cu Dolby Atmos</strong>, există câteva specificații tehnice cheie pe care ar trebui să le ai în vedere pentru a te asigura că faci cea mai bună alegere. Puterea RMS (Root Mean Square) indică puterea continuă pe care o poate oferi soundbar-ul, dar pentru o experiență Dolby Atmos convingătoare, este mai importantă prezența difuzoarelor orientate în sus (up-firing) sau a tehnologiilor de simulare a înălțimii. Numărul de canale este, de asemenea, relevant; un sistem 3.1.2 sau 5.1.2 (unde ultimul număr indică difuzoarele de înălțime) este un punct bun de plecare pentru Dolby Atmos. Verifică dacă soundbar-ul suportă și alte formate audio de înaltă calitate, cum ar fi DTS:X, pentru o compatibilitate maximă cu conținutul tău. Conectivitatea este esențială: caută porturi HDMI eARC (enhanced Audio Return Channel) pentru a transmite semnale audio necomprimate și Dolby Atmos de la televizor. Wi-Fi și Bluetooth sunt standarde pentru streaming, dar eARC este crucial pentru performanța Dolby Atmos de cea mai bună calitate.</p>
+    <p class="mb-4">Atunci când cauți un <strong>soundbar compact cu Dolby Atmos</strong>, există câteva specificații tehnice cheie pe care ar trebui să le ai în vedere pentru a te asigura că faci cea mai bună alegere. Puterea RMS (Root Mean Square) indică puterea continuă pe care o poate oferi soundbar-ul, dar pentru o experiență Dolby Atmos convingătoare, este mai importantă prezența difuzoarelor orientate în sus (up-firing) sau a tehnologiilor de simulare a înălțimii. Numărul de canale este, de asemenea, relevant; un sistem 3.1.2 sau 5.1.2 (unde ultimul număr indică difuzoarele de înălțime) este un punct bun de plecare pentru Dolby Atmos. Verifică dacă soundbar-ul suportă și alte formate audio de înaltă calitate, cum ar fi DTS:X, pentru o compatibilitate maximă cu conținutul tău. Conectivitatea este esențială: caută porturi HDMI eARC (enhanced Audio Return Channel) pentru a transmite semnale audio necomprimate și Dolby Atmos de la televizor. Wi-Fi și Bluetooth sunt standarde pentru streaming, dar eARC este crucial <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">pentru performanța</a> Dolby Atmos de cea mai bună calitate.</p>
     
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Puterea și numărul de canale</h3>
     <p class="mb-4">Puterea unui soundbar, măsurată în wați (W), influențează volumul maxim și claritatea sunetului la niveluri ridicate. Deși un soundbar compact nu va egala puterea unui sistem dedicat cu subwoofer separat, caută modele cu cel puțin 100-200W RMS pentru a te bucura de un sunet dinamic. Numărul de canale, cum ar fi 3.1.2 sau 5.1.2, indică numărul de difuzoare frontale, subwooferul (dacă este integrat sau extern) și difuzoarele de înălțime. Sistemele cu mai multe canale, chiar și într-un format compact, pot oferi o separare mai bună a sunetelor și o precizie crescută în poziționarea obiectelor audio.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Conectivitate și compatibilitate</h3>
-    <p class="mb-4">Porturile HDMI eARC sunt vitale pentru a beneficia pe deplin de Dolby Atmos, permițând transmiterea fluxurilor audio de înaltă calitate de la televizor la soundbar, fără pierderi. De asemenea, prezența porturilor HDMI-in poate fi utilă pentru conectarea altor dispozitive, cum ar fi consolele de jocuri sau playerele Blu-ray, direct la soundbar. Verifică și suportul pentru formate precum HDR10, Dolby Vision, dacă este important pentru experiența ta vizuală. Conectivitatea wireless, prin Wi-Fi și Bluetooth, îți permite să asculți muzică de pe telefon sau tabletă, transformând soundbar-ul într-un sistem audio versatil.</p>
+    <p class="mb-4">Porturile HDMI eARC sunt vitale pentru a beneficia pe deplin de Dolby Atmos, permițând transmiterea fluxurilor audio de înaltă calitate de la televizor la soundbar, fără pierderi. De asemenea, prezența porturilor HDMI-in poate fi utilă pentru conectarea altor dispozitive, cum ar fi consolele de jocuri sau playerele Blu-ray, direct la soundbar. Verifică și suportul pentru formate precum HDR10, Dolby Vision, dacă este important <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">pentru experiența</a> ta vizuală. Conectivitatea wireless, prin Wi-Fi și Bluetooth, îți permite să asculți muzică de pe telefon sau tabletă, transformând soundbar-ul într-un sistem audio versatil.</p>
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele recomandate de soundbar compact cu Dolby Atmos</h2>
@@ -207,7 +220,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-8" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Considerații despre subwoofer și sunetul de bas</h2>
-    <p class="mb-4">Deși vorbim despre soundbar-uri compacte, impactul sunetului de bas este esențial pentru o experiență Dolby Atmos completă. Multe dintre aceste modele vin cu un subwoofer wireless compact, care poate fi amplasat oriunde în cameră, oferind flexibilitate maximă. Chiar și un subwoofer mic poate adăuga profunzime explozilor din filme sau ritmurilor din muzică. Unii producători oferă opțiunea de a achiziționa un subwoofer separat, mai puternic, dacă simți nevoia unui bas mai prezent. Pentru un <strong>soundbar compact cu Dolby Atmos</strong>, integrarea unui subwoofer, fie el inclus sau achiziționat ulterior, este adesea cheia pentru a debloca întregul potențial al sunetului tridimensional, oferind acea senzație de impact și imersiune pe care o cauți.</p>
+    <p class="mb-4">Deși vorbim despre soundbar-uri compacte, impactul sunetului de bas este esențial pentru o experiență Dolby Atmos completă. Multe dintre aceste modele vin cu un <a href="/home-cinema-cu-subwoofer-wireless/" class="interlink">subwoofer wireless</a> compact, care poate fi amplasat oriunde în cameră, oferind flexibilitate maximă. Chiar și un subwoofer mic poate adăuga profunzime explozilor din filme sau ritmurilor din muzică. Unii producători oferă opțiunea de a achiziționa un subwoofer separat, mai puternic, dacă simți nevoia unui bas mai prezent. Pentru un <strong>soundbar compact cu Dolby Atmos</strong>, integrarea unui subwoofer, fie el inclus sau achiziționat ulterior, este adesea cheia pentru a debloca întregul potențial al sunetului tridimensional, oferind acea senzație de impact și imersiune pe care o cauți.</p>
     
     
   </section>
@@ -316,5 +329,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="soundbar-compact-cu-dolby-atmos"
+      currentCategory="tv-audio"
+      articles={allArticles}
+    />
   </article>
 </Layout>

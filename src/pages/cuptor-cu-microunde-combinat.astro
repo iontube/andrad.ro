@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -179,7 +192,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Hai sa vedem ce cuptor cu microunde combinat sa-ti iei, direct la subiect</h2>
     <p class="mb-4">Bun, stai putin. Ai ajuns aici pentru ca te gandesti sa-ti iei un <strong>cuptor cu microunde combinat</strong>. Foarte bine. Nu mai sta sa te complici cu doua aparate separate, ca astea fac treaba la pachet. Inainte sa te apuci de browsing la nesfarsit, am sa fiu direct: daca vrei calitate si nu te uiti la 100-200 de lei in plus, <strong>Samsung MC28M6055CK/OL</strong> e o alegere solida. Am lucrat cu el, am vazut cum se descurca si pot sa zic ca isi face treaba excelent, de la microunde la grill si chiar si functia de coacere/convectie, care pe astea combinate e uneori mai mult de vorbe. E un <strong>cuptor cu microunde combinat</strong> bun, pe bune.</p>
     <p class="mb-4">Acum, daca bugetul e mai strans si nu vrei sa dai o avere, <strong>Whirlpool MCP340BL</strong> e o alternativa demna de luat in calcul. Nu are aceleasi finisaje ca Samsung-ul, dar gateste bine si are functiile de baza pe care le astepti de la un aparat combinat. E genul de aparat pe care il iei cand stii ca nu ai nevoie de functii de chef, ci doar de un ajutor in bucatarie care sa faca mai mult decat un microunde clasic.</p>
-    <p class="mb-4">Ambele vin cu functii presetate, display digital si o gramada de programe automate. Dar hai sa nu ramana doar la vorbe, ci sa intram in detalii.</p>
+    <p class="mb-4">Ambele vin cu functii presetate, display digital si o gramada de <a href="/multicooker-cu-programe-automate/" class="interlink">programe automate</a>. Dar hai sa nu ramana doar la vorbe, ci sa intram in detalii.</p>
     
     
   </section>
@@ -197,7 +210,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cuptor cu microunde combinat vs. Cuptor electric clasic + Microunde separat: Ce castiga? Ce pierde?</h2>
-    <p class="mb-4">Aici e marea dilema, nu? Sa iei un aparat care face totul sau doua separate? Hai sa fim sinceri, un <strong>cuptor cu microunde combinat</strong> e pentru cei care vor sa economiseasca spatiu si sa aiba acces la mai multe functii fara sa ocupe jumatate de bucatarie. Daca vorbim de spatiu, un aparat combinat castiga clar. In loc de doua electrocasnice mari, ai doar unul.</p>
+    <p class="mb-4">Aici e marea dilema, nu? Sa iei un aparat care face totul sau doua separate? Hai sa fim sinceri, un <strong>cuptor cu microunde combinat</strong> e pentru cei care vor sa economiseasca spatiu si sa aiba acces la mai multe functii fara sa ocupe jumatate <a href="/robot-de-bucatarie-pentru-patiserie/" class="interlink">de bucatarie</a>. Daca vorbim de spatiu, un aparat combinat castiga clar. In loc de doua electrocasnice mari, ai doar unul.</p>
     <p class="mb-4">Pe partea de functii, un <strong>cuptor cu microunde combinat</strong>, mai ales cele cu convectie, pot egala performantele unui cuptor electric mic. Adica, poti sa faci un pui, o prajitura, sau niste legume coapte. Grill-ul e si el prezent la majoritatea modelelor, deci poti rumeni mancarea.</p>
     <p class="mb-4">Unde pierd combinatele? In general, la puterea reala a functiei de cuptor. Un cuptor electric dedicat, chiar si unul mic, are de obicei o distribuție a căldurii mai bună și o temperatură mai stabilă. La microundele combinate, uneori simți că funcția de cuptor e mai mult un bonus. De asemenea, dacă se strică, ai pierdut ambele funcții. La două aparate separate, dacă se strică unul, îl repari sau îl schimbi și îl folosești pe celălalt.</p>
     <p class="mb-4">Prețul e un alt factor. De multe ori, un <strong>cuptor cu microunde combinat</strong> de calitate, cu funcții bune de cuptor și grill, ajunge să coste cât un cuptor electric mic și un microunde separat. Deci nu e neapărat o economie financiară, ci mai degrabă una de spațiu și comoditate.</p>
@@ -207,8 +220,8 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Atenție mare la ce faci cu cuptorul cu microunde combinat: Greșeli frecvente și sfaturi de la un veteran</h2>
-    <p class="mb-4">Am văzut destule "dezastre" culinare în bucătării, multe din cauza aparatelor folosite greșit. Uite câteva greșeli pe care le fac oamenii și cum să le eviți:</p><ul><li><strong>Folosirea vaselor nepotrivite</strong>: Asta e clasic. Orice vas metalic în cuptorul cu microunde e NO-GO, cu excepția celor special concepute pentru grill. Fii atent la etichete sau la simboluri. Plasticul obișnuit poate să se topească sau să elibereze chimicale. Folosește sticlă termorezistentă, ceramică sau plastic special pentru microunde.</li><li><strong>Nu citi instrucțiunile</strong>: Știu, pare plictisitor, dar producătorii au pus acolo informații importante despre ce poți și ce nu poți găti, ce vase să folosești, cum să cureți etc. Un <strong>cuptor cu microunde combinat</strong> are multe funcții, și dacă nu știi cum funcționează, riști să strici mâncarea sau aparatul.</li><li><strong>Ignorarea curățeniei</strong>: Un aparat murdar nu doar că arată urât, dar poate și să afecteze gustul mâncării și performanța. Mâncarea arsă în interior devine o sursă de fum și mirosuri neplăcute. Curăță-l regulat, mai ales după ce folosești funcția de grill sau cuptor. Oțetul cu apă și o cârpă moale fac minuni.</li><li><strong>Supraîncărcarea funcției de cuptor</strong>: Dacă vrei să faci o friptură uriașă sau o tavă plină de prăjituri, s-ar putea să nu fie cea mai bună idee pentru un aparat combinat. Acestea sunt gândite mai mult pentru cantități medii. Dacă vrei să gătești cantități mari, un cuptor electric dedicat e mai potrivit.</li><li><strong>Așteptări nerealiste de la funcția de cuptor</strong>: Să fim clari, un <strong>cuptor cu microunde combinat</strong> nu va înlocui complet un cuptor electric profesional. Fă-ți o idee despre ce poate face aparatul tău și nu te frustra dacă nu obții aceleași rezultate ca la restaurant.</li></ul><p><strong>Sfaturi de la mine:</strong></p>
-    <p class="mb-4"><strong>Experimentează cu funcția de grill</strong>: Multe modele au grill puternic. Poți face toast-uri crocante, poți rumeni legume sau chiar o bucată mică de carne rapid. E mai eficient decât un prăjitor de pâine pentru anumite lucruri.</p>
+    <p class="mb-4">Am văzut destule "dezastre" culinare în bucătării, multe din cauza aparatelor folosite greșit. Uite câteva greșeli pe care le fac oamenii și cum să le eviți:</p><ul><li><strong>Folosirea vaselor nepotrivite</strong>: Asta e clasic. Orice vas metalic în cuptorul cu microunde e NO-GO, cu excepția celor special concepute pentru grill. Fii atent la etichete sau la simboluri. Plasticul obișnuit poate să se topească sau să elibereze chimicale. Folosește sticlă termorezistentă, ceramică sau plastic special pentru microunde.</li><li><strong>Nu citi instrucțiunile</strong>: Știu, pare plictisitor, dar producătorii au pus acolo informații importante despre ce poți și ce nu poți găti, ce vase să folosești, cum să cureți etc. Un <strong>cuptor cu microunde combinat</strong> are multe funcții, și dacă nu știi cum funcționează, riști să strici mâncarea sau aparatul.</li><li><strong>Ignorarea curățeniei</strong>: Un aparat murdar nu doar că arată urât, dar poate și să afecteze gustul mâncării și performanța. Mâncarea arsă în interior devine o sursă de fum și mirosuri neplăcute. Curăță-l regulat, mai ales după ce folosești funcția de grill sau cuptor. Oțetul cu apă și o cârpă moale fac minuni.</li><li><strong>Supraîncărcarea funcției de cuptor</strong>: Dacă vrei să faci o friptură uriașă sau o tavă plină de prăjituri, s-ar putea să nu fie cea mai bună idee pentru un aparat combinat. Acestea sunt gândite mai mult pentru cantități medii. Dacă vrei să gătești cantități mari, un cuptor electric dedicat e mai potrivit.</li><li><strong>Așteptări nerealiste de la funcția de cuptor</strong>: Să fim clari, un <strong>cuptor cu microunde combinat</strong> nu va înlocui complet un cuptor electric <a href="/fier-de-calcat-vertical-profesional/" class="interlink">profesional</a>. Fă-ți o idee despre ce poate face aparatul tău și nu te frustra dacă nu obții aceleași rezultate ca la restaurant.</li></ul><p><strong>Sfaturi de la mine:</strong></p>
+    <p class="mb-4"><strong>Experimentează cu funcția de grill</strong>: Multe modele au grill puternic. Poți face toast-uri crocante, poți rumeni legume sau chiar o bucată mică de carne rapid. E mai eficient decât un <a href="/prajitor-de-paine-cu-functie-bagheta/" class="interlink">prăjitor de</a> pâine pentru anumite lucruri.</p>
     <p class="mb-4"><strong>Folosește funcția de dezghetare inteligentă</strong>: Multe aparate au funcții de dezghetare bazate pe greutatea alimentului. Dacă le folosești corect, dezgheață uniform și rapid, fără să gătească pe margini.</p>
     <p class="mb-4"><strong>Testează programele automate</strong>: Nu te sfii să le încerci. Multe dintre ele sunt bine calibrate și îți pot salva timp și bătaie de cap.</p>
     
@@ -365,5 +378,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cuptor-cu-microunde-combinat"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

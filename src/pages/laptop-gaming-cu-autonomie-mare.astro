@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Laptop gaming cu autonomie mare: Mit sau realitate?</h2>
-    <p class="mb-4">Sincer, ideea de laptop gaming cu autonomie mare a sunat mult timp ca o utopie. Am testat nenumărate modele de-a lungul anilor, iar majoritatea se epuizau în 2-3 ore de utilizare normală, darămite în timpul unui joc solicitant. Totuși, producătorii au început să pună accent și pe acest aspect, iar rezultatele încep să se vadă. Am pus mâna pe câteva modele care chiar m-au surprins plăcut.</p>
+    <p class="mb-4">Sincer, ideea de <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">laptop gaming</a> cu autonomie mare a sunat mult timp ca o utopie. Am testat nenumărate modele de-a lungul anilor, iar majoritatea se epuizau în 2-3 ore de utilizare normală, darămite în timpul unui joc solicitant. Totuși, producătorii au început să pună accent și pe acest aspect, iar rezultatele încep să se vadă. Am pus mâna pe câteva modele care chiar m-au surprins plăcut.</p>
     <p class="mb-4">Într-adevăr, nu te aștepta la 8-10 ore de gaming intens pe baterie, asta e nerealist pentru componentele puternice. Dar există acum laptopuri care pot duce o zi de muncă, navigat pe net și chiar câteva sesiuni scurte de gaming mai puțin solicitant, fără să fie nevoie să cauți priza constant. Asta schimbă mult dinamica, mai ales pentru cei care călătoresc mult sau pur și simplu nu stau mereu la birou.</p>
     <p class="mb-4">Când vine vorba de autonomie, nu doar bateria contează, ci și eficiența componentelor și optimizarea software. Am observat că modelele cu procesoare mai noi, de exemplu cele din seria Intel Core Ultra sau AMD Ryzen 8000, tind să fie mai eficiente energetic. De asemenea, ecranele cu tehnologie OLED sau cele cu rate de refresh adaptabile pot face o diferență considerabilă.</p>
     
@@ -154,14 +167,14 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce înseamnă 'autonomie mare' pentru un laptop gaming?</h2>
     <p class="mb-4">Pentru mine, 'autonomie mare' la un laptop gaming înseamnă să pot să-l folosesc cel puțin 5-6 ore pentru sarcini obișnuite (navigare web, muncă de birou, vizionat filme) și să mai pot rula un joc mai vechi sau mai puțin pretențios pentru încă 1-2 ore. Asta e o performanță decentă, care îți oferă flexibilitate.</p>
-    <p class="mb-4">Am testat recent un ASUS ROG Zephyrus G16 (2024) cu procesor Intel Core Ultra 9 185H și ecran OLED. În mod normal, pe baterie, cu luminozitate la 50% și utilizare mixtă, am scos peste 7 ore. Asta e un salt uriaș față de generațiile anterioare. Pentru gaming, evident, cifrele scad dramatic, dar chiar și așa, am putut rula un titlu ca CS:GO pentru aproximativ 1.5 ore la setări medii, ceea ce e mai mult decât satisfăcător pentru o sesiune rapidă.</p>
+    <p class="mb-4">Am testat recent un ASUS ROG Zephyrus G16 (2024) cu procesor Intel Core Ultra 9 185H și ecran OLED. În mod normal, pe baterie, cu luminozitate la 50% și utilizare mixtă, am scos peste 7 ore. Asta e un salt uriaș față de generațiile anterioare. <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">Pentru gaming</a>, evident, cifrele scad dramatic, dar chiar și așa, am putut rula un titlu ca CS:GO pentru aproximativ 1.5 ore la setări medii, ceea ce e mai mult decât satisfăcător pentru o sesiune rapidă.</p>
     <p class="mb-4">Un alt aspect important este modul în care producătorul a implementat tehnologiile de economisire a energiei. Unele laptopuri au moduri de economisire agresive care pot afecta performanța în jocuri, altele au un echilibru mai bun. Am apreciat la modelele Lenovo Legion Slim faptul că poți ajusta fin profilurile de performanță și consum, astfel încât să obții un compromis bun.</p>
     
     
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele testate: ASUS, Lenovo și MSI în lupta pentru autonomie</h2>
-    <p class="mb-4">În ultimele luni, am pus la încercare câteva modele care promit mai multă libertate. ASUS ROG Zephyrus G16, menționat anterior, este un candidat serios. Varianta cu procesor Intel Core Ultra 9 185H și placă video NVIDIA GeForce RTX 4070 a demonstrat că se poate și gaming performant, și autonomie decentă. Prețul acestuia, în configurații similare, se învârte în jur de 9000-10000 RON pe eMAG sau PCGarage.</p>
+    <p class="mb-4">În ultimele luni, am pus la încercare câteva modele care promit mai multă libertate. ASUS ROG Zephyrus G16, menționat anterior, este un candidat serios. Varianta cu procesor Intel Core Ultra 9 185H și <a href="/placa-video-amd-performanta-ridicata/" class="interlink">placă video</a> NVIDIA GeForce RTX 4070 a demonstrat că se poate și gaming performant, și autonomie decentă. Prețul acestuia, în configurații similare, se învârte în jur de 9000-10000 RON pe eMAG sau PCGarage.</p>
     <p class="mb-4">Lenovo Legion Slim 7, echipat cu AMD Ryzen 7 7840HS și RTX 4060, a fost o altă surpriză. În teste de utilizare normală, a atins 6.5 ore, iar în jocuri mai puțin solicitante, a reușit să țină pasul cam 1.5 ore. Acest model îl găsești undeva la 6000-7000 RON, un raport interesant între performanță, autonomie și preț.</p>
     <p class="mb-4">Am testat și un MSI Stealth 16 Studio, cu un design mai subțire și componente puternice. Autonomia a fost comparabilă cu cea a lui ASUS, undeva spre 7 ore în utilizare mixtă, dar prețul sare peste 10.000 RON. Totuși, pentru cei care prioritizează portabilitatea și un design premium, merită luat în calcul. Găsești variante pe Altex și Flanco.</p>
     
@@ -171,7 +184,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice: Cum să maximizezi autonomia laptopului tău de gaming</h2>
     <p class="mb-4">Primul lucru pe care îl fac imediat ce deschid un laptop nou, mai ales unul de gaming, este să verific setările de baterie. Reducerea luminozității ecranului la un nivel confortabil este esențială. Nu ai nevoie de 100% luminozitate în casă, iar asta consumă enorm. De asemenea, dezactivarea tastaturii iluminate sau setarea ei la un nivel minim ajută.</p>
     <p class="mb-4">Utilizează modurile de economisire a energiei oferite de sistemul de operare sau de producător. Pe Windows, poți selecta modul 'Echilibrat' sau chiar 'Economisire energie' când nu joci. La fel de important este să dezactivezi aplicațiile care rulează în background și nu ai nevoie de ele. Am observat că multe programe de update sau servicii de sincronizare consumă resurse și baterie constant.</p>
-    <p class="mb-4">Pentru gaming, e clar că vei fi conectat la priză. Dar dacă vrei să te joci ceva mai vechi sau mai puțin solicitant, setează placa video dedicată (NVIDIA sau AMD) să nu fie activă dacă nu e necesar. Folosește placa video integrată a procesorului. Multe laptopuri moderne au tehnologii care fac asta automat, dar uneori e bine să verifici în setările NVIDIA Control Panel sau AMD Radeon Software. Un alt truc este să folosești un profil de performanță mai redus în jocuri dacă nu ai nevoie de tot ce poate placa video.</p>
+    <p class="mb-4"><a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">Pentru gaming</a>, e clar că vei fi conectat la priză. Dar dacă vrei să te joci ceva mai vechi sau mai puțin solicitant, setează placa video dedicată (NVIDIA sau AMD) să nu fie activă dacă nu e necesar. Folosește placa video integrată a procesorului. Multe laptopuri moderne au tehnologii care fac asta automat, dar uneori e bine să verifici în setările NVIDIA Control Panel sau AMD Radeon Software. Un alt truc este să folosești un profil de performanță mai redus în jocuri dacă nu ai nevoie de tot ce poate placa video.</p>
     
     
   </section>
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="laptop-gaming-cu-autonomie-mare"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

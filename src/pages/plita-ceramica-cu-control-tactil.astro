@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,17 +158,17 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Plita ceramică cu control tactil: prima impresie și ce am descoperit</h2>
-    <p class="mb-4">Am montat recent o plită ceramică cu control tactil în bucătăria mea, o schimbare majoră față de vechea plită pe gaz. Prima impresie a fost una de modernitate și minimalism. Suprafața netedă, fără butoane fizice, dă un aer futurist oricărei bucătării. Controlul tactil, deși inițial puțin intimidant, s-a dovedit a fi intuitiv odată ce te obișnuiești cu el.</p>
+    <p class="mb-4">Am montat recent o plită ceramică <a href="/stabilizator-video-cu-control-automat/" class="interlink">cu control</a> tactil în bucătăria mea, o schimbare majoră față de vechea plită pe gaz. Prima impresie a fost una de modernitate și minimalism. Suprafața netedă, fără butoane fizice, dă un aer futurist oricărei bucătării. Controlul tactil, deși inițial puțin intimidant, s-a dovedit a fi intuitiv odată ce te obișnuiești cu el.</p>
     <p class="mb-4">Am testat modele de la producători cunoscuți precum Bosch, Electrolux și chiar o variantă mai accesibilă de la Beko. Fiecare a avut un sistem tactil ușor diferit, dar principiul de bază a rămas același: atingere sau glisare pentru controlul temperaturii și al funcțiilor. Am observat că răspunsul la atingere este rapid și precis, fără întârzieri frustrante.</p>
-    <p class="mb-4">În experiența mea, curățarea este un avantaj major. Fără spații unde să se adune grăsimea sau resturile de mâncare, o simplă ștergere cu o lavetă umedă este suficientă. Acest aspect a fost un factor decisiv pentru mine, având o familie numeroasă și puțin timp la dispoziție pentru curățenie.</p>
+    <p class="mb-4">În <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experiența</a> mea, curățarea este un avantaj major. Fără spații unde să se adune grăsimea sau resturile de mâncare, o simplă ștergere cu o lavetă umedă este suficientă. Acest aspect a fost un factor decisiv pentru mine, având o familie numeroasă și puțin timp la dispoziție pentru curățenie.</p>
     <p class="mb-4">Siguranța este un alt punct forte. Majoritatea modelelor au funcție de blocare pentru copii și indicator de căldură reziduală, elemente esențiale într-o gospodărie cu copii mici. Am testat și funcția de oprire automată, care se activează dacă lichidul fierbe și ajunge pe suprafața de control sau dacă plita este lăsată nesupravegheată pentru un timp îndelungat.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum funcționează controlul tactil: dincolo de atingere</h2>
-    <p class="mb-4">Controlul tactil pe o plită ceramică se bazează pe senzori capacitiv care detectează prezența și mișcarea degetului tău. Aceste suprafețe din sticlă-ceramică sunt rezistente la zgârieturi și la șocurile termice, ceea ce le face durabile în timp. Simbolurile sunt de obicei integrate direct în suprafață și iluminate, devenind vizibile doar când plita este activată.</p>
-    <p class="mb-4">Am observat că există două tipuri principale de control tactil: butoane virtuale statice și control prin glisare (slider). Modelele mai avansate, cum ar fi cele de la Siemens sau Neff, folosesc un sistem de glisare care permite ajustarea precisă a temperaturii prin simpla mișcare a degetului pe o scală. Este o experiență mult mai fluidă și mai rapidă decât apăsarea repetată a unor butoane.</p>
+    <p class="mb-4">Controlul tactil pe o plită ceramică se bazează pe senzori capacitiv care detectează prezența și mișcarea degetului tău. Aceste suprafețe din sticlă-ceramică sunt <a href="/boxe-outdoor-rezistente-la-ploaie/" class="interlink">rezistente la</a> zgârieturi și la șocurile termice, ceea ce le face durabile în timp. Simbolurile sunt de obicei integrate direct în suprafață și iluminate, devenind vizibile doar când plita este activată.</p>
+    <p class="mb-4">Am observat că există două tipuri principale de control tactil: butoane <a href="/camera-360-pentru-tururi-virtuale/" class="interlink">virtuale</a> statice și control prin glisare (slider). Modelele mai avansate, cum ar fi cele de la Siemens sau Neff, folosesc un sistem de glisare care permite ajustarea precisă a temperaturii prin simpla mișcare a degetului pe o scală. Este o experiență mult mai fluidă și mai rapidă decât apăsarea repetată a unor butoane.</p>
     <p class="mb-4">În general, plitele ceramice cu control tactil oferă o gamă largă de setări de temperatură, de la cele mai joase pentru menținerea la cald, până la cele de top pentru fierbere rapidă. Unele modele, precum cele de la Whirlpool, au chiar funcții speciale precum "Booster" pentru a accelera procesul de încălzire.</p>
     <p class="mb-4">Este important să reții că, spre deosebire de butoanele fizice, controlul tactil poate fi uneori mai puțin receptiv dacă degetele sunt ude sau murdare. De aceea, recomandarea mea este să te asiguri că suprafața de control este uscată și curată înainte de a o utiliza.</p>
     
@@ -294,5 +307,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="plita-ceramica-cu-control-tactil"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

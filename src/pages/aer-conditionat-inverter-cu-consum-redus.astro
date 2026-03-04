@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -177,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum sa alegi cel mai bun aer conditionat inverter cu consum redus</h2>
-    <p class="mb-4">Stai sa vezi, cand vine vorba de un <strong>aer conditionat inverter cu consum redus</strong>, nu e chiar atat de complicat pe cat pare. In primul rand, uita de ce auzeai acum 10 ani. Tehnologia inverter a evoluat enorm. Practic, astea nu mai pornesc la putere maxima si apoi se opresc brusc, ca alea vechi. Alea inverter merg constant, isi regleaza singure puterea ca sa mentina temperatura dorita. Asta inseamna un consum mult mai mic si un confort mult mai mare, fara batai de cap.</p>
+    <p class="mb-4">Stai sa vezi, cand vine vorba de un <strong>aer conditionat inverter cu consum redus</strong>, nu e chiar atat de complicat pe cat pare. In primul rand, uita de ce auzeai acum 10 ani. Tehnologia inverter a evoluat enorm. Practic, astea nu mai pornesc la putere maxima si apoi se opresc brusc, ca alea vechi. Alea inverter merg constant, isi regleaza singure puterea ca sa mentina <a href="/senzor-temperatura-si-umiditate-smart/" class="interlink">temperatura</a> dorita. Asta inseamna un consum mult mai mic si un confort mult mai mare, fara batai de cap.</p>
     <p class="mb-4">Pe bune, daca ma intrebi pe mine, cel mai important e sa te uiti la eticheta energetica. Cauta clasa A+++. Asta e standardul de aur pentru eficienta. Dar nu te opri aici. Verifica si valorile SEER (pentru racire) si SCOP (pentru incalzire). Un SEER peste 7 si un SCOP peste 4 sunt semne bune ca ai un aparat care chiar economiseste curent. Am vazut modele cu SEER 8 sau chiar 9, alea sunt rachete pe partea de eficienta.</p>
     <p class="mb-4">Apoi, gândește-te la suprafața camerei. Nu are rost sa iei un aparat de 24.000 BTU pentru un dormitor de 10mp. O sa consume inutil si o sa porneasca si se opreasca mai mult decat ar trebui, chiar daca e inverter. In general, pentru o camera de 15-20mp, un 9.000 BTU e suficient. Pentru 25-30mp, mergi pe 12.000 BTU. Ai grija sa nu subdimensionezi, ca o sa il chinui si o sa consume mai mult decat ar trebui.</p>
     <p class="mb-4">Acum, daca vrei un <strong>aer conditionat inverter cu consum redus</strong>, trebuie sa stii si ca pretul initial e un pic mai mare decat la cele non-inverter. Dar diferenta se vede pe factura de curent, crede-ma. Am avut un amic care si-a luat un inverter acum 3 ani si mi-a zis ca a simtit diferenta la prima factura de vara. Nu e mult, dar e vizibil. Si mai ales ca vara asta a fost canicula, a tinut aparatoarea legata multe ore.</p>
@@ -196,9 +209,9 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sa cauti la un aer conditionat inverter cu consum redus: ghidul meu pe intelesul tuturor</h2>
     <p class="mb-4">Bun, stai să-ți zic clar ce să urmărești ca să nu te păcălești când cauți un <strong>aer conditionat inverter cu consum redus</strong>. Nu e rocket science, dar sunt câteva chestii esențiale.</p><h3>Clasa Energetică și Valorile SEER/SCOP</h3><p>Asta am zis și mai sus, dar merită repetat. Clasa A+++ este ideală. Asta înseamnă că aparatul e proiectat să consume cât mai puțin curent.</p>
         <p>Dar nu te opri aici. Verifică și valorile SEER (Seasonal Energy Efficiency Ratio) pentru mod de răcire și SCOP (Seasonal Coefficient of Performance) pentru mod de încălzire. Cu cât numerele astea sunt mai mari, cu atât e mai bine.</p>
-        <p>Caută un SEER peste 7 și un SCOP peste 4. Un aparat cu SEER 8.5 (cum e Daikinul de mai sus) e mult mai eficient decât unul cu SEER 6.1 (cum e LG-ul entry-level).</p><h3>Capacitatea (BTU)</h3><p>Ăsta e un punct critic unde multă lume greșește. Aleg un aparat prea mare sau prea mic. Un aparat prea mare pentru cameră o să pornească și se va opri des, chiar dacă e inverter, nu va funcționa la eficiență maximă.</p>
+        <p>Caută un SEER peste 7 și un SCOP peste 4. Un aparat cu SEER 8.5 (cum e Daikinul de mai sus) e mult mai eficient decât unul cu SEER 6.1 (cum e LG-ul entry-level).</p><h3>Capacitatea (BTU)</h3><p>Ăsta e un punct critic unde multă lume greșește. Aleg un aparat prea mare sau prea mic. Un aparat prea <a href="/mousepad-extra-mare-pentru-setup-profesionist/" class="interlink">mare pentru</a> cameră o să pornească și se va opri des, chiar dacă e inverter, nu va funcționa la eficiență maximă.</p>
         <p>Un aparat prea mic va sta mereu la putere maximă încercând să răcească/încălzească, și tot nu va atinge temperatura dorită. Regula generală e cam așa: pentru 10-15 mp, 7.000-9.000 BTU; pentru 15-25 mp, 9.000-12.000 BTU; pentru 25-35 mp, 12.000-15.000 BTU. Totuși, ia în considerare și izolația camerei, numărul de ferestre, expunerea la soare și câți oameni stau de obicei în cameră.</p>
-        <p>Mai bine ceri sfatul unui instalator, sincer.</p><h3>Nivelul de Zgomot</h3><p>Mai ales dacă îl iei pentru dormitor sau sufragerie unde stai mult, nivelul de zgomot e important. Se măsoară în decibeli (dB). Caută unități interioare cu un nivel de zgomot cât mai mic, ideal sub 20 dB în modul silențios (unii producători zic și 17-18 dB, dar aia e la limită). Unitatea exterioară e normal să fie un pic mai gălăgioasă, dar și aici, caută valori sub 50-55 dB. Am avut un aparat vechi care făcea cât un avion la decolare, nu dormeam o clipă.</p><h3>Funcții Suplimentare (dar utile)</h3><p>Acum, astea nu neapărat cresc sau scad consumul direct, dar pot adăuga la confort și pot face aparatul să funcționeze mai inteligent. Vorbim de:</p><ul><li><strong>Modul Auto/Smart</strong>: Aparatul își ajustează singur puterea în funcție de condițiile din cameră.</li><li><strong>Senzori de Prezență</strong>: Detectează dacă e cineva în cameră și ajustează fluxul de aer sau chiar intră în stand-by dacă nu e nimeni.</li><li><strong>Control Wi-Fi</strong>: Permite să controlezi aparatul de pe telefon, de oriunde. Utile ca să îl pornești înainte să ajungi acasă sau să îl oprești dacă ai uitat.</li><li><strong>Filtrare Avansată</strong>: Filtre cu ioni, HEPA, etc. Utile dacă ai probleme cu alergiile sau vrei aer mai curat.</li></ul><h3>Brandul și Garanția</h3><p>Alegerea unui brand cu reputație bună (Daikin, Mitsubishi, Panasonic, Fujitsu, LG, Samsung) îți oferă o siguranță mai mare. Caută și garanția oferită. Mulți producători oferă garanție extinsă la compresor (adesea 5-10 ani), ceea ce e un mare plus pentru un <strong>aer conditionat inverter cu consum redus</strong>, pentru că compresorul e piesa cea mai scumpă.</p>
+        <p>Mai bine ceri sfatul unui instalator, sincer.</p><h3>Nivelul de Zgomot</h3><p>Mai ales dacă îl iei pentru dormitor sau sufragerie unde stai mult, nivelul de zgomot e important. Se măsoară în decibeli (dB). Caută unități interioare cu un nivel de zgomot cât mai mic, ideal sub 20 dB în modul silențios (unii producători zic și 17-18 dB, dar aia e la limită). Unitatea exterioară e normal să fie un pic mai gălăgioasă, dar și aici, caută valori sub 50-55 dB. Am avut un aparat vechi care făcea cât un avion la decolare, nu dormeam o clipă.</p><h3>Funcții Suplimentare (dar utile)</h3><p>Acum, astea nu neapărat cresc sau scad consumul direct, dar pot adăuga la confort și pot face aparatul să funcționeze mai inteligent. Vorbim de:</p><ul><li><strong>Modul Auto/Smart</strong>: Aparatul își ajustează singur puterea în funcție de condițiile din cameră.</li><li><strong>Senzori de Prezență</strong>: Detectează dacă e cineva în cameră și ajustează fluxul de aer sau chiar intră în stand-by dacă nu e nimeni.</li><li><strong>Control Wi-Fi</strong>: Permite să controlezi aparatul de <a href="/sirena-smart-cu-notificari-pe-telefon/" class="interlink">pe telefon</a>, de oriunde. Utile ca să îl pornești înainte să ajungi acasă sau să îl oprești dacă ai uitat.</li><li><strong>Filtrare Avansată</strong>: Filtre cu ioni, HEPA, etc. Utile dacă ai probleme cu alergiile sau vrei aer mai curat.</li></ul><h3>Brandul și Garanția</h3><p>Alegerea unui brand cu reputație bună (Daikin, Mitsubishi, Panasonic, Fujitsu, LG, Samsung) îți oferă o siguranță mai mare. Caută și garanția oferită. Mulți producători oferă garanție extinsă la compresor (adesea 5-10 ani), ceea ce e un mare plus pentru un <strong>aer conditionat inverter cu consum redus</strong>, pentru că compresorul e piesa cea mai scumpă.</p>
     <p class="mb-4">Na, asta e. Dacă bifezi punctele astea, ai șanse mari să alegi un aparat bun și eficient.</p>
     
     
@@ -209,7 +222,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Să luăm un model echivalent de la fiecare, să zicem pentru o cameră de 20-25mp. Un Daikin Perfera (FTXM25R/RXM25R) și un Mitsubishi Electric MSZ-AY25VGK/MUZ-AY25VG. Prețurile sunt, sincer, cam pe aceeași plajă, undeva între 2800 și 3500 lei, depinde de ofertă și unde cumperi.</p>
     <p class="mb-4"><strong>Eficienta Energetica</strong></p>
     <p class="mb-4">Aici sunt foarte, foarte aproape. Daikinul are un SEER de 8.5 și SCOP 4.6. Mitsubishi Electric are un SEER de 8.4 și SCOP 4.5. Diferența e infimă, practic neglijabilă în consumul real lunar. Ambele sunt A+++ pe racire si incalzire. Deci, pe partea de economie de curent, e egalitate.</p>
-    <p class="mb-4"><strong>Performanta si Confort</strong></p>
+    <p class="mb-4"><strong><a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">Performanta</a> si Confort</strong></p>
     <p class="mb-4">Aici încep să apară subtilitățile. Daikinul, în seria Perfera, excelează la silențiozitate. Am măsurat personal, unitatea interioară e practic inexistentă sub 20 dB. Compresorul e super fin, abia îl auzi. Mitsubishi Electric e și el foarte silențios, dar poate la viteze mai mari, când face treabă mai grea, se simte un pic mai mult. Ambele mențin temperatura constant, dar unii zic că Mitsubishi are un control un pic mai fin al temperaturii, abaterile fiind minime. Ambele au sisteme de filtrare bune. Daikin folosește tehnologie Flash Streamer, Mitsubishi are filtre cu enzimă.</p>
     <p class="mb-4"><strong>Durabilitate si Fiabilitate</strong></p>
     <p class="mb-4">Aici e greu de zis cine e mai bun. Ambele sunt construite ca tancurile. Am văzut aparate Mitsubishi Electric care funcționau impecabil și după 15 ani. Daikin are și el o reputație solidă. Dacă ar fi să dau un ban pe asta, aș zice că Mitsubishi are un mic avantaj în percepția generală a durabilității pe termen foarte lung, dar diferența e mică. Ambele oferă garanții extinse la compresor, ceea ce arată încrederea producătorilor.</p>
@@ -387,5 +400,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="aer-conditionat-inverter-cu-consum-redus"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

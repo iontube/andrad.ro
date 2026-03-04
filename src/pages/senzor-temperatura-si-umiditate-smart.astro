@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -192,7 +205,7 @@ import Layout from '../layouts/Layout.astro';
         <h3>1. Aqara TH-2 (varianta imbunatatita)</h3>
         <p>Despre asta am zis deja. E un <strong>senzor temperatură și umiditate smart</strong> de buget, dar performant.  Il gasesti cam pe la 70-90 lei.  Avantaje: pret mic, precizie buna, baterie lunga, integrare Bluetooth cu hub-uri Aqara/Xiaomi. Dezavantaje: Necesita hub pentru conectare la retea, integrarea cu alte ecosisteme (Alexa, Google) poate fi un pic mai complicata.</p>
         <h3>2. Xiaomi Mi Temperature and Humidity Monitor 2</h3>
-        <p>Practic, fratele geaman al Aqara TH-2, dar uneori e mai greu de gasit pe stoc. Pret similar, cam 60-80 lei. Functioneaza la fel, tot pe Bluetooth si necesita hub. Avantaje: Identice cu Aqara, poate e un pic mai usor de integrat in ecosistemul Xiaomi daca deja il ai. Dezavantaje: La fel, necesita hub, disponibilitate fluctuanta.</p>
+        <p>Practic, fratele geaman al Aqara TH-2, dar uneori e mai greu de gasit pe stoc. Pret similar, cam 60-80 lei. Functioneaza la fel, tot pe <a href="/receiver-audio-cu-bluetooth-si-wi-fi/" class="interlink">Bluetooth si</a> necesita hub. Avantaje: Identice cu Aqara, poate e un pic mai usor de integrat in ecosistemul Xiaomi daca deja il ai. Dezavantaje: La fel, necesita hub, disponibilitate fluctuanta.</p>
         <h3>3. Eve Room (pentru fanii Apple HomeKit)</h3>
         <p>Asta e pentru cei care au investit serios in Apple HomeKit. Eve Room e un <strong>senzor temperatură și umiditate smart</strong> premium. Pretul sare de 300 lei, deci nu e de aruncat. Avantaje: Conectivitate Thread/Bluetooth, integrare perfecta cu HomeKit (fara hub necesar daca ai Apple TV sau HomePod), design elegant, ecran mic integrat care arata valorile. Dezavantaje: Pretul e mare, nu e pentru oricine. Pentru mine, display-ul e un pic inutil, ca oricum ma uit pe telefon.</p>
         <h3>4. Sensorul de la Tuya / Smart Life (cu ecran)</h3>
@@ -209,7 +222,7 @@ import Layout from '../layouts/Layout.astro';
         <p>Asta e cea mai mare diferenta. Modelele ieftine, gen Aqara TH-2 sau Xiaomi Mi 2, folosesc Bluetooth. Asta inseamna ca ai nevoie de un 'hub' – un dispozitiv central (de la Aqara, Xiaomi, etc.) care preia datele de la senzori si le trimite pe internet.</p>
         <p>Avantajul e ca nu-ti aglomerezi reteaua Wi-Fi. Dezavantajul e ca mai cumperi inca un aparat. Modelele cu Wi-Fi direct se conecteaza direct la routerul tau.</p>
         <p>E mai simplu, nu mai ai nevoie de hub. Perfect daca iei doar 1-2 senzori. Dezavantajul e ca mai aglomerezi routerul si daca ai semnal slab in anumData, s-ar putea sa ai probleme.</p>
-        <p>Zigbee si Thread sunt standarde mai avansate, folosite de producatori ca Philips Hue sau Eve. Ele sunt mai eficiente energetic si mai stabile, dar de obicei sunt mai scumpe si necesita un hub compatibil (gen pontul de la Philips Hue sau un HomePod/Apple TV pentru Thread). Daca vrei sa construiesti un sistem smart home solid pe termen lung, merita sa te uiti la asta.</p>
+        <p>Zigbee si Thread sunt standarde mai avansate, folosite de producatori ca Philips Hue sau Eve. Ele sunt mai eficiente energetic si mai stabile, dar de obicei sunt mai scumpe si necesita un hub compatibil (gen pontul de la Philips Hue sau un HomePod/Apple TV pentru Thread). Daca vrei sa construiesti un <a href="/sistem-smart-pentru-iluminat-gradina/" class="interlink">sistem smart</a> home solid pe termen lung, merita sa te uiti la asta.</p>
         <h3>Precizia conteaza (dar nu exagera)</h3>
         <p>Pentru uz casnic, o abatere de 0.5-1 grad Celsius la temperatura si 3-5% la umiditate e absolut OK. Nu ai nevoie de precizie de laborator. Am vazut senzori care promit 0.1 grade, dar sincer, pe langa faptul ca sunt scumpi, nu te ajuta cu nimic in viata de zi cu zi. Cauta modele cu review-uri bune la capitolul precizie. Si o chestie: daca senzorul e langa o sursa de caldura sau in bataia directa a soarelui, normal ca nu va arata corect. Pune-l unde trebuie!</p>
         <h3>Autonomie si tipul bateriei</h3>
@@ -227,7 +240,7 @@ import Layout from '../layouts/Layout.astro';
         <h3>Aqara TH-2 (pret ~75 lei + hub ~150 lei)</h3>
         <p><strong>Cum functioneaza:</strong> Se conecteaza prin Bluetooth la un hub Aqara/Xiaomi. Hub-ul preia datele si le trimite pe internet. Ai nevoie de aplicatia Aqara Home pentru a vedea valorile si a configura automatizari.
 <strong>Avantaje:</strong></p>
-        <ul><li>Pret per senzor mic.</li><li>Consum redus de baterie (2-3 ani).</li><li>Nu aglomereaza reteaua Wi-Fi.</li><li>Sistem stabil daca ai deja hub-ul sau planuiesti sa iei mai multe dispozitive Aqara/Xiaomi.</li><li>Integrare buna cu Apple HomeKit prin hub.</li></ul>
+        <ul><li>Pret per senzor mic.</li><li><a href="/aer-conditionat-inverter-cu-consum-redus/" class="interlink">Consum redus</a> de baterie (2-3 ani).</li><li>Nu aglomereaza reteaua Wi-Fi.</li><li>Sistem stabil daca ai deja hub-ul sau planuiesti sa iei mai multe dispozitive Aqara/Xiaomi.</li><li>Integrare buna cu Apple HomeKit prin hub.</li></ul>
         <p><strong>Dezavantaje:</strong></p>
         <ul><li>Necesita achizitionarea unui hub.</li><li>Configurarea initiala poate fi un pic mai complicata daca nu esti familiarizat cu aplicatia.</li><li>Integrarea cu Google Home/Alexa e posibila, dar nu la fel de directa ca la alte sisteme.</li></ul>
         <h3>Senzor Tuya/Smart Life cu Wi-Fi direct (pret ~120 lei)</h3>
@@ -263,7 +276,7 @@ import Layout from '../layouts/Layout.astro';
         <h3>Buget mare (peste 200 lei pentru senzor)</h3>
         <p>Aici vorbim de produse premium, de obicei pentru cei care sunt deja in ecosisteme smart home mai avansate sau vor cea mai buna experienta. Cel mai bun exemplu e <strong>Eve Room</strong>, daca esti in lumea Apple HomeKit. Se conecteaza prin Thread, deci nu ai nevoie de hub daca ai un HomePod sau Apple TV.</p>
         <p>Are un design elegant si un ecran e-ink dragut. Precizia e excelenta. Altceva bun ar fi senzori Zigbee de la producatori consacrati (gen Aeotec), dar aici deja vorbim de un ecosistem mai complex si probabil un hub dedicat.</p>
-        <p>Practic, daca bugetul e mic, mergi pe Aqara/Xiaomi si ia in calcul si costul hub-ului. Daca vrei simplitate Wi-Fi direct, cauta pe Tuya cu atentie. Daca ai buget si vrei performanta si integrare premium (mai ales in Apple HomeKit), atunci Eve sau alti producatori high-end sunt optiunile.</p>
+        <p>Practic, daca bugetul e mic, mergi pe Aqara/Xiaomi si ia in calcul si costul hub-ului. Daca vrei simplitate Wi-Fi direct, cauta pe Tuya cu atentie. Daca ai buget si vrei <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanta</a> si integrare premium (mai ales in Apple HomeKit), atunci Eve sau alti producatori high-end sunt optiunile.</p>
     
   </section>
 
@@ -407,5 +420,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="senzor-temperatura-si-umiditate-smart"
+      currentCategory="smart-home"
+      articles={allArticles}
+    />
   </article>
 </Layout>

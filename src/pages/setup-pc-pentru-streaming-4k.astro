@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -166,7 +179,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Procesorul: Creierul Operațiunii</h2>
-    <p class="mb-4">Atunci când vine vorba de un setup PC pentru streaming 4K, procesorul (CPU) este, fără îndoială, unul dintre cele mai critice elemente. Acesta nu doar că rulează sistemul de operare și aplicațiile, dar gestionează și sarcini complexe precum encodarea fluxului video în timp real, mai ales dacă nu te bazezi exclusiv pe placa video pentru această sarcină. Un CPU cu un număr mare de nuclee și thread-uri, cum ar fi cele din seriile Intel Core i7/i9 sau AMD Ryzen 7/9, va face o diferență enormă în performanța generală și în capacitatea de multitasking. </p>
+    <p class="mb-4">Atunci când vine vorba de un setup PC pentru streaming 4K, procesorul (CPU) este, fără îndoială, unul dintre cele mai critice elemente. Acesta nu doar că rulează sistemul de operare și aplicațiile, dar gestionează și sarcini complexe precum encodarea fluxului video în timp real, mai ales dacă nu te bazezi exclusiv pe placa video pentru această sarcină. Un CPU cu un număr mare de nuclee și thread-uri, cum ar fi cele din seriile Intel Core i7/i9 sau AMD Ryzen 7/9, va face o diferență enormă în <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanța</a> generală și în capacitatea de multitasking. </p>
     <p class="mb-4">Pentru streaming 4K, recomandăm procesoare cu cel puțin 8 nuclee fizice și 16 thread-uri. Procesoare precum Intel Core i9-13900K sau AMD Ryzen 9 7950X oferă o putere de procesare brută impresionantă, esențială pentru a gestiona simultan jocuri solicitante și software de streaming, cum ar fi OBS Studio sau Streamlabs. Aceste procesoare pot face față cu brio chiar și sarcinilor de encoding prin CPU (x264), oferind o calitate vizuală superioară, deși cu un consum mai mare de resurse. </p>
     <p class="mb-4">Este important să iei în considerare și viitorul. Un procesor mai puternic astăzi va asigura că setup-ul tău PC pentru streaming 4K rămâne relevant pentru mai mult timp. De asemenea, dacă intenționezi să rulezi jocuri foarte intensive în CPU, cum ar fi simulatoarele complexe sau jocurile de strategie în timp real, un procesor de top devine și mai necesar. Nu uita să verifici compatibilitatea procesorului cu placa de bază pe care o alegi, deoarece socket-urile diferă între generații și producători. </p>
     <p class="mb-4">Un aspect adesea neglijat este răcirea procesorului. Componentele de înaltă performanță generează multă căldură, iar un sistem de răcire eficient, fie că vorbim de un cooler pe aer performant (ex: Noctua NH-D15) sau un sistem de răcire pe lichid (AIO - All-In-One), este esențial pentru a menține temperaturile sub control și a preveni thermal throttling-ul, care ar degrada performanța setup-ului PC pentru streaming 4K.</p>
@@ -176,7 +189,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Placa Video: Inima Vizuală a Streamingului 4K</h2>
     <p class="mb-4">Placa video (GPU) este, probabil, cea mai importantă componentă atunci când vorbim despre un setup PC pentru streaming 4K, mai ales dacă intenționezi să folosești encodarea hardware (NVENC pentru NVIDIA, AMF pentru AMD). Aceasta nu doar că asigură rularea fluidă a jocurilor la rezoluție 4K cu setări grafice ridicate, dar este și responsabilă pentru procesarea și compresia fluxului video pe care îl transmiți. O placă video puternică reduce semnificativ sarcina pe procesor, permițându-i acestuia să se concentreze pe alte sarcini. </p>
-    <p class="mb-4">Pentru streaming 4K, recomandăm plăci video din gama superioară, cum ar fi seria NVIDIA GeForce RTX 4070 Ti, RTX 4080 sau RTX 4090, sau echivalentele AMD Radeon RX 7900 XT/XTX. Aceste plăci video dispun de nuclee dedicate pentru encodare video (NVENC), care sunt mult mai eficiente și produc o calitate a imaginii superioară la un consum de resurse mai mic comparativ cu encodarea prin CPU. Tehnologia NVENC de la NVIDIA, în special, este recunoscută pentru performanța sa excelentă în streaming. </p>
+    <p class="mb-4">Pentru streaming 4K, recomandăm plăci video din gama superioară, cum ar fi seria NVIDIA GeForce RTX 4070 Ti, RTX 4080 sau RTX 4090, sau echivalentele AMD Radeon RX 7900 XT/XTX. Aceste plăci video dispun de nuclee dedicate pentru encodare video (NVENC), care sunt mult mai eficiente și produc o calitate a imaginii superioară la un consum de resurse mai mic comparativ cu encodarea prin CPU. Tehnologia NVENC de la NVIDIA, în special, este recunoscută <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">pentru performanța</a> sa excelentă în streaming. </p>
     <p class="mb-4">Memoria VRAM a plăcii video este, de asemenea, crucială pentru streaming 4K. Jocuri rulate la rezoluție 4K și cu texturi de înaltă calitate pot consuma rapid memoria video. Recomandăm minim 12GB VRAM, ideal 16GB sau chiar 20GB+ pe plăci precum RTX 4080 sau RTX 4090, pentru a te asigura că ai suficient spațiu pentru texturi, frame buffering și alte sarcini. Un setup PC pentru streaming 4K trebuie să fie echilibrat, iar placa video joacă un rol central în acest echilibru. </p>
     <p class="mb-4">Este important de menționat că driverele plăcii video sunt o componentă esențială a performanței. Asigură-te că îți ții driverele la zi pentru a beneficia de cele mai recente optimizări și corecții de bug-uri, care pot îmbunătăți semnificativ experiența de gaming și streaming. Alegerea unei plăci video pentru un setup PC pentru streaming 4K este o decizie pe termen lung, așa că merită să investești în ceva ce îți va oferi performanță și calitate pentru anii următori.</p>
     
@@ -194,9 +207,9 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Stocarea: Viteza și Spațiul Necesar</h2>
     <p class="mb-4">În era streamingului 4K și a jocurilor cu grafică din ce în ce mai avansată, stocarea rapidă și spațiul generos sunt esențiale. Un setup PC pentru streaming 4K are nevoie de SSD-uri (Solid State Drives) pentru sistemul de operare, aplicații și jocurile pe care le joci frecvent, pentru a reduce timpii de încărcare și a asigura o experiență fluidă. Viteza de citire/scriere a unui SSD NVMe, în special, poate face o diferență notabilă. </p>
-    <p class="mb-4">Recomandăm un SSD NVMe PCIe Gen 4 sau chiar Gen 5 (dacă placa de bază suportă) cu o capacitate de cel puțin 1TB pentru sistemul de operare și aplicațiile de bază. Aceste unități oferă viteze de transfer de până la 7000 MB/s sau chiar mai mult, permițând încărcarea instantanee a sistemului și a aplicațiilor. Pentru jocuri, un SSD de 2TB sau mai mare este ideal, deoarece titlurile moderne, mai ales cele cu texturi 4K, pot ocupa zeci sau chiar sute de gigabytes. </p>
+    <p class="mb-4">Recomandăm un SSD NVMe PCIe Gen 4 sau chiar Gen 5 (dacă placa de bază suportă) cu o capacitate de cel puțin 1TB pentru sistemul de operare și aplicațiile de bază. Aceste unități oferă viteze de transfer de până la 7000 MB/s sau chiar mai mult, permițând încărcarea instantanee a sistemului și a aplicațiilor. <a href="/ssd-nvme-rapid-pentru-jocuri/" class="interlink">Pentru jocuri</a>, un SSD de 2TB sau mai mare este ideal, deoarece titlurile moderne, mai ales cele cu texturi 4K, pot ocupa zeci sau chiar sute de gigabytes. </p>
     <p class="mb-4">Pe lângă SSD-ul principal, ar putea fi necesar un spațiu de stocare suplimentar pentru înregistrările de streaming 4K. Fișierele video brute la rezoluție 4K, cu bitrate ridicat, pot deveni rapid foarte mari. Un HDD (Hard Disk Drive) de mare capacitate (ex: 4TB, 8TB sau chiar mai mult) sau un al doilea SSD SATA/NVMe poate fi o soluție excelentă pentru arhivarea acestor înregistrări. Un setup PC pentru streaming 4K trebuie să anticipeze nevoile de stocare, atât pentru performanță, cât și pentru conținutul generat. </p>
-    <p class="mb-4">Consideră un sistem de stocare stratificat: un SSD NVMe rapid pentru sistem și jocuri, și un HDD sau SSD mai mare pentru stocarea fișierelor mari, cum ar fi înregistrările video. Acest lucru oferă un echilibru între viteză și capacitate, optimizând costurile și performanța pentru setup-ul tău PC pentru streaming 4K. Nu uita să verifici numărul de sloturi M.2 și porturile SATA disponibile pe placa de bază pentru a planifica corect configurația de stocare.</p>
+    <p class="mb-4">Consideră un sistem de stocare stratificat: un SSD NVMe rapid pentru sistem și jocuri, și un HDD sau SSD mai mare pentru stocarea fișierelor mari, cum ar fi înregistrările video. Acest lucru oferă un echilibru între viteză și capacitate, optimizând costurile și performanța <a href="/mousepad-extra-mare-pentru-setup-profesionist/" class="interlink">pentru setup</a>-ul tău PC pentru streaming 4K. Nu uita să verifici numărul de sloturi M.2 și porturile SATA disponibile pe placa de bază pentru a planifica corect configurația de stocare.</p>
     
     
   </section>
@@ -332,5 +345,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="setup-pc-pentru-streaming-4k"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

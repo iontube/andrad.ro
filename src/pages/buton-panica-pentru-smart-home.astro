@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -177,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce buton de panică smart home să cumperi ca să nu regreți</h2>
-    <p>Uite care-i treaba cu <strong>butonul de panică pentru smart home</strong>. Nu e chiar un buton pe care apeși și gata, ai salvat situația ca-n filme. E mai mult o piesă dintr-un puzzle mult mai mare, parte din sistemul tău smart.</p>
+    <p>Uite care-i treaba cu <strong>butonul de panică pentru <a href="/aspirator-robot-integrat-smart-home/" class="interlink">smart home</a></strong>. Nu e chiar un buton pe care apeși și gata, ai salvat situația ca-n filme. E mai mult o piesă dintr-un puzzle mult mai mare, parte din sistemul tău smart.</p>
         <p>El singur nu face mare lucru, dar dacă-l pui la treabă cum trebuie, poate fi salvator. Am testat vreo câteva modele în ultima vreme și, sincer, Aqara Wireless Mini Switch e campionul meu personal. E ieftin, sub 100 de lei de obicei, și asta e un plus enorm.</p>
         <p>Plus că e mic, îl poți lipi oriunde, pe perete, pe noptieră, chiar și pe birou. Și cel mai important, funcționează cu Apple HomeKit, Google Home, Alexa, deci nu te trezești că-ți cumpără o piesă de care nu poți lega cu restul casei. Am avut un model mai vechi, de la alt brand, care a ținut bateria vreo 6 luni. Ăsta de la Aqara, bagă-ți mintea, mi-a mers peste un an și încă nu dă semne de oboseală. Asta contează mult, nu vrei să-ți bați capul cu schimbat baterii la un dispozitiv de siguranță.</p>
         <p>Dar nu te gândi că e perfect. Ca orice gadget, are și el micile lui probleme. Uneori, conexiunea Bluetooth poate fi puțin capricioasă, mai ales dacă ai multe alte dispozitive care se bat pe unde radio. Și nu vine cu o sirenă proprie, deci trebuie să-l asociezi cu un hub smart home sau cu o priză inteligentă care poate declanșa o alarmă sau o notificare.</p>
@@ -198,7 +211,7 @@ import Layout from '../layouts/Layout.astro';
         <p>Am avut un Fibaro Button pe un sistem Z-Wave la un prieten și, pe bune, era altceva. Reacționa instant, nu am avut niciodată probleme de conexiune. Dar na, prețul...</p>
         <p>Asta cu bateriile e o treabă serioasă. Am avut un Sonoff care a început să dea erori după vreo 4 luni, deși zicea că ține 2 ani. Până la urmă, am realizat că depinde mult și cât de des îl folosești.</p>
         <p>Un <strong>buton panică pentru smart home</strong> pe care îl apeși o dată pe lună va ține bateria mult mai mult decât unul pe care îl testezi des sau îl folosești pentru a controla lumini. Sincer, dacă mă întrebi pe mine, pentru majoritatea oamenilor, Aqara e alegerea cea mai logică. Oferă cel mai bun raport calitate-preț și e suficient de fiabil pentru ce are nevoie un utilizator obișnuit.</p>
-        <p>Nu uita că oricum trebuie să ai un sistem smart home funcțional în spate. Singur, butonul e doar jumătate de poveste.</p>
+        <p>Nu uita că oricum trebuie să ai un <a href="/sistem-smart-pentru-iluminat-gradina/" class="interlink">sistem smart</a> home funcțional în spate. Singur, butonul e doar jumătate de poveste.</p>
     
   </section>
   <section id="sectiune-3" class="mb-10">
@@ -231,7 +244,7 @@ import Layout from '../layouts/Layout.astro';
         <p>Aici avem o abordare diferită. Shelly Button1 e un fel de erou independent. De ce? Pentru că funcționează direct pe Wi-Fi.</p>
         <p>Nu ai nevoie de niciun hub suplimentar. Îl conectezi direct la rețeaua ta Wi-Fi, îl configurezi din aplicația Shelly, și e gata de treabă. Asta îl face foarte atrăgător pentru cei care nu vor să investească într-un hub separat. Plus că are o funcționalitate de sirenă integrată.</p>
         <p>Nu e o sirenă de speriat hoții de profesie, dar sună destul de tare încât să te alerteze sau să atenționeze pe cineva din apropiere. Prețul e puțin mai piperat, undeva între 120-150 lei, ceea ce e normal având în vedere că are Wi-Fi și sirenă. Dezavantajul principal aici este bateria.</p>
-        <p>Fiind pe Wi-Fi, consumul e mai mare. Din experiența mea, te poți aștepta la 3-6 luni de viață a bateriei, în funcție de cât de des îl folosești și cât de activă e rețeaua ta Wi-Fi. Am avut un Shelly care mi-a consumat bateria în 4 luni, dar a fost pentru că l-am folosit și ca buton principal pentru lumina din hol.</p>
+        <p>Fiind pe Wi-Fi, consumul e mai mare. Din <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experiența</a> mea, te poți aștepta la 3-6 luni de viață a bateriei, în funcție de cât de des îl folosești și cât de activă e rețeaua ta Wi-Fi. Am avut un Shelly care mi-a consumat bateria în 4 luni, dar a fost pentru că l-am folosit și ca buton principal pentru lumina din hol.</p>
         <p><strong>Verdictul comparativ</strong></p>
         <p>Dacă bugetul e prioritatea numărul unu și ai deja un hub Zigbee sau vrei să intri în ecosistemul HomeKit, <strong>Aqara Wireless Mini Switch</strong> e alegerea clară. Oferă performanță excelentă pentru prețul lui și o autonomie fantastică. Dacă vrei ceva mai autonom, ușor de configurat, fără hub, și cu o sirenă de bază integrată, și nu te deranjează să schimbi bateria mai des, Shelly Button1 e o opțiune solidă.</p>
         <p>Ambele sunt <strong>buton panică pentru smart home</strong> foarte capabile, dar răspund unor nevoi ușor diferite.</p>
@@ -243,7 +256,7 @@ import Layout from '../layouts/Layout.astro';
         <h3>Nu verifica compatibilitatea</h3>
         <p>Asta e greșeala numărul unu, pe bune. Cumperi un buton Zigbee și te trezești că ai doar un sistem Wi-Fi. Sau invers. Nu te uita doar la poze drăguțe. Citește specificațiile! Vezi dacă funcționează cu hub-ul tău, cu asistentul vocal, cu aplicația pe care o folosești. Dacă nu ești sigur, caută pe Google 'X button compatible with Y hub'. Nu te sfii să întrebi vânzătorul dacă nu ești lamurit.</p>
         <h3>Te bazezi doar pe buton</h3>
-        <p>Un <strong>buton panică pentru smart home</strong> singur nu te salvează de nicio situație periculoasă. E doar o parte din sistem. Trebuie să ai setup-ul făcut: notificări pe telefon, o sirenă (dacă e cazul), lumini care se aprind, poate chiar o cameră smart care să înregistreze ce se întâmplă. Dacă apeși butonul și nu se întâmplă nimic altceva, e inutil. Gândește-te la scenarii: ce vrei să se întâmple când apeși butonul? Trimite SMS? Sună o sirenă? Aprinde toate luminile pe roșu?</p>
+        <p>Un <strong>buton panică pentru smart home</strong> singur nu te salvează de nicio situație periculoasă. E doar o parte din sistem. Trebuie să ai setup-ul făcut: <a href="/sirena-smart-cu-notificari-pe-telefon/" class="interlink">notificări pe</a> telefon, o sirenă (dacă e cazul), lumini care se aprind, poate chiar o cameră smart care să înregistreze ce se întâmplă. Dacă apeși butonul și nu se întâmplă nimic altceva, e inutil. Gândește-te la scenarii: ce vrei să se întâmple când apeși butonul? Trimite SMS? Sună o sirenă? Aprinde toate luminile pe roșu?</p>
         <h3>Uiti de baterie</h3>
         <p>Majoritatea acestor butoane au baterii. Și bateriile se termină. Ce faci când se termină? Dacă butonul e într-un loc greu accesibil sau nu ai baterii de rezervă la îndemână, s-ar putea să nu mai funcționeze când ai cea mai mare nevoie. Verifică cât durează bateria și ia-ți un stoc de baterii de tipul potrivit. Am avut un prieten care a așteptat 3 zile să-i vină bateriile comandate pe net, timp în care butonul lui de panică smart era... inutil.</p>
         <h3>Setezi prea multe acțiuni complicate</h3>
@@ -411,5 +424,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="buton-panica-pentru-smart-home"
+      currentCategory="smart-home"
+      articles={allArticles}
+    />
   </article>
 </Layout>

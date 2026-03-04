@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -151,11 +164,11 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce cauti la un monitor gaming 144Hz: Specificatii cheie</h2>
-    <p class="mb-4">Dincolo de cei 144Hz, sunt cateva lucruri pe care le-am invatat ca fiind esentiale. In primul rand, timpul de raspuns. Cauta 1ms (GTG sau MPRT), altfel tot fluiditatea aia se pierde. Am testat un monitor cu 4ms si diferenta fata de unul de 1ms era vizibila in scenele de actiune intensa. Rezolutia conteaza si ea; 1080p (Full HD) e standardul pentru 144Hz, dar daca ai o placa video puternica, 1440p (QHD) la 144Hz e visul oricarui gamer. Am observat ca si tehnologiile precum FreeSync (AMD) sau G-Sync (Nvidia) sunt cruciale pentru a elimina screen tearing-ul, acel "rupt" al imaginii.</p>
+    <p class="mb-4">Dincolo de cei 144Hz, sunt cateva lucruri pe care le-am invatat ca fiind esentiale. In primul rand, timpul de raspuns. Cauta 1ms (GTG sau MPRT), altfel tot fluiditatea aia se pierde. Am testat un monitor cu 4ms si diferenta fata de unul de 1ms era vizibila in scenele de actiune intensa. Rezolutia conteaza si ea; 1080p (Full HD) e standardul pentru 144Hz, dar daca ai o <a href="/placa-video-amd-performanta-ridicata/" class="interlink">placa video</a> puternica, 1440p (QHD) la 144Hz e visul oricarui gamer. Am observat ca si tehnologiile precum FreeSync (AMD) sau G-Sync (Nvidia) sunt cruciale pentru a elimina screen tearing-ul, acel "rupt" al imaginii.</p>
     
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Tehnologii anti-tearing: FreeSync vs G-Sync</h3>
-    <p class="mb-4">Ambele tehnologii fac cam acelasi lucru: sincronizeaza rata de refresh a monitorului cu frame rate-ul placii video. FreeSync e mai comun, fiind open-source, si il gasesti pe majoritatea monitoarelor. G-Sync e tehnologia Nvidia, de obicei mai scumpa, dar si mai rafinata. Daca ai placa Nvidia, merita sa cauti un monitor G-Sync compatibil. Am testat un monitor FreeSync cu o placa Nvidia si a functionat bine, dar recomandarea mea e sa mergi pe compatibilitate directa daca bugetul permite.</p>
+    <p class="mb-4">Ambele tehnologii fac cam acelasi lucru: sincronizeaza rata de refresh a monitorului cu frame rate-ul placii video. FreeSync e mai comun, fiind open-source, si il gasesti pe majoritatea monitoarelor. G-Sync e tehnologia Nvidia, de obicei mai scumpa, dar si mai rafinata. Daca ai placa Nvidia, merita sa cauti un <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">monitor</a> G-Sync compatibil. Am testat un monitor FreeSync cu o placa Nvidia si a functionat bine, dar recomandarea mea e sa mergi pe compatibilitate directa daca bugetul permite.</p>
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Dimensiuni si paneluri: IPS, VA sau TN?</h2>
@@ -165,7 +178,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele testate si preturi in Romania: Ce merita?</h2>
-    <p class="mb-4">Am pus mana pe cateva modele si pot spune ca sunt optiuni bune pentru orice buget. Pentru inceput, un monitor precum ASUS VG248QG (24 inch, 1080p, 165Hz, 1ms GTG, TN) se gaseste pe la 900-1000 RON la Altex sau PCGarage. E o optiune entry-level solida. Daca vrei ceva mai bun calitativ, dar tot la 1080p, Samsung Odyssey G3 (24 inch, 1080p, 144Hz, 1ms MPRT, VA) e pe la 1100-1200 RON. Culorile sunt mai bune decat pe TN. Pentru o saritura spre QHD, am testat LG 27GP850-B (27 inch, 1440p, 165Hz, 1ms GTG, IPS) care e in jur de 1800-2000 RON la eMAG. E un monitor fantastic, cu culori superbe si o claritate de invidiat.</p>
+    <p class="mb-4">Am pus mana pe cateva modele si pot spune ca sunt optiuni bune pentru orice buget. Pentru inceput, un <a href="/monitor-portabil-pentru-gaming-in-deplasare/" class="interlink">monitor</a> precum ASUS VG248QG (24 inch, 1080p, 165Hz, 1ms GTG, TN) se gaseste pe la 900-1000 RON la Altex sau PCGarage. E o optiune entry-level solida. Daca vrei ceva mai bun calitativ, dar tot la 1080p, Samsung Odyssey G3 (24 inch, 1080p, 144Hz, 1ms MPRT, VA) e pe la 1100-1200 RON. Culorile sunt mai bune decat pe TN. Pentru o saritura spre QHD, am testat LG 27GP850-B (27 inch, 1440p, 165Hz, 1ms GTG, IPS) care e in jur de 1800-2000 RON la eMAG. E un monitor fantastic, cu culori superbe si o claritate de invidiat.</p>
     
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Recomandari concrete pe segmente de pret</h3>
@@ -181,7 +194,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi practice de la un gamer</h2>
-    <p class="mb-4">Primul lucru: nu te lasa pacalit de marketingul agresiv. Citeste review-uri de la utilizatori si teste tehnice, nu doar descrierile de produs. Al doilea: daca ai o placa video mai veche, un monitor 144Hz la 1080p e mai realist. O placa video slaba nu va rula jocurile moderne la 144 FPS, indiferent cat de bun e monitorul. Am observat asta cand am facut upgrade la placa video, diferenta de performanta in jocuri a fost enorma pe acelasi monitor 144Hz. In al treilea rand, ia in considerare si luminile RGB daca iti plac, dar nu lasa asta sa fie factorul principal de decizie. Functionalitatea e pe primul loc.</p>
+    <p class="mb-4">Primul lucru: nu te lasa pacalit de marketingul agresiv. Citeste review-uri de la utilizatori si teste tehnice, nu doar descrierile de produs. Al doilea: daca ai o placa video mai veche, un monitor 144Hz la 1080p e mai realist. O placa video slaba nu va rula jocurile moderne la 144 FPS, indiferent cat de bun e monitorul. Am observat asta cand am facut upgrade la placa video, diferenta de <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanta</a> in jocuri a fost enorma pe acelasi monitor 144Hz. In al treilea rand, ia in considerare si luminile RGB daca iti plac, dar nu lasa asta sa fie factorul principal de decizie. Functionalitatea e pe primul loc.</p>
     
     
   </section>
@@ -278,5 +291,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="display-extern-144hz-pentru-gameri"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

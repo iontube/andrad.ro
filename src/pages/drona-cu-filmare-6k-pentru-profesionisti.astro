@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -187,15 +200,15 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Top Recomandări: Dronă 6K pentru Profesioniști Sub Lupă</h2>
     <p>Bun, am stabilit ca DJI Inspire 3 e in varful muntelui. Dar daca bugetul e un pic mai... temperamental, sau cauti alternative pe care sa le poti manevra mai usor, uite ce am mai gasit:</p>
-        <ul><li><strong>DJI Mavic 3 Pro Cine</strong>: Asta e urmatorul in linie. Are si el moduri de filmare 6K (si nu numai), dar vine intr-un pachet mult mai portabil decat Inspire. E perfect pentru videografi care calatoresc mult. Camera Hasselblad, bineinteles, ofera o calitate a imaginii fenomenala. Minusul? E tot pe la 4000 de euro in varianta Cine, deci nu e chiar ieftin. Plus ca nu are aceeasi stabilitate in vanturi extreme ca Inspire.</li><li><strong>Autel Robotics EVO II Pro 6K</strong>: Autel face treaba buna si e o alternativa serioasa la DJI. EVO II Pro 6K filmeaza la 6K, are o camera cu senzor mare si ofera o autonomie buna. In plus, e adesea mai accesibil, undeva pe la 2000-2500 de euro. Ce nu-mi place la el e aplicatia, parca nu e la fel de intuitiva ca a celor de la DJI. Si ecosistemul de accesorii e mai limitat.</li><li><strong>Sony Airpeak S1</strong>: Asta e o bestie pentru cei care lucreaza cu camere Sony profesionale (gen Alpha). Practic, nu vine cu camera proprie, o montezi tu. Avantajul e ca poti folosi obiective si camere pe care le ai deja. Dezavantajul? Pretul e urias, peste 5000 de euro, si ai nevoie si de camera. Plus ca e o drona mai mare, mai greu de transportat. Si autonomia nu e wow.</li></ul>
+        <ul><li><strong>DJI Mavic 3 Pro Cine</strong>: Asta e urmatorul in linie. Are si el moduri de filmare 6K (si nu numai), dar vine intr-un pachet mult mai portabil decat Inspire. E perfect pentru videografi care calatoresc mult. Camera Hasselblad, bineinteles, ofera o calitate a imaginii fenomenala. Minusul? E tot pe la 4000 de euro in varianta Cine, deci nu e chiar ieftin. Plus ca nu are aceeasi stabilitate in vanturi extreme ca Inspire.</li><li><strong>Autel Robotics EVO II Pro 6K</strong>: Autel face treaba buna si e o alternativa serioasa la DJI. EVO II Pro 6K filmeaza la 6K, are o camera cu senzor mare si ofera o autonomie buna. In plus, e adesea mai accesibil, undeva pe la 2000-2500 de euro. Ce nu-mi place la el e aplicatia, parca nu e la fel de intuitiva ca a celor de la DJI. Si ecosistemul de accesorii e mai limitat.</li><li><strong>Sony Airpeak S1</strong>: Asta e o bestie pentru cei care lucreaza cu camere Sony <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">profesionale</a> (gen Alpha). Practic, nu vine cu camera proprie, o montezi tu. Avantajul e ca poti folosi obiective si camere pe care le ai deja. Dezavantajul? Pretul e urias, peste 5000 de euro, si ai nevoie si de camera. Plus ca e o drona mai mare, mai greu de transportat. Si autonomia nu e wow.</li></ul>
         <p>Ce e important de retinut aici: toate astea sunt <strong>drone cu filmare 6K pentru profesioniști</strong>, dar fiecare are niche-ul ei. Mavic 3 Pro Cine e pentru mobilitate si versatilitate. EVO II Pro 6K e pentru un raport calitate-pret mai bun.</p>
-        <p>Airpeak S1 e pentru cei care au deja un setup Sony si vor sa-l duca in aer. Ca minus general la toate, in afara de Inspire 3 care e facut parca din alt aluat, e ca nu vei gasi acelasi nivel de control fin al miscarii pe care il obtii cu o camera pe un gimbal la sol. Totusi, pentru filmari aeriene spectaculoase, sunt greu de batut.</p>
+        <p>Airpeak S1 e pentru cei care au deja un setup Sony si vor sa-l duca in aer. Ca minus general la toate, in afara de Inspire 3 care e facut parca din alt aluat, e ca nu vei gasi acelasi nivel de control fin al miscarii pe care il obtii cu o camera pe un gimbal la sol. Totusi, <a href="/microfon-shotgun-pentru-filmari-in-aer-liber/" class="interlink">pentru filmari</a> aeriene spectaculoase, sunt greu de batut.</p>
     
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum Alegi Drona Potrivită: Ghid Practic pentru Profesioniști</h2>
     <p>Ok, ai zis ca vrei <strong>dronă cu filmare 6K pentru profesioniști</strong>. Super. Dar ce inseamna asta concret pentru tine? Ce cauti inainte sa bagi mana in buzunar? Uite care-s criteriile mele, zic si eu:</p>
-        <ul><li><strong>Rezolutie si Frame Rate</strong>: Asta e clar, vrei 6K. Dar la cat? 24fps, 30fps, 60fps? Pentru miscari lente si fluide, 24fps e standardul cinematografic. Pentru filmari mai dinamice sau slow-motion, ai nevoie de rate mai mari. Dronele de top pot filma 6K la 60fps, dar e important sa vezi si codecurile (ProRes, H.265) pe care le suporta.</li><li><strong>Calitatea Senzorului si Opticii</strong>: Nu te uita doar la pixeli. Un senzor mare (gen 1 inch sau mai mult) si o lentila de calitate (Hasselblad, Leica, etc.) fac toata diferenta. Asta inseamna dinamica, culori naturale, performanta in lumina slaba. Pe scurt, cat de "cinematografica" arata imaginea.</li><li><strong>Stabilitate si Rezistenta la Vant</strong>: Daca filmezi in locatii expuse, ai nevoie de o drona stabila. Inspire 3 e campionul la asta. Uita-te la specificațiile de rezistenta la vant (clasa Beaufort) si la cat de bine isi tine pozitia in conditii meteo neprielnice.</li><li><strong>Autonomie si Management Baterie</strong>: Cat dureaza un zbor? 20 minute? 30? 40? Pentru un proiect serios, ai nevoie de mai multe baterii si de un sistem de incarcare rapid sau hot-swappable. Sa poti schimba bateria fara sa opresti drona e un mare plus, cum are Inspire 3.</li><li><strong>Sistemul de Transmisie Video</strong>: Cat de departe vezi imaginea live si cat de clara e? Latența mica e cruciala pentru control precis. DJI O3 Pro sau echivalentele de la Autel sunt de top. Asta te ajuta sa filmezi fara emotii.</li><li><strong>Sistemul de Evitare a Obstacolelor</strong>: Nu te baza 100% pe el, dar e un ajutor imens, mai ales in locuri aglomerate sau cu vizibilitate redusa. Cauta drone cu senzori pe toate directiile.</li><li><strong>Portabilitate si Setup</strong>: Daca zbori des, vrei o drona usor de transportat si rapid de pus in functiune. Inspire 3 e mare, Mavic 3 Pro e mult mai compact. Gandeste-te la logistica ta.</li><li><strong>Ecosistem si Software</strong>: Ce accesorii gasesti (filtre ND, baterii extra, etc.)? Cat de usor se integreaza cu software-ul de editare? Aplicatia de control e intuitiva?</li></ul>
+        <ul><li><strong>Rezolutie si Frame Rate</strong>: Asta e clar, vrei 6K. Dar la cat? 24fps, 30fps, 60fps? Pentru miscari lente si fluide, 24fps e standardul cinematografic. Pentru filmari mai dinamice sau slow-motion, ai nevoie de rate mai mari. Dronele de top pot filma 6K la 60fps, dar e important sa vezi si codecurile (ProRes, H.265) pe care le suporta.</li><li><strong>Calitatea Senzorului si Opticii</strong>: Nu te uita doar la pixeli. Un senzor mare (gen 1 inch sau mai mult) si o lentila de calitate (Hasselblad, Leica, etc.) fac toata diferenta. Asta inseamna dinamica, culori naturale, performanta in lumina slaba. Pe scurt, cat de "cinematografica" arata imaginea.</li><li><strong>Stabilitate si <a href="/camera-actiune-rezistenta-la-apa/" class="interlink">Rezistenta la</a> Vant</strong>: Daca filmezi in locatii expuse, ai nevoie de o drona stabila. Inspire 3 e campionul la asta. Uita-te la specificațiile de rezistenta la vant (clasa Beaufort) si la cat de bine isi tine pozitia in conditii meteo neprielnice.</li><li><strong>Autonomie si Management Baterie</strong>: Cat dureaza un zbor? 20 minute? 30? 40? Pentru un proiect serios, ai nevoie de mai multe baterii si de un sistem de incarcare rapid sau hot-swappable. Sa poti schimba bateria fara sa opresti drona e un mare plus, cum are Inspire 3.</li><li><strong>Sistemul de Transmisie Video</strong>: Cat de departe vezi imaginea live si cat de clara e? Latența mica e cruciala pentru control precis. DJI O3 Pro sau echivalentele de la Autel sunt de top. Asta te ajuta sa filmezi fara emotii.</li><li><strong>Sistemul de Evitare a Obstacolelor</strong>: Nu te baza 100% pe el, dar e un ajutor imens, mai ales in locuri aglomerate sau cu vizibilitate redusa. Cauta drone cu senzori pe toate directiile.</li><li><strong>Portabilitate si Setup</strong>: Daca zbori des, vrei o drona usor de transportat si rapid de pus in functiune. Inspire 3 e mare, Mavic 3 Pro e mult mai compact. Gandeste-te la logistica ta.</li><li><strong>Ecosistem si Software</strong>: Ce accesorii gasesti (filtre ND, baterii extra, etc.)? Cat de usor se integreaza cu software-ul de editare? Aplicatia de control e intuitiva?</li></ul>
         <p>Asta e, pe scurt. Nu te lasa pacalit doar de cifre. O <strong>dronă cu filmare 6K pentru profesioniști</strong> trebuie sa fie un pachet complet, adaptat stilului tau de lucru. Si, na, bugetul joaca un rol important, desigur.</p>
     
   </section>
@@ -203,7 +216,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">DJI Inspire 3 vs. Mavic 3 Pro Cine: Lupta pentru Coroana 6K</h2>
     <p>Am zis ca Inspire 3 e regele, dar Mavic 3 Pro Cine ii sufla in ceafa. Hai sa vedem unde se bat:</p>
         <h3>DJI Inspire 3</h3>
-        <p>Asta e colosul. Construita pentru performanta maxima, nu pentru a incapea in rucsacul de zi cu zi. Senzorul e de 6K, bineinteles, dar e integrat intr-un sistem gimbal revoluționar, dual-camera.</p>
+        <p>Asta e colosul. Construita <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">pentru performanta</a> maxima, nu pentru a incapea in rucsacul de zi cu zi. Senzorul e de 6K, bineinteles, dar e integrat intr-un sistem gimbal revoluționar, dual-camera.</p>
         <p>Poți avea o camera principala pentru 6K si o camera secundara pentru zoom sau teleobiectiv. Asta e un avantaj urias pentru flexibilitate. Stabilitatea in zbor e la alt nivel.</p>
         <p>Vanturi puternice nu-i fac fata. Transmisia video O3 Pro e de top, cu o raza de actiune si calitate live pe care rar le vezi. Bateriile se schimba rapid, fara sa opresti drona.</p>
         <p>E gândită pentru producții mari, unde timpul e bani si calitatea e totul. Prețul, cum ziceam, e pe la 4500 euro minim. Minusurile? E mare, greu de transportat.</p>
@@ -379,5 +392,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="drona-cu-filmare-6k-pentru-profesionisti"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

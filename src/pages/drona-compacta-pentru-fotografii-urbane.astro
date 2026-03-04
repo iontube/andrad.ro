@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -146,7 +159,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Drona compacta: Partenerul tau urban pentru imagini aeriene</h2>
     <p class="mb-4">Am petrecut ultimele saptamani testand cateva modele de drone compacte, special gandite pentru fotografia si videografia urbana. In experienta mea, a gasi o drona care sa fie usor de transportat, rapida la decolare si, cel mai important, capabila sa livreze imagini de calitate in mediul aglomerat al orasului, nu e deloc o sarcina usoara.  Am cautat modele care sa se integreze discret in peisaj, dar sa ofere control si flexibilitate.</p>
-    <p class="mb-4">Am observat ca multe drone "compacte" promit multe, dar ajung sa fie incomode la purtat in rucsac sau sa aiba probleme cu semnalul in zone cu interferente. Am pus accent pe cele care au demonstrat fiabilitate si performanta constanta, chiar si atunci cand am filmat langa cladiri inalte sau in parcuri cu multa lume.</p>
+    <p class="mb-4">Am observat ca multe drone "compacte" promit multe, dar ajung sa fie incomode la purtat in rucsac sau sa aiba probleme cu semnalul in zone cu interferente. Am pus accent pe cele care au demonstrat fiabilitate si <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanta</a> constanta, chiar si atunci cand am filmat langa cladiri inalte sau in parcuri cu multa lume.</p>
     <p class="mb-4">Pentru cei care vor sa fotografieze arhitectura unica a Bucurestiului, sa surprinda apusuri peste acoperisuri sau sa filmeze evenimente din unghiuri inedite, o drona compacta este esentiala. Am ales sa ma concentrez pe modele care exceleaza in acest domeniu, fara compromisuri majore la capitolul calitate.</p>
     
     
@@ -163,7 +176,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Autel Robotics EVO Lite+: O alternativa cu performanta foto-video serioasa</h2>
     <p class="mb-4">Daca cauti o alternativa la DJI, Autel Robotics EVO Lite+ merita toata atentia ta. Am testat acest model si am fost impresionat de calitatea imaginii, in special de capabilitatile sale in conditii de lumina scazuta, datorita senzorului sau de 1 inch. Acesta capteaza fotografii de 50MP si video 4K/60fps, oferind o flexibilitate sporita in post-productie.</p>
     <p class="mb-4">Manuale de zbor sunt intuitive, iar functiile de filmare automata, cum ar fi "Dynamic Track", sunt utile pentru a urmari subiecte in miscare in peisajul urban. Am observat ca semnalul este robust, chiar si la distante considerabile, un aspect important cand filmezi de la inaltime, departe de punctul de decolare. Autonomia bateriei este, de asemenea, impresionanta, ajungand pana la 40 de minute.</p>
-    <p class="mb-4">Acest model il gasesti pe piata din Romania la un pret ce variaza intre 6.000 si 6.800 RON, in functie de pachet. Este o optiune excelenta pentru cei care prioritizeaza calitatea video si au nevoie de performanta in conditii dificile de iluminare.</p>
+    <p class="mb-4">Acest model il gasesti pe piata din Romania la un pret ce variaza intre 6.000 si 6.800 RON, in functie de pachet. Este o optiune excelenta pentru cei care prioritizeaza calitatea video si au nevoie de <a href="/placa-video-amd-performanta-ridicata/" class="interlink">performanta</a> in conditii dificile de iluminare.</p>
     
     
   </section>
@@ -171,7 +184,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">DJI Air 3: Echilibrul perfect intre portabilitate si performanta</h2>
     <p class="mb-4">DJI Air 3 este o optiune excelenta pentru cei care doresc un echilibru mai bun intre dimensiunea compacta si capabilitatile avansate. Am testat acest model si am apreciat in mod deosebit sistemul sau dual de camere: una wide-angle si una telephoto 3x. Aceasta configuratie ofera o versatilitate incredibila pentru a surprinde atat peisaje urbane largi, cat si detalii specifice ale cladirilor sau ale strazilor.</p>
     <p class="mb-4">Calitatea imaginilor este la standarde inalte, cu fotografii de 48MP si video 4K/100fps. Am observat ca trecerea intre cele doua camere este fluida, iar rezultatele sunt consistente. Detectarea obstacolelor pe toate directiile este, de asemenea, prezenta si functioneaza la fel de bine ca la Mini 4 Pro. Autonomia este de aproximativ 46 de minute, ceea ce inseamna sesiuni de filmare extinse fara grija bateriei.</p>
-    <p class="mb-4">Pretul pentru DJI Air 3 (Fly More Combo) se situeaza undeva intre 7.500 si 8.300 RON. Este o investitie considerabila, dar care se justifica prin performanta si versatilitatea pe care o ofera pentru fotografia si videografia urbana.</p>
+    <p class="mb-4">Pretul pentru DJI Air 3 (Fly More Combo) se situeaza undeva intre 7.500 si 8.300 RON. Este o investitie considerabila, dar care se justifica prin <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">performanta</a> si versatilitatea pe care o ofera pentru fotografia si videografia urbana.</p>
     <p class="mb-4">Am remarcat ca acest model este ideal pentru cei care calatoresc frecvent si vor sa isi completeze colectia de fotografii urbane cu cadre unice, fara a fi nevoiti sa care echipament greu.</p>
     
     
@@ -181,7 +194,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Cand vine vorba de fotografierea urbana cu drona, regulile de bază se aplică, dar există și câteva trucuri specifice. În primul rând, verifică întotdeauna legislația locală privind zborul dronelor. Multe orașe au restricții stricte în apropierea aeroporturilor, clădirilor guvernamentale sau zonelor rezidențiale. Am învățat pe pielea mea că ignorarea acestora poate duce la amenzi usturătoare.</p>
     <p class="mb-4">Folosește orele de aur – răsăritul și apusul – pentru a obține cea mai bună lumină. Umbrele lungi și lumina caldă pot transforma complet o clădire banală într-o operă de artă. Am experimentat mult cu unghiurile de filmare, încercând să surprind perspective noi asupra monumentelor sau a străzilor aglomerate, creând un efect dramatic.</p>
     <p class="mb-4">Nu te teme să experimentezi cu setările camerei dronei. Fotografiile RAW oferă cea mai mare flexibilitate în post-procesare, permițându-ți să ajustezi expunerea, balansul de alb și culorile pentru a obține rezultatul dorit. Am observat că uneori, o ușoară ajustare a expunerii poate scoate în evidență detalii ascunse în zonele umbrite sau suprasaturate.</p>
-    <p class="mb-4">Folosește funcțiile inteligente ale dronei, cum ar fi Hyperlapse sau Panorama, pentru a crea conținut dinamic și captivant. Pentru a obține cele mai bune rezultate, planifică-ți zborul dinainte. O schiță mentală a unghiurilor pe care vrei să le obții te va ajuta să economisești timp și baterie.</p>
+    <p class="mb-4">Folosește funcțiile <a href="/frigider-cu-compartimente-inteligente/" class="interlink">inteligente</a> ale dronei, cum ar fi Hyperlapse sau Panorama, pentru a crea conținut dinamic și captivant. Pentru a obține cele mai bune rezultate, planifică-ți zborul dinainte. O schiță mentală a unghiurilor pe care vrei să le obții te va ajuta să economisești timp și baterie.</p>
     
     
   </section>
@@ -287,5 +300,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="drona-compacta-pentru-fotografii-urbane"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

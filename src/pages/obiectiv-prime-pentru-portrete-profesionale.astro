@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,9 +158,9 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce face un obiectiv bun pentru portrete?</h2>
-    <p class="mb-4">Am petrecut ultimii 15 ani testând tot felul de obiective, de la cele de kit la cele profesionale, și pot spune cu mâna pe inimă că pentru portrete, nu orice obiectiv face treaba. Ceea ce cauți, în esență, este capacitatea de a izola subiectul de fundal. Asta se traduce prin diafragme deschise (f/1.8, f/1.4, chiar f/1.2) care creează acel bokeh cremos, subiectiv, pe care îl vezi în reviste și pe site-uri de specialitate. Nu e doar despre estetică; un fundal blurat face ca subiectul să iasă în evidență, să capete profunzime și să atragă atenția imediat.</p>
-    <p class="mb-4">Am observat că multe obiective zoom standard, cum ar fi un 18-55mm, se chinuie să ofere acest efect. Chiar și la capătul de 55mm și diafragma maximă (care e de obicei f/3.5-5.6), blur-ul nu e la fel de pronunțat. Pentru portrete care să arate profesional, ai nevoie de mai multă lumină captată de senzor și de o deschidere mult mai mare a diafragmei. Asta înseamnă, de cele mai multe ori, un obiectiv fix, o 'focală fixă' cum îi spunem noi.</p>
-    <p class="mb-4">Când am început, credeam că un zoom e mai versatil, dar pentru portrete dedicate, am realizat că sacrifici calitatea bokeh-ului și luminozitatea. Un obiectiv fix, chiar dacă nu poți 'zooma' din el, te forțează să te apropii sau să te depărtezi de subiect, ceeaă te ajută să compui imaginea mai atent. Și rezultatul merită efortul.</p>
+    <p class="mb-4">Am petrecut ultimii 15 ani testând tot felul de obiective, de la cele de kit la cele profesionale, și pot spune cu mâna pe inimă că pentru portrete, nu orice <a href="/obiectiv-wide-angle-pentru-peisaje/" class="interlink">obiectiv</a> face treaba. Ceea ce cauți, în esență, este capacitatea de a izola subiectul de fundal. Asta se traduce prin diafragme deschise (f/1.8, f/1.4, chiar f/1.2) care creează acel bokeh cremos, subiectiv, pe care îl vezi în reviste și pe site-uri de specialitate. Nu e doar despre estetică; un fundal blurat face ca subiectul să iasă în evidență, să capete profunzime și să atragă atenția imediat.</p>
+    <p class="mb-4">Am observat că multe obiective zoom standard, cum ar fi un 18-55mm, se chinuie să ofere acest efect. Chiar și la capătul de 55mm și diafragma maximă (care e de obicei f/3.5-5.6), blur-ul nu e la fel de pronunțat. Pentru portrete care să arate <a href="/fier-de-calcat-vertical-profesional/" class="interlink">profesional</a>, ai nevoie de mai multă lumină captată de senzor și de o deschidere mult mai mare a diafragmei. Asta înseamnă, de cele mai multe ori, un obiectiv fix, o 'focală fixă' cum îi spunem noi.</p>
+    <p class="mb-4">Când am început, credeam că un zoom e mai versatil, dar pentru portrete dedicate, am realizat că sacrifici calitatea bokeh-ului și luminozitatea. Un <a href="/obiectiv-zoom-optic-10x/" class="interlink">obiectiv</a> fix, chiar dacă nu poți 'zooma' din el, te forțează să te apropii sau să te depărtezi de subiect, ceeaă te ajută să compui imaginea mai atent. Și rezultatul merită efortul.</p>
     
     
   </section>
@@ -161,7 +174,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Luminozitatea contează: De ce f/1.8 nu este mereu de ajuns</h2>
-    <p class="mb-4">Mulți începători se opresc la un obiectiv f/1.8, și pe bună dreptate, este un punct de plecare excelent. Am testat obiective f/1.8 pe diverse camere, de la DSLR-uri Canon la mirrorless-uri Sony, și rezultatele sunt de obicei foarte bune. Un obiectiv ca un Yongnuo YN50mm f/1.8 (adesea sub 300 RON la eMAG) este o opțiune bugetară care oferă un bokeh decent. Totuși, dacă vrei cu adevărat acel blur de vis, acea separare aproape chirurgicală a subiectului de fundal, vei vrea să te uiți spre obiective cu diafragme și mai deschise, gen f/1.4 sau chiar f/1.2.</p>
+    <p class="mb-4">Mulți începători se opresc la un obiectiv f/1.8, și pe bună dreptate, este un punct de plecare excelent. Am testat obiective f/1.8 pe diverse camere, de la DSLR-uri Canon la <a href="/aparat-mirrorless-cu-autofocus-rapid/" class="interlink">mirrorless</a>-uri Sony, și rezultatele sunt de obicei foarte bune. Un obiectiv ca un Yongnuo YN50mm f/1.8 (adesea sub 300 RON la eMAG) este o opțiune bugetară care oferă un bokeh decent. Totuși, dacă vrei cu adevărat acel blur de vis, acea separare aproape chirurgicală a subiectului de fundal, vei vrea să te uiți spre obiective cu diafragme și mai deschise, gen f/1.4 sau chiar f/1.2.</p>
     <p class="mb-4">Am avut ocazia să testez un Sigma 85mm f/1.4 DG HSM Art și diferența față de un f/1.8 este notabilă. Bokeh-ul este mai fin, mai aerisit, și poți obține o profunzime de câmp extrem de redusă, chiar și la distanțe mai mari. Acest tip de obiectiv strălucește în condiții de lumină slabă. Când ești într-un restaurant cu lumini slabe sau la o petrecere seara, un f/1.4 sau f/1.2 îți permite să fotografiezi fără să ridici ISO-ul la valori care introduc zgomot digital. Am observat că poți salva imagini care altfel ar fi fost ratate.</p>
     <p class="mb-4">Prețurile la aceste obiective luminoase sunt, desigur, pe măsură. Un Sigma 85mm f/1.4 Art poate ajunge la 4000-4500 RON la PCGarage, iar un Canon EF 85mm f/1.2L II USM este și mai scump, depășind 8000 RON. Pentru majoritatea utilizatorilor, un f/1.8 este mai mult decât suficient. Dar dacă vrei maximul de performanță în condiții dificile și acel look 'pro', merită să investești într-un obiectiv mai luminos.</p>
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="obiectiv-prime-pentru-portrete-profesionale"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

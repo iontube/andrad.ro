@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -179,8 +192,8 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Alegerea Obiectivului Potrivit pentru AF Rapid</h2>
     <p class="mb-4">Chiar si cel mai rapid sistem de autofocus dintr-un aparat mirrorless nu va performa la potential maxim daca nu este cuplat cu un obiectiv performant. Obiectivele cu motoare AF rapide si precise, cum ar fi cele cu motoare cu ultrasunete (USM la Canon, SSM la Sony) sau motoare pas (STM la Canon, LM la Fujifilm), sunt esentiale. Acestea pot misca elementele optice rapid si silentios, fara a introduce vibratii care ar putea afecta claritatea.</p>
-    <p class="mb-4">Am observat ca obiectivele primes (focalizare fixa) sunt adesea mai rapide si mai precise decat zoom-urile, datorita designului optic mai simplu. Totusi, multe obiective zoom moderne, in special cele din gamele profesionale, incorporeaza tehnologii AF de ultima generatie. De exemplu, un obiectiv precum Sony FE 24-70mm f/2.8 GM II sau Canon RF 70-200mm f/2.8 L IS USM III ofera performante AF exceptionale, fiind capabile sa tina pasul cu cele mai rapide aparate.</p>
-    <p class="mb-4">Cand cumperi un aparat, ia in considerare si gama de obiective disponibile pentru montura respectiva. Daca vrei sa filmezi mult, cauta obiective cu focalizare silentioasa, pentru a evita zgomotul inregistrat de microfonul aparatului. In general, investitia in obiective de calitate este la fel de importanta ca si alegerea aparatului.</p>
+    <p class="mb-4">Am observat ca obiectivele primes (focalizare fixa) sunt adesea mai rapide si mai precise decat zoom-urile, datorita designului optic mai simplu. Totusi, multe obiective zoom moderne, in special cele din gamele <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">profesionale</a>, incorporeaza tehnologii AF de ultima generatie. De exemplu, un obiectiv precum Sony FE 24-70mm f/2.8 GM II sau Canon RF 70-200mm f/2.8 L IS USM III ofera performante AF exceptionale, fiind capabile sa tina pasul cu cele mai rapide aparate.</p>
+    <p class="mb-4">Cand cumperi un aparat, ia in considerare si gama de obiective disponibile pentru montura respectiva. Daca vrei sa filmezi mult, cauta obiective cu focalizare <a href="/hota-cu-evacuare-silentioasa/" class="interlink">silentioasa</a>, pentru a evita zgomotul inregistrat de microfonul aparatului. In general, investitia in obiective de calitate este la fel de importanta ca si alegerea aparatului.</p>
     
     
   </section>
@@ -188,8 +201,8 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Sfaturi Practice pentru Utilizarea AF Rapid</h2>
     <p class="mb-4">Nu te baza doar pe viteza AF. Incearca sa iti anticipezi miscarea subiectului. Daca stii ca va veni spre tine, incepe sa il "prinzi" in cadru din timp, cu AF-ul activat. Asta ii da aparatului mai mult timp sa se blocheze pe subiect.</p>
     <p class="mb-4">Foloseste zone de focalizare adaptate. In loc sa lasi aparatul sa aleaga singur punctul AF (ceea ce uneori poate da gres), selecteaza manual o zona mica sau un singur punct si pozitioneaza-l pe ochiul subiectului. Multe aparate permit si "tracking" pe zona selectata, ceea ce este ideal. Am observat ca setarea "Wide" sau "Auto" functioneaza cel mai bine cand ai un singur subiect clar in cadru, dar pentru scene complexe, controlul manual e superior.</p>
-    <p class="mb-4">Experimenteaza cu setarile AF. Fiecare aparat are meniul sau, si poti ajusta viteza de raspuns, sensibilitatea la miscarea subiectului, sau tipul de detectie (ochi, corp etc.). Nu te teme sa testezi diferite combinatii pana gasesti ce functioneaza cel mai bine pentru tine. De exemplu, pentru filmari la evenimente, prefer sa setezi o viteza de urmarire mai mica, pentru a evita miscari bruste ale focalizarii cand subiectul se deplaseaza.</p>
-    <p class="mb-4">Curata senzorul si lentila. Praful sau murdaria pe senzor sau pe lentila obiectivului pot afecta performanta AF, mai ales in conditii de lumina slaba. O curatare periodica te poate scuti de multe frustrari.</p>
+    <p class="mb-4">Experimenteaza cu setarile AF. Fiecare aparat are meniul sau, si poti ajusta viteza de raspuns, sensibilitatea la miscarea subiectului, sau tipul de detectie (ochi, corp etc.). Nu te teme sa testezi diferite combinatii pana gasesti ce functioneaza cel mai bine pentru tine. De exemplu, <a href="/microfon-shotgun-pentru-filmari-in-aer-liber/" class="interlink">pentru filmari</a> la evenimente, prefer sa setezi o viteza de urmarire mai mica, pentru a evita miscari bruste ale focalizarii cand subiectul se deplaseaza.</p>
+    <p class="mb-4">Curata senzorul si lentila. Praful sau murdaria pe senzor sau pe lentila obiectivului pot afecta <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanta</a> AF, mai ales in conditii de lumina slaba. O curatare periodica te poate scuti de multe frustrari.</p>
     
     
   </section>
@@ -286,5 +299,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="aparat-mirrorless-cu-autofocus-rapid"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

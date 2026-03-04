@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -174,27 +187,27 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Obiective Prime de Referință: Claritate și Luminozitate Excepțională</h2>
-    <p class="mb-4">Pentru portrete, fotografie de stradă sau orice scenariu unde claritatea absolută și separarea subiectului sunt primordiale, obiectivele prime sunt alegerea naturală. Ele transformă lumina în artă, oferind o adâncime de câmp extrem de redusă și o redare a culorilor de excepție.</p>
+    <p class="mb-4"><a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">Pentru portrete</a>, fotografie de stradă sau orice scenariu unde claritatea absolută și separarea subiectului sunt primordiale, obiectivele prime sunt alegerea naturală. Ele transformă lumina în artă, oferind o adâncime de câmp extrem de redusă și o redare a culorilor de excepție.</p>
     <p class="mb-4">Un exemplu remarcabil este <strong>Canon RF 85mm F1.2L USM</strong>. Acest obiectiv este un gigant optic, cu o deschidere de f/1.2 care permite un bokeh magnific și performanțe uimitoare în lumină slabă. Construcția sa robustă și sistemul de focalizare rapidă îl fac ideal pentru portrete de studio sau evenimente. Un alt pretendent de top este <strong>Sony FE 50mm f/1.2 GM</strong>. Parte a seriei G Master, acest 50mm oferă o claritate de la o margine la alta chiar și la f/1.2, cu un control excelent al aberațiilor cromatice și un sistem AF cu patru motoare XD Linear pentru o focalizare silențioasă și precisă. Pentru utilizatorii Nikon, <strong>NIKKOR Z 50mm f/1.2 S</strong> se distinge prin calitatea sa optică deosebită, construit pentru montura Z mirrorless, oferind o rezoluție impresionantă și o redare excepțională a detaliilor chiar și la diafragmă maximă. Aceste obiective nu sunt doar instrumente; ele sunt extensii ale viziunii tale creative, permițându-ți să capturezi imagini cu un caracter inconfundabil.</p>
     
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Obiective Zoom Profesionale: Versatilitate Fără Compromis</h2>
     <p class="mb-4">Setul „sfintei treimi” de obiective zoom profesionale este esențial pentru mulți fotografi. Acestea acoperă majoritatea distanțelor focale necesare, de la unghi larg la teleobiectiv, toate cu o diafragmă constantă de f/2.8, care asigură performanțe bune în lumină slabă și un control decent al adâncimii de câmp.</p>
-    <p class="mb-4">Pentru unghi larg, <strong>Nikon NIKKOR Z 14-24mm f/2.8 S</strong> este o alegere fantastică pentru peisaje, arhitectură sau astrofotografie, oferind o claritate excepțională și o distorsiune minimă. Canon are <strong>RF 15-35mm F2.8L IS USM</strong>, care adaugă stabilizare optică, un avantaj considerabil pentru filmare sau fotografierea din mână în condiții dificile. La mijlocul gamei, <strong>Sony FE 24-70mm f/2.8 GM II</strong> reprezintă vârful de gamă pentru obiectivele all-around, fiind un obiectiv incredibil de versatil pentru evenimente, nunți și portrete, cu o claritate excepțională și o greutate redusă față de predecesorul său. Nikon răspunde cu <strong>NIKKOR Z 24-70mm f/2.8 S</strong>, un obiectiv la fel de impresionant, cu o construcție robustă și performanțe optice fără cusur.</p>
+    <p class="mb-4">Pentru unghi larg, <strong>Nikon NIKKOR Z 14-24mm f/2.8 S</strong> este o alegere fantastică <a href="/obiectiv-wide-angle-pentru-peisaje/" class="interlink">pentru peisaje</a>, arhitectură sau astrofotografie, oferind o claritate excepțională și o distorsiune minimă. Canon are <strong>RF 15-35mm F2.8L IS USM</strong>, care adaugă stabilizare optică, un avantaj considerabil pentru filmare sau fotografierea din mână în condiții dificile. La mijlocul gamei, <strong>Sony FE 24-70mm f/2.8 GM II</strong> reprezintă vârful de gamă pentru obiectivele all-around, fiind un obiectiv incredibil de versatil pentru evenimente, nunți și portrete, cu o claritate excepțională și o greutate redusă față de predecesorul său. Nikon răspunde cu <strong>NIKKOR Z 24-70mm f/2.8 S</strong>, un obiectiv la fel de impresionant, cu o construcție robustă și performanțe optice fără cusur.</p>
     <p class="mb-4">Pentru teleobiectiv, <strong>Canon RF 70-200mm F2.8L IS USM</strong> redefinește portabilitatea pentru un 70-200mm f/2.8, fiind mai scurt și mai ușor datorită designului său retractabil. Este un obiectiv de bază pentru sport, evenimente și portrete la distanță. Sony oferă <strong>FE 70-200mm f/2.8 GM OSS II</strong>, care este lăudat pentru rapiditatea autofocusului, claritatea optică superioară și stabilizarea optică puternică. Aceste obiective zoom sunt mașini de lucru, construite pentru a rezista rigorilor utilizării profesionale și a oferi rezultate impecabile în orice situație.</p>
     
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Obiective Specializate: Macrou și Tilt-Shift pentru Creativitate Nelimitată</h2>
     <p class="mb-4">Uneori, fotografia profesională cere instrumente specializate pentru a atinge un anumit efect sau pentru a explora nișe creative. Obiectivele macro și tilt-shift sunt exemple perfecte de lentile care extind orizonturile artistice.</p>
-    <p class="mb-4">Pentru fotografia macro, unde detaliile minuscule devin protagoniști, un obiectiv precum <strong>Canon MP-E 65mm f/2.8 1-5x Macro</strong> este o alegere excepțională. Acesta permite măriri de până la 5 ori, dezvăluind lumi invizibile cu ochiul liber. Este un obiectiv manual, care cere răbdare și precizie, dar rezultatele sunt spectaculoase. Un alt exemplu este <strong>Nikon Z MC 105mm f/2.8 VR S</strong>, care combină o distanță focală macro cu stabilizare optică și autofocus rapid, fiind versatil și pentru portrete. Obiectivele tilt-shift, cum ar fi <strong>Canon TS-E 17mm f/4L</strong> sau <strong>Nikon PC-E Micro NIKKOR 45mm f/2.8D ED</strong>, oferă control asupra perspectivei și a planului focal. Ele sunt indispensabile pentru fotografia de arhitectură, unde corectarea liniilor convergente este esențială, sau pentru crearea de efecte de miniatură, oferind o flexibilitate creativă unică, imposibil de replicat cu alte obiective.</p>
+    <p class="mb-4">Pentru fotografia macro, unde detaliile minuscule devin protagoniști, un obiectiv precum <strong>Canon MP-E 65mm f/2.8 1-5x Macro</strong> este o alegere excepțională. Acesta permite măriri de până la 5 ori, dezvăluind lumi invizibile cu ochiul liber. Este un obiectiv manual, care cere răbdare și precizie, dar rezultatele sunt spectaculoase. Un alt exemplu este <strong>Nikon Z MC 105mm f/2.8 VR S</strong>, care combină o distanță focală macro cu stabilizare optică și <a href="/aparat-mirrorless-cu-autofocus-rapid/" class="interlink">autofocus rapid</a>, fiind versatil și pentru portrete. Obiectivele tilt-shift, cum ar fi <strong>Canon TS-E 17mm f/4L</strong> sau <strong>Nikon PC-E Micro NIKKOR 45mm f/2.8D ED</strong>, oferă control asupra perspectivei și a planului focal. Ele sunt indispensabile pentru fotografia de arhitectură, unde corectarea liniilor convergente este esențială, sau pentru crearea de efecte de miniatură, oferind o flexibilitate creativă unică, imposibil de replicat cu alte obiective.</p>
     
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Factori Cruciali în Alegerea Obiectivului Ideal</h2>
     <p class="mb-4">Dincolo de tipul obiectivului și performanțele optice, există câțiva factori practici care ar trebui să influențeze decizia ta. Acești factori asigură că obiectivul ales nu este doar performant, ci și potrivit pentru fluxul tău de lucru și echipamentul existent.</p>
-    <p class="mb-4"><strong>Compatibilitatea monturii</strong> este, evident, fundamentală. Un obiectiv Canon RF nu se va potrivi pe un corp Nikon Z fără un adaptor, și chiar și atunci, performanța AF poate fi compromisă. Asigură-te că obiectivul este proiectat pentru sistemul tău. <strong>Stabilizarea de imagine</strong> (IS, VR, OSS) este un avantaj major, mai ales la teleobiective sau în condiții de lumină slabă, permițând timpi de expunere mai lungi fără trepied. Modelele moderne de corpuri mirrorless oferă adesea stabilizare în corp (IBIS), care poate funcționa în tandem cu stabilizarea din obiectiv. <strong>Rezistența la intemperii</strong> (weather sealing) este crucială pentru fotografii care lucrează în exterior, protejând obiectivul de praf și umezeală. Verifică specificațiile pentru a te asigura că obiectivul tău poate face față condițiilor dificile. <strong>Greutatea și dimensiunea</strong> obiectivului contează enorm pentru fotografi care călătoresc mult sau care lucrează ore întregi din mână. Un obiectiv mai ușor și mai compact reduce oboseala și sporește mobilitatea, fără a sacrifica performanța în cazul modelelor moderne bine proiectate.</p>
+    <p class="mb-4"><strong>Compatibilitatea monturii</strong> este, evident, fundamentală. Un obiectiv Canon RF nu se va potrivi pe un corp Nikon Z fără un adaptor, și chiar și atunci, performanța AF poate fi compromisă. Asigură-te că obiectivul este proiectat pentru sistemul tău. <strong>Stabilizarea de imagine</strong> (IS, VR, OSS) este un avantaj major, mai ales la teleobiective sau în condiții de lumină slabă, permițând timpi de expunere mai lungi fără trepied. Modelele moderne de corpuri mirrorless oferă adesea stabilizare în corp (IBIS), care poate funcționa în tandem cu stabilizarea din obiectiv. <strong>Rezistența la intemperii</strong> (weather sealing) este crucială <a href="/drona-compacta-pentru-fotografii-urbane/" class="interlink">pentru fotografii</a> care lucrează în exterior, protejând obiectivul de praf și umezeală. Verifică specificațiile pentru a te asigura că obiectivul tău poate face față condițiilor dificile. <strong>Greutatea și dimensiunea</strong> obiectivului contează enorm pentru fotografi care călătoresc mult sau care lucrează ore întregi din mână. Un obiectiv mai ușor și mai compact reduce oboseala și sporește mobilitatea, fără a sacrifica performanța în cazul modelelor moderne bine proiectate.</p>
     
   </section>
   <section id="sectiune-7" class="mb-10">
@@ -309,5 +322,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-obiectiv-foto-profesional"
+      currentCategory="foto-video"
+      articles={allArticles}
+    />
   </article>
 </Layout>

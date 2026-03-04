@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -145,15 +158,15 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">De ce am ales un filtru de apă sub chiuvetă</h2>
-    <p class="mb-4">După ani de zile în care am cărat baxuri de apă plată de la supermarket și am văzut cum robinetul meu de bucătărie începea să capete o patină de calcar suspectă, am zis că e momentul să trec la ceva mai serios. Am început să caut un filtru de apă sub chiuvetă performant, pentru că soluțiile de pe robinet mi se par inestetice și incomode. Ideea de a avea apă filtrată direct la robinetul de bucătărie, fără să mai ocup spațiu în frigider sau să mă stresez cu sticlele, a fost principalul motor.</p>
-    <p class="mb-4">Am vrut ceva care să nu necesite o instalare complicată, dar care să ofere și o filtrare eficientă. Nu mă interesează doar gustul apei, ci și eliminarea impurităților și a calcarului, pentru sănătate și pentru a prelungi viața electrocasnicelor care folosesc apă, cum ar fi cafetiera sau fierbătorul. Am analizat diverse modele și am ajuns la câteva concluzii bazate pe experiența mea.</p>
+    <p class="mb-4">După ani de zile în care am cărat baxuri de apă plată de la supermarket și am văzut cum robinetul meu <a href="/robot-de-bucatarie-pentru-patiserie/" class="interlink">de bucătărie</a> începea să capete o patină de calcar suspectă, am zis că e momentul să trec la ceva mai serios. Am început să caut un filtru de apă sub chiuvetă performant, pentru că soluțiile de pe robinet mi se par inestetice și incomode. Ideea de a avea apă filtrată direct la robinetul de bucătărie, fără să mai ocup spațiu în frigider sau să mă stresez cu sticlele, a fost principalul motor.</p>
+    <p class="mb-4">Am vrut ceva care să nu necesite o instalare complicată, dar care să ofere și o filtrare eficientă. Nu mă interesează doar gustul apei, ci și eliminarea impurităților și a calcarului, pentru sănătate și pentru a prelungi viața electrocasnicelor care folosesc apă, cum ar fi cafetiera sau fierbătorul. Am analizat diverse modele și am ajuns la câteva concluzii bazate pe <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">experiența</a> mea.</p>
     <p class="mb-4">Am pus ochii pe câteva modele de la branduri cunoscute pentru electrocasnice și filtre, gen Aquaphor, Brita, sau chiar soluții mai complexe de la producători de instalații sanitare. Bugetul era undeva la 500-1500 RON pentru sistemul inițial, cu o atenție sporită la costul filtrelor de schimb.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum funcționează un sistem de filtrare sub chiuvetă</h2>
-    <p class="mb-4">Principiul de bază e simplu: un cartuș filtrant se montează sub chiuvetă, conectat la conducta de apă rece. Apa de la rețea trece prin acest cartuș, care reține impuritățile, clorul, metalele grele și, în funcție de tehnologie, chiar și bacteriile sau virușii. Unele sisteme au mai multe etape de filtrare, de la prefiltre care prind particulele mari, la membrane de osmoză inversă pentru o purificare maximă.</p>
+    <p class="mb-4">Principiul de bază e simplu: un cartuș filtrant se montează sub chiuvetă, conectat la conducta de apă rece. Apa de la rețea trece prin acest cartuș, care reține impuritățile, clorul, metalele grele și, în <a href="/blender-vertical-cu-functie-smoothie/" class="interlink">funcție</a> de tehnologie, chiar și bacteriile sau virușii. Unele sisteme au mai multe etape de filtrare, de la prefiltre care prind particulele mari, la membrane de osmoză inversă pentru o purificare maximă.</p>
     <p class="mb-4">Eu am testat un sistem cu filtrare în 3 etape: un filtru de sedimente pentru a elimina nisipul și rugina, un filtru cu carbon activ care absoarbe clorul și compușii organici, îmbunătățind gustul și mirosul, și un filtru final, tot pe bază de carbon, pentru o claritate suplimentară. Am observat o diferență notabilă la gustul apei de la prima utilizare, mult mai proaspătă și fără nicio urmă de gust de clor.</p>
     <p class="mb-4">Instalarea a fost relativ simplă, am avut nevoie de un clește, o șurubelniță și puțină bandă de teflon. A durat cam o oră, cu tot cu cititul instrucțiunilor. Am preferat să o fac singur pentru a înțelege mai bine cum funcționează și pentru a economisi costul instalatorului, care ar fi putut adăuga 200-300 RON la prețul total.</p>
     
@@ -169,7 +182,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Costuri ascunse: filtrele de schimb și mentenanța</h2>
-    <p class="mb-4">Aici e punctul unde mulți se opresc din a cumpăra un filtru de apă sub chiuvetă. Costul inițial al sistemului, care poate varia între 500 RON (modele simple) și 2000 RON (sisteme cu osmoză inversă), este doar începutul. Filtrele de schimb sunt cele care îți vor afecta bugetul pe termen lung. Am găsit filtre de sedimente la 30-50 RON, filtre de carbon la 60-100 RON, iar membranele de osmoză inversă pot ajunge și la 200-400 RON, în funcție de brand și tehnologie.</p>
+    <p class="mb-4">Aici e punctul unde mulți se opresc din a cumpăra un filtru de apă sub chiuvetă. Costul inițial al sistemului, care poate varia între 500 RON (modele simple) și 2000 RON (sisteme cu osmoză inversă), este doar începutul. Filtrele de schimb sunt cele care îți vor afecta bugetul pe termen lung. Am găsit filtre de sedimente la 30-50 RON, filtre de carbon la 60-100 RON, iar membranele de osmoză inversă pot ajunge și la 200-400 RON, în <a href="/combina-frigorifica-cu-functie-fresh-zone/" class="interlink">funcție</a> de brand și tehnologie.</p>
     <p class="mb-4">Frecvența de schimbare a filtrelor variază. De obicei, filtrele de sedimente și carbon se schimbă la 6 luni sau la un anumit volum de apă filtrată (ex: 10.000 litri). Membranele de osmoză inversă au o durată de viață mai mare, uneori 2-3 ani. Am făcut un calcul pentru sistemul meu: două schimburi de filtre pe an (sedimente + carbon) mă duc undeva la 200-300 RON pe an. Dacă adaugi și o membrană de schimb la 2-3 ani, costul anual ajunge la 300-400 RON. Comparativ cu baxurile de apă pe care le cumpăram, care mă costau cam 100-150 RON pe lună (adică 1200-1800 RON pe an), investiția în filtru e mult mai rentabilă.</p>
     <p class="mb-4">Este esențial să respecți programul de schimbare a filtrelor. Un filtru uzat nu doar că nu mai filtrează eficient, dar poate deveni un focar de bacterii. Am văzut pe forumuri discuții despre filtre schimbate prea târziu și probleme apărute. Eu mi-am pus un reminder în calendar pentru fiecare schimb.</p>
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="filtru-de-apa-sub-chiuveta-performant"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

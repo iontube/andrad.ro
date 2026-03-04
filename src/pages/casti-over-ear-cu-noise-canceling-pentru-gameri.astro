@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -175,7 +188,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Calitatea Audio: Sunetul Detaliat și Poziționarea Exactă</h2>
     <p class="mb-4">Dincolo de anularea zgomotului, calitatea sunetului este, probabil, cel mai important aspect al oricărei perechi de căști destinate gaming-ului. Căutăm drivere audio care să ofere o gamă largă de frecvențe, cu un bas profund, medii clare și înalte precise. Aceasta înseamnă că vei putea distinge fiecare sunet din joc, de la pașii subtili ai unui inamic la exploziile puternice. O reproducere fidelă a sunetului este esențială pentru a te putea orienta corect în spațiul virtual și pentru a reacționa prompt la evenimentele din joc.</p>
     <p class="mb-4">Tehnologiile audio avansate, cum ar fi sunetul surround virtual (de exemplu, DTS Headphone:X sau Dolby Atmos), pot îmbunătăți și mai mult experiența. Acestea simulează un sunet multidirecțional, oferindu-ți o percepție mult mai precisă a locației surselor de sunet. Poți auzi de unde vine un adversar, chiar dacă nu îl vezi, ceea ce este un avantaj imens în jocurile competitive. Când alegi <strong>căști over-ear cu noise-canceling pentru gameri</strong>, verifică specificațiile legate de suportul pentru aceste tehnologii.</p>
-    <p class="mb-4">Driverele de 40mm sau 50mm sunt comune în căștile de gaming de înaltă calitate, oferind un echilibru bun între dimensiune și performanța audio. Producători precum Audio-Technica sau Sennheiser, chiar dacă nu sunt exclusiv orientați spre gaming, oferă adesea modele cu drivere excelente care pot fi adaptate pentru jocuri. Un spectru de frecvență tipic pentru căștile bune este între 20Hz și 20kHz, asigurând că auzi întreaga gamă a sunetelor audibile. Impedanța (măsurată în ohmi) este un alt factor; căștile cu impedanță mai mică (sub 32 ohmi) sunt mai ușor de alimentat de majoritatea dispozitivelor, în timp ce cele cu impedanță mai mare pot necesita un amplificator dedicat pentru a-și atinge potențialul maxim.</p>
+    <p class="mb-4">Driverele de 40mm sau 50mm sunt comune în căștile de gaming de înaltă calitate, oferind un echilibru bun între dimensiune și performanța audio. Producători precum Audio-Technica sau Sennheiser, chiar dacă nu sunt exclusiv orientați spre gaming, oferă adesea modele cu drivere excelente care pot fi adaptate <a href="/ssd-nvme-rapid-pentru-jocuri/" class="interlink">pentru jocuri</a>. Un spectru de frecvență tipic pentru căștile bune este între 20Hz și 20kHz, asigurând că auzi întreaga gamă a sunetelor audibile. Impedanța (măsurată în ohmi) este un alt factor; căștile cu impedanță mai mică (sub 32 ohmi) sunt mai ușor de alimentat de majoritatea dispozitivelor, în timp ce cele cu impedanță mai mare pot necesita un amplificator dedicat pentru a-și atinge potențialul maxim.</p>
     <p class="mb-4">Pentru o experiență audio completă, este important să acorzi atenție și modului în care sunt calibrate căștile. Unele modele sunt optimizate pentru un sunet plat, ideal pentru producție audio, în timp ce altele au un accent mai mare pe bas, pentru un impact maxim în jocuri. Căutarea unor <strong>căști over-ear cu noise-canceling pentru gameri</strong> care oferă un echilibru între fidelitatea sunetului și impactul necesar pentru a simți fiecare explozie sau lovitură te va ajuta să te bucuri de o imersiune totală.</p>
     
     
@@ -192,7 +205,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Microfonul: Claritatea Comunicării cu Echipa</h2>
     <p class="mb-4">Pentru majoritatea gamerilor, în special pentru cei care joacă titluri multiplayer, un microfon de înaltă calitate este la fel de important ca și sunetul căștilor. Nu vrei ca echipa ta să audă ecouri, zgomote de fond sau vocea ta distorsionată. Microfoanele de pe căștile de gaming moderne sunt adesea proiectate să fie direcționale, captând sunetul din fața lor și minimizând zgomotele ambientale. Tehnologii precum reducerea zgomotului de fond sau controlul automat al câștigului (AGC) ajută la asigurarea unei voci clare și consistente.</p>
-    <p class="mb-4">Verifică specificațiile microfonului: sensibilitatea (măsurată în dB) și răspunsul în frecvență sunt indicatori ai calității. Un microfon detașabil sau retractabil oferă flexibilitate, permițându-ți să îl ascunzi atunci când nu îl folosești sau când asculți muzică. Unii producători, precum HyperX, oferă microfoane de calitate excepțională, uneori chiar comparabile cu microfoanele de studio dedicate. Consultă recenziile pentru a vedea cum se descurcă microfonul în condiții reale de utilizare.</p>
+    <p class="mb-4">Verifică specificațiile microfonului: sensibilitatea (măsurată în dB) și răspunsul în frecvență sunt indicatori ai calității. Un <a href="/casti-cu-microfon-detasabil/" class="interlink">microfon detașabil</a> sau retractabil oferă flexibilitate, permițându-ți să îl ascunzi atunci când nu îl folosești sau când asculți muzică. Unii producători, precum HyperX, oferă microfoane de calitate excepțională, uneori chiar comparabile cu microfoanele de studio dedicate. Consultă recenziile pentru a vedea cum se descurcă microfonul în condiții reale de utilizare.</p>
     <p class="mb-4">Tehnologia de anulare a zgomotului nu se aplică doar la ascultare, ci și la microfon. Un microfon cu funcție de reducere a zgomotului va filtra sunetele ambientale nedorite, cum ar fi tastatura mecanică sau zgomotul de fond din camera ta, asigurând că vocea ta este clară pentru coechipierii tăi. Acest aspect este crucial în jocurile competitive unde o comunicare eficientă poate fi diferența dintre victorie și înfrângere. Alegerea unor <strong>căști over-ear cu noise-canceling pentru gameri</strong> care excelează și la capitolul microfon este o decizie strategică.</p>
     <p class="mb-4">Deși multe căști vin cu microfoane integrate, calitatea poate varia semnificativ. Dacă prioritatea ta este comunicarea impecabilă, caută modele care menționează explicit tehnologii de procesare a vocii sau care sunt lăudate în recenzii pentru calitatea microfonului. Un microfon bun nu doar că îți permite să fii auzit clar, dar contribuie și la o experiență de joc mai fluidă și mai lipsită de frustrări, eliminând necesitatea de a repeta constant informații din cauza unei comunicări defectuoase. Investiția în <strong>căști over-ear cu noise-canceling pentru gameri</strong> cu un microfon performant este o investiție în succesul echipei tale.</p>
     
@@ -201,7 +214,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Conectivitate și Compatibilitate</h2>
     <p class="mb-4">Modul în care căștile se conectează la dispozitivele tale de gaming este un aspect esențial. Majoritatea căștilor de gaming folosesc fie o conexiune prin cablu (USB sau jack de 3.5mm), fie o conexiune wireless (Bluetooth sau un dongle USB dedicat). Conexiunea prin cablu oferă, în general, o latență mai mică, esențială pentru jocuri, și nu necesită încărcare. Cablurile detasabile sunt un plus, permițând înlocuirea ușoară în caz de deteriorare.</p>
-    <p class="mb-4">Tehnologia wireless oferă libertate de mișcare, dar este important să verifici latența. Pentru gaming, o latență cât mai mică este crucială. Dongle-urile USB dedicate, care folosesc protocoale proprietare, oferă adesea o performanță mai bună decât Bluetooth-ul standard, care poate introduce întârzieri sesizabile. Bateria este un alt factor important pentru căștile wireless; caută modele cu o autonomie de cel puțin 15-20 de ore pentru a te bucura de sesiuni lungi de gaming fără grija încărcării. Multe modele wireless oferă și posibilitatea de a fi folosite cu cablu, oferind cea mai bună flexibilitate.</p>
+    <p class="mb-4">Tehnologia wireless oferă libertate de mișcare, dar este important să verifici latența. <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">Pentru gaming</a>, o latență cât mai mică este crucială. Dongle-urile USB dedicate, care folosesc protocoale proprietare, oferă adesea o performanță mai bună decât Bluetooth-ul standard, care poate introduce întârzieri sesizabile. Bateria este un alt factor important pentru căștile wireless; caută modele cu o autonomie de cel puțin 15-20 de ore pentru a te bucura de sesiuni lungi de gaming fără grija încărcării. Multe modele wireless oferă și posibilitatea de a fi folosite cu cablu, oferind cea mai bună flexibilitate.</p>
     <p class="mb-4">Compatibilitatea este, de asemenea, un element cheie. Verifică dacă căștile sunt compatibile cu platformele tale de gaming: PC, PlayStation, Xbox, Nintendo Switch sau chiar dispozitive mobile. Unele căști sunt universale, în timp ce altele sunt optimizate pentru o anumită platformă. De exemplu, căștile concepute pentru PlayStation pot avea un dongle USB-C sau un jack de 3.5mm, în timp ce cele pentru Xbox ar putea necesita un controler cu port audio sau un dongle wireless specific. Asigură-te că alegi <strong>căști over-ear cu noise-canceling pentru gameri</strong> care se potrivesc cu sistemul tău de joc.</p>
     <p class="mb-4">De asemenea, funcționalitatea de noise-canceling poate funcționa diferit în funcție de tipul de conexiune. Unele modele permit activarea ANC-ului doar prin conexiune USB sau wireless, în timp ce altele îl pot folosi și prin jack-ul de 3.5mm. Luând în considerare aceste detalii tehnice vei putea face o alegere informată și te vei asigura că noile tale <strong>căști over-ear cu noise-canceling pentru gameri</strong> vor funcționa impecabil cu toate dispozitivele tale.</p>
     
@@ -219,7 +232,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-8" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Alegerea Brandului Potrivit</h2>
     <p class="mb-4">Pe piața din România, există o serie de branduri consacrate care oferă <strong>căști over-ear cu noise-canceling pentru gameri</strong> de înaltă calitate. Logitech, de exemplu, este cunoscut pentru fiabilitatea și performanța constantă a produselor sale, oferind modele care echilibrează excelent calitatea audio, confortul și funcționalitățile. Seriile lor G Pro sau G Pro X sunt frecvent recomandate de profesioniști.</p>
-    <p class="mb-4">SteelSeries este un alt nume de referință, cu o gamă largă de căști de gaming, de la modele entry-level la cele premium. Seriile Arctis, în special Arctis Nova Pro, sunt lăudate pentru designul ergonomic, calitatea sunetului și tehnologia de anulare a zgomotului. Acestea sunt adesea alese de gamerii profesioniști pentru performanța lor de top.</p>
+    <p class="mb-4">SteelSeries este un alt nume de referință, cu o gamă largă de căști de gaming, de la modele entry-level la cele premium. Seriile Arctis, în special Arctis Nova Pro, sunt lăudate pentru designul ergonomic, calitatea sunetului și tehnologia de anulare a zgomotului. Acestea sunt adesea alese de gamerii profesioniști <a href="/kit-upgrade-pc-pentru-performanta-maxima/" class="interlink">pentru performanța</a> lor de top.</p>
     <p class="mb-4">HyperX este renumit pentru durabilitatea și confortul căștilor sale. Modelele din seria Cloud, cum ar fi Cloud Alpha sau Cloud II, sunt extrem de populare datorită raportului calitate-preț excelent și a sunetului detaliat. Chiar dacă nu toate modelele HyperX dispun de ANC activ, cele mai noi versiuni încep să integreze și această tehnologie.</p>
     <p class="mb-4">Alte branduri demne de luat în considerare includ Razer, cu seria BlackShark și Nari, cunoscute pentru designul lor distinctiv și tehnologia audio avansată, și Corsair, care oferă opțiuni solide cu o construcție robustă și sunet puternic. Alegerea brandului potrivit depinde de preferințele tale personale în materie de design, buget și caracteristicile specifice pe care le cauți la <strong>căști over-ear cu noise-canceling pentru gameri</strong>.</p>
     
@@ -330,5 +343,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="casti-over-ear-cu-noise-canceling-pentru-gameri"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

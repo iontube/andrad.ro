@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -146,16 +159,16 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Fierul de Calcat Vertical Profesional: O Revolutie in Ingrijirea Hainelor</h2>
     <p class="mb-4">Daca pana acum fierul de calcat traditional era singura optiune pentru a scapa de cute, acum fierul de calcat vertical profesional a intrat in viata multora dintre noi. Am testat personal cateva modele de top si pot spune ca schimba complet modul in care ne gandim la intretinerea garderobei. Raportul dintre viteza si rezultate este pur si simplu impresionant, mai ales pentru cei cu un ritm de viata alert.</p>
-    <p class="mb-4">In experienta mea, principalul avantaj este eliminarea aproape totala a efortului. Nu mai stai sa intinzi rufele pe masa de calcat, nu mai cauti sa setezi temperatura potrivita pentru fiecare material in parte. E un proces mult mai intuitiv si mai rapid. Am observat ca si materialele mai delicate, precum matasea sau voalul, sunt tratate cu mult mai multa grija fata de un fier clasic, unde riscul de a arde sau de a lasa urme este mai mare.</p>
+    <p class="mb-4">In experienta mea, principalul avantaj este eliminarea aproape totala a efortului. Nu mai stai sa intinzi rufele pe masa de calcat, nu mai cauti sa setezi <a href="/senzor-temperatura-si-umiditate-smart/" class="interlink">temperatura</a> potrivita pentru fiecare material in parte. E un proces mult mai intuitiv si mai rapid. Am observat ca si materialele mai delicate, precum matasea sau voalul, sunt tratate cu mult mai multa grija fata de un fier clasic, unde riscul de a arde sau de a lasa urme este mai mare.</p>
     <p class="mb-4">Pentru mine, fierul de calcat vertical profesional a devenit un companion indispensabil, mai ales dimineatile in care realizez ca bluza preferata e sifonata. In loc de 15 minute cu fierul clasic, acum am nevoie de 2-3 minute pentru un rezultat cel putin la fel de bun. E o diferenta pe care o resimti zilnic.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum Functioneaza si Ce Conteaza la Alegerea Unui Model</h2>
-    <p class="mb-4">Principiul de functionare e simplu: aburul fierbinte penetreaza fibrele textile, relaxandu-le si eliminand astfel cutele. Modelele profesionale se diferentiaza prin puterea aburului, debitul acestuia si, implicit, prin eficienta. Am testat un Philips Steam&Go Plus (aproximativ 500 RON la eMAG), care promitea eliminarea a 99.9% din bacterii si o calcare rapida. Si chiar si-a tinut promisiunea, aburul fiind consistent si patrunzator.</p>
+    <p class="mb-4">Principiul de functionare e simplu: aburul fierbinte penetreaza fibrele textile, relaxandu-le si eliminand astfel cutele. Modelele <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">profesionale</a> se diferentiaza prin puterea aburului, debitul acestuia si, implicit, prin eficienta. Am testat un Philips Steam&Go Plus (aproximativ 500 RON la eMAG), care promitea eliminarea a 99.9% din bacterii si o calcare rapida. Si chiar si-a tinut promisiunea, aburul fiind consistent si patrunzator.</p>
     <p class="mb-4">Un alt aspect crucial este rezervorul de apa. Daca vrei sa calce o camasa sau doua, un rezervor mai mic e suficient. Daca insiace vrei sa faci fata unei cantitati mai mari de haine, cauta un model cu un rezervor generos, de cel putin 200 ml. Am gasit si modele cu statii de calcat verticale, precum Philips GC9940/05 (in jur de 1400 RON la Altex), care au rezervoare mult mai mari si o presiune a aburului superioara, potrivite pentru utilizare intensiva.</p>
-    <p class="mb-4">Materialul capului de calcare conteaza si el. Cele din otel inoxidabil sunt durabile si distribuie bine caldura si aburul. Unele modele vin si cu perii interschimbabile, utile pentru a reimprospata tesaturi mai groase sau pentru a elimina scamele. Am vazut si modele de la Tefal, precum Tefal IT3440E0 (aproximativ 600 RON la Flanco), care pun accent pe aceste accesorii.</p>
+    <p class="mb-4">Materialul capului de calcare conteaza si el. Cele din otel inoxidabil sunt durabile si distribuie bine caldura si aburul. Unele modele vin si cu perii interschimbabile, utile pentru a reimprospata tesaturi mai groase sau pentru a elimina scamele. Am vazut si modele de la Tefal, precum Tefal IT3440E0 (aproximativ 600 RON la Flanco), care pun accent pe aceste <a href="/accesorii-vr-pentru-experienta-imersiva/" class="interlink">accesorii</a>.</p>
     
     
   </section>
@@ -186,7 +199,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Modele Recomandate si Preturi</h2>
     <p class="mb-4">Pe piata din Romania gasesti o varietate mare de modele. Pentru un buget decent, in jur de 400-600 RON, modelele de la Philips (seria Steam&Go), Rowenta (Master 55) sau Tefal (seria IT) sunt optiuni solide. Acestea sunt ideale pentru utilizare ocazionala sau pentru cei care vor sa testeze aceasta tehnologie.</p>
-    <p class="mb-4">Daca vrei performanta de top si o utilizare frecventa, ar trebui sa te uiti la statii de calcat verticale. Acestea pot ajunge si la 1000-1500 RON, dar ofera o presiune a aburului mult mai mare si rezervoare mai generoase. Branduri precum Philips (seria Pro), Laurastar sau Miele sunt cunoscute pentru calitatea lor in acest segment.</p>
+    <p class="mb-4">Daca vrei <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanta</a> de top si o utilizare frecventa, ar trebui sa te uiti la statii de calcat verticale. Acestea pot ajunge si la 1000-1500 RON, dar ofera o presiune a aburului mult mai mare si rezervoare mai generoase. Branduri precum Philips (seria Pro), Laurastar sau Miele sunt cunoscute pentru calitatea lor in acest segment.</p>
     <p class="mb-4">Am vazut oferte bune si pe site-urile retailerilor mari precum eMAG, Altex, Flanco si PCGarage. E bine sa urmaresti reducerile, mai ales in perioadele de Black Friday sau sarbatori, pentru a prinde preturi mai avantajoase. De exemplu, un Philips GC482/30, care de obicei costa in jur de 500 RON, l-am gasit la 380 RON anul trecut.</p>
     
     
@@ -284,5 +297,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="fier-de-calcat-vertical-profesional"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -159,7 +172,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Materiale si Durabilitate: Investitia pe Termen Scurt si Lung</h2>
-    <p class="mb-4">Cand vine vorba de un robot de bucatarie pentru patiserie, materialele din care este construit sunt esentiale pentru durabilitate si igiena. Plasticul de proasta calitate se poate crapa sau se poate decolora in timp, mai ales daca il folosesti des. Am preferat intotdeauna aparatele cu carcase din metal (aluminiu turnat sau otel inoxidabil), asa cum am intalnit la KitchenAid si Kenwood. Acestea sunt mai rezistente la socuri si se curata mult mai usor.</p>
+    <p class="mb-4">Cand vine vorba de un robot de bucatarie pentru patiserie, materialele din care este construit sunt esentiale pentru durabilitate si igiena. Plasticul de proasta calitate se poate crapa sau se poate decolora in timp, mai ales daca il folosesti des. Am preferat intotdeauna aparatele cu carcase din metal (aluminiu turnat sau otel inoxidabil), asa cum am intalnit la KitchenAid si Kenwood. Acestea sunt mai <a href="/boxe-outdoor-rezistente-la-ploaie/" class="interlink">rezistente la</a> socuri si se curata mult mai usor.</p>
     <p class="mb-4">Bolurile din inox sunt, in parerea mea, cele mai bune. Nu se pateaza, nu retin mirosuri si sunt rezistente la coroziune. Am intalnit si boluri din sticla groasa, care arata elegant, dar sunt mai greu de manevrat si se pot sparge. Modelele mai ieftine, cum ar fi unele de la Tefal (de exemplu, Kitchen Machine, pe Flanco la aproximativ 1.500 RON), folosesc adesea o combinatie de plastic si metal, ceea ce le face mai accesibile, dar pot compromite durabilitatea pe termen lung.</p>
     <p class="mb-4">Am observat ca si accesoriile trebuie sa fie de calitate. Cele din otel inoxidabil sunt cele mai bune, rezista la uzura si sunt igienice. Cele din plastic, chiar daca sunt mai usoare, se pot deteriora mai repede la utilizare intensiva sau la spalari repetate.</p>
     
@@ -167,7 +180,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Practicabilitate: Curatare si Depozitare</h2>
-    <p class="mb-4">Un robot de bucatarie, oricat de performant ar fi, devine o povara daca este greu de curatat sau de depozitat. Am invatat din experienta ca accesoriile care pot fi spalate in masina de spalat vase sunt un mare plus. Majoritatea modelelor de top, inclusiv KitchenAid si Kenwood, ofera aceasta facilitate. Parti precum bolul, telul, carligul si paleta se pot spala fara probleme.</p>
+    <p class="mb-4">Un robot de bucatarie, oricat de performant ar fi, devine o povara daca este greu de curatat sau de depozitat. Am invatat din experienta ca accesoriile care pot fi spalate in masina de <a href="/masina-de-spalat-vase-cu-senzori-eco/" class="interlink">spalat vase</a> sunt un mare plus. Majoritatea modelelor de top, inclusiv KitchenAid si Kenwood, ofera aceasta facilitate. Parti precum bolul, telul, carligul si paleta se pot spala fara probleme.</p>
     <p class="mb-4">Carcasele robotilor se curata, de obicei, cu o carpa umeda. Am observat ca modelele cu suprafete netede, fara multe colturi greu accesibile, sunt mai usor de intretinut. Unele aparate vin cu protectii anti-stropire detasabile, ceea ce este excelent pentru a mentine bucataria curata, mai ales cand lucrezi cu ingrediente fine sau lichide.</p>
     <p class="mb-4">Ca si depozitare, robotii de bucatarie pot fi destul de masivi. Daca ai spatiu limitat in bucatarie, cauta un model cu un design mai compact sau unul ale carui accesorii pot fi depozitate in interiorul bolului (acest lucru este rar, dar am intalnit la unele modele mai vechi). Am observat ca greutatea este un factor important; un robot greu e mai stabil pe blat, dar mai dificil de mutat.</p>
     
@@ -177,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Accesorii Esentiale pentru Patiserie</h2>
     <p class="mb-4">Pe langa accesoriile de baza (tel, carlig, paleta), exista cateva accesorii suplimentare care pot transforma un robot de bucatarie intr-un adevarat asistent pentru patiserie. Am testat un accesoriu pentru facut paste proaspete la un model Kenwood, iar rezultatele au fost uimitoare – paste perfect formate, mult mai bune decat cele din comert.</p>
     <p class="mb-4">Un accesoriu pentru facut inghetata este, de asemenea, un plus binevenit in zilele calduroase. Majoritatea acestor accesorii sunt boluri speciale pe care le pui la congelator inainte de utilizare. Am incercat un astfel de accesoriu la un robot Bosch si am obtinut o inghetata cremoasa, fara cristale de gheata.</p>
-    <p class="mb-4">Pentru cei cu adevarat pasionati, exista si accesorii pentru feliat legume, pentru facut piureuri sau chiar pentru tocat carne. Acestea extind functionalitatea robotului mult dincolo de patiserie, transformandu-l intr-un aparat multifunctional. Am observat ca pretul acestor accesorii poate fi destul de ridicat, uneori ajungand la cateva sute de lei pe bucata, deci e bine sa te gandesti de la inceput de ce ai nevoie.</p>
+    <p class="mb-4">Pentru cei cu adevarat pasionati, exista si accesorii pentru feliat legume, pentru facut piureuri sau chiar pentru tocat carne. Acestea extind functionalitatea robotului mult dincolo de patiserie, transformandu-l intr-un aparat <a href="/cuptor-multifunctional-cu-aburi/" class="interlink">multifunctional</a>. Am observat ca pretul acestor accesorii poate fi destul de ridicat, uneori ajungand la cateva sute de lei pe bucata, deci e bine sa te gandesti de la inceput de ce ai nevoie.</p>
     
     
   </section>
@@ -185,7 +198,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce Am Invatat din Testarea Robotilor de Bucatarie pentru Patiserie</h2>
     <p class="mb-4">Dupa ce am pus la treaba diverse modele, pot spune cu mana pe inima ca un robot de bucatarie dedicat patiseriei face o diferenta reala. Am observat ca aluaturile ies mult mai bine framantate, cremele sunt omogene si aerate, iar timpul petrecut in bucatarie se reduce considerabil. Un robot bun iti permite sa experimentezi cu retete complexe fara teama ca aparatul nu va face fata.</p>
     <p class="mb-4">Am invatat ca nu trebuie sa te zgaricesti la putere. Un motor mai puternic inseamna ca poti aborda o gama mai larga de retete, fara sa risti sa supraincalzesti aparatul. De asemenea, calitatea materialelor conteaza enorm pentru igiena si durabilitate. Am preferat aparatele cu carcasa metalica si boluri din inox.</p>
-    <p class="mb-4">Inainte de a cumpara, gandeste-te la ce vrei sa gatesti cel mai des. Ai nevoie de un robot pentru aluaturi dense sau predominant pentru creme si amestecuri usoare? Raspunsul la aceasta intrebare te va ghida spre modelul cu accesoriile potrivite si puterea adecvata. Am observat ca preturile variaza considerabil, de la 1.500 RON pentru modele de baza, pana la peste 5.000 RON pentru aparatele profesionale.</p>
+    <p class="mb-4">Inainte de a cumpara, gandeste-te la ce vrei sa gatesti cel mai des. Ai nevoie de un robot pentru aluaturi dense sau predominant pentru creme si amestecuri usoare? Raspunsul la aceasta intrebare te va ghida spre modelul cu accesoriile potrivite si puterea adecvata. Am observat ca preturile variaza considerabil, de la 1.500 RON pentru modele de baza, pana la peste 5.000 RON pentru aparatele <a href="/obiectiv-prime-pentru-portrete-profesionale/" class="interlink">profesionale</a>.</p>
     
     
   </section>
@@ -282,5 +295,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="robot-de-bucatarie-pentru-patiserie"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

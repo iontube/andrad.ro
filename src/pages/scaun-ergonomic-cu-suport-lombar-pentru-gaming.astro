@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -155,17 +168,17 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     
-    <p class="mb-4">În universul pasionaților de gaming, confortul și sănătatea coloanei vertebrale sunt la fel de importante ca performanța sistemului. Un scaun ergonomic cu suport lombar pentru gaming nu mai este un lux, ci o necesitate pentru oricine petrece ore în șir în fața ecranului. Alegerea unui astfel de scaun poate face diferența între sesiuni de joc epuizante și o experiență imersivă și, mai ales, sănătoasă. Acest articol îți va explora în detaliu importanța acestor piese de mobilier, ce caracteristici să cauți și cum să alegi modelul perfect pentru nevoile tale specifice.</p>
-    <p class="mb-4">Să recunoaștem, majoritatea dintre noi nu ne gândim la ergonomie până când nu începem să simțim dureri. Fie că ești un gamer profesionist care participă la turnee sau un entuziast care se bucură de ultimele lansări, poziția incorectă pe scaun pe termen lung poate duce la probleme serioase, de la dureri de spate și gât, la probleme de circulație și chiar afecțiuni cronice. Un scaun ergonomic cu suport lombar pentru gaming este conceput special pentru a combate aceste riscuri, oferind un sprijin optim corpului.</p>
+    <p class="mb-4">În universul pasionaților de gaming, confortul și sănătatea coloanei vertebrale sunt la fel de importante ca performanța sistemului. Un scaun ergonomic cu suport lombar <a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">pentru gaming</a> nu mai este un lux, ci o necesitate pentru oricine petrece ore în șir în fața ecranului. Alegerea unui astfel de scaun poate face diferența între sesiuni de joc epuizante și o experiență imersivă și, mai ales, sănătoasă. Acest articol îți va explora în detaliu importanța acestor piese de mobilier, ce caracteristici să cauți și cum să alegi modelul perfect pentru nevoile tale specifice.</p>
+    <p class="mb-4">Să recunoaștem, majoritatea dintre noi nu ne gândim la ergonomie până când nu începem să simțim dureri. Fie că ești un gamer profesionist care participă la turnee sau un entuziast care se bucură de ultimele lansări, poziția incorectă pe scaun pe termen lung poate duce la probleme serioase, de la dureri de spate și gât, la probleme de circulație și chiar afecțiuni cronice. Un scaun ergonomic cu suport lombar <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">pentru gaming</a> este conceput special pentru a combate aceste riscuri, oferind un sprijin optim corpului.</p>
     <p class="mb-4">Investiția într-un scaun de gaming ergonomic cu suport lombar este o investiție în propria ta sănătate și bunăstare. Nu este doar despre estetică sau despre a arăta ca un pro-gamer, ci despre a-ți proteja corpul de efectele negative ale statului prelungit în șezut. Cu atâtea opțiuni pe piață, de la modele mai accesibile la cele premium, înțelegerea caracteristicilor cheie te va ajuta să navighezi prin multitudinea de oferte și să faci o alegere informată. Vom analiza ce anume definește un scaun de gaming bun și cum suportul lombar contribuie la experiența ta.</p>
-    <p class="mb-4">Scopul acestui articol este să te ghideze prin complexitatea alegerii unui scaun ergonomic cu suport lombar pentru gaming. Vom diseca componentele esențiale, vom explora diferitele tipuri de ajustări și materiale, și vom oferi sfaturi practice pentru a găsi acel scaun care se potrivește perfect stilului tău de joc și nevoilor tale fizice. Pregătește-te să afli tot ce trebuie să știi pentru a-ți transforma setup-ul de gaming într-un spațiu de confort și sănătate.</p>
+    <p class="mb-4">Scopul acestui articol este să te ghideze prin complexitatea alegerii unui scaun ergonomic cu suport lombar <a href="/casti-wireless-pentru-gaming-mobil/" class="interlink">pentru gaming</a>. Vom diseca componentele esențiale, vom explora diferitele tipuri de ajustări și materiale, și vom oferi sfaturi practice pentru a găsi acel scaun care se potrivește perfect stilului tău de joc și nevoilor tale fizice. Pregătește-te să afli tot ce trebuie să știi pentru a-ți transforma setup-ul de gaming într-un spațiu de confort și sănătate.</p>
     
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">De ce este esențial suportul lombar pentru gameri?</h2>
     <p class="mb-4">Coloana vertebrală umană are o curbură naturală, în formă de S, iar zona lombară (partea inferioară a spatelui) este cea mai solicitată în timpul statului pe scaun. Fără un sprijin adecvat, această zonă tinde să se aplatizeze, forțând mușchii să lucreze suplimentar pentru a menține postura corectă. Acest efort prelungit duce inevitabil la oboseală musculară, durere și, în timp, la probleme posturale.</p>
-    <p class="mb-4">Un scaun ergonomic cu suport lombar pentru gaming este conceput cu o proeminență sau o pernă ajustabilă, poziționată strategic pentru a imita curba naturală a spatelui inferior. Acest suport preia o parte din greutate, relaxează mușchii spatelui și permite menținerea unei posturi corecte, fără efort conștient. Este ca și cum ai avea un ajutor invizibil care îți păstrează spatele sănătos pe parcursul sesiunilor lungi de joc.</p>
+    <p class="mb-4">Un scaun ergonomic cu suport lombar <a href="/monitor-portabil-pentru-gaming-in-deplasare/" class="interlink">pentru gaming</a> este conceput cu o proeminență sau o pernă ajustabilă, poziționată strategic pentru a imita curba naturală a spatelui inferior. Acest suport preia o parte din greutate, relaxează mușchii spatelui și permite menținerea unei posturi corecte, fără efort conștient. Este ca și cum ai avea un ajutor invizibil care îți păstrează spatele sănătos pe parcursul sesiunilor lungi de joc.</p>
     <p class="mb-4">Beneficiile nu se opresc doar la prevenirea durerilor. Un suport lombar eficient poate îmbunătăți și circulația sanguină în zona spatelui, reducând senzația de amorțeală și rigiditate. De asemenea, o postură corectă influențează pozitiv și respirația și nivelul de energie, permițându-ți să rămâi concentrat și alert pe parcursul jocului, fără distrageri cauzate de disconfort fizic. Alegerea unui scaun de gaming cu suport lombar este, așadar, o decizie inteligentă pentru oricine își dorește să joace la potențial maxim.</p>
     <p class="mb-4">Chiar și cele mai avansate scaune de gaming fără un suport lombar bine integrat pot deveni o sursă de probleme. Căutarea unui scaun de gaming ergonomic cu suport lombar devine astfel prioritară pentru sănătatea pe termen lung. Modele precum cele de la Secretlab sau DXRacer pun accent pe acest aspect, oferind soluții personalizabile pentru o protecție sporită a spatelui. Un scaun de gaming cu suport lombar adecvat este piatra de temelie a unui setup sănătos.</p>
     
@@ -330,5 +343,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="scaun-ergonomic-cu-suport-lombar-pentru-gaming"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

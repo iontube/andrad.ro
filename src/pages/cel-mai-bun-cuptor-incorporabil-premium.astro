@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -161,13 +174,13 @@ import Layout from '../layouts/Layout.astro';
           
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Introducere</h2>
-    <p class="mb-4">Bucătăria modernă a devenit inima căminului, un spațiu unde nu doar gătim, ci creăm amintiri și savurăm momente. Iar un cuptor încorporabil, mai mult decât un simplu aparat, este un partener de încredere în această aventură culinară. Când vorbim de categoria premium, intrăm într-o zonă unde performanța, designul și inovația se împletesc armonios, transformând fiecare preparat într-o operă de artă.</p>
+    <p class="mb-4">Bucătăria modernă a devenit inima căminului, un spațiu unde nu doar gătim, ci creăm amintiri și savurăm momente. Iar un cuptor încorporabil, mai mult decât un simplu aparat, este un partener de încredere în această aventură culinară. Când vorbim de categoria premium, intrăm într-o zonă unde <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanța</a>, designul și inovația se împletesc armonios, transformând fiecare preparat într-o operă de artă.</p>
     <p class="mb-4">Investiția într-un cuptor încorporabil premium nu este doar o achiziție, ci o declarație. Este alegerea de a te bucura de precizie, eficiență și o estetică impecabilă, integrate perfect în designul bucătăriei tale. Haide să explorăm împreună ce anume diferențiază aceste bijuterii tehnologice și cum îți pot ele eleva experiența gastronomică.</p>
     
   </section>
   <section id="sectiune-2" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">De Ce Să Alegi un Cuptor Încorporabil Premium?</h2>
-    <p class="mb-4">Sunt multe motive pentru care merită să investești într-un cuptor din segmentul premium. Performanța culinară este una dintre ele. Aceste cuptoare oferă o precizie și o consistență superioare, esențiale pentru rețete complexe sau pentru cei care își doresc rezultate perfecte de fiecare dată. Vorbim de distribuția uniformă a căldurii, controlul exact al temperaturii și o multitudine de funcții specializate, toate menite să îți simplifice procesul de gătire.</p>
+    <p class="mb-4">Sunt multe motive pentru care merită să investești într-un cuptor din segmentul premium. <a href="/placa-video-amd-performanta-ridicata/" class="interlink">Performanța</a> culinară este una dintre ele. Aceste cuptoare oferă o precizie și o consistență superioare, esențiale pentru rețete complexe sau pentru cei care își doresc rezultate perfecte de fiecare dată. Vorbim de distribuția uniformă a căldurii, controlul exact al temperaturii și o multitudine de funcții specializate, toate menite să îți simplifice procesul de gătire.</p>
     <p class="mb-4">Un alt aspect esențial este durabilitatea și calitatea materialelor. Producătorii de top folosesc componente rezistente, finisaje elegante și tehnologii de asamblare care asigură o viață lungă aparatului. Designul este, un atu puternic; un cuptor premium se integrează impecabil în orice bucătărie modernă, adăugând o notă de rafinament și stil. Este o investiție pe termen lung, care îți va aduce satisfacție ani la rând.</p>
     
   </section>
@@ -191,7 +204,7 @@ import Layout from '../layouts/Layout.astro';
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Uși și Siguranță</h3>
     <p class="mb-4">Detaliile fac diferența. Ușile cu închidere lentă (SoftClose) și deschidere asistată (SoftOpen) oferă un plus de confort și eleganță. Sticla multistrat asigură că ușa rămâne rece la atingere, chiar și la temperaturi ridicate, prevenind arsurile accidentale. De asemenea, funcțiile de blocare pentru copii sunt un standard de siguranță esențial.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Programe Automate și Senzori</h3>
-    <p class="mb-4">Multe cuptoare premium vin cu programe automate predefinite pentru o gamă largă de preparate. Senzori precum PerfectBake de la Bosch/Siemens monitorizează umiditatea din interior pentru a determina momentul optim de încheiere a coacerii, iar termosondele de carne (roastingSensor Plus) asigură că friptura ta va fi gătită exact la gradul dorit, fără efort din partea ta.</p>
+    <p class="mb-4">Multe cuptoare premium vin cu <a href="/multicooker-cu-programe-automate/" class="interlink">programe automate</a> predefinite pentru o gamă largă de preparate. Senzori precum PerfectBake de la Bosch/Siemens monitorizează umiditatea din interior pentru a determina momentul optim de încheiere a coacerii, iar termosondele de carne (roastingSensor Plus) asigură că friptura ta va fi gătită exact la gradul dorit, fără efort din partea ta.</p>
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Design și Materiale: Estetică și Durabilitate</h2>
@@ -200,7 +213,7 @@ import Layout from '../layouts/Layout.astro';
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Finisaje Rafinate și Panouri de Control Intuitive</h3>
     <p class="mb-4">Predomină oțelul inoxidabil anti-amprentă, sticla neagră lucioasă sau mată, alături de accente metalice. Panourile de control TFT touch-screen, de tip M Touch la Miele sau display-urile Full Touch de la Siemens, oferă o operare intuitivă și elegantă. Butoanele rotative iluminate, retractabile, adaugă un plus de sofisticare și facilitează curățarea. Iluminarea interioară LED, pe lângă eficiență, oferă o vizibilitate excelentă a preparatelor.</p>
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Integrare Perfectă</h3>
-    <p class="mb-4">Un cuptor încorporabil premium este conceput să se integreze perfect în mobilierul de bucătărie, creând o linie continuă și un aspect minimalist. Producătorii oferă adesea game complete de electrocasnice cu un design unitar, permițând crearea unui ansamblu armonios și funcțional.</p>
+    <p class="mb-4">Un cuptor încorporabil premium este conceput să se integreze perfect în mobilierul <a href="/robot-de-bucatarie-pentru-patiserie/" class="interlink">de bucătărie</a>, creând o linie continuă și un aspect minimalist. Producătorii oferă adesea game complete de electrocasnice cu un design unitar, permițând crearea unui ansamblu armonios și funcțional.</p>
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Branduri de Top și Modele Recomandate</h2>
@@ -327,5 +340,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-cuptor-incorporabil-premium"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

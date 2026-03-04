@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -162,7 +175,7 @@ import Layout from '../layouts/Layout.astro';
   
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Introducere în Lumea Frigiderelor Side by Side Premium</h2>
-    <p class="mb-4">Bucătăria modernă a devenit un spațiu central în orice locuință, un loc unde funcționalitatea se împletește armonios cu estetica. Iar inima oricărei bucătării este, fără îndoială, frigiderul. Când vorbim de electrocasnice care transformă o bucătărie obișnuită într-un sanctuar culinar, frigiderele side by side premium ocupă un loc aparte.</p>
+    <p class="mb-4">Bucătăria modernă a devenit un spațiu central în orice locuință, un loc unde funcționalitatea se împletește armonios cu estetica. Iar inima oricărei bucătării este, fără îndoială, frigiderul. Când vorbim de electrocasnice care transformă o <a href="/robot-de-bucatarie-pentru-patiserie/" class="interlink">bucătărie</a> obișnuită într-un sanctuar culinar, frigiderele side by side premium ocupă un loc aparte.</p>
     <p class="mb-4">Nu este vorba doar de a păstra alimentele reci. Un frigider premium este o declarație de stil, un centru tehnologic și un partener de încredere în gestionarea proviziilor. Aceste modele aduc un nivel superior de confort, eficiență și inovație, gândite să îți simplifice viața și să îți ofere o experiență de utilizare excepțională.</p>
     
   </section>
@@ -175,7 +188,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Tehnologii Inovatoare: Mai mult decât Răcire Simplă</h2>
     <p class="mb-4">Frigiderele premium sunt adevărate centre de inovație, integrând funcții care depășesc simpla răcire. Sistemele No Frost sunt standard, prevenind acumularea gheții și eliminând nevoia de decongelare manuală. Multe modele avansate, cum ar fi cele de la LG cu tehnologia Linear Compressor, reduc zgomotul și consumul energetic, oferind o răcire mai constantă. Samsung, cu sistemul Twin Cooling Plus, utilizează două circuite de răcire separate pentru frigider și congelator, menținând un nivel optim de umiditate în zona de refrigerare și prevenind amestecul mirosurilor.</p>
-    <p class="mb-4">Un plus de confort este adus de funcții precum Door-in-Door sau InstaView de la LG, care permit accesul rapid la băuturi și gustări fără a deschide complet ușa principală, reducând pierderile de aer rece. Zonele speciale de conservare sunt un element definitoriu. De exemplu, tehnologia BioFresh de la Liebherr sau VitaFresh de la Bosch creează condiții ideale de temperatură și umiditate pentru fructe, legume, carne și lactate, prelungind semnificativ prospețimea acestora. Unele modele Samsung vin cu sertare FlexZone, care pot fi transformate din frigider în congelator sau invers, cu temperaturi ajustabile pe diverse trepte, de la -23°C până la 4°C, oferind o flexibilitate incredibilă.</p>
+    <p class="mb-4">Un plus de confort este adus de funcții precum Door-in-Door sau InstaView de la LG, care permit accesul rapid la băuturi și gustări fără a deschide complet ușa principală, reducând pierderile de aer rece. Zonele speciale de conservare sunt un element definitoriu. De exemplu, tehnologia BioFresh de la Liebherr sau VitaFresh de la Bosch creează condiții ideale de <a href="/senzor-temperatura-si-umiditate-smart/" class="interlink">temperatură și</a> umiditate pentru fructe, legume, carne și lactate, prelungind semnificativ prospețimea acestora. Unele modele Samsung vin cu sertare FlexZone, care pot fi transformate din frigider în congelator sau invers, cu temperaturi ajustabile pe diverse trepte, de la -23°C până la 4°C, oferind o flexibilitate incredibilă.</p>
     
   </section>
   <section id="sectiune-4" class="mb-10">
@@ -186,14 +199,14 @@ import Layout from '../layouts/Layout.astro';
   </section>
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Design și Ergonomie: Estetică și Funcționalitate</h2>
-    <p class="mb-4">Un frigider side by side premium nu este doar un aparat utilitar, ci o piesă centrală de design în bucătărie. Finisajele din inox, oțel negru mat, sau chiar uși din sticlă, completează perfect orice stil modern. Liniile curate, mânerele integrate sau minimaliste și ecranele tactile inteligente contribuie la un aspect sofisticat.</p>
+    <p class="mb-4">Un frigider side by side premium nu este doar un aparat utilitar, ci o piesă centrală de design în bucătărie. Finisajele din inox, oțel negru mat, sau chiar uși din sticlă, completează perfect orice stil modern. Liniile curate, mânerele integrate sau minimaliste și ecranele tactile <a href="/frigider-cu-compartimente-inteligente/" class="interlink">inteligente</a> contribuie la un aspect sofisticat.</p>
     <p class="mb-4">Organizarea interioară este gândită până în cel mai mic detaliu. Rafturile ajustabile din sticlă securizată, suporturile pentru sticle, compartimentele modulare și sertarele cu extragere totală facilitează accesul și organizarea alimentelor. Dispenserul de apă și gheață, adesea integrat elegant în ușă, este un element de confort indispensabil, oferind apă filtrată rece, cuburi de gheață sau gheață pisată la o simplă atingere. Samsung Family Hub, de exemplu, transformă ușa frigiderului într-un hub de divertisment și organizare familială, cu ecran tactil, aplicații și posibilitatea de a vizualiza conținutul interior prin camere integrate.</p>
     
   </section>
   <section id="sectiune-6" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Branduri de Top și Modele Recomandate</h2>
     <p class="mb-4">Când ești în căutarea celui mai bun frigider side by side premium, există câțiva producători care se disting prin inovație, calitate și fiabilitate.</p>
-    <p class="mb-4"><strong>Samsung</strong>: Cunoscut pentru designul modern și tehnologia avansată, Samsung oferă modele precum seriile Family Hub (cu ecran tactil inteligent) sau SpaceMax (cu izolație subțire pentru capacitate maximă). Tehnologii precum Twin Cooling Plus și No Frost integral sunt standard. Multe modele vin cu dispenser de apă și gheață, necesitând conectare la rețeaua de apă.</p>
+    <p class="mb-4"><strong>Samsung</strong>: Cunoscut pentru designul modern și tehnologia avansată, Samsung oferă modele precum seriile Family Hub (cu ecran tactil inteligent) sau SpaceMax (cu izolație <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">subțire pentru</a> capacitate maximă). Tehnologii precum Twin Cooling Plus și No Frost integral sunt standard. Multe modele vin cu dispenser de apă și gheață, necesitând conectare la rețeaua de apă.</p>
     <p class="mb-4"><strong>LG</strong>: Brandul LG impresionează prin inovații precum InstaView Door-in-Door, care îți permite să vezi conținutul frigiderului printr-o simplă atingere a ușii. Compresoarele liniare (Linear Compressor) sunt recunoscute pentru durabilitatea și eficiența lor energetică. Funcțiile FreshBalancer și FreshConverter optimizează condițiile pentru diverse tipuri de alimente.</p>
     <p class="mb-4"><strong>Bosch / Siemens</strong>: Aceste branduri germane sunt sinonime cu fiabilitatea și ingineria precisă. Modelele lor side by side includ sisteme VitaFresh pentru păstrarea îndelungată a prospețimii, tehnologie NoFrost și conectivitate Home Connect, permițând controlul de la distanță. Designul este deseori minimalist și elegant.</p>
     <p class="mb-4"><strong>Liebherr</strong>: Specializat în refrigerare, Liebherr este un nume de referință pentru calitatea premium. Sistemul BioFresh, care menține temperaturi aproape de 0°C și nivele optime de umiditate, este un punct forte. Tehnologia DuoCooling, cu două circuite de răcire separate, asigură o performanță excepțională și evită transferul de mirosuri. Sunt adesea mai scumpe, dar oferă o durată de viață impresionantă.</p>
@@ -312,5 +325,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-frigider-side-by-side-premium"
+      currentCategory="electrocasnice"
+      articles={allArticles}
+    />
   </article>
 </Layout>

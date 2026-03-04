@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -162,7 +175,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-1" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Introducere</h2>
     <p class="mb-4">Sesiunile lungi de gaming pot fi epuizante, nu doar pentru minte, ci și pentru corp. Un scaun obișnuit îți poate afecta postura, concentrarea și, pe termen lung, sănătatea. Când vorbim despre gaming la un nivel înalt, sau pur și simplu despre ore nenumărate petrecute în fața ecranului, investiția într-un scaun de gaming premium devine o necesitate, nu un moft. Nu e vorba doar de un loc unde să te așezi, e vorba de un partener în fiecare victorie și în fiecare moment de relaxare.</p>
-    <p class="mb-4">Un scaun de top îți oferă suportul ergonomic necesar pentru a preveni durerile de spate și gât, îți îmbunătățește circulația și te ajută să rămâi alert și concentrat. E o piesă esențială a setup-ului tău, care contribuie direct la performanța ta și la bunăstarea generală. Haide să vedem ce anume definește excelența în lumea scaunelor de gaming și cum să alegi modelul perfect pentru tine.</p>
+    <p class="mb-4">Un scaun de top îți oferă suportul ergonomic necesar pentru a preveni durerile de spate și gât, îți îmbunătățește circulația și te ajută să rămâi alert și concentrat. E o piesă esențială a setup-ului tău, care contribuie direct la <a href="/laptop-gaming-sub-6000-lei-cu-performanta-ridicata/" class="interlink">performanța</a> ta și la bunăstarea generală. Haide să vedem ce anume definește excelența în lumea scaunelor de gaming și cum să alegi modelul perfect pentru tine.</p>
     
   </section>
   <section id="sectiune-2" class="mb-10">
@@ -174,13 +187,13 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-3" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ergonomia superioară: cheia confortului de lungă durată</h2>
     <p class="mb-4">Punctul forte al oricărui scaun de gaming premium e ergonomia sa. Nu e vorba doar de o formă atrăgătoare, ci de un design gândit să se adapteze corpului uman și să ofere suport acolo unde e cel mai necesar. Funcții precum suportul lombar reglabil, tetierele ajustabile și cotierele multi-direcționale sunt standard la aceste modele.</p>
-    <p class="mb-4">Un exemplu excelent e sistemul de suport lombar L-ADAPT de la Secretlab Titan Evo, care permite ajustarea adâncimii și înălțimii, imitând curbura naturală a coloanei vertebrale. Scaune precum Herman Miller Embody, dezvoltat în colaborare cu Logitech G, merg și mai departe, oferind o structură 'spinoasă' ce se mulează pe mișcările corpului, distribuind presiunea uniform și favorizând o circulație sanguină optimă. Mecanismele de înclinare și balansare avansate, cum ar fi cele cu blocare în multiple poziții, îți permit să găsești unghiul perfect pentru orice activitate, de la sesiuni intense de gaming la vizionarea unui film.</p>
+    <p class="mb-4">Un exemplu excelent e sistemul de <a href="/scaun-ergonomic-cu-suport-lombar-pentru-gaming/" class="interlink">suport lombar</a> L-ADAPT de la Secretlab Titan Evo, care permite ajustarea adâncimii și înălțimii, imitând curbura naturală a coloanei vertebrale. Scaune precum Herman Miller Embody, dezvoltat în colaborare cu Logitech G, merg și mai departe, oferind o structură 'spinoasă' ce se mulează pe mișcările corpului, distribuind presiunea uniform și favorizând o circulație sanguină optimă. Mecanismele de înclinare și balansare avansate, cum ar fi cele cu blocare în multiple poziții, îți permit să găsești unghiul perfect pentru orice activitate, de la sesiuni intense de gaming la vizionarea unui film.</p>
     
   </section>
   <section id="sectiune-4" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Materiale de top și construcție robustă</h2>
     <p class="mb-4">Calitatea materialelor și a construcției sunt aspecte fundamentale care diferențiază un scaun premium de restul. Cadrul intern e aproape întotdeauna din oțel, asigurând o stabilitate și o durabilitate excepționale. Baza, adesea, e fabricată din aluminiu solid, capabilă să susțină greutăți considerabile și să reziste uzurii intense. Roțile, de obicei acoperite cu poliuretan (PU), protejează podelele și asigură o mișcare silențioasă și fluidă.</p>
-    <p class="mb-4">La nivelul tapițeriei, opțiunile sunt variate, fiecare cu propriile avantaje. Pielea ecologică hibridă, cum ar fi Secretlab NEO Hybrid Leatherette, oferă o durabilitate crescută și o întreținere facilă, fiind rezistentă la abraziune și la pete. Pentru cei care preferă o senzație mai moale și o respirabilitate superioară, materialele textile, precum Secretlab SoftWeave Plus, sunt o alegere excelentă. Noblechairs, pe lângă pielea ecologică de calitate, oferă și variante cu piele naturală, conferind un aspect luxos și o durată de viață impresionantă. Scaunele de tip mesh, precum Herman Miller Aeron, excelează la capitolul ventilație, fiind ideale pentru medii calde sau pentru utilizatorii care transpiră ușor.</p>
+    <p class="mb-4">La nivelul tapițeriei, opțiunile sunt variate, fiecare cu propriile avantaje. Pielea ecologică hibridă, cum ar fi Secretlab NEO Hybrid Leatherette, oferă o durabilitate crescută și o întreținere facilă, fiind <a href="/camera-actiune-rezistenta-la-apa/" class="interlink">rezistentă la</a> abraziune și la pete. Pentru cei care preferă o senzație mai moale și o respirabilitate superioară, materialele textile, precum Secretlab SoftWeave Plus, sunt o alegere excelentă. Noblechairs, pe lângă pielea ecologică de calitate, oferă și variante cu piele naturală, conferind un aspect luxos și o durată de viață impresionantă. Scaunele de tip mesh, precum Herman Miller Aeron, excelează la capitolul ventilație, fiind ideale pentru medii calde sau pentru utilizatorii care transpiră ușor.</p>
     
     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Tapițerie: Piele, Textil sau Mesh?</h3>
     <p class="mb-4">Alegerea materialului depinde mult de preferințele personale și de mediul în care vei folosi scaunul. Pielea ecologică și cea naturală sunt elegante și ușor de curățat, dar pot reține căldura. Materialul textil e mai respirabil și mai confortabil la atingere, dar poate fi mai greu de curățat de pete. Mesh-ul oferă cea mai bună ventilație, fiind ideal pentru sesiuni lungi în zile calde, însă poate fi mai puțin moale la atingere.</p>
@@ -195,7 +208,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Scaune de gaming premium care definesc standardul</h2>
     <p class="mb-4">Când vine vorba de scaune premium, câteva nume se evidențiază prin inovație și calitate. Acestea sunt modelele pe care le recomandăm cu încredere pentru o experiență de top:</p>
     <p class="mb-4"><strong>Secretlab Titan Evo</strong>: Considerat de mulți etalonul scaunelor de gaming, Titan Evo îmbină un design modern cu funcționalități de ultimă generație. Vine în trei dimensiuni (Small, Regular, XL) pentru a se potrivi unei game largi de utilizatori, iar sistemul magnetic pentru tetieră și pernuțe laterale e incredibil de practic. Suportul lombar L-ADAPT, integrat și reglabil în 4 direcții, oferă o susținere excepțională, iar opțiunile de tapițerie (NEO Hybrid Leatherette sau SoftWeave Plus Fabric) sunt ambele de o calitate superioară. E o alegere excelentă pentru majoritatea gamerilor care își doresc un scaun versatil și extrem de confortabil.</p>
-    <p class="mb-4"><strong>Noblechairs HERO</strong>: Acest scaun se adresează în special utilizatorilor cu o statură mai înaltă sau o construcție mai robustă, fiind conceput pentru a oferi un suport ergonomic deosebit. Are un design mai sobru și elegant, potrivit și pentru un birou profesional. Suportul lombar integrat e reglabil, iar cotierele 4D și mecanismul de înclinare sunt de o calitate ireproșabilă. Materialele, de la pielea ecologică la cea naturală, sunt de cea mai bună calitate, oferind o senzație de lux și o durabilitate pe măsură.</p>
+    <p class="mb-4"><strong>Noblechairs HERO</strong>: Acest scaun se adresează în special utilizatorilor cu o statură mai înaltă sau o construcție mai robustă, fiind conceput pentru a oferi un suport ergonomic deosebit. Are un design mai sobru și elegant, potrivit și pentru un birou <a href="/fier-de-calcat-vertical-profesional/" class="interlink">profesional</a>. Suportul lombar integrat e reglabil, iar cotierele 4D și mecanismul de înclinare sunt de o calitate ireproșabilă. Materialele, de la pielea ecologică la cea naturală, sunt de cea mai bună calitate, oferind o senzație de lux și o durabilitate pe măsură.</p>
     <p class="mb-4"><strong>Herman Miller Embody Gaming Chair (colaborare cu Logitech G)</strong>: Dacă bugetul nu e o problemă, acest scaun reprezintă vârful de gamă în materie de ergonomie și confort. Deși inițial un scaun de birou, versiunea gaming e optimizată pentru sesiuni lungi de joc. Tehnologia sa 'pixelated support' se adaptează constant corpului, distribuind greutatea uniform și menținând o postură sănătoasă. Materialele sunt de excepție, iar durabilitatea e legendară. E o investiție majoră în sănătate și productivitate, oferind un nivel de confort rar întâlnit la alte scaune.</p>
     <p class="mb-4"><strong>Razer Iskur</strong>: Recunoscut pentru designul său agresiv și focusul pe suportul lombar, Razer Iskur oferă un sistem unic de curbură lombară reglabilă, care împinge spatele inferior într-o poziție optimă. E disponibil în variante de piele ecologică sau material textil, cu un cadru robust din oțel și cotiere 4D. E o opțiune solidă pentru cei care prioritizează un suport lombar puternic și un stil distinctiv.</p>
     
@@ -315,5 +328,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="cel-mai-bun-scaun-de-gaming-premium"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>

@@ -12,6 +12,19 @@ export const frontmatter = {
 };
 
 import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .replace(/ă/g, 'a').replace(/â/g, 'a').replace(/î/g, 'i')
+    .replace(/ș/g, 's').replace(/ț/g, 't')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
 ---
 
 <Layout
@@ -156,7 +169,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Sa le luam pe rand. Switch-urile liniare sunt cele despre care vorbim – o cursa lina, fara feedback tactil sau auditiv distinct. Sunt ideale pentru cei care prioritizeaza viteza si un sunet mai discret, daca alegi switch-uri cu un profil mai silentios.</p>
     <p class="mb-4">Switch-urile tactile au acel 'bump' pe care il simti cand tasta a fost apasata, fara un click audibil. E un feedback bun pentru tastat, te anunta clar ca ai apasat tasta corect, fara a deranja pe cei din jur. Am observat ca multi scriitori prefera aceasta senzatie.</p>
     <p class="mb-4">Switch-urile clicky fac ambele lucruri: au acel bump tactil si un click audibil. Sunt satisfacatoare pentru unii, dar pot fi zgomotoase intr-un mediu de birou comun sau daca locuiesti cu cineva care nu apreciaza zgomotul.</p>
-    <p class="mb-4">Pentru gaming, in special jocurile rapide (FPS, MOBA), switch-urile liniare sunt adesea preferate pentru viteza de raspuns. Pentru tastat mult, multi se impart intre liniare si tactile, in functie de preferinta personala pentru feedback.</p>
+    <p class="mb-4"><a href="/monitor-curbat-qhd-pentru-gaming-competitiv/" class="interlink">Pentru gaming</a>, in special jocurile rapide (FPS, MOBA), switch-urile liniare sunt adesea preferate pentru viteza de raspuns. Pentru tastat mult, multi se impart intre liniare si tactile, in functie de preferinta personala pentru feedback.</p>
     
     
   </section>
@@ -164,7 +177,7 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Avantajele switch-urilor liniare in gaming: Viteza pura si raspuns instant</h2>
     <p class="mb-4">Am petrecut ore intregi pe diverse titluri, de la CS:GO la Call of Duty, folosind tastaturi cu switch-uri liniare. Ce am observat imediat este eliminarea oricarui fel de 'fricare'. Nu trebuie sa te gandesti daca ai apasat tasta suficient de tare sau daca ai depasit punctul de activare. Pur si simplu apesi, si actiunea se intampla.</p>
     <p class="mb-4">Acest lucru este crucial in situatii critice de gaming. Daca trebuie sa te misti rapid, sa sari, sa schimbi arma sau sa lansezi o abilitate, viteza cu care poti repeta apasarea unei taste este esentiala. Switch-urile liniare, prin natura lor, permit cele mai rapide apasari repetate.</p>
-    <p class="mb-4">Am testat si switch-uri liniare cu diferite forte de actiune (actuation force). Cele mai comune sunt in jur de 45-50g, dar am gasit si modele mai usoare sau mai grele. Pentru gaming, o forta de actiune mai mica (cum ar fi la Gateron Red sau Cherry MX Red) te ajuta sa reactionezi si mai repede, dar poate duce si la apasari accidentale daca esti obisnuit cu o forta mai mare.</p>
+    <p class="mb-4">Am testat si switch-uri liniare cu diferite forte de actiune (actuation force). Cele mai comune sunt in jur de 45-50g, dar am gasit si modele mai usoare sau mai grele. <a href="/laptop-ultra-subtire-pentru-gaming-si-editare/" class="interlink">Pentru gaming</a>, o forta de actiune mai mica (cum ar fi la Gateron Red sau Cherry MX Red) te ajuta sa reactionezi si mai repede, dar poate duce si la apasari accidentale daca esti obisnuit cu o forta mai mare.</p>
     
     
   </section>
@@ -179,7 +192,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="sectiune-5" class="mb-10">
     <h2 class="text-2xl font-bold text-slate-900 mb-4">Ce sa cauti la o tastatura cu switch-uri liniare? Sfaturi practice de la un tester</h2>
     <p class="mb-4">Primul lucru este sa te gandesti la tipul de switch-uri liniare. Cele mai populare sunt Cherry MX Red, Gateron Red, Kailh Red. Toate sunt liniare, dar au mici diferente de feel si sunet. Daca vrei ceva mai silentios, cauta variante 'silent red' sau switch-uri liniare cu garnituri de cauciuc (o-rings) la baza.</p>
-    <p class="mb-4">Verifica si forta de actiune (actuation force) si distanta de actiune (actuation distance). Majoritatea switch-urilor liniare au o forta de actiune intre 40-50g si o distanta de actiune de 2mm, dar exista si optiuni. Pentru gaming, ceva mai usor poate fi benefic, dar pentru tastat, poate vrei ceva mai greu pentru a evita apasarile accidentale.</p>
+    <p class="mb-4">Verifica si forta de actiune (actuation force) si distanta de actiune (actuation distance). Majoritatea switch-urilor liniare au o forta de actiune intre 40-50g si o distanta de actiune de 2mm, dar exista si optiuni. <a href="/scaun-ergonomic-cu-suport-lombar-pentru-gaming/" class="interlink">Pentru gaming</a>, ceva mai usor poate fi benefic, dar pentru tastat, poate vrei ceva mai greu pentru a evita apasarile accidentale.</p>
     <p class="mb-4">Materialele conteaza. Tastele (keycaps) din PBT sunt mai durabile si nu capata luciu la fel de repede ca cele din ABS. Structura tastaturii (frame-ul) ar trebui sa fie solida, preferabil metalica sau un plastic gros, pentru a minimiza flexarea. O tastatura mecanica solida, precum un ASUS ROG Strix Scope sau un Corsair K70 cu switch-uri liniare, poate costa intre 500 si 1000 RON, dar se simte si rezista mult mai bine.</p>
     <p class="mb-4">Iluminarea RGB e un bonus pentru multi gameri, dar nu afecteaza functionalitatea switch-urilor. Daca bugetul e mai restrans, poti gasi tastaturi cu switch-uri liniare decente de la branduri ca Redragon sau Havit in jur de 200-300 RON la Altex sau Flanco, dar calitatea constructiei si a switch-urilor nu se compara cu modelele premium.</p>
     
@@ -191,7 +204,7 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">Un pas mai sus, Logitech G413 SE (switch-uri GX Brown, dar exista si variante cu switch-uri rosii liniare) se învârte în jur de 350-400 RON. Este o tastatura mai bine construita, cu un design minimalist si taste din PBT.</p>
     <p class="mb-4">Pentru zona de mijloc, Razer Huntsman V2 (cu switch-uri optice liniare Razer) este o alegere populara, pretul fiind undeva intre 600 si 800 RON. Switch-urile optice sunt si mai rapide.</p>
     <p class="mb-4">La capitolul premium, Corsair K70 RGB TKL (cu switch-uri Cherry MX Speed Silver, care sunt liniare si cu distanta de actiune mai mica) sau un SteelSeries Apex Pro (cu switch-uri OmniPoint, ajustabile) pot ajunge la 700-1000+ RON. Acestea ofera cea mai buna calitate a constructiei, switch-uri de top si functionalitati avansate.</p>
-    <p class="mb-4">Am testat si tastaturi custom, unde poti alege exact switch-urile (de la Gateron, JWK, etc.) si tastele. Acestea pot ajunge la preturi si mai mari, dar ofera o experienta personalizata la cel mai inalt nivel. O tastatura custom cu switch-uri liniare de calitate de la producatori precum Keychron (modelele K sau Q) se poate lua cu 400-700 RON, in functie de model si specificatii.</p>
+    <p class="mb-4">Am testat si tastaturi custom, unde poti alege exact switch-urile (de la Gateron, JWK, etc.) si tastele. Acestea pot ajunge la preturi si mai mari, dar ofera o experienta <a href="/pc-modular-cu-racire-lichida-personalizata/" class="interlink">personalizata</a> la cel mai inalt nivel. O tastatura custom cu switch-uri liniare de calitate de la producatori precum Keychron (modelele K sau Q) se poate lua cu 400-700 RON, in functie de model si specificatii.</p>
     
     
   </section>
@@ -288,5 +301,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+  
+    <PrevNextNav
+      currentSlug="tastatura-cu-switch-uri-liniare"
+      currentCategory="tehnologie-gaming"
+      articles={allArticles}
+    />
   </article>
 </Layout>
