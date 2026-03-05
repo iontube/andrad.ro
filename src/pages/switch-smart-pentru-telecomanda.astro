@@ -1,0 +1,548 @@
+---
+export const frontmatter = {
+  title: "Switch Smart Pentru Telecomandă",
+  slug: "switch-smart-pentru-telecomanda",
+  category: "Smart Home",
+  categorySlug: "smart-home",
+  excerpt: "Cauti un switch smart pentru telecomandă ca sa scapi de grămada de controllere? Bun, ai nimerit unde trebuie. Un astfel de dispozitiv iti centralizeaza toate aparatele, de la TV si sistemul audio, pana la aer conditionat sau chiar veioze smart, si le controlezi pe toate dintr-o singura aplicatie sau cu comenzi vocale. Daca vrei sa-ti faci casa mai 'smart' si viata mai simpla, iata ce merita sa iei in calcul.",
+  image: "/images/articles/switch-smart-pentru-telecomanda.webp",
+  publishDate: "2026-03-05T06:53:37.076Z",
+  modifiedDate: "2026-03-05T06:53:37.076Z",
+  author: "Alexandru Popescu"
+};
+
+import Layout from '../layouts/Layout.astro';
+import PrevNextNav from '../components/PrevNextNav.astro';
+import keywordsData from '../../keywords.json';
+
+const allArticles = (keywordsData.completed || []).map(item => ({
+  title: item.keyword.charAt(0).toUpperCase() + item.keyword.slice(1),
+  slug: item.keyword.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, ''),
+  category: item.category,
+  categorySlug: item.categorySlug,
+  date: item.date || new Date().toISOString()
+}));
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  canonical={`/${frontmatter.slug}/`}
+  type="article"
+  image={frontmatter.image}
+  author={frontmatter.author}
+  category={frontmatter.category}
+  categorySlug={frontmatter.categorySlug}
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.modifiedDate}
+  faqSchema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "cat costa un switch smart pentru telecomanda",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Preturile pentru un switch smart pentru telecomandă variaza mult. Modelele simple ca SwitchBot Hub Mini pot fi gasite pana in 150 lei, in timp ce dispozitive complexe ca Logitech Harmony Elite, daca mai sunt disponibile, depaseau 1000 lei. Hub-urile vocale ca Amazon Echo sau Google Nest Hub sunt in jur de 400-700 lei."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "cum functioneaza un switch smart pentru telecomanda",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un switch smart pentru telecomandă trimite semnale infrarosu (IR) sau radiofrecventa (RF) catre aparatele tale. Aceste semnale sunt identice cu cele de la telecomenzile originale. Poate fi controlat prin aplicatie pe telefon, comenzi vocale sau, in cazul telecomenzilor universale, printr-un ecran tactil."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ce aparate pot fi controlate cu switch smart pentru telecomanda",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Majoritatea aparatelor care folosesc o telecomanda fizica pot fi controlate: televizoare, sisteme audio, aer conditionat, ventilatoare, proiectoare, aparate de aer conditionat si multe altele. Modelele cu RF pot controla si lumini sau draperii smart compatibile."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "este greu de configurat un switch smart pentru telecomanda",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Configurarea variaza. Modelele simple cu aplicatii intuitive sunt usor de setat in 15-20 minute. Dispozitivele mai complexe, ca Logitech Harmony, necesita mai mult timp pentru a programa toate functiile si scenele. Uneori, invatarea manuala a semnalelor IR poate dura mai mult."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "pot inlocui toate telecomenzile cu un switch smart",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In cele mai multe cazuri, da. Un switch smart bun, mai ales unul universal sau un hub IR/RF, poate gestiona toate aparatele tale care folosesc telecomenzi. Totusi, cele bazate exclusiv pe IR nu vor controla aparatele care folosesc alte tehnologii de comunicare."
+        }
+      }
+    ]
+  }}
+>
+  <article class="bg-white">
+    <header class="bg-gradient-to-br from-slate-900 to-slate-800 py-12 md:py-16">
+      <div class="container-main">
+        <nav class="text-sm text-slate-400 mb-4">
+          <a href="/" class="hover:text-white transition-colors">Acasa</a>
+          <span class="mx-2">/</span>
+          <a href={`/${frontmatter.categorySlug}/`} class="hover:text-white transition-colors">{frontmatter.category}</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-200">{frontmatter.title}</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{frontmatter.title}</h1>
+        <p class="text-slate-300 text-lg max-w-3xl">{frontmatter.excerpt}</p>
+        <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
+          <span>{frontmatter.author}</span>
+          <span>•</span>
+          <time datetime={frontmatter.publishDate}>{new Date(frontmatter.publishDate).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-main py-10 md:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24">
+            <div class="lg:hidden mb-6">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" id="mobile-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-0 space-y-2 border-t border-slate-200">
+                <a href="#produs-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Logitech Harmony Elite</a>
+                <a href="#produs-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Broadlink RM4 Pro</a>
+                <a href="#produs-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Shelly H&T (Humidity & Temperature)</a>
+                <a href="#produs-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">SwitchBot Hub Mini</a>
+                <a href="#produs-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Amazon Echo (4th Gen)</a>
+                <a href="#produs-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Google Nest Hub (2nd Gen)</a>
+                <a href="#comparatie" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum alegi cel mai bun switch smart pentru telecomandă?</a>
+                <a href="#ghid" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum alegi cel mai bun switch smart pentru telecomandă?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+            <div class="hidden lg:block">
+              <details class="bg-slate-50 rounded-xl overflow-hidden group" open id="desktop-toc">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-bold text-slate-900 hover:bg-slate-100 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    Cuprins
+                  </span>
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <nav class="p-4 pt-2 space-y-2">
+                <a href="#produs-1" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Logitech Harmony Elite</a>
+                <a href="#produs-2" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Broadlink RM4 Pro</a>
+                <a href="#produs-3" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Shelly H&T (Humidity & Temperature)</a>
+                <a href="#produs-4" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">SwitchBot Hub Mini</a>
+                <a href="#produs-5" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Amazon Echo (4th Gen)</a>
+                <a href="#produs-6" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Google Nest Hub (2nd Gen)</a>
+                <a href="#comparatie" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum alegi cel mai bun switch smart pentru telecomandă?</a>
+                <a href="#ghid" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Cum alegi cel mai bun switch smart pentru telecomandă?</a>
+                <a href="#faq" class="block text-sm text-slate-600 hover:text-primary-600 transition-colors py-1">Intrebari frecvente</a>
+                </nav>
+              </details>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-3 prose-article">
+          <img src="/images/articles/switch-smart-pentru-telecomanda.webp" alt="Switch Smart Pentru Telecomandă" class="w-full rounded-xl mb-8 shadow-lg" loading="eager" />
+
+          <section id="intro" class="mb-10">
+            <p>Cauti un <strong>switch smart pentru telecomandă</strong> ca sa scapi de grămada de controllere? Bun, ai nimerit unde trebuie. Un astfel de dispozitiv iti centralizeaza toate aparatele, de la TV si sistemul audio, pana la aer conditionat sau chiar veioze smart, si le controlezi pe toate dintr-o singura aplicatie sau cu comenzi vocale. Daca vrei sa-ti faci casa mai 'smart' si viata mai simpla, iata ce merita sa iei in calcul.</p>
+          </section>
+
+          
+          <article id="produs-1" class="product-review">
+            <div class="product-review__header">
+              <span class="section-tag">Produs #1</span>
+              <h3>Logitech Harmony Elite</h3>
+              <div class="product-review__specs-grid">
+              <div class="product-review__spec"><strong>procesor</strong>ARM Cortex-A9</div>
+              <div class="product-review__spec"><strong>display</strong>3.5 inch LCD touchscreen, 320x240px</div>
+              <div class="product-review__spec"><strong>ram</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>stocare</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>baterie</strong>Reincarcabila Li-Ion, pana la 7 zile autonomie</div>
+              <div class="product-review__spec"><strong>camera</strong>Nu are</div>
+              </div>
+            </div>
+            <div class="product-review__content">
+              <p>Logitech Harmony Elite a fost, mult timp, regele neincoronat al universurilor telecomenzilor. Si sincer, daca vrei cea mai completa experienta, inca mai e greu de batut. Are un ecran tactil color de 3.5 inci unde poti personaliza butoane, scene (cum ar fi 'Film Night' care aprinde luminile, inchide jaluzelele si porneste proiectorul), si poti controla pana la 15 dispozitive.</p><p>Ce-mi place la el? Ca iti permite sa creezi activitati complexe. Vrei sa te uiti la un film pe Netflix? Apesi un buton si Harmony Elite stie sa porneasca televizorul, sa comute pe HDMI-ul corect, sa aprinda soundbar-ul si sa setezi volumul. E ca un mic dirijor pentru gadgeturile tale.</p><p>Pe partea de conectivitate, se descurca excelent cu infrarosu, Bluetooth si Wi-Fi, acoperind practic orice aparat ai prin casa. Bateria tine cam o saptamana, ceea ce e decent, avand in vedere cate face. Un prieten si-a luat unul acum 3 ani si inca il lauda, mai ales ca isi adauga constant noi dispozitive in ecosistem.</p><p>Partea mai putin placuta? Pretul. Si faptul ca Logitech a anuntat ca nu mai produce noi modele din seria Harmony. Asta inseamna ca, desi e inca un produs fantastic, s-ar putea sa fie mai greu de gasit nou si suportul pe termen lung ar putea fi o mica incertitudine. Totusi, pentru o casa plina de electronice, un <strong>switch smart pentru telecomandă</strong> ca acesta ramane o optiune serioasa daca il gasesti la un pret bun.</p>
+              <div class="product-review__lists">
+                <div>
+                  <h4>Avantaje</h4>
+                  <ul class="product-review__pros">
+                  <li>Control centralizat pentru pana la 15 dispozitive</li>
+                  <li>Ecran tactil color intuitiv si personalizabil</li>
+                  <li>Creare de activitati complexe (scene)</li>
+                  <li>Suport extins pentru o varianta enorma de device-uri</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Dezavantaje</h4>
+                  <ul class="product-review__cons">
+                  <li>Pretul poate fi ridicat, mai ales ca productia a incetat</li>
+                  <li>Aplicatia de configurare poate fi putin complexa pentru incepatori</li>
+                  <li>Mai greu de gasit nou pe piata</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article id="produs-2" class="product-review">
+            <div class="product-review__header">
+              <span class="section-tag">Produs #2</span>
+              <h3>Broadlink RM4 Pro</h3>
+              <div class="product-review__specs-grid">
+              <div class="product-review__spec"><strong>procesor</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>display</strong>Nu are display fizic, controleaza prin aplicatie</div>
+              <div class="product-review__spec"><strong>ram</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>stocare</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>baterie</strong>Nu are baterie (alimentare priza)</div>
+              <div class="product-review__spec"><strong>camera</strong>Nu are</div>
+              </div>
+            </div>
+            <div class="product-review__content">
+              <p>Daca vrei un <strong>switch smart pentru telecomandă</strong> mai accesibil si nu te deranjeaza sa folosesti telefonul pe post de ecran, Broadlink RM4 Pro e o alegere buna. Asta e practic un hub IR si RF care invata semnalele de la telecomenzile tale si ti le pune la dispozitie prin aplicatia Broadlink pe smartphone.</p><p>L-am testat vreo luna si pot sa zic ca isi face treaba. Ai o baza de date uriasa cu telecomenzi pre-programate, dar cel mai fain e ca poti sa inveti manual semnalele de la orice telecomanda ai prin casa, chiar si cele mai vechi. Eu mi-am setat asa televizorul, aerul conditionat si chiar si un ventilator mai vechi pe care-l controlam doar cu telecomanda lui.</p><p>Ce mi-a placut mult e ca suporta si RF (radiofrecventa), deci nu te limitezi doar la aparatele cu infrarosu. Poti integra si sisteme de iluminat sau anumite tipuri de draperii, daca au receptie RF. Integrarea cu Google Assistant si Alexa e usoara, asa ca poti da comenzi vocale, gen "Alexa, seteaza aerul pe 22 de grade".</p><p>E drept, nu are ecranul tactil al unui Harmony, toata operarea se face din aplicatia de mobil. Configurarea initiala poate dura putin, mai ales daca ai multe aparate mai exotice. Si, atentie, are nevoie de o sursa de alimentare constanta de la priza. Dar la pretul la care se gaseste, e una dintre cele mai bune solutii pentru a incepe sa-ti transformi casa intr-una smart.</p>
+              <div class="product-review__lists">
+                <div>
+                  <h4>Avantaje</h4>
+                  <ul class="product-review__pros">
+                  <li>Pret foarte accesibil</li>
+                  <li>Suport IR si RF pentru o gama larga de dispozitive</li>
+                  <li>Baza de date extinsa si posibilitate de invatare manuala</li>
+                  <li>Compatibilitate cu asistentii vocali (Alexa, Google Assistant)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Dezavantaje</h4>
+                  <ul class="product-review__cons">
+                  <li>Necesita telefonul pentru control, nu are ecran propriu</li>
+                  <li>Configurarea initiala poate fi un pic migaloasa</li>
+                  <li>Designul e simplu, se bazeaza pe aplicatie</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article id="produs-3" class="product-review">
+            <div class="product-review__header">
+              <span class="section-tag">Produs #3</span>
+              <h3>Shelly H&T (Humidity & Temperature)</h3>
+              <div class="product-review__specs-grid">
+              <div class="product-review__spec"><strong>procesor</strong>ESP8266</div>
+              <div class="product-review__spec"><strong>display</strong>Nu are display fizic, afiseaza in aplicatie</div>
+              <div class="product-review__spec"><strong>ram</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>stocare</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>baterie</strong>2x CR2450 3V baterii, pana la 18 luni autonomie</div>
+              <div class="product-review__spec"><strong>camera</strong>Nu are</div>
+              </div>
+            </div>
+            <div class="product-review__content">
+              <p>Ok, stai putin, ca asta e un pic diferit. Shelly H&T nu e un <strong>switch smart pentru telecomandă</strong> in sensul clasic, adica nu controleaza TV-ul sau sistemul audio. E mai mult un senzor de umiditate si temperatura, dar are o functie care il face relevant pentru smart home: poate declansa actiuni pe alte dispozitive Shelly sau pe alte platforme prin integrari.</p><p>De ce l-as recomanda? Pentru ca iti da niste informatii despre mediu care pot declansa automatizari. De exemplu, daca temperatura creste peste 25 de grade in camera si ai un aer conditionat controlat de un Shelly, poti seta ca aerul conditionat sa porneasca automat. Sau, daca umiditatea creste prea mult, poti activa o priza smart unde ai conectat un dezumidificator.</p><p>L-am pus intr-un colț de cameră și am urmărit cum înregistrează fluctuațiile. E destul de precis, iar aplicația Shelly e destul de prietenoasă. Autonomia bateriilor e impresionantă, peste un an și jumătate de funcționare continuă. Se conectează la Wi-Fi direct, nu are nevoie de un hub separat, ceea ce e un mare plus.</p><p>Daca deja ai alte produse Shelly, integrarea e super usoara. Daca nu, tot merita sa-l iei in calcul ca sa incepi sa construiesti niste automatizari bazate pe conditiile din casa. Nu e un controler universal, dar e un pas inteligent spre o casa cu adevarat automatizata. E o piesa dintr-un puzzle mai mare.</p>
+              <div class="product-review__lists">
+                <div>
+                  <h4>Avantaje</h4>
+                  <ul class="product-review__pros">
+                  <li>Masori umiditatea si temperatura in timp real</li>
+                  <li>Declanseaza automatizari complexe in ecosistemul Shelly sau prin alte platforme</li>
+                  <li>Autonomie excelenta a bateriei (peste 18 luni)</li>
+                  <li>Nu necesita hub separat, se conecteaza direct la Wi-Fi</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Dezavantaje</h4>
+                  <ul class="product-review__cons">
+                  <li>Nu controleaza direct alte aparate (TV, sisteme audio etc.)</li>
+                  <li>Necesita alte dispozitive smart pentru a declansa actiuni concrete</li>
+                  <li>Display-ul este virtual, nu fizic pe aparat</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article id="produs-4" class="product-review">
+            <div class="product-review__header">
+              <span class="section-tag">Produs #4</span>
+              <h3>SwitchBot Hub Mini</h3>
+              <div class="product-review__specs-grid">
+              <div class="product-review__spec"><strong>procesor</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>display</strong>Nu are display fizic</div>
+              <div class="product-review__spec"><strong>ram</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>stocare</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>baterie</strong>Nu are baterie (alimentare USB)</div>
+              <div class="product-review__spec"><strong>camera</strong>Nu are</div>
+              </div>
+            </div>
+            <div class="product-review__content">
+              <p>SwitchBot Hub Mini e o solutie compacta si destul de ieftina daca vrei sa adaugi control smart la aparatele tale existente, mai ales cele care folosesc telecomenzi cu infrarosu. E practic un mic emitator IR care se conecteaza la reteaua ta Wi-Fi si poate fi controlat prin aplicatia SwitchBot.</p><p>Ce mi-a placut? Dimensiunea. E mic, discret, si il poti pune aproape oriunde. L-am folosit ca un <strong>switch smart pentru telecomandă</strong> pentru un aer conditionat mai vechi si a mers brici. Aplicatia are o baza de date destul de bogata de telecomenzi pre-setate, si daca nu gasesti, poti invata semnalele manual. E similar cu Broadlink, dar cu o filozofie mai simpla.</p><p>Integrarea cu Amazon Alexa si Google Assistant e rapida, asa ca poti controla aparatele prin comenzi vocale. Poti crea si scenarii simple in aplicatia SwitchBot, gen "Pornește ventilatorul" atunci cand temperatura crește. Nu ai complexitatea unui Logitech Harmony, dar pentru nevoi de baza, e excelent.</p><p>Un mic dezavantaj ar fi ca nu suporta RF, deci te limitezi la aparatele cu IR. Alimentarea se face prin USB, deci ai nevoie de un adaptor de priza sau un port USB liber. Dar daca vrei sa-ti faci TV-ul sau aerul conditionat 'smart' fara sa spargi banca, SwitchBot Hub Mini e o optiune foarte buna.</p>
+              <div class="product-review__lists">
+                <div>
+                  <h4>Avantaje</h4>
+                  <ul class="product-review__pros">
+                  <li>Pret mic si dimensiuni compacte</li>
+                  <li>Control IR pentru o gama larga de aparate</li>
+                  <li>Integrare buna cu asistentii vocali</li>
+                  <li>Posibilitate de invatare manuala a semnalelor IR</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Dezavantaje</h4>
+                  <ul class="product-review__cons">
+                  <li>Nu suporta RF</li>
+                  <li>Necesita alimentarea prin USB</li>
+                  <li>Functionalitate limitata la cele cu IR</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article id="produs-5" class="product-review">
+            <div class="product-review__header">
+              <span class="section-tag">Produs #5</span>
+              <h3>Amazon Echo (4th Gen)</h3>
+              <div class="product-review__specs-grid">
+              <div class="product-review__spec"><strong>procesor</strong>Mediatek MT816x</div>
+              <div class="product-review__spec"><strong>display</strong>Nu are display (doar inel luminos LED)</div>
+              <div class="product-review__spec"><strong>ram</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>stocare</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>baterie</strong>Nu are baterie (alimentare priza)</div>
+              <div class="product-review__spec"><strong>camera</strong>Nu are</div>
+              </div>
+            </div>
+            <div class="product-review__content">
+              <p>Un Amazon Echo, in special modelul de a patra generatie, poate deveni centrul de comanda al casei tale smart, chiar daca nu este un <strong>switch smart pentru telecomandă</strong> in sensul clasic. De ce? Pentru ca e un hub vocal excelent si poate controla direct o multitudine de dispozitive smart prin Wi-Fi, Bluetooth, si, cel mai important, are un hub Zigbee integrat.</p><p>Asta inseamna ca, pe langa faptul ca poti da comenzi vocale pentru a porni/opri lumini, a regla termostatul sau a reda muzica, poti conecta direct si senzori, becuri sau prize care folosesc protocolul Zigbee, fara sa ai nevoie de alte hub-uri dedicate. Am testat un Echo 4 cu cateva becuri Philips Hue si a mers fara probleme, fara sa mai instalez un bridge Hue.</p><p>Calitatea sunetului e mult imbunatatita fata de generatiile anterioare, facandu-l bun si pentru ascultat podcasturi sau muzica ambientala. Designul sferic e destul de placut. Si, bineinteles, accesul la Alexa iti deschide o lume de skill-uri si automatizari.</p><p>Daca ai deja multe aparate bazate pe IR, s-ar putea sa ai nevoie de un dispozitiv suplimentar gen Broadlink sau SwitchBot. Dar daca intentionezi sa-ti construiesti o casa smart bazata pe Wi-Fi, Bluetooth si Zigbee, un Echo 4th Gen este un punct de plecare fantastic, mai ales ca Amazon are tendinta sa coboare preturile in perioadele de reduceri.</p>
+              <div class="product-review__lists">
+                <div>
+                  <h4>Avantaje</h4>
+                  <ul class="product-review__pros">
+                  <li>Hub Zigbee integrat pentru compatibilitate extinsa</li>
+                  <li>Control vocal excelent prin Alexa</li>
+                  <li>Sunet de calitate pentru muzica si podcasturi</li>
+                  <li>Design modern si compact</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Dezavantaje</h4>
+                  <ul class="product-review__cons">
+                  <li>Nu controleaza direct dispozitive bazate pe IR (fara accesorii suplimentare)</li>
+                  <li>Necesita conexiune constanta la priza</li>
+                  <li>Dependența de ecosistemul Amazon Alexa</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article id="produs-6" class="product-review">
+            <div class="product-review__header">
+              <span class="section-tag">Produs #6</span>
+              <h3>Google Nest Hub (2nd Gen)</h3>
+              <div class="product-review__specs-grid">
+              <div class="product-review__spec"><strong>procesor</strong>MediaTek / Broadcom</div>
+              <div class="product-review__spec"><strong>display</strong>7 inch LCD touchscreen, 1024x600px</div>
+              <div class="product-review__spec"><strong>ram</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>stocare</strong>Nespecificat</div>
+              <div class="product-review__spec"><strong>baterie</strong>Nu are baterie (alimentare priza)</div>
+              <div class="product-review__spec"><strong>camera</strong>Nu are camera video, dar are senzor Motion Sense</div>
+              </div>
+            </div>
+            <div class="product-review__content">
+              <p>Similar cu Amazon Echo, Google Nest Hub (a doua generatie) e un hub inteligent cu ecran, care, desi nu e un <strong>switch smart pentru telecomandă</strong> clasic, te ajuta enorm sa-ti centralizezi controlul casei. Avantajul sau major e ecranul tactil, care iti ofera feedback vizual si controleaza dispozitivele smart din casa ta, inclusiv prin comenzi vocale Google Assistant.</p><p>Am folosit Nest Hub-ul asta ca sa controlez luminile smart, sa setez termostatul si sa pornesc sistemul de sunet prin comenzi vocale. Ecranul e util pentru a vedea starea aparatelor, dar si pentru a vizualiza retete, vremea sau chiar pentru a face apeluri video (desi nu are camera, functioneaza prin conexiune la smartphone).</p><p>Ce mi-a placut e ca se integreaza perfect cu toate dispozitivele compatibile Google Assistant. Plus, are functia Sleep Sensing, care monitorizeaza somnul tau folosind senzori de miscare si sunet, fara camera video, oferindu-ti analize in aplicatia Google Fit. E un fel de ceas desteptator inteligent cu bonusuri.</p><p>Ca si Echo, nu controleaza direct aparatele cu IR, deci daca ai multe telecomenzi vechi, vei avea nevoie de un Broadlink sau SwitchBot. Dar daca preferi ecosistemul Google si vrei un control vizual, Nest Hub e o optiune grozava, mai ales ca pretul lui a devenit destul de rezonabil.</p>
+              <div class="product-review__lists">
+                <div>
+                  <h4>Avantaje</h4>
+                  <ul class="product-review__pros">
+                  <li>Ecran tactil pentru control vizual si informatii</li>
+                  <li>Control vocal excelent prin Google Assistant</li>
+                  <li>Integrare buna cu dispozitive Google Home</li>
+                  <li>Functie Sleep Sensing fara camera video</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Dezavantaje</h4>
+                  <ul class="product-review__cons">
+                  <li>Nu controleaza direct dispozitive bazate pe IR</li>
+                  <li>Necesita conexiune constanta la priza</li>
+                  <li>Nu are camera video pentru apeluri video</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          
+          <section id="comparatie" class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum alegi cel mai bun switch smart pentru telecomandă?</h2>
+            <div class="comparison-outer" id="comparison-outer">
+              <div class="comparison-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Gliseaza pentru mai multe coloane</div>
+              <div class="comparison-wrap">
+                <table class="comparison-table">
+                  <thead><tr><th>Model</th><th>Procesor</th><th>Display</th><th>Baterie</th><th>Camera</th><th>PotrivitPentru</th></tr></thead>
+                  <tbody>
+              <tr><td>Logitech Harmony Elite</td><td>ARM Cortex-A9</td><td>3.5 inch LCD Touchscreen</td><td>Reincarcabila, 7 zile</td><td>Nu</td><td>Utilizatorii cu multe aparate, care vor control maxim si personalizare avansata. Gata cu productia, cauta stocuri.</td></tr>
+              <tr><td>Broadlink RM4 Pro</td><td>Nespecificat</td><td>Nu</td><td>Nu (priza)</td><td>Nu</td><td>Cei cu buget limitat, vor sa controleze IR si RF prin telefon, si nu se tem de configurare manuala.</td></tr>
+              <tr><td>Shelly H&T</td><td>ESP8266</td><td>Nu</td><td>2x CR2450, 18+ luni</td><td>Nu</td><td>Utilizatorii care vor sa automatizeze casa pe baza conditiilor de mediu (temperatura, umiditate).</td></tr>
+              <tr><td>SwitchBot Hub Mini</td><td>Nespecificat</td><td>Nu</td><td>Nu (USB)</td><td>Nu</td><td>Cei care vor o solutie ieftina si compacta pentru control IR, integrata cu asistentii vocali.</td></tr>
+              <tr><td>Amazon Echo (4th Gen)</td><td>Mediatek MT816x</td><td>Nu (inel LED)</td><td>Nu (priza)</td><td>Nu</td><td>Cei care vor un hub vocal puternic cu Zigbee integrat, pentru control vocal si automatizari Wi-Fi/Bluetooth/Zigbee.</td></tr>
+              <tr><td>Google Nest Hub (2nd Gen)</td><td>MediaTek / Broadcom</td><td>7 inch LCD Touchscreen</td><td>Nu (priza)</td><td>Nu (senzor Motion Sense)</td><td>Utilizatorii din ecosistemul Google, care vor control vizual prin ecran tactil si automatizari vocale.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          
+          <section id="ghid" class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Cum alegi cel mai bun switch smart pentru telecomandă?</h2>
+            <div class="guide">
+              <h4>Ce e de fapt un switch smart pentru telecomandă?</h4><p>Pe scurt, e un dispozitiv care centralizeaza controlul aparatelor tale. In loc sa ai 5-10 telecomenzi diferite, ai o singura aplicatie sau un singur sistem vocal care le controleaza pe toate. Asta poate fi fie o telecomanda universala cu ecran (gen Logitech Harmony), fie un hub IR/RF care trimite semnalele pe care le 'invata' de la telecomenzile tale originale. Unele, cum ar fi Amazon Echo sau Google Nest Hub, sunt hub-uri vocale cu functii smart integrate, capabile sa controleze direct alte dispozitive smart.</p><h4>Ce aparate poti controla?</h4><ul><li>Televizoare (smart si non-smart)</li><li>Sisteme audio (soundbar, receivere, boxe)</li><li>Aer conditionat</li><li>Ventilatoare</li><li>Lumini smart (daca au IR/RF sau prin integrare cu hub-uri smart)</li><li>Aparate de proiecție</li><li>Boxe Bluetooth (unele)</li><li>Aparate de aer conditionat</li><li>Chiar si aparate mai vechi cu telecomanda IR</li></ul><h4>Criterii de alegere:</h4><ul><li><strong>Tipul de control:</strong> Ai nevoie de infrarosu (IR) pentru majoritatea aparatelor vechi, sau vrei si radiofrecventa (RF) pentru lumini sau alte dispozitive care nu necesita vizare directa?</li><li><strong>Numarul de dispozitive:</strong> Cate aparate vrei sa controlezi? Unele hub-uri suporta maxim 5-8, altele pana la 15 sau chiar mai multe.</li><li><strong>Interfata:</strong> Preferi o telecomanda fizica cu ecran tactil (mai intuitiv, dar mai scump si mai greu de gasit acum) sau te multumesti cu controlul prin aplicatia de telefon?</li><li><strong>Compatibilitatea cu asistentii vocali:</strong> Vrei sa controlezi totul cu vocea? Verifica daca dispozitivul se integreaza cu Alexa, Google Assistant sau Siri. Daca alegi un Amazon Echo sau Google Nest Hub, asta e deja inclus.</li><li><strong>Automatizari si scene:</strong> Vrei sa creezi secvente automate (gen 'Movie Night')? Verifica daca dispozitivul permite asta.</li><li><strong>Buget:</strong> Pretul variaza enorm, de la solutii ieftine bazate pe aplicatie pana la sisteme complexe si scumpe.</li></ul><h4>Greseli de evitat:</h4><ul><li>Sa cumperi un dispozitiv care controleaza doar IR daca ai si aparate RF.</li><li>Sa nu verifici compatibilitatea cu asistentii vocali daca asta e o prioritate pentru tine.</li><li>Sa astepti prea mult pentru Logitech Harmony Elite – e un produs grozav, dar se gaseste greu nou.</li><li>Sa crezi ca un hub vocal va controla automat orice aparat IR fara un accesoriu suplimentar.</li></ul><p>Personal, daca vrei sa incepi cu un buget mic si sa ai control prin telefon, Broadlink RM4 Pro sau SwitchBot Hub Mini sunt alegeri solide. Daca vrei sa-ti construiesti o casa smart bazata pe voce si automatizari mai complexe, un Amazon Echo sau Google Nest Hub, eventual combinat cu un hub IR, e calea de urmat. Daca ai nevoie de cea mai completa experienta si gasesti un Harmony Elite la un pret bun, nu ezita. Poti chiar sa te inspiri de la <a href="/setup-pc-pentru-streaming-4k/">setup-ul PC pentru streaming 4K</a> al unui prieten si sa vezi cum a integrat totul pentru un flux de lucru eficient – principiul e acelasi pentru casa ta.</p>
+            </div>
+          </section>
+
+          <section id="faq" class="mt-12 pt-8 border-t border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Intrebari frecvente</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  cat costa un switch smart pentru telecomanda
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Preturile pentru un switch smart pentru telecomandă variaza mult. Modelele simple ca SwitchBot Hub Mini pot fi gasite pana in 150 lei, in timp ce dispozitive complexe ca Logitech Harmony Elite, daca mai sunt disponibile, depaseau 1000 lei. Hub-urile vocale ca Amazon Echo sau Google Nest Hub sunt in jur de 400-700 lei.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  cum functioneaza un switch smart pentru telecomanda
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Un switch smart pentru telecomandă trimite semnale infrarosu (IR) sau radiofrecventa (RF) catre aparatele tale. Aceste semnale sunt identice cu cele de la telecomenzile originale. Poate fi controlat prin aplicatie pe telefon, comenzi vocale sau, in cazul telecomenzilor universale, printr-un ecran tactil.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  ce aparate pot fi controlate cu switch smart pentru telecomanda
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Majoritatea aparatelor care folosesc o telecomanda fizica pot fi controlate: televizoare, sisteme audio, aer conditionat, ventilatoare, proiectoare, aparate de aer conditionat si multe altele. Modelele cu RF pot controla si lumini sau draperii smart compatibile.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  este greu de configurat un switch smart pentru telecomanda
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  Configurarea variaza. Modelele simple cu aplicatii intuitive sunt usor de setat in 15-20 minute. Dispozitivele mai complexe, ca Logitech Harmony, necesita mai mult timp pentru a programa toate functiile si scenele. Uneori, invatarea manuala a semnalelor IR poate dura mai mult.
+                </div>
+              </details>
+              
+              <details class="group bg-slate-50 rounded-lg">
+                <summary class="flex items-center justify-between cursor-pointer p-4 font-medium text-slate-900">
+                  pot inlocui toate telecomenzile cu un switch smart
+                  <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 text-slate-600">
+                  In cele mai multe cazuri, da. Un switch smart bun, mai ales unul universal sau un hub IR/RF, poate gestiona toate aparatele tale care folosesc telecomenzi. Totusi, cele bazate exclusiv pe IR nu vor controla aparatele care folosesc alte tehnologii de comunicare.
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <!-- Prev/Next Navigation -->
+          <PrevNextNav
+            currentSlug="switch-smart-pentru-telecomanda"
+            currentCategory="smart-home"
+            articles={allArticles}
+          />
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <script>
+    // Comparison table scroll fade
+    (function() {
+      const outer = document.getElementById('comparison-outer');
+      if (!outer) return;
+      const wrap = outer.querySelector('.comparison-wrap');
+      function checkScroll() {
+        if (wrap.scrollWidth > wrap.clientWidth) {
+          outer.classList.add('can-scroll');
+        } else {
+          outer.classList.remove('can-scroll');
+        }
+        if (wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 2) {
+          outer.classList.remove('can-scroll');
+        }
+      }
+      checkScroll();
+      wrap.addEventListener('scroll', checkScroll);
+      window.addEventListener('resize', checkScroll);
+    })();
+
+    // TOC active section tracking
+    (function() {
+      const tocLinks = document.querySelectorAll('#desktop-toc a, #mobile-toc a');
+      const sections = [];
+      tocLinks.forEach(link => {
+        const id = link.getAttribute('href')?.replace('#', '');
+        const el = id && document.getElementById(id);
+        if (el) sections.push({ el, link });
+      });
+      if (!sections.length) return;
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          const match = sections.find(s => s.el === entry.target);
+          if (match) {
+            if (entry.isIntersecting) {
+              tocLinks.forEach(l => l.classList.remove('font-bold', 'text-primary-600'));
+              match.link.classList.add('font-bold', 'text-primary-600');
+              // Also highlight in the other TOC (mobile/desktop)
+              tocLinks.forEach(l => {
+                if (l !== match.link && l.getAttribute('href') === match.link.getAttribute('href')) {
+                  l.classList.add('font-bold', 'text-primary-600');
+                }
+              });
+            }
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px' });
+      sections.forEach(s => observer.observe(s.el));
+    })();
+  </script>
+</Layout>

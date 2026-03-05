@@ -31,11 +31,6 @@
       "categorySlug": "foto-video"
     },
     {
-      "keyword": "switch smart pentru telecomandă",
-      "category": "Smart Home",
-      "categorySlug": "smart-home"
-    },
-    {
       "keyword": "hub IoT cu integrare Alexa și Google",
       "category": "Smart Home",
       "categorySlug": "smart-home"
@@ -624,6 +619,11 @@
       "keyword": "stabilizator video cu control automat",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "switch smart pentru telecomandă",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
     }
   ]
 }
