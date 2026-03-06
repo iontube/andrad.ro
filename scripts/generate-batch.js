@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 const projectDir = path.join(__dirname, '..');
 
 // Load .env for standalone usage
-import { readFileSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 try {
   const envContent = readFileSync(path.join(projectDir, '.env'), 'utf-8');
   for (const line of envContent.split('\n')) {
@@ -103,6 +103,15 @@ function escapeForTemplate(str) {
 
 function stripStrong(str) {
   return str.replace(/<\/?strong>/g, '');
+}
+
+function stripFakeLinks(html, pagesDir) {
+  return html.replace(/<a\s+href="\/([^"#][^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (match, linkPath, text) => {
+    const slug = linkPath.replace(/\/$/, '');
+    if (existsSync(path.join(pagesDir, `${slug}.astro`))) return match;
+    if (existsSync(path.join(pagesDir, slug))) return match;
+    return text;
+  });
 }
 
 function delay(ms) {
@@ -829,6 +838,7 @@ const allArticles = (keywordsData.completed || []).map(item => ({
 `;
 
   const filePath = path.join(projectDir, 'src', 'pages', `${slug}.astro`);
+  astroContent = stripFakeLinks(astroContent, path.join(projectDir, 'src', 'pages'));
   await fs.writeFile(filePath, astroContent, 'utf-8');
   console.log(`  Article saved: ${slug}.astro`);
 
