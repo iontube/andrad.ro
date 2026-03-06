@@ -1,11 +1,6 @@
 {
   "pending": [
     {
-      "keyword": "aparat foto cu timelapse automat",
-      "category": "Foto & Video",
-      "categorySlug": "foto-video"
-    },
-    {
       "keyword": "kit editare foto pentru amatori",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
@@ -624,6 +619,11 @@
       "keyword": "switch smart pentru telecomandă",
       "category": "Smart Home",
       "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "aparat foto cu timelapse automat",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
     }
   ]
 }
