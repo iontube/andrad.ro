@@ -1,11 +1,6 @@
 {
   "pending": [
     {
-      "keyword": "kit editare foto pentru amatori",
-      "category": "Foto & Video",
-      "categorySlug": "foto-video"
-    },
-    {
       "keyword": "lentile tilt-shift pentru creativitate",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
@@ -622,6 +617,11 @@
     },
     {
       "keyword": "aparat foto cu timelapse automat",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "kit editare foto pentru amatori",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
     }
