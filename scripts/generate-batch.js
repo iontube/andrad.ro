@@ -122,7 +122,7 @@ function delay(ms) {
 async function translateToEnglish(text) {
   for (let attempt = 0; attempt < 3; attempt++) {
     const apiKey = getNextApiKey();
-    const url = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`;
     try {
       const response = await fetch(url, {
         method: 'POST',
@@ -160,7 +160,7 @@ function stripBrands(text) {
 async function rephraseWithoutBrands(text) {
   for (let attempt = 0; attempt < 3; attempt++) {
     const apiKey = getNextApiKey();
-    const url = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`;
     try {
       const response = await fetch(url, {
         method: 'POST',
@@ -197,7 +197,7 @@ async function generateSafePrompt(text, categorySlug) {
 
   for (let attempt = 0; attempt < 3; attempt++) {
     const apiKey = getNextApiKey();
-    const url = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`;
     try {
       const response = await fetch(url, {
         method: 'POST',
@@ -449,7 +449,7 @@ ${interlinkList}` : ''}`;
 
   for (let attempt = 0; attempt < 10; attempt++) {
     const apiKey = getNextApiKey();
-    const url = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`;
     try {
       console.log(`  Generating content (attempt ${attempt + 1}, key ${(currentKeyIndex % GEMINI_API_KEYS.length) + 1})...`);
       const response = await fetch(url, {
@@ -457,7 +457,7 @@ ${interlinkList}` : ''}`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { temperature: 0.85, maxOutputTokens: 20000 }
+          generationConfig: { temperature: 0.85, maxOutputTokens: 40000, responseMimeType: "application/json" }
         })
       });
 
@@ -476,12 +476,6 @@ ${interlinkList}` : ''}`;
         continue;
       }
 
-      text = text.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
-      // Extract JSON object if there's extra text
-      const jsonMatch = text.match(/\{[\s\S]*\}/);
-      if (jsonMatch) {
-        text = jsonMatch[0];
-      }
       const content = JSON.parse(text);
 
       if (!content.intro || !content.items || !content.faq) {
