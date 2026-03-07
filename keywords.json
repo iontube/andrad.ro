@@ -26,11 +26,6 @@
       "categorySlug": "foto-video"
     },
     {
-      "keyword": "hub IoT cu integrare Alexa și Google",
-      "category": "Smart Home",
-      "categorySlug": "smart-home"
-    },
-    {
       "keyword": "încuietoare biometrică pentru ușă",
       "category": "Smart Home",
       "categorySlug": "smart-home"
@@ -77,6 +72,11 @@
     },
     {
       "keyword": "priză inteligentă cu programare",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "hub IoT cu integrare Alexa și Google",
       "category": "Smart Home",
       "categorySlug": "smart-home"
     }
