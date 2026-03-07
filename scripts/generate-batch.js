@@ -637,7 +637,7 @@ async function createAstroFile(article, content, imagePath) {
     }))
   };
 
-  const astroContent = `---
+  let astroContent = `---
 export const frontmatter = {
   title: "${simpleTitle.replace(/"/g, '\\"')}",
   slug: "${slug}",
