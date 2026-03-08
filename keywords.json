@@ -21,11 +21,6 @@
       "categorySlug": "foto-video"
     },
     {
-      "keyword": "încuietoare biometrică pentru ușă",
-      "category": "Smart Home",
-      "categorySlug": "smart-home"
-    },
-    {
       "keyword": "camere IP cu detectare mișcare",
       "category": "Smart Home",
       "categorySlug": "smart-home"
@@ -624,6 +619,11 @@
       "keyword": "kit editare foto pentru amatori",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "încuietoare biometrică pentru ușă",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
     }
   ]
 }
