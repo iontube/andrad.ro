@@ -1,11 +1,6 @@
 {
   "pending": [
     {
-      "keyword": "lentile tilt-shift pentru creativitate",
-      "category": "Foto & Video",
-      "categorySlug": "foto-video"
-    },
-    {
       "keyword": "microfon wireless pentru interviuri",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
@@ -624,6 +619,11 @@
       "keyword": "încuietoare biometrică pentru ușă",
       "category": "Smart Home",
       "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "lentile tilt-shift pentru creativitate",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
     }
   ]
 }
