@@ -16,11 +16,6 @@
       "categorySlug": "foto-video"
     },
     {
-      "keyword": "camere IP cu detectare mișcare",
-      "category": "Smart Home",
-      "categorySlug": "smart-home"
-    },
-    {
       "keyword": "sirenă smart cu notificări pe telefon",
       "category": "Smart Home",
       "categorySlug": "smart-home"
@@ -624,6 +619,11 @@
       "keyword": "lentile tilt-shift pentru creativitate",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "camere IP cu detectare mișcare",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
     }
   ]
 }
