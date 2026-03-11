@@ -1,11 +1,6 @@
 {
   "pending": [
     {
-      "keyword": "microfon wireless pentru interviuri",
-      "category": "Foto & Video",
-      "categorySlug": "foto-video"
-    },
-    {
       "keyword": "cameră 360 pentru tururi virtuale",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
@@ -624,6 +619,11 @@
       "keyword": "camere IP cu detectare mișcare",
       "category": "Smart Home",
       "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "microfon wireless pentru interviuri",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
     }
   ]
 }
