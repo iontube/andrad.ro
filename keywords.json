@@ -1,11 +1,6 @@
 {
   "pending": [
     {
-      "keyword": "cameră 360 pentru tururi virtuale",
-      "category": "Foto & Video",
-      "categorySlug": "foto-video"
-    },
-    {
       "keyword": "obiectiv zoom optic 10x",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
@@ -624,6 +619,11 @@
       "keyword": "sirenă smart cu notificări pe telefon",
       "category": "Smart Home",
       "categorySlug": "smart-home"
+    },
+    {
+      "keyword": "cameră 360 pentru tururi virtuale",
+      "category": "Foto & Video",
+      "categorySlug": "foto-video"
     }
   ]
 }
