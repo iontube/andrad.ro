@@ -6,11 +6,6 @@
       "categorySlug": "foto-video"
     },
     {
-      "keyword": "control automat jaluzele smart",
-      "category": "Smart Home",
-      "categorySlug": "smart-home"
-    },
-    {
       "keyword": "aspirator robot integrat smart home",
       "category": "Smart Home",
       "categorySlug": "smart-home"
@@ -624,6 +619,11 @@
       "keyword": "cameră 360 pentru tururi virtuale",
       "category": "Foto & Video",
       "categorySlug": "foto-video"
+    },
+    {
+      "keyword": "control automat jaluzele smart",
+      "category": "Smart Home",
+      "categorySlug": "smart-home"
     }
   ]
 }
