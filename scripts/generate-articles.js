@@ -5,13 +5,7 @@ import http from 'http';
 import sharp from 'sharp';
 
 // ========== CONFIG ==========
-const GEMINI_API_KEYS = [
-  'AIzaSyAbRzbs0WRJMb0gcojgyJlrjqOPr3o2Cmk',
-  'AIzaSyDZ2TklBMM8TU3FA6aIS8vdUc-2iMyHWaM',
-  'AIzaSyBdmChQ0ARDdDAqSMSlDIit_xz5ucrWjkY',
-  'AIzaSyAE57AIwobFO4byKbeoa-tVDMV5lMgcAxQ',
-  'AIzaSyBskPrKeQvxit_Rmm8PG_NO0ZhMQsrktTE'
-];
+const GEMINI_API_KEYS = (process.env.GEMINI_API_KEYS || '').split(',').filter(Boolean);
 
 const IMAGEROUTER_API_KEY = '941d0f4b13aaa3b3e115136ded0515336bd3fe804db1c010cbf69d333bde4b8c';
 const IMAGE_MODEL = 'openai/gpt-image-1.5:free';
